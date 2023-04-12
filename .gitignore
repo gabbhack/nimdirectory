@@ -27,6 +27,7 @@ doc/*.idx
 /web/upload
 /build/*
 bin/*
+public/*.html
 
 /*.html
 outputGotten.txt
