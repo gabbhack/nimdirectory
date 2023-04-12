@@ -113,7 +113,6 @@
       document.body.classList.remove("dark-theme");
     }
   }
-  set_dark_mode();
 
   function toggle_dark_mode() {
     if (localStorage.getItem("theme") == "dark") {
