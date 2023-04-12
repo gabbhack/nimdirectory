@@ -10,6 +10,6 @@ bin           = @["nimidirectory"]
 
 # Dependencies
 
-requires "nim >= 1.6.12"
+requires "nim >= 1.6.0"
 requires "deser_json == 0.2.0"
 requires "nimja == 0.8.7"
