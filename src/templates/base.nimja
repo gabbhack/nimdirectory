@@ -115,10 +115,6 @@
   }
   set_dark_mode();
 
-  $$(document).ready(function(){
-    $$(this).scrollTop(0);
-  });
-
   function toggle_dark_mode() {
     if (localStorage.getItem("theme") == "dark") {
       localStorage.setItem('theme', 'light');
