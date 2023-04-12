@@ -21,6 +21,9 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           nim-version: stable
 
+      - name: Install dependencies
+        run: nimble install -d -y
+
       - name: Run build
         run: nimble run
 
