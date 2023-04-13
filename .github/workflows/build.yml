@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: nimble install -d -y
 
+      - name: Build frontend
+        run: nimble frontend
+
       - name: Run build
         run: nimble run
 
