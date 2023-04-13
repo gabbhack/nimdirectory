@@ -1,7 +1,6 @@
 import std/[
   options,
-  httpclient,
-  sequtils
+  httpclient
 ]
 
 import deser, deser_json
