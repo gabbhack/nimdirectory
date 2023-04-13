@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
 
       - name: Set up Nim
         uses: jiro4989/setup-nim-action@v1
@@ -34,7 +35,6 @@ jobs:
         run: nimble run
 
       - name: Optimize JS
-        uses: actions/setup-node@v3
         run: npm i -g google-closure-compiler && google-closure-compiler -O ADVANCED public/js/app.js --js_output_file public/js/app.js
 
       - name: Deploy
