@@ -15,4 +15,4 @@ requires "deser_json == 0.2.0"
 requires "nimja == 0.8.7"
 
 task frontend, "Build frontend":
-  exec "nim js -o:public/js/app.js -d:release -d:danger --gc:arc --panics:on src/app"
+  exec "nim js -o:public/js/app.js -d:release -d:danger --gc:arc --panics:on src/js/app"

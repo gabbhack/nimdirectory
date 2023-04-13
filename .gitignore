@@ -37,3 +37,4 @@ outputExpected.txt
 .idea/
 tests/megatest
 src/*.js
+public/*.js
