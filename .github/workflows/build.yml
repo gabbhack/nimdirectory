@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
 
       - name: Set up Nim
         uses: jiro4989/setup-nim-action@v1
@@ -33,12 +32,6 @@ jobs:
 
       - name: Run build
         run: nimble run
-
-      - name: Install Closure Compiler
-        run: yarn global add google-closure-compiler
-      
-      - name: Optimize JS
-        run: google-closure-compiler -O ADVANCED public/js/app.js --js_output_file public/js/app.js
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
