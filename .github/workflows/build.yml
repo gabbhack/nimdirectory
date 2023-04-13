@@ -33,6 +33,10 @@ jobs:
       - name: Run build
         run: nimble run
 
+      - name: Optimize JS
+        uses: actions/setup-node@v3
+        run: npm i -g google-closure-compiler && google-closure-compiler -O ADVANCED public/js/app.js --js_output_file public/js/app.js
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
