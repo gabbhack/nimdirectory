@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nimstyle.css">
+  <script src="app.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg fixed-top py-3">
@@ -171,22 +172,6 @@
   </div>
 </footer>
 <script>
-  function set_dark_mode() {
-    if (localStorage.getItem("theme") == "dark") {
-      document.body.classList.add("dark-theme");
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
-  }
-
-  function toggle_dark_mode() {
-    if (localStorage.getItem("theme") == "dark") {
-      localStorage.setItem('theme', 'light');
-    } else {
-      localStorage.setItem('theme', 'dark');
-    }
-    set_dark_mode();
-  }
 </script>
 </body>
 </html>
