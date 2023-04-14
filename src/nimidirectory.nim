@@ -40,9 +40,10 @@ proc main() =
   createDir(publicDir / "pkg")
 
   for package in packages.mitems:
-    echo fmt"Processing `{package.name}`..."
-    processPackage(package)
-    writeFile(packageDir / package.name, packagePage(package))
+    if package.kind != Alias:
+      echo fmt"Processing `{package.name}`..."
+      processPackage(package)
+      writeFile(packageDir / package.name, packagePage(package))
 
 when isMainModule:
   main()

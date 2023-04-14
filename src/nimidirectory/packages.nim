@@ -20,7 +20,7 @@ import
 
 
 type
-  PackageKind = enum
+  PackageKind* = enum
     Usual
     Alias
 
@@ -211,12 +211,13 @@ proc getHtmlReadme*(package: string): Option[string] =
     none string
 
 proc processPackage*(package: var Package) =
-  if package.kind != Alias and package.installMethod.isSome:
+  if package.installMethod.isSome:
     if package.installMethod.get() == "git" and package.url.isSome:
       let directory = clone(package.url.get())
       if directory.isSome:
         package.readme = getHtmlReadme(directory.get())
+        removeDir(getCurrentDir() / directory.get())
     else:
       echo "Package has non git install method or doesnt have url"
   else:
-    echo "Package has Alias type or doesnt have install method"
+    echo "Package doesnt have install method"
