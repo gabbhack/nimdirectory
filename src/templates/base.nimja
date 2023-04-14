@@ -26,10 +26,7 @@
           <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
         </li>
         <li class="nav-item mx-2">
-          <a href="/about.html" class="nav-link">What's Nimble?</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a href="/search" class="nav-link">Browse all packages</a>
+          <a href="about.html" class="nav-link">What's Nimble?</a>
         </li>
         <li class="nav-item mx-2">
           <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
