@@ -15,7 +15,6 @@ body {
 }
 
 .logo {
-  background: url('/img/nimble.png');
   background-size: 100%;
   background-repeat: no-repeat;
   width: 70px;
