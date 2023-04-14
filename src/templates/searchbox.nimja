@@ -5,24 +5,24 @@
         <p class="fw-normal h2 mb-4">Discover Nim's ecosystem of libraries and tools</p>
         <div class="row">
           <div class="col-12 spotlight position-relative">
-            <input id="search" onkeyup="on_search()" name="query" type="text" class="border-radius-full w-100" placeholder="Search for packages...">
+            <input id="search" onkeyup="on_search()" name="query" type="text" class="border-radius-full w-100" placeholder="Search for packages..." value="">
           </div>
         </div>
         <div class="mt-4 tags-area">
-          <a href="/search?query=embedded systems">embedded systems</a>
-          <a href="/search?query=web framework">web frameworks</a>
-          <a href="/search?query=iot">IoT</a>
-          <a href="/search?query=game engine">game engines</a>
-          <a href="/search?query=command line">command line</a>
-          <a href="/search?query=parser">parser</a>
-          <a href="/search?query=ai">AI</a>
-          <a href="/search?query=network">network</a>
-          <a href="/search?query=yaml">yaml</a>
-          <a href="/search?query=frontend">frontend</a>
-          <a href="/search?query=template engine">template engines</a>
-          <a href="/search?query=javascript">javascript</a>
-          <a href="/search?query=wrapper">wrapper</a>
-          <a href="/search?query=graphics">graphics</a>
+          <a onclick="on_suggest('embedded systems')">embedded systems</a>
+          <a onclick="on_suggest('web framework')">web frameworks</a>
+          <a onclick="on_suggest('IoT')">IoT</a>
+          <a onclick="on_suggest('game engine')">game engines</a>
+          <a onclick="on_suggest('command line')">command line</a>
+          <a onclick="on_suggest('parser')">parser</a>
+          <a onclick="on_suggest('AI')">AI</a>
+          <a onclick="on_suggest('network')">network</a>
+          <a onclick="on_suggest('yaml')">yaml</a>
+          <a onclick="on_suggest('frontend')">frontend</a>
+          <a onclick="on_suggest('template engine')">template engines</a>
+          <a onclick="on_suggest('javascript')">javascript</a>
+          <a onclick="on_suggest('wrapper')">wrapper</a>
+          <a onclick="on_suggest('graphics')">graphics</a>
         </div>
       </div>
     </div>
