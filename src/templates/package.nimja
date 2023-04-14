@@ -1,0 +1,52 @@
+{% extends templates/base.nimja%}
+{% block content -%}
+<div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">{{package.name}}</h3>
+        <p class="tags">
+            {% for tag in package.tags %}
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">{{tag}}</button></a>
+                </span>
+            {% endfor %}
+        </p>
+        <p class="pkg-desc">{{package.description}}</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install {{package.name}}" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            {% if package.readme.isSome %}
+                {{package.readme.get()}}
+            {% else %%}
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+            {% endif %}
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                {% if package.license.isSome %}
+                    <p>
+                        <strong>Licence:</strong>
+                        {{package.license.get()}}
+                    </p>
+                {% endif %}
+
+                {% if package.web.isSome %}
+                    <p> <a href="{{package.web.get()}}">Project website</a> </p>
+                {% endif %}
+
+                {% if package.docs.isSome %}
+                    <p><a href="{{package.docs.get()}}">Docs</a></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{%- endblock %}
