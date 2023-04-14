@@ -52,7 +52,7 @@ function do_search(input) {
         const package = item.item
         const packageHtml = `
             <div class="box box-pkg rounded p-3" stars="">
-                <h3 class="lh-1 display-1 mb-2"><a href="/pkg/${package.name}">${package.name}</a></h3>
+                <h3 class="lh-1 display-1 mb-2"><a href="${package.url}">${package.name}</a></h3>
                 <p class="mb-0 pb-0" style="height:1.2em;overflow:hidden;">${package.description}</p>
                 <ul class="package-box-meta-foot mt-1">
                     <li>
