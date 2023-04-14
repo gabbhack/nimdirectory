@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">yanyl</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">serialization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">serialization-format</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">yaml</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A library for using YAML with Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install yanyl" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>YANYL (Yet Another Nim Yaml Library)</h1>
+<p>A library for working with YAML in Nim. Can generate conversion functions for most types declared in Nim.</p>
+<p>  <a href="https://tanelso2.github.io/yanyl/index.html">NimDocs can be found here</a></p>
+<h1>Example</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">yanyl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Obj</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">i</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">s</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">deriveYaml</span> <span class="ide">Obj</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">sample</span>: <span class="ide">string</span> <span class="op">=</span> """
+i: 99
+s: hello world
+"""</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">o</span>: <span class="ide">Obj</span> <span class="op">=</span> <span class="ide">ofYamlStr</span>(<span class="ide">sample</span>, <span class="ide">Obj</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">o</span><span class="op">.</span><span class="ide">i</span> <span class="op">==</span> <span class="num">99</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">o</span><span class="op">.</span><span class="ide">s</span> <span class="op">==</span> <span class="str">&quot;hello world&quot;</span></div></div>  </code></pre>
+<h1>Install</h1>
+<p>Add the following to your <code>.nimble</code> file:</p>
+<pre>  <code>requires &quot;yanyl&quot;
+</code></pre>
+<h1>Usage</h1>
+<h2>  <code>deriveYaml</code></h2>
+<p>Macro that takes the name of a type and will generate <code>ofYaml</code> and <code>toYaml</code> procs for that type.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">yanyl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Obj</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">i</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">s</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">deriveYaml</span> <span class="ide">Obj</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">sample</span>: <span class="ide">string</span> <span class="op">=</span> """
+i: 99
+s: hello world
+"""</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">o</span>: <span class="ide">Obj</span> <span class="op">=</span> <span class="ide">ofYamlStr</span>(<span class="ide">sample</span>, <span class="ide">Obj</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">o</span><span class="op">.</span><span class="ide">i</span> <span class="op">==</span> <span class="num">99</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">o</span><span class="op">.</span><span class="ide">s</span> <span class="op">==</span> <span class="str">&quot;hello world&quot;</span></div></div>  </code></pre>
+<h2>  <code>loadNode</code></h2>
+<p>Proc that takes a string or Stream and returns a <code>YNode</code>, the internal representation of a YAML document.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">yanyl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">s</span> <span class="op">=</span> """
+a: 1
+b: 3
+c:
+  - a
+  - b
+  - c
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">y</span>: <span class="ide">YNode</span> <span class="op">=</span> <span class="ide">s</span><span class="op">.</span><span class="ide">loadNode</span>()</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">y</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">ynMap</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">y</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;a&quot;</span>)<span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">ynString</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">y</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;c&quot;</span>)<span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">ynList</span></div></div>  </code></pre>
+<h2>  <code>toString</code></h2>
+<p>Proc that returns the YAML string of a <code>YNode</code></p>
+<!--  TODO example  -->
+<h2>  <code>toYaml</code></h2>
+<p>Proc that takes an object of type <code>T</code> and returns a <code>YNode</code>.</p>
+<p>Generic proc, should be redefined for every type. Can be autogenerated by <code>deriveYaml</code></p>
+<!--  TODO example  -->
+<h2>  <code>ofYaml</code></h2>
+<p>Proc that takes a <code>YNode</code> and returns an object of type <code>T</code>.</p>
+<p>Generic proc, should be redefined for every type. Can be autogenerated by <code>deriveYaml</code></p>
+<!--  TODO example  -->
+<h2>  <code>ofYamlStr</code></h2>
+<p>Shortcut proc.</p>
+<p><code>ofYamlStr(s,t)</code> is equivalent to <code>s.loadNode().ofYaml(t)</code></p>
+<h2>  <code>toYamlStr</code></h2>
+<p>Shortcut proc.</p>
+<p><code>toYamlStr(x)</code> is equivalent to <code>x.toYaml().toString()</code></p>
+<h1>Code Generation</h1>
+<p>Code generation is opt-in per type. You can also write custom <code>ofYaml</code>/<code>toYaml</code> if the autogenerated ones do not work for your use-case.</p>
+<p>Code generation supports most types you can define in Nim: <code>object</code>s, <code>ref object</code>s, <code>enum</code>s, and variant objects are all supported.</p>
+<p>Here&apos;s an example with multiple types that get generated and parse the YAML as expected:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">yanyl</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">unittest</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">CatBreed</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">cbMaineCoon</span> <span class="op">=</span> <span class="str">&quot;MaineCoon&quot;</span> </div></div><div class="line"><div class="line-content">    <span class="ide">cbPersian</span> <span class="op">=</span> <span class="str">&quot;Persian&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">cbBengal</span> <span class="op">=</span> <span class="str">&quot;Bengal&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">DogBreed</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">dbCorgi</span> <span class="op">=</span> <span class="str">&quot;Corgi&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">dbMastiff</span> <span class="op">=</span> <span class="str">&quot;Mastiff&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">PetType</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">ptCat</span> <span class="op">=</span> <span class="str">&quot;cat&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">ptDog</span> <span class="op">=</span> <span class="str">&quot;dog&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">Nameable</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">RootObj</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">Pet</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Nameable</span></div></div><div class="line"><div class="line-content">    <span class="ide">vet</span>: <span class="ide">Nameable</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">kind</span>: <span class="ide">PetType</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">ptCat</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">catBreed</span>: <span class="ide">CatBreed</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">ptDog</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">dogBreed</span>: <span class="ide">DogBreed</span></div></div><div class="line"><div class="line-content">  <span class="ide">Owner</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Nameable</span></div></div><div class="line"><div class="line-content">    <span class="ide">paid</span>: <span class="ide">bool</span></div></div><div class="line"><div class="line-content">    <span class="ide">pets</span>: <span class="ide">seq</span>[<span class="ide">Pet</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">deriveYamls</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">CatBreed</span></div></div><div class="line"><div class="line-content">  <span class="ide">DogBreed</span></div></div><div class="line"><div class="line-content">  <span class="ide">PetType</span></div></div><div class="line"><div class="line-content">  <span class="ide">Nameable</span></div></div><div class="line"><div class="line-content">  <span class="ide">Pet</span></div></div><div class="line"><div class="line-content">  <span class="ide">Owner</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span>: <span class="ide">string</span> <span class="op">=</span> """
+name: Duncan Indigo
+paid: false
+pets:
+- name: Ginger
+  vet:
+    name: Maria Belmont
+  kind: cat
+  catBreed: MaineCoon
+- name: Buttersnap
+  vet:
+    name: Maria Belmont
+  kind: dog
+  dogBreed: Corgi
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">duncan</span> <span class="op">=</span> <span class="ide">ofYamlStr</span>(<span class="ide">s</span>, <span class="ide">Owner</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">duncan</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;Duncan Indigo&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">duncan</span><span class="op">.</span><span class="ide">paid</span> <span class="op">==</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">duncan</span><span class="op">.</span><span class="ide">pets</span><span class="op">.</span><span class="ide">len</span>() <span class="op">==</span> <span class="num">2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ginger</span> <span class="op">=</span> <span class="ide">duncan</span><span class="op">.</span><span class="ide">pets</span>[<span class="num">0</span>]</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">ginger</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;Ginger&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">ginger</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">ptCat</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">ginger</span><span class="op">.</span><span class="ide">catBreed</span> <span class="op">==</span> <span class="ide">cbMaineCoon</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">ginger</span><span class="op">.</span><span class="ide">vet</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;Maria Belmont&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">buttersnap</span> <span class="op">=</span> <span class="ide">duncan</span><span class="op">.</span><span class="ide">pets</span>[<span class="num">1</span>]</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">buttersnap</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;Buttersnap&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">buttersnap</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">ptDog</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">buttersnap</span><span class="op">.</span><span class="ide">dogBreed</span> <span class="op">==</span> <span class="ide">dbCorgi</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">buttersnap</span><span class="op">.</span><span class="ide">vet</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;Maria Belmont&quot;</span></div></div>  </code></pre>
+<h2>Viewing the generated code</h2>
+<p>If you would like to view the code generated by yanyl, you can use <code>macros.expandMacros</code> from the standard library. This will print the result of expanding the macros at <em>compile</em> time.</p>
+<p>For example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">yanyl</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">macros</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">E</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">eStr</span>, <span class="ide">eInt</span></div></div><div class="line"><div class="line-content">  <span class="ide">V</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">c</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">kind</span>: <span class="ide">E</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">eStr</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">s</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">eInt</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">i</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">expandMacros</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">deriveYamls</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">E</span></div></div><div class="line"><div class="line-content">    <span class="ide">V</span></div></div>  </code></pre>
+<p>will output:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">ofYaml</span>(<span class="ide">n</span>: <span class="ide">YNode</span>; <span class="ide">t</span>: <span class="ide">typedesc</span>[<span class="ide">E</span>]): <span class="ide">E</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">n</span><span class="op">.</span><span class="ide">kind</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">ynString</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">n</span><span class="op">.</span><span class="ide">strVal</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="op">$</span><span class="ide">eStr</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">eStr</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="op">$</span><span class="ide">eInt</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">eInt</span></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">ValueError</span>, <span class="str">&quot;unknown kind: &quot;</span> <span class="op">&amp;</span> <span class="ide">n</span><span class="op">.</span><span class="ide">strVal</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">ValueError</span>, <span class="str">&quot;expected string YNode&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">toYaml</span>(<span class="ide">x</span>: <span class="ide">E</span>): <span class="ide">YNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">newYString</span>(<span class="op">$</span><span class="ide">x</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">ofYaml</span>(<span class="ide">n</span>: <span class="ide">YNode</span>; <span class="ide">t</span>: <span class="ide">typedesc</span>[<span class="ide">V</span>]): <span class="ide">V</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">n</span><span class="op">.</span><span class="ide">kind</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">ynMap</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">kind</span> <span class="op">=</span> <span class="ide">n</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;kind&quot;</span>, <span class="ide">typedesc</span>[<span class="ide">E</span>])</div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">kind</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">eStr</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">V</span>(<span class="ide">kind</span>: <span class="ide">kind</span>, <span class="ide">c</span>: <span class="ide">n</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;c&quot;</span>, <span class="ide">typedesc</span>[<span class="ide">string</span>]),</div></div><div class="line"><div class="line-content">                 <span class="ide">s</span>: <span class="ide">n</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;s&quot;</span>, <span class="ide">typedesc</span>[<span class="ide">string</span>]))</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">eInt</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">V</span>(<span class="ide">kind</span>: <span class="ide">kind</span>, <span class="ide">c</span>: <span class="ide">n</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;c&quot;</span>, <span class="ide">typedesc</span>[<span class="ide">string</span>]),</div></div><div class="line"><div class="line-content">                 <span class="ide">i</span>: <span class="ide">n</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;i&quot;</span>, <span class="ide">typedesc</span>[<span class="ide">int</span>]))</div></div><div class="line"><div class="line-content">  <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">ValueError</span>, <span class="str">&quot;expected map YNode&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">toYaml</span>(<span class="ide">x</span>: <span class="ide">V</span>): <span class="ide">YNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">x</span><span class="op">.</span><span class="ide">kind</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">eStr</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">newYMapRemoveNils</span>([(<span class="str">&quot;kind&quot;</span>, <span class="ide">toYaml</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">kind</span>)), (<span class="str">&quot;c&quot;</span>, <span class="ide">toYaml</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">c</span>)),</div></div><div class="line"><div class="line-content">                                (<span class="str">&quot;s&quot;</span>, <span class="ide">toYaml</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">s</span>))])</div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">eInt</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">newYMapRemoveNils</span>([(<span class="str">&quot;kind&quot;</span>, <span class="ide">toYaml</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">kind</span>)), (<span class="str">&quot;c&quot;</span>, <span class="ide">toYaml</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">c</span>)),</div></div><div class="line"><div class="line-content">                                (<span class="str">&quot;i&quot;</span>, <span class="ide">toYaml</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">i</span>))])</div></div>  </code></pre>
+<h1>Comparison with <a href="https://github.com/flyx/NimYAML">NimYAML</a></h1>
+<p>If you&apos;re using yanyl, you&apos;re already using NimYAML. Yanyl uses NimYAML as a parser, and then translates from NimYAML&apos;s <code>YamlNode</code> to yanyl&apos;s <code>YNode</code>. Yanyl discards tag information in doing so, and yanyl&apos;s <code>toYamlStr</code> and related functions do not emit tags either.</p>
+<p>Why would you use Yanyl instead of just using NimYAML directly?</p>
+<h2>Simplified Output</h2>
+<p>NimYAML&apos;s output contains tags that allow it to reconstruct the object that was deserialized. Yanyl&apos;s output is a lot simpler and doesn&apos;t include any tag information.</p>
+<p>For example, the following code</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">yaml</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">yanyl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Obj</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">RootObj</span></div></div><div class="line"><div class="line-content">    <span class="ide">i</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">s</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">deriveYaml</span> <span class="ide">Obj</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">o</span> <span class="op">=</span> <span class="ide">Obj</span>(<span class="ide">i</span>: <span class="num">42</span>, <span class="ide">s</span>: <span class="str">&quot;Hello galaxy&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># NimYAML</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">dump</span>(<span class="ide">o</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Yanyl</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">toYamlStr</span>(<span class="ide">o</span>)</div></div>  </code></pre>
+<p>will result in the outputs</p>
+<p>NimYAML:</p>
+<pre>  <code class="language-yaml"><div class="line"><div class="line-content">%YAML 1.2</div></div><div class="line"><div class="line-content">%TAG !n! tag:nimyaml.org,2016:</div></div><div class="line"><div class="line-content"><span class="kwd">---</span> !n!custom:Obj </div></div><div class="line"><div class="line-content"><span class="str">i</span>: <span class="num">42</span></div></div><div class="line"><div class="line-content"><span class="str">s</span>: <span class="str">Hello galaxy</span></div></div>  </code></pre>
+<p>Yanyl:</p>
+<pre>  <code class="language-yaml"><div class="line"><div class="line-content"><span class="str">s</span>: <span class="str">Hello galaxy</span></div></div><div class="line"><div class="line-content"><span class="str">i</span>: <span class="num">42</span></div></div>  </code></pre>
+<h2>Support for more Nim types</h2>
+<p>I had trouble when using NimYAML where I was structuring my types to better work around what NimYAML could parse. I built yanyl so that I could structure my types how I normally would, and then used macro programming to make it write the <code>ofYaml</code>/<code>toYaml</code> functions that I would have.</p>
+<p>NimYAML is more strict about types whereas Yanyl is more akin to duck-typing. If an object has the fields expected, Yanyl will stuff it into the type you specified.</p>
+<p><strong>Note</strong>: some of the things I thought were NimYAML&apos;s intended behavior may actually be bugs, so I will work on reporting those properly instead of just spinning off my own library.</p>
+<h2>Explicit declarations</h2>
+<p>As a newbie to Nim macro programming, I wasn&apos;t sure how or where NimYAML was creating functions. Yanyl makes it clear with its <code>derive</code> macros. It is more boilerplate for the developer, but I think it makes it clear and easier to debug.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Unlicense
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

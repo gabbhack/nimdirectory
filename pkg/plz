@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">plz</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">python</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pip</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimpy</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("PLZ Python PIP alternative")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install plz" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>PLZ</h1>
+<ul>
+<li>PLZ <a href="https://pypi.org">Python PIP</a> alternative.</li>
+</ul>
+<img src="https://raw.githubusercontent.com/juancarlospaco/plz/master/python-wat.png" style="max-width: 100%;" width="256" height="256" title="plz for Linux! (1 file, 1 Mb)" />
+<p>  <img src="https://img.shields.io/github/languages/count/juancarlospaco/plz?logoColor=green&amp;style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/languages/top/juancarlospaco/plz?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/stars/juancarlospaco/plz?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/languages/code-size/juancarlospaco/plz?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/issues-raw/juancarlospaco/plz?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/issues-pr-raw/juancarlospaco/plz?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/liberapay/patrons/juancarlospaco?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://github.com/juancarlospaco/plz/workflows/CI/badge.svg" style="max-width: 100%;" alt="CI" /></p>
+<h1>Use</h1>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">plz</span> install pre-commit   <span class="com"># Install 1 or more packages</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> uninstall pre-commit <span class="com"># Uninstall 1 or more packages</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> reinstall pre-commit <span class="com"># Reinstall 1 or more packages</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> download pre-commit  <span class="com"># Download 1 or more packages</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> hash <span class="ide">file.py</span>         <span class="com"># Show SHA CheckSum of file/package</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> init                 <span class="com"># New Python project template (Interactive)</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> stats                <span class="com"># PyPI official service status report</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> newpackages          <span class="com"># List all the new Packages uploaded to PyPI recently</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> lastupdates          <span class="com"># List all existing Packages updated on PyPI recently</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> lastjobs             <span class="com"># List all new Job Posts updated on Python recently</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> userpackages         <span class="com"># List all existing Packages by User (Interactive)</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> latestversion        <span class="com"># Show the Latest Version of a PYPI Package (SemVer)</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> forceInstallPip      <span class="com"># Force install PIP on arbitrary folder (get-pip.py)</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> doc <span class="ide">file.md</span>          <span class="com"># Markdown/ReSTructuredText to HTML  (MD/RST can be mixed).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> doc2latex <span class="ide">file.md</span>    <span class="com"># Markdown/ReSTructuredText to Latex (MD/RST can be mixed).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> doc2json <span class="ide">file.md</span>     <span class="com"># Markdown/ReSTructuredText to JSON  (MD/RST can be mixed).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> upload <span class="ide">packg-1.0.zip</span> <span class="com"># Similar to &quot;twine upload&quot; (Interactive,asks user,wont need Twine).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> parserequirements    <span class="com"># Parse a requirements file, print it to stdout (Linter,Debug,etc).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> fakecommits          <span class="com"># Generate &quot;Fake&quot; Git commits (Restart CI,trigger GitHub Actions,etc).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> bug                  <span class="com"># Python Bug Report Assistant (Interactive).</span></div></div><div class="line"><div class="line-content"><span class="out">$</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --python="/path/to/python"  <span class="com"># Full path to a Python executable to use, defaults to autodetect.</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --dotenv="/path/to/.env"    <span class="com"># Full path to a Type-safe DotEnv file.</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --cleanpyc           <span class="com"># Clean all __pycache__ and *.pyc</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --cleanpypackages    <span class="com"># Clean all __pypackages__</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --cleantemp          <span class="com"># Clean all temporary folder.</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --cleanpipcache      <span class="com"># Clean all PIP Cache folder.</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --cleanvenvs         <span class="com"># Clean Virtualenvs (interactive, asks Y/N 1-by-1).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --publicip           <span class="com"># Show your Public IP Address (Internet connectivity check).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> <span class="ide">--log=file.log</span>       <span class="com"># Full path to a verbose local log file.</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --putenv:key=val     <span class="com"># Set an environment variable &quot;KEY=Value&quot;, can be repeated.</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --suicide            <span class="com"># Deletes itself permanently and exit (single file binary).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --dump               <span class="com"># Show system info JSON and quit (for Developers and Bug Reporting).</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --version            <span class="com"># Show Version</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">plz</span> --help               <span class="com"># Show Help</span></div></div>  </code></pre>
+<h1>Interactive Python Project Creator</h1>
+<details>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/plz/master/project_creator.png" style="max-width: 100%;" alt="" /></p>
+</details>
+<h1>Requirements Parser for debug</h1>
+<details>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/plz/master/requirements_parser.png" style="max-width: 100%;" alt="" /></p>
+</details>
+<h1>Type-safe DotEnv</h1>
+<p>Type-safe <code>.env</code> file is just a <code>.env</code> but Typed.</p>
+<p>Types are enforced via a comment, so it is still a &quot;vanilla&quot; <code>.env</code>.</p>
+<p>Type-safe <code>.env</code> file can be used with unsafe <code>.env</code> parsers, legacy parsers will ignore the comment.</p>
+<p>Keys must be a non-empty ASCII string <code>[a-zA-Z0-9_]</code>, keys are validated. Key-Value separator must be <code>=</code>.</p>
+<p>Parses the same <code>.env</code> file from the vanilla implementation tests.</p>
+<p>Several orders of magnitude faster than the vanilla implementation. Implementation is ~ 50 lines of code.</p>
+<p>Example:</p>
+<pre>  <code class="language-ini"># This is a comment
+DB_HOST=localhost  # string
+DB_USER=root       # string
+DB_PASS=&quot;123&quot;      # string
+DB_TIMEOUT=42      # int
+DELAY=3.14         # float
+ACTIVE=true        # bool
+</code></pre>
+<h1>Features</h1>
+<ul>
+<li>Python <code>1.x</code>, <code>2.x</code>, <code>3.x</code> support.</li>
+<li>Private PYPI custom URL.</li>
+<li>No configurations needed.</li>
+<li>No <code>PATH</code> pollution.</li>
+<li>No dependency on system PIP, no dependency on system Python.</li>
+<li>1 Megabyte, 0 Dependencies.</li>
+<li>Designed for Docker or Alpine usage.</li>
+<li>Install, uninstall, reinstall, download, upload to PyPI, etc.</li>
+<li>Real Inferred Strong Static Typing.</li>
+<li>No Garbage Collector (Rust-like memory management).</li>
+<li>Immutable programming, No Global Mutable State.</li>
+<li>The only PIP alternative in the world that just works even with PIP/Python/Virtualenv completely broken.</li>
+<li>Compiled machine code performance, as fast as optimized hand crafted C.</li>
+<li>High performance with low resources (RPi, VPS, cloud, old pc, etc).</li>
+<li>Single file binary, it can even delete itself after use.</li>
+<li>No Installs, no setups, just copy &amp; paste and run (even on Alpine).</li>
+<li>Colored output on the Terminal.</li>
+<li>Project skeleton creator to create your own new Python projects.</li>
+<li>Wont save any passwords, databases, keys, secrets, to disk nor Internet.</li>
+<li>No temporary folders nor files.</li>
+<li>Not meant as a drop-in replacement for anything pre-existing.</li>
+<li>Tiny single file source code (not counting string static constants).</li>
+<li>Self-Documentation Generator outputs HTML, PDF, JSON.</li>
+<li>Works fully independently self-contained standalone application.</li>
+<li>Fast startup time.</li>
+</ul>
+<p>  <strong>WIP:</strong></p>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/plz/master/pepehack.gif" style="max-width: 100%;" alt="" title="Work in progress!" /></p>
+<h1>Uninstall</h1>
+<ul>
+<li>Delete it.</li>
+</ul>
+<h1>Dependencies</h1>
+<ul>
+<li>It does NOT depend on <code>pip</code> (Not a <code>pip</code> wrapper), it can work with <code>pip</code> completely broken.</li>
+</ul>
+<h1>Requisites</h1>
+<ul>
+<li>Python 64Bit.</li>
+</ul>
+<h1>FAQ</h1>
+<ul>
+<li>How to use a Private PYPI custom URL ?.</li>
+</ul>
+<p>Compile adding the argument <code>-d:pypiApiUrl=&quot;http://url-here.io&quot;</code>.</p>
+<ul>
+<li>This requires Cython ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>This is a drop-in replacement of X ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>Whats &quot;Generate Fake Git Commits&quot; ?.</li>
+</ul>
+<p>Sometimes you may need to create commits to restart CI, trigger GitHub Actions, Git Hooks, etc
+but you dont have anything new to commit, that feature can create empty commits to force-trigger the Git service.</p>
+<p>Some Git services do not trigger for new repos with 1 or 2 commits,
+that feature can create empty commits to force-start the Git service.</p>
+<h1>Python Bugs</h1>
+<p>From XML-RPC API Server-side this endpoints wont work anymore (Not my Bug):</p>
+<ul>
+<li><code>release_downloads</code>, <code>top_packages</code>, <code>updated_releases</code>, <code>changed_packages</code>.</li>
+<li>Sometimes PYPI returns Python Tracebacks as strings on the body of the response.</li>
+<li>We tried to implement fully parallel install of packages, but because of the way Python packages work, they need to be installed sequentially whatsoever.</li>
+</ul>
+<h2>Stars</h2>
+<p>  <a href="https://starchart.cc/ThomasTJdev/nim_websitecreator" title="Star PLZ on GitHub!">    <img src="https://starchart.cc/juancarlospaco/plz.svg" style="max-width: 100%;" alt="Stars over time" />  </a></p>
+<details>
+  <summary>Notes</summary>
+<ul>
+<li>http://tonsky.me/blog/disenchantment</li>
+<li>https://medium.com/telnyx-engineering/rip-pipenv-tried-too-hard-do-what-you-need-with-pip-tools-d500edc161d4</li>
+<li>http://arindampaul.blogspot.com/2016/03/python-tips-avoid-pip-as-much-as.html</li>
+<li>https://github.com/pypa/pipenv/issues/4058#issue-537298446</li>
+<li>https://chriswarrick.com/blog/2018/07/17/pipenv-promises-a-lot-delivers-very-little/</li>
+<li>https://old.reddit.com/r/Python/comments/chkah3/is_pipenv_dead_why_has_the_project_stopped/</li>
+<li>https://np.reddit.com/r/Python/comments/8jd6aq/why_is_pipenv_the_recommended_packaging_tool_by/</li>
+<li>https://github.com/pypa/pipenv/commit/6d77e4a0551528d5d72d81e8a15da4722ad82f26</li>
+<li>https://github.com/pypa/pipenv/commit/1c956d37e6ad20babdb5021610b2ed2c9c4203f2</li>
+<li>https://github.com/pypa/pipenv/commit/e3c72e167d21b921bd3bd89d4217b04628919bb2</li>
+<li>https://github.com/mitsuhiko/pipsi#pipsi (Dead Project)</li>
+<li>https://github.com/zachtylr21/pyp#pyp</li>
+<li>https://www.python.org/dev/peps/pep-0650</li>
+<li>https://pip.pypa.io/en/stable/news/#id1</li>
+<li>https://discuss.python.org/t/what-to-do-about-gpus-and-the-built-distributions-that-support-them/7125</li>
+</ul>
+<p>Quote from PIPEnv Project:</p>
+<blockquote>
+<p>pipenv release cadence came to a super dramatic halt because of a lot of upstream issues
+(pip broke, setuptools broke, then pip and setuptools both released breaking fixes,
+and we have about 15 dependencies which I personally maintain).</p>
+</blockquote>
+<p>Quote from PIP Project:</p>
+<blockquote>
+<p>Due to lack of interest and maintenance, &apos;pip bundle&apos; and support for installing files is now deprecated.</p>
+</blockquote>
+<p>Important, near year 2021, the PyPI server started responding empty responses and error messages,
+but with HTTP status 200 OK, to PIP alternatives that are not the official PIP, the error message said
+<code>HTTPTooManyRequests: The action could not be performed because there were too many requests by the client. Limit may reset in 1 seconds.</code>
+and your client has to wait &gt;1 second per request, even for empty responses, and sometimes retries fail anyway,
+this looks kinda intentional, maybe to make it look like PIP is the fastest or something like that ?.</p>
+<p>All Python tools dropped support for Python <code>2.7</code> and <code>3.5</code>, some only support <code>3.8</code> as of ~2021.</p>
+<p>As of 2021 PYPI says that the Search API of XML RPC is now &quot;permanently disabled&quot;
+https://status.python.org/incidents/grk0k7sz6zkp</p>
+<p>PIP breaks after upgrades https://github.com/pypa/pip/issues/5599</p>
+</details>
+<h1>Send Crypto</h1>
+<details> 
+<summary title="Send Bitcoin">  <kbd> Bitcoin BTC </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>BTC Bitcoin Network</strong></p>
+<pre>  <code>1Pnf45MgGgY32X4KDNJbutnpx96E4FxqVi
+</code></pre>
+</details>
+<details> 
+<summary><kbd> Ethereum ETH </kbd> <kbd> Dai DAI </kbd> <kbd> Uniswap UNI </kbd> <kbd> Axie Infinity AXS </kbd> <kbd> Smooth Love Potion SLP </kbd> </summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>ERC20 Ethereum Network</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+</details>
+<details> 
+<summary title="Send Tether">  <kbd> Tether USDT </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>ERC20 Ethereum Network</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>TRC20 Tron Network</strong></p>
+<pre>  <code>TWGft53WgWvH2mnqR8ZUXq1GD8M4gZ4Yfu
+</code></pre>
+</details>
+<details> 
+<summary title="Send Solana">  <kbd> Solana SOL </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>SOL Solana Network</strong></p>
+<pre>  <code>FKaPSd8kTUpH7Q76d77toy1jjPGpZSxR4xbhQHyCMSGq
+</code></pre>
+</details>
+<details> 
+<summary title="Send Cardano">  <kbd> Cardano ADA </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>ADA Cardano Network</strong></p>
+<pre>  <code>DdzFFzCqrht9Y1r4Yx7ouqG9yJNWeXFt69xavLdaeXdu4cQi2yXgNWagzh52o9k9YRh3ussHnBnDrg7v7W2hSXWXfBhbo2ooUKRFMieM
+</code></pre>
+</details>
+<details> 
+<summary title="Send Sandbox"><kbd> Sandbox SAND </kbd> <kbd> Decentraland MANA </kbd></summary>
+<p>  <strong>ERC20 Ethereum Network</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+</details>
+<details> 
+<summary title="Send Algorand">  <kbd> Algorand ALGO </kbd></summary>
+<p>  <strong>ALGO Algorand Network</strong></p>
+<pre>  <code>WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
+</code></pre>
+</details>
+<details> 
+<summary title="Send via Binance Pay"> Binance </summary>
+  
+https://pay.binance.com/en/checkout/e92e536210fd4f62b426ea7ee65b49c3
+</details>
+<details>
+<summary title="Send via Lemon"> Lemon </summary>
+  
+**LemonTag**
+```
+$juancarlospaco
+```
+</details>
+<p>  <a href="#plz" title="Go to top">  ⬆️  ⬆️  ⬆️  ⬆�</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/nim-pypi">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

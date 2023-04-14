@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">adix</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">dictionary</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hash tables</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data structures</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">algorithms</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hash</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hashes</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">compact</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">Fenwick Tree</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">BIST</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">binary trees</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sketch</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sketches</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">B-Tree</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("An Adaptive Index Library For Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install adix" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>While this began just as a kind of adaptive index/hash table library, it has
+grown into more a collection in the theme of database/big-data related data
+structures &amp; algorithms.  { Let&apos;s say the &quot;ad&quot; in &quot;adix&quot; now stands for
+&quot;ADvanced&quot; | &quot;AscenDant&quot; as well as &quot;adaptive&quot; ;-) }  Most of these are <em>à la
+carte</em> and I hope you find them useful.  I try to keep the source code short &amp;
+to the point.  In particular, as an overview/index, here be:</p>
+<ul>
+<li>
+<p>The original associative lookup modules:</p>
+<ul>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/ditab.html">ditab</a>: direct-indexed
+table for small universe keys</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/lptabz.html">lptabz</a>: a hash table
+that should be safe for untrusted key sets</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/metab.html">metab</a>: an instantiation/
+table portability helper for lptabz</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/btree.html">btree</a>: a B-Tree with
+various optional features (histogram, ranks, bulk loading, etc.)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Basic Sorting: <a href="https://c-blake.github.io/adix/adix/nsort.html">nsort</a>
+Radix sort only by NEEDED BITS; Often 5-10X faster than <code>algorithm.sort</code> if
+you sort a lot of meso-scale data (merge sorts <em>always</em> win for HUGE data;
+Very few have it). (Could buffer writes to ensure full cache-line pokes.)</p>
+</li>
+<li>
+<p>Basic Sketches (abbreviated/approximate stores; aka &quot;Digests&quot;) for:</p>
+<ul>
+<li>Membership: <a href="https://c-blake.github.io/adix/adix/bltab.html">bltab</a> (bit-
+level table; Like more successfully marketed Bloom|Cuckoo filters, but lower</li>
+</ul>
+<p>latency &amp; slightly bigger)</p>
+<ul>
+<li>
+<p>Count Distinct: <a href="https://c-blake.github.io/adix/adix/uniqce.html">uniqce</a>
+aka count unique or cardinality estimation</p>
+</li>
+<li>
+<p>Approx Most Often: <a href="https://c-blake.github.io/adix/adix/amoft.html">amoft</a>
+(aka approximate top-K most frequent | heavy-hitters)</p>
+</li>
+<li>
+<p>Quantiles: <a href="https://c-blake.github.io/adix/adix/lghisto.html">lghisto</a> or
+<a href="https://c-blake.github.io/adix/adix/tdigest.html">tdigest</a> (for slower more</p>
+</li>
+</ul>
+<p>accurate tail quantiles)</p>
+<ul>
+<li>An amalgam: <a href="https://c-blake.github.io/adix/adix/mvstat.html">  <code>mvstat</code></a>
+that works like <code>std/stats</code> but supports <code>del</code>, i.e. sliding/moving windows</li>
+</ul>
+<p>over data streams (like a moving average) as well as moving or running
+quantiles via <code>lghisto</code>.  Also includes bulk array stats that in some compile
+modes get fully SIMD vectorized inner loops.</p>
+</li>
+</ul>
+<p>And some utility modules:</p>
+<ul>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/althash.html">althash</a>: salt-able
+alternate hash functions for lptabz</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/xlang.html">xlang</a>: Definitions for C
+refugees for bist</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/sequint.html">sequint</a>: a fixed stride
+&quot;bit matrix&quot; using &quot;batch&quot;/number ops.</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/memutil.html">memutil</a>: memory shifting
+utilities</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/cumsum.html">cumsum</a>: parallel prefix
+sum using Intel SIMD for nsort</p>
+</li>
+<li>
+<p><a href="https://c-blake.github.io/adix/adix/bitop.html">bitop</a>: re-impl std/bitops
+things to be more CT friendly</p>
+</li>
+</ul>
+<h1>A Word Of Caution</h1>
+<p>While sketches are popular, like merge sort (vs. radix sort), they often need
+huge data to pay off.  Essentially, probabilistic analysis (&quot;Oh wow, I can do
+that?!&quot;) distracts from space-time trade-offs.  This distraction is worsened by
+there being space-time-accuracy &quot;trade-off pyramids&quot;.</p>
+<p>So, I can say here &quot;spending a bit more space can yield major speed-ups&quot;, and it
+sounds blatantly obvious to even the most casual observer.  Yet, I&apos;ve also seen
+it neglected in this context countless times.  The academic literature does not
+help, often being &quot;blood sport&quot; for more compressed data | accuracy with no
+regard to speed.</p>
+<p>So, e.g., on my primary 32 GiB RAM dev box with <code>bu/zipf</code>, I cannot make exact
+<code>lfreq</code> slower than Approximately Most Often sketches(<code>bu/oft</code>).  <code>tests/bl.nim</code>
+shows another example in a Bloom filter / membership approximation context where
+spending 2-4X what a Bloom takes space-wise can buy a 7-10X latency shrink.
+(histograms &amp; UCE are both pretty good deals, though, if errors are acceptable.)</p>
+<h1>A little more on LPTabz &amp; friends</h1>
+<p>As a brief guide I would start with <code>NOTES.md</code> and then look at the top half of
+<code>lptabz.nim</code>.  <code>TODO.md</code> also has a lot of notes in it.  My overarching vision
+is to allow &quot;the fast way&quot; most of the time, especially for developers that know
+how to provide a good <code>hash</code>, but to also have auto fall backs to &quot;safer ways&quot;
+with optional messages to let devs know they may need to intervene by changing
+some defaults at table construction time (or else let users/sysadmins know that
+some input may be violating the assumptions of some code sensitive to inputs).
+Commercial database systems may have done this for decades, but hasn&apos;t really
+percolated into commonly available runtime libs.  (Depth-based growth trigger is
+likely the simplest example of Profile-Guided Optimization for data structures.
+A.Dain Samples 1993 PhD thesis has some more.)</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/adix">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

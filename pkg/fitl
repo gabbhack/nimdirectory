@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">fitl</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">statistics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">weighted</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linear</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">regression</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ridge</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">quantile</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">interpolation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">Parzen</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">truncated</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">clipped</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bootstrap</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parameter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">estimation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">significance</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">model</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">glm</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">fit</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">goodness-of-fit</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">lack-of-fit</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">diagnostics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">covariance</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">kolmogorov-smirnov</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cramer-von mises</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">anderson-darling</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">kuiper</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">watson</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Self-contained fit of linear models with regression diagnostics")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install fitl" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>fitl: A Self-contained fit of linear models with regression diagnostics</h1>
+<p>I do a lot of performance analysis and other data analysis.  Simple regression
+with a handful of columns is often adequate, but has many hazards addressable
+through various mitigations &amp; diagnostics I have not found bundled into one,
+self-contained tool.  So, I wrote this program, pronounced almost like &quot;fiddle&quot;
+originally in C but have now ported to Nim.</p>
+<p>It is both a Nim library and command-line utility which is made easy using the
+<a href="https://github.com/c-blake/cligen/">cligen</a> framework.  <code>nimble install fitl</code>
+should just work, but if it fails then just git clone cligen &amp; spfun and then
+<code>nim c -d:danger --path:cligen --path:spfun fitl</code> to build the CLI.</p>
+<h1>Example use</h1>
+<p>XXX TODO Do me.</p>
+<h1>Truly self-contained - even the linear algebra</h1>
+<p>BLAS/LAPACK from the Fortran world have many implementations - Netlib-Fortran
+compiled, vendor optimized, CUDA/GPU optimized, etc.  This is nice for large
+problems, but overkill for simple linear models with &lt;100s of predictor and
+&lt;many millions of data points.  Very much <em>because of</em> implementation diversity,
+there is much potential for &quot;linker/dependency hell&quot;.</p>
+<p>Meanwhile, <code>svdx.nim</code> adequately does a column-major layout SVD in ~42 lines of
+non-comment code (46 if you count <code>basicLA.dot</code>).  For a long time, for small (p
+&lt;~40, moderate n) models, this actually ran faster than the Intel MKL SVD.  By
+now Intel may have special cased such use cases.  The point is not that it is
+&quot;fast&quot;, but that it is not very slow for its use case - hence &quot;adequate&quot;.</p>
+<h1>Statistical Background</h1>
+<p>While a couple pages of text cannot realistically replace a course in stats, I
+can try to give an overview of &quot;whys&quot; behind certain <code>fitl</code> choices.</p>
+<p>Ordinary least squares linear models are usually both wrong and practical.  This
+is true of linear statistics like &quot;means&quot; in general.  The linearity yields much
+computational simplicity &amp; efficiency.  This is why they are practical and this
+draws people in to rationalize the approach.  There is kind of a &quot;cottage
+industry&quot; to justify the same idea by various avenues.</p>
+<p>These justifications are often not fully mathematically adequate which is why
+they are &quot;wrong&quot;.  E.g., max likelihood and Gaussian error distributions are one
+way, while minimum variance unbiasedness in the space of linear estimators is
+another.  These are all nice properties, but not enough.  Max likelihood mostly
+has nice asymptotic traits, but most samples are not so close to infinite sample
+size.  The central limit theorem motivates Gaussian &quot;assumptions&quot;, yet real
+world distributions are mercilessly contaminated with outliers/mixtures/heavy
+tails.  Meanwhile, min var unbiased is nice, but trestricting to only linear
+estimators when non-linear exist is merely a computational argument, not more
+statistically fundamental.</p>
+<h1>Various Mitigations &amp; Diagnostics</h1>
+<p>Since all the justifications are convenience/wrong, the default assumption for
+linear models should be that they are wrong.  This means you need diagnostics to
+tell you how wrong.  You also probably want mitigations to limit the impact of
+wrongness on conclusions.  <code>fitl</code> has a bare minimum of both and I am open to
+adding more (and what I consider a bare minimum is more than most provide/do).</p>
+<h2>Calculational:</h2>
+<p>Many real world data sets have linearly co-dependent predictor columns.  This
+can arise simply from some being statistically flat and co-linearity with an
+almost always included constant intercept column.  More subtle mechanisms also
+exist.  Whatever the causes, this breaks simpler-than-SVD approaches to best fit
+coefficient determination.  So, SVD is basically mandatory with some kind of
+singular value clipping to create a pseudo-inverse based on the design matrix.</p>
+<p>While often only flat weights are available, weighted OLS linear regression is a
+simple transformation of the flat weight case.  This is supported by the first
+non-option argument to <code>fitl</code> being a weight or &quot;sigma&quot; column.  <code>fitl</code> does not
+estimate &quot;errors in variables&quot; models which (but for effective variance style)
+require non-linear computational methods.  (I may someday do a non-linear
+variant but differentiation, auto- or otherwise is a big enough boost to tempt
+one into a more &quot;dependent&quot; program.)</p>
+<h2>Inferential:</h2>
+<p>Estimated parameter covariance is often critical to assessment of fit quality or
+inference on parameter/predictor significance.  While an estimate is almost
+available for free from the linear OLS solution, this estimate can be very
+misrepresentative.  The distribution of y/response errors must really be very
+Gaussian for the formula to not mislead.  The computationally expensive but
+statistically easy &amp; reliable way to adapt to this problem is estimating Cov(b)
+via bootstrap resampling <code>fitl --boot=25</code> does at &quot;only&quot; 25x the CPU cost.</p>
+<h2>Estimational:</h2>
+<p>Outliers, long or heavy tails or mixture distributions or non-linear functional
+dependencies are so much more common in real world data that they should likely
+just be the default assumption.  Since assuming so quickly (immediately?)
+destroys computational simplicity &amp; efficiency, people instead punt.</p>
+<p>The field of robust statistics has a long history of simple data filtering
+workarounds for outliers such as
+<a href="https://en.wikipedia.org/wiki/Trimmed_estimator">trimming</a> and
+<a href="https://en.wikipedia.org/wiki/Winsorizing">Winsoration</a>.  <code>fitl</code> currently just
+does basic trimming in appropriate units with options like <code>--trim=4.5</code> &amp;
+<code>--its=2</code>.  Beware that many iteration can trim away almost all your data!</p>
+<h2>Diagnostical:</h2>
+<p>The most basic goodness-of-fit statistic is R^2 or the achieved Chi-squared.
+Mispecified models often show strong serial autocorrelation in fit residuals
+from the simple effect of many regions where the points cluster far from the
+model.  Failure of trimming to achieve a Gaussian-like distribution also results
+in a non-Gaussian raw distribution of residuals.</p>
+<p>So, if you are using linear regression the least you should do is check for the
+main departures with <code>fitl --gof</code> and <code>--acf</code>.  For aid in interpretation, the
+statistical significance of autocorrelation function is also reported.  (Rank
+autocorrelation is not yet done but would not take much convincing!)</p>
+<p>Ideally, if you are not in an automated setting, you should visually inspect
+residuals with <code>fitl --resids</code>.</p>
+<h2>..And Features Automatical (with apologies to the Modern Major General...):</h2>
+<p>In recent times, &quot;machine learning&quot; has become popular.  This is basically
+applied stats with a &quot;Just predict, by hook or by crook&quot; focus rather than more
+traditional/inference-focused/&quot;science-oriented&quot; stats.  Consequently, the ethos
+is to throw every possible predictor (and sometimes technique in general) at
+problems and see what features are discovered.  In the context of multi-linear
+regression, this puts a pressure on preventing overfitting often called
+<a href="https://en.wikipedia.org/wiki/Regularization_%28mathematics%29">regularization</a>
+or sometimes <a href="https://en.wikipedia.org/wiki/Model_selection">model selection</a>.</p>
+<p>Since SVD is already done for reasons of basic estimation sanity, <a href="https://en.wikipedia.org/wiki/Ridge_regression">ridge
+regression</a> aka <a href="https://en.wikipedia.org/wiki/Tikhonov_regularization">Tikhonov
+regularization</a> is the
+most natural (and efficient) way.  While derivable from a quadratic penalty on
+the parameter vector in the least squares optimization, this boils down to
+&quot;adjusting&quot; singular values.</p>
+<p>This is sometimes called &quot;shrinkage&quot; since large b.b are penalized.  Since the
+ridge penalty is proportional to a flat b.b value, there is also usually a
+desire to steer towards comparably scaled b_i via standardizing Xs &amp; ys (e.g.
+mean 0, variance 1) which <code>fitl</code> also supports.</p>
+<p>The question remains how to pick the ridge parameter (or penalty coefficient).
+<code>fitl</code> supports both manual (as a fraction of the largest singular value) and
+automatic model selection via the <code>--sv</code> and <code>--xv</code> options.  Any negative value
+for <code>sv</code> is flipped and used directly.  Meanwhhile <code>sv==0.0</code> implies a cross
+validation approach by minimizing the score specified in <code>xv</code>.</p>
+<p>Right now only PRESS/Leave-One-Out cross validation &amp; Generalized Cross
+Validation scores are supported.  Cross validation is splitting data into
+estimation (or training) and prediction (or test) sets { and probably other
+terms as well).  Both GCV &amp; LOO/PRESS scores are efficiently computable from the
+SVD solution, but some reasonably advocate chunkier splitting and <code>fitl</code> may
+grow such an option. { Indeed, from a purely scientific perspective, &quot;in the
+wild&quot; scant data is already often wildly &quot;over (re-)used&quot;.  Simple K-fold cross
+validation might perform better for &quot;true out of sample&quot;. }</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT/ISC
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/fitl">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

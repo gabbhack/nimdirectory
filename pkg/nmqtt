@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nmqtt</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">MQTT</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">IoT</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">MQTT3</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Native MQTT client library")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nmqtt" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Native Nim MQTT client library and binaries</h1>
+<p>This is a hybrid package including a native Nim MQTT library and
+binaries for a MQTT broker, publisher and subscriber.</p>
+<ul>
+<li>  <a href="#Install">Install</a></li>
+<li><a href="#Binaries">Binaries</a>
+<ul>
+<li>  <a href="#nmqtt">nmqtt</a></li>
+<li>  <a href="#nmqtt_password">nmqtt_password</a></li>
+<li>  <a href="#nmqtt_pub">nmqtt_pub</a></li>
+<li>  <a href="#nmqtt_sub">nmqtt_sub</a></li>
+</ul>
+</li>
+<li><a href="#Library">Library</a>
+<ul>
+<li>  <a href="#Examples">Examples</a></li>
+<li>  <a href="#Procs">Procs</a></li>
+</ul>
+</li>
+</ul>
+<h1>Install</h1>
+<p>You can install this package with Nimble:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">$</span> <span class="ide">nimble</span> <span class="ide">install</span> <span class="ide">nmqtt</span></div></div>  </code></pre>
+<p>or cloning and installing:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">$</span> <span class="ide">git</span> <span class="ide">clone</span> <span class="ide">https</span>:<span class="op">//</span><span class="ide">github</span><span class="op">.</span><span class="ide">com</span><span class="op">/</span><span class="ide">zevv</span><span class="op">/</span><span class="ide">nmqtt</span><span class="op">.</span><span class="ide">git</span> <span class="op">&amp;&amp;</span> <span class="ide">cd</span> <span class="ide">nmqtt</span></div></div><div class="line"><div class="line-content"><span class="op">$</span> <span class="ide">nimble</span> <span class="ide">install</span></div></div>  </code></pre>
+<h1>Binaries</h1>
+<p>The package provides 4 MQTT binaries:</p>
+<ol>
+<li><code>nmqtt</code> -&gt; Broker</li>
+<li><code>nmqtt_password</code> -&gt; Password utility for the broker</li>
+<li><code>nmqtt_pub</code> -&gt; MQTT publisher</li>
+<li><code>nmqtt_sub</code> -&gt; MQTT subscriber</li>
+</ol>
+<h2>nmqtt</h2>
+<p>A default configuration file is provided in <code>config/nmqtt.conf</code>. You can copy and paste this file to a desired location, or run <code>nimble setup nmqtt</code> which will guide you through it.</p>
+<pre>  <code>$ nmqtt --help
+nmqtt version 1.0.0
+
+nmqtt is a MQTT v3.1.1 broker
+
+USAGE
+  nmqtt [options]
+  nmqtt [-c /path/to/config.conf]
+  nmqtt [-h hostIP -p port]
+
+CONFIG
+  Use the configuration file for detailed settings,
+  such as SSL, adjusting keep alive timer, etc. or
+  specify options at the command line.
+
+  To add and delete users from the password file
+  please use nmqtt_password:
+    - nmqtt_password -a|-b|-d [options]
+
+OPTIONS
+  -?, --help          print this cligen-erated help
+  -c=, --config=      absolute path to the config file. Overrides all other options.
+  -h=, --host=        IP-address to serve the broker on.
+  -p=, --port=        network port to accept connecting from.
+  -v=, --verbosity=   verbosity from 0-3.
+  --max-conn=         max simultaneous connections. Defaults to no limit.
+  --clientid-maxlen=  max lenght of clientid. Defaults to 65535.
+  --clientid-spaces   allow spaces in clientid. Defaults to false.
+  --clientid-empty    allow empty clientid and assign random id. Defaults to false.
+  --client-kickold    kick old client, if new client has same clientid. Defaults to false.
+  --clientid-pass     pass clientid in payload {clientid:payload}. Defaults to false.
+  --password-file=    absolute path to the password file
+  --ssl               activate ssl for the broker - requires --ssl-cert and --ssl-key.
+  --ssl-cert=         absolute path to the ssl certificate.
+  --ssl-key=          absolute path to the ssl key.
+</code></pre>
+<h2>nmqtt_password</h2>
+<pre>  <code>$ nmqtt_password --help
+nmqtt_password is a user and password manager for nmqtt
+nmqtt_password is based upon nmqtt version 1.0.0
+
+USAGE
+  nmqtt_password -a {password_file.conf} {username}
+  nmqtt_password -b {password_file.conf} {username} {password}
+  nmqtt_password -d {password_file.conf} {username}
+
+CONFIG
+  Add or delete users from nmqtt password file.
+
+OPTIONS
+  -?, --help     print this cligen-erated help
+  -a, --adduser  add a new user to the password file.
+  -b, --batch    run in batch mode to allow passing passwords on the command line.
+  -d, --deluser  delete a user from the password file.
+</code></pre>
+<h2>nmqtt_pub</h2>
+<pre>  <code>$ ./nmqtt_pub --help
+nmqtt_pub is a MQTT client for publishing messages to a MQTT-broker.
+nmqtt_pub is based upon nmqtt version 1.0.0
+
+Usage:
+  nmqtt_pub [options] -t {topic} -m {message}
+  nmqtt_pub [-h host -p port -u username -P password] -t {topic} -m {message}
+
+OPTIONS
+  -?, --help         print this cligen-erated help
+  -h=, --host=       IP-address of the broker.
+  -p=, --port=       network port to connect too.
+  --ssl              use ssl.
+  -c=, --clientid=   your connection ID. Defaults to nmqttpub- appended with processID.
+  -u=, --username=   provide a username
+  -P=, --password=   provide a password
+  -t=, --topic=      mqtt topic to publish to.
+  -m=, --msg=        message payload to send.
+  -q=, --qos=        quality of service level to use for all messages.
+  -r, --retain       retain messages on the broker.
+  --repeat=          repeat the publish N times.
+  --repeatdelay=     if using --repeat, wait N seconds between publish. Defaults to 0.
+  --willtopic=       set the will&apos;s topic
+  --willmsg=         set the will&apos;s message
+  --willqos=         set the will&apos;s quality of service
+  --willretain       set to retain the will message
+  -v=, --verbosity=  set the verbosity level from 0-2. Defaults to 0.
+</code></pre>
+<h2>nmqtt_sub</h2>
+<pre>  <code>$ ./nmqtt_sub --help
+nmqtt_sub is a MQTT client that will subscribe to a topic on a MQTT-broker.
+nmqtt_sub is based upon nmqtt version 1.0.0
+
+Usage:
+  nmqtt_sub [options] -t {topic}
+  nmqtt_sub [-h host -p port -u username -P password] -t {topic}
+
+OPTIONS
+  -?, --help         print this cligen-erated help
+  -h=, --host=       IP-address of the broker. Defaults to 127.0.0.1
+  -p=, --port=       network port to connect too. Defaults to 1883.
+  --ssl              use ssl.
+  -c=, --clientid=   your connection ID. Defaults to nmqttsub- appended with processID.
+  -u=, --username=   provide a username
+  -P=, --password=   provide a password
+  -t=, --topic=      MQTT topic to subscribe too. For multipe topics, separate them by comma.
+  -q=, --qos=        quality of service level to use for all messages. Defaults to 0.
+  -k=, --keepalive=  keep alive in seconds for this client. Defaults to 60.
+  --removeretained   clear any retained messages on the topic
+  --willtopic=       set the will&apos;s topic
+  --willmsg=         set the will&apos;s message
+  --willqos=         set the will&apos;s quality of service
+  --willretain       set to retain the will message
+  -v=, --verbosity=  set the verbosity level from 0-2. Defaults to 0.
+</code></pre>
+<h1>Library</h1>
+<p>This library includes all the needed proc&apos;s for publishing MQTT messages to
+a MQTT-broker and for subscribing to a topic on a MQTT-broker. The library supports QOS 1, 2 and 3 for both publishing and subscribing and sending retained messages.</p>
+<h2>Examples</h2>
+<h3>Subscribe to topic</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nmqtt</span>, <span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">newMqttCtx</span>(<span class="str">&quot;nmqttClient&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">set_host</span>(<span class="str">&quot;test.mosquitto.org&quot;</span>, <span class="num">1883</span>)</div></div><div class="line"><div class="line-content"><span class="com">#ctx.set_auth(&quot;username&quot;, &quot;password&quot;)</span></div></div><div class="line"><div class="line-content"><span class="com">#ctx.set_ping_interval(30)</span></div></div><div class="line"><div class="line-content"><span class="com">#ctx.set_ssl_certificates(&quot;cert.crt&quot;, &quot;private.key&quot;)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mqttSub</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">start</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">on_data</span>(<span class="ide">topic</span>: <span class="ide">string</span>, <span class="ide">message</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;got &quot;</span>, <span class="ide">topic</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">message</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">subscribe</span>(<span class="str">&quot;nmqtt&quot;</span>, <span class="num">2</span>, <span class="ide">on_data</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">asyncCheck</span> <span class="ide">mqttSub</span>()</div></div><div class="line"><div class="line-content"><span class="ide">runForever</span>()</div></div>  </code></pre>
+<h3>Publish msg</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mqttPub</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">start</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">publish</span>(<span class="str">&quot;nmqtt&quot;</span>, <span class="str">&quot;hallo&quot;</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span> <span class="num">500</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">disconnect</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">mqttPub</span>()</div></div>  </code></pre>
+<h3>Subscribe and publish</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mqttSubPub</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">start</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Callback when receiving on the topic</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">on_data</span>(<span class="ide">topic</span>: <span class="ide">string</span>, <span class="ide">message</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;got &quot;</span>, <span class="ide">topic</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">message</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Subscribe to topic the topic `nmqtt`</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">subscribe</span>(<span class="str">&quot;nmqtt&quot;</span>, <span class="num">2</span>, <span class="ide">on_data</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span> <span class="num">500</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Publish a message to the topic `nmqtt`</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">publish</span>(<span class="str">&quot;nmqtt&quot;</span>, <span class="str">&quot;hallo&quot;</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span> <span class="num">500</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Disconnect</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">disconnect</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">mqttSubPub</span>()</div></div>  </code></pre>
+<h2>Procs</h2>
+<h3>newMqttCtx*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newMqttCtx</span><span class="op">*</span>(<span class="ide">clientId</span>: <span class="ide">string</span>): <span class="ide">MqttCtx</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Initiate a new MQTT client</p>
+<hr />
+<h3>set_ping_interval*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">set_ping_interval</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">txInterval</span>: <span class="ide">int</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Set the clients ping interval in seconds. Default is 60 seconds.</p>
+<hr />
+<h3>set_ssl_certificates*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">set_ssl_certificates</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">sslCert</span>: <span class="ide">string</span>, <span class="ide">sslKey</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Sets the SSL Certificate and Key files to use Mutual TLS authentication</p>
+<hr />
+<h3>set_host*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">set_host</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">host</span>: <span class="ide">string</span>, <span class="ide">port</span>: <span class="ide">int</span><span class="op">=</span><span class="num">1883</span>, <span class="ide">sslOn</span><span class="op">=</span><span class="ide">false</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Set the MQTT host</p>
+<hr />
+<h3>set_auth*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">set_auth</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">username</span>: <span class="ide">string</span>, <span class="ide">password</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Set the authentication for the host</p>
+<hr />
+<h3>set_will*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">set_will</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">topic</span>, <span class="ide">msg</span>: <span class="ide">string</span>, <span class="ide">qos</span><span class="op">=</span><span class="num">0</span>, <span class="ide">retain</span><span class="op">=</span><span class="ide">false</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Set the clients will.</p>
+<hr />
+<h3>connect*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">connect</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<p>Connect to the broker.</p>
+<hr />
+<h3>start*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">start</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<p>Auto-connect and reconnect to the broker. The client will try to
+reconnect when the state is <code>Disconnected</code> or <code>Error</code>. The <code>Error</code>-state
+happens, when the broker is down, but the client will try to reconnect
+until the broker is up again.</p>
+<hr />
+<h3>disconnect*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">disconnect</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<p>Disconnect from the broker.</p>
+<hr />
+<h3>publish*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">publish</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">topic</span>: <span class="ide">string</span>, <span class="ide">message</span>: <span class="ide">string</span>, <span class="ide">qos</span><span class="op">=</span><span class="num">0</span>, <span class="ide">retain</span><span class="op">=</span><span class="ide">false</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<p>Publish a message.</p>
+<p>  <strong>Required:</strong></p>
+<ul>
+<li>topic: string</li>
+<li>message: string</li>
+</ul>
+<p>  <strong>Optional:</strong></p>
+<ul>
+<li>qos: int     = 0, 1 or 2</li>
+<li>retain: bool = true or false</li>
+</ul>
+<p>  <strong>Publish message:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">publish</span>(<span class="ide">topic</span> <span class="op">=</span> <span class="str">&quot;nmqtt&quot;</span>, <span class="ide">message</span> <span class="op">=</span> <span class="str">&quot;Hey there&quot;</span>, <span class="ide">qos</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">retain</span> <span class="op">=</span> <span class="ide">true</span>)</div></div>  </code></pre>
+<p>  <strong>Remove retained message on topic:</strong></p>
+<p>Set the <code>message</code> to <em>null</em>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">publish</span>(<span class="ide">topic</span> <span class="op">=</span> <span class="str">&quot;nmqtt&quot;</span>, <span class="ide">message</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>, <span class="ide">qos</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">retain</span> <span class="op">=</span> <span class="ide">true</span>)</div></div>  </code></pre>
+<hr />
+<h3>subscribe*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">subscribe</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">topic</span>: <span class="ide">string</span>, <span class="ide">qos</span>: <span class="ide">int</span>, <span class="ide">callback</span>: <span class="ide">PubCallback</span>): <span class="ide">Future</span>[<span class="ide">void</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>Subscribe to a topic</p>
+<p>Access the callback with:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">callbackName</span>(<span class="ide">topic</span>: <span class="ide">string</span>, <span class="ide">message</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Topic: &quot;</span>, <span class="ide">topic</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">message</span></div></div>  </code></pre>
+<hr />
+<h3>unsubscribe*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">unsubscribe</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>, <span class="ide">topic</span>: <span class="ide">string</span>): <span class="ide">Future</span>[<span class="ide">void</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>Unubscribe from a topic.</p>
+<hr />
+<h3>isConnected*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">isConnected</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>): <span class="ide">bool</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Returns true, if the client is connected to the broker.</p>
+<hr />
+<h3>msgQueue*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">msgQueue</span><span class="op">*</span>(<span class="ide">ctx</span>: <span class="ide">MqttCtx</span>): <span class="ide">int</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Returns the number of unfinished packages, which still are in the work queue.
+This includes all publish and subscribe packages, which has not been fully
+send, acknowledged or completed.</p>
+<p>You can use this to ensure, that all your of messages are sent, before
+exiting your program.</p>
+<hr />
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/zevv/nmqtt">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

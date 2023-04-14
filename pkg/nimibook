@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimibook</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">book</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimib</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">markdown</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">publish</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A port of mdbook to nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimibook" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nimibook</h1>
+<p><strong>nimibook</strong> is a port of <a href="https://rust-lang.github.io/mdBook/index.html">mdbook</a> to <a href="https://nim-lang.org/">Nim</a>, powered by <a href="https://pietroppeter.github.io/nimib/">nimib</a>.
+Nimibook allows to create a nice looking book from nim code and markdown,
+making sure that nim code is running correctly and being able to incorporate code outputs in the final book.
+An example book is <a href="https://pietroppeter.github.io/nimibook/">nimibook</a> documentation.</p>
+<blockquote>
+<p><a href="https://rust-lang.github.io/mdBook/index.html">mdBook</a> is a command line tool and Rust crate to create books
+using Markdown (as by the CommonMark specification) files.
+It&apos;s very similar to <a href="https://github.com/GitbookIO/gitbook">Gitbook</a>, which is a command line tool (and Node.js library)
+for building beautiful books using GitHub/Git and Markdown (or AsciiDoc).</p>
+</blockquote>
+<p><a href="https://pietroppeter.github.io/nimib/">nimib</a> is a Nim library to convert your Nim code and its outputs to html documents.
+The html output can be easily customized thanks to <a href="https://github.com/soasme/nim-mustache">nim-mustache</a>,
+and this is what allows it to use it to build nimibook.
+<em>nimib documents</em> are normal nim files which use nimib library to produce an output document.</p>
+<p>One particular advantage of nimib is that it can incorporate interactive content
+taking advantage of nim&apos;s js backend.
+For the basic examples see
+<a href="https://pietroppeter.github.io/nimib/interactivity.html">nimib interactivity doc</a>.</p>
+<p>The Markdown dialect supported by both nimib and nimibook is the subset of <a href="https://github.github.com/gfm/">Github Flavored Markdown</a>
+provided by <a href="https://github.com/soasme/nim-markdown">nim-markdown</a>. For a quick reference of supported syntax see this <a href="https://pietroppeter.github.io/nimib/cheatsheet.html">cheatsheet</a> (created with nimib).</p>
+<!-- refs -->
+<h2>Status</h2>
+<p>Nimibook is actively maintained (<a href="https://github.com/pietroppeter/nimibook/issues?q=is%3Aopen+is%3Aissue+label%3A2023H1%2C2023H2">target issues for 2023</a>)
+and it provides the basic functionality
+needed to create a book with markdown and nimib sources.
+It still has some features missing from mdbook
+(see <a href="https://github.com/pietroppeter/nimibook/issues/9#issuecomment-851989939">this issue</a>).</p>
+<p>To follow up on recent changes check the <a href="https://github.com/pietroppeter/nimibook/blob/main/changelog.md">changelog.md</a>.</p>
+<h2>Example sites using nimibook</h2>
+<ul>
+<li>  <a href="https://scinim.github.io/getting-started/">scinim/getting-started</a></li>
+<li>  <a href="https://norm.nim.town">moigagoo/norm</a></li>
+<li>  <a href="https://philippmdoerner.github.io/Snorlogue/bookCompiled/">PhilippMDoerner/Snorlogue</a></li>
+</ul>
+<p>You are welcome to open a PR and add your site using nimibook here.</p>
+<h2>Features</h2>
+<ul>
+<li>table of contents in a collapsible sidebar</li>
+<li>five themes (Light, Rust, Coal, Navy, Ayu)</li>
+<li>buttons to next/previous pages</li>
+<li>build multiple files in parallel</li>
+<li>(optional) latex content with katex</li>
+<li>(optional) link to github repo</li>
+<li>(optional) link to track analytics with plausible analytics</li>
+</ul>
+<h2>Installation</h2>
+<p>To install Nimibook: <code>nimble install nimibook</code></p>
+<h2>How to setup your book with nimibook</h2>
+<p>Nimibook does not (<a href="https://github.com/pietroppeter/nimibook/issues/63">yet</a>) provides an executable to manage your book, but it provides the basic building blocks to write your own.</p>
+<p><strong>1. example nbook.nim</strong>: in a folder of your choice create a <code>nbook.nim</code> file with the following content:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimibook</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">book</span> <span class="op">=</span> <span class="ide">initBookWithToc</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">entry</span>(<span class="str">&quot;Preface&quot;</span>, <span class="str">&quot;preface.md&quot;</span>, <span class="ide">numbered</span> <span class="op">=</span> <span class="ide">false</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">entry</span>(<span class="str">&quot;Introduction&quot;</span>, <span class="str">&quot;intro.md&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">section</span>(<span class="str">&quot;Chapter 1&quot;</span>, <span class="str">&quot;chapter1/index.nim&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">entry</span>(<span class="str">&quot;Content&quot;</span>, <span class="str">&quot;content.nim&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">draft</span>(<span class="str">&quot;Nothing yet&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">section</span>(<span class="str">&quot;Sub chapter&quot;</span>, <span class="str">&quot;no_ext&quot;</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">entry</span>(<span class="str">&quot;and some more content&quot;</span>, <span class="str">&quot;more.md&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nimibookCli</span>(<span class="ide">book</span>)</div></div>  </code></pre>
+<p><strong>2. write a TOC</strong>: modify <code>nbook.nim</code> to specify
+the planned Table of Content (TOC) for your book.</p>
+<p><strong>3. nbook init</strong>: running <code>nim r nbook init</code> (or compile <code>nbook</code> and run <code>nbook init</code>) will set up the book with:</p>
+<ul>
+<li>a <code>nimib.toml</code> that contains the default configuration for the book</li>
+<li>a <code>book</code> folder that contains sources for all chapters mentioned in the TOC. Note that <code>.nim</code> files already contain default <code>nimib</code> content to be used in nimibook.</li>
+<li>a <code>docs</code> folder that contains static assets for the book
+and that will contain the built book</li>
+</ul>
+<p><strong>4. nbook build</strong>: run <code>nim r nbook build</code> to build the book. Open any <code>.html</code> file in <code>docs</code> folder to navigate your book.</p>
+<p><strong>5. create your content and enjoy!</strong>: now you are ready to start creating content in your sources and publish your book.</p>
+<!-- SKIP
+All content before this sign is replicated in the Introduction chapter of nimibook documentation
+ -->
+<p>See <a href="https://pietroppeter.github.io/nimibook/">nimibook</a> documentation for more details.</p>
+<h2>Contribute</h2>
+<p>You are more than welcome to contribute!</p>
+<ul>
+<li>We usually have some open issues of stuff we need to fix or we would like to do.</li>
+<li>You have an overview of the code base in <a href="src/readme.md">src/readme.md</a></li>
+<li>The CI is setup to run tests and publish a document PR preview (click on details on the Netlify preview task once it&apos;s green), so that we can all check the changes directly from the PR.</li>
+<li>You should also test and build the book locally, there are nimble tasks to help with that (run <code>nimble tasks</code> for the list).</li>
+<li>If the feature can be tested with a unit test, make sure to add one.</li>
+<li>Once you make a change, remember to document your changes in the appropriate place in the docs.</li>
+<li>If you add a module, remember to update the code guide.</li>
+<li>bump the version (usually a patch increment) so that we can immediately tag and release your contribution.</li>
+<li>Make sure that the title of your PR is clear and edit the initial message with a few short sentences that will be added to the changelog once we release.</li>
+</ul>
+<h2>Analytics</h2>
+<p>This website is tracking analytics with <a href="https://plausible.io/index.html">plausible.io</a>, a lightweight and open-source website analytics tool with no cookies and fully compliant with GDPR, CCPA and PECR.
+Analytics for this website are publicly available <a href="https://plausible.io/pietroppeter.github.io%2Fnimibook">here</a>. You can opt out from analytics tracking with <a href="https://plausible.io/docs/excluding">standard ad-blocking</a> or typing <a href="https://plausible.io/docs/excluding-localstorage">  <code>localStorage.plausible_ignore=true</code></a> in browser console.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/pietroppeter/nimibook">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

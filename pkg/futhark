@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">futhark</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">c</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">c2nim</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">interop</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">language</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">code</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Zero-wrapping C imports in Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install futhark" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <img src="https://github.com/PMunch/futhark/blob/master/futhark.png" style="max-width: 100%;" alt="Futhark logo" /></p>
+<p>Have your eyes set on the perfect C library for your project? Can&apos;t find a
+wrapper for it in Nim? Look no further! Futhark aims to allow you to simply
+import C header files directly into Nim, and allow you to use them like you
+would from C without any manual intervention. It&apos;s still in an alpha state, but
+it can already wrap many complex header files without any rewrites or
+pre-processing.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">futhark</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Tell futhark where to find the C libraries you will compile with, and what</span></div></div><div class="line"><div class="line-content"><span class="com"># header files you wish to import.</span></div></div><div class="line"><div class="line-content"><span class="ide">importc</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">path</span> <span class="str">&quot;../stb&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">define</span> <span class="ide">STB_IMAGE_IMPLEMENTATION</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;stb_image.h&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Tell Nim how to compile against the library. If you have a dynamic library</span></div></div><div class="line"><div class="line-content"><span class="com"># this would simply be a `--passL:&quot;-l&lt;library name&gt;`</span></div></div><div class="line"><div class="line-content"><span class="kwd">static</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">writeFile</span>(<span class="str">&quot;test.c&quot;</span>, """
+  #define STB_IMAGE_IMPLEMENTATION
+  #include "../stb/stb_image.h"
+  """)</div></div><div class="line"><div class="line-content">{<span class="op">.</span><span class="ide">compile</span>: <span class="str">&quot;test.c&quot;</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Use the library just like you would in C!</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">width</span>, <span class="ide">height</span>, <span class="ide">channels</span>: <span class="ide">cint</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">image</span> <span class="op">=</span> <span class="ide">stbi_load</span>(<span class="str">&quot;futhark.png&quot;</span>, <span class="ide">width</span><span class="op">.</span><span class="kwd">addr</span>, <span class="ide">height</span><span class="op">.</span><span class="kwd">addr</span>, <span class="ide">channels</span><span class="op">.</span><span class="kwd">addr</span>, <span class="ide">STBI_default</span><span class="op">.</span><span class="ide">cint</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">image</span> <span class="op">==</span> <span class="kwd">nil</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Error in loading the image&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">quit</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Loaded image with a width of &quot;</span>, <span class="ide">width</span>, <span class="str">&quot;, a height of &quot;</span>, <span class="ide">height</span>, <span class="str">&quot; and &quot;</span>, <span class="ide">channels</span>, <span class="str">&quot; channels&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">stbi_image_free</span>(<span class="ide">image</span>)</div></div>  </code></pre>
+<h1>So are all C wrappers now obsolete?</h1>
+<p>Not quite. Futhark only tells you what the C headers define and allows you to
+use them. This means that the interface is still very C-like. A lot of great
+Nim wrappers will take a C library and wrap it into something that is a little
+more simple to use from Nim land. But Futhark can definitely be used to help
+with wrapping C libraries. Since it reads the C files directly you are
+guaranteed that all the types match up with their C counterparts, no matter
+what platform you&apos;re on, or what defines you want to pass. This is a huge
+benefit over hand-wrapped code. Futhark and Øpir will also cache their results,
+so after the initial compilation it&apos;s just as fast to use as it simply grabs
+the pre-generated Nim file from the cache. Both files could of course also be
+edited or included as-is in a project if you want users to not have to run Øpir
+or Futhark themselves.</p>
+<h1>How does it work?</h1>
+<p>Basically Futhark comprises of two parts, a helper program called Øpir (or
+<code>opir</code> just to ensure that it works everywhere) and a module called <code>futhark</code>
+that exposes a <code>importc</code> macro. Øpir is compiled with libclang and uses Clang
+to parse and understand the C files, it then creates a big JSON output of
+everything that is defined in the headers with Nim friendly types. The macro
+then reads this file and applies any overrides to types and names before it
+generates all the Nim definitions.</p>
+<h2>Basic usage</h2>
+<p>The four main things you need to know to use Futhark is <code>sysPath</code>, <code>path</code>,
+<code>compilerArgs</code>, and normal imports (the <code>&quot;stb_image.h&quot;</code> part in the above
+example).</p>
+<ul>
+<li><code>sysPath</code> denotes system paths, these will be passed to Øpir to make sure
+Clang knows where to find all the definitions. This can also be passed with
+<code>-d:sysPath:&lt;path 1&gt;:&lt;path 2&gt;</code> if you want to automatically generate these.</li>
+<li><code>path</code> denotes library paths, these will also be passed to Øpir, but anything
+found in these paths which is used by the files you have in your project will
+be wrapped by Futhark as well.</li>
+<li><code>comppilerArgs</code> specifies additional flags that should be passed to Clang
+when parsing the C headers.</li>
+<li>Files listed in quotes in the importc are equivalent to <code>#include &quot;file.h&quot;</code>
+in C. Futhark will generate all definitions in these files, and if <code>file.h</code>
+imports more files found in any of the paths passed in by <code>path</code> these files
+will also be imported.</li>
+</ul>
+<p>Note: The difference between <code>sysPath</code> and <code>path</code> is simply about how Futhark
+handles the files. <code>sysPath</code> are paths which are fed to Øpir and Clang in order
+to make Clang able to read all the types. <code>path</code> are the paths Futhark takes
+into account when generating definitions. This difference exists to make sure
+Futhark doesn&apos;t import all kinds of low-level system stuff which is already
+available in Nim. A subpath of <code>sysPath</code> can be passed in with <code>path</code> without
+trouble. So <code>sysPath &quot;/usr/include&quot;</code> followed by <code>path &quot;/usr/include/X11&quot;</code> is
+fine and Futhark will only generate code for the explicitly mentioned files,
+and any files it requires from <code>/usr/include/X11</code>.</p>
+<h2>Hard names and overrides</h2>
+<p>Nim, unlike C, is case and underscore insensitive and doesn&apos;t allow you to have
+identifiers starting with <code>_</code> or <code>__</code>, or identifiers that have more than one
+consecutive <code>_</code> in them. Nim also has a set of reserved keywords like <code>proc</code>,
+<code>addr</code>, and <code>type</code> which would be inconvenient to have as names. Because of
+this Futhark will rename these according to some fairly simple rules.</p>
+<table>
+<thead>
+<tr>
+<th>Name issue</th>
+<th>Nim rename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>struct type</td>
+<td><code>struct_</code> prefix</td>
+</tr>
+<tr>
+<td>union type</td>
+<td><code>union_</code> prefix</td>
+</tr>
+<tr>
+<td><code>_</code> prefix</td>
+<td><code>internal</code> prefix</td>
+</tr>
+<tr>
+<td><code>__</code> prefix</td>
+<td><code>compiler</code> prefix</td>
+</tr>
+<tr>
+<td><code>__</code> in name</td>
+<td>All underscores removed</td>
+</tr>
+<tr>
+<td>Reserved keyword</td>
+<td>Append kind to name, <code>proc</code>, <code>const</code>, <code>struct</code> etc.</td>
+</tr></tbody></table>
+<p>Since this, along with Nims style-insensitivity, means that some identifiers
+might still collide, the name will further have the kind appended, and if it
+still collides it will append the hash of the original identifier. This
+shouldn&apos;t happen often in real projects and exists mostly to create a foolproof
+renaming scheme. Note that struct and union types also get a prefix, this is
+normally resolved automatically by C typedef-ing the <code>struct struct_name</code> to
+<code>struct_name_t</code>, but in case you need to use a <code>struct struct_name</code> type just
+keep in mind that in Nim it will be <code>struct_struct_name</code>.</p>
+<p>If you want to rename an object or a field you can use the <code>rename</code> directive.
+Simply put <code>rename &lt;from&gt;, &lt;to&gt;</code> along with your other options. <code>&lt;from&gt;</code> can be
+either just an object name (before any other renaming) as a string or ident, or
+a field in the format <code>&lt;object&gt;.&lt;field&gt;</code> both the original C names either as
+two identifiers, or the whole thing as a single string. <code>&lt;to&gt;</code> is always a
+single identifier and is the new name.</p>
+<p>If you want to implement more complex renaming you can use the <code>renameCallback</code>
+directive and pass in a callback function that takes the original name, a
+string denoting what kind of identifier this is, and an optional string
+denoting which object or procedure this identifier occurs in, and which returns
+a new string. This callback will be inserted into the renaming logic and will
+be called on the original C identifier before all the other rules are applied.</p>
+<h2>Redefining types</h2>
+<p>C tends to use a lot of void pointers, pointers to characters, and pointers to
+a single element which is supposed to be a collection of said element. In Nim
+we like to be a bit more strict about our types. For this you can use the
+<code>retype</code> directive. It takes the form <code>retype &lt;object&gt;.&lt;field&gt;, &lt;Nim type&gt;</code> so
+for example to retype the C array type defined as <code>some_element* some_field</code> to
+an indexable type in Nim you can use
+<code>retype some_object.some_field, ptr UncheckedArray[some_element]</code>. The names
+for the object and field are both their renamed Nim identifiers.</p>
+<p>If you need to redefine an entire object, instead of just specific fields
+Futhark by default also guards every type and procedure definiton in simple
+<code>when declared(SomeType)</code> statements so that if you want to override a
+definition you can simply define your type before the <code>importc</code> macro
+invocation and Futhark won&apos;t override your definition. It is up to you however
+to ensure that this type actually matches in size and layout with the original
+C type.</p>
+<h2>Compatibility features and readability</h2>
+<p>Futhark by default tries to ensure the highest amount of compatibility with
+pre-wrapped libraries (e.g. the <code>posix</code> standard library module) and other user
+code. Because of this the output which Futhark generates isn&apos;t very easy to
+read, being littered with <code>when defined</code> statements and weird numbered
+identifiers for renaming things. These features are intended to make Futhark
+easier to use in a mostly automatic fashion, but you might not need them. If
+you want to read the generated output, build documentation of a Futhark
+generated module, or possibly get an improved editor experience you might want
+to disable some of these features.</p>
+<p>There are basically three things you can control with define switches:</p>
+<table>
+<thead>
+<tr>
+<th>Define</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodeclguards</td>
+<td>Disables the object rename/override functionality</td>
+</tr>
+<tr>
+<td>noopaquetypes</td>
+<td>Disables opaque types used for unknown objects</td>
+</tr>
+<tr>
+<td>exportall</td>
+<td>Exports all fields (including renamed ones)</td>
+</tr></tbody></table>
+<h3>Object rename/override functionality</h3>
+<p>This declares types in such a way that earlier declarations by the same name
+will not be overriden or collide. With this feature you can declare an object,
+function, enum, etc. before the call to Futhark and these declarations will be
+used instead of the auto-generated ones. This is also what enables the feature
+at the end of the &quot;Redifining types&quot; section. Disabling this feature will
+remove all of the <code>when declared</code> but you might run into Futhark trying to
+redeclare existing things, including built in types and names.</p>
+<h3>Opaque type functionality</h3>
+<p>If a type is not fully declared in your C headers but is still required for
+your project Futhark will generate a <code>type SomeType = distinct object</code> dummy
+type for it. Since most C libraries will pass things by pointer this makes sure
+that a <code>ptr SomeType</code> can exist and be passed around without having to know
+anything about <code>SomeType</code>. Disabling this feature will remove these definitions
+but might mean some procedure definitions now have invalid parameters or return
+types. This is mostly useful in conjunction with <code>nodeclguards</code> and manually
+declaring these types.</p>
+<h3>Hiding symbols functionality</h3>
+<p>To avoid editors showing the renamed identifiers used by the object
+rename/override functionality they are hidden by default. If however you want
+to generate documentation for a Futhark generated module these fields won&apos;t be
+visible and the documentation mostly useless. With <code>exportall</code> these symbols
+will be exported as well and documentation will be readable. This is mostly
+useful if you want to export documentation but can&apos;t use <code>nodeclguards</code> (which
+makes even more readable documentation).</p>
+<h2>Pre-ANSI C function declarations</h2>
+<p>Also known as K&amp;R style functions. By definition C code like</p>
+<pre>  <code class="language-c"><div class="line"><div class="line-content"><span class="kwd">int</span><span class="op">*</span> <span class="ide">myfunc</span>();</div></div>  </code></pre>
+<p>is a pre-ansi C function declaration that says <code>myfunc</code> returns a pointer to an
+integer <em>and takes any number of arguments</em>. This last part is a historic thing
+you can read more about <a href="https://jameshfisher.com/2016/11/27/c-k-and-r/">here</a>,
+but suffice to say this is misused in quite a lot of C libraries to mean that
+the function takes no arguments. Since this is fairly obscure, and Nim will
+create bad C code if the varargs pragma is attached to a function without
+arguments this is ignored by default. However if you for some reason require
+this you might add <code>-d:preAnsiFuncDecl</code> while compiling.</p>
+<h2>Deeper control</h2>
+<p>In case you face issues that aren&apos;t easily solveable there is one last option
+for making modifications, and this is Øpir hooks. Since Øpir converts your C
+imports to a JSON format you&apos;re able to register hooks that will be run before
+Futhark consumes this JSON. These are simple procedures which takes a <code>JsonNode</code>
+and returns a <code>JsonNode</code>. With this you&apos;re able to change every aspect of the
+JSON, and even add or remove definitions. The callbacks are a list, so modules
+to perform certain commonly done transformations (e.g. combine similarly named
+constants into an enum) could be added to the list of callbacks easily. To add
+these simply add in <code>outputPath &lt;procedure name&gt;</code> to your <code>importc</code> block.</p>
+<h2>Destructors</h2>
+<p>If you are using a C library you will probably want to wrap destructor calls.
+Futhark makes all C objects <code>{.pure, inheritable.}</code> which means you can quite
+easily use somewhat idiomatic Nim to achieve destructors.</p>
+<p>An example usecase from MiniAudio bindings is as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">TAudioEngine</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">maEngine</span> <span class="com"># Creates a new object in this scope</span></div></div><div class="line"><div class="line-content">                                       <span class="com"># maEngine is a type wrapped by Futhark</span></div></div><div class="line"><div class="line-content">                                       <span class="com"># TAudioEngine can now have a destructor</span></div></div><div class="line"><div class="line-content">                                       <span class="com"># attached to it</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">=</span><span class="ide">destroy</span>`(<span class="ide">engine</span>: <span class="kwd">var</span> <span class="ide">TAudioEngine</span>) <span class="op">=</span> <span class="com"># Define a destructor as normal</span></div></div><div class="line"><div class="line-content">  <span class="ide">maEngineUninit</span>(<span class="ide">engine</span><span class="op">.</span><span class="kwd">addr</span>)</div></div>  </code></pre>
+<h2>Dynamic libraries and implementing headers</h2>
+<p>If you are making a dynamic or static library to be loaded or linked with
+another program you are often given a header file to implement. This file
+typically includes the types and functions you are able to call from the main
+program, along with the procedures that your application has to implement in
+order to be loaded and run correctly. Futhark normally imports all headers on
+the assumption that things will be made available from C while compiling, ie.
+it adds the <code>importc</code> pragma to them. But in order to support this scenario you
+can also get it to create forward declarations with the <code>exportc</code> pragma. This
+allows Nim to know that there has to exist an implementation for a given
+procedure in your application, and as such will fail to compile if you&apos;re
+missing an implementation. It will also make sure that your signature is
+exported correctly and matches the intended C header. To do this simply define
+the procedures to be forward declared like this along with your other options:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">importc</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="str">&quot;proc_to_forward&quot;</span></div></div>  </code></pre>
+<p>Futark will automatically add the <code>dynlib</code> pragma to this declaration if you&apos;re
+buildin with <code>--app:lib</code>, but if you need to add more pragmas you can list them
+after the name like so:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">macro</span> <span class="ide">customPragma</span>(<span class="ide">msg</span>: <span class="kwd">static</span>[<span class="ide">string</span>], <span class="ide">body</span>: <span class="ide">untyped</span>): <span class="ide">untyped</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Saying: &quot;</span>, <span class="ide">msg</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">body</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">importc</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="str">&quot;proc_to_forward&quot;</span>, <span class="ide">customPragma</span>(<span class="str">&quot;Hello world&quot;</span>), <span class="ide">used</span></div></div>  </code></pre>
+<p>If you want to see what code Futhark generated for your forward declarations,
+and therefore the signature you need to match (even the argument names), you
+can pass <code>-d:echoForwards</code> and they will be written out in the terminal while
+compiling.</p>
+<p>NOTE: Since the forward declaration has all the pragmas for passing it on as C
+compatible symbols you don&apos;t actually need to have these pragmas attached to
+your implementation which makes it a bit cleaner. And the procedure can of
+course be written in camelCase if you prefer, it will still match the forward
+declaration.</p>
+<h1>Shipping wrappers</h1>
+<p>If you&apos;ve built wrappers with Futhark, and expanded them with a Nim interface
+and now it&apos;s time to share them. This section will give some best-practices on
+how to ship wrappers. Since the Øpir tool requires Clang to be installed it can
+be a bit tricky to get Futhark installed. In addition to this Futhark obviously
+requires access to the C header files, which might be installed in different
+places based on the system. Because of these things you might not want to have
+Futhark as a dependency for your bindings. To help with this Futhark has a
+<code>outputPath</code> argument which can be added to the <code>importc</code> block. This path is
+where the completed bindings will be stored, and also where Futhark will look
+for existing bindings to avoid rebuilding them. This means that with the
+<code>outputPath</code> set to a file you will need to use <code>-d:futharkRebuild</code> to update
+the file when you make changes in the <code>importc</code> block. If you set <code>outputPath</code>
+to a folder then <code>futhark</code> will store the files with the appended hash in this
+folder instead of in the <code>nimcache</code> folder and caching will work as usual. By
+using this feature you will be able to set a path local to your project and
+check the generated Futhark file into your version control system. But that is
+only half the job, because to be aware of the cache file Futhark still needs to
+be installed. The recommended way to get around this is to do a
+<code>when defined(useFuthark)</code> switch to check whether the user wants to use Futhark
+directly or to use the shipped wrapper. It is recommended to use the exact name
+<code>useFuthark</code>, this way the user can turn on Futhark for the entire project (in
+case you have imported another library which also uses Futhark). If you want to
+give the user the option to switch on Futhark for only your project it is
+recommended to use an additional switch with <code>useFutharkFor&lt;project name&gt;</code>.</p>
+<p>A complete sample would look a bit something like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">useFuthark</span>) <span class="kwd">or</span> <span class="ide">defined</span>(<span class="ide">useFutharkForExample</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">futhark</span>, <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">importc</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">outputPath</span> <span class="ide">currentSourcePath</span><span class="op">.</span><span class="ide">parentDir</span> <span class="op">/</span> <span class="str">&quot;generated.nim&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">path</span> <span class="str">&quot;&lt;path to library&gt;&quot;</span></div></div><div class="line"><div class="line-content">    <span class="str">&quot;libfile.h&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">include</span> <span class="str">&quot;generated.nim&quot;</span></div></div>  </code></pre>
+<p>Keep in mind that when your package is installed the generated Futhark output
+would be placed in the folder of your package using this code. If the
+<code>/ &quot;generated.nim&quot;</code> part is left of then the file would be named
+<code>futhark_&lt;hash&gt;.nim</code> as described above, this means that your <code>include</code> could
+use the one specified in your package installation, while users doing
+<code>useFuthark</code> would generate one based on its hash (or reuse yours if the hash
+matches).</p>
+<h1>But why not use c2nim or nimterop?</h1>
+<p>Both c2nim and nimterop have failed me in the past when wrapping headers. This
+boils down to how they are built. c2nim tries to read and understand C files
+on its own, something which might appear simple, but C is notoriously hard to
+parse and c2nim fails on macros and other slightly complex things. nimterop
+uses treesitter and performs slightly better. It is theoretically able to parse
+all C syntax, but the C semantics is still up to nimterop to implement. Which
+means it can&apos;t do macros or things like IFDEF automatically.</p>
+<p>Futhark on the other hand uses clang, which is very good at both understand C
+syntax, but also C semantics. This means that it resolves all macros and IFDEF
+statements, and just gives us the definitions for everything. This means much
+less work in actually trying to understand C, which means that all this work
+can be spent on quality Nim translation.</p>
+<h1>Sounds great, what&apos;s the catch?</h1>
+<p>Futhark is currently in an beta state, it works really well but you might run
+into occasional bugs or hickups. It also doesn&apos;t support C++ at the moment, and
+it doesn&apos;t understand things like function-style macros. It might also mess up
+on strange C things which haven&apos;t been encountered yet, although this is more
+and more rare as people use it. All of these shortcomings are things I hope to
+get fixed up over time.</p>
+<h1>Installation</h1>
+<p>To install Futhark you first need to have clang installed. Installing clang on
+Linux is as simple as just grabbing it from your package manager (e.g. <code>sudo apt install libclang-dev</code>). To install clang on Windows you need to install
+<a href="https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.7">LLVM</a> (you
+probably want to grab the <code>LLVM-15.0.7-win64.exe</code> version). To install clang on
+macOS, run <code>xcode-select --install</code> in the terminal. Opir should then detect
+it automatically. Have a look at <a href="src/opir.nims">opir.nims</a> if you&apos;re
+curious how the Windows and macOS detection works.</p>
+<p>If you have Clang installed in your system path you can now simply run:</p>
+<pre>  <code>nimble install futhark
+</code></pre>
+<p>Otherwise you need to tell Opir how to link with libclang. Do this by either
+copying the <code>libclang.lib</code> and <code>libclang.dll</code> into the Futhark project dir or
+use <code>passL</code> to pass the folder that <code>libclang.lib</code> (or libclang.so on Linux
+machines) lives in to the linker:</p>
+<pre>  <code>nimble install --passL:&quot;-L&lt;path to lib directory containing libclang.so file&gt;&quot; futhark
+#e.g.: nimble install --passL:&quot;-L/usr/lib/llvm-6.0/lib&quot; futhark
+</code></pre>
+<h2>TODO</h2>
+<ul>
+<li>Proper handling of C macros (inherently hard because C macros are typeless)</li>
+<li>Find way to not require C compiler include paths</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/PMunch/futhark">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

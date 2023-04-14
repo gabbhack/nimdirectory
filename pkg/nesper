@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nesper</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">esp32</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">esp-idf</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mcu</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">microcontroller</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">embedded</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim wrappers for ESP-IDF (ESP32)")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nesper" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nesper</h1>
+<p>Program the ESP32 using Nim! This library builds on the <code>esp-idf</code>. Nim now has support for FreeRTOS &amp; LwIP. Combined with the new ARC garbage collector makes Nim an excellent language for programming the ESP32.</p>
+<p>See <a href="https://github.com/elcritch/nesper/releases">Releases</a> for updates.</p>
+<h2>Status</h2>
+<p>This project is fairly stable and even being used in shipping hardware project. The documentation is rough and primarily only includes this README. As such, it may still require understanding the underlying ESP-IDF SDK for various use cases. However, it is useable and several people unfamiliar with ESP-IDF and embedded programming have added wrappers for esp-idf modules.</p>
+<p>Note: It&apos;s recommended to use the ESP-IDF.py v4.0 branch (as of 2020-11-24). Branch v4.1 has multiple serious bugs in I2C.</p>
+<h2>General Usage</h2>
+<ol>
+<li><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#get-started-get-esp-idf">Install ESP-IDF</a>
+<ul>
+<li>TLDR: <code>git clone -b release/v4.0 --recursive https://github.com/espressif/esp-idf.git</code></li>
+<li>esp-idf version 4.0 is recommended for now since its more stable</li>
+<li>esp-idf version can be set using the defines: <code>-d:ESP_IDF_V4_0</code> or <code>-d:ESP_IDF_V4_1</code></li>
+</ul>
+</li>
+<li>Install <a href="https://nim-lang.org/install.html">Nim 1.4+</a></li>
+<li>Use <a href="https://github.com/nim-lang/nimble#nimble-usage">Nimble</a> to install Nesper (<code>nimble install https://github.com/elcritch/nesper</code> or for the devel branch <code>nimble install &apos;https://github.com/elcritch/nesper@#devel&apos; </code>)</li>
+<li>Create a new Nimble project <code>nimble init --git esp32_nim_example</code></li>
+<li>In the new project directory edit the Nimble file and add the lines:</li>
+</ol>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;nesper &gt;= 0.6.1&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># includes nimble tasks for building Nim esp-idf projects</span></div></div><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">nesper</span><span class="op">/</span><span class="ide">build_utils</span><span class="op">/</span><span class="ide">tasks</span></div></div>  </code></pre>
+<ul>
+<li>Make sure <em>not</em> to include a <code>bin</code> option like <code>bin = @[&quot;src/esp32_nim_example&quot;]</code> as this will override the <code>nimble esp_build</code> and result in a broken idf.py build.</li>
+</ul>
+<ol start="6">
+<li>Run <code>nimble esp_setup</code> to setup the correct files for building an esp32/esp-idf project</li>
+</ol>
+<h3>Compiling and Building</h3>
+<ol>
+<li>Run <code>nimble esp_build</code> to build the esp-idf project</li>
+<li>Flash and monitor the esp32 board using: <code>idf.py -p &lt;/dev/ttyUSB0&gt; flash monitor</code></li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li>Running <code>nimble esp_build</code> will both compile the Nim code and then build the esp-idf project</li>
+<li>During development it&apos;s often handy just to run <code>nimble esp_compile</code> to check your Nim code works</li>
+<li>Sometimes the Nim build cache gets out of sync, use <code>nimble esp_build --clean</code> to force a full Nim recompile</li>
+<li>Sometimes the esp-idf build cache gets out of sync, use <code>nimble esp_build --dist-clean</code> to force a full Nim recompile</li>
+</ul>
+<h2>Example Code</h2>
+<p>This code shows a short example of setting up an http server to toggle a GPIO pin. It uses the default async HTTP server in Nim&apos;s standard library. It still requires the code to initialize the ESP32 and WiFi or ethernet.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asynchttpserver</span>, <span class="ide">asyncdispatch</span>, <span class="ide">net</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nesper</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">consts</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">general</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">gpios</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">MY_PIN_A</span><span class="op">*</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">4</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">MY_PIN_B</span><span class="op">*</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> </div></div><div class="line"><div class="line-content">  <span class="ide">level</span> <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">config_pins</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">MOTOR1_PIN</span><span class="op">.</span><span class="ide">setLevel</span>(<span class="ide">true</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">http_cb</span><span class="op">*</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">level</span> <span class="op">=</span> <span class="kwd">not</span> <span class="ide">level</span> </div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;toggle my pin to: #&quot;</span>, <span class="op">$</span><span class="ide">level</span></div></div><div class="line"><div class="line-content">    <span class="ide">MY_PIN_A</span><span class="op">.</span><span class="ide">setLevel</span>(<span class="ide">level</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="str">&quot;Toggle MY_PIN_A: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">level</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">run_http_server</span><span class="op">*</span>() {<span class="op">.</span><span class="ide">exportc</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Configure pins&quot;</span></div></div><div class="line"><div class="line-content">    {<span class="ide">MY_PIN_A</span>, <span class="ide">MY_PIN_B</span>}<span class="op">.</span><span class="ide">configure</span>(<span class="ide">MODE_OUTPUT</span>) </div></div><div class="line"><div class="line-content">    <span class="ide">MY_PIN_A</span><span class="op">.</span><span class="ide">setLevel</span>(<span class="ide">lastLevel</span>)</div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Starting http server on port 8181&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newAsyncHttpServer</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">waitFor</span> <span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">8181</span>), <span class="ide">http_cb</span>)</div></div>  </code></pre>
+<h2>Why</h2>
+<p>TLDR; Real reason? It&apos;s a bit of fun in a sometimes tricky field.</p>
+<p>I generally dislike programming C/C++ (despite C&apos;s elegance in the small). When you just want a hash table in C it&apos;s tedious and error prone. C++ is about 5 different languages and I have to idea how to use half of them anymore. Rust doesn&apos;t work on half of the boards I want to program. MicroPython? ... Nope - I need speed and efficiency.</p>
+<h2>Library</h2>
+<p>The library is currently a collection of random ESP-IDF libraries that I import using <code>c2nim</code> as needed. Sometimes there&apos;s a bit extra wrapping to provide a nicer Nim API.</p>
+<p>Caveat: these features are tested as they&apos;re used for my use case. However, both Nim and the esp-idf seem designed well enough that they mostly &quot;just work&quot;. PR&apos;s are welcome!</p>
+<p>Supported ESP-IDF drivers with Nim&apos;ified interfaces:</p>
+<ul>
+<li>[x] Nim stdandard library support for most basic POSIX network API&apos;s!</li>
+<li>[x] Most of the basic <code>FreeRTOS.h</code> header</li>
+<li>[x] NVS Flash</li>
+<li>[x] UART</li>
+<li>[x] SPI (don&apos;t mix half-duplex &amp; duplex devices)</li>
+<li>[x] I2C</li>
+</ul>
+<p>Other things:</p>
+<ul>
+<li>[x] Nim standard library wrapping of FreeRTOS semaphore&apos;s, mutexes, etc
+<ul>
+<li>include <code>pthread</code> in your CMakeLists.txt file and use Nim&apos;s POSIX lock API&apos;s</li>
+</ul>
+</li>
+<li>[x] Nim support for <code>xqueue</code> and other &quot;thread safe&quot; data structures
+<ul>
+<li>Raw C Wrappers exist, see `<a href="https://github.com/elcritch/nesper/blob/master/src/nesper/servers/rpc/rpcsocket_queue_mpack.nim">rpcsocket_queue_mpack.nim</a> for proper usage. Nim Channel&apos;s appear to work as well.</li>
+</ul>
+</li>
+<li>[x] Nim standard library support for FreeRTOS tasks using thread api&apos;s
+<ul>
+<li>include <code>pthread</code> in your CMakeLists.txt file and use Nim&apos;s POSIX Pthread API&apos;s</li>
+</ul>
+</li>
+</ul>
+<p>Things I&apos;m not planning on (PR&apos;s welcome!)</p>
+<ul>
+<li>[ ] I2S</li>
+<li>[ ] PWM</li>
+<li>[ ] LCDs</li>
+<li>[ ] Built-in ADC</li>
+</ul>
+<h3>Manual Setup</h3>
+<p>This is the more manual setup approach:</p>
+<ol start="3">
+<li>It&apos;s recommend to copy <code>nesper/esp-idf-examples/simplewifi</code> example project initially, to get the proper build steps.
+<ul>
+<li>  <code>git clone https://github.com/elcritch/nesper</code></li>
+<li>  <code>cp -Rv nesper/esp-idf-examples/simplewifi/ ./nesper-simplewifi</code></li>
+<li>  <code>cd ./nesper-simplewifi/</code></li>
+<li><code>make build</code> (also <code>make esp_v40</code> or <code>make esp_v41</code> )</li>
+</ul>
+</li>
+<li>Nesper wrapper API names generally match the C names directly, usually in snake case</li>
+</ol>
+<ul>
+<li>FreeRTOS functions usually are camel case and start with an <code>x</code>, e.g. <code>xTaskDelay</code></li>
+<li>These api&apos;s are found under <code>nesper/esp/*</code> or <code>nesper/esp/net/*</code>, e.g. <code>nesper/esp/nvs</code></li>
+</ul>
+<ol start="6">
+<li>Nesper Nim friendly api, usually in camel case</li>
+</ol>
+<ul>
+<li>These api&apos;s are found under <code>nesper/*</code>, e.g. <code>nesper/nvs</code></li>
+</ul>
+<h2>Example Async server on a ESP32-CAM (or other Esp32 Wifi board)</h2>
+<p>See <a href="https://github.com/elcritch/nesper/blob/master/esp-idf-examples/simplewifi/README.md">SimpleWifi Example</a></p>
+<p>The async code really is simple Nim code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asynchttpserver</span>, <span class="ide">asyncdispatch</span>, <span class="ide">net</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">count</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cb</span><span class="op">*</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">inc</span> <span class="ide">count</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;req #&quot;</span>, <span class="ide">count</span></div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="str">&quot;Hello World from nim on ESP32</span>\n<span class="str">&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="com"># GC_fullCollect()</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">run_http_server</span><span class="op">*</span>() {<span class="op">.</span><span class="ide">exportc</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;starting http server on port 8181&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newAsyncHttpServer</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">waitFor</span> <span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">8181</span>), <span class="ide">cb</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;running server&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">run_http_server</span>()</div></div>  </code></pre>
+<h2>Nim-ified ESP32 APIs</h2>
+<h3>GPIOs</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nesper</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">consts</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">general</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">gpios</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">MOTOR1_PIN</span><span class="op">*</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">4</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">MOTOR2_PIN</span><span class="op">*</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">config_pins</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Inputs pins use Nim&apos;s set `{}` notation</span></div></div><div class="line"><div class="line-content">  <span class="ide">configure</span>({<span class="ide">MOTOR1_PIN</span>, <span class="ide">MOTOR2_PIN</span>}, <span class="ide">GPIO_MODE_INPUT</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># or method call style:</span></div></div><div class="line"><div class="line-content">  {<span class="ide">MOTOR1_PIN</span>, <span class="ide">MOTOR2_PIN</span>}<span class="op">.</span><span class="ide">configure</span>(<span class="ide">MODE_INPUT</span>)</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">MOTOR1_PIN</span><span class="op">.</span><span class="ide">setLevel</span>(<span class="ide">true</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">MOTOR2_PIN</span><span class="op">.</span><span class="ide">setLevel</span>(<span class="ide">false</span>)</div></div>  </code></pre>
+<h3>SPIs</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nesper</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">consts</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">general</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">spis</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cs_adc_pre</span>(<span class="ide">trans</span>: <span class="kwd">ptr</span> <span class="ide">spi_transaction_t</span>) {<span class="op">.</span><span class="ide">cdecl</span><span class="op">.</span>} <span class="op">=</span> <span class="op">...</span> </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cs_unselect</span>(<span class="ide">trans</span>: <span class="kwd">ptr</span> <span class="ide">spi_transaction_t</span>) {<span class="op">.</span><span class="ide">cdecl</span><span class="op">.</span>} <span class="op">=</span> <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">config_spis</span>() <span class="op">=</span> </div></div><div class="line"><div class="line-content">  <span class="com"># Setup SPI example using custom Chip select pins using pre/post callbacks </span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">std_hz</span> <span class="op">=</span> <span class="num">1_000_000.</span><span class="ide">cint</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">fast_hz</span> <span class="op">=</span> <span class="num">8_000_000.</span><span class="ide">cint</span>()</div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">BUS1</span> <span class="op">=</span> <span class="ide">HSPI</span><span class="op">.</span><span class="ide">newSpiBus</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">mosi</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">32</span>),</div></div><div class="line"><div class="line-content">        <span class="ide">sclk</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">33</span>),</div></div><div class="line"><div class="line-content">        <span class="ide">miso</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="num">34</span>),</div></div><div class="line"><div class="line-content">        <span class="ide">dma_channel</span><span class="op">=</span><span class="num">0</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">flags</span><span class="op">=</span>{<span class="ide">MASTER</span>})</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">logi</span>(<span class="ide">TAG</span>, <span class="str">&quot;cfg_spi: bus1: %s&quot;</span>, <span class="ide">repr</span>(<span class="ide">BUS1</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">ADC_SPI</span> <span class="op">=</span> <span class="ide">BUS1</span><span class="op">.</span><span class="ide">addDevice</span>(<span class="ide">commandlen</span> <span class="op">=</span> <span class="ide">bits</span>(<span class="num">8</span>),</div></div><div class="line"><div class="line-content">                               <span class="ide">addresslen</span> <span class="op">=</span> <span class="ide">bits</span>(<span class="num">0</span>),</div></div><div class="line"><div class="line-content">                               <span class="ide">mode</span> <span class="op">=</span> <span class="num">0</span>,</div></div><div class="line"><div class="line-content">                               <span class="ide">cs_io</span> <span class="op">=</span> <span class="ide">gpio_num_t</span>(<span class="op">-</span><span class="num">1</span>),</div></div><div class="line"><div class="line-content">                               <span class="ide">clock_speed_hz</span> <span class="op">=</span> <span class="ide">fast_hz</span>, </div></div><div class="line"><div class="line-content">                               <span class="ide">queue_size</span> <span class="op">=</span> <span class="num">1</span>,</div></div><div class="line"><div class="line-content">                               <span class="ide">pre_cb</span><span class="op">=</span><span class="ide">cs_adc_pre</span>,</div></div><div class="line"><div class="line-content">                               <span class="ide">post_cb</span><span class="op">=</span><span class="ide">cs_unselect</span>,</div></div><div class="line"><div class="line-content">                               <span class="ide">flags</span><span class="op">=</span>{<span class="ide">HALFDUPLEX</span>})</div></div>  </code></pre>
+<p>Later these can be used like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> </div></div><div class="line"><div class="line-content">  <span class="ide">ADC_READ_MULTI_CMD</span> <span class="op">=</span>  <span class="num">0x80</span></div></div><div class="line"><div class="line-content">  <span class="ide">ADC_REG_CONFIG0</span> <span class="op">=</span> <span class="num">0x03</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">read_regs</span><span class="op">*</span>(<span class="ide">reg</span>: <span class="ide">byte</span>, <span class="ide">n</span>: <span class="ide">range</span>[<span class="num">1.</span><span class="op">.</span><span class="num">16</span>]): <span class="ide">SpiTrans</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">read_cmd</span> <span class="op">=</span> <span class="ide">reg</span> <span class="kwd">or</span> <span class="ide">ADC_READ_MULTI_CMD</span> <span class="com"># does bitwise or</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">ADC_SPI</span><span class="op">.</span><span class="ide">readTrans</span>(<span class="ide">cmd</span><span class="op">=</span><span class="ide">read_cmd</span>, <span class="ide">rxlength</span><span class="op">=</span><span class="ide">bytes</span>(<span class="ide">n</span>), )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">adc_read_config</span><span class="op">*</span>(): <span class="ide">seq</span>[<span class="ide">byte</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">trn</span> <span class="op">=</span> <span class="ide">read_regs</span>(<span class="ide">ADC_REG_CONFIG0</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">trn</span><span class="op">.</span><span class="ide">transmit</span>() <span class="com"># preforms SPI transaction using transaction queue</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">trn</span><span class="op">.</span><span class="ide">getData</span>()</div></div>  </code></pre>
+<p>See more in the test <a href="https://github.com/elcritch/nesper/blob/master/tests/tspi.nim">SPI Test</a> or the read the wrapper (probably best docs for now): <a href="https://github.com/elcritch/nesper/blob/master/src/nesper/spis.nim">spis.nim</a>.</p>
+<h2>Wear levelling / Virtual FAT filesystem</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nesper</span>, <span class="ide">nesper</span><span class="op">/</span><span class="ide">esp_vfs_fat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">base_path</span> : <span class="ide">cstring</span> <span class="op">=</span> <span class="str">&quot;/spiflash&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">s_wl_handle</span> : <span class="ide">wl_handle_t</span> <span class="op">=</span> <span class="ide">WL_INVALID_HANDLE</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">mount_config</span> <span class="op">=</span> <span class="ide">esp_vfs_fat_mount_config_t</span>(<span class="ide">format_if_mount_failed</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">                                          <span class="ide">max_files</span>: <span class="num">10</span>, <span class="ide">allocation_unit_size</span>: <span class="num">4096</span>)</div></div><div class="line"><div class="line-content"><span class="ide">err</span> <span class="op">=</span> <span class="ide">esp_vfs_fat_spiflash_mount</span>(<span class="ide">base_path</span>, <span class="str">&quot;storage&quot;</span>, <span class="ide">mount_config</span><span class="op">.</span><span class="kwd">addr</span>, <span class="ide">s_wl_handle</span><span class="op">.</span><span class="kwd">addr</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">err</span> <span class="op">!=</span> <span class="ide">ESP_OK</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Failed to mount FATFS.&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;FATFS mounted successfully!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">writeFile</span>(<span class="str">&quot;/spiflash/hello.txt&quot;</span>, <span class="str">&quot;Hello world!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">readFile</span>(<span class="str">&quot;/spiflash/hello.txt&quot;</span>) <span class="com"># Hello world!</span></div></div>  </code></pre>
+<p>Notice: file extension of files on FAT filesystem is limited to maximum of 3 characters.</p>
+<h2>Why Nim for Embedded?</h2>
+<p>Nim is a flexible language which compiles to a variety of backend &quot;host&quot; languages, including C and C++. Like many hosted languages, it has excellent facilities to interact with the host language natively. In the embedded world this means full compatability with pre-existing libraries and toolchains, which are often complex and difficult to interface with from an &quot;external language&quot; like Rust or even C++. They often also require oddball compilers, ruling out LLVM based lanugages for many projects (including the ESP32 which defaults to a variant of GCC).</p>
+<p>Nim has a few nice features for embedded work:</p>
+<p>Language:</p>
+<ul>
+<li>High level language and semantics with low level bit fiddling and pointers</li>
+<li>Flexible garbage collector or manual memory management
+<ul>
+<li>ARC GC allows using native-C debuggers, meaning any embedded debuggers should work too!</li>
+<li>ARG GC doesn&apos;t use locks, and utilizies move semantics -- it&apos;s fast</li>
+</ul>
+</li>
+<li>Simple FFI&apos;s around to import and/or wrap C/C++ libraries</li>
+<li>Async/Event support</li>
+<li>Real hygenic language macros, and collections with generics!</li>
+<li>Very flexible and hackable standard library!</li>
+</ul>
+<p>Libraries:</p>
+<ul>
+<li>Simplified network wrappers around native sockets (i.e. use <code>select</code> w/o a PhD)</li>
+<li>Sane standard library, including JSON, datetime, crypto, ...
+<ul>
+<li>Efficient compiler that eliminates un-needed code (i.e. json support using a few extra kB&apos;s)</li>
+<li>Package library manager</li>
+</ul>
+</li>
+</ul>
+<p>Compiler:</p>
+<ul>
+<li>Fast compilation, generated C compiles fast</li>
+<li>Deterministic exception handling using a non-malloc friendly goto technique</li>
+<li>Object-oriented like programming that&apos;s not based on vtables</li>
+</ul>
+<p>There are a few cons of Nim:</p>
+<ul>
+<li>Lack of documentation for many parts of the standard library</li>
+<li>Understanding the differences between stack/heap based objects is a bit tricky</li>
+<li>Compiler options are often incompatible and can require some experimentation</li>
+<li>Small community (e.g. lack of some libraries)</li>
+<li>You likely won&apos;t get to use it at XYZ Megacorp</li>
+<li>It will require some pioneering!</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache-2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/elcritch/nesper">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

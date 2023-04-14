@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">arraymancer</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">vector</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">matrix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">array</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ndarray</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multidimensional-array</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linear-algebra</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tensor</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A tensor (multidimensional array) library for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install arraymancer" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p><a href="https://discord.gg/f5hA9UK3dY">  <img src="https://img.shields.io/discord/371759389889003530?color=blue&amp;label=nim-science&amp;logo=discord&amp;logoColor=gold&amp;style=flat-square" style="max-width: 100%;" alt="Join the chat on Discord #nim-science" /></a> <a href="https://github.com/mratsim/arraymancer/actions?query=workflow%3A%Arraymancer+CI%22+branch%3Amaster">  <img src="https://github.com/mratsim/arraymancer/workflows/Arraymancer%20CI/badge.svg" style="max-width: 100%;" alt="Github Actions CI" /></a> <a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License" /></a> <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability" /></p>
+<h1>Arraymancer - A n-dimensional tensor (ndarray) library.</h1>
+<p>Arraymancer is a tensor (N-dimensional array) project in Nim. The main focus is providing a fast and ergonomic CPU, Cuda and OpenCL ndarray library on which to build a scientific computing ecosystem.</p>
+<p>The library is inspired by Numpy and PyTorch and targets the following use-cases:</p>
+<ul>
+<li>N-dimensional arrays (tensors) for numerical computing</li>
+<li>machine learning algorithms (as in Scikit-learn: least squares solvers, PCA and dimensionality reduction, classifiers, regressors and clustering algorithms, cross-validation).</li>
+<li>deep learning</li>
+</ul>
+<p>The ndarray component can be used without the machine learning and deep learning component.
+It can also use the OpenMP, Cuda or OpenCL backends.</p>
+<p>Note: While Nim is compiled and does not offer an interactive REPL yet (like Jupyter), it allows much faster prototyping than C++ due to extremely fast compilation times. Arraymancer compiles in about 5 seconds on my dual-core MacBook.</p>
+<p>Reminder of supported compilation flags:</p>
+<ul>
+<li><code>-d:release</code>: Nim release mode (no stacktraces and debugging information)</li>
+<li><code>-d:danger</code>: No runtime checks like array bound checking</li>
+<li><code>-d:openmp</code>: Multithreaded compilation</li>
+<li><code>-d:mkl</code>: Use MKL, implies <code>openmp</code></li>
+<li><code>-d:openblas</code>: Use OpenBLAS</li>
+<li>by default Arraymancer will try to use your default <code>blas.so/blas.dll</code>
+Archlinux users may have to specify <code>-d:blas=cblas</code>.
+See <a href="https://github.com/unicredit/nimblas">nimblas</a> for further configuration.</li>
+<li><code>-d:cuda</code>: Build with Cuda support</li>
+<li><code>-d:cudnn</code>: Build with CuDNN support, implies <code>cuda</code>.</li>
+<li><code>-d:avx512</code>: Build with AVX512 support by supplying the
+<code>-mavx512dq</code> flag to gcc / clang. Without this flag the
+resulting binary does not use AVX512 even on CPUs that support
+it. Handing this flag however, makes the binary incompatible with
+CPUs that do <em>not</em> support it. See the comments in #505 for a
+discussion (from <code>v0.7.9</code>).</li>
+<li>You might want to tune library paths in <a href="nim.cfg">nim.cfg</a> after installation for OpenBLAS, MKL and Cuda compilation.
+The current defaults should work on Mac and Linux.</li>
+</ul>
+<h2>Show me some code</h2>
+<p>Arraymancer tutorial is available <a href="https://mratsim.github.io/Arraymancer/tuto.first_steps.html">here</a>.</p>
+<p>Here is a preview of Arraymancer syntax.</p>
+<h3>Tensor creation and slicing</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">math</span>, <span class="ide">arraymancer</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">    <span class="ide">x</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">y</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">    <span class="ide">vandermonde</span>: <span class="ide">seq</span>[<span class="ide">seq</span>[<span class="ide">int</span>]]</div></div><div class="line"><div class="line-content">    <span class="ide">row</span>: <span class="ide">seq</span>[<span class="ide">int</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vandermonde</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">seq</span>[<span class="ide">int</span>]]()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span>, <span class="ide">xx</span> <span class="kwd">in</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">row</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">int</span>]()</div></div><div class="line"><div class="line-content">    <span class="ide">vandermonde</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">row</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">j</span>, <span class="ide">yy</span> <span class="kwd">in</span> <span class="ide">y</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">vandermonde</span>[<span class="ide">i</span>]<span class="op">.</span><span class="ide">add</span>(<span class="ide">xx</span><span class="op">^</span><span class="ide">yy</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">foo</span> <span class="op">=</span> <span class="ide">vandermonde</span><span class="op">.</span><span class="ide">toTensor</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">foo</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Tensor of shape 5x5 of type &quot;int&quot; on backend &quot;Cpu&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># |1      1       1       1       1|</span></div></div><div class="line"><div class="line-content"><span class="com"># |2      4       8       16      32|</span></div></div><div class="line"><div class="line-content"><span class="com"># |3      9       27      81      243|</span></div></div><div class="line"><div class="line-content"><span class="com"># |4      16      64      256     1024|</span></div></div><div class="line"><div class="line-content"><span class="com"># |5      25      125     625     3125|</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">foo</span>[<span class="num">1.</span><span class="op">.</span><span class="num">2</span>, <span class="num">3.</span><span class="op">.</span><span class="num">4</span>] <span class="com"># slice</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Tensor of shape 2x2 of type &quot;int&quot; on backend &quot;Cpu&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># |16     32|</span></div></div><div class="line"><div class="line-content"><span class="com"># |81     243|</span></div></div>  </code></pre>
+<h3>Reshaping and concatenation</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">arraymancer</span>, <span class="ide">sequtils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">toSeq</span>(<span class="num">1.</span><span class="op">.</span><span class="num">4</span>)<span class="op">.</span><span class="ide">toTensor</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">2</span>,<span class="num">2</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">b</span> <span class="op">=</span> <span class="ide">toSeq</span>(<span class="num">5.</span><span class="op">.</span><span class="num">8</span>)<span class="op">.</span><span class="ide">toTensor</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">2</span>,<span class="num">2</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">toSeq</span>(<span class="num">11.</span><span class="op">.</span><span class="num">16</span>)<span class="op">.</span><span class="ide">toTensor</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">c0</span> <span class="op">=</span> <span class="ide">c</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">3</span>,<span class="num">2</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">c1</span> <span class="op">=</span> <span class="ide">c</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">2</span>,<span class="num">3</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">concat</span>(<span class="ide">a</span>,<span class="ide">b</span>,<span class="ide">c0</span>, <span class="ide">axis</span> <span class="op">=</span> <span class="num">0</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Tensor of shape 7x2 of type &quot;int&quot; on backend &quot;Cpu&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># |1      2|</span></div></div><div class="line"><div class="line-content"><span class="com"># |3      4|</span></div></div><div class="line"><div class="line-content"><span class="com"># |5      6|</span></div></div><div class="line"><div class="line-content"><span class="com"># |7      8|</span></div></div><div class="line"><div class="line-content"><span class="com"># |11     12|</span></div></div><div class="line"><div class="line-content"><span class="com"># |13     14|</span></div></div><div class="line"><div class="line-content"><span class="com"># |15     16|</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">concat</span>(<span class="ide">a</span>,<span class="ide">b</span>,<span class="ide">c1</span>, <span class="ide">axis</span> <span class="op">=</span> <span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Tensor of shape 2x7 of type &quot;int&quot; on backend &quot;Cpu&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># |1      2       5       6       11      12      13|</span></div></div><div class="line"><div class="line-content"><span class="com"># |3      4       7       8       14      15      16|</span></div></div>  </code></pre>
+<h3>Broadcasting</h3>
+<p>Image from Scipy</p>
+<p>  <img src="https://scipy.github.io/old-wiki/pages/image004de9e.gif" style="max-width: 100%;" alt="" /></p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">arraymancer</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">j</span> <span class="op">=</span> [<span class="num">0</span>, <span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>]<span class="op">.</span><span class="ide">toTensor</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">4</span>,<span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">k</span> <span class="op">=</span> [<span class="num">0</span>, <span class="num">1</span>, <span class="num">2</span>]<span class="op">.</span><span class="ide">toTensor</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">1</span>,<span class="num">3</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">j</span> <span class="op">+.</span> <span class="ide">k</span></div></div><div class="line"><div class="line-content"><span class="com"># Tensor of shape 4x3 of type &quot;int&quot; on backend &quot;Cpu&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># |0      1       2|</span></div></div><div class="line"><div class="line-content"><span class="com"># |10     11      12|</span></div></div><div class="line"><div class="line-content"><span class="com"># |20     21      22|</span></div></div><div class="line"><div class="line-content"><span class="com"># |30     31      32|</span></div></div>  </code></pre>
+<h3>A simple two layers neural network</h3>
+<p>From <a href="./examples/ex03_simple_two_layers.nim">example 3</a>.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">arraymancer</span>, <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> """
+A fully-connected ReLU network with one hidden layer, trained to predict y from x
+by minimizing squared Euclidean distance.
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ##################################################################</span></div></div><div class="line"><div class="line-content"><span class="com"># Environment variables</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># N is batch size; D_in is input dimension;</span></div></div><div class="line"><div class="line-content"><span class="com"># H is hidden dimension; D_out is output dimension.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">N</span>, <span class="ide">D_in</span>, <span class="ide">H</span>, <span class="ide">D_out</span>) <span class="op">=</span> (<span class="num">64</span>, <span class="num">1000</span>, <span class="num">100</span>, <span class="num">10</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create the autograd context that will hold the computational graph</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">newContext</span> <span class="ide">Tensor</span>[<span class="ide">float32</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create random Tensors to hold inputs and outputs, and wrap them in Variables.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">variable</span>(<span class="ide">randomTensor</span>[<span class="ide">float32</span>](<span class="ide">N</span>, <span class="ide">D_in</span>, <span class="num">1&apos;f32</span>))</div></div><div class="line"><div class="line-content">  <span class="ide">y</span> <span class="op">=</span> <span class="ide">randomTensor</span>[<span class="ide">float32</span>](<span class="ide">N</span>, <span class="ide">D_out</span>, <span class="num">1&apos;f32</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ##################################################################</span></div></div><div class="line"><div class="line-content"><span class="com"># Define the model.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">network</span> <span class="ide">TwoLayersNet</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">layers</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">fc1</span>: <span class="ide">Linear</span>(<span class="ide">D_in</span>, <span class="ide">H</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">fc2</span>: <span class="ide">Linear</span>(<span class="ide">H</span>, <span class="ide">D_out</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">.</span><span class="ide">fc1</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">fc2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">model</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">TwoLayersNet</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">optim</span> <span class="op">=</span> <span class="ide">model</span><span class="op">.</span><span class="ide">optimizer</span>(<span class="ide">SGD</span>, <span class="ide">learning_rate</span> <span class="op">=</span> <span class="num">1e-4&apos;f32</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ##################################################################</span></div></div><div class="line"><div class="line-content"><span class="com"># Training</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">t</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">500</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">y_pred</span> <span class="op">=</span> <span class="ide">model</span><span class="op">.</span><span class="ide">forward</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">loss</span> <span class="op">=</span> <span class="ide">y_pred</span><span class="op">.</span><span class="ide">mse_loss</span>(<span class="ide">y</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;Epoch {t}: loss {loss.value[0]}&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">loss</span><span class="op">.</span><span class="ide">backprop</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">optim</span><span class="op">.</span><span class="ide">update</span>()</div></div>  </code></pre>
+<h3>Teaser A text generated with Arraymancer&apos;s recurrent neural network</h3>
+<p>From <a href="./examples/ex06_shakespeare_generator.nim">example 6</a>.</p>
+<p>Trained 45 min on my laptop CPU on Shakespeare and producing 4000 characters</p>
+<pre>  <code>Whter!
+Take&apos;s servant seal&apos;d, making uponweed but rascally guess-boot,
+Bare them be that been all ingal to me;
+Your play to the see&apos;s wife the wrong-pars
+With child of queer wretchless dreadful cold
+Cursters will how your part? I prince!
+This is time not in a without a tands:
+You are but foul to this.
+I talk and fellows break my revenges, so, and of the hisod
+As you lords them or trues salt of the poort.
+
+ROMEO:
+Thou hast facted to keep thee, and am speak
+Of them; she&apos;s murder&apos;d of your galla?
+
+# [...] See example 6 for full text generation samples
+</code></pre>
+<h2>Table of Contents</h2>
+<!--  TOC  -->
+<ul>
+<li><a href="#arraymancer---a-n-dimensional-tensor-ndarray-library">Arraymancer - A n-dimensional tensor (ndarray) library.</a>
+<ul>
+<li>  <a href="#performance-notice-on-nim-020--compilation-flags">Performance notice on Nim 0.20 &amp; compilation flags</a></li>
+<li><a href="#show-me-some-code">Show me some code</a>
+<ul>
+<li>  <a href="#tensor-creation-and-slicing">Tensor creation and slicing</a></li>
+<li>  <a href="#reshaping-and-concatenation">Reshaping and concatenation</a></li>
+<li>  <a href="#broadcasting">Broadcasting</a></li>
+<li>  <a href="#a-simple-two-layers-neural-network">A simple two layers neural network</a></li>
+<li>  <a href="#teaser-a-text-generated-with-arraymancers-recurrent-neural-network">Teaser A text generated with Arraymancer&apos;s recurrent neural network</a></li>
+</ul>
+</li>
+<li>  <a href="#table-of-contents">Table of Contents</a></li>
+<li>  <a href="#installation">Installation</a></li>
+<li>  <a href="#full-documentation">Full documentation</a></li>
+<li><a href="#features">Features</a>
+<ul>
+<li><a href="#arraymancer-as-a-deep-learning-library">Arraymancer as a Deep Learning library</a>
+<ul>
+<li>  <a href="#fizzbuzz-with-fully-connected-layers-also-called-dense-affine-or-linear-layers">Fizzbuzz with fully-connected layers (also called Dense, Affine or Linear layers)</a></li>
+<li>  <a href="#handwritten-digit-recognition-with-convolutions">Handwritten digit recognition with convolutions</a></li>
+<li>  <a href="#sequence-classification-with-stacked-recurrent-neural-networks">Sequence classification with stacked Recurrent Neural Networks</a></li>
+</ul>
+</li>
+<li>  <a href="#tensors-on-cpu-on-cuda-and-opencl">Tensors on CPU, on Cuda and OpenCL</a></li>
+</ul>
+</li>
+<li>  <a href="#whats-new-in-arraymancer-v051---july-2019">What&apos;s new in Arraymancer v0.5.1 - July 2019</a></li>
+<li><a href="#4-reasons-why-arraymancer">4 reasons why Arraymancer</a>
+<ul>
+<li>  <a href="#the-python-community-is-struggling-to-bring-numpy-up-to-speed">The Python community is struggling to bring Numpy up-to-speed</a></li>
+<li>  <a href="#a-researcher-workflow-is-a-fight-against-inefficiencies">A researcher workflow is a fight against inefficiencies</a></li>
+<li>  <a href="#can-be-distributed-almost-dependency-free">Can be distributed almost dependency free</a></li>
+<li>  <a href="#bridging-the-gap-between-deep-learning-research-and-production">Bridging the gap between deep learning research and production</a></li>
+<li>  <a href="#so-why-arraymancer-">So why Arraymancer ?</a></li>
+</ul>
+</li>
+<li>  <a href="#future-ambitions">Future ambitions</a></li>
+</ul>
+</li>
+</ul>
+<!--  /TOC  -->
+<h2>Installation</h2>
+<p>Nim is available in some Linux repositories and on Homebrew for macOS.</p>
+<p>I however recommend installing Nim in your user profile via <a href="https://github.com/dom96/choosenim">  <code>choosenim</code></a>. Once choosenim installed Nim, you can <code>nimble install arraymancer</code> which will pull the latest arraymancer release and all its dependencies.</p>
+<p>To install Arraymancer development version you can use <code>nimble install arraymancer@#head</code>.</p>
+<p>Arraymancer requires a BLAS and Lapack library.</p>
+<ul>
+<li>On Windows you can get <a href="https://github.com/xianyi/OpenBLAS/wiki/Precompiled-installation-packages">OpenBLAS</a>and <a href="https://icl.cs.utk.edu/lapack-for-windows/lapack/">Lapack</a> for Windows.</li>
+<li>On MacOS, Apple Accelerate Framework is included in all MacOS versions and provides those.</li>
+<li>On Linux, you can download libopenblas and liblapack through your package manager.</li>
+</ul>
+<h2>Full documentation</h2>
+<p>Detailed API is available at Arraymancer official <a href="https://mratsim.github.io/Arraymancer/">documentation</a>. Note: This documentation is only generated for 0.X release. Check the <a href="examples/">examples folder</a> for the latest devel evolutions.</p>
+<h2>Features</h2>
+<p>For now Arraymancer is mostly at the multidimensional array stage, in particular Arraymancer offers the following:</p>
+<ul>
+<li>Basic math operations generalized to tensors (sin, cos, ...)</li>
+<li>Matrix algebra primitives: Matrix-Matrix, Matrix-Vector multiplication.</li>
+<li>Easy and efficient slicing including with ranges and steps.</li>
+<li>No need to worry about &quot;vectorized&quot; operations.</li>
+<li>Broadcasting support. Unlike Numpy it is explicit, you just need to use <code>+.</code> instead of <code>+</code>.</li>
+<li>Plenty of reshaping operations: concat, reshape, split, chunk, permute, transpose.</li>
+<li>Supports tensors of up to 6 dimensions. For example a stack of 4 3D RGB minifilms of 10 seconds would be 6 dimensions:
+<code>[4, 10, 3, 64, 1920, 1080]</code> for <code>[nb_movies, time, colors, depth, height, width]</code></li>
+<li>Can read and write .csv, Numpy (.npy) and HDF5 files.</li>
+<li>OpenCL and Cuda backed tensors (not as feature packed as CPU tensors at the moment).</li>
+<li>Covariance matrices.</li>
+<li>Eigenvalues and Eigenvectors decomposition.</li>
+<li>Least squares solver.</li>
+<li>K-means and PCA (Principal Component Analysis).</li>
+</ul>
+<h3>Arraymancer as a Deep Learning library</h3>
+<p>Deep learning features can be explored but are considered unstable while I iron out their final interface.</p>
+<p>Reminder: The final interface is still <strong>work in progress.</strong></p>
+<p>You can also watch the following animated <a href="https://github.com/Vindaar/NeuralNetworkLiveDemo">neural network demo</a> which shows live training via <a href="https://github.com/brentp/nim-plotly">nim-plotly</a>.</p>
+<h4>Fizzbuzz with fully-connected layers (also called Dense, Affine or Linear layers)</h4>
+<p>Neural network definition extracted from <a href="examples/ex04_fizzbuzz_interview_cheatsheet.nim">example 4</a>.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">NumDigits</span> <span class="op">=</span> <span class="num">10</span></div></div><div class="line"><div class="line-content">  <span class="ide">NumHidden</span> <span class="op">=</span> <span class="num">100</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">network</span> <span class="ide">FizzBuzzNet</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">layers</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">hidden</span>: <span class="ide">Linear</span>(<span class="ide">NumDigits</span>, <span class="ide">NumHidden</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">output</span>: <span class="ide">Linear</span>(<span class="ide">NumHidden</span>, <span class="num">4</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">.</span><span class="ide">hidden</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">output</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">newContext</span> <span class="ide">Tensor</span>[<span class="ide">float32</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">model</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">FizzBuzzNet</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">optim</span> <span class="op">=</span> <span class="ide">model</span><span class="op">.</span><span class="ide">optimizer</span>(<span class="ide">SGD</span>, <span class="num">0.05&apos;f32</span>)</div></div><div class="line"><div class="line-content"><span class="com"># ....</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">answer</span></div></div><div class="line"><div class="line-content"><span class="com"># @[&quot;1&quot;, &quot;2&quot;, &quot;fizz&quot;, &quot;4&quot;, &quot;buzz&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;fizz&quot;, &quot;10&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;14&quot;, &quot;15&quot;, &quot;16&quot;, &quot;17&quot;, &quot;fizz&quot;, &quot;19&quot;, &quot;buzz&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;fizz&quot;, &quot;22&quot;, &quot;23&quot;, &quot;24&quot;, &quot;buzz&quot;, &quot;26&quot;, &quot;fizz&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;31&quot;, &quot;32&quot;, &quot;fizz&quot;, &quot;34&quot;, &quot;buzz&quot;, &quot;36&quot;, &quot;37&quot;, &quot;38&quot;, &quot;39&quot;, &quot;40&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;41&quot;, &quot;fizz&quot;, &quot;43&quot;, &quot;44&quot;, &quot;fizzbuzz&quot;, &quot;46&quot;, &quot;47&quot;, &quot;fizz&quot;, &quot;49&quot;, &quot;50&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;fizz&quot;, &quot;52&quot;,&quot;53&quot;, &quot;54&quot;, &quot;buzz&quot;, &quot;56&quot;, &quot;fizz&quot;, &quot;58&quot;, &quot;59&quot;, &quot;fizzbuzz&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;61&quot;, &quot;62&quot;, &quot;63&quot;, &quot;64&quot;, &quot;buzz&quot;, &quot;fizz&quot;, &quot;67&quot;, &quot;68&quot;, &quot;fizz&quot;, &quot;buzz&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;71&quot;, &quot;fizz&quot;, &quot;73&quot;, &quot;74&quot;, &quot;75&quot;, &quot;76&quot;, &quot;77&quot;,&quot;fizz&quot;, &quot;79&quot;, &quot;buzz&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;fizz&quot;, &quot;82&quot;, &quot;83&quot;, &quot;fizz&quot;, &quot;buzz&quot;, &quot;86&quot;, &quot;fizz&quot;, &quot;88&quot;, &quot;89&quot;, &quot;90&quot;,</span></div></div><div class="line"><div class="line-content"><span class="com">#   &quot;91&quot;, &quot;92&quot;, &quot;fizz&quot;, &quot;94&quot;, &quot;buzz&quot;, &quot;fizz&quot;, &quot;97&quot;, &quot;98&quot;, &quot;fizz&quot;, &quot;buzz&quot;]</span></div></div>  </code></pre>
+<h4>Handwritten digit recognition with convolutions</h4>
+<p>Neural network definition extracted from <a href="examples/ex02_handwritten_digits_recognition.nim">example 2</a>.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="ide">network</span> <span class="ide">DemoNet</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">layers</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">cv1</span>:        <span class="ide">Conv2D</span>(<span class="op">@</span>[<span class="num">1</span>, <span class="num">28</span>, <span class="num">28</span>], <span class="ide">out_channels</span> <span class="op">=</span> <span class="num">20</span>, <span class="ide">kernel_size</span> <span class="op">=</span> (<span class="num">5</span>, <span class="num">5</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">mp1</span>:        <span class="ide">Maxpool2D</span>(<span class="ide">cv1</span><span class="op">.</span><span class="ide">out_shape</span>, <span class="ide">kernel_size</span> <span class="op">=</span> (<span class="num">2</span>,<span class="num">2</span>), <span class="ide">padding</span> <span class="op">=</span> (<span class="num">0</span>,<span class="num">0</span>), <span class="ide">stride</span> <span class="op">=</span> (<span class="num">2</span>,<span class="num">2</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">cv2</span>:        <span class="ide">Conv2D</span>(<span class="ide">mp1</span><span class="op">.</span><span class="ide">out_shape</span>, <span class="ide">out_channels</span> <span class="op">=</span> <span class="num">50</span>, <span class="ide">kernel_size</span> <span class="op">=</span> (<span class="num">5</span>, <span class="num">5</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">mp2</span>:        <span class="ide">MaxPool2D</span>(<span class="ide">cv2</span><span class="op">.</span><span class="ide">out_shape</span>, <span class="ide">kernel_size</span> <span class="op">=</span> (<span class="num">2</span>,<span class="num">2</span>), <span class="ide">padding</span> <span class="op">=</span> (<span class="num">0</span>,<span class="num">0</span>), <span class="ide">stride</span> <span class="op">=</span> (<span class="num">2</span>,<span class="num">2</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">fl</span>:         <span class="ide">Flatten</span>(<span class="ide">mp2</span><span class="op">.</span><span class="ide">out_shape</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">hidden</span>:     <span class="ide">Linear</span>(<span class="ide">fl</span><span class="op">.</span><span class="ide">out_shape</span>[<span class="num">0</span>], <span class="num">500</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">classifier</span>: <span class="ide">Linear</span>(<span class="num">500</span>, <span class="num">10</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">.</span><span class="ide">cv1</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">mp1</span><span class="op">.</span><span class="ide">cv2</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">mp2</span><span class="op">.</span><span class="ide">fl</span><span class="op">.</span><span class="ide">hidden</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">classifier</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">newContext</span> <span class="ide">Tensor</span>[<span class="ide">float32</span>] <span class="com"># Autograd/neural network graph</span></div></div><div class="line"><div class="line-content">  <span class="ide">model</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">DemoNet</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">optim</span> <span class="op">=</span> <span class="ide">model</span><span class="op">.</span><span class="ide">optimizer</span>(<span class="ide">SGD</span>, <span class="ide">learning_rate</span> <span class="op">=</span> <span class="num">0.01&apos;f32</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ...</span></div></div><div class="line"><div class="line-content"><span class="com"># Accuracy over 90% in a couple minutes on a laptop CPU</span></div></div>  </code></pre>
+<h4>Sequence classification with stacked Recurrent Neural Networks</h4>
+<p>Neural network definition extracted <a href="examples/ex05_sequence_classification_GRU.nim">example 5</a>.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">HiddenSize</span> <span class="op">=</span> <span class="num">256</span></div></div><div class="line"><div class="line-content">  <span class="ide">Layers</span> <span class="op">=</span> <span class="num">4</span></div></div><div class="line"><div class="line-content">  <span class="ide">BatchSize</span> <span class="op">=</span> <span class="num">512</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">network</span> <span class="ide">TheGreatSequencer</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">layers</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">gru1</span>: <span class="ide">GRULayer</span>(<span class="num">1</span>, <span class="ide">HiddenSize</span>, <span class="num">4</span>) <span class="com"># (num_input_features, hidden_size, stacked_layers)</span></div></div><div class="line"><div class="line-content">    <span class="ide">fc1</span>: <span class="ide">Linear</span>(<span class="ide">HiddenSize</span>, <span class="num">32</span>)                  <span class="com"># 1 classifier per GRU layer</span></div></div><div class="line"><div class="line-content">    <span class="ide">fc2</span>: <span class="ide">Linear</span>(<span class="ide">HiddenSize</span>, <span class="num">32</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">fc3</span>: <span class="ide">Linear</span>(<span class="ide">HiddenSize</span>, <span class="num">32</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">fc4</span>: <span class="ide">Linear</span>(<span class="ide">HiddenSize</span>, <span class="num">32</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">classifier</span>: <span class="ide">Linear</span>(<span class="num">32</span> <span class="op">*</span> <span class="num">4</span>, <span class="num">3</span>)                <span class="com"># Stacking a classifier which learns from the other 4</span></div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="ide">x</span>, <span class="ide">hidden0</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span></div></div><div class="line"><div class="line-content">      (<span class="ide">output</span>, <span class="ide">hiddenN</span>) <span class="op">=</span> <span class="ide">gru1</span>(<span class="ide">x</span>, <span class="ide">hidden0</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">clf1</span> <span class="op">=</span> <span class="ide">hiddenN</span>[<span class="num">0</span>, <span class="ide">_</span>, <span class="ide">_</span>]<span class="op">.</span><span class="ide">squeeze</span>(<span class="num">0</span>)<span class="op">.</span><span class="ide">fc1</span><span class="op">.</span><span class="ide">relu</span></div></div><div class="line"><div class="line-content">      <span class="ide">clf2</span> <span class="op">=</span> <span class="ide">hiddenN</span>[<span class="num">1</span>, <span class="ide">_</span>, <span class="ide">_</span>]<span class="op">.</span><span class="ide">squeeze</span>(<span class="num">0</span>)<span class="op">.</span><span class="ide">fc2</span><span class="op">.</span><span class="ide">relu</span></div></div><div class="line"><div class="line-content">      <span class="ide">clf3</span> <span class="op">=</span> <span class="ide">hiddenN</span>[<span class="num">2</span>, <span class="ide">_</span>, <span class="ide">_</span>]<span class="op">.</span><span class="ide">squeeze</span>(<span class="num">0</span>)<span class="op">.</span><span class="ide">fc3</span><span class="op">.</span><span class="ide">relu</span></div></div><div class="line"><div class="line-content">      <span class="ide">clf4</span> <span class="op">=</span> <span class="ide">hiddenN</span>[<span class="num">3</span>, <span class="ide">_</span>, <span class="ide">_</span>]<span class="op">.</span><span class="ide">squeeze</span>(<span class="num">0</span>)<span class="op">.</span><span class="ide">fc4</span><span class="op">.</span><span class="ide">relu</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com"># Concat all</span></div></div><div class="line"><div class="line-content">    <span class="com"># Since concat backprop is not implemented we cheat by stacking</span></div></div><div class="line"><div class="line-content">    <span class="com"># Then flatten</span></div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">stack</span>(<span class="ide">clf1</span>, <span class="ide">clf2</span>, <span class="ide">clf3</span>, <span class="ide">clf4</span>, <span class="ide">axis</span> <span class="op">=</span> <span class="num">2</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">classifier</span>(<span class="ide">result</span><span class="op">.</span><span class="ide">flatten</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Allocate the model</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">newContext</span> <span class="ide">Tensor</span>[<span class="ide">float32</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">model</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">TheGreatSequencer</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">optim</span> <span class="op">=</span> <span class="ide">model</span><span class="op">.</span><span class="ide">optimizer</span>(<span class="ide">SGD</span>, <span class="num">0.01&apos;f32</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ...</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">exam</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">variable</span>([</div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.10</span>, <span class="num">0.20</span>, <span class="num">0.30</span>], <span class="com"># increasing</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.10</span>, <span class="num">0.90</span>, <span class="num">0.95</span>], <span class="com"># increasing</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.45</span>, <span class="num">0.50</span>, <span class="num">0.55</span>], <span class="com"># increasing</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.10</span>, <span class="num">0.30</span>, <span class="num">0.20</span>], <span class="com"># non-monotonic</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.20</span>, <span class="num">0.10</span>, <span class="num">0.30</span>], <span class="com"># non-monotonic</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.98</span>, <span class="num">0.97</span>, <span class="num">0.96</span>], <span class="com"># decreasing</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.12</span>, <span class="num">0.05</span>, <span class="num">0.01</span>], <span class="com"># decreasing</span></div></div><div class="line"><div class="line-content">    [<span class="ide">float32</span> <span class="num">0.95</span>, <span class="num">0.05</span>, <span class="num">0.07</span>]  <span class="com"># non-monotonic</span></div></div><div class="line"><div class="line-content"><span class="com"># ...</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">answer</span><span class="op">.</span><span class="ide">unsqueeze</span>(<span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Tensor[ex05_sequence_classification_GRU.SeqKind] of shape [8, 1] of type &quot;SeqKind&quot; on backend &quot;Cpu&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  Increasing|</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  Increasing|</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  Increasing|</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  NonMonotonic|</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  NonMonotonic|</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  Increasing| &lt;----- Wrong!</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  Decreasing|</span></div></div><div class="line"><div class="line-content"><span class="com"># 	  NonMonotonic|</span></div></div>  </code></pre>
+<h4>Composing models</h4>
+<p>Network models can also act as layers in other network definitions.
+The handwritten-digit-recognition model above can also be written like this:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="ide">network</span> <span class="ide">SomeConvNet</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">layers</span> <span class="ide">h</span>, <span class="ide">w</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">cv1</span>:        <span class="ide">Conv2D</span>(<span class="op">@</span>[<span class="num">1</span>, <span class="ide">h</span>, <span class="ide">w</span>], <span class="num">20</span>, (<span class="num">5</span>, <span class="num">5</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">mp1</span>:        <span class="ide">Maxpool2D</span>(<span class="ide">cv1</span><span class="op">.</span><span class="ide">out_shape</span>, (<span class="num">2</span>,<span class="num">2</span>), (<span class="num">0</span>,<span class="num">0</span>), (<span class="num">2</span>,<span class="num">2</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">cv2</span>:        <span class="ide">Conv2D</span>(<span class="ide">mp1</span><span class="op">.</span><span class="ide">out_shape</span>, <span class="num">50</span>, (<span class="num">5</span>, <span class="num">5</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">mp2</span>:        <span class="ide">MaxPool2D</span>(<span class="ide">cv2</span><span class="op">.</span><span class="ide">out_shape</span>, (<span class="num">2</span>,<span class="num">2</span>), (<span class="num">0</span>,<span class="num">0</span>), (<span class="num">2</span>,<span class="num">2</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">fl</span>:         <span class="ide">Flatten</span>(<span class="ide">mp2</span><span class="op">.</span><span class="ide">out_shape</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">.</span><span class="ide">cv1</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">mp1</span><span class="op">.</span><span class="ide">cv2</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">mp2</span><span class="op">.</span><span class="ide">fl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># this model could be initialized like this: let model = ctx.init(SomeConvNet, h = 28, w = 28)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># functions `out_shape` and `in_shape` returning a `seq[int]` are convention (but not strictly necessary)</span></div></div><div class="line"><div class="line-content"><span class="com"># for layers/models that have clearly defined output and input size</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">out_shape</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">SomeConvNet</span>[<span class="ide">T</span>]): <span class="ide">seq</span>[<span class="ide">int</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">self</span><span class="op">.</span><span class="ide">fl</span><span class="op">.</span><span class="ide">out_shape</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">in_shape</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">SomeConvNet</span>[<span class="ide">T</span>]): <span class="ide">seq</span>[<span class="ide">int</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">self</span><span class="op">.</span><span class="ide">cv1</span><span class="op">.</span><span class="ide">in_shape</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">network</span> <span class="ide">DemoNet</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">layers</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># here we use the previously defined SomeConvNet as a layer</span></div></div><div class="line"><div class="line-content">    <span class="ide">cv</span>:         <span class="ide">SomeConvNet</span>(<span class="num">28</span>, <span class="num">28</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">hidden</span>:     <span class="ide">Linear</span>(<span class="ide">cv</span><span class="op">.</span><span class="ide">out_shape</span>[<span class="num">0</span>], <span class="num">500</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">classifier</span>: <span class="ide">Linear</span>(<span class="ide">hidden</span><span class="op">.</span><span class="ide">out_shape</span>[<span class="num">0</span>], <span class="num">10</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">forward</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">.</span><span class="ide">cv</span><span class="op">.</span><span class="ide">hidden</span><span class="op">.</span><span class="ide">relu</span><span class="op">.</span><span class="ide">classifier</span></div></div>  </code></pre>
+<h4>Custom layers</h4>
+<p>It is also possible to create fully custom layers.
+The documentation for this can be found in the <a href="https://mratsim.github.io/Arraymancer/nn_dsl.html">official API documentation</a>.</p>
+<h3>Tensors on CPU, on Cuda and OpenCL</h3>
+<p>Tensors, CudaTensors and CLTensors do not have the same features implemented yet.
+Also CudaTensors and CLTensors can only be float32 or float64 while CpuTensors can be integers, string, boolean or any custom object.</p>
+<p>Here is a comparative table of the core features.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Tensor</th>
+<th>CudaTensor</th>
+<th>ClTensor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accessing tensor properties</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Tensor creation</td>
+<td>[x]</td>
+<td>by converting a cpu Tensor</td>
+<td>by converting a cpu Tensor</td>
+</tr>
+<tr>
+<td>Accessing or modifying a single value</td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Iterating on a Tensor</td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Slicing a Tensor</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Slice mutation <code>a[1,_] = 10</code></td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Comparison <code>==</code></td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Element-wise basic operations</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Universal functions</td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Automatically broadcasted operations</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Matrix-Matrix and Matrix-Vector multiplication</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Displaying a tensor</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Higher-order functions (map, apply, reduce, fold)</td>
+<td>[x]</td>
+<td>internal only</td>
+<td>internal only</td>
+</tr>
+<tr>
+<td>Transposing</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Converting to contiguous</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Reshaping</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Explicit broadcast</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[x]</td>
+</tr>
+<tr>
+<td>Permuting dimensions</td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Concatenating tensors along existing dimension</td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Squeezing singleton dimension</td>
+<td>[x]</td>
+<td>[x]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Slicing + squeezing</td>
+<td>[x]</td>
+<td>[]</td>
+<td>[]</td>
+</tr></tbody></table>
+<h2>What&apos;s new in Arraymancer v0.5.1 - July 2019</h2>
+<p>The full changelog is available in <a href="./changelog.md">changelog.md</a>.</p>
+<p>Here are the highlights:</p>
+<ul>
+<li>0.20.x compatibility</li>
+<li>Complex support</li>
+<li>  <code>Einsum</code></li>
+<li>Naive whitespace tokenizer for NLP</li>
+<li>Fix height/width order when reading an image in tensor</li>
+<li>Preview of Laser backend for matrix multiplication without SIMD autodetection (already 5x faster on integer matrix multiplication)</li>
+</ul>
+<h2>4 reasons why Arraymancer</h2>
+<h3>The Python community is struggling to bring Numpy up-to-speed</h3>
+<ul>
+<li>Numba JIT compiler</li>
+<li>Dask delayed parallel computation graph</li>
+<li>Cython to ease numerical computations in Python</li>
+<li>Due to the GIL shared-memory parallelism (OpenMP) is not possible in pure Python</li>
+<li>Use &quot;vectorized operations&quot; (i.e. don&apos;t use for loops in Python)</li>
+</ul>
+<p>Why not use in a single language with all the blocks to build the most efficient scientific computing library with Python ergonomics.</p>
+<p>OpenMP batteries included.</p>
+<h3>A researcher workflow is a fight against inefficiencies</h3>
+<p>Researchers in a heavy scientific computing domain often have the following workflow: Mathematica/Matlab/Python/R (prototyping) -&gt; C/C++/Fortran (speed, memory)</p>
+<p>Why not use in a language as productive as Python and as fast as C? Code once, and don&apos;t spend months redoing the same thing at a lower level.</p>
+<h3>Can be distributed almost dependency free</h3>
+<p>Arraymancer models can be packaged in a self-contained binary that only depends on a BLAS library like OpenBLAS, MKL or Apple Accelerate (present on all Mac and iOS).</p>
+<p>This means that there is no need to install a huge library or language ecosystem to use Arraymancer. This also makes it naturally suitable for resource-constrained devices like mobile phones and Raspberry Pi.</p>
+<h3>Bridging the gap between deep learning research and production</h3>
+<p>The deep learning frameworks are currently in two camps:</p>
+<ul>
+<li>Research: Theano, Tensorflow, Keras, Torch, PyTorch</li>
+<li>Production: Caffe, Darknet, (Tensorflow)</li>
+</ul>
+<p>Furthermore, Python preprocessing steps, unless using OpenCV, often needs a custom implementation (think text/speech preprocessing on phones).</p>
+<ul>
+<li>Managing and deploying Python (2.7, 3.5, 3.6) and packages version in a robust manner requires devops-fu (virtualenv, Docker, ...)</li>
+<li>Python data science ecosystem does not run on embedded devices (Nvidia Tegra/drones) or mobile phones, especially preprocessing dependencies.</li>
+<li>Tensorflow is supposed to bridge the gap between research and production but its syntax and ergonomics are a pain to work with. Like for researchers, you need to code twice, &quot;Prototype in Keras, and when you need low-level --&gt; Tensorflow&quot;.</li>
+<li>Deployed models are static, there is no interface to add a new observation/training sample to any framework, what if you want to use a model as a webservice with online learning?</li>
+</ul>
+<p>  <a href="https://xkcd.com/1987/">Relevant XKCD from Apr 30, 2018</a></p>
+<p>  <img src="https://imgs.xkcd.com/comics/python_environment.png" style="max-width: 100%;" alt="Python environment mess" /></p>
+<h3>So why Arraymancer ?</h3>
+<p>All those pain points may seem like a huge undertaking however thanks to the Nim language, we can have Arraymancer:</p>
+<ul>
+<li>Be as fast as C</li>
+<li>Accelerated routines with Intel MKL/OpenBLAS or even NNPACK</li>
+<li>Access to CUDA and CuDNN and generate custom CUDA kernels on the fly via metaprogramming.</li>
+<li>Almost dependency free distribution (BLAS library)</li>
+<li>A Python-like syntax with custom operators <code>a * b</code> for tensor multiplication instead of <code>a.dot(b)</code> (Numpy/Tensorflow) or <code>a.mm(b)</code> (Torch)</li>
+<li>Numpy-like slicing ergonomics <code>t[0..4, 2..10|2]</code></li>
+<li>For everything that Nim doesn&apos;t have yet, you can use Nim bindings to C, C++, Objective-C or Javascript to bring it to Nim. Nim also has unofficial Python-&gt;Nim and Nim-&gt;Python wrappers.</li>
+</ul>
+<h2>Future ambitions</h2>
+<p>Because apparently to be successful you need a vision, I would like Arraymancer to be:</p>
+<ul>
+<li>The go-to tool for Deep Learning video processing. I.e. <code>vid = load_video(&quot;./cats/youtube_cat_video.mkv&quot;)</code></li>
+<li>Target javascript, WebAssembly, Apple Metal, ARM devices, AMD Rocm, OpenCL, you name it.</li>
+<li>The base of a Starcraft II AI bot.</li>
+<li>Target cryptominers FPGAs because they drove the price of GPUs for honest deep-learners too high.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://mratsim.github.io/Arraymancer/">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

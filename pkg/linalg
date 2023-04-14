@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">linalg</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">vector</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">matrix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linear-algebra</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">BLAS</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">LAPACK</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Linear algebra for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install linalg" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>#Linear Algebra for Nim</p>
+<p>  <a href="https://github.com/yglukhov/nimble-tag">    <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" />  </a></p>
+<p>  <strong>This library is not mantained anymore. It still works fine, but new
+development happens on   <a href="https://andreaferretti.github.io/neo/">Neo</a>. The main
+difference between the two libraries is that Neo only focuses in what we call
+here dynamic vectors and matrices. Using static types to encode dimensions
+was a nice experiment, but it turned out to be one more dimension to support
+(along with 32 vs 64 bit, CPU vs GPU, dense vs sparse...).</strong></p>
+<p>This library is meant to provide basic linear algebra operations for Nim
+applications. The ambition would be to become a stable basis on which to
+develop a scientific ecosystem for Nim, much like Numpy does for Python.</p>
+<p>The library has been tested on Ubuntu Linux 14.10 through 15.10 64-bit using
+either ATLAS, OpenBlas or Intel MKL. It was also tested on OSX Yosemite. The
+GPU support has been tested using NVIDIA CUDA 7.0 and 7.5.</p>
+<p>The library is currently aligned with latest Nim devel. For versions of Nim up
+to 0.13 use version 0.4.2 of linalg.</p>
+<p>API documentation is <a href="http://andreaferretti.github.io/linear-algebra/api.html">here</a></p>
+<p>A lot of examples are available in the tests.</p>
+<h2>Table of contents</h2>
+<!--  TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0  -->
+<ul>
+<li>  <a href="#introduction">Introduction</a></li>
+<li>  <a href="#initialization">Initialization</a></li>
+<li>  <a href="#working-with-32-bit">Working with 32-bit</a></li>
+<li>  <a href="#accessors">Accessors</a></li>
+<li>  <a href="#iterators">Iterators</a></li>
+<li>  <a href="#equality">Equality</a></li>
+<li>  <a href="#pretty-print">Pretty-print</a></li>
+<li>  <a href="#operations">Operations</a></li>
+<li>  <a href="#trivial-operations">Trivial operations</a></li>
+<li>  <a href="#universal-functions">Universal functions</a></li>
+<li>  <a href="#linear-algebra-functions">Linear Algebra functions</a></li>
+<li>  <a href="#rewrite-rules">Rewrite rules</a></li>
+<li>  <a href="#type-safety-guarantees">Type safety guarantees</a></li>
+<li>  <a href="#linking-blas-implementations">Linking BLAS implementations</a></li>
+<li>  <a href="#gpu-support">GPU support</a></li>
+<li>  <a href="#todo">TODO</a></li>
+<li>  <a href="#contributing">Contributing</a></li>
+</ul>
+<!--  /TOC  -->
+<h2>Introduction</h2>
+<p>The library revolves around operations on vectors and matrices of floating
+point numbers. It allows to compute operations either on the CPU or on the
+GPU offering identical APIs. Also, whenever possible, the dimension of vectors
+and matrices are encoded into the types in the form of <code>static[int]</code> type
+parameters. This allow to check dimensions at compile time and refuse to
+compile invalid operations, such as summing two vectors of different sizes,
+or multiplying two matrices of incompatible dimensions.</p>
+<p>The library defines types <code>Matrix64[M, N]</code> and <code>Vector64[N]</code> for 64-bit matrices
+and vectors of static dimension, as well as their 32-bit counterparts
+<code>Matrix32[M, N]</code> and <code>Vector32[N]</code>.</p>
+<p>For the case where the dimension is not known at compile time, one can use
+so-called <em>dynamic</em> vectors and matrices, whose types are <code>DVector64</code> and
+<code>DMatrix64</code> (resp. <code>DVector32</code> and <code>DMatrix32</code>). Note that <code>DVector64</code> is just
+and alias for <code>seq[float64]</code> (and similarly for 32-bit), which allows to
+perform linear algebra operations on standard Nim sequences.</p>
+<p>  <strong>In all examples, types are inferred, and are shown just for explanatory purposes.</strong></p>
+<h2>Initialization</h2>
+<p>Here we show a few ways to create matrices and vectors. All matrices methods
+accept a parameter to define whether to store the matrix in row-major (that is,
+data are laid out in memory row by row) or column-major order (that is, data
+are laid out in memory column by column). The default is in each case
+column-major.</p>
+<p>Whenever possible, we try to deduce whether to use 32 or 64 bits by appropriate
+parameters. When this is not possible, there is an optional parameter <code>float32</code>
+that can be passed to specify the precision (the default is 64 bit).</p>
+<p>Static matrices and vectors can be created like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">linalg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span>: <span class="ide">Vector64</span>[<span class="num">5</span>] <span class="op">=</span> <span class="ide">makeVector</span>(<span class="num">5</span>, <span class="kwd">proc</span>(<span class="ide">i</span>: <span class="ide">int</span>): <span class="ide">float64</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">*</span> <span class="ide">i</span>)<span class="op">.</span><span class="ide">float64</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span>: <span class="ide">Vector64</span>[<span class="num">7</span>] <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">7</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">3.0</span>) <span class="com"># max is optional, default 1</span></div></div><div class="line"><div class="line-content">  <span class="ide">v3</span>: <span class="ide">Vector64</span>[<span class="num">5</span>] <span class="op">=</span> <span class="ide">constantVector</span>(<span class="num">5</span>, <span class="num">3.5</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v4</span>: <span class="ide">Vector64</span>[<span class="num">8</span>] <span class="op">=</span> <span class="ide">zeros</span>(<span class="num">8</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v5</span>: <span class="ide">Vector64</span>[<span class="num">9</span>] <span class="op">=</span> <span class="ide">ones</span>(<span class="num">9</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v6</span>: <span class="ide">Vector64</span>[<span class="num">5</span>] <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>, <span class="num">5.0</span>]) <span class="com"># initialize from an array...</span></div></div><div class="line"><div class="line-content">  <span class="ide">m1</span>: <span class="ide">Matrix64</span>[<span class="num">6</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">makeMatrix</span>(<span class="num">6</span>, <span class="num">3</span>, <span class="kwd">proc</span>(<span class="ide">i</span>, <span class="ide">j</span>: <span class="ide">int</span>): <span class="ide">float64</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">+</span> <span class="ide">j</span>)<span class="op">.</span><span class="ide">float64</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span>: <span class="ide">Matrix64</span>[<span class="num">2</span>, <span class="num">8</span>] <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">2</span>, <span class="num">8</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">1.6</span>) <span class="com"># max is optional, default 1</span></div></div><div class="line"><div class="line-content">  <span class="ide">m3</span>: <span class="ide">Matrix64</span>[<span class="num">3</span>, <span class="num">5</span>] <span class="op">=</span> <span class="ide">constantMatrix</span>(<span class="num">3</span>, <span class="num">5</span>, <span class="num">1.8</span>, <span class="ide">order</span> <span class="op">=</span> <span class="ide">rowMajor</span>) <span class="com"># order is optional, default colMajor</span></div></div><div class="line"><div class="line-content">  <span class="ide">m4</span>: <span class="ide">Matrix64</span>[<span class="num">3</span>, <span class="num">6</span>] <span class="op">=</span> <span class="ide">ones</span>(<span class="num">3</span>, <span class="num">6</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m5</span>: <span class="ide">Matrix64</span>[<span class="num">5</span>, <span class="num">2</span>] <span class="op">=</span> <span class="ide">zeros</span>(<span class="num">5</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m6</span>: <span class="ide">Matrix64</span>[<span class="num">7</span>, <span class="num">7</span>] <span class="op">=</span> <span class="ide">eye</span>(<span class="num">7</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m7</span>: <span class="ide">Matrix64</span>[<span class="num">2</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">matrix</span>([</div></div><div class="line"><div class="line-content">    [<span class="num">1.2</span>, <span class="num">3.5</span>, <span class="num">4.3</span>],</div></div><div class="line"><div class="line-content">    [<span class="num">1.1</span>, <span class="num">4.2</span>, <span class="num">1.7</span>]</div></div><div class="line"><div class="line-content">  ])</div></div><div class="line"><div class="line-content">  <span class="ide">m8</span>: <span class="ide">Matrix64</span>[<span class="num">2</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">matrix</span>(<span class="op">@</span>[</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.2</span>, <span class="num">3.5</span>, <span class="num">4.3</span>],</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.1</span>, <span class="num">4.2</span>, <span class="num">1.7</span>]</div></div><div class="line"><div class="line-content">  ], <span class="num">2</span>, <span class="num">3</span>)</div></div>  </code></pre>
+<p>The last <code>matrix</code> constructor takes a <code>seq</code> of <code>seq</code>s, but also requires
+statically passing the dimensions to be used. The following are equivalent
+when <code>xs</code> is a <code>seq[seq[float64]]</code> and <code>M</code>, <code>N</code> are integers known at compile
+time:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">m1</span> <span class="op">=</span> <span class="ide">matrix</span>(<span class="ide">xs</span>)<span class="op">.</span><span class="ide">toStatic</span>(<span class="ide">M</span>, <span class="ide">N</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span> <span class="op">=</span> <span class="ide">matrix</span>(<span class="ide">xs</span>, <span class="ide">M</span>, <span class="ide">N</span>)</div></div>  </code></pre>
+<p>but the latter form avoids the construction of an intermediate matrix.</p>
+<p>All constructors that take as input an existing array or seq perform a copy of
+the data for memory safety.</p>
+<p>Dynamic matrices and vectors have similar constructors - the difference is that
+the dimension parameter are not known at compile time:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">linalg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">M</span> <span class="op">=</span> <span class="num">5</span></div></div><div class="line"><div class="line-content">  <span class="ide">N</span> <span class="op">=</span> <span class="num">7</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span>: <span class="ide">DVector64</span> <span class="op">=</span> <span class="ide">makeVector</span>(<span class="ide">M</span>, <span class="kwd">proc</span>(<span class="ide">i</span>: <span class="ide">int</span>): <span class="ide">float64</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">*</span> <span class="ide">i</span>)<span class="op">.</span><span class="ide">float64</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span>: <span class="ide">DVector64</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="ide">N</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">3.0</span>) <span class="com"># max is optional, default 1</span></div></div><div class="line"><div class="line-content">  <span class="ide">v3</span>: <span class="ide">DVector64</span> <span class="op">=</span> <span class="ide">constantVector</span>(<span class="ide">M</span>, <span class="num">3.5</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v4</span>: <span class="ide">DVector64</span> <span class="op">=</span> <span class="ide">zeros</span>(<span class="ide">M</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v5</span>: <span class="ide">DVector64</span> <span class="op">=</span> <span class="ide">ones</span>(<span class="ide">N</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v6</span>: <span class="ide">DVector64</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>, <span class="num">5.0</span>] <span class="com"># DVectors are just seqs...</span></div></div><div class="line"><div class="line-content">  <span class="ide">m1</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">makeMatrix</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="kwd">proc</span>(<span class="ide">i</span>, <span class="ide">j</span>: <span class="ide">int</span>): <span class="ide">float64</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">+</span> <span class="ide">j</span>)<span class="op">.</span><span class="ide">float64</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">1.6</span>) <span class="com"># max is optional, default 1</span></div></div><div class="line"><div class="line-content">  <span class="ide">m3</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">constantMatrix</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="num">1.8</span>, <span class="ide">order</span> <span class="op">=</span> <span class="ide">rowMajor</span>) <span class="com"># order is optional, default colMajor</span></div></div><div class="line"><div class="line-content">  <span class="ide">m4</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">ones</span>(<span class="ide">M</span>, <span class="ide">N</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m5</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">zeros</span>(<span class="ide">M</span>, <span class="ide">N</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m6</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">eye</span>(<span class="ide">M</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m7</span>: <span class="ide">DMatrix64</span> <span class="op">=</span> <span class="ide">matrix</span>(<span class="op">@</span>[</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.2</span>, <span class="num">3.5</span>, <span class="num">4.3</span>],</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.1</span>, <span class="num">4.2</span>, <span class="num">1.7</span>]</div></div><div class="line"><div class="line-content">  ])</div></div>  </code></pre>
+<p>If for some reason you want to create a dynamic vector of matrix, but you want
+to write literal dimensions, you can either assign these numbers to variables
+or use the <code>toDynamic</code> proc to convert the static instances to dynamic ones:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">linalg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">M</span> <span class="op">=</span> <span class="num">5</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span> <span class="op">=</span> <span class="ide">makeVector</span>(<span class="ide">M</span>, <span class="kwd">proc</span>(<span class="ide">i</span>: <span class="ide">int</span>): <span class="ide">float64</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">*</span> <span class="ide">i</span>)<span class="op">.</span><span class="ide">float64</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span> <span class="op">=</span> <span class="ide">makeVector</span>(<span class="num">5</span>, <span class="kwd">proc</span>(<span class="ide">i</span>: <span class="ide">int</span>): <span class="ide">float64</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">*</span> <span class="ide">i</span>)<span class="op">.</span><span class="ide">float64</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v1</span><span class="op">.</span><span class="ide">toStatic</span>(<span class="num">5</span>) <span class="op">==</span> <span class="ide">v2</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v2</span><span class="op">.</span><span class="ide">toDynamic</span> <span class="op">==</span> <span class="ide">v1</span></div></div>  </code></pre>
+<h2>Working with 32-bit</h2>
+<p>One can also instantiate 32-bit matrices and vectors. Whenever possible, the
+API is identical. In cases that would be ambiguous (such as <code>zeros</code>), one can
+explicitly specify the <code>float32</code> parameter.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">linalg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span>: <span class="ide">Vector32</span>[<span class="num">5</span>] <span class="op">=</span> <span class="ide">makeVector</span>(<span class="num">5</span>, <span class="kwd">proc</span>(<span class="ide">i</span>: <span class="ide">int</span>): <span class="ide">float32</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">*</span> <span class="ide">i</span>)<span class="op">.</span><span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span>: <span class="ide">Vector32</span>[<span class="num">7</span>] <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">7</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">3&apos;f32</span>) <span class="com"># max is no longer optional, to distinguish 32/64 bit</span></div></div><div class="line"><div class="line-content">  <span class="ide">v3</span>: <span class="ide">Vector32</span>[<span class="num">5</span>] <span class="op">=</span> <span class="ide">constantVector</span>(<span class="num">5</span>, <span class="num">3.5&apos;f32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v4</span>: <span class="ide">Vector32</span>[<span class="num">8</span>] <span class="op">=</span> <span class="ide">zeros</span>(<span class="num">8</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v5</span>: <span class="ide">Vector32</span>[<span class="num">9</span>] <span class="op">=</span> <span class="ide">ones</span>(<span class="num">9</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v6</span>: <span class="ide">Vector32</span>[<span class="num">5</span>] <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1&apos;f32</span>, <span class="num">2&apos;f32</span>, <span class="num">3&apos;f32</span>, <span class="num">4&apos;f32</span>, <span class="num">5&apos;f32</span>])</div></div><div class="line"><div class="line-content">  <span class="ide">m1</span>: <span class="ide">Matrix32</span>[<span class="num">6</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">makeMatrix</span>(<span class="num">6</span>, <span class="num">3</span>, <span class="kwd">proc</span>(<span class="ide">i</span>, <span class="ide">j</span>: <span class="ide">int</span>): <span class="ide">float32</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">+</span> <span class="ide">j</span>)<span class="op">.</span><span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span>: <span class="ide">Matrix32</span>[<span class="num">2</span>, <span class="num">8</span>] <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">2</span>, <span class="num">8</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">1.6&apos;f32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m3</span>: <span class="ide">Matrix32</span>[<span class="num">3</span>, <span class="num">5</span>] <span class="op">=</span> <span class="ide">constantMatrix</span>(<span class="num">3</span>, <span class="num">5</span>, <span class="num">1.8&apos;f32</span>, <span class="ide">order</span> <span class="op">=</span> <span class="ide">rowMajor</span>) <span class="com"># order is optional, default colMajor</span></div></div><div class="line"><div class="line-content">  <span class="ide">m4</span>: <span class="ide">Matrix32</span>[<span class="num">3</span>, <span class="num">6</span>] <span class="op">=</span> <span class="ide">ones</span>(<span class="num">3</span>, <span class="num">6</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m5</span>: <span class="ide">Matrix32</span>[<span class="num">5</span>, <span class="num">2</span>] <span class="op">=</span> <span class="ide">zeros</span>(<span class="num">5</span>, <span class="num">2</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m6</span>: <span class="ide">Matrix32</span>[<span class="num">7</span>, <span class="num">7</span>] <span class="op">=</span> <span class="ide">eye</span>(<span class="num">7</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m7</span>: <span class="ide">Matrix32</span>[<span class="num">2</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">matrix</span>([</div></div><div class="line"><div class="line-content">    [<span class="num">1.2&apos;f32</span>, <span class="num">3.5&apos;f32</span>, <span class="num">4.3&apos;f32</span>],</div></div><div class="line"><div class="line-content">    [<span class="num">1.1&apos;f32</span>, <span class="num">4.2&apos;f32</span>, <span class="num">1.7&apos;f32</span>]</div></div><div class="line"><div class="line-content">  ])</div></div><div class="line"><div class="line-content">  <span class="ide">m8</span>: <span class="ide">Matrix32</span>[<span class="num">2</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">matrix</span>(<span class="op">@</span>[</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.2&apos;f32</span>, <span class="num">3.5&apos;f32</span>, <span class="num">4.3&apos;f32</span>],</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.1&apos;f32</span>, <span class="num">4.2&apos;f32</span>, <span class="num">1.7&apos;f32</span>]</div></div><div class="line"><div class="line-content">  ], <span class="num">2</span>, <span class="num">3</span>)</div></div>  </code></pre>
+<p>Similarly,</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">linalg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">M</span> <span class="op">=</span> <span class="num">5</span></div></div><div class="line"><div class="line-content">  <span class="ide">N</span> <span class="op">=</span> <span class="num">7</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span>: <span class="ide">DVector32</span> <span class="op">=</span> <span class="ide">makeVector</span>(<span class="ide">M</span>, <span class="kwd">proc</span>(<span class="ide">i</span>: <span class="ide">int</span>): <span class="ide">float32</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">*</span> <span class="ide">i</span>)<span class="op">.</span><span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span>: <span class="ide">DVector32</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="ide">N</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">3&apos;f32</span>) <span class="com"># max is not optional</span></div></div><div class="line"><div class="line-content">  <span class="ide">v3</span>: <span class="ide">DVector32</span> <span class="op">=</span> <span class="ide">constantVector</span>(<span class="ide">M</span>, <span class="num">3.5&apos;f32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v4</span>: <span class="ide">DVector32</span> <span class="op">=</span> <span class="ide">zeros</span>(<span class="ide">M</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v5</span>: <span class="ide">DVector32</span> <span class="op">=</span> <span class="ide">ones</span>(<span class="ide">N</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v6</span>: <span class="ide">DVector32</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1&apos;f32</span>, <span class="num">2&apos;f32</span>, <span class="num">3&apos;f32</span>, <span class="num">4&apos;f32</span>, <span class="num">5&apos;f32</span>] <span class="com"># DVectors are just seqs...</span></div></div><div class="line"><div class="line-content">  <span class="ide">m1</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">makeMatrix</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="kwd">proc</span>(<span class="ide">i</span>, <span class="ide">j</span>: <span class="ide">int</span>): <span class="ide">float32</span> <span class="op">=</span> (<span class="ide">i</span> <span class="op">+</span> <span class="ide">j</span>)<span class="op">.</span><span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">1.6&apos;f32</span>) <span class="com"># max is not optional</span></div></div><div class="line"><div class="line-content">  <span class="ide">m3</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">constantMatrix</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="num">1.8&apos;f32</span>, <span class="ide">order</span> <span class="op">=</span> <span class="ide">rowMajor</span>) <span class="com"># order is optional, default colMajor</span></div></div><div class="line"><div class="line-content">  <span class="ide">m4</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">ones</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m5</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">zeros</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m6</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">eye</span>(<span class="ide">M</span>, <span class="ide">float32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m7</span>: <span class="ide">DMatrix32</span> <span class="op">=</span> <span class="ide">matrix</span>(<span class="op">@</span>[</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.2&apos;f32</span>, <span class="num">3.5&apos;f32</span>, <span class="num">4.3&apos;f32</span>],</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="num">1.1&apos;f32</span>, <span class="num">4.2&apos;f32</span>, <span class="num">1.7&apos;f32</span>]</div></div><div class="line"><div class="line-content">  ])</div></div>  </code></pre>
+<p>One can convert precision with <code>to32</code> or <code>to64</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v64</span>: <span class="ide">Vector64</span>[<span class="num">10</span>] <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v32</span>: <span class="ide">Vector32</span>[<span class="num">10</span>] <span class="op">=</span> <span class="ide">v64</span><span class="op">.</span><span class="ide">to32</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">m32</span>: <span class="ide">Matrix32</span>[<span class="num">3</span>, <span class="num">8</span>] <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">3</span>, <span class="num">8</span>, <span class="ide">max</span> <span class="op">=</span> <span class="num">1&apos;f32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m64</span>: <span class="ide">Matrix64</span>[<span class="num">3</span>, <span class="num">8</span>] <span class="op">=</span> <span class="ide">m32</span><span class="op">.</span><span class="ide">to64</span>()</div></div>  </code></pre>
+<p>Once vectors and matrices are created, everything is inferred, so there are no
+differences in working with 32-bit or 64-bit. All examples that follow are for
+64-bit, but they would work as well for 32-bit.</p>
+<h2>Accessors</h2>
+<p>Vectors can be accessed as expected:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">6</span>)</div></div><div class="line"><div class="line-content"><span class="ide">v</span>[<span class="num">4</span>] <span class="op">=</span> <span class="num">1.2</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">v</span>[<span class="num">3</span>]</div></div>  </code></pre>
+<p>Same for matrices, where <code>m[i, j]</code> denotes the item on row <code>i</code> and column <code>j</code>,
+regardless of the matrix order:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">m</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">3</span>, <span class="num">7</span>)</div></div><div class="line"><div class="line-content"><span class="ide">m</span>[<span class="num">1</span>, <span class="num">3</span>] <span class="op">=</span> <span class="num">0.8</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m</span>[<span class="num">2</span>, <span class="num">2</span>]</div></div>  </code></pre>
+<p>Also one can see rows and columns as vectors</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">r2</span>: <span class="ide">Vector64</span>[<span class="num">7</span>] <span class="op">=</span> <span class="ide">m</span><span class="op">.</span><span class="ide">row</span>(<span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">c5</span>: <span class="ide">Vector64</span>[<span class="num">3</span>] <span class="op">=</span> <span class="ide">m</span><span class="op">.</span><span class="ide">column</span>(<span class="num">5</span>)</div></div>  </code></pre>
+<p>For memory safety, this performs a <strong>copy</strong> of the row or column values, at
+least for now. One can also map vectors and matrices via a proc:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span> <span class="op">=</span> <span class="ide">v</span><span class="op">.</span><span class="ide">map</span>(<span class="kwd">proc</span>(<span class="ide">x</span>: <span class="ide">float64</span>): <span class="ide">float64</span> <span class="op">=</span> <span class="num">2</span> <span class="op">-</span> <span class="num">3</span> <span class="op">*</span> <span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m1</span> <span class="op">=</span> <span class="ide">m</span><span class="op">.</span><span class="ide">map</span>(<span class="kwd">proc</span>(<span class="ide">x</span>: <span class="ide">float64</span>): <span class="ide">float64</span> <span class="op">=</span> <span class="num">1</span> <span class="op">/</span> <span class="ide">x</span>)</div></div>  </code></pre>
+<p>Similar operations are available for dynamic matrices and vectors as well.</p>
+<h2>Iterators</h2>
+<p>One can iterate over vector or matrix elements, as well as over rows and columns</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">6</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">3</span>, <span class="num">5</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">v</span>: <span class="ide">echo</span> <span class="ide">x</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span>, <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">v</span>: <span class="ide">echo</span> <span class="ide">i</span>, <span class="ide">x</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">m</span>: <span class="ide">echo</span> <span class="ide">x</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">t</span>, <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">m</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> (<span class="ide">i</span>, <span class="ide">j</span>) <span class="op">=</span> <span class="ide">t</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span>, <span class="ide">j</span>, <span class="ide">x</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">row</span> <span class="kwd">in</span> <span class="ide">m</span><span class="op">.</span><span class="ide">rows</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">row</span>[<span class="num">0</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">column</span> <span class="kwd">in</span> <span class="ide">m</span><span class="op">.</span><span class="ide">columns</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">column</span>[<span class="num">1</span>]</div></div>  </code></pre>
+<h2>Equality</h2>
+<p>There are two kinds of equality. The usual <code>==</code> operator will compare the
+contents of vector and matrices exactly</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">u</span> <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>])</div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>])</div></div><div class="line"><div class="line-content">  <span class="ide">w</span> <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">3.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>])</div></div><div class="line"><div class="line-content"><span class="ide">u</span> <span class="op">==</span> <span class="ide">v</span> <span class="com"># true</span></div></div><div class="line"><div class="line-content"><span class="ide">u</span> <span class="op">==</span> <span class="ide">w</span> <span class="com"># false</span></div></div>  </code></pre>
+<p>Usually, though, one wants to take into account the errors introduced by
+floating point operations. To do this, use the <code>=~</code> operator, or its
+negation <code>!=~</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">u</span> <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>])</div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">2.000000001</span>, <span class="num">2.99999999</span>, <span class="num">4.0</span>])</div></div><div class="line"><div class="line-content"><span class="ide">u</span> <span class="op">==</span> <span class="ide">v</span> <span class="com"># false</span></div></div><div class="line"><div class="line-content"><span class="ide">u</span> <span class="op">=~</span> <span class="ide">v</span> <span class="com"># true</span></div></div>  </code></pre>
+<h2>Pretty-print</h2>
+<p>Both vectors and matrix have a pretty-print operation, so one can do</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">m</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">3</span>, <span class="num">7</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m8</span></div></div>  </code></pre>
+<p>and get something like</p>
+<pre>  <code>[ [ 0.5024584865674662  0.0798945419892334  0.7512423051567048  0.9119041361916302  0.5868388894943912  0.3600554448403415  0.4419034543022882 ]
+  [ 0.8225964245706265  0.01608615513584155 0.1442007939324697  0.7623388321096165  0.8419745686508193  0.08792951865247645 0.2902529012579151 ]
+  [ 0.8488187232786935  0.422866666087792 0.1057975175658363  0.07968277822379832 0.7526946339452074  0.7698915909784674  0.02831893268471575 ] ]
+</code></pre>
+<h2>Operations</h2>
+<p>A few linear algebra operations are available, wrapping BLAS libraries:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v1</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">7</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v2</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">7</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m1</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">6</span>, <span class="num">9</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">9</span>, <span class="num">7</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="num">3.5</span> <span class="op">*</span> <span class="ide">v1</span></div></div><div class="line"><div class="line-content"><span class="ide">v1</span> <span class="op">*=</span> <span class="num">2.3</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">v1</span> <span class="op">+</span> <span class="ide">v2</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">v1</span> <span class="op">-</span> <span class="ide">v2</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">v1</span> <span class="op">*</span> <span class="ide">v2</span> <span class="com"># dot product</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">v1</span> <span class="op">|*|</span> <span class="ide">v2</span> <span class="com"># Hadamard (component-wise) product</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">l_1</span>(<span class="ide">v1</span>) <span class="com"># l_1 norm</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">l_2</span>(<span class="ide">v1</span>) <span class="com"># l_2 norm</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m2</span> <span class="op">*</span> <span class="ide">v1</span> <span class="com"># matrix-vector product</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m1</span> <span class="op">*</span> <span class="ide">m2</span> <span class="com"># matrix-matrix product</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m1</span> <span class="op">|*|</span> <span class="ide">m2</span> <span class="com"># Hadamard (component-wise) product</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">max</span>(<span class="ide">m1</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">min</span>(<span class="ide">v2</span>)</div></div>  </code></pre>
+<h2>Trivial operations</h2>
+<p>The following operations do not change the underlying memory layout of matrices
+and vectors. This means they run in very little time even on big matrices, but
+you have to pay attention when mutating matrices and vectors produced in this
+way, since the underlying data is shared.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">m1</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">6</span>, <span class="num">9</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span> <span class="op">=</span> <span class="ide">randomMatrix</span>(<span class="num">9</span>, <span class="num">6</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v1</span> <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">9</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m1</span><span class="op">.</span><span class="ide">t</span> <span class="com"># transpose, done in constant time without copying</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m1</span> <span class="op">+</span> <span class="ide">m2</span><span class="op">.</span><span class="ide">t</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">m3</span>: <span class="ide">Matrix64</span>[<span class="num">9</span>, <span class="num">6</span>] <span class="op">=</span> <span class="ide">m1</span><span class="op">.</span><span class="ide">reshape</span>(<span class="num">9</span>, <span class="num">6</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">m4</span>: <span class="ide">Matrix64</span>[<span class="num">3</span>, <span class="num">3</span>] <span class="op">=</span> <span class="ide">v1</span><span class="op">.</span><span class="ide">asMatrix</span>(<span class="num">3</span>, <span class="num">3</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">v2</span>: <span class="ide">Vector64</span>[<span class="num">54</span>] <span class="op">=</span> <span class="ide">m2</span><span class="op">.</span><span class="ide">asVector</span></div></div>  </code></pre>
+<p>In case you need to allocate a copy of the original data, say in order to
+transpose a matrix and then mutate the transpose without altering the original
+matrix, a <code>clone</code> operation is available:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">m5</span> <span class="op">=</span> <span class="ide">m1</span><span class="op">.</span><span class="ide">clone</span></div></div>  </code></pre>
+<h2>Universal functions</h2>
+<p>Universal functions are real-valued functions that are extended to vectors
+and matrices by working element-wise. There are many common functions that are
+implemented as universal functions:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">sqrt</span></div></div><div class="line"><div class="line-content"><span class="ide">cbrt</span></div></div><div class="line"><div class="line-content"><span class="ide">log10</span></div></div><div class="line"><div class="line-content"><span class="ide">log2</span></div></div><div class="line"><div class="line-content"><span class="ide">log</span></div></div><div class="line"><div class="line-content"><span class="ide">exp</span></div></div><div class="line"><div class="line-content"><span class="ide">arccos</span></div></div><div class="line"><div class="line-content"><span class="ide">arcsin</span></div></div><div class="line"><div class="line-content"><span class="ide">arctan</span></div></div><div class="line"><div class="line-content"><span class="ide">cos</span></div></div><div class="line"><div class="line-content"><span class="ide">cosh</span></div></div><div class="line"><div class="line-content"><span class="ide">sin</span></div></div><div class="line"><div class="line-content"><span class="ide">sinh</span></div></div><div class="line"><div class="line-content"><span class="ide">tan</span></div></div><div class="line"><div class="line-content"><span class="ide">tanh</span></div></div><div class="line"><div class="line-content"><span class="ide">erf</span></div></div><div class="line"><div class="line-content"><span class="ide">erfc</span></div></div><div class="line"><div class="line-content"><span class="ide">lgamma</span></div></div><div class="line"><div class="line-content"><span class="ide">tgamma</span></div></div><div class="line"><div class="line-content"><span class="ide">trunc</span></div></div><div class="line"><div class="line-content"><span class="ide">floor</span></div></div><div class="line"><div class="line-content"><span class="ide">ceil</span></div></div><div class="line"><div class="line-content"><span class="ide">degToRad</span></div></div><div class="line"><div class="line-content"><span class="ide">radToDeg</span></div></div>  </code></pre>
+<p>This means that, for instance, the following check passes:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">v1</span> <span class="op">=</span> <span class="ide">vector</span>([<span class="num">1.0</span>, <span class="num">2.3</span>, <span class="num">4.5</span>, <span class="num">3.2</span>, <span class="num">5.4</span>])</div></div><div class="line"><div class="line-content">    <span class="ide">v2</span> <span class="op">=</span> <span class="ide">log</span>(<span class="ide">v1</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">v3</span> <span class="op">=</span> <span class="ide">v1</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">log</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">v2</span> <span class="op">==</span> <span class="ide">v3</span></div></div>  </code></pre>
+<p>Universal functions work both on 32 and 64 bit precision, on vectors and
+matrices, both static and dynamic.</p>
+<p>If you have a function <code>f</code> of type <code>proc(x: float64): float64</code> you can use</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">makeUniversal</span>(<span class="ide">f</span>)</div></div>  </code></pre>
+<p>to turn <code>f</code> into a (public) universal function. If you do not want to export
+<code>f</code>, there is the equivalent template <code>makeUniversalLocal</code>.</p>
+<h2>Linear Algebra functions</h2>
+<p>Some linear algebraic functions are included, currently for solving systems of
+linear equations of the form Ax = b, for square matrices A. Functions to invert
+square invertible matrices are also provided. These throw floating-point errors
+in the case of non-invertible matrices.</p>
+<p>At the moment, only static matrices are supported for system solution and
+matrix inversion.</p>
+<h2>Rewrite rules</h2>
+<p>A few rewrite rules allow to optimize a chain of linear algebra operations
+into a single BLAS call. For instance, if you try</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">linalg</span><span class="op">/</span><span class="ide">rewrites</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">v1</span> <span class="op">+</span> <span class="num">5.3</span> <span class="op">*</span> <span class="ide">v2</span></div></div>  </code></pre>
+<p>this is not implemented as a scalar multiplication followed by a sum, but it
+is turned into a single function call.</p>
+<h2>Type safety guarantees</h2>
+<p>The library is designed with the use case of having dimensions known at compile
+time, and leverages the compiles to ensure that dimensions match when performing
+the appropriate operations - for instance in matrix multiplication.</p>
+<p>To see some examples where the compiler avoids malformed operations, look
+inside <code>tests/compilation</code> (yes, in Nim one can actually test that some
+operations do not compile!).</p>
+<p>Also, operations that mutate a vector of matrix in place are only available if
+that vector of matrix is defined via <code>var</code> instead of <code>let</code>.</p>
+<h2>Linking BLAS implementations</h2>
+<p>The library requires to link some BLAS implementation to perform the actual
+linear algebra operations. By default, it tries to link whatever is the default
+system-wide BLAS implementation.</p>
+<p>A few compile flags are available to link specific BLAS implementations</p>
+<pre>  <code>-d:atlas
+-d:openblas
+-d:mkl
+-d:mkl -d:threaded
+</code></pre>
+<p>Packages for various BLAS implementations are available from the package
+managers of many Linux distributions. On OSX one can add the brew formulas
+from <a href="https://github.com/Homebrew/homebrew-science">Homebrew Science</a>, such
+as <code>brew install homebrew/science/openblas</code>.</p>
+<p>You may also need to add suitable paths for the includes and library dirs.
+On OSX, this should do the trick</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">switch</span>(<span class="str">&quot;clibdir&quot;</span>, <span class="str">&quot;/usr/local/opt/openblas/lib&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">switch</span>(<span class="str">&quot;cincludes&quot;</span>, <span class="str">&quot;/usr/local/opt/openblas/include&quot;</span>)</div></div>  </code></pre>
+<p>If you have problems with MKL, you may want to link it statically. Just pass
+the options</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">--</span><span class="ide">dynlibOverride</span>:<span class="ide">mkl_intel_lp64</span></div></div><div class="line"><div class="line-content"><span class="op">--</span><span class="ide">passL</span>:<span class="op">$</span>{<span class="ide">PATH_TO_MKL</span>}<span class="op">/</span><span class="ide">libmkl_intel_lp64</span><span class="op">.</span><span class="ide">a</span></div></div>  </code></pre>
+<p>to enable static linking.</p>
+<h2>GPU support</h2>
+<p>It is possible to delegate work to the GPU using CUDA. The library has been
+tested to work with NVIDIA CUDA 7.0 and 7.5, but it is possible that earlier
+versions will work as well. In order to compile and link against CUDA, you
+should make the appropriate headers and libraries available. If they are not
+globally set, you can pass suitable options to the Nim compiler, such as</p>
+<pre>  <code>--cincludes:&quot;/usr/local/cuda/targets/x86_64-linux/include&quot; \
+--clibdir:&quot;/usr/local/cuda/targets/x86_64-linux/lib&quot;
+</code></pre>
+<p>You will also need to explicitly add <code>linalg</code> support for CUDA with the flag</p>
+<pre>  <code>-d:cublas
+</code></pre>
+<p>If you have a matrix or vector, you can move it on the GPU, and back
+like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v</span>: <span class="ide">Vector32</span>[<span class="num">12</span>] <span class="op">=</span> <span class="ide">randomVector</span>(<span class="num">12</span>, <span class="ide">max</span><span class="op">=</span><span class="num">1&apos;f32</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">vOnTheGpu</span>: <span class="ide">CudaVector</span>[<span class="num">12</span>] <span class="op">=</span> <span class="ide">v</span><span class="op">.</span><span class="ide">gpu</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">vBackOnTheCpu</span>: <span class="ide">Vector32</span>[<span class="num">12</span>] <span class="op">=</span> <span class="ide">vOnTheGpu</span><span class="op">.</span><span class="ide">cpu</span>()</div></div>  </code></pre>
+<p>Vectors and matrices on the GPU support linear-algebraic operations via cuBLAS,
+exactly like their CPU counterparts. A few operation - such as reading a single
+element - are not supported, as it does not make much sense to copy a single
+value back and forth from the GPU. Usually it is advisable to move vectors
+and matrices to the GPU, make as many computations as possible there, and
+finally move the result back to the CPU.</p>
+<p>The following are all valid operations, assuming <code>v</code> and <code>w</code> are vectors on the
+GPU, <code>m</code> and <code>n</code> are matrices on the GPU and the dimensions are compatible:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">v</span> <span class="op">*</span> <span class="num">3&apos;f32</span></div></div><div class="line"><div class="line-content"><span class="ide">v</span> <span class="op">+</span> <span class="ide">w</span></div></div><div class="line"><div class="line-content"><span class="ide">v</span> <span class="op">-=</span> <span class="ide">w</span></div></div><div class="line"><div class="line-content"><span class="ide">m</span> <span class="op">*</span> <span class="ide">v</span></div></div><div class="line"><div class="line-content"><span class="ide">m</span> <span class="op">-</span> <span class="ide">n</span></div></div><div class="line"><div class="line-content"><span class="ide">m</span> <span class="op">*</span> <span class="ide">n</span></div></div>  </code></pre>
+<p>For more information, look at the tests in <code>tests/cuda</code>.</p>
+<h2>TODO</h2>
+<ul>
+<li>Add support for matrices and vector on the stack</li>
+<li>Add more functional interfaces (foldl, scanl)</li>
+<li>Use rewrite rules to optimize complex operations into a single BLAS call</li>
+<li>More specialized BLAS operations</li>
+<li>Add operations from LAPACK</li>
+<li>Support slicing/nonconstant steps</li>
+<li>Make <code>row</code> and <code>column</code> operations non-copying</li>
+<li>Better types to avoid out of bounds exceptions when statically checkable</li>
+<li>Add a fallback Nim implementation, that is valid over other rings</li>
+<li>Move CUBLAS and LAPACK to separate libraries required via nimble</li>
+<li>Try on more platforms/configurations</li>
+<li>Make a proper benchmark</li>
+<li>Improve documentation</li>
+<li>Better pretty-print</li>
+</ul>
+<h2>Contributing</h2>
+<p>Every contribution is very much appreciated! This can range from:</p>
+<ul>
+<li>using the library and reporting any issues and any configuration on which
+it works fine</li>
+<li>building other parts of the scientific environment on top of it</li>
+<li>writing blog posts and tutorials</li>
+<li>contributing actual code (see the <strong>TODO</strong> section)</li>
+</ul>
+<p>The library has to cater many different use cases, hence the vector and matrix
+types differ in various axes:</p>
+<ul>
+<li>32/64 bit</li>
+<li>CPU/GPU</li>
+<li>static/dynamic</li>
+<li>(on the stack? non-contiguous? non GC pointers?)</li>
+</ul>
+<p>In order to avoid a combinatorial explosion of operations, a judicious use of
+templates and union types helps to limit the actual implementations that have
+to be written.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/andreaferretti/linear-algebra">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

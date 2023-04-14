@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">pylib</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">python</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">compatibility</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pure</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim library with python-like functions and operators")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install pylib" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>NimPylib</h1>
+<p><a href="https://github.com/Yardanico/nimpylib/actions">  <img src="https://github.com/Yardanico/nimpylib/workflows/Build/badge.svg" style="max-width: 100%;" alt="Build status" /></a>
+<img src="https://img.shields.io/github/languages/top/Yardanico/nimpylib?style=flat" style="max-width: 100%;" alt="" /><img src="https://img.shields.io/github/stars/Yardanico/nimpylib?style=flat" style="max-width: 100%;" alt="" title="Star NimPylib on GitHub!" /><img src="https://img.shields.io/maintenance/yes/2021?style=flat" style="max-width: 100%;" alt="" /><img src="https://img.shields.io/github/languages/code-size/Yardanico/nimpylib?style=flat" style="max-width: 100%;" alt="" /><a href="https://github.com/Yardanico/nimpylib/issues">  <img src="https://img.shields.io/github/issues-raw/Yardanico/nimpylib?style=flat" style="max-width: 100%;" alt="Issues" /></a>
+<a href="https://github.com/Yardanico/nimpylib/pulls">  <img src="https://img.shields.io/github/issues-pr-raw/Yardanico/nimpylib?style=flat" style="max-width: 100%;" alt="PRs" /></a>
+<a href="https://github.com/Yardanico/nimpylib/commits/">  <img src="https://img.shields.io/github/last-commit/Yardanico/nimpylib?style=flat" style="max-width: 100%;" alt="Commits" /></a></p>
+<p>Nimpylib is a collection of Python-like operators and functions (syntax sugar).
+It can help you to translate your Python program to Nim.</p>
+<h1>Usage</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pylib</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="num">42</span>  <span class="com"># print can be used with and without parenthesis too, like Python2.</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span>( f"{9.0} Hello {42} World {1 + 2}" ) <span class="com"># Python-like string interpolation</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">python_like_range</span> <span class="op">=</span> <span class="ide">xrange</span>(<span class="num">0</span>, <span class="op">-</span><span class="num">10</span>, <span class="op">-</span><span class="num">2</span>) <span class="com"># range() is named xrange() like Python2</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">list</span>(<span class="ide">python_like_range</span>)) <span class="com"># @[0, -2, -4, -6, -8]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">xrange</span>(<span class="num">10</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># 0 1 2 3 4 5 6 7 8 9</span></div></div><div class="line"><div class="line-content">  <span class="ide">print</span>(<span class="ide">i</span>, <span class="ide">endl</span><span class="op">=</span><span class="str">&quot; &quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="str">&quot;done!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Python-like variable unpacking</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">data</span> <span class="op">=</span> <span class="ide">list</span>(<span class="ide">xrange</span>(<span class="num">3</span>, <span class="num">15</span>, <span class="num">2</span>))</div></div><div class="line"><div class="line-content"><span class="ide">data</span><span class="op">.</span><span class="ide">unpack</span>(<span class="ide">first</span>, <span class="ide">second</span>, <span class="op">*</span><span class="ide">rest</span>, <span class="ide">last</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">first</span> <span class="op">+</span> <span class="ide">second</span> <span class="op">+</span> <span class="ide">last</span>) <span class="op">==</span> (<span class="num">3</span> <span class="op">+</span> <span class="num">5</span> <span class="op">+</span> <span class="num">13</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">rest</span> <span class="op">==</span> <span class="op">@</span>[<span class="num">7</span>, <span class="num">9</span>, <span class="num">11</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> (<span class="ide">a</span> :<span class="op">=</span> <span class="num">6</span>) <span class="op">&gt;</span> <span class="num">5</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">a</span> <span class="op">==</span> <span class="num">6</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> (<span class="ide">b</span> :<span class="op">=</span> <span class="num">42.0</span>) <span class="op">&gt;</span> <span class="num">5.0</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">b</span> <span class="op">==</span> <span class="num">42.0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> (<span class="ide">c</span> :<span class="op">=</span> <span class="str">&quot;hello&quot;</span>) <span class="op">==</span> <span class="str">&quot;hello&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">c</span> <span class="op">==</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">capwords</span>(<span class="str">&quot;hello world capitalized&quot;</span>)) <span class="com"># &quot;Hello World Capitalized&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="str">&quot;a&quot;</span><span class="op">.</span><span class="ide">center</span>(<span class="num">9</span>)) <span class="com"># &quot;         a         &quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="str">&quot;&quot;</span> <span class="kwd">or</span> <span class="str">&quot;b&quot;</span>) <span class="com"># &quot;b&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="str">&quot;a&quot;</span> <span class="kwd">or</span> <span class="str">&quot;b&quot;</span>) <span class="com"># &quot;a&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="kwd">not</span> <span class="str">&quot;&quot;</span>) <span class="com"># true</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="str">&quot;Hello,&quot;</span>, <span class="ide">input</span>(<span class="str">&quot;What is your name? &quot;</span>), <span class="ide">endl</span><span class="op">=</span><span class="str">&quot;</span>\n<span class="str">~</span>\n<span class="str">&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">pass</span> <span class="com"># do nothing</span></div></div><div class="line"><div class="line-content"><span class="ide">pass</span> <span class="ide">str</span>(<span class="str">&quot;This is a string.&quot;</span>) <span class="com"># discard the string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">integer_bytes</span> <span class="op">=</span> <span class="num">2_313_354_324</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">bite</span>, <span class="ide">kilo</span>, <span class="ide">mega</span>, <span class="ide">giga</span>, <span class="ide">tera</span>, <span class="ide">peta</span>, <span class="ide">exa</span>, <span class="ide">zetta</span>, <span class="ide">yotta</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">(<span class="ide">kilo</span>, <span class="ide">bite</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">integer_bytes</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">mega</span>, <span class="ide">kilo</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">kilo</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">giga</span>, <span class="ide">mega</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">mega</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">tera</span>, <span class="ide">giga</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">giga</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">peta</span>, <span class="ide">tera</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">tera</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">exa</span>, <span class="ide">peta</span>)  <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">peta</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">zetta</span>, <span class="ide">exa</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">exa</span>,  <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">yotta</span>, <span class="ide">zetta</span>) <span class="op">=</span> <span class="ide">divmod</span>(<span class="ide">zetta</span>, <span class="num">1_024</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">arg</span> <span class="op">=</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">anon</span> <span class="op">=</span> <span class="ide">lambda</span>: <span class="ide">arg</span> <span class="op">+</span> <span class="str">&quot; world&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">anon</span>() <span class="op">==</span> <span class="str">&quot;hello world&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">json_loads</span>("""{"key": "value"}""")) <span class="com"># {&quot;key&quot;:&quot;value&quot;}</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">sys</span><span class="op">.</span><span class="ide">platform</span>) <span class="com"># &quot;linux&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">platform</span><span class="op">.</span><span class="ide">processor</span>) <span class="com"># &quot;amd64&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">truty</span>: <span class="ide">bool</span></div></div><div class="line"><div class="line-content"><span class="ide">truty</span> <span class="op">=</span> <span class="ide">all</span>([<span class="ide">True</span>, <span class="ide">True</span>, <span class="ide">False</span>])</div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">truty</span>) <span class="com"># false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">truty</span> <span class="op">=</span> <span class="ide">any</span>([<span class="ide">True</span>, <span class="ide">True</span>, <span class="ide">False</span>])</div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">truty</span>) <span class="com"># true</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">std</span><span class="op">/</span><span class="ide">os</span> <span class="kwd">import</span> <span class="ide">sleep</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">timeit</span>(<span class="num">100</span>):  <span class="com"># Python-like timeit.timeit(&quot;code_to_benchmark&quot;, number=int)</span></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">9</span>)    <span class="com"># Repeats this code 100 times. Output is very informative.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># 2020-06-17T21:59:09+03:00 TimeIt: 100 Repetitions on 927 milliseconds, 704 microseconds, and 816 nanoseconds, CPU Time 0.0007382400000000003.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Support for Python-like with statements</span></div></div><div class="line"><div class="line-content"><span class="com"># All objects are closed at the end of the with statement</span></div></div><div class="line"><div class="line-content"><span class="ide">with</span> <span class="ide">open</span>(<span class="str">&quot;some_file.txt&quot;</span>, 'w') <span class="kwd">as</span> <span class="ide">file</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">file</span><span class="op">.</span><span class="ide">write_line</span>(<span class="str">&quot;hello world!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">with</span> <span class="ide">open</span>(<span class="str">&quot;some_file.txt&quot;</span>, 'r') <span class="kwd">as</span> <span class="ide">file</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="kwd">not</span> <span class="ide">end_of_file</span>(<span class="ide">file</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">print</span>(<span class="ide">file</span><span class="op">.</span><span class="ide">read_line</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">with</span> <span class="ide">NamedTemporaryFile</span>() <span class="kwd">as</span> <span class="ide">file</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">file</span><span class="op">.</span><span class="ide">write_line</span>(<span class="str">&quot;test!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">with</span> <span class="ide">TemporaryDirectory</span>() <span class="kwd">as</span> <span class="ide">name</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">print</span>(<span class="ide">name</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">start</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">stop</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">step</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">class</span> <span class="ide">Example</span>(<span class="kwd">object</span>):  <span class="com"># Mimic simple Python &quot;classes&quot;.</span></div></div><div class="line"><div class="line-content">  """Example class with Python-ish Nim syntax!."""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">def</span> <span class="ide">init</span>(<span class="ide">self</span>, <span class="ide">start</span>, <span class="ide">stop</span>, <span class="ide">step</span><span class="op">=</span><span class="num">1</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">self</span><span class="op">.</span><span class="ide">start</span> <span class="op">=</span> <span class="ide">start</span></div></div><div class="line"><div class="line-content">    <span class="ide">self</span><span class="op">.</span><span class="ide">stop</span> <span class="op">=</span> <span class="ide">stop</span></div></div><div class="line"><div class="line-content">    <span class="ide">self</span><span class="op">.</span><span class="ide">step</span> <span class="op">=</span> <span class="ide">step</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">def</span> <span class="ide">stopit</span>(<span class="ide">self</span>, <span class="ide">argument</span>):</div></div><div class="line"><div class="line-content">    """Example function with Python-ish Nim syntax."""</div></div><div class="line"><div class="line-content">    <span class="ide">self</span><span class="op">.</span><span class="ide">stop</span> <span class="op">=</span> <span class="ide">argument</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">self</span><span class="op">.</span><span class="ide">stop</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">e</span> <span class="op">=</span> <span class="ide">newExample</span>(<span class="num">5</span>, <span class="num">3</span>)</div></div><div class="line"><div class="line-content"><span class="ide">print</span>(<span class="ide">e</span><span class="op">.</span><span class="ide">stopit</span>(<span class="num">5</span>))</div></div>  </code></pre>
+<p>Nimpylib heavily relies on Nim generics, converters, operator overloading, and even on concepts.</p>
+<ul>
+<li><a href="https://github.com/Yardanico/nimpylib/tree/master/examples">Check the Examples folder for more examples.</a>
+<a href="https://github.com/Yardanico/nimpylib/pulls">Have more Macros or Templates for Python-like syntax, send Pull Request.</a></li>
+</ul>
+<h1>Installation</h1>
+<p>To install nimpylib, you can simply run</p>
+<pre>  <code>nimble install pylib
+</code></pre>
+<ul>
+<li>Uninstall with <code>nimble uninstall pylib</code>. https://nimble.directory/pkg/pylib</li>
+</ul>
+<h1>Requisites</h1>
+<ul>
+<li>  <a href="https://nim-lang.org">Nim</a></li>
+</ul>
+<h1>Supported features</h1>
+<ul>
+<li>[x] F-Strings <code>f&quot;foo {variable} bar {1 + 2} baz&quot;</code> and string functions</li>
+<li>[x] Python-like variable unpacking</li>
+<li>[x] Math with Float and Int mixed like Python.</li>
+<li>[x] <code>import antigravity</code></li>
+<li>[x] <code>from __future__ import braces</code></li>
+<li>[x] <code>lambda:</code></li>
+<li>[x] <code>with open(&quot;file.ext&quot;, &apos;w&apos;):</code> Read, write, append, and <code>file.read()</code>.</li>
+<li>[x] <code>with tempfile.TemporaryDirectory():</code> Read, write, append, and <code>file.read()</code>.</li>
+<li>[x] <code>with tempfile.NamedTemporaryFile() as file:</code> Read, write, append, and <code>file.read()</code>.</li>
+<li>[x] <code>timeit()</code> with Nanoseconds precision</li>
+<li>[x] <code>json.loads()</code> also can Pretty-Print</li>
+<li>[x] <code>True</code> / <code>False</code></li>
+<li>[x] <code>pass</code> also can take and discard any arguments</li>
+<li>[x] <code>:=</code> Walrus Operator</li>
+<li>[x] <code>{&quot;a&quot;: 1} | {&quot;b&quot;: 2}</code> Dict merge operator</li>
+<li>[x] <code>|=</code> Dict merge operator</li>
+<li>[x] Python-like OOP class with methods and DocStrings (without inheritance)</li>
+<li>[x] <code>abs()</code></li>
+<li>[x] <code>all()</code></li>
+<li>[x] <code>any()</code></li>
+<li>[x] <code>bin()</code></li>
+<li>[x] <code>chr()</code></li>
+<li>[x] <code>divmod()</code></li>
+<li>[x] <code>enumerate()</code></li>
+<li>[x] <code>filter()</code></li>
+<li>[x] <code>float()</code></li>
+<li>[x] <code>hex()</code></li>
+<li>[x] <code>input()</code></li>
+<li>[x] <code>int()</code></li>
+<li>[x] <code>iter()</code></li>
+<li>[x] <code>list()</code></li>
+<li>[x] <code>map()</code></li>
+<li>[x] <code>max()</code></li>
+<li>[x] <code>min()</code></li>
+<li>[x] <code>oct()</code></li>
+<li>[x] <code>ord()</code></li>
+<li>[x] <code>print(&quot;foo&quot;)</code> / <code>print &quot;foo&quot;</code> Python2 like</li>
+<li>[x] <code>range()</code> but named <code>xrange()</code> like in Python 2</li>
+<li>[x] <code>str()</code></li>
+<li>[x] <code>sum()</code></li>
+<li>[x] <code>&lt;&gt;</code> Python1 and Python2 <code>!=</code></li>
+<li>[x] <code>long()</code> Python2 like</li>
+<li>[x] <code>unicode()</code> Python2 like</li>
+<li>[x] <code>ascii()</code> Python2 like</li>
+<li>[x] <code>u&quot;string here&quot;</code> / <code>u&apos;a&apos;</code> Python2 like</li>
+<li>[x] <code>b&quot;string here&quot;</code> / <code>b&apos;a&apos;</code> Python2 like</li>
+<li>[ ] <code>isinstance()</code></li>
+<li>[ ] <code>issubclass()</code></li>
+<li>[ ] <code>id()</code></li>
+<li>More...</li>
+</ul>
+<h3>Other Python-like modules</h3>
+<ul>
+<li>https://nimble.directory/search?query=python</li>
+<li>  <a href="https://github.com/metacraft-labs/py2nim">Full py2nim transpiler</a></li>
+</ul>
+<h3>Tests</h3>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">nimble</span> test</div></div><div class="line"><div class="line-content"><span class="out">[OK] Range-like Nim procedure</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] Floor division</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] Class macro</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] tonim macro</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] String operations</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] Modulo operations</span></div></div><div class="line"><div class="line-content"><span class="out">2020-06-17T22:07:28+03:00 TimeIt: 9 Repetitions on 118 microseconds and 711 nanoseconds, CPU Time 5.740999999999993e-05.</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] Miscelaneous</span></div></div><div class="line"><div class="line-content"><span class="out">[OK] unpack macro</span></div></div>  </code></pre>
+<h4>Stats</h4>
+<p>  <img src="https://starchart.cc/Yardanico/nimpylib.svg" style="max-width: 100%;" alt="Star nimpylib on GitHub" title="Star NimPylib on GitHub!" /></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/Yardanico/nimpylib">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

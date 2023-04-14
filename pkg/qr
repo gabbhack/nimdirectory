@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">qr</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">qr</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">qrcode</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">svg</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Create SVG-files with QR-codes from strings.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install qr" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim QR</h1>
+<p>QR-code package for Nim. Create SVG and Raster Image files with QR-codes from strings.</p>
+<p>The code is based on <a href="https://github.com/bunkford/qrcodegen">bunkford&apos;s qrcodegen package</a>, which is a wrapper for <a href="https://github.com/nayuki/QR-Code-generator">nayuki&apos;s QR-code</a>.</p>
+<h1>Install</h1>
+<h2>Nimble</h2>
+<pre>  <code>nimble install qr
+# and then just `import qr`
+</code></pre>
+<h2>Manually</h2>
+<pre>  <code>git clone https://github.com/ThomasTJdev/nim_qr.git
+cd qr
+nimble install
+# and then just `import qr`
+</code></pre>
+<h1>Examples</h1>
+<p>Generate a SVG file:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">qr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">qrSvgFile</span>(<span class="str">&quot;https://forum.nim-lang.org&quot;</span>, <span class="str">&quot;test.svg&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Data:        https://forum.nim-lang.org</span></div></div><div class="line"><div class="line-content"><span class="com"># Output file: test.svg</span></div></div><div class="line"><div class="line-content"><span class="com"># This uses the standard configuration, e.g. optimal size, mask pattern.</span></div></div>  </code></pre>
+<p>  <img src="test.svg" style="max-width: 100%;" alt="alt text" title="Tot" /></p>
+<p>Generate a Raster Image file:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">qr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">qrPbmFile</span>(<span class="str">&quot;https://forum.nim-lang.org&quot;</span>, <span class="str">&quot;test.pbm&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Data:        https://forum.nim-lang.org</span></div></div><div class="line"><div class="line-content"><span class="com"># Output file: test.pbm</span></div></div><div class="line"><div class="line-content"><span class="com"># This uses the standard configuration, e.g. optimal size, mask pattern.</span></div></div>  </code></pre>
+<p>Tiny program that generates SVG QR Codes from the terminal first argument:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span>, <span class="ide">qr</span></div></div><div class="line"><div class="line-content"><span class="ide">qrSvgFile</span> <span class="ide">paramStr</span>(<span class="num">1</span>), <span class="str">&quot;output.svg&quot;</span></div></div>  </code></pre>
+<p>Tiny program that generates Image QR Codes from the terminal first argument:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span>, <span class="ide">qr</span></div></div><div class="line"><div class="line-content"><span class="ide">qrPbmFile</span> <span class="ide">paramStr</span>(<span class="num">1</span>), <span class="str">&quot;output.pbm&quot;</span></div></div>  </code></pre>
+<h1>Nim QR package procs</h1>
+<h2>qrBinary*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">qrBinary</span><span class="op">*</span>(<span class="ide">data</span>: <span class="ide">string</span>, <span class="ide">eccLevel</span> <span class="op">=</span> <span class="ide">Ecc_Medium</span>, <span class="ide">verMin</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MIN</span>, <span class="ide">verMax</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MAX</span>, <span class="ide">mask</span> <span class="op">=</span> <span class="ide">Mask_AUTO</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<p>This returns 1 (black) and 0&apos;s (whites) representing the QR code. Each row is separated by a newline <code>\n</code>.</p>
+<p>  <strong>Example</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">qr</span> <span class="op">=</span> <span class="ide">qrBinary</span>(<span class="str">&quot;Hello world&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># qr = 1100111101\n101001010\n010101011\n101......</span></div></div>  </code></pre>
+<hr />
+<h2>qrRow*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">qrRow</span><span class="op">*</span>(<span class="ide">data</span>: <span class="ide">string</span>, <span class="ide">eccLevel</span> <span class="op">=</span> <span class="ide">Ecc_Medium</span>, <span class="ide">verMin</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MIN</span>, <span class="ide">verMax</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MAX</span>, <span class="ide">mask</span> <span class="op">=</span> <span class="ide">Mask_AUTO</span>): <span class="ide">seq</span>[<span class="ide">seq</span>[<span class="ide">int</span>]] <span class="op">=</span></div></div>  </code></pre>
+<p>Return a seq[seq[int]] containing the QR-code. 1&apos;s is a black field, and 0&apos;s is blank field.</p>
+<p>  <strong>Example</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">qr</span> <span class="op">=</span> <span class="ide">qrRow</span>(<span class="str">&quot;Hello world&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># qr = @[@[0,1,1,0,1....],@[0,0,1,1,1...],@[0,1,1,1,0...</span></div></div>  </code></pre>
+<hr />
+<h2>qrSvgFile*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">qrSvgFile</span><span class="op">*</span>(<span class="ide">data</span>, <span class="ide">filename</span>: <span class="ide">string</span>, <span class="ide">size</span>: <span class="ide">int32</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">border</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">eccLevel</span> <span class="op">=</span> <span class="ide">Ecc_Medium</span>, <span class="ide">verMin</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MIN</span>, <span class="ide">verMax</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MAX</span>, <span class="ide">mask</span> <span class="op">=</span> <span class="ide">Mask_AUTO</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Creates a SVG file for the QR and saves it.</p>
+<p>The <code>size</code> should be in pixels. If set to 0, the optimal size will be used based on the density.</p>
+<p>You can set the minimum and maximum size params, <code>verMin</code> and <code>verMax</code>. You can use values from 1-40.</p>
+<p>You only need to define the <code>data</code> and a <code>filename</code>. Please note there&apos;s no error checking when creating the file, you have to that yourself.</p>
+<p>  <strong>Example</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">qrSvgFile</span>(<span class="str">&quot;Hello world&quot;</span>, <span class="str">&quot;test.svg&quot;</span>)</div></div>  </code></pre>
+<hr />
+<h2>qrSvg*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">qrSvg</span><span class="op">*</span>(<span class="ide">data</span>: <span class="ide">string</span>, <span class="ide">size</span>: <span class="ide">int32</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">border</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">eccLevel</span> <span class="op">=</span> <span class="ide">Ecc_Medium</span>, <span class="ide">verMin</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MIN</span>, <span class="ide">verMax</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MAX</span>, <span class="ide">mask</span> <span class="op">=</span> <span class="ide">Mask_AUTO</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Returns the SVG data</p>
+<p>The <code>size</code> should be in pixels. If set to 0, the optimal size will be used based on the density.</p>
+<p>You can set the minimum and maximum size params, <code>verMin</code> and <code>verMax</code>. You can use values from 1-40.</p>
+<p>You only need to define the <code>data</code>.</p>
+<p>  <strong>Example</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">htmlReadySvg</span> <span class="op">=</span> <span class="ide">qrSvg</span>(<span class="str">&quot;Hello world&quot;</span>)</div></div>  </code></pre>
+<hr />
+<h2>qrPrint*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">qrPrint</span><span class="op">*</span>(<span class="ide">data</span>: <span class="ide">string</span>, <span class="ide">border</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">eccLevel</span> <span class="op">=</span> <span class="ide">Ecc_Medium</span>, <span class="ide">verMin</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MIN</span>, <span class="ide">verMax</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MAX</span>, <span class="ide">mask</span> <span class="op">=</span> <span class="ide">Mask_AUTO</span>, <span class="ide">fgColor</span> <span class="op">=</span> <span class="str">&quot;##&quot;</span>, <span class="ide">bgColor</span> <span class="op">=</span> <span class="str">&quot;  &quot;</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Prints the QR-code to the console with <code>&quot;#&quot;</code>&apos;s.</p>
+<p>You can customize the character representing the Black &amp; White colors,</p>
+<p><code>fgColor</code> is for Foreground Color, <code>bgColor</code> is for Background Color.</p>
+<p>  <strong>Example</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">qrPrint</span>(<span class="str">&quot;Hello world&quot;</span>, <span class="ide">fgColor</span> <span class="op">=</span> <span class="str">&quot;⬛&quot;</span>, <span class="ide">bgColor</span> <span class="op">=</span> <span class="str">&quot;..&quot;</span>)</div></div>  </code></pre>
+<hr />
+<h2>qrPbmFile*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">qrPbmFile</span><span class="op">*</span>(<span class="ide">data</span>, <span class="ide">filename</span>: <span class="ide">string</span>, <span class="ide">eccLevel</span> <span class="op">=</span> <span class="ide">Ecc_Medium</span>, <span class="ide">verMin</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MIN</span>, <span class="ide">verMax</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">VERSION_MAX</span>, <span class="ide">mask</span> <span class="op">=</span> <span class="ide">Mask_AUTO</span>, <span class="ide">comment</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Creates a PBM file for the QR and saves it. Format is Monochrome (Black &amp; White), but is really lighweight too.</p>
+<p><code>comment</code> is metadata string comment, optional.</p>
+<p>The <code>size</code> should be in pixels. If set to 0, the optimal size will be used based on the density.</p>
+<p>You can set the minimum and maximum size params, <code>verMin</code> and <code>verMax</code>. You can use values from 1-40.</p>
+<p>You only need to define the <code>data</code> and a <code>filename</code>. Please note there&apos;s no error checking when creating the file, you have to that yourself.</p>
+<p>  <strong>Example</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">qrPbmFile</span>(<span class="str">&quot;Hello world&quot;</span>, <span class="str">&quot;test.pbm&quot;</span>)</div></div>  </code></pre>
+<hr />
+<h1>Const</h1>
+<p>Version:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">VERSION_MIN</span><span class="op">*</span> <span class="op">=</span> <span class="num">1</span>  <span class="com">## QR Code Minimum Version</span></div></div><div class="line"><div class="line-content">  <span class="ide">VERSION_MAX</span><span class="op">*</span> <span class="op">=</span> <span class="num">40</span> <span class="com">## QR Code Maximum Version</span></div></div>  </code></pre>
+<hr />
+<h1>Types</h1>
+<h2>Ecc* = enum</h2>
+<p>The error correction level in a QR Code symbol. <code>Ecc_MEDIUM</code> is used as standard.</p>
+<ul>
+<li>
+<p><strong>Ecc_LOW</strong>: The QR Code can tolerate about  7% erroneous codewords</p>
+</li>
+<li>
+<p><strong>Ecc_MEDIUM</strong>: The QR Code can tolerate about 15% erroneous codewords</p>
+</li>
+<li>
+<p><strong>Ecc_QUARTILE</strong>: The QR Code can tolerate about 25% erroneous codewords</p>
+</li>
+<li>
+<p><strong>Ecc_HIGH</strong>: The QR Code can tolerate about 30% erroneous codewords</p>
+</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Ecc</span><span class="op">*</span> {<span class="op">.</span><span class="ide">size</span>: <span class="ide">sizeof</span>(<span class="ide">cint</span>)<span class="op">.</span>} <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Ecc_LOW</span> <span class="op">=</span> <span class="num">0</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">Ecc_MEDIUM</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">Ecc_QUARTILE</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">Ecc_HIGH</span></div></div>  </code></pre>
+<hr />
+<h2>Mask* = enum</h2>
+<p>The mask pattern used in a QR Code symbol. Mask_AUTO is used as standard.</p>
+<ul>
+<li>
+<p><strong>Mask_AUTO</strong>: A special value to tell the QR Code encoder to automatically select an appropriate mask pattern</p>
+</li>
+<li>
+<p><strong>Mask_0 = 0, Mask_1, Mask_2, Mask_3, Mask_4, Mask_5, Mask_6, Mask_7</strong>: The eight actual mask patterns</p>
+</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Mask</span><span class="op">*</span> {<span class="op">.</span><span class="ide">size</span>: <span class="ide">sizeof</span>(<span class="ide">cint</span>)<span class="op">.</span>} <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Mask_AUTO</span> <span class="op">=</span> <span class="op">-</span><span class="num">1</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">Mask_0</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">Mask_1</span>, <span class="ide">Mask_2</span>, <span class="ide">Mask_3</span>, <span class="ide">Mask_4</span>, <span class="ide">Mask_5</span>, <span class="ide">Mask_6</span>, <span class="ide">Mask_7</span></div></div>  </code></pre>
+<hr />
+<h1>Wrapped from C</h1>
+<p>The text below is a direct copy&apos;n&apos;paste from <a href="https://github.com/bunkford/qrcodegen">bunkford&apos;s qrcodegen package</a>, which is a wrapper for <a href="https://github.com/nayuki/QR-Code-generator">nayuki&apos;s QR-code</a>. Therefore, thanks to nayuki for the detailed description.</p>
+<p>All the <em>items</em> are available, but please keep in mind, that they use <code>ptr uint8</code>, <code>cint</code>, <code>cstring</code>, etc.</p>
+<h1>Object</h1>
+<h2>Segment* {.bycopy.} = object</h2>
+<p>A segment of character/binary/control data in a QR Code symbol. The mid-level way to create a segment is to take the payload data and call a factory function such as makeNumeric().</p>
+<p>The low-level way to create a segment is to custom-make the bit buffer and initialize a Segment struct with appropriate values. Even in the most favorable conditions, a QR Code can only hold 7089 characters of data. Any segment longer than this is meaningless for the purpose of generating QR Codes.</p>
+<p>Moreover, the maximum allowed bit length is 32767 because the largest QR Code (version 40) has 31329 modules.</p>
+<ul>
+<li>
+<p><strong>mode*: Mode</strong>: The mode indicator of this segment. The length of this segment&apos;s unencoded data. Measured in characters for numeric/alphanumeric/kanji mode, bytes for byte mode, and 0 for ECI mode. Always zero or positive. Not the same as the data&apos;s bit length.</p>
+</li>
+<li>
+<p><strong>numChars*: cint</strong>: The data bits of this segment, packed in bitwise big endian. Can be null if the bit length is zero.</p>
+</li>
+<li>
+<p><strong>data*: ptr uint8</strong>: The number of valid data bits used in the buffer. Requires 0 &lt;= bitLength &lt;= 32767, and bitLength &lt;= (capacity of data array) * 8. The character count (numChars) must agree with the mode and the bit buffer length.</p>
+</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Segment</span><span class="op">*</span> {<span class="op">.</span><span class="ide">bycopy</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">mode</span><span class="op">*:</span> <span class="ide">Mode</span></div></div><div class="line"><div class="line-content">    <span class="ide">numChars</span><span class="op">*:</span> <span class="ide">cint</span></div></div><div class="line"><div class="line-content">    <span class="ide">data</span><span class="op">*:</span> <span class="kwd">ptr</span> <span class="ide">uint8</span></div></div><div class="line"><div class="line-content">    <span class="ide">bitLength</span><span class="op">*:</span> <span class="ide">cint</span></div></div>  </code></pre>
+<hr />
+<h1>Procs</h1>
+<h2>encodeText*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">encodeText</span><span class="op">*</span>(<span class="ide">text</span>: <span class="ide">cstring</span>; <span class="ide">tempBuffer</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">qrcode</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">ecl</span>: <span class="ide">Ecc</span>; <span class="ide">minVersion</span>: <span class="ide">cint</span>; <span class="ide">maxVersion</span>: <span class="ide">cint</span>; <span class="ide">mask</span>: <span class="ide">Mask</span>; <span class="ide">boostEcl</span>: <span class="ide">bool</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_encodeText&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Encodes the given text string to a QR Code, returning true if encoding succeeded. If the data is too long to fit in any version in the given range at the given ECC level, then false is returned.</p>
+<ul>
+<li>The input text must be encoded in UTF-8 and contain no NULs.</li>
+<li>The variables ecl and mask must correspond to enum constant values.</li>
+<li>Requires 1 &lt;= minVersion &lt;= maxVersion &lt;= 40.</li>
+<li>The arrays tempBuffer and qrcode must each have a length of at least BUFFER_LEN_FOR_VERSION(maxVersion). - After the function returns, tempBuffer contains no useful data.</li>
+<li>If successful, the resulting QR Code may use numeric, alphanumeric, or byte mode to encode the text.</li>
+<li>In the most optimistic case, a QR Code at version 40 with low ECC can hold any UTF-8 string up to 2953 bytes, or any alphanumeric string up to 4296 characters, or any digit string up to 7089 characters. These numbers represent the hard upper limit of the QR Code standard.</li>
+<li>Please consult the QR Code specification for information on data capacities per version, ECC level, and text encoding mode.</li>
+</ul>
+<hr />
+<h2>encodeBinary*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">encodeBinary</span><span class="op">*</span>(<span class="ide">dataAndTemp</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">dataLen</span>: <span class="ide">csize</span>; <span class="ide">qrcode</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">ecl</span>: <span class="ide">Ecc</span>; <span class="ide">minVersion</span>: <span class="ide">cint</span>; <span class="ide">maxVersion</span>: <span class="ide">cint</span>; <span class="ide">mask</span>: <span class="ide">Mask</span>; <span class="ide">boostEcl</span>: <span class="ide">bool</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_encodeBinary&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Encodes the given binary data to a QR Code, returning true if encoding succeeded. If the data is too long to fit in any version in the given range at the given ECC level, then false is returned.</p>
+<ul>
+<li>The input array range dataAndTemp[0 : dataLen] should normally be valid UTF-8 text, but is not required by the QR Code standard.</li>
+<li>The variables ecl and mask must correspond to enum constant values.</li>
+<li>Requires 1 &lt;= minVersion &lt;= maxVersion &lt;= 40.</li>
+<li>The arrays dataAndTemp and qrcode must each have a length of at least BUFFER_LEN_FOR_VERSION(maxVersion).</li>
+<li>After the function returns, the contents of dataAndTemp may have changed, and does not represent useful data anymore.</li>
+<li>If successful, the resulting QR Code will use byte mode to encode the data.</li>
+<li>In the most optimistic case, a QR Code at version 40 with low ECC can hold any byte sequence up to length 2953. This is the hard upper limit of the QR Code standard.</li>
+<li>Please consult the QR Code specification for information on data capacities per version, ECC level, and text encoding mode.</li>
+</ul>
+<hr />
+<h2>encodeSegments*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">encodeSegments</span><span class="op">*</span>(<span class="ide">segs</span>: <span class="kwd">ptr</span> <span class="ide">Segment</span>; <span class="ide">len</span>: <span class="ide">csize</span>; <span class="ide">ecl</span>: <span class="ide">Ecc</span>; <span class="ide">tempBuffer</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">qrcode</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_encodeSegments&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Renders a QR Code representing the given segments at the given error correction level.</p>
+<p>The smallest possible QR Code version is automatically chosen for the output. Returns true if QR Code creation succeeded, or false if the data is too long to fit in any version.
+The ECC level of the result may be higher than the ecl argument if it can be done without increasing the version.</p>
+<p>This function allows the user to create a custom sequence of segments that switches between modes (such as alphanumeric and byte) to encode text in less space.</p>
+<p>This is a low-level API; the high-level API is encodeText() and encodeBinary().</p>
+<p>To save memory, the segments&apos; data buffers can alias/overlap tempBuffer, and will result in them being clobbered, but the QR Code output will still be correct. But the qrcode array must not overlap tempBuffer or any segment&apos;s data buffer.</p>
+<hr />
+<h2>encodeSegmentsAdvanced*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">encodeSegmentsAdvanced</span><span class="op">*</span>(<span class="ide">segs</span>: <span class="kwd">ptr</span> <span class="ide">Segment</span>; <span class="ide">len</span>: <span class="ide">csize</span>; <span class="ide">ecl</span>: <span class="ide">Ecc</span>; <span class="ide">minVersion</span>: <span class="ide">cint</span>; <span class="ide">maxVersion</span>: <span class="ide">cint</span>; <span class="ide">mask</span>: <span class="ide">Mask</span>; <span class="ide">boostEcl</span>: <span class="ide">bool</span>; <span class="ide">tempBuffer</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">qrcode</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">bool</span> {<span class="op">.</span> <span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_encodeSegmentsAdvanced&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Renders a QR Code representing the given segments with the given encoding parameters.</p>
+<p>Returns true if QR Code creation succeeded, or false if the data is too long to fit in the range of versions.</p>
+<p>The smallest possible QR Code version within the given range is automatically chosen for the output. Iff boostEcl is true, then the ECC level of the result may be higher than the ecl argument if it can be done without increasing the version. The mask is either between Mask_0 to 7 to force that mask, or Mask_AUTO to automatically choose an appropriate mask (which may be slow).</p>
+<p>This function allows the user to create a custom sequence of segments that switches between modes (such as alphanumeric and byte) to encode text in less space.</p>
+<p>This is a low-level API; the high-level API is encodeText() and encodeBinary(). To save memory, the segments&apos; data buffers can alias/overlap tempBuffer, and will result in them being clobbered, but the QR Code output will still be correct. But the qrcode array must not overlap tempBuffer or any segment&apos;s data buffer.</p>
+<hr />
+<h2>isAlphanumeric*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">isAlphanumeric</span><span class="op">*</span>(<span class="ide">text</span>: <span class="ide">cstring</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_isAlphanumeric&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Tests whether the given string can be encoded as a segment in alphanumeric mode. A string is encodable iff each character is in the following set: 0 to 9, A to Z (uppercase only), space, dollar, percent, asterisk, plus, hyphen, period, slash, colon.</p>
+<hr />
+<h2>isNumeric*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">isNumeric</span><span class="op">*</span>(<span class="ide">text</span>: <span class="ide">cstring</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_isNumeric&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Tests whether the given string can be encoded as a segment in numeric mode. A string is encodable iff each character is in the range 0 to 9.</p>
+<hr />
+<h2>calcSegmentBufferSize*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">calcSegmentBufferSize</span><span class="op">*</span>(<span class="ide">mode</span>: <span class="ide">Mode</span>; <span class="ide">numChars</span>: <span class="ide">csize</span>): <span class="ide">csize</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_calcSegmentBufferSize&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns the number of bytes (uint8) needed for the data buffer of a segment containing the given number of characters using the given mode. Notes:</p>
+<ul>
+<li>Returns SIZE_MAX on failure, i.e. numChars &gt; INT16_MAX or the number of needed bits exceeds INT16_MAX (i.e. 32767).</li>
+<li>Otherwise, all valid results are in the range [0, ceil(INT16_MAX / 8)], i.e. at most 4096. - It is okay for the user to allocate more bytes for the buffer than needed.</li>
+<li>For byte mode, numChars measures the number of bytes, not Unicode code points.</li>
+<li>For ECI mode, numChars must be 0, and the worst-case number of bytes is returned. An actual ECI segment can have shorter data. For non-ECI modes, the result is exact.</li>
+</ul>
+<hr />
+<h2>makeBytes*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">makeBytes</span><span class="op">*</span>(<span class="ide">data</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">len</span>: <span class="ide">csize</span>; <span class="ide">buf</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">Segment</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_makeBytes&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns a segment representing the given binary data encoded in byte mode. All input byte arrays are acceptable. Any text string can be converted to UTF-8 bytes and encoded as a byte mode segment.</p>
+<hr />
+<h2>makeNumeric*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">makeNumeric</span><span class="op">*</span>(<span class="ide">digits</span>: <span class="ide">cstring</span>; <span class="ide">buf</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">Segment</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_makeNumeric&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns a segment representing the given string of decimal digits encoded in numeric mode.</p>
+<hr />
+<h2>makeAlphanumeric*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">makeAlphanumeric</span><span class="op">*</span>(<span class="ide">text</span>: <span class="ide">cstring</span>; <span class="ide">buf</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">Segment</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_makeAlphanumeric&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns a segment representing the given text string encoded in alphanumeric mode. The characters allowed are: 0 to 9, A to Z (uppercase only), space, dollar, percent, asterisk, plus, hyphen, period, slash, colon.</p>
+<hr />
+<h2>makeEci*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">makeEci</span><span class="op">*</span>(<span class="ide">assignVal</span>: <span class="ide">clong</span>; <span class="ide">buf</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">Segment</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_makeEci&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns a segment representing an Extended Channel Interpretation (ECI) designator with the given assignment value.</p>
+<hr />
+<h2>getSize*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getSize</span><span class="op">*</span>(<span class="ide">qrcode</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>): <span class="ide">cint</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_getSize&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns the side length of the given QR Code, assuming that encoding succeeded. The result is in the range [21, 177]. Note that the length of the array buffer is related to the side length - every &apos;uint8 qrcode[]&apos; must have length at least BUFFER_LEN_FOR_VERSION(version), which equals ceil(size^2 / 8 + 1).</p>
+<hr />
+<h2>getModule*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getModule</span><span class="op">*</span>(<span class="ide">qrcode</span>: <span class="kwd">ptr</span> <span class="ide">uint8</span>; <span class="ide">x</span>: <span class="ide">cint</span>; <span class="ide">y</span>: <span class="ide">cint</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span>: <span class="str">&quot;qrcodegen_getModule&quot;</span>, <span class="ide">dynlib</span>: <span class="ide">libname</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Returns the color of the module (pixel) at the given coordinates, which is false for white or true for black. The top left corner has the coordinates (x=0, y=0). If the given coordinates are out of bounds, then false (white) is returned.</p>
+<hr />
+<p>Readme generated with <a href="https://github.com/ThomasTJdev/nimtomd">NimToMd</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/ThomasTJdev/nim_qr">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

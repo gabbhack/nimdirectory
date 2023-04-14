@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">imghdr</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">image</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">formats</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">files</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Library for detecting the format of an image")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install imghdr" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>About</h1>
+<p>nim-imghdr is a Nim module for determining the type of an image from a given file, filename, or sequence of bytes.
+It can detect many common image formats. nim-imghdr is a port of Python&apos;s imghdr module.</p>
+<p>Usage:</p>
+<pre>  <code>testImage(file : File)
+testImage(filename : string)
+testImage(data : seq[int8])
+</code></pre>
+<p>nim-imghdr can also be used as a command line program:</p>
+<pre>  <code>imghdr [filename1] [filename2] ...
+</code></pre>
+<p>List of detected formats:</p>
+<ul>
+<li>PNG (Portable Network Graphics) format - <code>ImageType.PNG</code></li>
+<li>JPEG (Joint Photographic Experts Group) format (either JFIF or Exif) - <code>ImageType.JPEG</code></li>
+<li>GIF (Graphics Interchange Format) format - <code>ImageType.GIF</code></li>
+<li>TIFF (Tagged Image File Format) format - <code>ImageType.TIFF</code></li>
+<li>SVG (Scalable Vector Graphics) format - <code>ImageType.SVG</code></li>
+<li>SGI (Silicon Graphics workstation) format - <code>ImageType.RGB</code></li>
+<li>PBM (portable bitmap) format - <code>ImageType.PBM</code></li>
+<li>PGM (portable graymap) format - <code>ImageType.PGM</code></li>
+<li>PPM (portable pixmap) format - <code>ImageType.PPM</code></li>
+<li>PAM format - <code>ImageType.PAM</code></li>
+<li>BMP (bitmap) format - <code>ImageType.BMP</code></li>
+<li>XMB (X10 or X11 bitmap) format - <code>ImageType.XMB</code></li>
+<li>Rast (Sun raster) format - <code>ImageType.Rast</code></li>
+<li>CRW (Canon camera RAW) format - <code>ImageType.CRW</code></li>
+<li>CR2 (Canon camera RAW 2) format - <code>ImageType.CR2</code></li>
+<li>MRW (Minolta camera RAW) format - <code>ImageType.MRW</code></li>
+<li>X3F (Sigma camera RAW) format - <code>ImageType.X3F</code></li>
+<li>WEBP format - <code>ImageType.WEBP</code></li>
+<li>XCF (GIMP native) format - <code>ImageType.XCF</code></li>
+<li>GKSM (Graphics Kernel System) format - <code>ImageType.GKSM</code></li>
+<li>PM (XV image) format - <code>ImageType.PM</code></li>
+<li>FITS (Flexible Image Transport System) format - <code>ImageType.FITS</code></li>
+<li>XPM (X PixMap 1 and 3) format - <code>ImageType.XPM</code></li>
+<li>XPM2 (X PixMap 2) format - <code>ImageType.XPM2</code></li>
+<li>PS (PostScript) format - <code>ImageType.PS</code></li>
+<li>Xfig format - <code>ImageType.Xfig</code></li>
+<li>IRIS format - <code>ImageType.IRIS</code></li>
+<li>SPIFF (Still Picture Interchange File Format) format - <code>ImageType.SPIFF</code></li>
+<li>GEM (GEM Raster) format - <code>ImageType.GEM</code></li>
+<li>Amiga icon format - <code>ImageType.Amiga</code></li>
+<li>TIB (Acronis True Image) format - <code>ImageType.TIB</code></li>
+<li>JB2 (JBOG2) format - <code>ImageType.JB2</code></li>
+<li>CIN (Kodak Cineon) format - <code>ImageType.CIN</code></li>
+<li>PSP (Corel Paint Shop Pro) format - <code>ImageType.PSP</code></li>
+<li>EXR (OpenEXR) format - <code>ImageType.EXR</code></li>
+<li>CALS (CALS raster bitmap) format - <code>ImageType.CALS</code></li>
+<li>DPX (Society of Motion Picture and Television Engineers Digital Picture Exchange image) format - <code>ImageType.DPX</code></li>
+<li>SYM (Windows SDK graphics symbol) format - <code>ImageType.SYM</code></li>
+<li>SDR (SmartDraw Drawing) format - <code>ImageType.SDR</code></li>
+<li>IMG (Img Software Set Bitmap) format - <code>ImageType.IMG</code></li>
+<li>ADEX (ADEX Corp. ChromaGraph Graphics Card Bitmap Graphic) format - <code>ImageType.ADEX</code></li>
+<li>NITF (National Imagery Transmission Format) format - <code>ImageType.NITF</code></li>
+<li>BigTIFF (Big Tagged Image File Format; TIFF &gt; 4 GB) format - <code>ImageType.BigTIFF</code></li>
+<li>GX2 (Show Partner graphics) format - <code>ImageType.GX2</code></li>
+<li>PAT (GIMP pattern) format - <code>ImageType.PAT</code></li>
+<li>CPT (Corel Photopaint) format - <code>ImageType.CPT</code></li>
+<li>SYW (Harvard Graphics symbol graphic) format - <code>ImageType.SYW</code></li>
+<li>DWG (generic AutoCAD drawing) format - <code>ImageType.DWG</code></li>
+<li>PSD (Photoshop image) format - <code>ImageType.PSD</code></li>
+<li>FBM (fuzzy bitmap) format - <code>ImageType.FBM</code></li>
+<li>HDR (Radiance High Dynamic Range image) format - <code>ImageType.HDR</code></li>
+<li>MP (Monochrome Picture TIFF bitmap) format - <code>ImageType.MP</code></li>
+<li>DRW (generic drawing) format - <code>ImageType.DRW</code></li>
+<li>Micrografx (Micrografx vector graphics) format - <code>ImageType.Micrografx</code></li>
+<li>PIC (generic picture) format - <code>ImageType.PIC</code></li>
+<li>VDI (Ventura Publisher/GEM VDI Image Format Bitmap) format - <code>ImageType.VDI</code></li>
+<li>ICO (Windows icon) format - <code>ImageType.ICO</code></li>
+<li>JP2 (JPEG-2000) format - <code>ImageType.JP2</code></li>
+<li>YCC (Kodak YCC image) format - <code>ImageType.YCC</code></li>
+<li>FPX (FlashPix) format - <code>ImageType.FPX</code></li>
+<li>DCX (Graphics Multipage PCX bitmap) format - <code>ImageType.DCX</code></li>
+<li>ITC format - <code>ImageType.ITC</code></li>
+<li>NIFF (Navy Image File Format) format - <code>ImageType.NIFF</code></li>
+<li>WMP (Windows Media Photo) format - <code>ImageType.WMP</code></li>
+<li>BPG format - <code>ImageType.BPG</code></li>
+<li>FLIF format - <code>ImageType.FLIF</code></li>
+<li>PDF (Portable Document Format) format - <code>ImageType.PDF</code></li>
+<li>Unknown format - <code>ImageType.Other</code></li>
+</ul>
+<h1>License</h1>
+<p>nim-imghdr is released under the MIT open source license.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/achesak/nim-imghdr">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

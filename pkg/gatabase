@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">gatabase</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">orm</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">postgres</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sql</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Postgres Database ORM for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install gatabase" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Gatabase</h1>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/nim-gatabase/master/gatabase.png" style="max-width: 100%;" alt="screenshot" title="Connection-Pooling Compile-Time ORM for Nim" /></p>
+<p>  <img src="https://img.shields.io/github/languages/count/juancarlospaco/nim-gatabase?logoColor=green&amp;style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/languages/top/juancarlospaco/nim-gatabase?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/stars/juancarlospaco/nim-gatabase?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/languages/code-size/juancarlospaco/nim-gatabase?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/issues-raw/juancarlospaco/nim-gatabase?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/issues-pr-raw/juancarlospaco/nim-gatabase?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/last-commit/juancarlospaco/nim-gatabase?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/liberapay/patrons/juancarlospaco?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/twitch/status/juancarlospaco?style=for-the-badge" style="max-width: 100%;" alt="" /></p>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/nim-gatabase/master/temp.jpg" style="max-width: 100%;" alt="screenshot" title="Connection-Pooling Compile-Time ORM for Nim" /></p>
+<ul>
+<li>Works with ARC, ORC, <code>--panics:on</code>, <code>--experimental:strictFuncs</code>.</li>
+</ul>
+<h1>Use</h1>
+<ul>
+<li>Gatabase is designed as 1 simplified <a href="https://en.wikipedia.org/wiki/Type_system#Static_type_checking">Strong Static Typed</a> Connection-Pooling <a href="https://wikipedia.org/wiki/Compile_time">Compile-Time</a> <a href="https://wikipedia.org/wiki/SQL">SQL</a> <a href="https://wikipedia.org/wiki/Domain-specific_language">DSL</a> <a href="https://en.wikipedia.org/wiki/Syntactic_sugar">Sugar</a>. Nim mimics SQL. ~1000 LoC.</li>
+<li>Gatabase syntax is almost the same as SQL syntax, <a href="https://pgexercises.com/questions/basic/selectall.html">no new ORM to learn ever again</a>, any <a href="https://pgmodeler.io/screenshots">SQL WYSIWYG is your GUI</a>.</li>
+<li>You can literally <a href="https://stackoverflow.com/questions/tagged/postgresql?tab=Frequent">Copy&amp;Paste a SQL query from StackOverflow</a> to Gatabase and with few tiny syntax tweaks is running.</li>
+<li>SQL is Minified when build for Release, Pretty-Printed when build for Debug. It can be assigned to <code>let</code> and <code>const</code>.</li>
+<li>  <strong>Static Connection Pooling Array with 100+ ORM Queries.</strong></li>
+<li>  <strong>Uses only   <code>system.nim</code>, everything done via   <code>template</code>/  <code>macro</code>,   <code>strutils</code> is not imported, future-proof your code.</strong></li>
+</ul>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/nim-gatabase/master/multigata.png" style="max-width: 100%;" alt="" /></p>
+<h3>Support</h3>
+<ul>
+<li>All SQL standard syntax is supported.</li>
+<li>✅ <code>--</code> Human readable comments, multi-line comments produce multi-line SQL comments, requires <a href="https://en.wikipedia.org/wiki/Stropping_(syntax)#Modern_use">Stropping</a>.</li>
+<li>✅ <code>COMMENT</code>, Postgres-only.</li>
+<li>✅ <code>UNION</code>, <code>UNION ALL</code>.</li>
+<li>✅ <code>INTERSECT</code>, <code>INTERSECT ALL</code>.</li>
+<li>✅ <code>EXCEPT</code>, <code>EXCEPT ALL</code>, requires <a href="https://en.wikipedia.org/wiki/Stropping_(syntax)#Modern_use">Stropping</a>.</li>
+<li>✅ <code>CASE</code> with multiple <code>WHEN</code> and 1 <code>ELSE</code> with correct indentation, requires <a href="https://en.wikipedia.org/wiki/Stropping_(syntax)#Modern_use">Stropping</a>.</li>
+<li>✅ <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>, <code>FULL JOIN</code>.</li>
+<li>✅ <code>OFFSET</code>.</li>
+<li>✅ <code>LIMIT</code>.</li>
+<li>✅ <code>FROM</code>, requires <a href="https://en.wikipedia.org/wiki/Stropping_(syntax)#Modern_use">Stropping</a>.</li>
+<li>✅ <code>WHERE</code>, <code>WHERE NOT</code>, <code>WHERE EXISTS</code>, <code>WHERE NOT EXISTS</code>.</li>
+<li>✅ <code>ORDER BY</code>.</li>
+<li>✅ <code>SELECT</code>, <code>SELECT *</code>, <code>SELECT DISTINCT</code>.</li>
+<li>✅ <code>SELECT TOP</code>, <code>SELECT MIN</code>, <code>SELECT MAX</code>, <code>SELECT AVG</code>, <code>SELECT SUM</code>, <code>SELECT COUNT</code>.</li>
+<li>✅ <code>SELECT trim(lower( ))</code> for strings, <code>SELECT round( )</code> for floats, useful shortcuts.</li>
+<li>✅ <code>DELETE FROM</code>.</li>
+<li>✅ <code>LIKE</code>, <code>NOT LIKE</code>.</li>
+<li>✅ <code>BETWEEN</code>, <code>NOT BETWEEN</code>.</li>
+<li>✅ <code>HAVING</code>.</li>
+<li>✅ <code>INSERT INTO</code>.</li>
+<li>✅ <code>IS NULL</code>, <code>IS NOT NULL</code>.</li>
+<li>✅ <code>UPDATE</code>, <code>SET</code>.</li>
+<li>✅ <code>VALUES</code>.</li>
+<li>✅ <code>DROP TABLE IF EXISTS</code>.</li>
+<li>✅ <code>CREATE TABLE IF NOT EXISTS</code>.</li>
+</ul>
+<p>Not supported:</p>
+<ul>
+<li>Deep complex nested SubQueries are not supported, because KISS.</li>
+<li><code>TRUNCATE</code>, because is the same as <code>DELETE FROM</code> without a <code>WHERE</code>.</li>
+<li><code>WHERE IN</code>, <code>WHERE NOT IN</code>, because is the same as <code>JOIN</code>, but <code>JOIN</code> is a lot faster.</li>
+</ul>
+<h2>API Equivalents</h2>
+<table>
+<thead>
+<tr>
+<th>Nim StdLib API</th>
+<th>Gatabase ORM API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>tryExec</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#tryExec.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>tryExec</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>exec</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#exec.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>exec</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>getRow</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#getRow.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>getRow</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>getAllRows</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#getAllRows.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>getAllRows</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>getValue</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#getValue.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>getValue</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>tryInsertID</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#tryInsertID.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>tryInsertID</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>insertID</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#insertID.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>insertID</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>execAffectedRows</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#execAffectedRows.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>execAffectedRows</code>  </a></td>
+</tr></tbody></table>
+<h1>Output</h1>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Gatabase ORM API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>bool</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#tryExec.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>tryExec</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>Row</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#getRow.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>getRow</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>seq[Row]</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#getAllRows.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>getAllRows</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>int64</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#tryInsertID.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>tryInsertID</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>int64</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#insertID.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>insertID</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>int64</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#execAffectedRows.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>execAffectedRows</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>SqlQuery</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#sqls.t%2Cuntyped">    <code>sqls</code>  </a></td>
+</tr>
+<tr>
+<td>  <code>any</code></td>
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#getValue.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>getValue</code>  </a></td>
+</tr>
+<tr>
+<td />
+<td>  <a href="https://juancarlospaco.github.io/nim-gatabase/#exec.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">    <code>exec</code>  </a></td>
+</tr></tbody></table>
+<ul>
+<li><a href="https://juancarlospaco.github.io/nim-gatabase/#getValue.t%2Cvarargs%5Bstring%2C%5D%2Cuntyped">  <code>getValue</code></a> can return any specific arbitrary concrete type, depending on the arguments used (Optional).</li>
+<li>  <a href="https://juancarlospaco.github.io/nim-gatabase/sugar.html#18">Gatabase Sugar can return very specific concrete types (Optional).</a></li>
+</ul>
+<h1>Install</h1>
+<ul>
+<li>  <a href="https://nimble.directory/pkg/gatabase" title="nimble install gatabase 👑 https://nimble.directory/pkg/gatabase">    <code>nimble install gatabase</code>  </a></li>
+</ul>
+<h3>Comments</h3>
+<pre>  <code class="language-sql">-- SQL Comments are supported, but stripped when build for Release. This is SQL.
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">`<span class="op">--</span>` <span class="str">&quot;SQL Comments are supported, but stripped when build for Release. This is Nim.&quot;</span></div></div>  </code></pre>
+<h3>SELECT &amp; FROM</h3>
+<pre>  <code class="language-sql">SELECT *
+FROM sometable
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">select</span> '*'</div></div><div class="line"><div class="line-content">`<span class="kwd">from</span>` <span class="str">&quot;sometable&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT somecolumn
+FROM sometable
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">select</span> <span class="str">&quot;somecolumn&quot;</span></div></div><div class="line"><div class="line-content">`<span class="kwd">from</span>` <span class="str">&quot;sometable&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT DISTINCT somecolumn
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectdistinct</span> <span class="str">&quot;somecolumn&quot;</span></div></div>  </code></pre>
+<h3>MIN &amp; MAX</h3>
+<pre>  <code class="language-sql">SELECT MIN(somecolumn)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectmin</span> <span class="str">&quot;somecolumn&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT MAX(somecolumn)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectmax</span> <span class="str">&quot;somecolumn&quot;</span></div></div>  </code></pre>
+<h3>COUNT &amp; AVG &amp; SUM</h3>
+<pre>  <code class="language-sql">SELECT COUNT(somecolumn)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectcount</span> <span class="str">&quot;somecolumn&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT AVG(somecolumn)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectavg</span> <span class="str">&quot;somecolumn&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT SUM(somecolumn)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectsum</span> <span class="str">&quot;somecolumn&quot;</span></div></div>  </code></pre>
+<h3>TRIM &amp; LOWER</h3>
+<pre>  <code class="language-sql">SELECT trim(lower(somestringcolumn))
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selecttrim</span> <span class="str">&quot;somestringcolumn&quot;</span></div></div>  </code></pre>
+<h3>ROUND</h3>
+<pre>  <code class="language-sql">SELECT round(somefloatcolumn, 2)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectround2</span> <span class="str">&quot;somefloatcolumn&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT round(somefloatcolumn, 4)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectround4</span> <span class="str">&quot;somefloatcolumn&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">SELECT round(somefloatcolumn, 6)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selectround6</span> <span class="str">&quot;somefloatcolumn&quot;</span></div></div>  </code></pre>
+<h3>TOP</h3>
+<pre>  <code class="language-sql">SELECT TOP 5 *
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">selecttop</span> <span class="num">5</span></div></div>  </code></pre>
+<h3>WHERE</h3>
+<pre>  <code class="language-sql">SELECT somecolumn
+FROM sometable
+WHERE power &gt; 9000
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">select</span> <span class="str">&quot;somecolumn&quot;</span></div></div><div class="line"><div class="line-content">`<span class="kwd">from</span>` <span class="str">&quot;sometable&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">where</span> <span class="str">&quot;power &gt; 9000&quot;</span></div></div>  </code></pre>
+<h3>LIMIT &amp; OFFSET</h3>
+<pre>  <code class="language-sql">OFFSET 9
+LIMIT 42
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">offset</span> <span class="num">9</span></div></div><div class="line"><div class="line-content"><span class="ide">limit</span> <span class="num">42</span></div></div>  </code></pre>
+<h3>INSERT</h3>
+<pre>  <code class="language-sql">INSERT INTO person
+VALUES (42, &apos;Nikola Tesla&apos;, true, &apos;nikola.tesla@nim-lang.org&apos;, 9.6)
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">insertinto</span> <span class="str">&quot;person&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">values</span> <span class="num">5</span></div></div>  </code></pre>
+<p>  <strong>Example:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">insertinto</span> <span class="str">&quot;person&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">values</span> <span class="num">5</span></div></div>  </code></pre>
+<p>⬆️ Nim ⬆️          ⬇️ Generated SQL ⬇️</p>
+<pre>  <code class="language-sql">INSERT INTO person
+VALUES ( ?, ?, ?, ?, ? )
+</code></pre>
+<ul>
+<li>The actual values are passed via <code>varargs</code> directly using stdlib, Gatabase does not format values ever.</li>
+<li>Nim code <code>values 5</code> generates <code>VALUES ( ?, ?, ?, ?, ? )</code>.</li>
+</ul>
+<h3>UPDATE</h3>
+<pre>  <code class="language-sql">UPDATE person
+SET name = &apos;Nikola Tesla&apos;, mail = &apos;nikola.tesla@nim-lang.org&apos;
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">update</span> <span class="str">&quot;person&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">set</span> [<span class="str">&quot;name&quot;</span>, <span class="str">&quot;mail&quot;</span>]</div></div>  </code></pre>
+<p>  <strong>Example:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">update</span> <span class="str">&quot;person&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">set</span> [<span class="str">&quot;name&quot;</span>, <span class="str">&quot;mail&quot;</span>]</div></div>  </code></pre>
+<p>⬆️ Nim ⬆️          ⬇️ Generated SQL ⬇️</p>
+<pre>  <code class="language-sql">UPDATE person
+SET name = ?, mail = ?
+</code></pre>
+<ul>
+<li>The actual values are passed via <code>varargs</code> directly using stdlib, Gatabase does not format values ever.</li>
+<li>Nim code <code>set [&quot;key&quot;, &quot;other&quot;, &quot;another&quot;]</code> generates <code>SET key = ?, other = ?, another = ?</code>.</li>
+</ul>
+<h3>DELETE</h3>
+<pre>  <code class="language-sql">DELETE debts
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">delete</span> <span class="str">&quot;debts&quot;</span></div></div>  </code></pre>
+<h3>ORDER BY</h3>
+<pre>  <code class="language-sql">ORDER BY ASC
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">orderby</span> <span class="str">&quot;asc&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">ORDER BY DESC
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">orderby</span> <span class="str">&quot;desc&quot;</span></div></div>  </code></pre>
+<h3>CASE</h3>
+<pre>  <code class="language-sql">CASE
+  WHEN foo &gt; 10 THEN 9
+  WHEN bar &lt; 42 THEN 5
+  ELSE 0
+END
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">`<span class="kwd">case</span>` {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;foo &gt; 10&quot;</span>: <span class="str">&quot;9&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;bar &lt; 42&quot;</span>: <span class="str">&quot;5&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;else&quot;</span>:     <span class="str">&quot;0&quot;</span></div></div><div class="line"><div class="line-content">}</div></div>  </code></pre>
+<h3>COMMENT</h3>
+<pre>  <code class="language-sql">COMMENT ON TABLE myTable IS &apos;This is an SQL COMMENT on a TABLE&apos;
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">commentontable</span> {<span class="str">&quot;myTable&quot;</span>: <span class="str">&quot;This is an SQL COMMENT on a TABLE&quot;</span>}</div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">COMMENT ON COLUMN myColumn IS &apos;This is an SQL COMMENT on a COLUMN&apos;
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">commentoncolumn</span> {<span class="str">&quot;myColumn&quot;</span>: <span class="str">&quot;This is an SQL COMMENT on a COLUMN&quot;</span>}</div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">COMMENT ON DATABASE myDatabase IS &apos;This is an SQL COMMENT on a DATABASE&apos;
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">commentondatabase</span> {<span class="str">&quot;myDatabase&quot;</span>: <span class="str">&quot;This is an SQL COMMENT on a DATABASE&quot;</span>}</div></div>  </code></pre>
+<h3>GROUP BY</h3>
+<pre>  <code class="language-sql">GROUP BY country
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">groupby</span> <span class="str">&quot;country&quot;</span></div></div>  </code></pre>
+<h3>JOIN</h3>
+<pre>  <code class="language-sql">FULL JOIN tablename
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">fulljoin</span> <span class="str">&quot;tablename&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">INNER JOIN tablename
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">innerjoin</span> <span class="str">&quot;tablename&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">LEFT JOIN tablename
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">leftjoin</span> <span class="str">&quot;tablename&quot;</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">RIGHT JOIN tablename
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">rightjoin</span> <span class="str">&quot;tablename&quot;</span></div></div>  </code></pre>
+<h3>HAVING</h3>
+<pre>  <code class="language-sql">HAVING beer &gt; 5
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">having</span> <span class="str">&quot;beer &gt; 5&quot;</span></div></div>  </code></pre>
+<h3>UNION</h3>
+<pre>  <code class="language-sql">UNION ALL
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">union</span> <span class="ide">true</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">UNION
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">union</span> <span class="ide">false</span></div></div>  </code></pre>
+<h3>INTERSECT</h3>
+<pre>  <code class="language-sql">INTERSECT ALL
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">intersect</span> <span class="ide">true</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">INTERSECT
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">intersect</span> <span class="ide">false</span></div></div>  </code></pre>
+<h3>EXCEPT</h3>
+<pre>  <code class="language-sql">EXCEPT ALL
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">`<span class="kwd">except</span>` <span class="ide">true</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">EXCEPT
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">`<span class="kwd">except</span>` <span class="ide">false</span></div></div>  </code></pre>
+<h3>IS NULL</h3>
+<pre>  <code class="language-sql">IS NULL
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">isnull</span> <span class="ide">true</span></div></div>  </code></pre>
+<hr />
+<pre>  <code class="language-sql">IS NOT NULL
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">isnull</span> <span class="ide">false</span></div></div>  </code></pre>
+<hr />
+<h3>DROP TABLE</h3>
+<pre>  <code class="language-sql">DROP TABLE IF EXISTS tablename
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">dropTable</span> <span class="str">&quot;tablename&quot;</span></div></div>  </code></pre>
+<ul>
+<li><code>dropTable</code> is part of <a href="https://juancarlospaco.github.io/nim-gatabase/sugar.html">Gatabase Sugar (Optional).</a></li>
+</ul>
+<hr />
+<h3>CREATE TABLE</h3>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/nim-gatabase/master/create_table.png" style="max-width: 100%;" alt="" /></p>
+<pre>  <code class="language-sql">CREATE TABLE IF NOT EXISTS kitten(
+  id    INTEGER     PRIMARY KEY,
+  age   INTEGER     NOT NULL  DEFAULT 1,
+  sex   VARCHAR(1)  NOT NULL  DEFAULT &apos;f&apos;,
+  name  TEXT        NOT NULL  DEFAULT &apos;fluffy&apos;,
+  rank  REAL        NOT NULL  DEFAULT 3.14,
+);
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myTable</span> <span class="op">=</span> <span class="ide">createTable</span> <span class="str">&quot;kitten&quot;</span>: [</div></div><div class="line"><div class="line-content">  <span class="str">&quot;age&quot;</span>  :<span class="op">=</span> <span class="num">1</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;sex&quot;</span>  :<span class="op">=</span> 'f',</div></div><div class="line"><div class="line-content">  <span class="str">&quot;name&quot;</span> :<span class="op">=</span> <span class="str">&quot;fluffy&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;rank&quot;</span> :<span class="op">=</span> <span class="num">3.14</span>,</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>No default values:</p>
+<pre>  <code class="language-sql">CREATE TABLE IF NOT EXISTS kitten(
+  id    INTEGER     PRIMARY KEY,
+  age   INTEGER,
+  sex   VARCHAR(1),
+  name  TEXT,
+  rank  REAL,
+);
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myTable</span> <span class="op">=</span> <span class="ide">createTable</span> <span class="str">&quot;kitten&quot;</span>: [</div></div><div class="line"><div class="line-content">  <span class="str">&quot;age&quot;</span>  :<span class="op">=</span> <span class="ide">int</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;sex&quot;</span>  :<span class="op">=</span> <span class="ide">char</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;name&quot;</span> :<span class="op">=</span> <span class="ide">string</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;rank&quot;</span> :<span class="op">=</span> <span class="ide">float</span>,</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>More examples:</p>
+<pre>  <code class="language-sql">CREATE TABLE IF NOT EXISTS kitten(
+  id    INTEGER     PRIMARY KEY,
+  age   INTEGER     NOT NULL  DEFAULT 1,
+  sex   VARCHAR(1),
+);
+</code></pre>
+<p>⬆️ SQL ⬆️          ⬇️ Nim ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myTable</span> <span class="op">=</span> <span class="ide">createTable</span> <span class="str">&quot;kitten&quot;</span>: [</div></div><div class="line"><div class="line-content">  <span class="str">&quot;age&quot;</span>  :<span class="op">=</span> <span class="num">1</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;sex&quot;</span>  :<span class="op">=</span> <span class="ide">char</span>,</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>And more examples: https://github.com/juancarlospaco/nim-gatabase/blob/master/examples/database_fields_example.nim#L1</p>
+<ul>
+<li><code>createTable</code> is part of <a href="https://juancarlospaco.github.io/nim-gatabase/sugar.html">Gatabase Sugar (Optional).</a></li>
+</ul>
+<hr />
+<h3>Wildcards</h3>
+<ul>
+<li>Nim <code>&apos;*&apos;</code> ➡️ SQL <code>*</code>.</li>
+<li>Nim <code>&apos;?&apos;</code> ➡️ SQL <code>?</code>.</li>
+</ul>
+<h1>Anti-Obfuscation</h1>
+<p>Gatabase wont like Obfuscation, its code is easy to read and similar to Pretty-Printed SQL. <a href="https://nim-lang.github.io/Nim/tools.html"><code>nimpretty</code> friendly</a>. Very <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a>.</p>
+<p>  <strong>Compiles Ok:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">variable</span> <span class="op">=</span> <span class="ide">sqls</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">select</span>  '*'</div></div><div class="line"><div class="line-content">  `<span class="kwd">from</span>`  <span class="str">&quot;clients&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">groupby</span> <span class="str">&quot;country&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">orderby</span> <span class="ide">AscNullsLast</span></div></div>  </code></pre>
+<p>  <strong>Fails to Compile:</strong></p>
+<ul>
+<li>  <code>let variable = sqls: select(&apos;*&apos;) from(&quot;clients&quot;) groupby(&quot;country&quot;) orderby(AscNullsLast)</code></li>
+<li>  <code>let variable = sqls: &apos;*&apos;.select() &quot;clients&quot;.from() &quot;country&quot;.groupby() AscNullsLast.orderby()</code></li>
+<li>  <code>let variable = sqls: select &apos;*&apos; from &quot;clients&quot; groupby &quot;country&quot; orderby AscNullsLast</code></li>
+<li>  <code>let variable = sqls:select&apos;*&apos; from&quot;clients&quot; groupby&quot;country&quot; orderby AscNullsLast</code></li>
+</ul>
+<p>  <em>This helps on big projects where each developer tries to use a different code style.</em></p>
+<h1>Your data, your way</h1>
+<p>Nim has <code>template</code> is like a literal copy&amp;paste of code in-place with no performance cost,
+that allows you to create your own custom ORM function callbacks on-the-fly,
+like the ones used on scripting languages.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">getMemes</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> []<span class="op">.</span><span class="ide">getValue</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">select</span> <span class="str">&quot;url&quot;</span></div></div><div class="line"><div class="line-content">    `<span class="kwd">from</span>` <span class="str">&quot;memes&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">limit</span> <span class="num">1</span></div></div>  </code></pre>
+<p>Then you do <code>getMemes()</code> when you need it❕. The API that fits your ideas.</p>
+<p>From this <code>MyClass.meta.Session.query(Memes).all().filter().first()</code> to this <code>getMemes()</code>.</p>
+<h1>For Python Devs</h1>
+<p>Remember on Python2 you had like <code>print &quot;value&quot;</code>?, on Nim you can do the same for any function,
+then we made functions to mimic basic standard SQL, like <code>select &quot;value&quot;</code> and it worked,
+its Type-Safe and valid Nim code, you have an ORM that gives you the freedom and power,
+this allows to support interesting features, like <code>CASE</code>, <code>UNION</code>, <code>INTERSECT</code>, <code>COMMENT</code>, etc.</p>
+<p>When you get used to <code>template</code> it requires a lot less code to do the same than SQLAlchemy.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="com">#!/usr/bin/env python3</span></div></div><div class="line"><div class="line-content"><span class="com"># -*- coding: utf-8 -*-</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> sqlalchemy <span class="kwd">import</span> create_engine, MetaData, Table</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> sqlalchemy <span class="kwd">import</span> Column, Integer, String, Boolean, Float</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">engine <span class="op">=</span> create_engine(<span class="str">&quot;sqlite:///:memory:&quot;</span>, echo<span class="op">=</span><span class="kwd">False</span>)</div></div><div class="line"><div class="line-content">engine<span class="op">.</span><span class="op">execute</span>("""
+  create table if not exists person(
+    id      integer     primary key,
+    name    varchar(9)  not null unique,
+    active  bool        not null default true,
+    rank    float       not null default 0.0
+  ); """</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">meta <span class="op">=</span> MetaData()</div></div><div class="line"><div class="line-content">persons <span class="op">=</span> Table(</div></div><div class="line"><div class="line-content">  <span class="str">&quot;person&quot;</span>, meta,</div></div><div class="line"><div class="line-content">  Column(<span class="str">&quot;id&quot;</span>, Integer, primary_key <span class="op">=</span> <span class="kwd">True</span>),</div></div><div class="line"><div class="line-content">  Column(<span class="str">&quot;name&quot;</span>, String, nullable <span class="op">=</span> <span class="kwd">False</span>, unique <span class="op">=</span> <span class="kwd">True</span>),</div></div><div class="line"><div class="line-content">  Column(<span class="str">&quot;active&quot;</span>, Boolean, nullable <span class="op">=</span> <span class="kwd">False</span>, default <span class="op">=</span> <span class="kwd">True</span>),</div></div><div class="line"><div class="line-content">  Column(<span class="str">&quot;rank&quot;</span>, Float, nullable <span class="op">=</span> <span class="kwd">False</span>, default <span class="op">=</span> <span class="num">0.0</span>),</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">conn <span class="op">=</span> engine<span class="op">.</span><span class="op">connect</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">ins <span class="op">=</span> persons<span class="op">.</span><span class="op">insert</span>()</div></div><div class="line"><div class="line-content">ins <span class="op">=</span> persons<span class="op">.</span><span class="op">insert</span>()<span class="op">.</span><span class="op">values</span>(id <span class="op">=</span> <span class="num">42</span>, name <span class="op">=</span> <span class="str">&quot;Pepe&quot;</span>, active <span class="op">=</span> <span class="kwd">True</span>, rank <span class="op">=</span> <span class="num">9.6</span>)</div></div><div class="line"><div class="line-content">result <span class="op">=</span> conn<span class="op">.</span><span class="op">execute</span>(ins)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">persons_query <span class="op">=</span> persons<span class="op">.</span><span class="op">select</span>()</div></div><div class="line"><div class="line-content">result <span class="op">=</span> conn<span class="op">.</span><span class="op">execute</span>(persons_query)</div></div><div class="line"><div class="line-content">row <span class="op">=</span> result<span class="op">.</span><span class="op">fetchone</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">print(row)</div></div>  </code></pre>
+<p>⬆️ CPython 3 + SQLAlchemy ⬆️          ⬇️ Nim 1.0 + Gatabase ⬇️</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">db_sqlite</span>, <span class="ide">gatabase</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">db</span> <span class="op">=</span> <span class="ide">open</span>(<span class="str">&quot;:memory:&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">exec</span>(sql"""
+  create table if not exists person(
+    id      integer     primary key,
+    name    varchar(9)  not null unique,
+    active  bool        not null default true,
+    rank    float       not null default 0.0
+  ); """)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">exec</span> [<span class="num">42</span>, <span class="str">&quot;Pepe&quot;</span>, <span class="ide">true</span>, <span class="num">9.6</span>]:</div></div><div class="line"><div class="line-content">  <span class="ide">insertinto</span> <span class="str">&quot;person&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">values</span> <span class="num">4</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">row</span> <span class="op">=</span> []<span class="op">.</span><span class="ide">getRow</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">select</span> '*'</div></div><div class="line"><div class="line-content">  `<span class="kwd">from</span>` <span class="str">&quot;person&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">row</span></div></div>  </code></pre>
+<h1>Smart SQL Checking</h1>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/nim-gatabase/master/sql_checking.png" style="max-width: 100%;" alt="screenshot" title="Smart SQL Checking" /></p>
+<p>It will perform a SQL Syntax checking at compile-time. Examples here Fail <strong>intentionally</strong> as expected:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exec</span> []:</div></div><div class="line"><div class="line-content">  <span class="ide">where</span> <span class="str">&quot;failure&quot;</span></div></div>  </code></pre>
+<p>Fails to compile as expected, with a friendly error:</p>
+<pre>  <code>gatabase.nim(48, 16) Warning: WHERE without SELECT nor INSERT nor UPDATE nor DELETE.
+</code></pre>
+<p>Typical error of making a <code>DELETE FROM</code> without <code>WHERE</code> that deletes all your data:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exec</span> []:</div></div><div class="line"><div class="line-content">  <span class="ide">delete</span> <span class="str">&quot;users&quot;</span></div></div>  </code></pre>
+<p>Compiles but prints a friendly warning:</p>
+<pre>  <code>gatabase.nim(207, 57) Warning: DELETE FROM without WHERE.
+</code></pre>
+<p>Typical <a href="https://stackoverflow.com/a/3639964">bad practice of using <code>SELECT *</code> everywhere</a>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exec</span> []:</div></div><div class="line"><div class="line-content">  <span class="ide">select</span> '*'</div></div>  </code></pre>
+<p>Compiles but prints a friendly warning:</p>
+<pre>  <code>gatabase.nim(20, 50) Warning: SELECT * is bad practice.
+</code></pre>
+<p>Non-SQL wont compile, even if its valid Nim:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">sqls</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">sqls</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;This is not SQL, wont compile&quot;</span></div></div>  </code></pre>
+<h3>Gatabase Diagrams</h3>
+<ul>
+<li>https://twitter.com/drawio/status/1271774136126275584</li>
+</ul>
+<h3>Tests</h3>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">nimble</span> test</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="out">[Suite] Gatabase ORM Tests</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   INSERT INTO</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   SELECT ... FROM ... WHERE</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   SELECT ... (comment) ... FROM ... COMMENT</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   SELECT ... FROM ... LIMIT ... OFFSET</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   INSERT INTO</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   UNION ALL ... ORBER BY ... IS NOT NULL</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let   SELECT DISTINCT ... FROM ... WHERE</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] let INSERT INTO</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const SELECT ... FROM ... WHERE</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const SELECT ... (comment) ... FROM ... COMMENT</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const SELECT ... FROM ... LIMIT ... OFFSET</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const INSERT INTO</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const UNION ALL ... ORBER BY ... IS NOT NULL</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const INTERSECT ALL</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const EXCEPT ALL</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] const SELECT DISTINCT ... FROM ... WHERE</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] var   CASE</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] var   SELECT MAX .. WHERE EXISTS ... OFFSET ... LIMIT ... ORDER BY</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] SELECT TRIM</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] SELECT ROUND</span></div></div><div class="line"><div class="line-content">  <span class="out">[OK] var   DELETE FROM WHERE</span></div></div>  </code></pre>
+<ul>
+<li>Tests use a real database SQLite on RAM <code>&quot;:memory:&quot;</code> with a <code>&quot;person&quot;</code> table. +20 Tests.</li>
+<li>  <a href="https://github.com/juancarlospaco/nim-gatabase/actions">CI uses GitHub Actions CI.</a></li>
+</ul>
+<h1>Requisites</h1>
+<ul>
+<li>  <strong>None.</strong></li>
+</ul>
+<h2>Stars</h2>
+<p>  <img src="https://starchart.cc/juancarlospaco/nim-gatabase.svg" style="max-width: 100%;" alt="Stars over time" /></p>
+<h1>FAQ</h1>
+<details>
+<ul>
+<li>This is not an ORM ?.</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Object-relational_mapping">Wikipedia defines ORM</a> as:</p>
+<blockquote>
+<p>Object-relational mapping in computer science is a programming technique for converting
+data between incompatible type systems using object-oriented programming languages.</p>
+</blockquote>
+<p>Feel free to contribute to Wikipedia.</p>
+<ul>
+<li>Supports SQLite ?.</li>
+</ul>
+<p>Yes.</p>
+<ul>
+<li>Supports MySQL ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>Will support MySQL someday ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>Supports Mongo ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>Will support Mongo someday ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>How is Parameter substitution done ?.</li>
+</ul>
+<p>It does NOT make Parameter substitution internally, its delegated to standard library.</p>
+<ul>
+<li>This works with Synchronous code ?.</li>
+</ul>
+<p>Yes.</p>
+<ul>
+<li>This works with Asynchronous code ?.</li>
+</ul>
+<p>Yes.</p>
+<ul>
+<li>SQLite mode dont support some stuff ?.</li>
+</ul>
+<p>We try to keep as similar as possible, but SQLite is very limited.</p>
+</details>
+<p>  <a href="#Gatabase" title="Go to top">  ⬆️  ⬆️  ⬆️  ⬆�</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/nim-gatabase">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

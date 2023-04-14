@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">glbits</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">opengl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">shaders</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graphics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sdl2</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A light interface and selection of utilities for working with OpenGL and SDL2")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install glbits" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>glbits</h1>
+<p>This library provides a lightweight interface for working with OpenGL shaders and SDL2.</p>
+<h2>OpenGL</h2>
+<ul>
+<li>Create and manage vertex array and buffer objects</li>
+<li>Easily build custom shader programs</li>
+<li>Allow GLSL code to &apos;include&apos; local files and build a GLSL library</li>
+<li>Adds arithmetic overloads for GL vector and matrix types</li>
+<li>Use GL vectors like GLSL: <code>echo length(mix(vec2(1, 2), vec2(1), 0.5) + vec2(3, 4) - 1)</code></li>
+<li>Useful colour utilities: <code>assert vec4(1).brighten(0.5).withAlpha(0.1) == vec4(0.5, 0.5, 0.5, 0.1)</code></li>
+<li>Utilities for calculating angles, normals, dots and crosses, perspective, and working with pixels</li>
+<li>Fast instanced model and texture rendering</li>
+</ul>
+<h2>SDL2</h2>
+<ul>
+<li>Create windows and contexts</li>
+<li>Easily poll events for things like mouse and keyboard</li>
+<li>Render fonts to OpenGL textures</li>
+</ul>
+<p>Running <code>src/glbits/glbits.nim</code> itself demonstrates how to draw a coloured triangle with a simple shader. To make the window handling simpler, this demonstration uses <code>SDL2.dll</code> which can be obtained <a href="https://www.libsdl.org/download-2.0.php">here</a>. <code>SDL2.dll</code> is not required for general use of <code>glbits</code>.</p>
+<p>Expected output from running <code>glbits</code> as the main module:</p>
+<p>https://user-images.githubusercontent.com/36367371/124191338-90528a00-dabb-11eb-8b20-2ae3ed9d9ed5.mp4</p>
+<p>A demo of instanced texture rendering with 200,000 textures and global rotation is provided in <code>texturedemo.nim</code>:</p>
+<p>https://user-images.githubusercontent.com/36367371/124296615-128d8d80-db52-11eb-8d50-d4efbd130d8a.mp4</p>
+<h2>Set up interactable SDL2/OpenGL windows</h2>
+<p>This example creates an interactable window and displays any mouse, keyboard, and other SDL2 events.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sdl2</span>, <span class="ide">opengl</span>, <span class="ide">glbits</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create SDL/OpenGL window and context variables.</span></div></div><div class="line"><div class="line-content"><span class="ide">initSdlOpenGl</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Display settings: &quot;</span>, <span class="ide">sdlDisplay</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">pollEvents</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># Quit, resize, and mouse motion events are handled for you and</span></div></div><div class="line"><div class="line-content">  <span class="com"># applied to &apos;running&apos;, &apos;mouseInfo&apos; and &apos;keyStates&apos; variables.</span></div></div><div class="line"><div class="line-content">  <span class="com"># Code here is run for any other SDL2 event.</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Event received :&quot;</span>, <span class="ide">event</span></div></div><div class="line"><div class="line-content"><span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># Code here is run every loop.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">keyStates</span><span class="op">.</span><span class="ide">pressed</span>(<span class="ide">SDL_SCANCODE_SPACE</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Space bar is pressed&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">mouseInfo</span><span class="op">.</span><span class="ide">changed</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;New mouse info &quot;</span>, <span class="ide">mouseInfo</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">sdlDisplay</span><span class="op">.</span><span class="ide">changed</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Resized: &quot;</span>, <span class="ide">sdlDisplay</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">running</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Received a quit event&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">doubleBuffer</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Rendering run here will draw to a freshly cleared back buffer</span></div></div><div class="line"><div class="line-content">    <span class="com"># that is swapped to the display when the block finishes.</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="com"># This helps to avoid visual artifacts from half rendered scenes.</span></div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div>  </code></pre>
+<h2>GL utilities</h2>
+<p>Importing glbits lots of utilities for working with OpenGL types for productivity and efficiency.</p>
+<h3>Sugar for common OpenGL types</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># &apos;vec2&apos; -&gt; &apos;GLvectorf2&apos;, &apos;vec3&apos; -&gt; &apos;GLvectorf3&apos;, &apos;vec4&apos; -&gt; &apos;GLvectorf4&apos;.</span></div></div><div class="line"><div class="line-content"><span class="com"># &apos;mat4&apos; -&gt; &apos;GLmatrixf4&apos;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">pos</span> <span class="op">=</span> <span class="ide">vec2</span>(<span class="num">1</span>, <span class="num">3.5</span>)    <span class="com"># Shortcut for [1.GLfloat, 3.5.GLfloat] AKA &apos;GLVectorf2&apos;.</span></div></div><div class="line"><div class="line-content">  <span class="ide">col</span> <span class="op">=</span> <span class="ide">vec4</span>(<span class="num">0.5</span>)       <span class="com"># Set all components at once.</span></div></div><div class="line"><div class="line-content">  <span class="ide">m1</span> <span class="op">=</span> <span class="ide">mat4</span>(<span class="ide">vec4</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>), <span class="ide">vec4</span>(<span class="num">5</span>, <span class="num">6</span>, <span class="num">7</span>, <span class="num">8</span>), <span class="ide">vec4</span>(<span class="num">9</span>, <span class="num">10</span>, <span class="num">11</span>, <span class="num">12</span>), <span class="ide">vec4</span>(<span class="num">13</span>, <span class="num">14</span>, <span class="num">15</span>, <span class="num">16</span>))</div></div><div class="line"><div class="line-content">  <span class="ide">m2</span> <span class="op">=</span> <span class="ide">mat4</span>(<span class="ide">vec4</span>(<span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>), <span class="ide">vec4</span>(<span class="num">6</span>, <span class="num">7</span>, <span class="num">8</span>, <span class="num">9</span>), <span class="ide">vec4</span>(<span class="num">10</span>, <span class="num">11</span>, <span class="num">12</span>, <span class="num">13</span>), <span class="ide">vec4</span>(<span class="num">14</span>, <span class="num">15</span>, <span class="num">16</span>, <span class="num">17</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">vec3</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>) <span class="op">+</span> <span class="ide">vec3</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>) <span class="op">+</span> <span class="num">2</span> <span class="op">==</span> <span class="ide">vec3</span>(<span class="num">4</span>, <span class="num">6</span>, <span class="num">8</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Access components with x, y, z, w</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">pos</span><span class="op">.</span><span class="ide">y</span> <span class="op">==</span> <span class="num">3.5&apos;f32</span></div></div><div class="line"><div class="line-content"><span class="com"># or as r, g, b, a.</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">col</span><span class="op">.</span><span class="ide">y</span> <span class="op">==</span> <span class="ide">col</span><span class="op">.</span><span class="ide">g</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">mat4</span>(<span class="num">1</span>) <span class="op">==</span> <span class="ide">identity</span>[<span class="num">4</span>]() <span class="com"># Passing a single value to mat4 sets the main diagonal.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">m1</span> <span class="op">+</span> <span class="ide">m2</span>) <span class="op">==</span> <span class="ide">mat4</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">vec4</span>(<span class="num">3</span>, <span class="num">5</span>, <span class="num">7</span>, <span class="num">9</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">vec4</span>(<span class="num">11</span>, <span class="num">13</span>, <span class="num">15</span>, <span class="num">17</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">vec4</span>(<span class="num">19</span>, <span class="num">21</span>, <span class="num">23</span>, <span class="num">25</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">vec4</span>(<span class="num">27</span>, <span class="num">29</span>, <span class="num">31</span>, <span class="num">33</span>)</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>You can apply the arithmetic overloads to other array types with <code>makeOps</code>. This can be useful for example for <code>int</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Int3</span> <span class="op">=</span> <span class="ide">array</span>[<span class="num">3</span>, <span class="ide">int</span>]</div></div><div class="line"><div class="line-content"><span class="ide">makeOps</span> <span class="ide">Int3</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>] <span class="op">+</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>] <span class="op">+</span> <span class="num">2</span> <span class="op">==</span> [<span class="num">4</span>, <span class="num">6</span>, <span class="num">8</span>]</div></div>  </code></pre>
+<h3>Working with buffers</h3>
+<p>The core of the library is the <code>VertexArrayObject</code>, which groups an array of <code>VertexBufferObject</code> data.</p>
+<p>These objects are used to interact with the GPU, such as defining vertex positions, colours, and other data. Buffers are then consumed by a <code>ShaderProgram</code> to render to the screen, off screen to a <code>FrameBuffer</code>, or processing with compute.</p>
+<p>Buffers are accessed using <code>asArray(N)</code> where <code>N</code> is the number of <code>GLfloat</code> components that make up the array item.</p>
+<p>For convenience, the <code>addData</code> procedure applies <code>asArray</code> based on the parameter data type.</p>
+<p>Note: these are unchecked operations and buffers that are initialised to the wrong size are not detected.</p>
+<p>To allocate a buffer from data, use <code>initVbo</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">addModel</span>(<span class="ide">vao</span>: <span class="ide">VertexArrayObject</span>, <span class="ide">vertices</span>: <span class="ide">openarray</span>[<span class="ide">GLvectorf3</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">vao</span><span class="op">.</span><span class="ide">add</span> <span class="ide">initVBO</span>(<span class="num">0.</span><span class="ide">GLuint</span>, <span class="ide">vertices</span>)</div></div>  </code></pre>
+<p>To get a copy of a buffer&apos;s data, use <code>getData</code>. This can be useful for cloning buffers, for instance to copy an existing model&apos;s vertices.</p>
+<h2>3D model rendering</h2>
+<p>The core of the library is an interface for vertex arrays and buffer objects for working with shaders.</p>
+<p>A ready to use <a href="https://github.com/rlipsc/glbits/blob/master/src/glbits/modelrenderer.nim">example model renderer</a> is included which allows performant rendering of model instances with independent positions, colours, scales, and 2D rotations.</p>
+<p>This renderer can be used for general purpose 3D model rendering with default or custom shaders:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">glbits</span>, <span class="ide">glbits</span><span class="op">/</span><span class="ide">modelrenderer</span>, <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initShaders</span><span class="op">*</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">thisDir</span> <span class="op">=</span> <span class="ide">currentSourcePath</span>()<span class="op">.</span><span class="ide">parentDir</span></div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="com"># Create a new program with the default vertex/fragment shader GLSL.</span></div></div><div class="line"><div class="line-content">    <span class="ide">simpleShader</span> <span class="op">=</span> <span class="ide">newModelRenderer</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com"># Read in GLSL and process include comments.</span></div></div><div class="line"><div class="line-content">    <span class="ide">vertShader</span> <span class="op">=</span> <span class="ide">readAndInclude</span>(<span class="ide">thisDir</span><span class="op">.</span><span class="ide">joinPath</span> r"myVertexShader.glsl", <span class="ide">echoOutput</span> <span class="op">=</span> <span class="ide">false</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">fragShader</span> <span class="op">=</span> <span class="ide">readAndInclude</span>(<span class="ide">thisDir</span><span class="op">.</span><span class="ide">joinPath</span> r"myFragmentShader.glsl", <span class="ide">echoOutput</span> <span class="op">=</span> <span class="ide">false</span>)</div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="com"># Create a shader program with the loaded GLSL.</span></div></div><div class="line"><div class="line-content">    <span class="ide">customShader</span> <span class="op">=</span> <span class="ide">newShaderProgramId</span>(<span class="ide">vertShader</span>, <span class="ide">fragShader</span>)</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">    <span class="com"># Create a simple circle model using baseShader.</span></div></div><div class="line"><div class="line-content">    <span class="ide">circleModel</span> <span class="op">=</span> <span class="ide">baseShader</span><span class="op">.</span><span class="ide">makeCircleModel</span>(</div></div><div class="line"><div class="line-content">      <span class="ide">triangles</span> <span class="op">=</span> <span class="num">8</span>,</div></div><div class="line"><div class="line-content">      <span class="com"># These vertex colours get mixed with the instance colour with default shaders.</span></div></div><div class="line"><div class="line-content">      <span class="ide">insideCol</span> <span class="op">=</span> <span class="ide">vec4</span>(<span class="num">1.0</span>),</div></div><div class="line"><div class="line-content">      <span class="ide">outsideCol</span> <span class="op">=</span> <span class="ide">vec4</span>(<span class="num">0.3</span>, <span class="num">0.3</span>, <span class="num">0.3</span>, <span class="num">1.0</span>),</div></div><div class="line"><div class="line-content">      <span class="ide">maxInstances</span> <span class="op">=</span> <span class="num">1000</span></div></div><div class="line"><div class="line-content">    )</div></div>  </code></pre>
+<p>The <code>modelrenderer</code> module is really just setting up some buffers for a default shader, and serves as a template for more specific shader layouts.</p>
+<p>For instance, to add a buffer for normals, we could easily extend <code>newModel</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">glbits</span>, <span class="ide">glbits</span><span class="op">/</span><span class="ide">modelrenderer</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">export</span> <span class="ide">modelrenderer</span> <span class="kwd">except</span> <span class="ide">newModel</span>, <span class="ide">renderModel</span>, <span class="ide">renderModels</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newModel</span><span class="op">*</span>(<span class="ide">shaderProgramId</span>: <span class="ide">ShaderProgramId</span>, <span class="ide">vertices</span>: <span class="ide">openarray</span>[<span class="ide">GLvectorf3</span>], <span class="ide">colours</span>: <span class="ide">openarray</span>[<span class="ide">GLvectorf4</span>], <span class="ide">normals</span>: <span class="ide">openarray</span>[<span class="ide">GLvectorf3</span>]): <span class="ide">ModelId</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span></div></div><div class="line"><div class="line-content">    <span class="ide">normals</span> <span class="op">=</span> <span class="ide">initVBO</span>(<span class="num">6</span>, <span class="ide">normals</span>) <span class="com"># Create a buffer object and read the normal data.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ... previous 0-5 buffer adds.</span></div></div><div class="line"><div class="line-content">  <span class="ide">vao</span><span class="op">.</span><span class="ide">add</span> <span class="ide">normals</span> <span class="com"># Add new buffer to the shader&apos;s vertex array object.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ... as before, the vao is stored and returns the index to you.</span></div></div><div class="line"><div class="line-content">  <span class="ide">models</span><span class="op">.</span><span class="ide">add</span> <span class="ide">ModelStorage</span>(<span class="ide">programId</span>: <span class="ide">shaderProgramId</span>, <span class="ide">vao</span>: <span class="ide">vao</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">models</span><span class="op">.</span><span class="ide">high</span><span class="op">.</span><span class="ide">ModelId</span></div></div>  </code></pre>
+<p>Then we can calculate the model&apos;s normals with <code>triangleNormals</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">glbits</span>, <span class="ide">mymodelrenderer</span>, <span class="ide">mymodeldata</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myModelId</span> <span class="op">=</span> <span class="ide">myShaderProg</span><span class="op">.</span><span class="ide">newModel</span>(<span class="ide">myVertices</span>, <span class="ide">myColours</span>, <span class="ide">myVertices</span><span class="op">.</span><span class="ide">triangleNormals</span>)</div></div>  </code></pre>
+<h2>Texture rendering</h2>
+<p>Textures are handled through a <code>TexBillboard</code> object which is designed to draw multiple instances.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sdl2</span>, <span class="ide">glbits</span>, <span class="ide">random</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">initSdlOpenGl</span>(<span class="num">800</span>, <span class="num">600</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create texture.</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">texture</span>: <span class="ide">GLTexture</span></div></div><div class="line"><div class="line-content"><span class="ide">texture</span><span class="op">.</span><span class="ide">initTexture</span>(<span class="num">100</span>, <span class="num">100</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Edit the texture&apos;s pixels.</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">y</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="ide">texture</span><span class="op">.</span><span class="ide">height</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="ide">texture</span><span class="op">.</span><span class="ide">width</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">ti</span> <span class="op">=</span> <span class="ide">texture</span><span class="op">.</span><span class="ide">index</span>(<span class="ide">x</span>, <span class="ide">y</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">texture</span><span class="op">.</span><span class="ide">data</span>[<span class="ide">ti</span>] <span class="op">=</span> <span class="ide">vec4</span>(<span class="ide">rand</span> <span class="num">1.0</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create rendering billboard.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">maxItems</span> <span class="op">=</span> <span class="num">100</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">texBillboard</span> <span class="op">=</span> <span class="ide">newTexBillboard</span>(<span class="ide">max</span> <span class="op">=</span> <span class="ide">maxItems</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Send the texture to the GPU.</span></div></div><div class="line"><div class="line-content"><span class="ide">texBillboard</span><span class="op">.</span><span class="ide">updateTexture</span>(<span class="ide">texture</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Set up &apos;maxItems&apos; instances of the texture.</span></div></div><div class="line"><div class="line-content"><span class="ide">texBillboard</span><span class="op">.</span><span class="ide">addItems</span>(<span class="ide">maxItems</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">curItem</span><span class="op">.</span><span class="ide">positionData</span> <span class="op">=</span>  <span class="ide">vec4</span>(<span class="ide">rand</span>(<span class="op">-</span><span class="num">1.0</span><span class="op">..</span><span class="num">1.0</span>), <span class="ide">rand</span>(<span class="op">-</span><span class="num">1.0</span><span class="op">..</span><span class="num">1.0</span>), <span class="num">0.0</span>, <span class="num">1.0</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">curItem</span><span class="op">.</span><span class="ide">colour</span> <span class="op">=</span>        <span class="ide">vec4</span>(<span class="ide">rand</span>(<span class="num">1.0</span>), <span class="ide">rand</span>(<span class="num">1.0</span>), <span class="ide">rand</span>(<span class="num">1.0</span>), <span class="num">1.0</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">curItem</span><span class="op">.</span><span class="ide">scale</span> <span class="op">=</span>         <span class="ide">vec2</span>(<span class="num">0.05</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">pollEvents</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">doubleBuffer</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Render instances of the texture.</span></div></div><div class="line"><div class="line-content">    <span class="ide">texBillboard</span><span class="op">.</span><span class="ide">render</span></div></div>  </code></pre>
+<p>For a more in depth example, see the <code>demons/texturedemo.nim</code>.</p>
+<h2>Fonts</h2>
+<p>Fonts are handled with a <code>TextCache</code> object.</p>
+<p>This uses <code>SDL2/ttf</code> to render text with a font to a <code>TexBillboard</code>.</p>
+<p>TTF font rendering is comparatively slow, so the font is only rendered if the text is changed, otherwise the cached texture is used.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache-2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/rlipsc/glbits">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

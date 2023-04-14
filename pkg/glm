@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">glm</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">opengl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">math</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">matrix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">vector</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">glsl</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Port of c++ glm library with shader-like syntax")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install glm" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>#Nim-glm port for matrix-vector algebra with shader like syntax.</p>
+<p>Nim-glm has vector constructors:
+Here&apos;s some examples</p>
+<pre>  <code>var
+    v = vec3(1.0, 5.0, 6.0)
+    a = vec3(2.0, 2.0, 5.0)
+    v4 = vec4(v, 1.0)
+    c = cross(v,a)
+    m = rotate(mat4d(), 5.0, vec3(1.0, 0.0, 0.0))
+    r = v4 * m
+</code></pre>
+<p>Also, this version has basics for common matrices creations:</p>
+<pre>  <code>var
+    eye = vec3(50.0, 50.0, 10.0)
+    center = vec3(0.0)
+    up = vec3(0.0, 1.0, 0.0)
+    viewMatrix = lookAt(eye, center, up)
+    projectionMat = perspective(math.PI/2, 1.0, 0.01, 100.0)
+
+echo viewMatrix * projectionMat
+</code></pre>
+<p>Use it in OpenGL environment:</p>
+<pre>  <code>var modelView = mat4f(1)
+  .rotate(alpha, n.x, n.y, n.z)
+  .scale(4,5,6)
+  .translate(1,2,3)
+
+glUniformMatrix4fv(_uniformLocation, 1, false, modelView.caddr)
+</code></pre>
+<p>There is swizzling support:</p>
+<pre>  <code>var pos1,pos2: Vec4f
+pos1.xyz = pos2.zww
+pos1.yz += pos2.ww
+var texcoord: Vec2f
+echo texcoord.st
+var color: Vec4f
+color.rgb = color.bgr
+</code></pre>
+<p>matrices can be printed with echo, because they have the <code>$</code> operator
+implemented. By default they use nice unicode characters for best
+visual representation.  But if you have probmles with them, you can
+pass <code>-d:noUnicode</code> to the compiler and the <code>$</code> functions will use
+a pure ASCII representation.</p>
+<pre>  <code>      ASCII            unicode
+
+ / 3  7   3   0 \   ⎡3  7   3   0⎤
+|  0  2  -1   1  |  ⎢0  2  -1   1⎥
+|  5  4   3   2  |  ⎢5  4   3   2⎥
+ \ 6  6   4  -1 /   ⎣6  6   4  -1⎦
+</code></pre>
+<p>perlin noise:</p>
+<pre>  <code>import glm/vec
+import glm/noise
+
+var line = newStringOfCap(80)
+for y in 0 ..&lt; 20:
+  for x in 0 ..&lt; 40:
+    let n = perlin(vec2f(float32(x), float32(y)) * 0.1&apos;f32)
+    let i = int(floor((n + 1) * 5))
+    line.add &quot;  .:+=*%#@&quot;[i]
+  echo line
+  line.setLen(0)
+
+
+# expected output:
+#
+#  =+++:::::+======++++==*%%%%**==++++++++=
+#  ===++::::++====++::++=*%%%%%*===++++:+++
+#  ***=+::.::+====++:::+==*%%%%***==++:::::
+#  ***=+:...:++===++:::++==**%%*****=++:...
+#  **=+::...::+====++:::+++==********=+:.
+#  *==+:....::+=====++:::::++==******=+:.
+#  ==+:..  .::+=****=++:::::::+==*****=+:.
+#  =+:..   .:++=*%%**=++::....:+==**%**=+:.
+#  ++:.   ..:+=*%%%%**=+:..   .:+=**%%**=+:
+#  ++:.   .::+=*%###%*=+::.   .:+==*%%%**=+
+#  =+:..  .:+==*%###%*==+:.   .:+==*%%%%*==
+#  =++:....:+=**%###%**=+:.    .:+=*%%#%%*=
+#  ==+::..:++=*%%####%*=+:.    .:+=*%%#%%**
+#  *==+:::++==*%%####%**=+:.   .:+==*%%%%**
+#  **==++++==***%%##%%%**=+:....::+=*****==
+#  %**======******%%%%%%**=+:....:++=***==+
+#  ***===*****====****%%%*=+::...:++====+++
+#  **===*****==++++==******=+::.::++====++:
+#  *====*****=++:::++==****=+::::+++====++:
+#  ==++==***==+::..::+======++::+++======++
+</code></pre>
+<ul>
+<li>
+<p>Changes regarding based to C++glm and glsl</p>
+<ul>
+<li>
+<p>the <code>mod</code> function is called <code>floorMod</code> instead. <code>mod</code> is already
+an operator in Nim and has it&apos;s own meaning that is very different
+to the meaning of the <code>mod</code> function in glsl. The name <code>fmod</code> is
+not good either, because <code>fmod</code> in c++ has a different meaning as well.
+The function <code>floorMod</code> from the <code>math</code> package has the same
+meaning as the <code>mod</code> function in glsl. Therefore <code>mod</code> is simply
+named <code>floorMod</code> to be at least consistent with the Nim standard
+library.  The <code>mod</code> operator always rounds towards zero, I personally
+recommend to never use this operator.</p>
+</li>
+<li>
+<p>swizzle support. Unlike c++, Nim allows pretty well to implement
+swizzling. So it is implemented with the least amount of surprise.</p>
+</li>
+<li>
+<p>simd instructions are not implemented.  You could hope that some
+day the C compiler will be smart enough to inject them, but I would
+not bet on it.</p>
+</li>
+<li>
+<p>glm in c++ has a lot more extensions that are not yet ported over
+to the Nim version. They are added when needed. On the other hand,
+this library is feature complete in terms of featurs that come from GLSL.</p>
+</li>
+</ul>
+</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/stavenko/nim-glm">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">package_visible_types</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">packages</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">visibility</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A hacky helper lib for authoring Nim packages with package-level visiblity")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install package_visible_types" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nim-package-visible-types</h1>
+<p>A hacky helper lib for authoring Nim packages with package-level visiblity</p>
+<h3>What problem does this solve?</h3>
+<p>https://forum.nim-lang.org/t/4293</p>
+<h3>How does it work?</h3>
+<p>Create a private <code>types</code> module for your package. Put all of the types into a single <code>packageTypes</code> block like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">package_visible_types</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">packageTypes</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">EthereumNode</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">networkId</span><span class="op">*:</span> <span class="ide">uint</span></div></div><div class="line"><div class="line-content">      <span class="ide">chain</span><span class="op">*:</span> <span class="ide">AbstractChainDB</span></div></div><div class="line"><div class="line-content">      <span class="ide">clientId</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content">      <span class="ide">connectionState</span><span class="op">*:</span> <span class="ide">ConnectionState</span></div></div><div class="line"><div class="line-content">      <span class="ide">keys</span><span class="op">*:</span> <span class="ide">KeyPair</span></div></div><div class="line"><div class="line-content">      <span class="ide">address</span><span class="op">*:</span> <span class="ide">Address</span></div></div><div class="line"><div class="line-content">      <span class="ide">rlpxCapabilities</span>: <span class="ide">seq</span>[<span class="ide">Capability</span>]</div></div><div class="line"><div class="line-content">      <span class="ide">rlpxProtocols</span>: <span class="ide">seq</span>[<span class="ide">ProtocolInfo</span>]</div></div><div class="line"><div class="line-content">      <span class="ide">listeningServer</span>: <span class="ide">StreamServer</span></div></div><div class="line"><div class="line-content">      <span class="ide">protocolStates</span>: <span class="ide">seq</span>[<span class="ide">RootRef</span>]</div></div><div class="line"><div class="line-content">      <span class="ide">discovery</span>: <span class="ide">DiscoveryProtocol</span></div></div><div class="line"><div class="line-content">      <span class="ide">peerPool</span><span class="op">*:</span> <span class="ide">PeerPool</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">Peer</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">transport</span>: <span class="ide">StreamTransport</span></div></div><div class="line"><div class="line-content">      <span class="ide">dispatcher</span>: <span class="ide">Dispatcher</span></div></div><div class="line"><div class="line-content">      <span class="ide">lastReqId</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">network</span><span class="op">*:</span> <span class="ide">EthereumNode</span></div></div><div class="line"><div class="line-content">      <span class="ide">secretsState</span>: <span class="ide">SecretState</span></div></div><div class="line"><div class="line-content">      <span class="ide">connectionState</span>: <span class="ide">ConnectionState</span></div></div><div class="line"><div class="line-content">      <span class="ide">remote</span><span class="op">*:</span> <span class="ide">Node</span></div></div><div class="line"><div class="line-content">      <span class="ide">protocolStates</span>: <span class="ide">seq</span>[<span class="ide">RootRef</span>]</div></div><div class="line"><div class="line-content">      <span class="ide">outstandingRequests</span>: <span class="ide">seq</span>[<span class="ide">Deque</span>[<span class="ide">OutstandingRequest</span>]]</div></div><div class="line"><div class="line-content">      <span class="ide">awaitedMessages</span>: <span class="ide">seq</span>[<span class="ide">FutureBase</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">OutstandingRequest</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">id</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">future</span>: <span class="ide">FutureBase</span></div></div><div class="line"><div class="line-content">      <span class="ide">timeoutAt</span>: <span class="ide">uint64</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="op">...</span></div></div>  </code></pre>
+<p>Even though some of the types and fields are private in the module above, <code>packageTypes</code> will
+automatically define public accessors for them (intended for your private use from the package).
+Furthermore, you can easily re-export the public definitions in the following way:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">private</span><span class="op">/</span><span class="ide">types</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content"><span class="ide">types</span><span class="op">.</span><span class="ide">forwardPublicTypes</span></div></div>  </code></pre>
+<p>The scheme is currently limited to types, because private modules consisting of procs are already
+forwarded relatively easy with templates.</p>
+<h3>How does it work exactly?</h3>
+<ol>
+<li>Private types are made public, but not added to the list of forwarded types.</li>
+<li>Templates are added for the private fields (read-only and var-like getters, setters, etc)</li>
+</ol>
+<h3>Are there any limitations?</h3>
+<p>Unfortunately, yes.</p>
+<ol>
+<li>It&apos;s not possible to use the object constructor syntax for objects that carry private fields.
+As a work-around, the library defines <code>init</code> templates for all of the types:</li>
+</ol>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">r</span> <span class="op">=</span>  <span class="ide">OutstandingRequest</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">id</span> <span class="op">=</span> <span class="ide">result</span>,</div></div><div class="line"><div class="line-content">                                 <span class="ide">future</span> <span class="op">=</span> <span class="ide">responseFuture</span>,</div></div><div class="line"><div class="line-content">                                 <span class="ide">timeoutAt</span> <span class="op">=</span> <span class="ide">timeoutAt</span>)</div></div>  </code></pre>
+<ol start="2">
+<li>If an object stores a function pointer in a field, Nim will confuse the function pointer invocation
+with an application of the accessor template (resulting in an error). You can work-around the problem
+like this:</li>
+</ol>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">result</span> <span class="op">=</span> (<span class="ide">obj</span><span class="op">.</span><span class="ide">someFuncPtr</span>)(<span class="ide">param</span>, <span class="ide">param</span>)</div></div>  </code></pre>
+<ol start="3">
+<li>The accessor templates will sometimes introduce various other general overloading issues in the context
+of other templates and generic functions.</li>
+</ol>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/zah/nim-package-visible-types">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

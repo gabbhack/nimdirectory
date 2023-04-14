@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nsh</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">shell</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">repl</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("nsh: Nim SHell(cross platform)")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nsh" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nsh</h1>
+<p><a href="https://travis-ci.org/gmshiba/nsh">  <img src="https://travis-ci.org/gmshiba/nsh.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<a href="https://github.com/yglukhov/nimble-tag">  <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" /></a></p>
+<p>nsh is the <strong>SH</strong>ell implemented on <strong>N</strong>im.
+nsh can use not only shell commands, but also Nim code.</p>
+<ul>
+<li>
+<p>Commands are implemented in &apos;nshpkg/unixcmd.nim&apos; and &apos;nshpkg/unixcmd_script.nim&apos;.
+If you want these procs in other source code, use &apos;import nshpkg/unixcmd&apos;. (If you use NimScript, use &apos;import nshpkg/unixcmd_script.nim&apos;.)</p>
+</li>
+<li>
+<p>You can use &apos;tocl&apos; to export nim variables to shell.</p>
+</li>
+</ul>
+<h1>demo</h1>
+<p>  <img src="demo/nshdemo.gif" style="max-width: 100%;" alt="demo" /></p>
+<h1>installation</h1>
+<pre>  <code>nimble install https://githib.com/gmshiba/nsh
+</code></pre>
+<h2>Warinig</h2>
+<ul>
+<li>When you install nsh by nimble, probably you see this message. It&apos;s no problem. Please type &apos;y&apos; to continue.</li>
+</ul>
+<pre>  <code>Prompt: Missing directory C:\pathTo\.nimble\pkgs\nsh-0.x.x\src\nshpkg. Continue? [y/N]
+</code></pre>
+<h1>Todo</h1>
+<ul>
+<li>Implement more commands</li>
+<li>Tab complement</li>
+</ul>
+<h1>Available commands list</h1>
+<table>
+<thead>
+<tr>
+<th align="left">Command Name</th>
+<th align="right">Proc Name</th>
+<th align="center">Can receive value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pwd</td>
+<td align="right">pwd</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">cd</td>
+<td align="right">cd</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">rm</td>
+<td align="right">rm</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">ls</td>
+<td align="right">ls</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">mkdir</td>
+<td align="right">mkdir</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">rmdir</td>
+<td align="right">rmdir</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">cp</td>
+<td align="right">cp</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">mv</td>
+<td align="right">mv</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">pushd</td>
+<td align="right">pushd</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">popd</td>
+<td align="right">popd</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">cat</td>
+<td align="right">cat</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">touch</td>
+<td align="right">touch</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">file</td>
+<td align="right">file</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">find</td>
+<td align="right">ffind</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">locate</td>
+<td align="right">locate</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">more</td>
+<td align="right">more</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">less</td>
+<td align="right">less</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">head</td>
+<td align="right">head</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">tail</td>
+<td align="right">tail</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">grep</td>
+<td align="right">grep</td>
+<td align="center">○</td>
+</tr>
+<tr>
+<td align="left">wc</td>
+<td align="right">wc</td>
+<td align="center">○</td>
+</tr>
+<tr>
+<td align="left">sed</td>
+<td align="right">sed</td>
+<td align="center">○</td>
+</tr>
+<tr>
+<td align="left">tee</td>
+<td align="right">tee</td>
+<td align="center">○</td>
+</tr>
+<tr>
+<td align="left">join</td>
+<td align="right">fjoin</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">diff</td>
+<td align="right">diff</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">cut</td>
+<td align="right">cut</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">uniq</td>
+<td align="right">uniq</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">sort</td>
+<td align="right">sort</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">nkf</td>
+<td align="right">nkf</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">history</td>
+<td align="right">history</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">ps</td>
+<td align="right">ps</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">kill</td>
+<td align="right">kill</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">lp</td>
+<td align="right">lp</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">lpstat</td>
+<td align="right">lpstat</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">cancel</td>
+<td align="right">cancel</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">du</td>
+<td align="right">du</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">ln</td>
+<td align="right">ln</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">man</td>
+<td align="right">man</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">which</td>
+<td align="right">which</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">tar</td>
+<td align="right">tar</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">id</td>
+<td align="right">id</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">shutdown</td>
+<td align="right">shutdown</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">reboot</td>
+<td align="right">reboot</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">hostname</td>
+<td align="right">hostname</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">groups</td>
+<td align="right">groups</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">chown</td>
+<td align="right">chown</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">chgrp</td>
+<td align="right">chgrp</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">who</td>
+<td align="right">who</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">whoami</td>
+<td align="right">whoami</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">set</td>
+<td align="right">vset</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">printenv</td>
+<td align="right">printenv</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">watch</td>
+<td align="right">watch</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="right">date</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">sleep</td>
+<td align="right">sleep</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">time</td>
+<td align="right">time</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="left">xargs</td>
+<td align="right">xargs</td>
+<td align="center">×</td>
+</tr></tbody></table>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/gmshiba/nish">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

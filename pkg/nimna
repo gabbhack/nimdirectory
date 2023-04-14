@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimna</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nucleic-acid-folding</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">scientific</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">biology</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nucleic acid folding and design.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimna" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nimna</h1>
+<p><strong>nim</strong> <strong>n</strong>ucleic <strong>a</strong>cid folding.</p>
+<h2>What is nimna?</h2>
+<p><strong>nimna</strong> is a set of bindings to <a href="https://www.tbi.univie.ac.at/RNA/">ViennaRNA</a>, a library for RNA and DNA folding  applications. It consists of a very thin <code>c2nim</code> wrapper <code>RNA.nim</code>, as well as a high level interface <code>nimna.nim</code>, which wraps the many pointers used in the ViennaRNA into garbage collected <code>ref objects</code> to make the library easier to use. Furthermore, it provides nucleic acid design functionality in the form of an &apos;artificial immune-system&apos; algorithm in <code>design.nim</code>.</p>
+<h2>Installation</h2>
+<p>Installation of <code>nimna</code> and its dependencies is automatically handled using <code>nimble install</code>. This tries to autodetect, whether a suitable dynamic library version of <code>libRNA</code> exists on your computer. If that is not the case, it pulls all files necessary for installation from the web and installs them. In case of Windows, the ViennaRNA installer is started and you may need to complete the
+some installation steps manually, while for *nix ViennaRNA is built from source. As such, it suffices for most use-cases to just perform:</p>
+<pre>  <code>$ nimble install nimna
+</code></pre>
+<p>or</p>
+<pre>  <code>$ nimble install &lt;this repository&apos;s url&gt;
+</code></pre>
+<p>As nimble currently does not allow <code>uninstall</code> hooks, <code>nimna</code> provides a command to clean up dependencies, should you want to uninstall <code>nimna</code>:</p>
+<pre>  <code>$ nimnacleanup
+</code></pre>
+<p>This removes the dependency folder in the <code>nimna</code> package. If this is not done, nimble cannot fully remove <code>nimna&apos;s</code> package directory, leaving the deps folder to lie around.</p>
+<h2>What can I do with it?</h2>
+<p><code>nimna</code> currently provides the functionality implemented in ViennaRNA, as well as some extra bits. As <code>nimna</code>&apos;s current status is a <em>work-in-progress</em>, the set of available functionality will be steadily growing. You can find more documentation, as well as short examples for every submodule <a href="https://mjendrusch.github.io/projects/nimna/nimna">here</a></p>
+<p>Here&apos;s an incomplete list of what can be done with <code>nimna</code>:</p>
+<h3>Partition function (pf) and minimum free energy (mfe) folding</h3>
+<p>Folding for single molecules:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">sequence</span> <span class="op">=</span> compound"CCCCCAAAGGGGG"</div></div><div class="line"><div class="line-content">  <span class="ide">mfeResult</span> <span class="op">=</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">mfe</span></div></div><div class="line"><div class="line-content">  <span class="ide">pfResult</span> <span class="op">=</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">pf</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">mfeResult</span><span class="op">.</span><span class="ide">struc</span> <span class="com"># prints (((((...)))))</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">mfeResult</span><span class="op">.</span><span class="ide">E</span>     <span class="com"># prints the free energy</span></div></div><div class="line"><div class="line-content">                     <span class="com"># of folding in kcal/mol</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">pfResult</span><span class="op">.</span><span class="ide">struc</span>  <span class="com"># prints (((((...)))))</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">pfResult</span><span class="op">.</span><span class="ide">E</span>      <span class="com"># prints the ensemble free</span></div></div><div class="line"><div class="line-content">                     <span class="com"># energy of folding in kcal/mol</span></div></div>  </code></pre>
+<p>Folding for dimers and alignments works analogously after creation of suitable <code>Compound</code> objects.</p>
+<h3>Free energy evaluation of structures</h3>
+<p>When no full folding prediction is required, <code>nimna</code> allows for the computation of free energies of given secondary structures for a <code>Compound</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">eval</span>(<span class="str">&quot;(((((...)))))&quot;</span>) <span class="com"># Prints the free</span></div></div><div class="line"><div class="line-content">                                    <span class="com"># energy of folding</span></div></div><div class="line"><div class="line-content">                                    <span class="com"># for the given</span></div></div><div class="line"><div class="line-content">                                    <span class="com"># structure.</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">evalRemove</span>(</div></div><div class="line"><div class="line-content">  <span class="str">&quot;(((((...)))))&quot;</span>, <span class="num">0</span>, <span class="num">12</span>) <span class="com"># Prints the free energy of</span></div></div><div class="line"><div class="line-content">                          <span class="com"># removing the base pair of</span></div></div><div class="line"><div class="line-content">                          <span class="com"># the first and last</span></div></div><div class="line"><div class="line-content">                          <span class="com"># nucleotides</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">evalAdd</span>(</div></div><div class="line"><div class="line-content">  <span class="str">&quot;.((((...)))).&quot;</span>, <span class="num">0</span>, <span class="num">12</span>) <span class="com"># Prints the free energy of</span></div></div><div class="line"><div class="line-content">                          <span class="com"># adding a base pair between</span></div></div><div class="line"><div class="line-content">                          <span class="com"># the first and last</span></div></div><div class="line"><div class="line-content">                          <span class="com"># nucleotides</span></div></div>  </code></pre>
+<h3>Access to base pairing probabilities</h3>
+<p>When using partition function folding (<code>pf</code>), base pairing probabilities are set in the <code>Compound</code> object, an immutable view of which can be created later:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">probs</span> <span class="op">=</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">probabilities</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">probs</span>[<span class="ide">i</span>, <span class="ide">j</span>] <span class="com"># prints the probability of bases</span></div></div><div class="line"><div class="line-content">                 <span class="com"># i and j in `sequence` forming</span></div></div><div class="line"><div class="line-content">                 <span class="com"># a base pair.</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">sequence</span><span class="op">.</span><span class="ide">prob</span>(<span class="ide">i</span>, <span class="ide">j</span>) <span class="com"># prints the same as above.</span></div></div>  </code></pre>
+<p>A <code>Probabilities</code> object created from a <code>Compound</code> may be iterated over using a set of iterators provided in <code>nimna</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">elem</span> <span class="kwd">in</span> <span class="ide">probs</span><span class="op">.</span><span class="ide">items</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">elem</span> <span class="com"># prints each and every</span></div></div><div class="line"><div class="line-content">            <span class="com"># entry in the probability matrix.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">pos</span>, <span class="ide">prob</span> <span class="kwd">in</span> <span class="ide">probs</span><span class="op">.</span><span class="ide">pairs</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">pos</span><span class="op">.</span><span class="ide">i</span>, <span class="str">&quot; : &quot;</span>, <span class="ide">pos</span><span class="op">.</span><span class="ide">j</span>, <span class="str">&quot; : &quot;</span>, <span class="ide">prob</span></div></div><div class="line"><div class="line-content">  <span class="com"># prints the base positions together</span></div></div><div class="line"><div class="line-content">  <span class="com"># with the associated probabilities.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span>, <span class="ide">j</span>, <span class="ide">prob</span> <span class="kwd">in</span> <span class="ide">probs</span><span class="op">.</span><span class="ide">triples</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span>, <span class="str">&quot; : &quot;</span>, <span class="ide">j</span>, <span class="str">&quot; : &quot;</span>, <span class="ide">prob</span></div></div><div class="line"><div class="line-content">  <span class="com"># prints the same as above.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">pos</span> <span class="kwd">in</span> <span class="ide">probs</span><span class="op">.</span><span class="ide">positions</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">elem</span> <span class="kwd">in</span> <span class="ide">pos</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">elem</span> <span class="com"># for every base in the Compound</span></div></div><div class="line"><div class="line-content">              <span class="com"># prints the base pairing probability</span></div></div><div class="line"><div class="line-content">              <span class="com"># of that base with all other bases.</span></div></div>  </code></pre>
+<h3>Fine tuning of folding parameters</h3>
+<p>Although standard folding parameters are often deemed sufficient for many use cases, tuning of parameters may be required for more specialized analyses. To that end <code>nimna</code> provides the means to adjust the folding parameters at will:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Use the `settings` macro to create a new</span></div></div><div class="line"><div class="line-content"><span class="com"># set of folding parameters:</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">settings</span> <span class="op">=</span> <span class="ide">settings</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">temperature</span> <span class="op">=</span> <span class="num">25.0</span>, <span class="com"># Set the folding</span></div></div><div class="line"><div class="line-content">                        <span class="com"># temperature to 25°C</span></div></div><div class="line"><div class="line-content">    <span class="ide">noGU</span> <span class="op">=</span> <span class="num">1</span>            <span class="com"># Disallow G--U base pairs</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content">  <span class="com"># Parameters for mfe folding</span></div></div><div class="line"><div class="line-content">  <span class="ide">mfeParams</span> <span class="op">=</span> <span class="ide">settings</span><span class="op">.</span><span class="ide">toParams</span></div></div><div class="line"><div class="line-content">  <span class="com"># Parameters for pf folding</span></div></div><div class="line"><div class="line-content">  <span class="ide">pfParams</span> <span class="op">=</span> <span class="ide">settings</span><span class="op">.</span><span class="ide">toScaledParams</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Now, update the compound with those parameters:</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">mfeParams</span>) <span class="com"># Update parameters</span></div></div><div class="line"><div class="line-content">                           <span class="com"># for mfe folding only.</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">pfParams</span>)  <span class="com"># Update parameters</span></div></div><div class="line"><div class="line-content">                           <span class="com"># for pf folding only.</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">settings</span>)  <span class="com"># Update all parameters.</span></div></div>  </code></pre>
+<h3>Application of soft and hard constraints to compounds</h3>
+<p>For certain applications, for example for working with aptamers protein binding domains, Ag-nanocluster forming sequences and other sequences with strong outside (i.e. non DNA/RNA) influences on folding, it is necessary to inform the folding algorithm about the presence of those structures. This is done using (hard or soft) constraints encoding the outside influence, its free energy of
+interaction and the resulting secondary structure resulting upon interaction. To that end, <code>nimna</code> provides access to the full spectrum of constraints implemented in ViennaRNA.</p>
+<p>Hard constraints <strong>force</strong> the nucleic acid to fold in certain ways, regardless of other, perhaps more favourable interactions involved. They are set using <code>forceX</code>, where <code>X</code> is one of <code>paired, unpaired</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Given a compound `sequence`, constrain its</span></div></div><div class="line"><div class="line-content"><span class="com"># i&apos;th and j&apos;th base to pair:</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">forcePaired</span>(<span class="ide">i</span>, <span class="ide">j</span>)</div></div><div class="line"><div class="line-content"><span class="com"># constrain its k&apos;th base to stay unpaired:</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">forceUnpaired</span>(<span class="ide">k</span>)</div></div><div class="line"><div class="line-content"><span class="com"># constrain it according to a dot-bracket string:</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">constrain</span>(<span class="str">&quot;x((((xxx))))x&quot;</span>) <span class="com"># &apos;x&apos; means:</span></div></div><div class="line"><div class="line-content">                                    <span class="com"># must not pair</span></div></div><div class="line"><div class="line-content"><span class="com"># lift all constraints</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">liftConstraints</span></div></div>  </code></pre>
+<p>Soft constraints register base pairs or motifs with a certain <strong>preferred</strong> free energy of interaction, which are then incorporated into folding prediction. This allows for correct folding, when lower energy interactions outside the constraints are available. They are set using <code>preferX</code>, where <code>X</code> is one of <code>paired, unpaired</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Given a compound `sequence`, add a beneficial</span></div></div><div class="line"><div class="line-content"><span class="com"># free energy contribution of -10.0 kcal/mol to</span></div></div><div class="line"><div class="line-content"><span class="com"># the base pairing of its i&apos;th and j&apos;th base:</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">preferPaired</span>(<span class="ide">i</span>, <span class="ide">j</span>, <span class="op">-</span><span class="num">10.0</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Do the same for its k&apos;th base to stay unpaired:</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">preferUnpaired</span>(<span class="ide">k</span>, <span class="op">-</span><span class="num">10.0</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Do the same for a motif `CCAA` in `sequence`</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">preferMotif</span>(<span class="str">&quot;CCAA&quot;</span>, <span class="op">-</span><span class="num">10</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Lift all preferences</span></div></div><div class="line"><div class="line-content"><span class="ide">sequence</span><span class="op">.</span><span class="ide">liftPreferences</span></div></div>  </code></pre>
+<h3>Nucleic acid design</h3>
+<p><code>nimna</code> provides an &apos;artificial immune system&apos;-based nucleic acid design algorithm for automatic design of nucleic acids according to a user-specified fitness function:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Define a fitness function:</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fitness</span>(<span class="ide">c</span>: <span class="ide">Compound</span>): <span class="ide">float</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">c</span><span class="op">.</span><span class="ide">eval</span>(<span class="str">&quot;(((((((...))))..)))&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># create a new `DesignEngine`:</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">design</span> <span class="op">=</span> <span class="ide">newEngine</span>(<span class="num">20</span>, <span class="ide">fitness</span>)</div></div><div class="line"><div class="line-content"><span class="com"># constrain the sequence space to be searched:</span></div></div><div class="line"><div class="line-content"><span class="ide">design</span><span class="op">.</span><span class="ide">pattern</span> <span class="op">=</span> <span class="str">&quot;NNNNNNNATGCNNNYHGNN&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># specify a structure for structure-consistent mutation.</span></div></div><div class="line"><div class="line-content"><span class="com"># this ensures, that the three base pairs around the</span></div></div><div class="line"><div class="line-content"><span class="com"># three-nucleotide-loop are mutated together, such that</span></div></div><div class="line"><div class="line-content"><span class="com"># they form Watson-Crick base pairs:</span></div></div><div class="line"><div class="line-content"><span class="ide">design</span><span class="op">.</span><span class="ide">structure</span> <span class="op">=</span> <span class="str">&quot;....(((...)))......&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># set the folding parameters:</span></div></div><div class="line"><div class="line-content"><span class="ide">design</span><span class="op">.</span><span class="ide">settings</span> <span class="op">=</span> <span class="ide">settings</span>(<span class="ide">temperature</span> <span class="op">=</span> <span class="num">25.0</span>)</div></div><div class="line"><div class="line-content"><span class="com"># set the mutation probability:</span></div></div><div class="line"><div class="line-content"><span class="ide">design</span><span class="op">.</span><span class="ide">mutationProbability</span> <span class="op">=</span> <span class="num">0.6</span></div></div><div class="line"><div class="line-content"><span class="com"># run the algorithm for 100 steps:</span></div></div><div class="line"><div class="line-content"><span class="ide">design</span><span class="op">.</span><span class="ide">step</span>(<span class="num">100</span>)</div></div><div class="line"><div class="line-content"><span class="com"># print the best sequence according to</span></div></div><div class="line"><div class="line-content"><span class="com"># the fitness function:</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">design</span><span class="op">.</span><span class="ide">best</span><span class="op">.</span><span class="ide">sequence</span></div></div>  </code></pre>
+<h3>A more complete list of available functionality</h3>
+<ul>
+<li>Folding:
+<ul>
+<li>Partition function folding for one or more molecules, as well as alignments.</li>
+<li>Minimum free energy folding for one or more molecules, as well as alignments..</li>
+<li>Centroid structure folding for one or more molecules.</li>
+<li>2DFold (MFE and partition function).</li>
+<li>Maximum expected accuracy folding.</li>
+<li>Generation of suboptimal structures and energies.</li>
+</ul>
+</li>
+<li>Constraints:
+<ul>
+<li>Hard constraints are fully supported.</li>
+<li>Soft constraints are fully supported.</li>
+<li>Structured ligand binding constraints are fully supported.</li>
+</ul>
+</li>
+<li>Model Details:
+<ul>
+<li>Updating of model details associated with a molecule.</li>
+<li>Generating MFE and PF parameters from model details.</li>
+<li>Macro for easily generating model details.</li>
+</ul>
+</li>
+<li>Parameters:
+<ul>
+<li>Updating of parameters associated with a molecule.</li>
+</ul>
+</li>
+<li>Probability Matrix:
+<ul>
+<li>Probability matrix exposed as <code>Probabilities = ref object</code>.</li>
+<li>Extracting values from the probability matrix of
+partition function folding.</li>
+<li>Generating a Density Plot of the base pairing probability
+in a terminal emulator.</li>
+</ul>
+</li>
+<li>Nucleic acid design:
+<ul>
+<li>Generating nucleic acid sequences corresponding to local minima in
+user-defined fitness functions.</li>
+</ul>
+</li>
+<li>Miscellaneous:
+<ul>
+<li>Generating reasonably random DNA/RNA sequences.</li>
+<li>Evaluating energies of secondary structures.</li>
+<li>Sampling secondary structures from ensembles computed with
+<code>pf</code> and <code>pf2D</code>.</li>
+<li>Iterators for all types which can be iterated over.</li>
+<li>Reading and writing parameter files.</li>
+</ul>
+</li>
+</ul>
+<h2>A short example:</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># We want to fold a sequence at multiple temperatures,</span></div></div><div class="line"><div class="line-content"><span class="com"># and see how the base pairing probabilities change:</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimna</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rna</span> <span class="op">=</span> compound"GGGGGAGGAAACCTTCCCC"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">deltaT</span> <span class="kwd">in</span> <span class="num">0.</span><span class="op">.</span><span class="num">200</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">T</span> <span class="op">=</span> <span class="num">20.0</span> <span class="op">+</span> <span class="ide">deltaT</span><span class="op">.</span><span class="ide">float</span> <span class="op">/</span> <span class="num">10.0</span></div></div><div class="line"><div class="line-content">  <span class="kwd">discard</span> <span class="ide">rna</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">settings</span>(<span class="ide">temperature</span> <span class="op">=</span> <span class="ide">T</span>))<span class="op">.</span><span class="ide">pf</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">deltaT</span> <span class="op">!=</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># This makes use of ANSI-escapes to move the cursor</span></div></div><div class="line"><div class="line-content">    <span class="com"># up to the beginning of the plot, to write over it</span></div></div><div class="line"><div class="line-content">    <span class="com"># again, so we can have a nice animation.</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;</span>\e<span class="str">[$1A&quot;</span> <span class="op">%</span> <span class="op">$</span>(<span class="ide">rna</span><span class="op">.</span><span class="ide">length</span> <span class="op">+</span> <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">rna</span><span class="op">.</span><span class="ide">densityPlot</span></div></div>  </code></pre>
+<h2>iGEM disclaimer</h2>
+<p><code>nimna</code> is not a project of a Heidelberg iGEM team, future or past. Certainly, it was inspired by the work of the <a href="http://2015.igem.org/Team:Heidelberg">Heidelberg iGEM team 2015</a> but it is its own project, which I work on, on my own time and which <strong>will be maintained and supported</strong>, in contrast to some iGEM code out there.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/mjendrusch/nimna">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

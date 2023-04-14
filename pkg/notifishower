@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">notifishower</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">binary</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">notifications</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graphics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">gui</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Small program to draw notifications on the screen in a highly customisable way")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install notifishower" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <img src="https://github.com/PMunch/notifishower/blob/master/notifishower.png" style="max-width: 100%;" alt="Notifishower logo" /></p>
+<p>Ever wanted to just display some information on the screen in your custom Linux
+environment. Or just have full control over your notifications? Then this is
+the tool for you!</p>
+<h1>What is notifishower?</h1>
+<p>Notifishower is a simple program to display a combination of text and images as
+a notification, a dock, a desktop widget, or even just a normal window. The
+goal is to be as flexible as absolutely possible, with layouts defined in a
+EVFL-like formatting language and full ninepatch support for the background and
+elements. It also supports clickable elements, keyboard shortcuts, and updating
+text and images while the program is running. It does not read freedesktop
+notifications however, for that you might want to check out notificatcher.</p>
+<h1>Sounds cool, how do I use it?</h1>
+<p>Easiest way to figure it out is by checking out the help message:</p>
+<pre>  <code>Notifishower 0.7.0
+
+This is a simple program to display a combinations of text and images as a
+notification on the screen. It does not read freedesktop notifications, for
+that you might want to check out notificatcher.
+
+Usage:
+  notifishower [options]
+
+Options:
+  --help                                    Show this screen
+  -v --version                              Show the version
+  --config &lt;file&gt;                           Parses options from the config file
+  --class &lt;class&gt;                           Set the window class [default: notishower]
+  --name &lt;name&gt;                             Set the window name [default: Notishower]
+  --icon &lt;file&gt;                             Set the window icon
+  --mode &lt;mode&gt;                             Decides the mode of the X11 window [default: notification]
+  --edge &lt;edge&gt;                             The side on which to attach the dock when in docking mode
+  -x &lt;x&gt;                                    Set the x position of the notification [default: 0]
+  -y &lt;y&gt;                                    Set the y position of the notification [default: 0]
+  -w &lt;w&gt;                                    Set the width of the notification [default: 200]
+  -h &lt;h&gt;                                    Set the height of the notification [default: 100]
+  --color &lt;color&gt;                           Set the default colour of all text
+  --background &lt;color&gt;                      Set the background colour of the notification
+  --hover &lt;color&gt;                           Set the default colour of the hover indicator
+  --border &lt;color&gt;                          Set the border colour of the notification
+  --border.width &lt;bw&gt;                       Set the width of the border [default: 2]
+  --font &lt;font&gt;                             Sets the default font for all text elements
+  --action &lt;action&gt;                         Assign an action to clicks outside any element
+  --quitonaction                            Wheter or not to quit when an action is taken [default: true]
+  --ninepatch &lt;path&gt;                        Set the background to a ninepatch image
+  --tile &lt;bool&gt;                             Set the ninepatch to tiling mode or not
+  --shortcut &lt;shortcut&gt;                     Sets a keyboard shortcut for the default action
+  --&lt;id&gt;.text &lt;text&gt;                        Store a text element with a given ID
+  --&lt;id&gt;.text.pipe &lt;path&gt;                   A file or fifo which will be used for text input
+  --&lt;id&gt;.font &lt;font&gt;                        Set the font for a text element
+  --&lt;id&gt;.color &lt;color&gt;                      Set the color for a text element
+  --&lt;id&gt;.background &lt;color&gt;                 Set the background color for an element
+  --&lt;id&gt;.image &lt;path&gt;                       Store an image element with a given ID
+  --&lt;id&gt;.image.pipe &lt;path&gt;                  A file or fifo which will be used for image input
+  --&lt;id&gt;.ninepatch &lt;path&gt;                   Set the background of an element to a ninepatch
+  --&lt;id&gt;.tile &lt;bool&gt;                        Set the tiling mode of the background ninepatch
+  --&lt;id&gt;.action &lt;action&gt;                    Assign an action to an element
+  --&lt;id&gt;.hover &lt;color&gt;                      Set the color of the hover indicator
+  --&lt;id&gt;.hover.ninepatch &lt;path&gt;             Set the hover indicator of an element to a ninepatch
+  --&lt;id&gt;.hover.tile &lt;bool&gt;                  Set the tiling mode of the hover indicator ninepatch
+  --&lt;id&gt;.shortcut &lt;shortcut&gt;                Adds a keyboard shortcut to run the element action
+  --monitor &lt;xrandrID&gt; [&lt;x&gt;,&lt;y&gt;] [&lt;w&gt;:&lt;h&gt;]  Defines a monitor to show the notification on
+  --format &lt;format&gt;                         Sets the layout of the notification
+  --padding &lt;number&gt;                        The default padding for &apos;-&apos; in a pattern
+  --timeout &lt;number&gt;                        Close the notification after a number of seconds
+
+Mode:
+  Notifishower was originally made to show notifications on screen. However its
+  customisability quickly led it to be useful for other things. With the mode
+  switch you are able to tell notifishower to display in different modes. The
+  mode can be one of &quot;notification&quot;, &quot;desktop&quot;, &quot;window&quot;, or &quot;dock&quot;.
+  Notification is the default, and will show a borderless window that draws on
+  top of everything else. Desktop does the same, but draws underneath all other
+  windows, effectively acting as a desktop widget. Window is a typical window,
+  and is under full control of the WM. And finally dock will request an edge of
+  the monitor where windows don&apos;t show and display there.
+
+Piping input:
+  With the pipe variants of text and images you can update the content of fields
+  passed to the notification. Particularily useful for docks or desktop widgets.
+  The input is polled by select and each line read and used as the input.
+  Because of this it is a good idea to make a FIFO instead of passing a file so
+  that the contents won&apos;t accumulate.
+
+Positions and widths:
+  X and Y positions can be the position on the monitor to display the
+  notification, if you pass a negative number it will be placed that many pixels
+  minus one away from the right or bottom. The minus one is because -0 isn&apos;t a
+  valid number for the parser so -1 is the same as 0 pixels from the edge. In
+  addition you can use center+/-&lt;number&gt; to center the notification in the x or
+  y direction. Passing center+0 for both x and y should put the center of the
+  notification in the center of your screen.
+  Width and height can also be negative, and it means screen width minus
+  that amount. For width and height you&apos;re also able to define &gt;= or &lt;=
+  constraints so -w &gt;=100 would set the minimal size of the notification to
+  100 but otherwise scale it larger.
+  Border width is applied outside the window, so setting width to 100 and border
+  width to 50 would still mean a 100 pixel area for the notification.
+
+Colors:
+  Colors are simple hex colors, with an optional # prefix. If a six character
+  value is passed alpha is assumed to be FF, or if an eight character value is
+  passed then the last two characters are considered the alpha value.
+
+Ninepatch background:
+  In order to be better able to customise the appearance of notifications
+  notifishower also supports ninepatch background images. Ninepatches are normal
+  images with a 1px border around the entire image, this border contains
+  contiguous black pixels that signify which parts of the image can be
+  stretched, and where to place content. When setting width and height of the
+  notification it will be the width and height of the notification including the
+  area required for padding in the ninepatch image, so your actual content area
+  might be smaller. If you want the scaleable section to tile instead of stretch
+  you can pass the --tile true option.
+  Ninepatches can also be applied as background to any element. This is done by
+  passing --&lt;id&gt;.ninepatch and similarily --&lt;id&gt;.tile. Unlike the global
+  ninepatch background this draws the ninepatch outside the element so if you
+  want to make sure it doesn&apos;t appear under other elements or collide with other
+  backgrounds you need to supply your own padding in the format.
+
+Fonts:
+  Fonts are following the Imlib2 font format and are read from these folders:
+    $HOME/.local/share/fonts
+    $HOME/.fonts
+    /usr/local/share/fonts
+    /usr/share/fonts/truetype
+    /usr/share/fonts/truetype/dejavu
+    /usr/share/fonts/TTF
+  The format is essentially the filename without the &quot;.ttf&quot; extension followed
+  by a slash and the size, e.g. DejaVuSans/20 to load the file DejaVuSans.ttf
+  from one of those folders at point 20 size.
+
+Layout format:
+  In order to give you the ultimate configuration ability notifishower
+  implements a fairly simple visual formatting language. It features the
+  following grammar elements:
+    []       &lt;- A group of vertical elements
+    ()       &lt;- A group of horizontal elements
+    -        &lt;- A bit of padding
+    ~        &lt;- An expanding bit of padding
+    &lt;label&gt;  &lt;- An item that will be laid out
+    &lt;label&gt;= &lt;- Prefaces a group to name it
+    :        &lt;- The start of a constraint
+  The default pattern is:
+    (-[~icon:32~]-[~title body~]-)
+  Which means a horizontal stack with padding before, after, and between two
+  vertical sub-groups. The first sub-group contains the &quot;icon&quot; with expanding
+  padding above and below (meaning it will be vertically centered). It also has
+  a constrained size of 32 pixels in height (it will be scaled by aspect ratio
+  to match). The second sub-group contains the &quot;title&quot; and &quot;body&quot; without
+  padding between them and centered vertically in the group.
+  The labels are defined by the --&lt;id&gt;.text and --&lt;id&gt;.image options.
+  Constraints can be either a number or a label, optinonally prefixed by &quot;&gt;=&quot; or
+  &quot;&lt;=&quot; to specify if it&apos;s exact, or larger or greater than. When a constraint is
+  an element it constrains the size of this element in relation to that element.
+  It can also be a percentage postfixed by &quot;%&quot; which will be a percentage of the
+  size of the containing group. All constraints apply to the direction of the
+  parent container.  To specify a width of a padding you can put a constraint in
+  the middle of two &quot;-&quot; characters, for example &apos;-10-&apos;, &apos;-&gt;=20-&apos;, or &apos;-5%-&apos;.
+  When using this format make sure that all your constraints are actually
+  achievable, if not a notification will not be shown. Also make sure that you
+  have sufficient expanding padding regions to take up any remaining space in
+  the layout.
+
+Clickable elements:
+  Elements can be made clickable by assigning them an action. This is done by
+  passing --&lt;id&gt;.action. When an element that has an action is clicked it will
+  write the action to stdout and close the notification (unless --quitonaction
+  is set to false). When an element that has an action is hovered by the mouse
+  it will paint a rectangle underneath itself in either the default hover color
+  or the color defined with --&lt;id&gt;.hover. If you want to add a ninepatch image
+  instead as the hover background you can use --&lt;id&gt;.hover.ninepatch and
+  --&lt;id&gt;.hover.tile to specify the image and the tiling mode. If a group is
+  named that entire group can also be made clickable in the same way as
+  elements. The action can also include a certain set of format strings,
+  {clickX} and {clickY} which is the position of the click relative to the
+  element, {elementX} and {elementY} which is the position of the element within
+  the root window, {rootX} and {rootY} which is the position of the click within
+  the root window, {trigger} which is either click or keyboard, and {value}
+  which is the current text or image that was clicked.
+
+Shortcuts:
+  Elements with an action can also be assigned a shortcut. You can pass
+  --&lt;id&gt;.shortcut and a shortcut containing zero or more modifiers followed by a
+  key name, separated by &apos;+&apos; symbols. For example &apos;ctrl+shift+b&apos; or
+  &apos;XF86Search&apos;. When the shortcut is pressed the action will be triggered the
+  same way as if the element was clicked.
+  The modifiers can be:
+    ctrl
+    shift
+    lock
+    mod1
+    mod2
+    mod3
+    mod4
+    mod5
+  They can all be remapped in your X11 configuration, to see what they are
+  bound to, you can run &apos;xmodmap -pm&apos; to print the modifier map.
+
+Monitors:
+  By default a notification will be shown on all available monitors. If you
+  want to define which monitors to show the notification on you can pass the
+  --monitor parameter with an identifier from xrandr. If you specify one then
+  you have to specify every monitor you want to display the notification on.
+  You can also pass the position as x,y or the width as w:h following the same
+  rule as the global parameters.
+
+Configuration file:
+  A configuration file is also supported. Is is essentially just a string
+  transformation of the configuration file into the command line options. The
+  format is simply options without the preceding dashes, followed by a colon,
+  and the value as bash would parse it. This is how the default.conf file
+  appears and contains all the default parameters:
+    color: #FFFFFF
+    background: #444444
+    border: #808080
+    border.width: 2
+    x: 49
+    y: 0
+    w: -98
+    h: &gt;=0
+    font: DejaVuSans/10
+    format: (-[~icon:32~]-[~title body~]-)
+    title.font: DejaVuSans/12
+
+Managing notifications:
+  By default notifishower doesn&apos;t have any keyboard shortcuts to close the
+  notification or any timeout method to remove them. In order to remove the
+  notification you must kill the process, so it might be a good idea to add a
+  &quot;killall notifishower&quot; shortcut to your window manager. It also doesn&apos;t
+  support getting notifications from freedesktop, for that you might want to
+  have a look at notificatcher.
+</code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/PMunch/notifishower">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

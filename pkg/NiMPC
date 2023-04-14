@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">NiMPC</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multiparty</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">computation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mpc</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Secure multi-party computation")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install NiMPC" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>NiMPC</h1>
+<p>A secure multi-party computation (MPC) library for the <a href="https://nim-lang.org">Nim</a> programming
+language. Allows you to do joint computations with multiple parties while each
+party keeps their inputs private. We&apos;re working towards an implementation of the
+<a href="https://eprint.iacr.org/2018/482.pdf">SPDZ2k</a> protocol.</p>
+<p>  <img src="https://github.com/markspanbroek/nimpc/workflows/CI/badge.svg" style="max-width: 100%;" alt="CI Status" /></p>
+<h2>Work in Progress</h2>
+<p>This is very much a work in progress. At least the following still needs to be
+implemented before it can be considered feature complete:</p>
+<ul>
+<li>[x] A networking layer, to run multiple parties on separate machines.</li>
+<li>[ ] Support for more mathematical operations, such as division and square
+root.</li>
+<li>[ ] MAC checking, to make computations safe against active adversaries.</li>
+<li>[ ] OT extensions, to make multiplications faster and to circumvent a known
+flaw in the Oblivious Transfer protocol (see section 1.1. of the
+<a href="https://eprint.iacr.org/2015/267.pdf">OT paper</a>).</li>
+</ul>
+<h2>Installation</h2>
+<p>Only Linux and macOS are currently supported.</p>
+<p>Ensure that you have a <a href="https://nim-lang.org/install.html">recent version of Nim installed</a>.</p>
+<p>Use the <a href="https://github.com/nim-lang/nimble">Nimble</a> package manager to add NiMPC to an existing project.
+Add the following to its .nimble file:</p>
+<pre>  <code>requires &quot;NiMPC &gt;= 0.4.0 &amp; &lt; 0.5.0&quot;
+</code></pre>
+<h2>Examples</h2>
+<h3>Local Computation</h3>
+<p>Perform a computation with two parties. For now, both parties will run on the
+same machine, we&apos;ll cover how to connect parties over a network later.</p>
+<p>Import these modules:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">NiMPC</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span></div></div>  </code></pre>
+<p>Create two parties that will jointly perform a computation.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">party1</span>, <span class="ide">party2</span> <span class="op">=</span> <span class="ide">newLocalParty</span>()</div></div>  </code></pre>
+<p>Calling destroy when the local parties are no longer in scope ensures that their
+secret keys are securely wiped from memory.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">defer</span>: <span class="ide">destroy</span>(<span class="ide">party1</span>, <span class="ide">party2</span>)</div></div>  </code></pre>
+<p>Connect the parties.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">connect</span>(<span class="ide">party1</span>, <span class="ide">party2</span>)</div></div>  </code></pre>
+<p>Specify the computation that the first party will perform. We&apos;ll use the <code>async</code>
+and <code>await</code> macro&apos;s from  the <a href="https://nim-lang.org/docs/asyncdispatch.html">asyncdispatch</a> module.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">computation1</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<p>The first party shares a secret input with the other party. Currently only 32
+bit unsigned numbers (uint32) are supported.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">input1</span>: <span class="ide">Secret</span> <span class="op">=</span> <span class="ide">party1</span><span class="op">.</span><span class="ide">share</span>(<span class="num">21</span>)</div></div>  </code></pre>
+<p>Obtain a share of the secret input from the second party. The obtained secret
+does not reveal anything about the number that was input by the other party.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">input2</span>: <span class="ide">Secret</span> <span class="op">=</span> <span class="ide">party1</span><span class="op">.</span><span class="ide">obtain</span>(<span class="ide">party2</span>)</div></div>  </code></pre>
+<p>The two inputs are multiplied. Addition and subtraction are also
+supported.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">product</span>: <span class="ide">Secret</span> <span class="op">=</span> <span class="ide">input1</span> <span class="op">*</span> <span class="ide">input2</span></div></div>  </code></pre>
+<p>The product is revealed. This allows both parties to learn the product of the
+two secret inputs.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">revealed</span>: <span class="ide">uint32</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">product</span><span class="op">.</span><span class="ide">reveal</span>() <span class="com"># equals 42</span></div></div>  </code></pre>
+<p>Specify the equivalent computation for the second party:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">computation2</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">input1</span>: <span class="ide">Secret</span> <span class="op">=</span> <span class="ide">party2</span><span class="op">.</span><span class="ide">obtain</span>(<span class="ide">party1</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">input2</span>: <span class="ide">Secret</span> <span class="op">=</span> <span class="ide">party2</span><span class="op">.</span><span class="ide">share</span>(<span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">product</span>: <span class="ide">Secret</span> <span class="op">=</span> <span class="ide">input1</span> <span class="op">*</span> <span class="ide">input2</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">revealed</span>: <span class="ide">uint32</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">product</span><span class="op">.</span><span class="ide">reveal</span>() <span class="com"># equals 42</span></div></div>  </code></pre>
+<p>Run the multi-party computation:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">all</span>(<span class="ide">computation1</span>(), <span class="ide">computation2</span>())</div></div>  </code></pre>
+<h3>Networking</h3>
+<p>Perform a computation with two parties over a network connection. Just like the
+previous example we start with two parties, but we do not connect them just yet.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">NiMPC</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">party1</span>, <span class="ide">party2</span> <span class="op">=</span> <span class="ide">newLocalParty</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">defer</span>: <span class="ide">destroy</span>(<span class="ide">party1</span>, <span class="ide">party2</span>)</div></div>  </code></pre>
+<p>These parties will listen on different ports on localhost.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">host</span> <span class="op">=</span> <span class="str">&quot;localhost&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">port1</span> <span class="op">=</span> <span class="ide">Port</span>(<span class="num">23455</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">port2</span> <span class="op">=</span> <span class="ide">Port</span>(<span class="num">23456</span>)</div></div>  </code></pre>
+<p>Specify the computation that the first party will perform.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">computation1</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<p>Start listening for incoming messages on the correct port.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">listener</span> <span class="op">=</span> <span class="ide">party1</span><span class="op">.</span><span class="ide">listen</span>(<span class="ide">host</span>, <span class="ide">port1</span>)</div></div>  </code></pre>
+<p>Ensure that we stop listening when the listener is no longer in scope:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">defer</span>: <span class="ide">await</span> <span class="ide">listener</span><span class="op">.</span><span class="ide">stop</span>()</div></div>  </code></pre>
+<p>Connect to the second party. This returns a proxy for the Party that is running
+on the other side of the connection.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">proxy2</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">party1</span><span class="op">.</span><span class="ide">connect</span>(<span class="ide">party2</span><span class="op">.</span><span class="ide">id</span>, <span class="ide">host</span>, <span class="ide">port2</span>)</div></div>  </code></pre>
+<p>Ensure that we close the connection when the proxy is no longer in scope.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">defer</span>: <span class="ide">proxy2</span><span class="op">.</span><span class="ide">disconnect</span>()</div></div>  </code></pre>
+<p>Use the local party and the proxy for the remote party to perform the
+computation.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">input1</span> <span class="op">=</span> <span class="ide">party1</span><span class="op">.</span><span class="ide">share</span>(<span class="num">21</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">input2</span> <span class="op">=</span> <span class="ide">party1</span><span class="op">.</span><span class="ide">obtain</span>(<span class="ide">proxy2</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">product</span> <span class="op">=</span> <span class="ide">input1</span> <span class="op">*</span> <span class="ide">input2</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">revealed</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">product</span><span class="op">.</span><span class="ide">reveal</span>() <span class="com"># equals 42</span></div></div>  </code></pre>
+<p>Specify the equivalent computation for the second party:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">computation2</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">listener</span> <span class="op">=</span> <span class="ide">party2</span><span class="op">.</span><span class="ide">listen</span>(<span class="ide">host</span>, <span class="ide">port2</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">defer</span>: <span class="ide">await</span> <span class="ide">listener</span><span class="op">.</span><span class="ide">stop</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">proxy1</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">party2</span><span class="op">.</span><span class="ide">connect</span>(<span class="ide">party1</span><span class="op">.</span><span class="ide">id</span>, <span class="ide">host</span>, <span class="ide">port1</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">defer</span>: <span class="ide">proxy1</span><span class="op">.</span><span class="ide">disconnect</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">input1</span> <span class="op">=</span> <span class="ide">party2</span><span class="op">.</span><span class="ide">obtain</span>(<span class="ide">proxy1</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">input2</span> <span class="op">=</span> <span class="ide">party2</span><span class="op">.</span><span class="ide">share</span>(<span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">product</span><span class="op">=</span> <span class="ide">input1</span> <span class="op">*</span> <span class="ide">input2</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">revealed</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">product</span><span class="op">.</span><span class="ide">reveal</span>() <span class="com"># equals 42</span></div></div>  </code></pre>
+<p>Run the multi-party computation:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">all</span>(<span class="ide">computation1</span>(), <span class="ide">computation2</span>())</div></div>  </code></pre>
+<h2>Thanks</h2>
+<p>NiMPC is inspired by the great work done by the <a href="https://github.com/aicis/fresco">FRESCO</a> and
+<a href="https://github.com/lschoe/mpyc">MPyC</a> developers. It would also not have existed without the research
+that went into the <a href="https://eprint.iacr.org/2018/482.pdf">SPDZ2k</a> protocol.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/markspanbroek/nimpc">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

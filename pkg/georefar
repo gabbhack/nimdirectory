@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">georefar</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">geo</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">openstreetmap</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">async</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multisync</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">opendata</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">gov</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("GeoRef Argentina Government MultiSync API Client for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install georefar" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim-GeoRefAr</h1>
+<p><a href="https://georef-ar-api.readthedocs.io">GeoRef Argentina</a> MultiSync API Lib for <a href="https://nim-lang.org">Nim</a>
+<em>(All Docs on Spanish because its for Argentina)</em></p>
+<p>La API del Servicio de Normalizacion de Datos Geograficos, permite normalizar y
+codificar los nombres de unidades territoriales de la Argentina
+(provincias, departamentos, municipios y localidades) y de sus calles,
+asi como ubicar coordenadas dentro de ellas.</p>
+<p>Este Cliente es Async y Sync al mismo tiempo, es MultiPlataforma, MultiArquitectura,
+0 Dependencias, 1 Archivo solo, ~250 Kilobytes Compilado, muy poco uso de RAM.
+Soporta Proxy, IPv6, SSL y Timeout. Auto-Documentado.</p>
+<h1>Instalar</h1>
+<pre>  <code>nimble install georefar
+</code></pre>
+<h1>Uso</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">georefar</span>, <span class="ide">json</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Sync client.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">georefar_client</span> <span class="op">=</span> <span class="ide">GeoRefAr</span>(<span class="ide">timeout</span>: <span class="num">9</span>)  <span class="com"># Timeout en Segundos.</span></div></div><div class="line"><div class="line-content"><span class="com">## Las consultas en formato JSON son copiadas desde la Documentacion de la API.</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;provincias&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;id&quot;</span>: <span class="str">&quot;82&quot;</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">provincias</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;departamentos&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;provincia&quot;</span>: <span class="str">&quot;Santa Fe&quot;</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">departamentos</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;municipios&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;provincia&quot;</span>: <span class="str">&quot;Santa Fe&quot;</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">municipios</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;localidades&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;provincia&quot;</span>: <span class="str">&quot;Santa Fe&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;departamento&quot;</span>: <span class="str">&quot;Rosario&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;municipio&quot;</span>: <span class="str">&quot;Granadero Baigorria&quot;</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">localidades</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;calles&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;provincia&quot;</span>: <span class="str">&quot;Santa Fe&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;departamento&quot;</span>: <span class="str">&quot;Rosario&quot;</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">calles</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;direcciones&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;direccion&quot;</span>: <span class="str">&quot;Urquiza 400&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;tipo&quot;</span>: <span class="str">&quot;calle&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;provincia&quot;</span>: <span class="str">&quot;Santa Fe&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;departamento&quot;</span>: <span class="str">&quot;Rosario&quot;</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">direcciones</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">consulta</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;ubicaciones&quot;</span>: [</div></div><div class="line"><div class="line-content">    {</div></div><div class="line"><div class="line-content">      <span class="str">&quot;lat&quot;</span>: <span class="op">-</span><span class="num">32.8551545</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;lon&quot;</span>: <span class="op">-</span><span class="num">60.697636</span></div></div><div class="line"><div class="line-content">    }</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">georefar_client</span><span class="op">.</span><span class="ide">ubicacion</span>(<span class="ide">consulta</span>)<span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Async client.</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">async_georefar</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">async_georefar_client</span> <span class="op">=</span> <span class="ide">AsyncGeoRefAr</span>(<span class="ide">timeout</span>: <span class="num">9</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">async_response</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">async_georefar_client</span><span class="op">.</span><span class="ide">ubicacion</span>(<span class="ide">consulta</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">async_response</span><span class="op">.</span><span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wait_for</span> <span class="ide">async_georefar</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Whole Dataset Downloads (takes a lot of time to complete!).</span></div></div><div class="line"><div class="line-content"><span class="ide">georefar_client</span><span class="op">.</span><span class="ide">provincias_dataset</span>(<span class="str">&quot;provincias.json&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">georefar_client</span><span class="op">.</span><span class="ide">departamentos_dataset</span>(<span class="str">&quot;departamentos.json&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">georefar_client</span><span class="op">.</span><span class="ide">municipios_dataset</span>(<span class="str">&quot;municipios.json&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">georefar_client</span><span class="op">.</span><span class="ide">localidades_dataset</span>(<span class="str">&quot;localidades.json&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">georefar_client</span><span class="op">.</span><span class="ide">calles_dataset</span>(<span class="str">&quot;calles.json&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Ver la Doc para mas API Calls...</span></div></div>  </code></pre>
+<details>
+  <summary>Click aca para ver lo que devuelve el codigo</summary>
+<pre>  <code class="language-json">{
+  &quot;resultados&quot;: [
+    {
+      &quot;cantidad&quot;: 1,
+      &quot;inicio&quot;: 0,
+      &quot;provincias&quot;: [
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -30.706927,
+            &quot;lon&quot;: -60.949837
+          },
+          &quot;id&quot;: &quot;82&quot;,
+          &quot;nombre&quot;: &quot;Santa Fe&quot;
+        }
+      ],
+      &quot;total&quot;: 1
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;cantidad&quot;: 10,
+      &quot;departamentos&quot;: [
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.485583,
+            &quot;lon&quot;: -60.851384
+          },
+          &quot;id&quot;: &quot;82028&quot;,
+          &quot;nombre&quot;: &quot;Villa Constitución&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -31.475356,
+            &quot;lon&quot;: -60.669479
+          },
+          &quot;id&quot;: &quot;82063&quot;,
+          &quot;nombre&quot;: &quot;La Capital&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -30.228319,
+            &quot;lon&quot;: -61.360015
+          },
+          &quot;id&quot;: &quot;82091&quot;,
+          &quot;nombre&quot;: &quot;San Cristóbal&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -32.153771,
+            &quot;lon&quot;: -61.048127
+          },
+          &quot;id&quot;: &quot;82105&quot;,
+          &quot;nombre&quot;: &quot;San Jerónimo&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -32.942315,
+            &quot;lon&quot;: -60.961501
+          },
+          &quot;id&quot;: &quot;82119&quot;,
+          &quot;nombre&quot;: &quot;San Lorenzo&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -31.054641,
+            &quot;lon&quot;: -60.125808
+          },
+          &quot;id&quot;: &quot;82035&quot;,
+          &quot;nombre&quot;: &quot;Garay&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -28.67197,
+            &quot;lon&quot;: -59.526652
+          },
+          &quot;id&quot;: &quot;82049&quot;,
+          &quot;nombre&quot;: &quot;General Obligado&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -32.706084,
+            &quot;lon&quot;: -61.273388
+          },
+          &quot;id&quot;: &quot;82056&quot;,
+          &quot;nombre&quot;: &quot;Iriondo&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.127856,
+            &quot;lon&quot;: -60.710842
+          },
+          &quot;id&quot;: &quot;82084&quot;,
+          &quot;nombre&quot;: &quot;Rosario&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.221497,
+            &quot;lon&quot;: -61.531016
+          },
+          &quot;id&quot;: &quot;82014&quot;,
+          &quot;nombre&quot;: &quot;Caseros&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        }
+      ],
+      &quot;inicio&quot;: 0,
+      &quot;total&quot;: 19
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;cantidad&quot;: 10,
+      &quot;inicio&quot;: 0,
+      &quot;municipios&quot;: [
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.541937,
+            &quot;lon&quot;: -61.963807
+          },
+          &quot;id&quot;: &quot;822658&quot;,
+          &quot;nombre&quot;: &quot;La Chispa&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.718744,
+            &quot;lon&quot;: -61.293182
+          },
+          &quot;id&quot;: &quot;822665&quot;,
+          &quot;nombre&quot;: &quot;Labordeboy&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -30.597043,
+            &quot;lon&quot;: -60.26593
+          },
+          &quot;id&quot;: &quot;823694&quot;,
+          &quot;nombre&quot;: &quot;Cacique Ariacaiquín&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -34.039567,
+            &quot;lon&quot;: -61.912867
+          },
+          &quot;id&quot;: &quot;822686&quot;,
+          &quot;nombre&quot;: &quot;María Teresa&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -30.402616,
+            &quot;lon&quot;: -60.177144
+          },
+          &quot;id&quot;: &quot;823708&quot;,
+          &quot;nombre&quot;: &quot;La Brava&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -31.548994,
+            &quot;lon&quot;: -61.960371
+          },
+          &quot;id&quot;: &quot;822406&quot;,
+          &quot;nombre&quot;: &quot;Zenón Pereyra&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -32.925768,
+            &quot;lon&quot;: -60.826161
+          },
+          &quot;id&quot;: &quot;820189&quot;,
+          &quot;nombre&quot;: &quot;Funes&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.340932,
+            &quot;lon&quot;: -60.868743
+          },
+          &quot;id&quot;: &quot;822497&quot;,
+          &quot;nombre&quot;: &quot;Pavón Arriba&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -33.866831,
+            &quot;lon&quot;: -61.251409
+          },
+          &quot;id&quot;: &quot;822756&quot;,
+          &quot;nombre&quot;: &quot;Wheelwright&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        },
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -30.861005,
+            &quot;lon&quot;: -61.840493
+          },
+          &quot;id&quot;: &quot;822154&quot;,
+          &quot;nombre&quot;: &quot;Colonia Bicha&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          }
+        }
+      ],
+      &quot;total&quot;: 362
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;cantidad&quot;: 1,
+      &quot;inicio&quot;: 0,
+      &quot;localidades&quot;: [
+        {
+          &quot;centroide&quot;: {
+            &quot;lat&quot;: -32.861364,
+            &quot;lon&quot;: -60.706216
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;82084160000&quot;,
+          &quot;municipio&quot;: {
+            &quot;id&quot;: &quot;820196&quot;,
+            &quot;nombre&quot;: &quot;Granadero Baigorria&quot;
+          },
+          &quot;nombre&quot;: &quot;GRANADERO BAIGORRIA&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;Componente de localidad compuesta (LC)&quot;
+        }
+      ],
+      &quot;total&quot;: 1
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;calles&quot;: [
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 998,
+              &quot;izquierda&quot;: 999
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 800,
+              &quot;izquierda&quot;: 801
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208421000125&quot;,
+          &quot;nombre&quot;: &quot;AVELLANEDA&quot;,
+          &quot;nomenclatura&quot;: &quot;AVELLANEDA, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 2598,
+              &quot;izquierda&quot;: 2599
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 2100,
+              &quot;izquierda&quot;: 2101
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414002685&quot;,
+          &quot;nombre&quot;: &quot;URUNDAY&quot;,
+          &quot;nomenclatura&quot;: &quot;URUNDAY, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 2198,
+              &quot;izquierda&quot;: 2199
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 2100,
+              &quot;izquierda&quot;: 2101
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414001945&quot;,
+          &quot;nombre&quot;: &quot;LAPACHO&quot;,
+          &quot;nomenclatura&quot;: &quot;LAPACHO, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 3898,
+              &quot;izquierda&quot;: 3899
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 3700,
+              &quot;izquierda&quot;: 3701
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208427007775&quot;,
+          &quot;nombre&quot;: &quot;PJE 2139&quot;,
+          &quot;nomenclatura&quot;: &quot;PJE 2139, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 6398,
+              &quot;izquierda&quot;: 2499
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 0,
+              &quot;izquierda&quot;: 0
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414000160&quot;,
+          &quot;nombre&quot;: &quot;AV FUERZA AEREA&quot;,
+          &quot;nomenclatura&quot;: &quot;AV FUERZA AEREA, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;AV&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 6498,
+              &quot;izquierda&quot;: 6499
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 2200,
+              &quot;izquierda&quot;: 2201
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414001900&quot;,
+          &quot;nombre&quot;: &quot;JOSE INGENIEROS&quot;,
+          &quot;nomenclatura&quot;: &quot;JOSE INGENIEROS, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 2598,
+              &quot;izquierda&quot;: 2599
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 2300,
+              &quot;izquierda&quot;: 2301
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414002635&quot;,
+          &quot;nombre&quot;: &quot;TANDIL&quot;,
+          &quot;nomenclatura&quot;: &quot;TANDIL, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 6498,
+              &quot;izquierda&quot;: 6499
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 0,
+              &quot;izquierda&quot;: 0
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414000010&quot;,
+          &quot;nombre&quot;: &quot;ACAPULCO&quot;,
+          &quot;nomenclatura&quot;: &quot;ACAPULCO, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 6498,
+              &quot;izquierda&quot;: 6499
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 0,
+              &quot;izquierda&quot;: 0
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414000130&quot;,
+          &quot;nombre&quot;: &quot;AV CORDOBA - COLECTORA&quot;,
+          &quot;nomenclatura&quot;: &quot;AV CORDOBA - COLECTORA, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;AV&quot;
+        },
+        {
+          &quot;altura&quot;: {
+            &quot;fin&quot;: {
+              &quot;derecha&quot;: 6398,
+              &quot;izquierda&quot;: 6399
+            },
+            &quot;inicio&quot;: {
+              &quot;derecha&quot;: 5700,
+              &quot;izquierda&quot;: 5701
+            }
+          },
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414002715&quot;,
+          &quot;nombre&quot;: &quot;VINA DEL MAR&quot;,
+          &quot;nomenclatura&quot;: &quot;VINA DEL MAR, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;
+        }
+      ],
+      &quot;cantidad&quot;: 10,
+      &quot;inicio&quot;: 0,
+      &quot;total&quot;: 4157
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;cantidad&quot;: 5,
+      &quot;direcciones&quot;: [
+        {
+          &quot;altura&quot;: 400,
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208427013005&quot;,
+          &quot;nombre&quot;: &quot;URQUIZA&quot;,
+          &quot;nomenclatura&quot;: &quot;URQUIZA 400, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;,
+          &quot;ubicacion&quot;: {
+            &quot;lat&quot;: null,
+            &quot;lon&quot;: null
+          }
+        },
+        {
+          &quot;altura&quot;: 400,
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208407000705&quot;,
+          &quot;nombre&quot;: &quot;URQUIZA&quot;,
+          &quot;nomenclatura&quot;: &quot;URQUIZA 400, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;,
+          &quot;ubicacion&quot;: {
+            &quot;lat&quot;: null,
+            &quot;lon&quot;: null
+          }
+        },
+        {
+          &quot;altura&quot;: 400,
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414002670&quot;,
+          &quot;nombre&quot;: &quot;URQUIZA&quot;,
+          &quot;nomenclatura&quot;: &quot;URQUIZA 400, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;,
+          &quot;ubicacion&quot;: {
+            &quot;lat&quot;: null,
+            &quot;lon&quot;: null
+          }
+        },
+        {
+          &quot;altura&quot;: 400,
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208414002675&quot;,
+          &quot;nombre&quot;: &quot;URQUIZA&quot;,
+          &quot;nomenclatura&quot;: &quot;URQUIZA 400, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;,
+          &quot;ubicacion&quot;: {
+            &quot;lat&quot;: -32.9247697193499,
+            &quot;lon&quot;: -60.7711169887185
+          }
+        },
+        {
+          &quot;altura&quot;: 400,
+          &quot;departamento&quot;: {
+            &quot;id&quot;: &quot;82084&quot;,
+            &quot;nombre&quot;: &quot;Rosario&quot;
+          },
+          &quot;id&quot;: &quot;8208416001280&quot;,
+          &quot;nombre&quot;: &quot;URQUIZA&quot;,
+          &quot;nomenclatura&quot;: &quot;URQUIZA 400, Rosario, Santa Fe&quot;,
+          &quot;provincia&quot;: {
+            &quot;id&quot;: &quot;82&quot;,
+            &quot;nombre&quot;: &quot;Santa Fe&quot;
+          },
+          &quot;tipo&quot;: &quot;CALLE&quot;,
+          &quot;ubicacion&quot;: {
+            &quot;lat&quot;: -32.85515451234649,
+            &quot;lon&quot;: -60.69763668291105
+          }
+        }
+      ],
+      &quot;inicio&quot;: 0,
+      &quot;total&quot;: 5
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;ubicacion&quot;: {
+        &quot;departamento&quot;: {
+          &quot;id&quot;: &quot;82084&quot;,
+          &quot;nombre&quot;: &quot;Rosario&quot;
+        },
+        &quot;lat&quot;: -32.8551545,
+        &quot;lon&quot;: -60.697636,
+        &quot;municipio&quot;: {
+          &quot;id&quot;: &quot;820196&quot;,
+          &quot;nombre&quot;: &quot;Granadero Baigorria&quot;
+        },
+        &quot;provincia&quot;: {
+          &quot;id&quot;: &quot;82&quot;,
+          &quot;nombre&quot;: &quot;Santa Fe&quot;
+        }
+      }
+    }
+  ]
+}
+{
+  &quot;resultados&quot;: [
+    {
+      &quot;ubicacion&quot;: {
+        &quot;departamento&quot;: {
+          &quot;id&quot;: &quot;82084&quot;,
+          &quot;nombre&quot;: &quot;Rosario&quot;
+        },
+        &quot;lat&quot;: -32.8551545,
+        &quot;lon&quot;: -60.697636,
+        &quot;municipio&quot;: {
+          &quot;id&quot;: &quot;820196&quot;,
+          &quot;nombre&quot;: &quot;Granadero Baigorria&quot;
+        },
+        &quot;provincia&quot;: {
+          &quot;id&quot;: &quot;82&quot;,
+          &quot;nombre&quot;: &quot;Santa Fe&quot;
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+</details>
+<h1>API</h1>
+<ul>
+<li>Todas las funciones retornan JSON, tipo <code>JsonNode</code>.</li>
+<li>Todas las funciones toman JSON, tipo <code>JsonNode</code>.</li>
+<li>Los nombres siguen los mismos nombres de la Documentacion.</li>
+<li>Los errores siguen los mismos errores de la Documentacion.</li>
+<li>Todas las API Calls son HTTP <code>POST</code>.</li>
+<li>El <code>timeout</code> es en Segundos.</li>
+<li>Para soporte de Proxy de red definir un <code>proxy</code> de tipo <code>Proxy</code>.</li>
+<li>No tiene codigo especifico a ningun Sistema Operativo, funciona en Linux, Windows, Mac, etc.</li>
+</ul>
+<h1>FAQ</h1>
+<ul>
+<li>Funciona sin SSL ?.</li>
+</ul>
+<p>Si.</p>
+<ul>
+<li>Funciona con SSL ?.</li>
+</ul>
+<p>Si.</p>
+<ul>
+<li>Funciona con codigo Asincrono ?.</li>
+</ul>
+<p>Si.</p>
+<ul>
+<li>Funciona con codigo Sincrono ?.</li>
+</ul>
+<p>Si.</p>
+<ul>
+<li>Requiere API Key ?.</li>
+</ul>
+<p>No.</p>
+<ul>
+<li>Es Pago ?.</li>
+</ul>
+<p>No.</p>
+<h1>Requisites</h1>
+<ul>
+<li>None.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/nim-georefar">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

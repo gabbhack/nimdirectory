@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">laser</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parallel</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">simd</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("High Performance Computing and Image Toolbox: SIMD, JIT Assembler, OpenMP, runtime CPU feature detection, optimised machine learning primitives")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install laser" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Laser - Primitives for high performance computing</h1>
+<p>Carefully-tuned primitives for running tensor and image-processing code
+on CPU, GPUs and accelerators.</p>
+<p>The library is in heavy development. For now the CPU backend is being optimised.</p>
+<h2>Library content</h2>
+<!--  TOC  -->
+<ul>
+<li><a href="#laser---primitives-for-high-performance-computing">Laser - Primitives for high performance computing</a>
+<ul>
+<li><a href="#library-content">Library content</a>
+<ul>
+<li>  <a href="#simd-intrinsics-for-x86-and-x86-64">SIMD intrinsics for x86 and x86-64</a></li>
+<li>  <a href="#openmp-templates">OpenMP templates</a></li>
+<li>  <a href="#cpuinfo-for-runtime-cpu-feature-detection-for-x86-x86-64-and-arm">  <code>cpuinfo</code> for runtime CPU feature detection for x86, x86-64 and ARM</a></li>
+<li>  <a href="#jit-assembler">JIT Assembler</a></li>
+<li>  <a href="#loop-fusion-and-strided-iterators-for-matrix-and-tensors">Loop-fusion and strided iterators for matrix and tensors</a></li>
+<li>  <a href="#raw-tensor-type">Raw tensor type</a></li>
+<li>  <a href="#optimised-floating-point-parallel-reduction-for-sum-min-and-max">Optimised floating point parallel reduction for sum, min and max</a></li>
+<li>  <a href="#optimised-logarithmic-exponential-tanh-sigmoid-softmax">Optimised logarithmic, exponential, tanh, sigmoid, softmax ...</a></li>
+<li>  <a href="#optimised-transpose-batched-transpose-and-nchw--nhwc-format-conversion">Optimised transpose, batched transpose and NCHW &lt;=&gt; NHWC format conversion</a></li>
+<li><a href="#optimised-strided-matrix-multiplication-for-integers-and-floats">Optimised strided Matrix-Multiplication for integers and floats</a>
+<ul>
+<li><a href="#in-the-future">In the future</a>
+<ul>
+<li>  <a href="#operation-fusion">Operation fusion</a></li>
+<li>  <a href="#pre-packing">Pre-packing</a></li>
+<li>  <a href="#batched-matrix-multiplication">Batched matrix multiplication</a></li>
+<li>  <a href="#small-matrix-multiplication">Small matrix multiplication</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>  <a href="#optimised-convolutions">Optimised convolutions</a></li>
+<li>  <a href="#state-of-the-art-random-distributions-and-weighted-random-sampling">State-of-the art random distributions and weighted random sampling</a></li>
+</ul>
+</li>
+<li>  <a href="#usage--installation">Usage &amp; Installation</a></li>
+<li>  <a href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+<!--  /TOC  -->
+<h3>SIMD intrinsics for x86 and x86-64</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">simd</span></div></div>  </code></pre>
+<p>Laser includes a wrapper for x86 and x86-64 to operate on 128-bit (SSE) and 256-bit (AVX) vectors of floats and integers. SIMD are added on a as-needed basis for Laser optimisation needs.</p>
+<h3>OpenMP templates</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">openmp</span></div></div>  </code></pre>
+<p>Laser includes several OpenMP templates to easu data-parallel programming in Nim:</p>
+<ul>
+<li>The simple omp parallel for loops</li>
+<li>Splitting into chunks and having a per-thread ptr+len pair to paralley algorithm that takes a ptr+len</li>
+<li><code>omp parallel</code>, <code>omp critical</code>, <code>omp master</code>, <code>omp barrier</code> and <code>omp flush</code> for fine-grained control over parallelism</li>
+<li><code>attachGC</code> and <code>detachGC</code> if you need to use Nim GC-ed types in a non-master thread.</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>  <a href="./examples/ex02_omp_parallel_for.nim">ex02_omp_parallel_for.nim</a></li>
+<li>  <a href="./examples/ex03_omp_parallel_chunks.nim">ex03_omp_parallel_chunks</a></li>
+</ul>
+<h3><code>cpuinfo</code> for runtime CPU feature detection for x86, x86-64 and ARM</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">cpuinfo</span></div></div>  </code></pre>
+<p>Laser includes a wrapper for <a href="https://github.com/pytorch/cpuinfo">  <code>cpuinfo</code></a> by Facebook&apos;s PyTorch team.
+This allows to query runtime information about CPU SIMD capabilities and various L1, L2, L3, L4 CPU cache sizes
+to optimize your compute-bound algorithms.</p>
+<p>Example: <a href="./examples/ex01_cpuinfo.nim">ex01_cpuinfo.nim</a></p>
+<h3>JIT Assembler</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">photon_jit</span></div></div>  </code></pre>
+<p>Laser offers its own JIT assembler with features being added on a as needed basis.
+It is very lightweight and easy to extend. Currently it only supports x86-64 with <a href="./laser/photon_jit/x86_64/x86_64_ops.nim">the following
+opcodes</a>.</p>
+<p>Examples:</p>
+<ul>
+<li>  <a href="./examples/ex06_jit_hello_world.nim">ex06_jit_hello_world.nim</a></li>
+<li>  <a href="./examples/ex07_jit_brainfuck_vm.nim">ex07_jit_brainfuck_vm.nim</a></li>
+</ul>
+<h3>Loop-fusion and strided iterators for matrix and tensors</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">strided_iteration</span><span class="op">/</span><span class="ide">foreach</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">strided_iteration</span><span class="op">/</span><span class="ide">foreach_staged</span></div></div>  </code></pre>
+<p>Usage - forEach:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="ide">forEach</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">a</span>, <span class="ide">y</span> <span class="kwd">in</span> <span class="ide">b</span>, <span class="ide">z</span> <span class="kwd">in</span> <span class="ide">c</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">+=</span> <span class="ide">y</span> <span class="op">*</span> <span class="ide">z</span></div></div>  </code></pre>
+<p>Laser includes optimised macros to iterate on contiguous and strided tensors.
+The iterators work with normal Nim syntax, are parallelized via OpenMP when it makes sense.</p>
+<p>Any tensor type works as long as it exposes the following interface:</p>
+<ul>
+<li>rank: the number of dimensions</li>
+<li>size: the number of elements in the tensor</li>
+<li>shape, strides: a container that supports <code>[]</code> indexing</li>
+<li>unsafe_raw_data: a routine that returns
+a <code>ptr UncheckedArray[T]</code> or
+any type with <code>[]</code> indexing implemented, including mutable indexing.</li>
+</ul>
+<p>A advanced iterator <code>forEach_staged</code> provides a lot of flexibility to deal with advanced need, for example for parallel reduction:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">reduction_localsum_critical</span>[<span class="ide">T</span>](<span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">Tensor</span>[<span class="ide">T</span>]): <span class="ide">T</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">forEachStaged</span> <span class="ide">xi</span> <span class="kwd">in</span> <span class="ide">x</span>, <span class="ide">yi</span> <span class="kwd">in</span> <span class="ide">y</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">openmp_config</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">use_openmp</span>: <span class="ide">true</span></div></div><div class="line"><div class="line-content">      <span class="ide">use_simd</span>: <span class="ide">false</span></div></div><div class="line"><div class="line-content">      <span class="ide">nowait</span>: <span class="ide">true</span></div></div><div class="line"><div class="line-content">      <span class="ide">omp_grain_size</span>: <span class="ide">OMP_MEMORY_BOUND_GRAIN_SIZE</span></div></div><div class="line"><div class="line-content">    <span class="ide">iteration_kind</span>:</div></div><div class="line"><div class="line-content">      {<span class="ide">contiguous</span>, <span class="ide">strided</span>} <span class="com"># Default, &quot;contiguous&quot;, &quot;strided&quot; are also possible</span></div></div><div class="line"><div class="line-content">    <span class="ide">before_loop</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">local_sum</span> <span class="op">=</span> <span class="num">0.</span><span class="ide">T</span></div></div><div class="line"><div class="line-content">    <span class="ide">in_loop</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">local_sum</span> <span class="op">+=</span> <span class="ide">xi</span> <span class="op">+</span> <span class="ide">yi</span></div></div><div class="line"><div class="line-content">    <span class="ide">after_loop</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">omp_critical</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">result</span> <span class="op">+=</span> <span class="ide">local_sum</span></div></div>  </code></pre>
+<p>Examples:</p>
+<ul>
+<li>ex04 - TODO</li>
+<li>  <a href="./examples/ex05_tensor_parallel_reduction.nim">ex05_tensor_parallel_reduction</a></li>
+</ul>
+<p>Benchmarks:</p>
+<ul>
+<li>  <a href="./benchmarks/loop_iteration/iter_bench.nim">iter_bench.nim</a></li>
+<li>  <a href="./benchmarks/loop_iteration/iter_bench_prod.nim">iter_bench_prod.nim</a></li>
+</ul>
+<h3>Raw tensor type</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">tensor</span><span class="op">/</span>[<span class="ide">datatypes</span>, <span class="ide">allocator</span>, <span class="ide">initialization</span>] <span class="com"># WIP</span></div></div>  </code></pre>
+<p>Laser includes a low-level tensor type with only the low-level allocation and initialization needed:</p>
+<ul>
+<li>Aligned allocator</li>
+<li>Parallel zero-ing and copy (deep copy, copy from a seq)</li>
+<li>Metadata initialisation</li>
+<li>Tensor raw data access via pointers is using Nim compiler for safeguard.
+Immutable objects return a <code>RawImmutablePtr</code>
+and mutable objects return a <code>RawMutablePtr</code>
+to prevent you from accidentally modifying an immutable object when accessing raw memory.</li>
+</ul>
+<p>An example of how to use that to build higher-level <code>newTensor</code> or <code>randomTensor</code>, <code>transpose</code> and <code>[]</code> is give in the <code>iter_bench</code> in the previous section.</p>
+<h3>Optimised floating point parallel reduction for sum, min and max</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">primitives</span><span class="op">/</span><span class="ide">reductions</span></div></div>  </code></pre>
+<p>Floating-point reductions are not optimised by compilers by default because they can&apos;t assume that
+<code>result = (a+b) + c</code> is equivalent to <code>result = a + (b + c)</code> due to how floating-point rounding work.
+This forces serial evaluation of reductions unless <code>-ffast-math</code> flag is passed to the compiler.</p>
+<p>The primitives work around that by keeping several accumulators in parallel to avoid waiting for a previous serial evaluation. This allows those kernels to maximise memory-bandwith of your computer.</p>
+<p>Benchmarks:</p>
+<ul>
+<li>  <a href="./benchmarks/fp_reduction_latency/reduction_packed_sse.nim">reduction_packed_sse</a></li>
+</ul>
+<h3>Optimised logarithmic, exponential, tanh, sigmoid, softmax ...</h3>
+<p>In heavy development.</p>
+<p>Unfortunately the default logarithm and exponential functions included in C and C++ standard &lt;math.h&gt; library are extremely slow.</p>
+<p>Benchmarks shows that a 10x speed improvement is possible while keeping excellent accuracy.</p>
+<p>Benchmarks:</p>
+<ul>
+<li>  <a href="./benchmarks/vector_math/bench_exp.nim">bench_exp</a></li>
+<li>  <a href="./benchmarks/vector_math/bench_exp_avx2.nim">bench_exp_avx2</a></li>
+</ul>
+<h3>Optimised transpose, batched transpose and NCHW &lt;=&gt; NHWC format conversion</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">primitives</span><span class="op">/</span><span class="ide">swapaxes</span></div></div>  </code></pre>
+<p>While logical transpose (just swapping the <code>shape</code> and <code>strides</code> metadata of the tensor/matrix) is often enough, we sometimes might need to transpose data physically in-memory.</p>
+<p>Laser provides Optimised routines for physical transpose, batched transpose (N matrices) and also transposition of images from and to NCHW and NHWC i.e. [Image id, Color, Height, Width] and [Image id, Height, Width, Color].</p>
+<p>90% of ML libraries including Nvidia&apos;s CuDNN prefer to work in NCHW while often images are decoded in HWC.</p>
+<p>Benchmarks:</p>
+<ul>
+<li>  <a href="./benchmarks/transpose/transpose_bench.nim">transpose_bench</a></li>
+</ul>
+<h3>Optimised strided Matrix-Multiplication for integers and floats</h3>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">primitives</span><span class="op">/</span><span class="ide">matrix_multiplication</span><span class="op">/</span><span class="ide">gemm</span></div></div>  </code></pre>
+<p>Matrix multiplication is the at the base of Machine Learning and numerical computing.</p>
+<p>The Dense/Linear/Affine layer of neural network is just a matrix-multiplication and often convolutions are reframed into matrix multiplication to use the 20 years of optimisation research gone into <a href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms">BLAS</a> libraries.</p>
+<p>Laser implements its own multithreaded BLAS with the following details:</p>
+<ul>
+<li>It reaches 98% of OpenBLAS speed on float64 when multithreaded and 102% when single-threaded</li>
+<li>It reaches 97% of OpenBLAS speed on float32 when multithreaded and 99% when single-threaded</li>
+<li>It support strided matrices, for example resulting from slicing every 2 rows
+or every 2 columns: <code>myTensor[0::2, :]</code>.
+This is very useful when doing cross-validation as you don&apos;t need an extra copy before matrix-multiplication.</li>
+<li>Contrary to 99% of the BLAS out there, it supports integers: <code>int32</code> and <code>int64</code> using SSE2 or AVX2 instructions</li>
+<li>Extending support to new SIMD including ARM Neon and AVX512 is very easy, including software fallback is easy as well. For example this is how to <a href="./laser/primitives/matrix_multiplication/gemm_ukernel_avx2.nim">add AVX2 int32</a> support with fused multiply-add fallback:
+<pre>  <code class="language-Nim">template int32x8_muladd_unfused_avx2(a, b, c: m256i): m256i =
+mm256_add_epi32(mm256_mullo_epi32(a, b), c)
+
+ukernel_generator(
+      x86_AVX2,
+      typ = int32,
+      vectype = m256i,
+      nb_scalars = 8,
+      simd_setZero = mm256_setzero_si256,
+      simd_broadcast_value = mm256_set1_epi32,
+      simd_load_aligned = mm256_load_si256,
+      simd_load_unaligned = mm256_loadu_si256,
+      simd_store_unaligned = mm256_storeu_si256,
+      simd_mul = mm256_mullo_epi32,
+      simd_add = mm256_add_epi32,
+      simd_fma = int32x8_muladd_unfused_avx2
+    )
+</code></pre>
+</li>
+</ul>
+<h4>In the future</h4>
+<h5>Operation fusion</h5>
+<p>The BLAS will allow easily fusing unary operations (like <code>max/relu</code>, <code>tanh</code> or <code>sigmoid</code>) and binary operations (like adding a bias) at the end of the matrix multiplication kernels.</p>
+<p>As those operations are memory-bound and not compute-bound, and for matrix multiplication we already have all the data in memory (in the unary case) or half the data (in the binary case), we basically save lots by not looping once again on the matrix to apply them.</p>
+<p>Similarly, you will be able to fuse operations before the matrix multiplication kernel, during the prepacking when data is being re-ordered for high performance processing. This will be useful
+for backward propagation when before each matrix multiplication we must apply the derivatives of <code>relu</code>, <code>tanh</code> and <code>sigmoid</code>.</p>
+<h5>Pre-packing</h5>
+<p>Also pre-packing matrices and working on pre-packed matrices is being added. This is useful for matrices that are being used repeatedly, for example for batched matrix multiplication.</p>
+<p><code>im2col</code> prepacker that fuses the <code>convolution-&gt;matrix multiplication</code> (im2col) step with the matrix multiplication packing is also planned to get very efficient convolutions.</p>
+<h5>Batched matrix multiplication</h5>
+<p>We often have to bached matrix multiplication for examples N tensors A multiplied by a tensor B, or N tensors A multiplied by N tensors B, this is planned.</p>
+<h5>Small matrix multiplication</h5>
+<p>In many cases we don&apos;t deal with 1000x1000 matrices. For example the traditional image size is 224x224 and the overhead to re-pack matrices in an efficient format is not justified.</p>
+<p>When reframing convolutions in terms of matrix multiplication this is even worse as the main convolution kernels are 1x1, 3x3, 5x5.</p>
+<p>Optimised small matrix-multiplication is planned.</p>
+<h3>Optimised convolutions</h3>
+<p>In heavy development.</p>
+<p>Benchmarks:</p>
+<ul>
+<li>  <a href="./benchmarks/convolution/conv2d_bench.nim">conv2D_bench</a></li>
+</ul>
+<h3>State-of-the art random distributions and weighted random sampling</h3>
+<p>In heavy development</p>
+<p>Benchmarks of multinomial sampling for Natural Language Processing and Reinforcement Learning:
+-<a href="./benchmarks/random_sampling/bench_multinomial_sampler">bench_multinomial_samplers</a></p>
+<h2>Usage &amp; Installation</h2>
+<p>The library is split in relatively independant modules that can be used without the others.</p>
+<p>For example to just use the SIMD and cpu-detection portion, just do:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">simd</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">cpuinfo</span></div></div>  </code></pre>
+<p>To just use OpenMP</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">laser</span><span class="op">/</span><span class="ide">openmp</span></div></div>  </code></pre>
+<p>The library is unstable and will be published on nimble when more mature.
+Basically it will be published when it&apos;s ready to be the CPU backend of <a href="https://github.com/mratsim/Arraymancer">Arraymancer</a>,
+it will automatically profit from the dozens of tests and edge cases handled in Arraymancer test suite.</p>
+<h2>License</h2>
+<ul>
+<li>Laser is licensed under the Apache License version 2</li>
+<li>Facebook&apos;s cpuinfo is licensed under Simplified BSD (BSD 2 clauses)</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/numforge/laser">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

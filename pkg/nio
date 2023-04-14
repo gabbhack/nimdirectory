@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nio</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mmap</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">memory-mapping</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">binary data</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data compiling</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data debugging</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">serialize</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">serialization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">deserialize</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">deserialization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">marshal</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">unmarshal</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">marshalling</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">dataframe</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">file arrays</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">file format</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">file extension convention</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hdf5</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ndarray</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multidimensional-array</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">string interning</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">open architecture</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">column-oriented</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">row-oriented</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">timeseries</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">headerless teafiles</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">DBMS</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tables</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">SQL</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">CSV</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">TSV</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">extract-transform-load</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ETL</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">magic number-keyed decompressor</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">command-line</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data engineering</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pipelines</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Low Overhead Numerical/Native IO library & tools")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nio" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h3>Overview</h3>
+<p>The basic idea here is to take fully seriously the old chestnut that file name
+extensions tell users contained formats in order to make data access efficient.
+Specifically, extensions are a terse syntax inspired by Python &quot;struct formats&quot;,
+but using a simpler rule - the type code is just the first letter of each C type
+(with the exception of long double, an already exceptional thing).  Uppercase is
+unsigned; Lowercase is signed.  Elaborated, the full syntax is one or more:</p>
+<pre>  <code>  [&lt;COUNT[,..]&gt;]&lt;c|C|s|S|i|I|l|L|f|d|g&gt;
+</code></pre>
+<p>where</p>
+<pre>  <code>  c: signed (c)har    C: unsigned (C)har
+  s: signed (s)hort   S: unsigned (S)hort
+  i: signed (i)nt     I: unsigned (I)nt
+  l: signed (l)ong    L: unsigned (L)ong
+  f: (f)loat          d: (d)ouble          g: lon(g) double
+</code></pre>
+<p>The number of rows is inferred from a file size (which could be a length-prefix
+in some message buffer context) or in stdio streams just the number of buffers
+read.  Some examples:</p>
+<pre>  <code>  hey.NS        a column-vector (Nx1 matrix) of unsigned shorts
+  foo.N10f      an Nx10 matrix of floats
+  bar.N2i4d     a table of int 2-vectors and double 4-vectors
+  covs.N10,10f  a vector of 10 by 10 covariance matrices
+</code></pre>
+<p>While learning the syntax is needed to do streaming/pipe style calculations, you
+can also stow the format inside a file of a parallel name (e.g. &quot;foo&quot; &amp; &quot;.foo&quot;).</p>
+<p>This setup is usable, flexible, &amp; efficient.  It can perhaps cure you from your
+likely addiction of parsing &amp; re-parsing ASCII numbers which is up to hundreds
+of times slower than modern SIMD FP operations.<a href="Seriously">^1</a></p>
+<p>Unpacking other linearized/serialized marshal formats often requires at least
+iterating over all data, but often has decompression work woven in.  NIO tries
+to allow &quot;mmap &amp; go&quot; when feasible.  This is &quot;<em>  <strong>infinite GB/s</strong></em>&quot;.  In a more
+accurate sense, start-up cost is as fixed as opening random access files can be.
+(This is what DB software has always done and should not surprise the savvy.)</p>
+<p>More documentation can be had by just running <code>nio</code> with no arguments or <code>nio h</code>
+for a big help dump.  <code>nio</code> is both a library usable via <code>import nio</code> and a
+<a href="https://github.com/c-blake/cligen">cligen</a> multi-command.  So, the shortest
+unique prefix for subcommand names (and long option names) is sufficient.  The
+<a href="https://github.com/c-blake/nio/tree/main/FAQ.md">FAQ</a> has more motivation.</p>
+<p>One can do some things with the <code>nio</code> command, but the main point of the design
+is to be extensible by actual programmers <code>import</code>ing, <code>nOpen</code>/<code>initFileArray</code>
+ing, etc., writing their own libs &amp; tools either on top or off to the side even
+in other programming languages.  Extended tools/logic must document themselves,
+but they can, e.g. share <code>n-foo</code> namespaces if desired.  (Note that <code>nio zip</code>
+naming comes from functional PLs|real world clothing zippers - not data
+compression tools.)</p>
+<p>ETL convenience tools live in <code>utils/</code>.  E.g., <code>transpose</code> can be useful in the
+context of schema writing (as in <code>c2tsv &lt; foo | head | transpose &gt; editMe.sc</code>).</p>
+<h3>CLI Usage Vignette</h3>
+<p>Here is a little usage vignette using simulated data.  First we will show some
+steps and then explain them.  To start, you will first need to compile &amp; install
+<code>demo/tabGen.nim</code> in your <code>$PATH</code>.  Something like this may do the trick:</p>
+<pre>  <code class="language-sh">nimble install cligen   # may not be needed
+git clone https://github.com/c-blake/nio
+cd nio
+n=&quot;nim c -d:danger&quot;
+$n nio &amp;&amp; $n utils/c2tsv &amp;&amp; $n demo/tabGen &amp;&amp;
+  install -cm755 nio utils/c2tsv demo/tabGen ~/bin
+</code></pre>
+<p>After that, you can save this blurb to some demo.sh and run &quot;sh demo.sh&quot;:</p>
+<pre>  <code class="language-sh">#!/bin/sh
+t=/usr/bin/time
+tabGen 1_000_000 4 &gt; f 2&gt; f.sc        # generate million*4 table
+head -n3 &lt; f                          # look @top
+head f.sc                             # look @parsing schema
+$t nio fromSV -s f.sc /dev/stdin &lt; f  # parse the data into NIO
+ls                                    # peruse some files
+nio pr a.Nf b.Nf%.5f | head -n3       # print human readable
+$t nio zip a.Nf b.Nf &gt; ab.Nff         # stitch cols together
+nio pr ab.Nff%.9f%.5f | head -n3      # print same vals another way
+$t nio moments [a-z].N*               # compute some summary stats
+</code></pre>
+<p>and get output that looks like this (i7-6700k @4.7GHz; 8MiB L3):</p>
+<pre>  <code>a,b,c,d
+2.380153181848329,-2.279945642690398,-0.6395001602969651,7.233130606792596
+-0.025225344508444,2.21176551984741,0.494893265790349,0.4640431696829914
+0.79user 0.04system 0:00.72elapsed 114%CPU (0avgtext+0avgdata 2512maxresident)k
+0inputs+0outputs (0major+392minor)pagefaults 0swaps
+a.Nf
+b.Nf
+c.Nf
+d.Nf
+f
+f.sc
+2.380153	-2.27995
+-0.02522535	2.21177
+0.1616571	3.55054
+0.02user 0.00system 0:00.02elapsed 100%CPU (0avgtext+0avgdata 7920maxresident)k
+0inputs+0outputs (0major+250minor)pagefaults 0swaps
+2.380153179	-2.27995
+-0.025225345	2.21177
+0.161657065	3.55054
+a.Nf:0 min: -4.772 max: 4.811
+b.Nf:0 min: -9.172 max: 10.99
+c.Nf:0 min: -11.89 max: 16.50
+d.Nf:0 min: -16.27 max: 25.47
+0.04user 0.00system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 18268maxresident)k
+0inputs+0outputs (0major+377minor)pagefaults 0swaps
+</code></pre>
+<h3>Going Faster</h3>
+<p>Performance savvy readers may note, of the final line, that 40 ms for 4 million
+numbers is weak performance.  10 nanosec/number or 50 clock cycles/num or lowly
+16 MB/40ms = 400 MB/s is not great for what could be vectorized min/max in a
+perfectly predictable pipeline.  This is partly because <code>nio moments</code> uses
+<code>std/stats.RunningStat</code> which is accuracy semi-optimized, not speed-optimized.</p>
+<p><a href="https://github.com/c-blake/nio/tree/main/demo/datGen.nim">demo/datGen</a> shows
+how easy it is to just <em>  <strong>stay in binary the whole time</strong></em>:</p>
+<pre>  <code class="language-sh">#!/bin/sh
+t=/usr/bin/time
+$t datGen 1_000_000 4               # generates abcd.Nffff
+$t nio rip -i abcd.Nffff a b c d    # rip apart into column files
+$t favg [a-d].Nf                    # Does 100 loops by default!
+</code></pre>
+<p>Compiling the tiny <a href="https://github.com/c-blake/nio/tree/main/demo/favg.nim">demo/favg</a>
+with <code>-d:danger</code> for me results in a run-time on that same machine of 0.045 sec
+for 100 passes or 0.45 ms/pass.  This is 40ms/.45=~ <em>  <strong>90X faster</strong></em> or about
+16/.45 = 35.5GB/s.  Memory BW on this particular 2016 Linux box tops out at
+~45GB/s (with &gt;=3 cores pulling).</p>
+<p>It is straightforward (but demo-messy) to <a href="https://forum.nim-lang.org/t/9115#59567">split the loop into <code>p</code>
+parts</a> &amp; grand total over thread/proc
+subtotals to saturate memory BW which here would be (45/35=~1.3X) better.<a href="More">^2</a> In
+this example, since outputs are tiny subtotals, it&apos;s fine to memory map files &amp;
+then <code>fork</code> to engage hardware parallelism with processes via <code>cligen/procpool</code>.
+Were outputs giant, kids could write to NIO files and return pathnames.<a href="Once">^3</a></p>
+<p>See <a href="https://github.com/c-blake/nio/tree/main/db-bench.md">db-bench.md</a> for
+another worked out example, perhaps easier to compare to other systems.</p>
+<p>-- SIMD&apos;s go at L1 cache bandwidth which are order 100s of GB/s
+while parsing at even 1 GB/s is a challenge and printing/binary-&gt;ASCII is even
+slower.</p>
+<p>recent server/HEDT models have much higher peak parallel/peak single
+core BW ratios than 1.3 (more like 15+X).  This pushes optimizers to parallel
+complexities simply to saturate DIMMs.</p>
+<p>you are whole CPU/system optimizing, what idea is best quickly
+becomes &quot;it depends&quot;.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/nio">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">ulid</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">id</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ulid</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">uuid</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">guid</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Universally Unique Lexicographically Sortable Identifier")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install ulid" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1 align="center">
+    <br />
+    <br />
+    <img src="logo.png" style="max-width: 100%;" width="360" alt="ulid" />
+    <br />
+    <br />
+    <br />
+</h1>
+<h1>Universally Unique Lexicographically Sortable Identifier in Nim</h1>
+<p>UUID can be suboptimal for many uses-cases because:</p>
+<ul>
+<li>It isn&apos;t the most character efficient way of encoding 128 bits of randomness</li>
+<li>UUID v1/v2 is impractical in many environments, as it requires access to a unique, stable MAC address</li>
+<li>UUID v3/v5 requires a unique seed and produces randomly distributed IDs, which can cause fragmentation in many data structures</li>
+<li>UUID v4 provides no other information than randomness which can cause fragmentation in many data structures</li>
+</ul>
+<p>Instead, herein is proposed ULID:</p>
+<ul>
+<li>128-bit compatibility with UUID</li>
+<li>1.21e+24 unique ULIDs per millisecond</li>
+<li>Lexicographically sortable!</li>
+<li>Canonically encoded as a 26 character string, as opposed to the 36 character UUID</li>
+<li>Uses Crockford&apos;s base32 for better efficiency and readability (5 bits per character)</li>
+<li>Case insensitive</li>
+<li>No special characters (URL safe)</li>
+</ul>
+<h2>Nim</h2>
+<h3>Installation</h3>
+<pre>  <code>nimble install ulid
+</code></pre>
+<h3>Usage</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ulid</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">ulid</span>()</div></div>  </code></pre>
+<h2>Implementations in other languages</h2>
+<p>From the community!</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Author</th>
+<th>Binary Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <a href="https://github.com/suyash/ulid">C++</a></td>
+<td>  <a href="https://github.com/suyash">suyash</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/whitesmith/ulid">Objective-C</a></td>
+<td>  <a href="https://github.com/ricardopereira">ricardopereira</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/SuperPaintman/ulid">Crystal</a></td>
+<td>  <a href="https://github.com/SuperPaintman">SuperPaintman</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/agilord/ulid">Dart</a></td>
+<td>  <a href="https://github.com/isoos">isoos</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/martinusso/ulid">Delphi</a></td>
+<td>  <a href="https://github.com/martinusso">matinusso</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/savonarola/ulid">Erlang</a></td>
+<td>  <a href="https://github.com/savonarola">savonarola</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/merongivian/ulid">Elixir</a></td>
+<td>  <a href="https://github.com/merongivian">merongivian</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/imdario/go-ulid">Go</a></td>
+<td>  <a href="https://github.com/imdario/">imdario</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/oklog/ulid">Go</a></td>
+<td>  <a href="https://github.com/oklog">oklog</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/steven777400/ulid">Haskell</a></td>
+<td>  <a href="https://github.com/steven777400">steven777400</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/huxi/sulky/tree/master/sulky-ulid">Java</a></td>
+<td>  <a href="https://github.com/huxi">huxi</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/azam/ulidj">Java</a></td>
+<td>  <a href="https://github.com/azam">azam</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/Lewiscowles1986/jULID">Java</a></td>
+<td>  <a href="https://github.com/Lewiscowles1986">Lewiscowles1986</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/ararslan/ULID.jl">Julia</a></td>
+<td>  <a href="https://github.com/ararslan">ararslan</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/Tieske/ulid.lua">Lua</a></td>
+<td>  <a href="https://github.com/Tieske">Tieske</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/RobThree/NUlid">.NET</a></td>
+<td>  <a href="https://github.com/RobThree">RobThree</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/fvilers/ulid.net">.NET</a></td>
+<td>  <a href="https://github.com/fvilers">fvilers</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/adelq/ulid">Nim</a></td>
+<td>  <a href="https://github.com/adelq">adelq</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/bk/Data-ULID">Perl 5</a></td>
+<td>  <a href="https://github.com/bk">bk</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/Lewiscowles1986/ulid">PHP</a></td>
+<td>  <a href="https://github.com/Lewiscowles1986">Lewiscowles1986</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/mdipierro/ulid">Python</a></td>
+<td>  <a href="https://github.com/mdipierro">mdipierro</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/rafaelsales/ulid">Ruby</a></td>
+<td>  <a href="https://github.com/rafaelsales">rafaelsales</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://github.com/mmacedoeu/rulid.rs">Rust</a></td>
+<td>  <a href="https://github.com/mmacedoeu/rulid.rs">mmacedoeu</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/dylanhart/ulid-rs">Rust</a></td>
+<td>  <a href="https://github.com/dylanhart">dylanhart</a></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>  <a href="https://github.com/simonwhitehouse/ULIDSwift">Swift</a></td>
+<td>  <a href="https://github.com/simonwhitehouse">simonwhitehouse</a></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="https://tcl.wiki/48827">Tcl</a></td>
+<td>  <a href="https://github.com/dbohdan">dbohdan</a></td>
+<td />
+</tr></tbody></table>
+<h2>Specification</h2>
+<p>Below is the current specification of ULID as implemented in this repository.</p>
+<p>  <em>Note: the binary format has not been implemented.</em></p>
+<pre>  <code> 01AN4Z07BY      79KA1307SR9X4MV3
+
+|----------|    |----------------|
+ Timestamp          Randomness
+   48bits             80bits
+</code></pre>
+<h3>Components</h3>
+<p>  <strong>Timestamp</strong></p>
+<ul>
+<li>48 bit integer</li>
+<li>UNIX-time in milliseconds</li>
+<li>Won&apos;t run out of space till the year 10895 AD.</li>
+</ul>
+<p>  <strong>Randomness</strong></p>
+<ul>
+<li>80 bits</li>
+<li>Cryptographically secure source of randomness, if possible</li>
+</ul>
+<h3>Sorting</h3>
+<p>The left-most character must be sorted first, and the right-most character sorted last (lexical order). The default ASCII character set must be used. Within the same millisecond, sort order is not guaranteed</p>
+<h3>Encoding</h3>
+<p>Crockford&apos;s Base32 is used as shown. This alphabet excludes the letters I, L, O, and U to avoid confusion and abuse.</p>
+<pre>  <code>0123456789ABCDEFGHJKMNPQRSTVWXYZ
+</code></pre>
+<h3>Binary Layout and Byte Order</h3>
+<p>The components are encoded as 16 octets. Each component is encoded with the Most Significant Byte first (network byte order).</p>
+<pre>  <code>0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-+
+|                      32_bit_uint_time_high                    |
++-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-+
+|     16_bit_uint_time_low      |       16_bit_uint_random      |
++-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-+
+|                       32_bit_uint_random                      |
++-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-+
+|                       32_bit_uint_random                      |
++-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-+
+</code></pre>
+<h3>String Representation</h3>
+<pre>  <code>ttttttttttrrrrrrrrrrrrrrrr
+
+where
+t is Timestamp
+r is Randomness
+</code></pre>
+<h2>Prior Art</h2>
+<p>Inspired by:</p>
+<ul>
+<li>https://github.com/alizain/ulid/</li>
+</ul>
+<p>Partly inspired by:</p>
+<ul>
+<li>http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram</li>
+<li>https://firebase.googleblog.com/2015/02/the-2120-ways-to-ensure-unique_68.html</li>
+</ul>
+<h2>Test Suite</h2>
+<pre>  <code>nimble test
+</code></pre>
+<h2>Performance</h2>
+<pre>  <code>nimble perf
+</code></pre>
+<pre>  <code>ulid.nim                                                  time/iter  iters/s
+============================================================================
+encode_time                                                319.93ns    3.13M
+encode_random                                                3.57us  280.33K
+ulid                                                         3.85us  259.78K
+</code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/adelq/ulid">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

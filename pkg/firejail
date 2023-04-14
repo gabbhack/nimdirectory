@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">firejail</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">firejail</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">security</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linux</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">isolation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">container</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">infosec</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hardened</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sandbox</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">docker</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Firejail wrapper for Nim, Isolate your Production App before its too late!")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install firejail" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Firejail</h1>
+<ul>
+<li><a href="https://firejail.wordpress.com/features-3/#namespaces">Firejail</a> wrapper for <a href="https://nim-lang.org/learn.html">Nim</a>.
+<em>Isolate your Production App before its too late!</em></li>
+</ul>
+<p>🔥 🔐👑🔥</p>
+<p>  <img src="https://source.unsplash.com/-YGdiRcY9Sc/800x402" style="max-width: 100%;" alt="screenshot" title="FireJails" /></p>
+<h1>Whats Firejail?</h1>
+<p>  <em>...and why should I use it?</em></p>
+<ul>
+<li>https://www.youtube.com/watch?v=UgddGZca5XU</li>
+<li>https://www.digitalocean.com/community/tutorials/how-to-use-firejail-to-set-up-a-wordpress-installation-in-a-jailed-environment</li>
+<li>https://l3net.wordpress.com/2014/06/08/securing-a-web-server-using-a-linux-namespaces-sandbox</li>
+<li>https://hans-hermann-bode.de/en/content/web-server-sandbox</li>
+<li>https://medium.com/@george.shuklin/on-using-firejail-for-network-isolation-in-tests-42f018ecdcac</li>
+<li>https://jaxenter.com/anti-docker-blog-114422.html</li>
+<li><strong>Why your web server needs full access to the whole System?.</strong> 🤔</li>
+</ul>
+<h1>Requisites</h1>
+<ul>
+<li>  <a href="https://firejail.wordpress.com/features-3/#namespaces">Firejail</a></li>
+</ul>
+<h1>Install</h1>
+<ul>
+<li>  <code>nimble install firejail</code></li>
+</ul>
+<h1>Use</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">firejail</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create a Firejail, all args are optional, all options are Boolean, super easy!.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myjail</span> <span class="op">=</span> <span class="ide">Firejail</span>(<span class="ide">no3d</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noDbus</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noDvd</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noRoot</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noSound</span><span class="op">=</span><span class="ide">true</span>,</div></div><div class="line"><div class="line-content">                      <span class="ide">noVideo</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noShell</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noX</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noNet</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">noIp</span><span class="op">=</span><span class="ide">true</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myjail</span><span class="op">.</span><span class="ide">list</span>() <span class="com"># List all Firejails sandboxes running, return a seq[JsonNode] (computer friendly)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myjail</span><span class="op">.</span><span class="ide">tree</span>() <span class="com"># List all Firejails sandboxes running, return a string (human friendly)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myjail</span><span class="op">.</span><span class="ide">shutdown</span>(<span class="ide">pid</span><span class="op">=</span><span class="num">42</span>) <span class="com"># Shutdown a running Firejail sandbox by PID, return bool, true if Ok</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myjail</span><span class="op">.</span><span class="ide">exec</span>(<span class="str">&quot;myApp --some-arg&quot;</span>) <span class="com"># Run your App isolated inside the Firejail.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># For more info read the Docs...</span></div></div>  </code></pre>
+<h1>API</h1>
+<ul>
+<li>API is a 1-1 copy of the CLI Firejails API, so any Firejails Docs work too.</li>
+<li>Best Linux Security made super easy, just 4 <code>proc</code>, ~<code>110</code> Lines of code.</li>
+<li>Timeout is on Hours, up to <code>255</code> hours, <code>byte</code> type, when the timeout is reached the Jail is auto stopped.</li>
+<li><code>dnsServers</code> is 1 array of 4 strings, for 4 DNS Servers, <code>array[4, string]</code> type, 4 IP addresses must be provided.</li>
+<li><code>blacklist</code> is 1 seq of strings, <code>seq[string]</code> type, paths must exist.</li>
+<li><code>whitelist</code> is 1 seq of strings, <code>seq[string]</code> type, paths must exist.</li>
+<li><code>hostsFile</code> is 1 file path string, will be the Jails <code>/etc/hosts</code>, <code>string</code> type, file must exist.</li>
+<li><code>chroot</code> is 1 folder path string, will be the Jails chroot isolated filesystem, <code>string</code> type, folder must exist.</li>
+<li><code>tmpfs</code> is 1 folder path string, will be the Jails tmpfs temporary isolated filesystem, <code>string</code> type, folder must exist.</li>
+<li>Run <code>nim doc firejails.nim</code> for more Documentation.</li>
+<li>Run <code>nim genDepend firejail.nim</code> for UML Graphics of internal code structure.</li>
+<li>Run <code>nim c -r firejails.nim</code> for an Example.</li>
+<li>Are you a Security Hacker?, <strong>Pull Requests welcome!</strong></li>
+</ul>
+<h1>Real world usage</h1>
+<ul>
+<li><a href="https://github.com/ThomasTJdev/nim_websitecreator/pull/39#issuecomment-460046885">NimWC has Firejail integrated on the core</a>, making it the worlds first Self-Firejailing Web Framework, it Firejails itself. <a href="https://nimwc.org/login">Live Demo.</a></li>
+</ul>
+<h1>FAQ</h1>
+<ul>
+<li>Why Firejail?.</li>
+</ul>
+<p>Written in C with no dependencies, runs on any Linux, can sandbox any type of processes.</p>
+<ul>
+<li>This works with Docker or Vagrant?.</li>
+</ul>
+<p>Yes.</p>
+<ul>
+<li>I have Docker, I dont need this?.</li>
+</ul>
+<p>https://snyk.io/blog/top-ten-most-popular-docker-images-each-contain-at-least-30-vulnerabilities</p>
+<p>  <a href="http://carnal0wnage.attackresearch.com/2019/02/abusing-docker-api-socket.html">Hacking Docker with CURL.</a></p>
+<p>Docker current issues is a lack of strong security,
+1 security breach in 1 container can be exploited to access all containers on the server,
+since containers share resources with each others.
+This doesnt do virtualization but is more like a locked-down secure chroot jail,
+which grants a locked-down view of a system.
+Sometimes even basic tiny libs and drivers have security vulnerabilities, virtualized or not.
+With this your software can only access what it needs to access, and not a whole system, virtualized or not.
+This works with simple booleans, as example <code>noDbus=true</code> and DBus is gone,
+but good luck stripping all D-Bus from the Ubuntu running inside that Docker.</p>
+<ul>
+<li>This works with JavaScript?</li>
+</ul>
+<p>No. <code>firejail</code> cant run on the browser.</p>
+<ul>
+<li>Whats the option <code>useMtuJumbo9000</code>?.</li>
+</ul>
+<p>Network MTU Jumbo Frames. This is optional.
+This is just a shortcut to improve UX.
+https://wiki.archlinux.org/index.php/jumbo_frames</p>
+<ul>
+<li>Whats the option <code>forceEnUsUtf8</code>?.</li>
+</ul>
+<p>Forces <code>EN</code> English as language and <code>UTF-8</code> Unicode as encoding on Firejail.
+This is optional. This is just a shortcut to improve UX.</p>
+<ul>
+<li>Whats the option <code>useRandomMac</code>?.</li>
+</ul>
+<p>Random Network MAC Address on Firejail. This is optional.
+This is just a shortcut to improve UX.</p>
+<ul>
+<li>Why use a Random MAC Address?.</li>
+</ul>
+<p>Devices send a signal to look for networks,
+the signal contains the unique physical hardware (MAC) address for your device,
+this unique address can be used to track you on a network and &quot;map&quot; a network,
+you can use a random MAC address to make it harder to track. This is optional.
+This is just an extra feature so you dont have to do it manually if you need to.</p>
+<ul>
+<li>Why uses <code>Xvfb</code> as X Security instead of <code>Xephyr</code>, <code>Xpra</code> or <code>none</code>?.</li>
+</ul>
+<p><code>Xephyr</code> and <code>Xpra</code> quits complaining about the need to install extra libs.
+<code>none</code> quits complaining about the network, seems network dependent.
+<code>Xvfb</code> is the one that seems more standalone and dont complain while gets the job done.
+<code>Xvfb</code> is usually installed more frequently than <code>Xephyr</code> and <code>Xpra</code>.
+<code>Xvfb</code> is usually used for Continuous Integration and Testing.
+We need one that can run in a Non-Interactive way.
+Firejail by default is more strict than Docker.</p>
+<ul>
+<li>Why &quot;~&quot;, &quot;/dev&quot;, &quot;/usr&quot;, &quot;/etc&quot;, &quot;/opt&quot;, &quot;/var&quot;, &quot;/bin&quot;, &quot;/proc&quot; fails to Whitelist?.</li>
+</ul>
+<p>Those seems like invalid paths for Whitelisting, Firejail wont accept these paths.
+Your own home directory root path also seems invalid to whitelist,
+but you can whitelist any folder inside your own home directory root path.
+Firejail by default is more strict than Docker.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/nim-firejail">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">euwren</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wren</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">embedded</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">scripting</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">language</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wrapper</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("High-level Wren wrapper")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install euwren" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>euwren</h1>
+<blockquote>
+<p>The <a href="https://en.wikipedia.org/wiki/Wren">Eurasian wren</a> has been long
+considered &quot;the king of birds&quot; in Europe.</p>
+</blockquote>
+<p>euwren (pronounced <em>oyren</em>, like <em>euro</em> in German) is a high-level
+<a href="https://github.com/wren-lang/wren">Wren</a> wrapper for Nim. Wren is a small,
+fast, embedded scripting language.</p>
+<p>The main point of euwren is to create a very user-friendly, high-level wrapper:
+&quot;The king of Wren wrappers&quot;. It leverages Nim&apos;s powerful macro system to make
+the API as simple as listing all the things you need in Wren. While it may not
+be the fastest of wrappers, it&apos;s not the primary goal. It&apos;s the end user
+experience that really counts.</p>
+<h2>Features</h2>
+<ul>
+<li>Syntactically simple</li>
+<li>Supports proc, object, and enum binding</li>
+<li>Does type checks for procedures</li>
+<li>Supports operator overloading</li>
+<li>Automatically generates Wren glue code with declarations</li>
+</ul>
+<h2>Installing</h2>
+<h3>Adding to your .nimble file</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;euwren&quot;</span></div></div>  </code></pre>
+<h3>Installing directly from the command line</h3>
+<pre>  <code class="language-bash">$ nimble install euwren
+</code></pre>
+<h2>Usage</h2>
+<p>Because Nim and Wren have different programming paradigms, some work must be
+done by the programmer. Fortunately, what needs to be done is very simple, so
+don&apos;t worry.</p>
+<h3>Running code</h3>
+<p>First, a VM instance must be created.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">euwren</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">wren</span> <span class="op">=</span> <span class="ide">newWren</span>()</div></div>  </code></pre>
+<p>After that, running code is as simple as:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># run() runs code in the &apos;main&apos; module</span></div></div><div class="line"><div class="line-content"><span class="com"># it&apos;s an alias to wren.module(&quot;main&quot;, &lt;code&gt;)</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">run</span>("""
+  System.print("Hello from Wren!")
+""")</div></div>  </code></pre>
+<h3>Retrieving variables</h3>
+<p>To get a primitive variable from Wren, use the subscript operator with three
+arguments.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">run</span>("""
+  var myInt = 2
+""")</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">               <span class="com"># module  name     type</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myInt</span> <span class="op">=</span> <span class="ide">wren</span>[<span class="str">&quot;main&quot;</span>, <span class="str">&quot;myInt&quot;</span>, <span class="ide">int</span>]</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">myInt</span> <span class="op">==</span> <span class="num">2</span></div></div>  </code></pre>
+<p>Any number/enum type conversions between Nim and Wren are performed
+automatically.</p>
+<p>To retrieve a Wren object, eg. a class, use the subscript operator with two
+arguments.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">run</span>("""
+  class Program {
+    static run() {
+      System.print("Hello from inside the class!")
+    }
+  }
+""")</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">classProgram</span> <span class="op">=</span> <span class="ide">wren</span>[<span class="str">&quot;main&quot;</span>, <span class="str">&quot;Program&quot;</span>]</div></div>  </code></pre>
+<h3>Calling methods</h3>
+<p>Calling methods on Wren objects is done by first obtaining a call handle, and
+then calling the method.</p>
+<p>To obtain a call handle, use the curly brace operator. Then, to call the
+method, use <code>call()</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># the convention for naming the variable:</span></div></div><div class="line"><div class="line-content"><span class="com"># method&lt;name&gt;&lt;number of arguments&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># this convention is the preferred naming conventions for variables and fields</span></div></div><div class="line"><div class="line-content"><span class="com"># that store Wren call handles, but you&apos;re free to use any convention you want</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">methodRun0</span> <span class="op">=</span> <span class="ide">wren</span>{<span class="str">&quot;run()&quot;</span>}</div></div><div class="line"><div class="line-content"><span class="com"># the second parameter is the call handle to the method, the third is the</span></div></div><div class="line"><div class="line-content"><span class="com"># receiver of the method, and the rest is the parameters to pass to</span></div></div><div class="line"><div class="line-content"><span class="com"># the method.</span></div></div><div class="line"><div class="line-content"><span class="com"># when the method is static, the receiver is the class of the method</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">call</span>(<span class="ide">methodRun0</span>, <span class="ide">classProgram</span>)</div></div>  </code></pre>
+<h3>Configuring the VM</h3>
+<p>The VM can be configured in a few different ways, presented in following
+paragraphs.</p>
+<h4>Redirecting output</h4>
+<p>By default, the VM writes to <code>stdout</code>. Sometimes (eg. in a game), you may have
+a dedicated GUI console, and you&apos;d like to redirect the VM output there.</p>
+<p>To do this, you can set the <code>onWrite</code> callback.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">vmOut</span> <span class="op">=</span> <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">onWrite</span> <span class="kwd">do</span> (<span class="ide">text</span>: <span class="ide">string</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># ``text`` contains the text the VM wants to output.</span></div></div><div class="line"><div class="line-content">  <span class="com"># let&apos;s redirect it to ``vmOut``.</span></div></div><div class="line"><div class="line-content">  <span class="ide">vmOut</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">text</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">run</span>("""
+  System.print("Testing output!")
+""")</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">vmOut</span> <span class="op">==</span> <span class="str">&quot;Testing output!</span>\n<span class="str">&quot;</span></div></div>  </code></pre>
+<h4>Controlling imports</h4>
+<p>By default, <code>import</code> cannot be used in scripts. It will throw an error, because
+there is no default implementation for imports.</p>
+<p>To make imports work, you must set the <code>onLoadModule</code> callback in the VM:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">onLoadModule</span> <span class="kwd">do</span> (<span class="ide">name</span>: <span class="ide">string</span>) <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># onLoadModule must return the source code of the module called ``name``.</span></div></div><div class="line"><div class="line-content">  <span class="com"># a usual implementation that&apos;d allow for loading from files would look</span></div></div><div class="line"><div class="line-content">  <span class="com"># like so:</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="ide">name</span><span class="op">.</span><span class="ide">addFileExt</span>(<span class="str">&quot;wren&quot;</span>))</div></div>  </code></pre>
+<p>Sometimes, you may want to transform the module name before importing. That&apos;s
+where <code>onResolveModule</code> comes in:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">onResolveModule</span> <span class="kwd">do</span> (<span class="ide">importer</span>, <span class="ide">name</span>: <span class="ide">string</span>) <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># this is a standard way of implementing relative imports:</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">importer</span><span class="op">/</span><span class="ide">name</span></div></div>  </code></pre>
+<p>Apart from this, if your callback returns an empty string, an error will be
+raised saying that the module does not exist.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">onResolveModule</span> <span class="kwd">do</span> (<span class="ide">importer</span>, <span class="ide">name</span>: <span class="ide">string</span>) <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">importer</span><span class="op">/</span><span class="ide">name</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">fileExists</span>(<span class="ide">result</span><span class="op">.</span><span class="ide">addFileExt</span>(<span class="str">&quot;wren&quot;</span>)):</div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="str">&quot;&quot;</span> <span class="com"># module does not exist.</span></div></div>  </code></pre>
+<h3>Binding procs</h3>
+<p>Wren is strictly class-based, but Nim is not—that means that any procs passed to
+Wren must be nested inside a class. Fortunately, that&apos;s pretty simple.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">hello</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Hello from Nim!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;nim&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># create a namespace &apos;Nim&apos; that will hold our proc</span></div></div><div class="line"><div class="line-content">  [<span class="ide">Nim</span>]:</div></div><div class="line"><div class="line-content">    <span class="com"># bind the proc &apos;hello&apos;</span></div></div><div class="line"><div class="line-content">    <span class="ide">hello</span></div></div><div class="line"><div class="line-content"><span class="com"># ready() must be called to ready the VM for code execution after any</span></div></div><div class="line"><div class="line-content"><span class="com"># foreign() calls. this arms the VM to do code execution with foreign type</span></div></div><div class="line"><div class="line-content"><span class="com"># checking. no calls to foreign() should be done after you call this!</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">ready</span>()</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;nim&quot;</span> <span class="kwd">for</span> <span class="ide">Nim</span></div></div><div class="line"><div class="line-content"><span class="ide">Nim</span>.<span class="ide">hello</span>() <span class="com">// Output: Hello from Nim!</span></div></div>  </code></pre>
+<p>Here&apos;s a more advanced example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">add</span>(<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span> <span class="ide">a</span> <span class="op">+</span> <span class="ide">b</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">add</span>(<span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span> <span class="ide">a</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">b</span>)<span class="op">.</span><span class="ide">add</span>(<span class="ide">c</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">subtract</span>(<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span> <span class="ide">a</span> <span class="op">-</span> <span class="ide">b</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># foreign() accepts the name of the module we want to bind</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;math&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># we create a namespace &apos;Math&apos; for our procs</span></div></div><div class="line"><div class="line-content">  [<span class="ide">Math</span>]:</div></div><div class="line"><div class="line-content">    <span class="com"># procs can be overloaded by arity, but not by parameter type</span></div></div><div class="line"><div class="line-content">    <span class="com"># (this is not enforced, so be careful!)</span></div></div><div class="line"><div class="line-content">    <span class="ide">add</span>(<span class="ide">int</span>, <span class="ide">int</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">add</span>(<span class="ide">int</span>, <span class="ide">int</span>, <span class="ide">int</span>)</div></div><div class="line"><div class="line-content">    <span class="com"># procs can be aliased on the Wren side</span></div></div><div class="line"><div class="line-content">    <span class="ide">subtract</span> <span class="op">-&gt;</span> <span class="ide">sub</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">ready</span>()</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;math&quot;</span> <span class="kwd">for</span> <span class="ide">Math</span></div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">Math</span>.<span class="ide">add</span>(<span class="num">2</span>, <span class="num">2</span>)) <span class="com">// Output: 4</span></div></div>  </code></pre>
+<p>If a proc has a parameter without a type, but with a default parameter that is
+not a literal, you must use <code>_</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">myNumber</span> <span class="op">=</span> <span class="num">2</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">annoyingProc</span>(<span class="ide">a</span> <span class="op">=</span> <span class="ide">myNumber</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;wildcard&quot;</span>):</div></div><div class="line"><div class="line-content">  [<span class="ide">Wildcard</span>]:</div></div><div class="line"><div class="line-content">    <span class="ide">annoyingProc</span>(<span class="ide">_</span>)</div></div>  </code></pre>
+<p>This is due to a limitation in Nim. For some reason, default parameters are
+untyped, which doesn&apos;t let the overload resolution compare the types properly.
+This is fine, unless you use a non-literal type for the default parameter, eg.
+a variable or <code>seq</code>. You don&apos;t have to do this if the type is specified
+explicitly, like here:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">notSoAnnoyingProc</span>(<span class="ide">a</span>: <span class="ide">int</span> <span class="op">=</span> <span class="ide">myNumber</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div>  </code></pre>
+<p>New procedures may be created directly within a class binding. This is referred
+to as an <em>inline</em> declaration:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;inline&quot;</span>):</div></div><div class="line"><div class="line-content">  [<span class="ide">Inline</span>]:</div></div><div class="line"><div class="line-content">    <span class="ide">sayHi</span> <span class="kwd">do</span> ():</div></div><div class="line"><div class="line-content">      <span class="com"># note that ``do ():`` **must** be used in this case, since ``do:`` is</span></div></div><div class="line"><div class="line-content">      <span class="com"># just syntax sugar over a regular ``:`` block. regular blocks are</span></div></div><div class="line"><div class="line-content">      <span class="com"># reserved for parameter type-based overloads, which may be implemented</span></div></div><div class="line"><div class="line-content">      <span class="com"># in the future.</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;Hi!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="com"># getters can also be declared this way, and accept no parameters</span></div></div><div class="line"><div class="line-content">    <span class="op">?</span><span class="ide">pi</span> <span class="kwd">do</span> <span class="op">-&gt;</span> <span class="ide">float</span>: <span class="num">3.14159265</span></div></div>  </code></pre>
+<p>Any exceptions raised from Nim procedures will abort the fiber instead of
+crashing the program:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">oops</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">Defect</span>, <span class="str">&quot;oops! seems you called oops().&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;errors&quot;</span>):</div></div><div class="line"><div class="line-content">  [<span class="ide">Error</span>]:</div></div><div class="line"><div class="line-content">    <span class="ide">oops</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">ready</span>()</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;errors&quot;</span> <span class="kwd">for</span> <span class="ide">Error</span></div></div><div class="line"><div class="line-content"><span class="com">// we can use the standard Wren error handling mechanisms to catch our error.</span></div></div><div class="line"><div class="line-content"><span class="ide">var</span> <span class="ide">theError</span> <span class="op">=</span> <span class="ide">Fiber</span>.<span class="kwd">new</span> {</div></div><div class="line"><div class="line-content">  <span class="ide">Error</span>.<span class="ide">oops</span>()</div></div><div class="line"><div class="line-content">}.<span class="ide">try</span>()</div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">theError</span>)</div></div>  </code></pre>
+<pre>  <code>oops! seems you called oops(). [Defect]
+</code></pre>
+<p>When <code>compileOption(&quot;stacktrace&quot;) == on</code>, a stack trace pointing to
+where the error was raised will be printed.</p>
+<p>Nim procedures can accept <code>WrenRef</code> as arguments. This allows Wren objects to
+be passed to Nim:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># this example also demonstrates a way of passing callbacks from Wren to Nim,</span></div></div><div class="line"><div class="line-content"><span class="com"># but this works for any Wren type (eg. classes)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">onTickFn</span>: <span class="ide">WrenRef</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">onTick</span>(<span class="ide">callback</span>: <span class="ide">WrenRef</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">onTickFn</span> <span class="op">=</span> <span class="ide">callback</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;engine&quot;</span>):</div></div><div class="line"><div class="line-content">  [<span class="ide">Engine</span>]:</div></div><div class="line"><div class="line-content">    <span class="ide">onTick</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">ready</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">run</span>(<span class="ide">code</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">methodCall0</span> <span class="op">=</span> <span class="ide">wren</span>{<span class="str">&quot;call()&quot;</span>}</div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">call</span>(<span class="ide">methodCall0</span>, <span class="ide">onTickFn</span>)</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;engine&quot;</span> <span class="kwd">for</span> <span class="ide">Engine</span></div></div><div class="line"><div class="line-content"><span class="ide">Engine</span>.<span class="ide">onTick</span> {</div></div><div class="line"><div class="line-content">  <span class="ide">System</span>.<span class="ide">println</span>(<span class="str">&quot;Hello from callback!&quot;</span>)</div></div><div class="line"><div class="line-content">}</div></div>  </code></pre>
+<p>Note that the Wren VM <strong>is not reentrant</strong>, meaning you cannot call Wren in
+a foreign method.</p>
+<h3>Binding objects</h3>
+<p>Binding objects is very similar to procs. All <em>public</em> object fields are
+exported to Wren.</p>
+<p>If a proc returns an object, the class for that object must be declared <em>before</em>
+the proc is declared.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Foo</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">count</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initFoo</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">Foo</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">Foo</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">name</span> <span class="op">=</span> <span class="ide">name</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">count</span> <span class="op">=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">more</span>(<span class="ide">foo</span>: <span class="kwd">var</span> <span class="ide">Foo</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">inc</span>(<span class="ide">foo</span><span class="op">.</span><span class="ide">count</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">count</span>(<span class="ide">foo</span>: <span class="ide">Foo</span>) <span class="op">=</span> <span class="ide">foo</span><span class="op">.</span><span class="ide">count</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;foo&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># objects are declared without [] and can be aliased, just like procs</span></div></div><div class="line"><div class="line-content">  <span class="ide">Foo</span> <span class="op">-&gt;</span> <span class="ide">Bar</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># the * operator makes the bound proc static</span></div></div><div class="line"><div class="line-content">    <span class="com"># this is not needed in namespaces, and produces a warning</span></div></div><div class="line"><div class="line-content">    <span class="op">*</span><span class="ide">initFoo</span> <span class="op">-&gt;</span> <span class="ide">new</span></div></div><div class="line"><div class="line-content">    <span class="com"># procs can be bound as usual</span></div></div><div class="line"><div class="line-content">    <span class="ide">more</span></div></div><div class="line"><div class="line-content">    <span class="com"># ? binds the proc for use with getter syntax</span></div></div><div class="line"><div class="line-content">    <span class="com"># (``x.count`` instead of ``x.count()``)</span></div></div><div class="line"><div class="line-content">    <span class="op">?</span><span class="ide">count</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">ready</span>()</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;foo&quot;</span> <span class="kwd">for</span> <span class="ide">Bar</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">var</span> <span class="ide">foo</span> <span class="op">=</span> <span class="ide">Bar</span>.<span class="kwd">new</span>(<span class="str">&quot;Thing&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">foo</span>.<span class="ide">more</span>()</div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">foo</span>.<span class="ide">count</span>)</div></div>  </code></pre>
+<p><em>Concrete</em> generic types are supported:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Vec2</span>[<span class="ide">T</span>] <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">*</span>, <span class="ide">y</span><span class="op">*:</span> <span class="ide">float</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">vec2</span>[<span class="ide">T</span>](<span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">T</span>): <span class="ide">T</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">Vec2</span>[<span class="ide">T</span>](<span class="ide">x</span>: <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">y</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">+</span>`[<span class="ide">T</span>](<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">Vec2</span>[<span class="ide">T</span>]): <span class="ide">Vec2</span>[<span class="ide">T</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">Vec2</span>[<span class="ide">T</span>](<span class="ide">x</span>: <span class="ide">a</span><span class="op">.</span><span class="ide">x</span> <span class="op">+</span> <span class="ide">b</span><span class="op">.</span><span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">a</span><span class="op">.</span><span class="ide">y</span> <span class="op">+</span> <span class="ide">b</span><span class="op">.</span><span class="ide">y</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">$</span>`[<span class="ide">T</span>](<span class="ide">a</span>: <span class="ide">Vec2</span>[<span class="ide">T</span>]): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> fmt"[{a.x} {a.y}]"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;concrete_generic&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># concrete generic types *must* be aliased</span></div></div><div class="line"><div class="line-content">  <span class="ide">Vec2</span>[<span class="ide">float</span>] <span class="op">-&gt;</span> <span class="ide">Vec2f</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># you must fill any generic types on procs</span></div></div><div class="line"><div class="line-content">    <span class="com"># failing to do so will yield in a compile error, which is not caught</span></div></div><div class="line"><div class="line-content">    <span class="com"># by euwren (yet)</span></div></div><div class="line"><div class="line-content">    <span class="op">*</span><span class="ide">vec2</span>(<span class="ide">float</span>, <span class="ide">float</span>) <span class="op">-&gt;</span> <span class="ide">new</span></div></div><div class="line"><div class="line-content">    `<span class="op">+</span>`(<span class="ide">Vec2</span>[<span class="ide">float</span>], <span class="ide">Vec2</span>[<span class="ide">float</span>])</div></div><div class="line"><div class="line-content">    `<span class="op">$</span>`(<span class="ide">Vec2</span>[<span class="ide">float</span>])</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;concrete_generic&quot;</span> <span class="kwd">for</span> <span class="ide">Vec2f</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">var</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">Vec2f</span>.<span class="kwd">new</span>(<span class="num">10</span>, <span class="num">10</span>)</div></div><div class="line"><div class="line-content"><span class="ide">var</span> <span class="ide">b</span> <span class="op">=</span> <span class="ide">Vec2f</span>.<span class="kwd">new</span>(<span class="num">20</span>, <span class="num">30</span>)</div></div><div class="line"><div class="line-content"><span class="ide">var</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">a</span> <span class="op">+</span> <span class="ide">b</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">c</span>) <span class="com">// [30 40]</span></div></div>  </code></pre>
+<h3>Binding enums</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Fruit</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruitApple</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruitBanana</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruitGrape</span></div></div><div class="line"><div class="line-content">  <span class="ide">MenuOpt</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">optStart</span></div></div><div class="line"><div class="line-content">    <span class="ide">optHelp</span></div></div><div class="line"><div class="line-content">    <span class="ide">optExit</span></div></div><div class="line"><div class="line-content">  <span class="ide">ProgLanguage</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">langNim</span></div></div><div class="line"><div class="line-content">    <span class="ide">langWren</span></div></div><div class="line"><div class="line-content">    <span class="ide">langC</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;enums&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># enums are bound by not specifying a body</span></div></div><div class="line"><div class="line-content">  <span class="ide">Fruit</span></div></div><div class="line"><div class="line-content">  <span class="com"># the conventional prefix can be stripped by using ``-``</span></div></div><div class="line"><div class="line-content">  <span class="ide">MenuOpt</span> <span class="op">-</span> <span class="ide">opt</span></div></div><div class="line"><div class="line-content">  <span class="com"># enums can also be aliased</span></div></div><div class="line"><div class="line-content">  <span class="ide">ProgLanguage</span> <span class="op">-</span> <span class="ide">lang</span> <span class="op">-&gt;</span> <span class="ide">Lang</span></div></div><div class="line"><div class="line-content"><span class="ide">wren</span><span class="op">.</span><span class="ide">ready</span>()</div></div>  </code></pre>
+<p>The generated class includes all the values of an enum, and additionally,
+<code>low</code> and <code>high</code> for utility purposes. This also means that you should refrain
+from naming your enums in <code>snake_case</code>, as your names may clash with the
+built-in <code>low</code> and <code>high</code> properties. An option may be added in the future to
+automatically convert your enum to <code>PascalCase</code>.</p>
+<p>Here&apos;s an example of a generated module, based on the above input:</p>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">class</span> <span class="ide">Fruit</span> {</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">fruitApple</span> { <span class="num">0</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">fruitBanana</span> { <span class="num">1</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">fruitGrape</span> { <span class="num">2</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">low</span> { <span class="num">0</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">high</span> { <span class="num">2</span> }</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="kwd">class</span> <span class="ide">MenuOpt</span> {</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">Start</span> { <span class="num">0</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">Help</span> { <span class="num">1</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">Exit</span> { <span class="num">2</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">low</span> { <span class="num">0</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">high</span> { <span class="num">2</span> }</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="kwd">class</span> <span class="ide">Lang</span> {</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">Nim</span> { <span class="num">0</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">Wren</span> { <span class="num">1</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">C</span> { <span class="num">2</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">low</span> { <span class="num">0</span> }</div></div><div class="line"><div class="line-content">  <span class="ide">static</span> <span class="ide">high</span> { <span class="num">2</span> }</div></div><div class="line"><div class="line-content">}</div></div>  </code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="str">&quot;enums&quot;</span> <span class="kwd">for</span> <span class="ide">Fruit</span>, <span class="ide">MenuOpt</span>, <span class="ide">Lang</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">Fruit</span>.<span class="ide">fruitGrape</span>) <span class="com">// 2</span></div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">MenuOpt</span>.<span class="ide">Start</span>) <span class="com">// 0</span></div></div><div class="line"><div class="line-content"><span class="ide">System</span>.<span class="ide">print</span>(<span class="ide">Lang</span>.<span class="ide">Wren</span>) <span class="com">// 1</span></div></div>  </code></pre>
+<h3>Compile-time flags</h3>
+<ul>
+<li><code>-d:euwrenDumpForeignModule</code> – dumps the Wren module source code generated by
+<code>foreign()</code> upon runtime. Useful for debugging code generation.</li>
+<li><code>-d:euwrenDumpClasses</code> – dumps a list of all bound classes, in the order
+they&apos;re bound in <code>foreign()</code>.</li>
+</ul>
+<h3>Gotchas</h3>
+<ul>
+<li>Three extra macros called <code>addProcAux</code>, <code>addClassAux</code>, and <code>genEnumAux</code> are
+exposed in the public API. <strong>Do not use them in your code.</strong> They are used
+internally by <code>foreign()</code>, and they make the DSL possible by deferring all
+binding to the semantic phase. There are lots of implementation details here,
+feel free to read the source code if you&apos;re interested.</li>
+<li>Currently, euwren uses a fork of Wren that fixes an issue related to slots
+in the VM. This fork is not the same as the current stable version of Wren,
+but it will be used until <a href="https://github.com/wren-lang/wren/pull/712">Wren/#712</a>
+is merged.</li>
+<li>The generated glue code is assembled at run time, which is inefficient and
+possibly slows binding down. This will be fixed in a future release.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/liquid600pgm/euwren">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">markdown</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">markdown</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">md</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">docs</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">html</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A Beautiful Markdown Parser in the Nim World.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install markdown" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim-markdown</h1>
+<p><code>nim-markdown</code> is a Markdown Parser in the Nim world.</p>
+<p><a href="https://www.soasme.com/nim-markdown/">  <img src="https://img.shields.io/badge/documentation-passed-brightgreen.svg?style=for-the-badge&amp;longCache=true" style="max-width: 100%;" alt="Documentation" /></a>
+<a href="https://travis-ci.org/soasme/nim-markdown">  <img src="https://travis-ci.org/soasme/nim-markdown.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a></p>
+<h2>Install</h2>
+<p>Install via <code>nimble</code> in your project root.</p>
+<pre>  <code class="language-bash">$ nimble install markdown
+
+# or with current stable version
+$ nimble install markdown@&quot;&gt;= 0.8.0&quot;
+
+# or with the latest version
+$ nimble install markdown@#head
+</code></pre>
+<h2>Library Usage</h2>
+<p>Below is the minimal usage of using <code>markdown</code> as a library.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># 1. import pkg.</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">markdown</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># 2. transform md to html.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">html</span> <span class="op">=</span> <span class="ide">markdown</span>(<span class="str">&quot;# Hello World</span>\n<span class="str">Happy writing Markdown document!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># 3. do something :)</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span>(<span class="ide">html</span>)</div></div>  </code></pre>
+<p>Below are some useful links:</p>
+<ul>
+<li>The API documentation: <a href="https://www.soasme.com/nim-markdown/htmldocs/markdown.html">https://www.soasme.com/nim-markdown/htmldocs/markdown.html</a></li>
+<li>The dev guide: <a href="https://enqueuezero.com/markdown-parser.html">https://enqueuezero.com/markdown-parser.html</a></li>
+<li>The cheat sheet: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></li>
+</ul>
+<h2>Binary Usage</h2>
+<p>The usage of binary <code>markdown</code> is as below:</p>
+<pre>  <code># Read from stdin and write to stdout.
+$ markdown &lt; README.md &gt; README.html
+</code></pre>
+<h2>Development</h2>
+<p>Build markdown binary:</p>
+<pre>  <code class="language-bash">$ nimble build
+</code></pre>
+<p>Test markdown modules:</p>
+<pre>  <code class="language-bash">$ nimble test
+</code></pre>
+<p>Build document:</p>
+<pre>  <code class="language-bash">$ nim doc --project --git.url=https://github.com/soasme/nim-markdown --git.commit=v0.7.0 src/markdown.nim
+</code></pre>
+<p>The <a href="https://enqueuezero.com/markdown-parser.html">Markdown Parser</a> serves as a guidance on the implementation of <code>nim-markdown</code>, or in any generic programming language.</p>
+<h2>Roadmap</h2>
+<p>Priorities:</p>
+<ul>
+<li>[x] Support Commonmark.</li>
+<li>[ ] Support GFM.</li>
+<li>[ ] Support writing extensions.</li>
+<li>[ ] Benchmark.</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>[x] Thematic Break</li>
+<li>[x] Heading</li>
+<li>[x] Indented code block</li>
+<li>[x] Fence code block</li>
+<li>[x] Block Quote</li>
+<li>[x] Ordered/Unordered List</li>
+<li>[x] Nested lists</li>
+<li>[x] Raw HTML block</li>
+<li>[x] Table</li>
+<li>[x] Ref Link</li>
+<li>[x] Inline Link</li>
+<li>[x] Auto link</li>
+<li>[x] Image Link</li>
+<li>[x] Emphasis</li>
+<li>[x] Double Emphasis</li>
+<li>[x] Strikethrough</li>
+<li>[x] Link Break</li>
+<li>[x] Inline Code</li>
+<li>[x] Inline HTML</li>
+<li>[x] Escape</li>
+<li>[x] Paragraph</li>
+<li>[ ] Auto link (extension)</li>
+<li>[ ] Footnote</li>
+<li>[ ] Want new features? Issues or pull requests are welcome. ;)</li>
+</ul>
+<h2>ChangeLog</h2>
+<p>Released:</p>
+<ul>
+<li>v0.8.7, 25 Feb 2023, bugfix: allow whitespace and tab after code closing fence. <a href="https://github.com/soasme/nim-markdown/issues/64">#64</a>.</li>
+<li>v0.8.6, 9 Jul 2022, bugfix: export no internal procs.</li>
+<li>v0.8.5, 19 Mar 2021, bugfix: codespan might be empty. #42.</li>
+<li>v0.8.4, 19 Mar 2021, performance improvement: eliminate all <code>firstLine</code> and <code>restLines</code> calls. (#54, #55, #56).</li>
+<li>v0.8.3, 13 Mar 2021, performance improvement: faster html pattern matching (#52) &amp; eliminate all <code>since()</code> calls (#53).</li>
+<li>v0.8.2, 3 Mar 2021, performance improvement: use pre-compiled regex.</li>
+<li>v0.8.1, 30 Dec 2019, bugfix: fixed compatibility with <code>--gc:arc</code>.</li>
+<li>v0.8.0, 8 Sep 2019, bugfix: gcsafe with nim <code>--threads:on</code>.</li>
+<li>v0.7.2, 8 Sep 2019, rename internal package to markdownpkg.</li>
+<li>v0.7.1, 7 Sep 2019, removed useless constants.</li>
+<li>v0.7.0, 6 Sep 2019, support parsing in commonmark <a href="https://spec.commonmark.org/0.29/">v0.29</a> syntax.</li>
+<li>v0.5.4, 1 Aug 2019, bugfix: improved the ul &amp; ol parsing.</li>
+<li>v0.5.3, 3 Jun 2019, bugfix: Added import exceptions for strip and splitWhitespace from unicode <a href="https://github.com/soasme/nim-markdown/issues/20">#20</a>.</li>
+<li>v0.5.2, 5 Nov 2018, bugfix: ambiguous call.</li>
+<li>v0.5.1, 4 Nov 2018, inline email support; bugfix: \u00a0 causing build error <a href="https://github.com/soasme/nim-markdown/issues/16">#16</a>, etc.</li>
+<li>v0.5.0, 3 Nov 2018, bugfix: links in lists not working (#14), etc.</li>
+<li>v0.4.0, 27 Oct 2018, support <code>~~~</code> as fence mark, etc. <a href="https://github.com/soasme/nim-markdown/pull/12">#12</a>.</li>
+<li>v0.3.4, 24 Oct 2018, support hard line breaks (gfm 6.12).</li>
+<li>v0.3.3, 23 Oct 2018, strict-typed config (#5), add cli options.</li>
+<li>v0.3.2, 23 Oct 2018, support setext heading.</li>
+<li>v0.3.1, 22 Oct 2018, bugfix: soft line breaks (gfm 6.13).</li>
+<li>v0.3.0, 22 Oct 2018, support html table block (#3).</li>
+<li>v0.2.0, 20 Oct 2018, package published <a href="https://github.com/nim-lang/packages/pull/899">nim-lang/packages#899</a>.</li>
+<li>v0.1.2, 19 Oct 2018, add parameter <code>config</code> to proc <code>markdown</code> &amp; support <code>[url](&lt;text&gt; &quot;title&quot;)</code>.</li>
+<li>v0.1.1, 18 Oct 2018, import from <code>markdown</code> instead <code>markdownpkg/core</code>.</li>
+<li>v0.1.0, 17 Oct 2018, initial release.</li>
+</ul>
+<h2>License</h2>
+<p>Nim-markdown is based on MIT license.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/soasme/nim-markdown">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

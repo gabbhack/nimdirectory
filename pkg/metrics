@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">metrics</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">metrics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">prometheus</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">statsd</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim metrics client library supporting the Prometheus monitoring toolkit")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install metrics" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nim-metrics</h1>
+<p><a href="https://github.com/status-im/nim-metrics/actions/workflows/ci.yml">  <img src="https://github.com/status-im/nim-metrics/actions/workflows/ci.yml/badge.svg" style="max-width: 100%;" alt="CI" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /></p>
+<h2>Introduction</h2>
+<p>Nim metrics client library supporting the <a href="https://prometheus.io/">Prometheus</a>
+monitoring toolkit, <a href="https://github.com/statsd/statsd/wiki">StatsD</a> and
+<a href="https://graphite.readthedocs.io/en/latest/feeding-carbon.html">Carbon</a>.
+Designed to be thread-safe and efficient, it&apos;s disabled by default so libraries
+can use it without any overhead for those library users not interested in
+metrics.</p>
+<h2>Installation</h2>
+<p>You can install the development version of the library through Nimble with the
+following command:</p>
+<pre>  <code>nimble install https://github.com/status-im/nim-metrics@#master
+</code></pre>
+<h2>Usage</h2>
+<p>To enable metrics, compile your code with <code>-d:metrics --threads:on</code>.</p>
+<p>To avoid depending on PCRE, compile with <code>-d:withoutPCRE</code>.</p>
+<h2>Architectural overview</h2>
+<p><code>Collector</code> objects holding various <code>Metric</code> objects are registered in one or
+more <code>Registry</code> objects. There is a default registry being used for the most
+common case.</p>
+<p>Metric values are <code>float64</code>, but the API also accepts <code>int64</code> parameters which
+are then cast to <code>float64</code>.</p>
+<p>By starting an HTTP server, custom metrics (and some default ones) can be
+pulled by Prometheus. By specifying backends, those same custom metrics will be
+pushed to StatsD or Carbon servers, as soon as they are modified. They can also
+be serialised to strings for some quick and dirty logging. Integration with the
+<a href="https://github.com/status-im/nim-chronicles">Chronicles</a> logging library is
+available in a separate module.</p>
+<p>That HTTP server used for pulling is running in its own thread. Metric pushing
+also uses a dedicated thread for networking, in order to minimise the overhead.</p>
+<h2>Collector types</h2>
+<h3>Counter</h3>
+<p>A counter&apos;s value can only be incremented.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Declare a variable `myCounter` holding a `Counter` object with a `Metric`</span></div></div><div class="line"><div class="line-content"><span class="com"># having the same name as the variable. The help string is mandatory. The initial</span></div></div><div class="line"><div class="line-content"><span class="com"># value is 0 and it&apos;s automatically added to `defaultRegistry`.</span></div></div><div class="line"><div class="line-content"><span class="ide">declareCounter</span> <span class="ide">myCounter</span>, <span class="str">&quot;an example counter&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># increment it by 1</span></div></div><div class="line"><div class="line-content"><span class="ide">myCounter</span><span class="op">.</span><span class="ide">inc</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># increment it by 10</span></div></div><div class="line"><div class="line-content"><span class="ide">myCounter</span><span class="op">.</span><span class="ide">inc</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># count all exceptions in a block</span></div></div><div class="line"><div class="line-content"><span class="ide">someCounter</span><span class="op">.</span><span class="ide">countExceptions</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">foo</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or just an exception type</span></div></div><div class="line"><div class="line-content"><span class="ide">otherCounter</span><span class="op">.</span><span class="ide">countExceptions</span>(<span class="ide">ValueError</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">bar</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># do you need a variable that&apos;s being exported from the module?</span></div></div><div class="line"><div class="line-content"><span class="ide">declarePublicCounter</span> <span class="ide">seenPeers</span>, <span class="str">&quot;number of seen peers&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># it&apos;s the equivalent of `var seenPeers* = ...`</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># want to avoid declaring a variable, giving it a help string, or anything else for that matter?</span></div></div><div class="line"><div class="line-content"><span class="ide">counter</span>(<span class="str">&quot;one_off_counter&quot;</span>)<span class="op">.</span><span class="ide">inc</span>()</div></div><div class="line"><div class="line-content"><span class="com"># What this does is generate a {.global.} var, so as long as you use the same</span></div></div><div class="line"><div class="line-content"><span class="com"># string, you&apos;re using the same counter. Using strings instead of identifiers</span></div></div><div class="line"><div class="line-content"><span class="com"># skips any compiler protection in case of typos, so this API is not recommended</span></div></div><div class="line"><div class="line-content"><span class="com"># for serious use.</span></div></div>  </code></pre>
+<h3>Gauge</h3>
+<p>Gauges can be incremented, decremented or set to a given value.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">declareGauge</span> <span class="ide">myGauge</span>, <span class="str">&quot;an example gauge&quot;</span> <span class="com"># or `declarePublicGauge` to export it</span></div></div><div class="line"><div class="line-content"><span class="ide">myGauge</span><span class="op">.</span><span class="ide">inc</span>(<span class="num">4.5</span>)</div></div><div class="line"><div class="line-content"><span class="ide">myGauge</span><span class="op">.</span><span class="ide">dec</span>(<span class="num">2</span>)</div></div><div class="line"><div class="line-content"><span class="ide">myGauge</span><span class="op">.</span><span class="ide">set</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">myGauge</span><span class="op">.</span><span class="ide">setToCurrentTime</span>() <span class="com"># Unix timestamp in seconds</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">myGauge</span><span class="op">.</span><span class="ide">trackInProgress</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># myGauge is incremented at the start of the block (a `myGauge.inc()` is being inserted here)</span></div></div><div class="line"><div class="line-content">  <span class="ide">foo</span>()</div></div><div class="line"><div class="line-content">  <span class="com"># and decremented at the end (`myGauge.dec()`)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># set the gauge to the runtime of a block, in seconds</span></div></div><div class="line"><div class="line-content"><span class="ide">myGauge</span><span class="op">.</span><span class="ide">time</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">bar</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># alternative, unrecommended API</span></div></div><div class="line"><div class="line-content"><span class="ide">gauge</span>(<span class="str">&quot;one_off_gauge&quot;</span>)<span class="op">.</span><span class="ide">set</span>(<span class="num">42</span>)</div></div>  </code></pre>
+<h3>Summary</h3>
+<p>Summaries sample observations and provide a total count and the sum of all observed values.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">declareSummary</span> <span class="ide">mySummary</span>, <span class="str">&quot;an example summary&quot;</span> <span class="com"># or `declarePublicSummary` to export it</span></div></div><div class="line"><div class="line-content"><span class="ide">mySummary</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content"><span class="ide">mySummary</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">0.5</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">mySummary</span></div></div>  </code></pre>
+<p>This will print out:</p>
+<pre>  <code class="language-text"># HELP mySummary an example summary
+# TYPE mySummary summary
+mySummary_sum 10.5 1569332171696
+mySummary_count 2.0 1569332171696
+mySummary_created 1569332171.0
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># observe the execution duration of a block, in seconds</span></div></div><div class="line"><div class="line-content"><span class="ide">mySummary</span><span class="op">.</span><span class="ide">time</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">foo</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># alternative, unrecommended API</span></div></div><div class="line"><div class="line-content"><span class="ide">summary</span>(<span class="str">&quot;one_off_summary&quot;</span>)<span class="op">.</span><span class="ide">observe</span>(<span class="num">10</span>)</div></div>  </code></pre>
+<h3>Histogram</h3>
+<p>These cumulative histograms store the count and total sum of observed values,
+just like summaries. Further more, they place the observed values in
+configurable buckets and provide per-bucket counts.</p>
+<p>Note that an observed value will be counted in all buckets that have a size greater or equal to it.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">declareHistogram</span> <span class="ide">myHistogram</span>, <span class="str">&quot;an example histogram&quot;</span> <span class="com"># or `declarePublicHistogram` to export it</span></div></div><div class="line"><div class="line-content"><span class="com"># This uses the default bucket sizes: [0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1.0,</span></div></div><div class="line"><div class="line-content"><span class="com"># 2.5, 5.0, 7.5, 10.0, Inf]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># You can customise the buckets:</span></div></div><div class="line"><div class="line-content"><span class="ide">declareHistogram</span> <span class="ide">withCustomBuckets</span>, <span class="str">&quot;custom buckets&quot;</span>, <span class="ide">buckets</span> <span class="op">=</span> [<span class="num">0.0</span>, <span class="num">1.0</span>, <span class="num">2.0</span>]</div></div><div class="line"><div class="line-content"><span class="com"># if you leave out the &quot;Inf&quot; bucket, it&apos;s added for you</span></div></div><div class="line"><div class="line-content"><span class="ide">withCustomBuckets</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">0.5</span>)</div></div><div class="line"><div class="line-content"><span class="ide">withCustomBuckets</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="ide">withCustomBuckets</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">1.5</span>)</div></div><div class="line"><div class="line-content"><span class="ide">withCustomBuckets</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">3.7</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">withCustomBuckets</span></div></div>  </code></pre>
+<p>This will print out:</p>
+<pre>  <code class="language-text"># HELP withCustomBuckets custom buckets
+# TYPE withCustomBuckets histogram
+withCustomBuckets_sum 6.7 1569334493506
+withCustomBuckets_count 4.0 1569334493506
+withCustomBuckets_created 1569334493.0
+withCustomBuckets_bucket{le=&quot;0.0&quot;} 0.0
+withCustomBuckets_bucket{le=&quot;1.0&quot;} 2.0 1569334493506
+withCustomBuckets_bucket{le=&quot;2.0&quot;} 3.0 1569334493506
+withCustomBuckets_bucket{le=&quot;+Inf&quot;} 4.0 1569334493506
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># observe the execution duration of a block, in seconds</span></div></div><div class="line"><div class="line-content"><span class="ide">myHistogram</span><span class="op">.</span><span class="ide">time</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">foo</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># alternative, unrecommended API</span></div></div><div class="line"><div class="line-content"><span class="ide">histogram</span>(<span class="str">&quot;one_off_histogram&quot;</span>)<span class="op">.</span><span class="ide">observe</span>(<span class="num">10</span>)</div></div>  </code></pre>
+<h3>Custom collectors</h3>
+<p>Sometimes you need to create metrics on the fly, with a custom <code>collect()</code>
+method of a custom collector type.</p>
+<p>Let&apos;s say you have an USB-attached power meter and, for some reason, you want
+to read the power consumption every time Prometheus reads your metrics:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">metrics</span>, <span class="ide">times</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">metrics</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span> <span class="ide">PowerCollector</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Gauge</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">powerCollector</span> <span class="op">=</span> <span class="ide">PowerCollector</span><span class="op">.</span><span class="ide">newCollector</span>(<span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;power_usage&quot;</span>, <span class="ide">help</span> <span class="op">=</span> <span class="str">&quot;Instantaneous power usage - in watts.&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">method</span> <span class="ide">collect</span>(<span class="ide">collector</span>: <span class="ide">PowerCollector</span>): <span class="ide">Metrics</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">timestamp</span> <span class="op">=</span> <span class="ide">getTime</span>()<span class="op">.</span><span class="ide">toMilliseconds</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">result</span>[<span class="op">@</span>[]] <span class="op">=</span> <span class="op">@</span>[</div></div><div class="line"><div class="line-content">      <span class="ide">Metric</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">name</span>: <span class="str">&quot;power_usage&quot;</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">value</span>: <span class="ide">getPowerUsage</span>(), <span class="com"># your power-meter reader</span></div></div><div class="line"><div class="line-content">        <span class="ide">timestamp</span>: <span class="ide">timestamp</span>,</div></div><div class="line"><div class="line-content">      )</div></div><div class="line"><div class="line-content">    ]</div></div>  </code></pre>
+<p>There&apos;s a bit of repetition in the collector and metric names, because we no
+longer have behind-the-scenes name copying/deriving there.</p>
+<p>You can output multiple metrics from your custom <code>collect()</code> method. It&apos;s
+perfectly legal and we do that internally for our system/runtime metrics.</p>
+<p>Try not to get creative with dynamic metric names - Prometheus has a hard time
+dealing with that.</p>
+<h2>Labels</h2>
+<p>Metric labels are supported for the Prometheus backend, as a way to add extra
+dimensions corresponding to each combination of metric name and label values.
+This can quickly get out of hand, as you can guess, so don&apos;t go overboard with
+this feature. (See also the <a href="https://prometheus.io/docs/practices/instrumentation/#do-not-overuse-labels">relevant warnings in Prometheus&apos; docs</a>.)</p>
+<p>You declare label names when defining the collector and label values each time
+you update it:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">declareCounter</span> <span class="ide">lCounter</span>, <span class="str">&quot;example counter with labels&quot;</span>, [<span class="str">&quot;foo&quot;</span>, <span class="str">&quot;bar&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">lCounter</span><span class="op">.</span><span class="ide">inc</span>(<span class="ide">labelValues</span> <span class="op">=</span> [<span class="str">&quot;1&quot;</span>, <span class="str">&quot;a&quot;</span>]) <span class="com"># the label values must be strings</span></div></div><div class="line"><div class="line-content"><span class="ide">lCounter</span><span class="op">.</span><span class="ide">inc</span>(<span class="ide">labelValues</span> <span class="op">=</span> [<span class="str">&quot;2&quot;</span>, <span class="str">&quot;b&quot;</span>])</div></div><div class="line"><div class="line-content"><span class="com"># How many metrics are now in this collector? Two, because we used two sets of label values:</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">lCounter</span></div></div>  </code></pre>
+<pre>  <code class="language-text"># HELP lCounter example counter with labels
+# TYPE lCounter counter
+lCounter_total{foo=&quot;1&quot;,bar=&quot;a&quot;} 1.0 1569340503703
+lCounter_created{foo=&quot;1&quot;,bar=&quot;a&quot;} 1569340503.0
+lCounter_total{foo=&quot;2&quot;,bar=&quot;b&quot;} 1.0 1569340503703
+lCounter_created{foo=&quot;2&quot;,bar=&quot;b&quot;} 1569340503.0
+</code></pre>
+<p>(OK, there are four metrics in total, because each one gets a <code>*_created</code> buddy.)</p>
+<p>So if you must use labels, make sure there&apos;s a finite and small number of
+possible label values being set.</p>
+<h2>Metric name and label name validation</h2>
+<p>We use Prometheus standards for that, so metric names must comply with the
+<code>^[a-zA-Z_:][a-zA-Z0-9_:]*$</code> regex while label names have to comply with
+<code>^[a-zA-Z_][a-zA-Z0-9_]*$</code>.</p>
+<p>In the examples you&apos;ve seen so far, all collectors declared with
+<code>declare&lt;CollectorType&gt;</code> had more stringent naming rules, since their names were
+also identifiers for Nim variables - which can&apos;t have colons in them.</p>
+<p>To overcome this, without relying on the discouraged alternative API, use the <code>name</code> parameter:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">declareCounter</span> <span class="ide">cCounter</span>, <span class="str">&quot;counter with colons in name&quot;</span>, <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;foo:bar:baz&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">cCounter</span><span class="op">.</span><span class="ide">inc</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">cCounter</span></div></div>  </code></pre>
+<pre>  <code class="language-text"># HELP foo:bar:baz counter with colons in name
+# TYPE foo:bar:baz counter
+foo:bar:baz_total 1.0 1569341756504
+foo:bar:baz_created 1569341756.0
+</code></pre>
+<h2>Logging</h2>
+<p>Metrics are not logs, but you might want to log them nonetheless. The <code>$</code>
+procedure is defined for collectors and registries, so you can just use the
+built-in string serialisation to print them:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myCounter</span>, <span class="ide">myGauge</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">defaultRegistry</span></div></div>  </code></pre>
+<p>Integration with <a href="https://github.com/status-im/nim-chronicles">Chronicles</a> is available in a separate module:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">chronicles</span>, <span class="ide">metrics</span>, <span class="ide">metrics</span><span class="op">/</span><span class="ide">chronicles_support</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">info</span> <span class="str">&quot;myCounter&quot;</span>, <span class="ide">myCounter</span></div></div><div class="line"><div class="line-content"><span class="ide">debug</span> <span class="str">&quot;default registry&quot;</span>, <span class="ide">defaultRegistry</span></div></div>  </code></pre>
+<h2>Testing</h2>
+<p>When testing, you might want to isolate some collectors by registering them
+into a custom registry:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">myRegistry</span> <span class="op">=</span> <span class="ide">newRegistry</span>()</div></div><div class="line"><div class="line-content"><span class="ide">declareCounter</span> <span class="ide">myCounter</span>, <span class="str">&quot;help&quot;</span>, <span class="ide">registry</span> <span class="op">=</span> <span class="ide">myRegistry</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myRegistry</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># this means that `myCounter` is no longer registered in `defaultRegistry`</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">defaultRegistry</span></div></div>  </code></pre>
+<p>These unoptimised (read &quot;very inefficient&quot;) <code>value()</code> and <code>valueByName()</code>
+procedures for accessing metric values should only be used inside test suites:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">suite</span> <span class="str">&quot;counter&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">test</span> <span class="str">&quot;basic&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">declareCounter</span> <span class="ide">myCounter</span>, <span class="str">&quot;help&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">check</span> <span class="ide">myCounter</span><span class="op">.</span><span class="ide">value</span> <span class="op">==</span> <span class="num">0</span></div></div><div class="line"><div class="line-content">    <span class="ide">myCounter</span><span class="op">.</span><span class="ide">inc</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">check</span> <span class="ide">myCounter</span><span class="op">.</span><span class="ide">value</span> <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">declareSummary</span> <span class="ide">cSummary</span>, <span class="str">&quot;summary with colons in name&quot;</span>, <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;foo:bar:baz&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">cSummary</span><span class="op">.</span><span class="ide">observe</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">check</span> <span class="ide">cSummary</span><span class="op">.</span><span class="ide">valueByName</span>(<span class="str">&quot;foo:bar:baz_count&quot;</span>) <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">    <span class="ide">check</span> <span class="ide">cSummary</span><span class="op">.</span><span class="ide">valueByName</span>(<span class="str">&quot;foo:bar:baz_sum&quot;</span>) <span class="op">==</span> <span class="num">10</span></div></div>  </code></pre>
+<h2>Prometheus endpoint</h2>
+<p>First, you need to choose the HTTP server implementation.</p>
+<h3>Standard library</h3>
+<p>Using <a href="https://nim-lang.org/docs/asynchttpserver.html">asynchttpserver</a> which is based on <a href="https://nim-lang.org/docs/asyncdispatch.html">asyncdispatch</a> from the Nim standard library:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">metrics</span>, <span class="ide">metrics</span><span class="op">/</span><span class="ide">stdlib_httpserver</span></div></div>  </code></pre>
+<h3>Chronos</h3>
+<p>Using <a href="https://github.com/status-im/nim-chronos/">Chronos</a> - an asyncdispatch alternative:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">metrics</span>, <span class="ide">metrics</span><span class="op">/</span><span class="ide">chronos_httpserver</span></div></div>  </code></pre>
+<h3>Starting the HTTP server</h3>
+<p>Start an HTTP server listening on <code>127.0.0.1:8000</code> from which the Prometheus
+daemon can pull the metrics from all collectors in <code>defaultRegistry</code> (plus the
+default metrics):</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">startMetricsHttpServer</span>()</div></div>  </code></pre>
+<p>Or set your own address and port to listen to:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">net</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">startMetricsHttpServer</span>(<span class="str">&quot;127.0.0.1&quot;</span>, <span class="ide">Port</span>(<span class="num">8000</span>))</div></div>  </code></pre>
+<p>The HTTP server will run in its own thread. It will expose two endpoints:</p>
+<ul>
+<li>http://127.0.0.1:8000/metrics - Returns the metrics consumed by Prometheus.</li>
+<li>http://127.0.0.1:8000/health - Healthcheck that returns <code>OK</code> string and 200 code.</li>
+</ul>
+<h3>System metrics</h3>
+<p>Default metrics available (see also <a href="https://prometheus.io/docs/instrumenting/writing_clientlibs/#standard-and-runtime-collectors">the relevant Prometheus docs</a>):</p>
+<pre>  <code class="language-text">process_cpu_seconds_total
+process_open_fds
+process_max_fds
+process_virtual_memory_bytes
+process_resident_memory_bytes
+process_start_time_seconds
+nim_gc_mem_bytes[thread_id]
+nim_gc_mem_occupied_bytes[thread_id]
+nim_gc_heap_instance_occupied_bytes[type_name]
+nim_gc_heap_instance_occupied_summed_bytes
+</code></pre>
+<p>The <code>process_*</code> metrics are only available on Linux, for now.</p>
+<p><code>nim_gc_heap_instance_occupied_bytes</code> is only available when compiling with
+<code>-d:nimTypeNames</code> and holds the top 10 instance types, in reverse order of
+their total heap usage (from all threads), at the time the metric is created.
+Since this set changes with time, you&apos;ll see more than 10 types in Grafana.</p>
+<p>The thread-specific metrics are being updated automatically when a user-defined metric
+is changed in the main thread, but only if a minimal interval has passed since
+the last update (defaults to 10 second). All other system metrics are custom
+collectors which are updated at collection time.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">times</span></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">metrics</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># get the default minimal update interval</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">getSystemMetricsUpdateInterval</span>()</div></div><div class="line"><div class="line-content">  <span class="com"># you can change it</span></div></div><div class="line"><div class="line-content">  <span class="ide">setSystemMetricsUpdateInterval</span>(<span class="ide">initDuration</span>(<span class="ide">seconds</span> <span class="op">=</span> <span class="num">2</span>))</div></div>  </code></pre>
+<p>You can also disable this automated piggy-backing on user-defined metric value
+changes, if you need more regularity, and take charge of updating system
+metrics yourself.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># disable automatic updates</span></div></div><div class="line"><div class="line-content"><span class="ide">setSystemMetricsAutomaticUpdate</span>(<span class="ide">false</span>)</div></div><div class="line"><div class="line-content"><span class="com"># somewhere in your event loop, at an interval of your choice</span></div></div><div class="line"><div class="line-content"><span class="ide">updateThreadMetrics</span>()</div></div>  </code></pre>
+<p>Those metrics with with a &quot;thread_id&quot; label are thread-specific metrics. The
+automatic update only covers thread metrics for the main thread. You&apos;ll have to
+call <code>updateThreadMetrics()</code> by yourself for any other thread you care about.</p>
+<p>Screenshot of <a href="https://github.com/status-im/nimbus-eth1/#metric-visualisation">Grafana showing data from Prometheus that pulls it from Nimbus which uses nim-metrics</a>:</p>
+<p>  <img src="https://i.imgur.com/AdtavDA.png" style="max-width: 100%;" alt="Grafana screenshot" /></p>
+<h2>StatsD</h2>
+<p>Add a <a href="https://github.com/statsd/statsd/wiki">StatsD</a> export backend where
+metric updates will be pushed as soon as they are created:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">metrics</span>, <span class="ide">net</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">metrics</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">addExportBackend</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">metricProtocol</span> <span class="op">=</span> <span class="ide">STATSD</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">netProtocol</span> <span class="op">=</span> <span class="ide">UDP</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">address</span> <span class="op">=</span> <span class="str">&quot;127.0.0.1&quot;</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">port</span> <span class="op">=</span> <span class="ide">Port</span>(<span class="num">8125</span>)</div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">declareCounter</span> <span class="ide">myCounter</span>, <span class="str">&quot;some counter&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">myCounter</span><span class="op">.</span><span class="ide">inc</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># When we incremented the counter, the corresponding data was sent over the wire to the StatsD daemon.</span></div></div>  </code></pre>
+<p>The only supported collector types are counters and gauges. There&apos;s a dedicated
+thread that does the networking part. When you update these collectors, data is
+sent over a channel to that thread. If the channel&apos;s buffer is full, the data
+is silently dropped. Same for an unreachable backend or any other networking
+error. Reconnections are tried automatically and there&apos;s one socket per backend
+being reused.</p>
+<p>All the complexity is hidden from the API user and additional latency is kept
+to a minimum. Exported metrics are treated like disposable data and dropped at
+the first sign of trouble.</p>
+<p>Counters support an additional parameter just for StatsD: <code>sampleRate</code>. This
+allows sending just a percentage of the increments to the StatsD daemon.
+Nothing else changes on the client side.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">declareCounter</span> <span class="ide">sCounter</span>, <span class="str">&quot;counter with a sample rate set&quot;</span>, <span class="ide">sampleRate</span> <span class="op">=</span> <span class="num">0.1</span></div></div><div class="line"><div class="line-content"><span class="ide">sCounter</span><span class="op">.</span><span class="ide">inc</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Now only 10% (on average) of this counter&apos;s updates will be sent over the</span></div></div><div class="line"><div class="line-content"><span class="com"># wire. We throw a dice when the time comes, using a simple PRNG. We also</span></div></div><div class="line"><div class="line-content"><span class="com"># inform the StatsD daemon about this rate, so it can adjust its estimated value</span></div></div><div class="line"><div class="line-content"><span class="com"># accordingly.</span></div></div>  </code></pre>
+<h2>Carbon</h2>
+<p>Add a <a href="https://graphite.readthedocs.io/en/latest/feeding-carbon.html">Carbon</a>
+export backend where metric updates will be pushed as soon as they are created:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">metrics</span>, <span class="ide">net</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">metrics</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">addExportBackend</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">metricProtocol</span> <span class="op">=</span> <span class="ide">CARBON</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">netProtocol</span> <span class="op">=</span> <span class="ide">TCP</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">address</span> <span class="op">=</span> <span class="str">&quot;127.0.0.1&quot;</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">port</span> <span class="op">=</span> <span class="ide">Port</span>(<span class="num">2003</span>)</div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>The implementation is very similar to the StatsD metric exporting described above.</p>
+<p>You may add as many export backends as you want, but deleting them from the
+<code>exportBackends</code> global variable is unsupported.</p>
+<h2>Contributing</h2>
+<p>When submitting pull requests, please add test cases for any new features or
+fixes and make sure <code>nimble test</code> is still able to execute the entire test
+suite successfully.</p>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHE">LICENSE-APACHE</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. These files may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-metrics">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

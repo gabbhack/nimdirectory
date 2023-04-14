@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">allographer</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sqlite</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mysql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">postgres</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rdb</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">query_builder</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">orm</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A Nim query builder library inspired by Laravel/PHP and Orator/Python")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install allographer" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>allographer</h1>
+<p><a href="https://github.com/yglukhov/nimble-tag">  <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" /></a><br />
+<img src="https://github.com/itsumura-h/nim-allographer/workflows/Build%20and%20test%20Nim/badge.svg" style="max-width: 100%;" alt="Build Status" /></p>
+<p>An asynchronous query builder library inspired by <a href="https://readouble.com/laravel/6.0/en/queries.html">Laravel/PHP</a> and <a href="https://orator-orm.com">Orator/Python</a> for Nim</p>
+<h2>Easy to access Rdb</h2>
+<h3>Query Builder</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span>, <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">allographer</span><span class="op">/</span><span class="ide">connection</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">allographer</span><span class="op">/</span><span class="ide">query_builder</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">maxConnections</span> <span class="op">=</span> <span class="num">95</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">timeout</span> <span class="op">=</span> <span class="num">30</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rdb</span> <span class="op">=</span> <span class="ide">dbOpen</span>(<span class="ide">PostgreSql</span>, <span class="str">&quot;database&quot;</span>, <span class="str">&quot;user&quot;</span>, <span class="str">&quot;password&quot;</span> <span class="str">&quot;localhost&quot;</span>, <span class="num">5432</span>, <span class="ide">maxConnections</span>, <span class="ide">timeout</span>)</div></div><div class="line"><div class="line-content"><span class="com"># also available</span></div></div><div class="line"><div class="line-content"><span class="com"># let rdb = dbOpen(Sqlite3, &quot;/path/to/db/sqlite3.db&quot;, maxConnections=maxConnections, timeout=timeout)</span></div></div><div class="line"><div class="line-content"><span class="com"># let rdb = dbOpen(MySQL, &quot;database&quot;, &quot;user&quot;, &quot;password&quot; &quot;localhost&quot;, 3306, maxConnections, timeout)</span></div></div><div class="line"><div class="line-content"><span class="com"># let rdb = dbOpen(MariaDB, &quot;database&quot;, &quot;user&quot;, &quot;password&quot; &quot;localhost&quot;, 3306, maxConnections, timeout)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>(){<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">result</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">rdb</span></div></div><div class="line"><div class="line-content">                    <span class="op">.</span><span class="ide">table</span>(<span class="str">&quot;users&quot;</span>)</div></div><div class="line"><div class="line-content">                    <span class="op">.</span><span class="ide">select</span>(<span class="str">&quot;id&quot;</span>, <span class="str">&quot;email&quot;</span>, <span class="str">&quot;name&quot;</span>)</div></div><div class="line"><div class="line-content">                    <span class="op">.</span><span class="ide">limit</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content">                    <span class="op">.</span><span class="ide">offset</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content">                    <span class="op">.</span><span class="ide">get</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">result</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">main</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="op">&gt;&gt;</span> <span class="ide">SELECT</span> <span class="ide">id</span>, <span class="ide">email</span>, <span class="ide">name</span> <span class="kwd">FROM</span> <span class="ide">users</span> <span class="ide">LIMIT</span> <span class="num">5</span> <span class="ide">OFFSET</span> <span class="num">10</span></div></div><div class="line"><div class="line-content"><span class="op">&gt;&gt;</span> <span class="op">@</span>[</div></div><div class="line"><div class="line-content">  {<span class="str">&quot;id&quot;</span>:<span class="num">11</span>,<span class="str">&quot;email&quot;</span>:<span class="str">&quot;user11@gmail.com&quot;</span>,<span class="str">&quot;name&quot;</span>:<span class="str">&quot;user11&quot;</span>},</div></div><div class="line"><div class="line-content">  {<span class="str">&quot;id&quot;</span>:<span class="num">12</span>,<span class="str">&quot;email&quot;</span>:<span class="str">&quot;user12@gmail.com&quot;</span>,<span class="str">&quot;name&quot;</span>:<span class="str">&quot;user12&quot;</span>},</div></div><div class="line"><div class="line-content">  {<span class="str">&quot;id&quot;</span>:<span class="num">13</span>,<span class="str">&quot;email&quot;</span>:<span class="str">&quot;user13@gmail.com&quot;</span>,<span class="str">&quot;name&quot;</span>:<span class="str">&quot;user13&quot;</span>},</div></div><div class="line"><div class="line-content">  {<span class="str">&quot;id&quot;</span>:<span class="num">14</span>,<span class="str">&quot;email&quot;</span>:<span class="str">&quot;user14@gmail.com&quot;</span>,<span class="str">&quot;name&quot;</span>:<span class="str">&quot;user14&quot;</span>},</div></div><div class="line"><div class="line-content">  {<span class="str">&quot;id&quot;</span>:<span class="num">15</span>,<span class="str">&quot;email&quot;</span>:<span class="str">&quot;user15@gmail.com&quot;</span>,<span class="str">&quot;name&quot;</span>:<span class="str">&quot;user15&quot;</span>}</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<h3>Schema Builder</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">allographer</span><span class="op">/</span><span class="ide">schema_builder</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">rdb</span><span class="op">.</span><span class="ide">create</span>([</div></div><div class="line"><div class="line-content">  <span class="ide">table</span>(<span class="str">&quot;auth&quot;</span>, [</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">increments</span>(<span class="str">&quot;id&quot;</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">string</span>(<span class="str">&quot;name&quot;</span>)<span class="op">.</span><span class="ide">nullable</span>(),</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">timestamp</span>(<span class="str">&quot;created_at&quot;</span>)<span class="op">.</span><span class="ide">default</span>()</div></div><div class="line"><div class="line-content">  ]),</div></div><div class="line"><div class="line-content">  <span class="ide">table</span>(<span class="str">&quot;users&quot;</span>, [</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">increments</span>(<span class="str">&quot;id&quot;</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">string</span>(<span class="str">&quot;name&quot;</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">foreign</span>(<span class="str">&quot;auth_id&quot;</span>)<span class="op">.</span><span class="ide">reference</span>(<span class="str">&quot;id&quot;</span>)<span class="op">.</span><span class="ide">on</span>(<span class="str">&quot;auth&quot;</span>)<span class="op">.</span><span class="ide">onDelete</span>(<span class="ide">SET_NULL</span>)</div></div><div class="line"><div class="line-content">  ])</div></div><div class="line"><div class="line-content">])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="op">&gt;&gt;</span> <span class="ide">CREATE</span> <span class="ide">TABLE</span> <span class="ide">auth</span> (</div></div><div class="line"><div class="line-content">    <span class="ide">id</span> <span class="ide">INT</span> <span class="kwd">NOT</span> <span class="ide">NULL</span> <span class="ide">PRIMARY</span> <span class="ide">KEY</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">name</span> <span class="ide">VARCHAR</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">created_at</span> <span class="ide">DATETIME</span> <span class="ide">DEFAULT</span> (<span class="ide">NOW</span>())</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"><span class="op">&gt;&gt;</span> <span class="ide">CREATE</span> <span class="ide">TABLE</span> <span class="ide">users</span> (</div></div><div class="line"><div class="line-content">    <span class="ide">id</span> <span class="ide">INT</span> <span class="kwd">NOT</span> <span class="ide">NULL</span> <span class="ide">PRIMARY</span> <span class="ide">KEY</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">name</span> <span class="ide">VARCHAR</span> <span class="kwd">NOT</span> <span class="ide">NULL</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">auth_id</span> <span class="ide">INT</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">FOREIGN</span> <span class="ide">KEY</span>(<span class="ide">auth_id</span>) <span class="ide">REFERENCES</span> <span class="ide">auth</span>(<span class="ide">id</span>) <span class="ide">ON</span> <span class="ide">DELETE</span> <span class="ide">SET</span> <span class="ide">NULL</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">rdb</span><span class="op">.</span><span class="ide">alter</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">table</span>(<span class="str">&quot;users&quot;</span>, [</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">string</span>(<span class="str">&quot;email&quot;</span>)<span class="op">.</span><span class="ide">unique</span>()<span class="op">.</span><span class="ide">default</span>(<span class="str">&quot;&quot;</span>)<span class="op">.</span><span class="ide">add</span>(),</div></div><div class="line"><div class="line-content">    <span class="ide">Column</span><span class="op">.</span><span class="ide">deleteColumn</span>(<span class="str">&quot;name&quot;</span>)</div></div><div class="line"><div class="line-content">  ])</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="op">&gt;&gt;</span> <span class="ide">ALTER</span> <span class="ide">TABLE</span> <span class="str">&quot;users&quot;</span> <span class="ide">ADD</span> <span class="ide">COLUMN</span> `<span class="ide">email</span>` <span class="ide">UNIQUE</span> <span class="ide">DEFAULT</span> <span class="str">&quot;&quot;</span> <span class="ide">CHECK</span> (<span class="ide">length</span>(`<span class="ide">email</span>`) <span class="op">&lt;=</span> <span class="num">255</span>)</div></div><div class="line"><div class="line-content"><span class="op">&gt;&gt;</span> <span class="ide">ALTER</span> <span class="ide">TABLE</span> <span class="str">&quot;users&quot;</span> <span class="ide">DROP</span> `<span class="ide">name</span>`</div></div>  </code></pre>
+<h2>Index</h2>
+<!-- ts -->
+<ul>
+<li><a href="#allographer">allographer</a>
+<ul>
+<li><a href="#easy-to-access-rdb">Easy to access Rdb</a>
+<ul>
+<li>  <a href="#query-builder">Query Builder</a></li>
+<li>  <a href="#schema-builder">Schema Builder</a></li>
+</ul>
+</li>
+<li>  <a href="#index">Index</a></li>
+<li>  <a href="#install">Install</a></li>
+<li>  <a href="#set-up">Set up</a></li>
+<li>  <a href="#configuation">Configuation</a></li>
+<li>  <a href="#createing-connection">Createing connection</a></li>
+<li>  <a href="#logging">Logging</a></li>
+<li>  <a href="#documents">Documents</a></li>
+<li><a href="#nim-api-documents">Nim API Documents</a>
+<ul>
+<li>  <a href="#query-builder-1">Query Builder</a></li>
+<li>  <a href="#schema-builder-1">Schema Builder</a></li>
+</ul>
+</li>
+<li><a href="#development">Development</a>
+<ul>
+<li>  <a href="#branch-naming-rule">Branch naming rule</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!--  Added by: root, at: Tue Feb 22 03:11:48 UTC 2022  -->
+<!-- te -->
+<hr />
+<h2>Install</h2>
+<pre>  <code class="language-sh">nimble install allographer
+</code></pre>
+<p>If you get <code>SIGSEGV: Illegal storage access. (Attempt to read from nil?)</code> when trying to use the database you likely have a problem with the library path. On OS X the default is to check for the <code>brew --prefix</code> of the chosen driver, if that doesn&apos;t work it will look in <code>/usr/lib</code> or an environment variable <code>DYLD_xxx_PATH</code> where <code>xxx</code> if your driver: <code>SQLITE</code>, <code>MARIADB</code>, <code>MYSQL</code> or <code>POSTGRES</code>.</p>
+<h2>Configuation</h2>
+<p>Allographer loads emvironment variables of <code>DB_SQLITE</code>, <code>DB_POSTGRES</code>, <code>DB_MYSQL</code> and <code>DB_MARIADB</code> to define which process should be <strong>compiled</strong>.<br />
+These environment variables have to be set at compile time, so they have to be written in <code>config.nims</code> not in <code>.env</code>.</p>
+<p>config.nims</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">putEnv</span>(<span class="str">&quot;DB_SQLITE&quot;</span>, <span class="op">$</span><span class="ide">true</span>)</div></div><div class="line"><div class="line-content"><span class="ide">putEnv</span>(<span class="str">&quot;DB_POSTGRES&quot;</span>, <span class="op">$</span><span class="ide">true</span>)</div></div>  </code></pre>
+<p>In this example, even if your runtime environment lacks <code>mysqlclient-dev</code>, execution will success. However if your runtime environment lacks <code>sqlite3</code>, execution will fail.</p>
+<h2>Createing connection</h2>
+<p>Database connection should be definded as singleton variable.</p>
+<p>database.nim</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">allographer</span><span class="op">/</span><span class="ide">connection</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rdb</span><span class="op">*</span> <span class="op">=</span> <span class="ide">dbOpen</span>(<span class="ide">PostgreSql</span>, <span class="str">&quot;database&quot;</span>, <span class="str">&quot;user&quot;</span>, <span class="str">&quot;password&quot;</span> <span class="str">&quot;localhost&quot;</span>, <span class="num">5432</span>, <span class="ide">maxConnections</span>, <span class="ide">timeout</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># you can create connection for multiple database at same time.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">sqliteRdb</span><span class="op">*</span> <span class="op">=</span> <span class="ide">dbOpen</span>(<span class="ide">Sqlite3</span>, <span class="str">&quot;/path/to/db/sqlite3.db&quot;</span>, <span class="ide">maxConnections</span><span class="op">=</span><span class="ide">maxConnections</span>, <span class="ide">timeout</span><span class="op">=</span><span class="ide">timeout</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">mysqlRdb</span><span class="op">*</span> <span class="op">=</span> <span class="ide">dbOpen</span>(<span class="ide">MySQL</span>, <span class="str">&quot;database&quot;</span>, <span class="str">&quot;user&quot;</span>, <span class="str">&quot;password&quot;</span> <span class="str">&quot;localhost&quot;</span>, <span class="num">3306</span>, <span class="ide">maxConnections</span>, <span class="ide">timeout</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">mariaRdb</span><span class="op">*</span> <span class="op">=</span> <span class="ide">dbOpen</span>(<span class="ide">MariaDB</span>, <span class="str">&quot;database&quot;</span>, <span class="str">&quot;user&quot;</span>, <span class="str">&quot;password&quot;</span> <span class="str">&quot;localhost&quot;</span>, <span class="num">3306</span>, <span class="ide">maxConnections</span>, <span class="ide">timeout</span>)</div></div>  </code></pre>
+<p>Then, call connection when you run query.</p>
+<p>run_sql.nim</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">allographer</span><span class="op">/</span><span class="ide">query_builder</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">database</span> <span class="kwd">import</span> <span class="ide">rdb</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>(){<span class="op">.</span><span class="ide">async</span><span class="op">.</span>}<span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">await</span> <span class="ide">rdb</span><span class="op">.</span><span class="ide">table</span>(<span class="str">&quot;users&quot;</span>)<span class="op">.</span><span class="ide">get</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">main</span>()</div></div>  </code></pre>
+<h2>Logging</h2>
+<p>Please set args in <code>dbOpen()</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">dbOpen</span><span class="op">*</span>(<span class="ide">driver</span>:<span class="ide">Driver</span>, <span class="ide">database</span>:<span class="ide">string</span><span class="op">=</span><span class="str">&quot;&quot;</span>, <span class="ide">user</span>:<span class="ide">string</span><span class="op">=</span><span class="str">&quot;&quot;</span>, <span class="ide">password</span>:<span class="ide">string</span><span class="op">=</span><span class="str">&quot;&quot;</span>,</div></div><div class="line"><div class="line-content">            <span class="ide">host</span>: <span class="ide">string</span><span class="op">=</span><span class="str">&quot;&quot;</span>, <span class="ide">port</span><span class="op">=</span><span class="num">0</span>, <span class="ide">maxConnections</span><span class="op">=</span><span class="num">1</span>, <span class="ide">timeout</span><span class="op">=</span><span class="num">30</span>,</div></div><div class="line"><div class="line-content">            <span class="ide">shouldDisplayLog</span><span class="op">=</span><span class="ide">false</span>, <span class="ide">shouldOutputLogFile</span><span class="op">=</span><span class="ide">false</span>, <span class="ide">logDir</span><span class="op">=</span><span class="str">&quot;&quot;</span>):<span class="ide">Rdb</span></div></div>  </code></pre>
+<ul>
+<li>shouldDisplayLog: Whether display logging in terminal console or not.</li>
+<li>shouldOutputLogFile: Whether output logging in log file or not.</li>
+<li>logDir: Define logging dir path.</li>
+</ul>
+<h2>Documents</h2>
+<p><a href="./documents/query_builder.md">Query Builder</a><br />
+<a href="./documents/schema_builder.md">Schema Builder</a></p>
+<h2>Nim API Documents</h2>
+<p>  <a href="https://itsumura-h.github.io/nim-allographer/connection.html">connection</a></p>
+<h3>Query Builder</h3>
+<p><a href="https://itsumura-h.github.io/nim-allographer/base.html">base</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/query_builder/grammars.html">grammars</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/query_builder/exec.html">exec</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/async/async_db.html">async_db</a></p>
+<h3>Schema Builder</h3>
+<p><a href="https://itsumura-h.github.io/nim-allographer/schema_builder/schema.html">schema</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/grammars.html">grammar</a></p>
+<h2>Development</h2>
+<h3>Branch naming rule</h3>
+<p>Please create this branch name when you will create a new pull request.</p>
+<table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feature-***</td>
+<td>New feature branch</td>
+</tr>
+<tr>
+<td>hotfix-***</td>
+<td>Bug fix branch</td>
+</tr>
+<tr>
+<td>chore-***</td>
+<td>Chore work or maintenance</td>
+</tr></tbody></table>
+<p>This naming rule automatically labels the pull request.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/itsumura-h/nim-allographer">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

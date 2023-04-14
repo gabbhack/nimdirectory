@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">noise</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linenoise</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">readline</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">command-line</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">repl</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim implementation of linenoise command line editor")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install noise" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>noise</h1>
+<p>  <img src="https://img.shields.io/badge/available%20on-nimble-yellow.svg?style=flat-square" style="max-width: 100%;" alt="nimble" />  <img src="https://img.shields.io/github/license/citycide/cascade.svg?style=flat-square" style="max-width: 100%;" alt="license" />  <img src="https://github.com/jangko/nim-noise/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
+<p>Nim implementation of linenoise command line editor, inspired by
+<a href="https://github.com/AmokHuginnsson/replxx">replxx</a> and
+<a href="https://github.com/arangodb/linenoise-ng">linenoise-ng</a></p>
+<h2>Features</h2>
+<ul>
+<li>Line editing with emacs keybindings</li>
+<li>History handling</li>
+<li>Completion</li>
+<li>Unicode aware</li>
+<li>Intuitive ESC key sub menu escaping</li>
+<li>Incremental history search</li>
+<li>Support multiline editing out of the box</li>
+<li>Support multiline prompt with color and unicode characters</li>
+<li>A bunch of compile time switches to select which features you want to turn on/off</li>
+<li>Support Windows, Linux and Mac OS</li>
+<li>Disable all basic features, then you&apos;ll get a cross platform key stroke library</li>
+</ul>
+<h2>Planned Features</h2>
+<ul>
+<li>Hints(work in progress)</li>
+<li>Syntax coloring(work in progress)</li>
+</ul>
+<h2>API</h2>
+<p>Primitive API(available when prompt_no_basic is defined):</p>
+<ul>
+<li>proc readChar(): char32</li>
+</ul>
+<p>Basic API:</p>
+<ul>
+<li>proc init(x: typedesc[Noise]): Noise</li>
+<li>proc getKeyType(self: Noise): KeyType</li>
+<li>proc getLine(self: var Noise): string</li>
+<li>proc readLine(self: var Noise): bool</li>
+<li>proc setPrompt(self: var Noise, text: Styler)</li>
+<li>proc setPrompt(self: var Noise, text: string)</li>
+<li>proc getPrompt(self: var Noise): Styler</li>
+</ul>
+<p>History API:</p>
+<ul>
+<li>proc historyAdd(self: var Noise, line: string)</li>
+<li>proc historySetMaxLen(self: var Noise, len: int)</li>
+<li>iterator histories(self: var Noise): string</li>
+<li>iterator historyPairs(self: var Noise): (int, string)</li>
+<li>proc historySave(self: var Noise, fileName: string): bool</li>
+<li>proc historyLoad(self: var Noise, fileName: string): bool</li>
+<li>proc historyClear(self: var Noise)</li>
+</ul>
+<p>Completion API:</p>
+<ul>
+<li>proc setCompletionHook(self: var Noise, prc: CompletionHook)</li>
+<li>proc addCompletion(self: var Noise, text: string)</li>
+</ul>
+<p>PreloadBuffer API:</p>
+<ul>
+<li>proc preloadBuffer(self: var Noise, preloadText: string)</li>
+</ul>
+<p>KillRing API:</p>
+<ul>
+<li>proc killSetMaxLen(self: var Noise, len: int)</li>
+</ul>
+<h2>Examples</h2>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">noise</span>, <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">noise</span> <span class="op">=</span> <span class="ide">Noise</span><span class="op">.</span><span class="ide">init</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">prompt</span> <span class="op">=</span> <span class="ide">Styler</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">fgRed</span>, <span class="str">&quot;Red &quot;</span>, <span class="ide">fgGreen</span>, <span class="str">&quot;苹果&gt; &quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">noise</span><span class="op">.</span><span class="ide">setPrompt</span>(<span class="ide">prompt</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">when</span> <span class="ide">promptPreloadBuffer</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">noise</span><span class="op">.</span><span class="ide">preloadBuffer</span>(<span class="str">&quot;Superman&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">when</span> <span class="ide">promptHistory</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">file</span> <span class="op">=</span> <span class="str">&quot;history&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">noise</span><span class="op">.</span><span class="ide">historyLoad</span>(<span class="ide">file</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">when</span> <span class="ide">promptCompletion</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">completionHook</span>(<span class="ide">noise</span>: <span class="kwd">var</span> <span class="ide">Noise</span>, <span class="ide">text</span>: <span class="ide">string</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="kwd">const</span> <span class="ide">words</span> <span class="op">=</span> [<span class="str">&quot;apple&quot;</span>, <span class="str">&quot;diamond&quot;</span>, <span class="str">&quot;diadem&quot;</span>, <span class="str">&quot;diablo&quot;</span>, <span class="str">&quot;horse&quot;</span>, <span class="str">&quot;home&quot;</span>, <span class="str">&quot;quartz&quot;</span>, <span class="str">&quot;quit&quot;</span>]</div></div><div class="line"><div class="line-content">      <span class="kwd">for</span> <span class="ide">w</span> <span class="kwd">in</span> <span class="ide">words</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">if</span> <span class="ide">w</span><span class="op">.</span><span class="ide">find</span>(<span class="ide">text</span>) <span class="op">!=</span> <span class="op">-</span><span class="num">1</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">noise</span><span class="op">.</span><span class="ide">addCompletion</span> <span class="ide">w</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">noise</span><span class="op">.</span><span class="ide">setCompletionHook</span>(<span class="ide">completionHook</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">true</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">ok</span> <span class="op">=</span> <span class="ide">noise</span><span class="op">.</span><span class="ide">readLine</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">ok</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">line</span> <span class="op">=</span> <span class="ide">noise</span><span class="op">.</span><span class="ide">getLine</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">line</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;.help&quot;</span>: <span class="ide">printHelp</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;.quit&quot;</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>: <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">when</span> <span class="ide">promptHistory</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">line</span><span class="op">.</span><span class="ide">len</span> <span class="op">&gt;</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">noise</span><span class="op">.</span><span class="ide">historyAdd</span>(<span class="ide">line</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">when</span> <span class="ide">promptHistory</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">noise</span><span class="op">.</span><span class="ide">historySave</span>(<span class="ide">file</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h2>Key Binding</h2>
+<pre>  <code class="language-text">  # Completion
+    CTRL-I/TAB                   activates completion
+       TAB again                 rotate between completion alternatives
+       ESC, CTRL-C               undo changes and exit to normal editing
+       Other keys                accept completion and resume to normal editing
+
+  # History
+    CTRL-P, UP_ARROW_KEY         recall previous line in history
+    CTRL-N, DOWN_ARROW_KEY       recall next line in history
+    ALT-&lt;, PAGE_UP_KEY           beginning of history
+    ALT-&gt;, PAGE_DOWN_KEY         end of history
+
+  # Incremental history search
+    CTRL-R, CTRL-S               forward/reverse interactive history search
+       TAB, DOWN_ARROW_KEY       rotate between history alternatives(+)
+       UP_ARROW_KEY              rotate between history alternatives(-)
+       ESC, CTRL-C               cancel selection and exit to normal editing
+       Other keys                accept selected history
+
+  # Kill and yank
+    ALT-D                        kill word to right of cursor
+    ALT + Backspace              kill word to left of cursor
+    CTRL-K                       kill from cursor to end of line
+    CTRL-U                       kill all characters to the left of the cursor
+    CTRL-W                       kill to whitespace (not word) to left of cursor
+    CTRL-Y                       yank killed text
+       ALT-Y                     &apos;yank-pop&apos;, rotate popped text
+
+  # Word editing
+    ALT-C                        give word initial cap
+    ALT-L                        lowercase word
+    CTRL-T                       transpose characters
+    ALT-U                        uppercase word
+
+  # Cursor navigation
+    CTRL-A, HOME_KEY             move cursor to start of line
+    CTRL-E, END_KEY              move cursor to end of line
+    CTRL-B, LEFT_ARROW_KEY       move cursor left by one character
+    CTRL-F, RIGHT_ARROW_KEY      move cursor right by one character
+    ALT-F,
+    CTRL + RIGHT_ARROW_KEY,
+    ALT + RIGHT_ARROW_KEY        move cursor right by one word
+    ALT-B,
+    CTRL + LEFT_ARROW_KEY,
+    ALT + LEFT_ARROW_KEY         move cursor left by one word
+
+  # Basic Editing
+    CTRL-C                       abort this line
+    CTRL-H/backspace             delete char to left of cursor
+    DELETE_KEY                   delete the character under the cursor
+    CTRL-D                       delete the character under the cursor
+                                 on an empty line, exit the shell
+    CTRL-J, CTRL-M/Enter         accept line
+    CTRL-L                       clear screen and redisplay line
+</code></pre>
+<h2>Compile time switches:</h2>
+<p>Please use <code>-d:</code> or <code>--define:</code> during build time.</p>
+<ul>
+<li>prompt_no_history</li>
+<li>prompt_no_kill</li>
+<li>prompt_no_completion</li>
+<li>prompt_no_word_editing</li>
+<li>prompt_no_preload_buffer</li>
+<li>prompt_no_incremental_history_search(if you disabled history, this one also disabled)</li>
+<li>prompt_no_basic(disable all features, you&apos;ll only have access to primitives API.)</li>
+</ul>
+<p>Altough you can use <code>killSetMaxLen</code> and <code>historySetMaxLen</code> at runtime,
+there are compile time options to set them too. e.g. <code>-d:DefaultHistoryMaxLen=150</code></p>
+<ul>
+<li>
+<p>DefaultHistoryMaxLen</p>
+</li>
+<li>
+<p>DefaultKillRingMaxLen</p>
+</li>
+<li>
+<p>esc_exit_editing</p>
+<p>While Ctrl-C perform hard abort, <code>esc_exit_editing</code> allow soft abort when ESC pressed.
+You can get the key type using <code>getKeyType</code>.</p>
+<pre>  <code class="language-Nim">while true:
+  let ok = noise.readLine()
+  if not ok: break
+
+  if noise.getKeyType == ktEsc:
+    echo &quot;do something&quot;
+</code></pre>
+</li>
+<li>
+<p>prompt_emacs_word_editing</p>
+<p>By default case editing keys will change the case from the beginning of a
+word, this switch will enable Emacs behavior, where the case is changed from
+the cursor position until the end of the word.</p>
+</li>
+</ul>
+<h2>Unicode awareness</h2>
+<p>On Posix OSes, everything is encoded in UTF-8. On Windows, the API dictates UTF-16 usage.
+Internally, nim-noise use UTF-32 to encode the text and some homebrew encoding to encode keyboard keys.
+Altough this is sound complicated, you as a user will only deal with UTF-8 when interacting with nim-noise.
+If your application only use ASCII subset, then you will not to worry about anything.</p>
+<p>When you write your completion callback, add and retrieve history, preloaded buffer,
+you will receive UTF-8 encoded string and give UTF-8/ASCII encoded string too.</p>
+<h2>Primitives API</h2>
+<p>Sometimes, when building a console UI, all you need is only a cross platform key stroke library.
+You can use nim-noise like that by specifying <code>prompt_no_basic</code>.</p>
+<h2>Installation via nimble</h2>
+<blockquote>
+<p>nimble install noise</p>
+</blockquote>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/jangko/nim-noise">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

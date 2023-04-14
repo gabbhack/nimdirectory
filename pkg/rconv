@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">rconv</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rhythm</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">game</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rhythm-game</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">converter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">file-converter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parsing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cli</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Universal Rhythm-Game File parser and converter")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install rconv" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><div align="center">
+<h1>rconv</h1>
+<p><a href="https://github.com/prefixaut/rconv/actions"><img src="https://img.shields.io/github/workflow/status/prefixaut/rconv/Building%20&amp;%20Testing/master?style=for-the-badge&amp;logo=github-actions&amp;logoColor=white" style="max-width: 100%;" />alt=&quot;GitHub Workflow Status&quot; /&gt;</a>
+<a href="https://coveralls.io/github/prefixaut/rconv">  <img src="https://img.shields.io/coveralls/github/prefixaut/rconv/master?style=for-the-badge&amp;logo=coveralls" style="max-width: 100%;" alt="Coveralls branch" /></a></p>
+<p><a href="https://github.com/prefixaut/rconv/releases">  <img src="https://img.shields.io/github/v/release/prefixaut/rconv?style=for-the-badge&amp;logo=github" style="max-width: 100%;" alt="GitHub release" /></a>
+<img src="https://img.shields.io/badge/nim-%3E%3D%201.6-blue?style=for-the-badge&amp;logo=nim&amp;logoColor=white" style="max-width: 100%;" alt="Nim Version" /><a href="https://github.com/prefixaut/rconv/blob/master/LICENSE">  <img src="https://img.shields.io/github/license/prefixaut/rconv?style=for-the-badge" style="max-width: 100%;" alt="GitHub" /></a></p>
+<p>rconv is a library and command-line program to parse and convert various rhythm game formats</p>
+</div>
+<hr />
+<ul>
+<li><a href="#rconv">rconv</a>
+<ul>
+<li>  <a href="#installation">Installation</a></li>
+<li><a href="#installation-as-cli">Installation as CLI</a>
+<ul>
+<li>  <a href="#installtion-as-library">Installtion as Library</a></li>
+</ul>
+</li>
+<li>  <a href="#building">Building</a></li>
+<li>  <a href="#documentation">Documentation</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li>  <a href="#usage-of-cli">Usage of CLI</a></li>
+<li>  <a href="#usage-of-library">Usage of Library</a></li>
+</ul>
+</li>
+<li><a href="#supported-formats">Supported Formats</a>
+<ul>
+<li>  <a href="#parsing">Parsing</a></li>
+<li>  <a href="#convertion">Convertion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Installation</h2>
+<h2>Installation as CLI</h2>
+<p>See the <a href="https://github.com/prefixaut/rconv/releases">releases</a> for pre-build executables of your system.</p>
+<p>If you want to build it yourself, see the <a href="#building">Building</a> section for further information.</p>
+<h3>Installtion as Library</h3>
+<p>Currently not available as nimble package just yet, as it&apos;s still in an unstable phase.</p>
+<p>If you still want to use it as library, you can do so as a Git Submodule and import the <a href="./src/entry.nim">entry</a>-file.</p>
+<h2>Building</h2>
+<p>This project can be built with the regular <a href="https://nim-lang.org/"><code>nim</code> compiler</a> (<a href="https://nim-lang.org/docs/nimc.html">Nim CLI Documentation</a>).
+Additionally, the following convenience tasks are defined in the <a href="rconv.nimble">  <code>rconv.nimble</code></a> file:</p>
+<ul>
+<li><code>clib</code>: Builds the project as a regular library</li>
+<li><code>build</code>: Builds the project as a regular library</li>
+<li><code>docs</code>: Builds the project&apos;s documentation.</li>
+</ul>
+<p>These may then be executed like this:</p>
+<pre>  <code class="language-sh">nimble clib
+nimble build
+nimble docs
+
+# Release Versions
+nimble clib -d:release
+numble build -d:release
+</code></pre>
+<h2>Documentation</h2>
+<p>For full information of all functions, types, etc.,
+please refer to the <a href="https://prefixaut.github.io/rconv/theindex.html">documentation</a> from this repositiory.</p>
+<h2>Usage</h2>
+<h3>Usage of CLI</h3>
+<p>The CLI is rather straight forward and may be used like this:</p>
+<pre>  <code class="language-sh">rconv [options] &lt;--to=output-type&gt; &lt;input-files&gt;
+</code></pre>
+<p>The CLI requires an output-type (<code>-t</code>/<code>--to</code>), and the file-paths to the charts you want to convert.</p>
+<pre>  <code class="language-text">Usage:
+   [options] [files ...]
+
+Arguments:
+  [files ...]      Input-Files to convert. At least one has to be specified
+
+Options:
+  -h, --help
+  -b, --bundle               All output files should instead be bundles (if the output type supports it).
+  -c, --color                Enable print messages to be in color.
+  -C, --clean                If it should clean (delete all contents) of the output folder. Disabled if &apos;preserve&apos; is enabled.
+  -d, --delete-on-finish     Delete a processed file after handling it.
+  -e, --delay-errors         Process files even if a previous file caused an error.
+  -f, --song-folders         Enable that each song is getting placed into it&apos;s own sub-directory.
+  -j, --json-pretty          Output JSON data prettily.
+  -k, --keep                 If it should keep the original meta data when merging a file.
+  -m, --merge                Merge all possible charts into existing files.
+  -o, --output=OUTPUT        The output location for the files. If the directory doesn&apos;t exist, they will be created. (default: .)
+  -p, --preserve             Preserve the original output file (don&apos;t override it) if it already exists.
+  -P, --progress             Display the current progress.
+  -q, --quiet                Skip all stdout/stderr messages.
+  -r, --resources            Copy all neccessary resources (Sound-File, Jacket) to the output directory. Should only be used in comination with the &quot;song-folders&quot; option.
+  -s, --stats                Show stats on the end of the operation.
+  -t, --to=TO                The output type. Possible values: [fxf, malody, memo, sm]
+  -n, --normalize            Normalize the output-paths (folder/file).
+  -V, --verbose              Print verbose messages on internal operations.
+  -x, --folder-format=FOLDER_FORMAT
+                             The format for song-folders. You may use the following placeholders: &apos;%artist%&apos;, &apos;%title%&apos;. (default: %title% (%artist%))
+  -z, --chart-format=CHART_FORMAT
+                             The format for the output file-name. You may use the following placeholders: &apos;%artist%&apos;, &apos;%title%&apos;, &apos;%difficulty%&apos;, and &apos;%ext%&apos;.Defaults to &apos;%artist% - %title%.%ext%&apos; on type &apos;fxf&apos;, otherwise to &apos;%artist% - %title%_%difficulty%.%ext%&apos;
+</code></pre>
+<p>Example:</p>
+<pre>  <code class="language-sh">rconv -C -j -f -t malody --out output/nested /somewhere/my-input/sample.memo
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: You can also use the same output format again to format the files.</p>
+</blockquote>
+<h3>Usage of Library</h3>
+<p>As library, you should only have to import the entry file and the file formtats you want to use.
+Each file-format should be imported in an own namespace, as types might overlap (Multiple types called <code>Chart</code> for example).</p>
+<p>Parsing/Reading of the chart is done via the <code>parse{format}</code> (i.E. <code>parseMemo</code> or <code>parseStepMania</code>) procs, while writing the chart is done via the <code>write</code> procs defined in each module.
+These <code>parse</code> and <code>write</code> procs are always implemented for streams, and usually also for strings (as long as the chart-format is not binary).</p>
+<p>Converting procs are found in the <code>rconv/mapper</code> (imported via <code>rconv</code>) and are named <code>to{format}</code>, i.E. <code>toFXF</code> or <code>toMalody</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pkg</span><span class="op">/</span><span class="ide">rconv</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pkg</span><span class="op">/</span><span class="ide">rconv</span><span class="op">/</span><span class="ide">fxf</span> <span class="kwd">as</span> <span class="ide">fxf</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pkg</span><span class="op">/</span><span class="ide">rconv</span><span class="op">/</span><span class="ide">memo</span> <span class="kwd">as</span> <span class="ide">memo</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rawMemo</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;/home/user/some-chart.memo&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">memoChart</span> <span class="op">=</span> <span class="ide">memo</span><span class="op">.</span><span class="ide">parseMemo</span>(<span class="ide">rawMemo</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">fxfChart</span> <span class="op">=</span> <span class="ide">memoChart</span><span class="op">.</span><span class="ide">toFXF</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">fxfChart</span><span class="op">.</span><span class="ide">write</span></div></div>  </code></pre>
+<h2>Supported Formats</h2>
+<h3>Parsing</h3>
+<p>All listed formats are able to be parsed, have proper types (structs) and outputs setup:</p>
+<ul>
+<li>Memo (<code>.memo</code>)</li>
+<li>Malody (<code>.mc</code>)</li>
+<li>FXF (<code>.fxf</code>)</li>
+<li>StepMania (<code>.sm</code>)</li>
+</ul>
+<h3>Convertion</h3>
+<table>
+    <tr>
+        <td>From / To</td>
+        <td>Memo</td>
+        <td>MemoV2</td>
+        <td>Malody¹</td>
+        <td>FXF</td>
+        <td>osu!¹</td>
+        <td>StepMania</td>
+        <td>StepMania 5</td>
+        <td>Kick It Up</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Memo</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✔️</td>
+        <td style="text-align: center;">✔️</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">MemoV2</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Malody</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">✔️</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✔️</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">FXF</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">osu!</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">StepMania</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">✔️</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">StepMania 5</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+        <td style="text-align: center;">❌</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Kick It Up</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">❌</td>
+        <td style="text-align: center;">➖</td>
+    </tr>
+</table>
+<p><strong>¹</strong> Formats which support multiple different game-types.
+Convertion for these formats is only for the most relevant game-type (i.E. StepMania -&gt; osu! = StepMania -&gt; osu!mania)</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/prefixaut/rconv">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

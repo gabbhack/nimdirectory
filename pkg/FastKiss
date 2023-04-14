@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">FastKiss</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">fastcgi</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">framework</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">web</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("FastCGI Web Framework for Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install FastKiss" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>FastKISS - A FastCGI Web Framework for Nim</h1>
+<p>⚠️ WARNING: This framework is still in heavy development. ⚠️</p>
+<p><strong>Fast</strong> &amp; <strong>K</strong>eep <strong>I</strong>t <strong>S</strong>mall and <strong>S</strong>imple is an FastCGI Host/Server Framework for <a href="https://www.nim-lang.org">Nim</a> Web Applications. It was developed against Nginx, but should work with any web server that implements the FCGI spec. This work was based on the <a href="https://github.com/ba0f3/fastcgi.nim">FastCGI library for Nim</a>.</p>
+<p>The FastCGI server allows you to easily integrate your FastKiss web application into a standard web server environment, taking advantage of existing features provided by a web server developed for this purpose. This allows you to use all the state of the art features such as advanced protocol support (HTTPS, HTTP/2.0), HTTP keep-alive, high performance static file delivery, HTTP compression, or URL redirect/rewrite services without increases the overhead and complexity of building anything into your application code.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">fastkiss</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">fastkiss</span><span class="op">/</span><span class="ide">utils</span> <span class="kwd">import</span> <span class="ide">decodeData</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">regex</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">strformat</span> <span class="kwd">import</span> `<span class="op">&amp;</span>`</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">newApp</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">config</span><span class="op">.</span><span class="ide">port</span> <span class="op">=</span> <span class="num">9000</span> <span class="com"># optional if default port</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/&quot;</span>, <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">respond</span> <span class="str">&quot;Hello World!&quot;</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">get</span>(r"/test/(\w+)"<span class="op">.</span><span class="ide">re</span>, <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">respond</span> <span class="op">&amp;</span><span class="str">&quot;Hello {req.matches.groupCaptures(0)[0]}&quot;</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># http://example:8080/test/abc-012/def-345/test/xpto</span></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">get</span>(r"/test/(?:([a-z\d]+-[a-z\d]+)/)+test/(\w+)"<span class="op">.</span><span class="ide">re</span>, <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">respond</span> <span class="op">&amp;</span><span class="str">&quot;Hello Multi Capture {$req.matches.groupCaptures(0)} and {$req.matches.groupCaptures(1)}&quot;</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># http://example:8080/myquery?a=1&amp;b=2&amp;c=3</span></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/myquery&quot;</span>, <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="str">&quot;My Query:</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">k</span>, <span class="ide">v</span> <span class="kwd">in</span> <span class="ide">decodeData</span>(<span class="ide">req</span><span class="op">.</span><span class="ide">url</span><span class="op">.</span><span class="ide">query</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">resp</span> <span class="op">&amp;</span><span class="str">&quot;{k} = {v}</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">match</span>([<span class="str">&quot;GET&quot;</span>, <span class="str">&quot;POST&quot;</span>], <span class="str">&quot;/method&quot;</span>, <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">respond</span> <span class="op">&amp;</span><span class="str">&quot;Hello Method {$req.reqMethod}&quot;</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/static&quot;</span>, <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">sendFile</span> <span class="str">&quot;./test.txt&quot;</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">run</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<p>If you are using FastKiss to generate dynamic content of significant size, such as large binary images or large text-based datasets, then you need to consider the use of &quot;<strong>resp</strong>&quot; function instead of &quot;<strong>respond</strong>&quot; to minimize the memory footprint and preserve scalability.</p>
+<p>Using &quot;<strong>resp</strong>&quot; function allows FastKiss to return chunks of data back to the client without the need to build an entire structure, or resource in-memory. See <a href="https://github.com/mrhdias/fastkiss/blob/master/examples/loadimage.nim">example</a>. You can use the &quot;<strong>resp</strong>&quot; function like the php &quot;echo&quot; function. You can even include files with code in the same way as you do with a php. See this <a href="https://github.com/mrhdias/fastkiss/tree/master/examples/basicwebsite">example</a>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">fastkiss</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">tables</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">strformat</span> <span class="kwd">import</span> `<span class="op">&amp;</span>`</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">showPage</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">t</span> <span class="op">=</span> {<span class="num">1</span>: <span class="str">&quot;one&quot;</span>, <span class="num">2</span>: <span class="str">&quot;two&quot;</span>, <span class="num">3</span>: <span class="str">&quot;three&quot;</span>}<span class="op">.</span><span class="ide">toTable</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  """<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Test</title>
+    </head>
+    <body>
+      <table>"""<span class="op">.</span><span class="ide">resp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">k</span>, <span class="ide">v</span> <span class="kwd">in</span> <span class="ide">pairs</span>(<span class="ide">t</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="op">&amp;</span>"""<tr>
+        <td><strong>{k}</strong></td>
+        <td>{v}</td>
+      </tr>
+    """</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  """</table>
+    </body>
+  </html>"""<span class="op">.</span><span class="ide">resp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">newApp</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/&quot;</span>, <span class="ide">showPage</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">run</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<p>Here&apos;s a complete <a href="https://github.com/mrhdias/fastkiss/blob/master/examples/sendmymail.nim">example</a> of an app to send emails with attachments.</p>
+<p>  <img src="https://raw.githubusercontent.com/mrhdias/fastkiss/master/examples/sendmymail.jpg" style="max-width: 100%;" alt="Send Mail Example" /></p>
+<p>NGINX FastCGI Configuration File Example</p>
+<pre>  <code>server {
+  listen  8080;
+  server_name example;
+  # add example to hosts file
+  # nano -w /etc/hosts
+  #
+  # 127.0.0.1   example
+  #
+
+  location / {
+    # Comment this line if you if you don&apos;t need http cookies
+    fastcgi_param HTTP_COOKIE $http_cookie;
+    # Comment this line if you if you don&apos;t need Basic Autentication
+    fastcgi_param HTTP_AUTHORIZATION $http_authorization;
+    # Uses REMOTE_ADDR value whenever it needs to deal with visitor IP address.
+    fastcgi_param REMOTE_ADDR $http_x_real_ip;
+
+    client_max_body_size 1000M;
+    include fastcgi_params;
+    fastcgi_pass 127.0.0.1:9000;
+  }
+}
+</code></pre>
+<p>APACHE2 FastCGI Configuration File Example</p>
+<pre>  <code>Listen 127.0.0.1:8080
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so
+LoadModule rewrite_module modules/mod_rewrite.so
+# Need a server with SSL support
+# LoadModule http2_module modules/mod_http2.so
+
+&lt;IfModule mod_proxy_fcgi.c&gt;
+&lt;VirtualHost *:8080&gt;
+  ServerName example
+  ServerAlias anotherexample
+  ServerAdmin admin@example.tld
+
+  ErrorLog /var/log/httpd/example_error.log
+  CustomLog /var/log/httpd/example_requests.log combined
+
+  ProxyPass &quot;/&quot; &quot;fcgi://localhost:9000/&quot;
+
+  # https://httpd.apache.org/docs/2.4/custom-error.html
+  ErrorDocument 503 &quot;Service Temporary Unavailable&quot;
+
+  # Need a server with SSL support
+  # Protocols h2 http/1.1
+
+  # Comment this two lines below if you if you don&apos;t need Basic Autentication
+  RewriteEngine on
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+&lt;/VirtualHost&gt;
+&lt;/IfModule&gt;
+</code></pre>
+<p>Test</p>
+<pre>  <code>$ nimble install https://github.com/mrhdias/fastkiss
+$ nano -w example.nim
+$ nim c -r example.nim
+$ sudo systemctl start nginx / httpd
+$ wget -qO- http://example:8080/test
+Hello World!!⏎
+</code></pre>
+<p>To compile a release version use:</p>
+<pre>  <code>$ nim c -d:release example.nim
+$ ./example
+</code></pre>
+<h3>Configuration Options</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">port</span> <span class="op">=</span> <span class="num">9000</span> <span class="com"># Default Port</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">address</span> <span class="op">=</span> <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">reuseAddr</span> <span class="op">=</span> <span class="ide">true</span> <span class="com"># Default value</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">reusePort</span> <span class="op">=</span> <span class="ide">false</span> <span class="com"># Default value</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Default temporary directory of the current user to save temporary files</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">tmpUploadDir</span> <span class="op">=</span> <span class="ide">getTempDir</span>()</div></div><div class="line"><div class="line-content"><span class="com"># The value true will cause the temporary files left after request processing to be removed.</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">autoCleanTmpUploadDir</span> <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"><span class="com"># To serve static files such as images, CSS files, and JavaScript files</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">staticDir</span> <span class="op">=</span> <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># Sets the maximum allowed size of the client request body</span></div></div><div class="line"><div class="line-content"><span class="ide">config</span><span class="op">.</span><span class="ide">maxBody</span> <span class="op">=</span> <span class="num">8388608</span> <span class="com"># Default 8MB = 8388608 Bytes</span></div></div>  </code></pre>
+<h3>Available Router Methods</h3>
+<p>Routes that respond to any HTTP verb</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">get</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">post</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">put</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">patch</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">delete</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">options</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>Route that responds to multiple HTTP verbs</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">match</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">methods</span>: <span class="ide">openArray</span>[<span class="ide">string</span>],</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>Route that responds to all HTTP verbs</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">any</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">server</span>: <span class="ide">AsyncFCGIServer</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">Regex</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">callback</span>: <span class="kwd">proc</span> (<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/mrhdias/fastkiss">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

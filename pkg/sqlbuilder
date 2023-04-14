@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">sqlbuilder</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sqlbuilder</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A SQLbuilder with support for NULL values")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install sqlbuilder" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <em>This readme is generated with   <a href="https://github.com/ThomasTJdev/nimtomd">Nim to Markdown</a></em></p>
+<h1>SQL builder</h1>
+<p>SQL builder for <code>INSERT</code>, <code>UPDATE</code>, <code>SELECT</code> and <code>DELETE</code> queries.
+The builder will check for NULL values and build a query with them.</p>
+<p>After Nim&apos;s update to 0.19.0, the check for NULL values has been removed
+due to the removal of <code>nil</code>.</p>
+<p>This library&apos;s main goal is to allow the user, to insert NULL values into the
+database again, and ease the creating of queries.</p>
+<h1>Macro generated queries</h1>
+<p>The library supports generating the queries with a macro, which improves the
+performance due to query being generated on compile time. The macro generated
+queries <strong>do not</strong> accept the <code>genArgs()</code> and <code>genArgsColumns()</code> due to not
+being available on compile time - so there&apos;s currently not NULL-support for
+macros.</p>
+<h1>NULL values</h1>
+<h2>A NULL value</h2>
+<p>The global <code>const dbNullVal</code> represents a NULL value. Use <code>dbNullVal</code>
+in your args, if you need to insert/update to a NULL value.</p>
+<h2>Insert value or NULL</h2>
+<p>The global <code>proc dbValOrNull()</code> will check, if it contains a value
+or is empty. If it contains a value, the value will be used in the args,
+otherwise a NULL value (<code>dbNullVal</code>) will be used.</p>
+<p><code>dbValOrNull()</code> accepts all types due to <code>value: auto</code>.</p>
+<h2>Auto NULL-values</h2>
+<p>There are two generators, which can generate the <code>NULL</code> values for you.</p>
+<ul>
+<li><code>genArgs</code> does only set a field to <code>NULL</code> if <code>dbNullVal</code>/<code>dbValOrNull()</code> is passed.</li>
+<li><code>genArgsSetNull</code> sets empty field (<code>&quot;&quot;</code> / <code>c.len() == 0</code>) to <code>NULL</code>.</li>
+</ul>
+<h2>Executing DB commands</h2>
+<p>The examples below support the various DB commands such as <code>exec</code>,
+<code>tryExec</code>, <code>insertID</code>, <code>tryInsertID</code>, etc.</p>
+<h1>Examples (NULL values)</h1>
+<p>All the examples uses a table named: <code>myTable</code> and they use the WHERE argument on: <code>name</code>.</p>
+<h2>Update string &amp; int</h2>
+<h3>Version 1</h3>
+<p>  <em>Required if NULL values could be expected</em></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="str">&quot;em@em.com&quot;</span>, <span class="num">20</span>, <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; string, int</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = ?, age = ? WHERE name = ?</span></div></div>  </code></pre>
+<h3>Version 2</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>]), <span class="str">&quot;em@em.com&quot;</span>, <span class="num">20</span>, <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; string, int</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = ?, age = ? WHERE name = ?</span></div></div>  </code></pre>
+<h3>Version 3</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgsSetNull</span>(<span class="str">&quot;em@em.com&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; string, NULL</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = ?, age = NULL WHERE name = ?</span></div></div>  </code></pre>
+<h2>Update NULL &amp; int</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="str">&quot;&quot;</span>, <span class="num">20</span>, <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; NULL, int</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = NULL, age = ? WHERE name = ?</span></div></div>  </code></pre>
+<h2>Update string &amp; NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="str">&quot;aa@aa.aa&quot;</span>, <span class="ide">dbNullVal</span>, <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; string, NULL</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = ?, age = NULL WHERE name = ?</span></div></div>  </code></pre>
+<h2>Error: Update string &amp; NULL into an integer column</h2>
+<p>An empty string, &quot;&quot;, will be inserted into the database as NULL.
+Empty string cannot be used for an INTEGER column. You therefore
+need to use the <code>dbValOrNull()</code> or <code>dbNullVal</code> for <code>int-values</code>.</p>
+<p>This is due to, that the library does not know you DB-architecture, so it
+is your responsibility to respect the columns.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="str">&quot;aa@aa.aa&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; string, ERROR</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = ?, age = ? WHERE name = ?</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; To insert a NULL into a int-field, it is required to use dbValOrNull()</span></div></div><div class="line"><div class="line-content"> <span class="com">#     or dbNullVal, it is only possible to pass and empty string.</span></div></div>  </code></pre>
+<h2>Update NULL &amp; NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">cc</span> <span class="op">=</span> <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content"> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="ide">dbValOrNull</span>(<span class="ide">cc</span>), <span class="ide">dbValOrNull</span>(<span class="ide">cc</span>), <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; NULL, NULL</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE myTable SET email = NULL, age = NULL WHERE name = ?</span></div></div>  </code></pre>
+<h2>Update unknow value - maybe NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="ide">dbValOrNull</span>(<span class="ide">var1</span>), <span class="ide">dbValOrNull</span>(<span class="ide">var2</span>), <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlUpdate</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;name&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; AUTO or NULL, AUTO or NULL, string</span></div></div>  </code></pre>
+<h1>Dynamic selection of columns</h1>
+<p>Select which columns to include.</p>
+<p>Lets say, that you are importing data from a spreadsheet with static
+columns, and you need to update your DB with the new values.</p>
+<p>If the spreadsheet contains an empty field, you can update your DB with the
+NULL value. But sometimes the spreadsheet only contains 5 out of the 10
+static columns. Now you don&apos;t know the values of the last 5 columns,
+which will result in updating the DB with NULL values.</p>
+<p>The template <code>genArgsColumns()</code> allows you to use the same query, but  selecting
+only the columns which shall be updated. When importing your spreadsheet, check
+if the column exists (bool), and pass that as the <code>use: bool</code> param. If
+the column does not exists, it will be skipped in the query.</p>
+<h2>Insert &amp; Delete</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">s</span>, <span class="ide">a</span>) <span class="op">=</span> <span class="ide">genArgsColumns</span>((<span class="ide">true</span>, <span class="str">&quot;name&quot;</span>, <span class="str">&quot;Thomas&quot;</span>), (<span class="ide">true</span>, <span class="str">&quot;age&quot;</span>, <span class="num">30</span>), (<span class="ide">false</span>, <span class="str">&quot;nim&quot;</span>, <span class="str">&quot;never&quot;</span>))</div></div><div class="line"><div class="line-content"> <span class="com"># We are using the column `name` and `age` and ignoring the column `nim`.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="ide">echo</span> <span class="op">$</span><span class="ide">a</span><span class="op">.</span><span class="ide">args</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; Args: @[&quot;Thomas&quot;, &quot;30&quot;]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">a1</span> <span class="op">=</span> <span class="ide">sqlInsert</span>(<span class="str">&quot;my-table&quot;</span>, <span class="ide">s</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>) </div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; INSERT INTO my-table (name, age) VALUES (?, ?)</span></div></div><div class="line"><div class="line-content"> </div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">a2</span> <span class="op">=</span> <span class="ide">sqlDelete</span>(<span class="str">&quot;my-table&quot;</span>, <span class="ide">s</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; DELETE FROM my-table WHERE name = ? AND age = ?</span></div></div>  </code></pre>
+<h2>Update &amp; Select</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">s</span>, <span class="ide">a</span>) <span class="op">=</span> <span class="ide">genArgsColumns</span>((<span class="ide">true</span>, <span class="str">&quot;name&quot;</span>, <span class="str">&quot;Thomas&quot;</span>), (<span class="ide">true</span>, <span class="str">&quot;age&quot;</span>, <span class="num">30</span>), (<span class="ide">false</span>, <span class="str">&quot;nim&quot;</span>, <span class="str">&quot;&quot;</span>), (<span class="ide">true</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;154&quot;</span>))</div></div><div class="line"><div class="line-content"> <span class="com"># We are using the column `name` and `age` and ignoring the column `nim`. We</span></div></div><div class="line"><div class="line-content"> <span class="com"># are using the value `154` as our identifier, therefor the column is not </span></div></div><div class="line"><div class="line-content"> <span class="com"># specified</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="ide">echo</span> <span class="op">$</span><span class="ide">a</span><span class="op">.</span><span class="ide">args</span></div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; Args: @[&quot;Thomas&quot;, &quot;30&quot;, &quot;154&quot;]</span></div></div><div class="line"><div class="line-content"> </div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">a3</span> <span class="op">=</span> <span class="ide">sqlUpdate</span>(<span class="str">&quot;my-table&quot;</span>, <span class="ide">s</span>, [<span class="str">&quot;id&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; UPDATE my-table SET name = ?, age = ? WHERE id = ?</span></div></div><div class="line"><div class="line-content"> </div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">a4</span> <span class="op">=</span> <span class="ide">sqlSelect</span>(<span class="str">&quot;my-table&quot;</span>, <span class="ide">s</span>, [<span class="str">&quot;&quot;</span>], [<span class="str">&quot;id =&quot;</span>], <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; SELECT name, age FROM my-table WHERE id = ?</span></div></div>  </code></pre>
+<h1>Examples (INSERT)</h1>
+<h2>Insert without NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlInsert</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>]), <span class="str">&quot;em@em.com&quot;</span> , <span class="num">20</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># OR</span></div></div><div class="line"><div class="line-content"> <span class="ide">insertID</span>(<span class="ide">db</span>, <span class="ide">sqlInsert</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>]), <span class="str">&quot;em@em.com&quot;</span>, <span class="num">20</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; INSERT INTO myTable (email, age) VALUES (?, ?)</span></div></div>  </code></pre>
+<h2>Insert with NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="str">&quot;em@em.com&quot;</span>, <span class="ide">dbNullVal</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">exec</span>(<span class="ide">db</span>, <span class="ide">sqlInsert</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># OR</span></div></div><div class="line"><div class="line-content"> <span class="ide">insertID</span>(<span class="ide">db</span>, <span class="ide">sqlInsert</span>(<span class="str">&quot;myTable&quot;</span>, [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># ==&gt; INSERT INTO myTable (email) VALUES (?)</span></div></div>  </code></pre>
+<h1>Examples (SELECT)</h1>
+<p>Please note that you have to define the equal symbol for the where clause. This
+allows you to use <code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, etc.</p>
+<h2>Select without NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">getValue</span>(<span class="ide">db</span>, <span class="ide">sqlSelect</span>(<span class="str">&quot;myTable&quot;</span>,</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;&quot;</span>], [<span class="str">&quot;name =&quot;</span>], <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>), <span class="str">&quot;John&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># SELECT email, age FROM myTable WHERE name = ?</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="ide">getValue</span>(<span class="ide">db</span>, <span class="ide">sqlSelect</span>(<span class="str">&quot;myTable&quot;</span>,</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;myTable.email&quot;</span>, <span class="str">&quot;myTable.age&quot;</span>, <span class="str">&quot;company.name&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;company ON company.email = myTable.email&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;myTable.name =&quot;</span>, <span class="str">&quot;myTable.age =&quot;</span>], <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>),</div></div><div class="line"><div class="line-content">   <span class="str">&quot;John&quot;</span>, <span class="str">&quot;20&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># SELECT myTable.email, myTable.age, company.name</span></div></div><div class="line"><div class="line-content"> <span class="com"># FROM myTable</span></div></div><div class="line"><div class="line-content"> <span class="com"># LEFT JOIN company ON company.email = myTable.email</span></div></div><div class="line"><div class="line-content"> <span class="com"># WHERE myTable.name = ? AND myTable.age = ?</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="ide">getAllRows</span>(<span class="ide">db</span>, <span class="ide">sqlSelect</span>(<span class="str">&quot;myTable&quot;</span>,</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;myTable.email&quot;</span>, <span class="str">&quot;myTable.age&quot;</span>, <span class="str">&quot;company.name&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;company ON company.email = myTable.email&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;company.name =&quot;</span>], <span class="str">&quot;20,22,24&quot;</span>, <span class="str">&quot;myTable.age&quot;</span>, <span class="str">&quot;ORDER BY myTable.email&quot;</span>),</div></div><div class="line"><div class="line-content">   <span class="str">&quot;BigBiz&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># SELECT myTable.email, myTable.age, company.name</span></div></div><div class="line"><div class="line-content"> <span class="com"># FROM myTable LEFT JOIN company ON company.email = myTable.email</span></div></div><div class="line"><div class="line-content"> <span class="com"># WHERE company.name = ? AND myTable.age IN (20,22,24)</span></div></div><div class="line"><div class="line-content"> <span class="com"># ORDER BY myTable.email</span></div></div>  </code></pre>
+<h2>Select with NULL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="ide">dbNullVal</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">getValue</span>(<span class="ide">db</span>, <span class="ide">sqlSelect</span>(<span class="str">&quot;myTable&quot;</span>,</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;email&quot;</span>, <span class="str">&quot;age&quot;</span>], [<span class="str">&quot;&quot;</span>], [<span class="str">&quot;name =&quot;</span>], <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># SELECT email, age FROM myTable WHERE name = NULL</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="str">&quot;John&quot;</span>, <span class="ide">dbNullVal</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">getValue</span>(<span class="ide">db</span>, <span class="ide">sqlSelect</span>(<span class="str">&quot;myTable&quot;</span>,</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;myTable.email&quot;</span>, <span class="str">&quot;myTable.age&quot;</span>, <span class="str">&quot;company.name&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;company ON company.email = myTable.email&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;myTable.name =&quot;</span>, <span class="str">&quot;myTable.age =&quot;</span>], <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="str">&quot;&quot;</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>), <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># SELECT myTable.email, myTable.age, company.name</span></div></div><div class="line"><div class="line-content"> <span class="com"># FROM myTable</span></div></div><div class="line"><div class="line-content"> <span class="com"># LEFT JOIN company ON company.email = myTable.email</span></div></div><div class="line"><div class="line-content"> <span class="com"># WHERE myTable.name = ? AND myTable.age = NULL</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">genArgs</span>(<span class="ide">dbNullVal</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">getAllRows</span>(<span class="ide">db</span>, <span class="ide">sqlSelect</span>(<span class="str">&quot;myTable&quot;</span>,</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;myTable.email&quot;</span>, <span class="str">&quot;myTable.age&quot;</span>, <span class="str">&quot;company.name&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;company ON company.email = myTable.email&quot;</span>],</div></div><div class="line"><div class="line-content">   [<span class="str">&quot;company.name =&quot;</span>], <span class="str">&quot;20,22,24&quot;</span>, <span class="str">&quot;myTable.age&quot;</span>, <span class="str">&quot;ORDER BY myTable.email&quot;</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">query</span>),</div></div><div class="line"><div class="line-content">   <span class="ide">a</span><span class="op">.</span><span class="ide">args</span>)</div></div><div class="line"><div class="line-content"> <span class="com"># SELECT myTable.email, myTable.age, company.name</span></div></div><div class="line"><div class="line-content"> <span class="com"># FROM myTable LEFT JOIN company ON company.email = myTable.email</span></div></div><div class="line"><div class="line-content"> <span class="com"># WHERE company.name = NULL AND myTable.age IN (20,22,24)</span></div></div><div class="line"><div class="line-content"> <span class="com"># ORDER BY myTable.email</span></div></div>  </code></pre>
+<h1>Debug</h1>
+<p>If you need to debug and see the queries, just pass <code>-d:testSqlquery</code> to print
+the queries.</p>
+<h1>Credit</h1>
+<p>Inspiration for builder: <a href="https://github.com/nim-lang/nimforum">Nim Forum</a></p>
+<h1>Imports</h1>
+<p>import strutils, db_common</p>
+<h1>Types</h1>
+<h2>Procs</h2>
+<h3>proc argType*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">argType</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">ArgObj</span>): <span class="ide">ArgObj</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Checks if a <code>ArgObj</code> is NULL and return
+<code>dbNullVal</code>. If it&apos;s not NULL, the passed
+<code>ArgObj</code> is returned.</p>
+<h3>proc argType*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">argType</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">int</span>): <span class="ide">ArgObj</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Transforms a string or int to a <code>ArgObj</code></p>
+<h3>proc dbValOrNull*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">dbValOrNull</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span> <span class="op">|</span> <span class="ide">int</span>): <span class="ide">ArgObj</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Return NULL obj if len() == 0, else return value obj</p>
+<h3>proc sqlInsert*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlInsert</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">args</span>: <span class="ide">ArgsContainer</span><span class="op">.</span><span class="ide">query</span>): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for INSERT queries
+Checks for NULL values</p>
+<h3>proc sqlInsert*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlInsert</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">varargs</span>[<span class="ide">string</span>]): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for INSERT queries
+Does NOT check for NULL values</p>
+<h3>proc sqlUpdate*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlUpdate</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">where</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">args</span>: <span class="ide">ArgsContainer</span><span class="op">.</span><span class="ide">query</span>): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for UPDATE queries
+Checks for NULL values</p>
+<h3>proc sqlUpdate*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlUpdate</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">where</span>: <span class="ide">varargs</span>[<span class="ide">string</span>]): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for UPDATE queries
+Does NOT check for NULL values</p>
+<h3>proc sqlDelete*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlDelete</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">where</span>: <span class="ide">varargs</span>[<span class="ide">string</span>]): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for DELETE queries
+Does NOT check for NULL values</p>
+<h3>proc sqlDelete*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlDelete</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">where</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">args</span>: <span class="ide">ArgsContainer</span><span class="op">.</span><span class="ide">query</span>): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for DELETE queries
+Checks for NULL values</p>
+<h3>proc sqlSelect*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlSelect</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">left</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">whereC</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">access</span>: <span class="ide">string</span>, <span class="ide">accessC</span>: <span class="ide">string</span>, <span class="ide">user</span>: <span class="ide">string</span>): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for SELECT queries
+Does NOT check for NULL values</p>
+<h3>proc sqlSelect*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlSelect</span><span class="op">*</span>(<span class="ide">table</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">left</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">whereC</span>: <span class="ide">varargs</span>[<span class="ide">string</span>], <span class="ide">access</span>: <span class="ide">string</span>, <span class="ide">accessC</span>: <span class="ide">string</span>, <span class="ide">user</span>: <span class="ide">string</span>, <span class="ide">args</span>: <span class="ide">ArgsContainer</span><span class="op">.</span><span class="ide">query</span>): <span class="ide">SqlQuery</span> <span class="op">=</span></div></div>  </code></pre>
+<p>SQL builder for SELECT queries
+Checks for NULL values</p>
+<h2>Templates</h2>
+<h3>template genArgs*[T]</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">genArgs</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">arguments</span>: <span class="ide">varargs</span>[<span class="ide">T</span>, <span class="ide">argType</span>]): <span class="ide">ArgsContainer</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Create argument container for query and passed args</p>
+<h3>template genArgsColumns*[T]</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">genArgsColumns</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">arguments</span>: <span class="ide">varargs</span>[<span class="ide">T</span>, <span class="ide">argFormat</span>]): <span class="kwd">tuple</span>[<span class="ide">select</span>: <span class="ide">seq</span>[<span class="ide">string</span>], <span class="ide">args</span>: <span class="ide">ArgsContainer</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>Create argument container for query and passed args and selecting which
+columns to update. It&apos;s and expansion of <code>genArgs()</code>, since you can
+decide which columns, there should be included.</p>
+<p>Lets say, that you are importing data from a spreadsheet with static
+columns, and you need to update your DB with the new values.</p>
+<p>If the spreadsheet contains an empty field, you can update your DB with the
+NULL value. But sometimes the spreadsheet only contains 5 out of the 10
+static columns. Now you don&apos;t know the values of the last 5 columns,
+which will result in updating the DB with NULL values.</p>
+<p>This template allows you to use the same query, but dynamic selecting only the
+columns which shall be updated. When importing your spreadsheet, check
+if the column exists (bool), and pass that as the <code>use: bool</code> param. If
+the column does not exists, it will be skipped in the query.</p>
+<h2>Other</h2>
+<h3>ArgObj*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ArgObj</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div>  </code></pre>
+<p>Argument object</p>
+<h3>ArgsContainer</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ArgsContainer</span> <span class="op">=</span> <span class="kwd">object</span></div></div>  </code></pre>
+<p>Argument container used for queries and args</p>
+<h3>var dbNullVal*</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">dbNullVal</span><span class="op">*:</span> <span class="ide">ArgObj</span></div></div>  </code></pre>
+<p>Global NULL value</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/ThomasTJdev/nim_sqlbuilder">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

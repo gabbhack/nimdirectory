@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">timeit</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">timeit</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bench</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("measuring execution times written in nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install timeit" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>timeit <a href="https://github.com/yglukhov/nimble-tag">  <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" /></a></h1>
+<p>measuring execution times written in nim.</p>
+<h2>Installation</h2>
+<pre>  <code class="language-text">nimble install timeit
+</code></pre>
+<h2>Documention</h2>
+<p>https://xflywind.github.io/timeit/src/main.html</p>
+<h2>Usage</h2>
+<h3>import timeit</h3>
+<p>In <strong>timeit</strong> module, you can use the <strong>timeGo</strong> to
+measure execution times of proc. <br />
+There are three parameters in <strong>timeGo</strong>.<br />
+<strong>myFunc</strong> is the call of proc. <strong>repeatTimes</strong> is
+how many times you want to measure, the result is the average of all the times, <strong>loopTimes</strong> is how many loops you want to execute in each time.
+If you don&apos;t give the value of <strong>loopTimes</strong>, the program will calculate the <strong>loopTimes</strong> according to the execution times in first time.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">timeGo</span><span class="op">*</span>(<span class="ide">myFunc</span>: <span class="ide">untyped</span>, </div></div><div class="line"><div class="line-content">                <span class="ide">repeatTimes</span>: <span class="ide">int</span> <span class="op">=</span> <span class="ide">repeatTimes</span>, </div></div><div class="line"><div class="line-content">                <span class="ide">loopTimes</span>: <span class="ide">int</span> <span class="op">=</span> <span class="ide">loopTimes</span>): <span class="ide">Timer</span></div></div>  </code></pre>
+<p>When you want to pass <strong>myFunc</strong> parameter to <strong>timeGo</strong>, there are some points you should take care of. <br />
+If you want to pass the proc without return value, you should use the call of the proc, namely <strong>myProc(args)</strong>. <br />
+If you want to pass the proc with return value,
+you should add the pragma <strong>{.discardable.}</strong> to the
+definitions of your proc.Then you can use <strong>timeGo</strong>
+to measure the execution times of your proc, namely <strong>myProc(args)</strong>.</p>
+<h3>another Way</h3>
+<p>You can also use timeGo as follow:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">timeGo</span> <span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">os</span><span class="op">.</span><span class="ide">sleep</span>(<span class="num">12</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">a</span> <span class="op">=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">1</span> <span class="op">..</span> <span class="num">1000</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">a</span> <span class="op">+=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content"><span class="com"># output [12ms 883μs 34.58ns] ± [19μs 974.83ns] per loop (mean ± std. dev. of 7 runs, 10 loops each)</span></div></div>  </code></pre>
+<p>or you can specify the repeatTimes and loopTimes as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timeGo</span>(<span class="num">1</span>, <span class="num">1</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">b</span> <span class="op">=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span> <span class="op">+=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content"><span class="com"># output [200.00ns] ± [0.00ns] per loop (mean ± std. dev. of 1 runs, 1 loops each)</span></div></div>  </code></pre>
+<h3>use monit function</h3>
+<p>You can use monit function to measure the times
+of code executions. <br />
+First you can specify the <strong>name</strong> of this test,
+for example, &quot;first&quot;.Then you can place the
+<strong>start</strong> function in the begin of the code you want
+to measure, and place the <strong>finsih</strong> function in the
+end of the code you want to measure.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">timeit</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">m</span> <span class="op">=</span> <span class="ide">monit</span>(<span class="str">&quot;first&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">m</span><span class="op">.</span><span class="ide">start</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">a</span> <span class="op">+</span> <span class="num">3</span> </div></div><div class="line"><div class="line-content"><span class="ide">m</span><span class="op">.</span><span class="ide">finish</span>()</div></div><div class="line"><div class="line-content"><span class="com"># first -&gt; [17μs 0.00ns]</span></div></div>  </code></pre>
+<p>You can also monit once as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timeOnce</span>(<span class="str">&quot;test-once&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">a</span> <span class="op">=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">1</span> <span class="op">..</span> <span class="num">10000</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">a</span> <span class="op">+=</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">a</span></div></div>  </code></pre>
+<h3>use command-line interface</h3>
+<p>Firstly, you need to make sure that your <strong>.nimble</strong> directory must be in your path environment.
+Then you can use <strong>timeit --name=yourNimFile --def=yourProc</strong>. <br />
+However, string parameters can&apos;t appear in yourProc.And If you want
+to specify more than one parameter, you should use <strong>&quot;yourProc(parameters)&quot;</strong>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># in bash</span></div></div><div class="line"><div class="line-content"><span class="ide">timeit</span> <span class="op">--</span><span class="ide">name</span><span class="op">=</span><span class="ide">test</span> <span class="op">--</span><span class="ide">def</span><span class="op">=</span><span class="ide">hello</span>()</div></div><div class="line"><div class="line-content"><span class="com"># [46ms 290μs 893.17ns] ± [1ms 164μs 333.97ns] per loop (mean ± std. dev. of 7 runs, 10 loops each)</span></div></div>  </code></pre>
+<p>You can also measure the execution time of the whole Nim file.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># in bash</span></div></div><div class="line"><div class="line-content"><span class="ide">timeit</span> <span class="ide">test</span><span class="op">.</span><span class="ide">nim</span></div></div><div class="line"><div class="line-content"><span class="com"># debug mode</span></div></div><div class="line"><div class="line-content"><span class="com"># test-whole -&gt; [208μs 100.00ns]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or specify the -d flag</span></div></div><div class="line"><div class="line-content"><span class="ide">timeit</span> <span class="ide">test</span><span class="op">.</span><span class="ide">nim</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">release</span></div></div><div class="line"><div class="line-content"><span class="com"># release mode</span></div></div><div class="line"><div class="line-content"><span class="com"># test-whole -&gt; [29μs 200.00ns]</span></div></div>  </code></pre>
+<h2>Examples</h2>
+<p>for proc without return value</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">timeit</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mySleep</span>(<span class="ide">num</span>: <span class="ide">varargs</span>[<span class="ide">int</span>]) <span class="op">=</span> </div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">1</span> <span class="op">..</span> <span class="num">10</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">timeGo</span>(<span class="ide">mySleep</span>(<span class="num">5</span>, <span class="num">2</span>, <span class="num">1</span>))</div></div><div class="line"><div class="line-content"><span class="com"># [216.50ns] ± [1μs 354.44ns] per loop (mean ± std. dev. of 7 runs, 1000000 loops each)</span></div></div>  </code></pre>
+<p>for proc with return value</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">timeit</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mySleep</span>(<span class="ide">num</span>: <span class="ide">varargs</span>[<span class="ide">int</span>]): <span class="ide">int</span> {<span class="op">.</span><span class="ide">discardable</span><span class="op">.</span>} <span class="op">=</span> </div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">1</span> <span class="op">..</span> <span class="num">10</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">timeGo</span>(<span class="ide">mySleep</span>(<span class="num">5</span>, <span class="num">2</span>, <span class="num">1</span>)) </div></div><div class="line"><div class="line-content"><span class="com"># [221.82ns] ± [1μs 837.93ns] per loop (mean ± std. dev. of 7 runs, 1000000 loops each)</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/ringabout/timeit">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

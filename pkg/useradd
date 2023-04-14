@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">useradd</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">akito</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">gosu</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">su-exec</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">docker</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">kubernetes</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">helm</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">permission</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linux</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">posix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">postgres</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">process</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">security</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">alpine</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">busybox</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">useradd</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">adduser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">shadow</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">musl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">libc</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Linux adduser/useradd library with all batteries included.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install useradd" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <a href="https://nimble.directory/pkg/useradd">    <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="Nimble" />  </a></p>
+<p><a href="https://github.com/theAkito/nim-useradd">  <img src="https://img.shields.io/badge/project-source-2a2f33?style=plastic" style="max-width: 100%;" alt="Source" /></a>
+<a href="https://nim-lang.org/">  <img src="https://img.shields.io/badge/language-Nim-orange.svg?style=plastic" style="max-width: 100%;" alt="Language" /></a></p>
+<p>  <img src="https://img.shields.io/github/last-commit/theAkito/nim-useradd?style=plastic" style="max-width: 100%;" alt="Last Commit" /></p>
+<p><a href="https://www.gnu.org/licenses/gpl-3.0.txt">  <img src="https://img.shields.io/badge/license-GPL--3.0-informational?style=plastic" style="max-width: 100%;" alt="GitHub" /></a>
+<a href="https://liberapay.com/Akito/">  <img src="https://img.shields.io/liberapay/patrons/Akito?style=plastic" style="max-width: 100%;" alt="Liberapay patrons" /></a></p>
+<h2>What</h2>
+<p>This is an extended <code>adduser</code>/<code>useradd</code> <a href="https://nim-lang.org/">Nim</a> library with batteries included.</p>
+<p>It takes care of password encryption, file locking during user modification and so on.</p>
+<p>You don&apos;t have to take care of anything. Just add or remove your user and that&apos;s it. No effort on your part needed!</p>
+<h2>Why</h2>
+<p>Low-level user management without a CLI tool in Linux (and UNIX in general) is a pain. You have to know a lot of stuff. You can <em>very easily</em> break one of the most important parts of the system, if you do one little mistake like fail to hash the password correctly.</p>
+<p>Using the native C API to manage users is a huge pain in the way described above.
+This module intends to take that effort and all those headaches away from you by entirely taking care of the C API bloat.</p>
+<h2>How</h2>
+<p>First, install this library.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nimble</span> <span class="ide">install</span> <span class="ide">useradd</span></div></div>  </code></pre>
+<p>Make sure, you are linking your project during compilation with the <a href="https://linux.die.net/man/3/crypt">crypt(3)</a> library.</p>
+<pre>  <code class="language-bash">nim c --passL=&quot;-lcrypt&quot; example
+</code></pre>
+<h3>Usage Examples</h3>
+<h4>Add User</h4>
+<p>Simplest Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">useradd</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Success: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">addUser</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;mygenericusername&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">uid</span> <span class="op">=</span> <span class="num">99121</span>, <span class="com"># No GID provided -&gt; GID will be same as UID.</span></div></div><div class="line"><div class="line-content">  <span class="ide">home</span> <span class="op">=</span> <span class="str">&quot;/home/testuserapi&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pw</span> <span class="op">=</span> <span class="str">&quot;myInsecurePassword&quot;</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>A bit more advanced example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">useradd</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Success: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">addUser</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;mygenericusername&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">uid</span> <span class="op">=</span> <span class="num">99121</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">gid</span> <span class="op">=</span> <span class="num">99322</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">home</span> <span class="op">=</span> <span class="str">&quot;/home/testuserapi&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pw</span> <span class="op">=</span> <span class="str">&quot;myInsecurePassword&quot;</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>An advanced example, with a pre-hashed password:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">useradd</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Success: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">addUser</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;mygenericusername&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">uid</span> <span class="op">=</span> <span class="num">99121</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">gid</span> <span class="op">=</span> <span class="num">99322</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">home</span> <span class="op">=</span> <span class="str">&quot;/home/testuserapi&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pw</span> <span class="op">=</span> <span class="str">&quot;$6$FCIBNRCTLwRrEErx$coMD2oCFWgtH7SzwNQnXo8D3ngexpLVpLkiYmw70zh7/Vc8xIOrpXEMDqgw.890JW2C/IJmIu6tsX/6hC/qBB.&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pwIsEncrypted</span> <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>This is useful for migrating passwords from a Shadow database, where the actual passwords are unknown.</p>
+<p>An advanced example, where the file operations are done manually, omitting the C API, in case the C API imposes any arbitrary limitations:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">useradd</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Success: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">addUserMan</span>( <span class="com"># Only the `proc` name changed. The API stays exactly the same!</span></div></div><div class="line"><div class="line-content">  <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;mygenericusername&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">uid</span> <span class="op">=</span> <span class="num">290111</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">gid</span> <span class="op">=</span> <span class="num">290112</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">home</span> <span class="op">=</span> <span class="str">&quot;/home/testuserapi&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pw</span> <span class="op">=</span> <span class="str">&quot;$6$FCIBNRCTLwRrEErx$coMD2oCFWgtH7SzwNQnXo8D3ngexpLVpLkiYmw70zh7/Vc8xIOrpXEMDqgw.890JW2C/IJmIu6tsX/6hC/qBB.&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pwIsEncrypted</span> <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h3>Remove User</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">useradd</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Success Delete User: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">deleteUser</span>(<span class="str">&quot;mygenericusername&quot;</span>) <span class="com"># Deletes from `/etc/passwd`, `/etc/shadow` and `/etc/group` by name!</span></div></div>  </code></pre>
+<h3>Live Examples</h3>
+<pre>  <code class="language-bash">nimble example_simple
+nimble example_custom_salt
+</code></pre>
+<h3>Notes on Encryption</h3>
+<p>If for whatever reason, you do not like the encryption method employed, because the salt uses the, at this time, yet unaudited <a href="https://nim-lang.org/docs/sysrand.html">  <code>std/sysrand</code></a> module, to generate a salt, then you are free to encrypt with your own salt.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">useradd</span>, <span class="ide">useradd</span><span class="op">/</span><span class="ide">crypt</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">password</span> <span class="op">=</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">salt</span> <span class="op">=</span> <span class="str">&quot;$6$mycustomslt$&quot;</span></div></div><div class="line"><div class="line-content">    <span class="com"># Salt itself, i.e. `mycustomslt`, must be 16 characters long.</span></div></div><div class="line"><div class="line-content">    <span class="com"># The `6` means, we want a SHA-512 hash (best hash possible, at the time of writing).</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">encrypt</span>(<span class="ide">password</span>) <span class="com"># Uses this module&apos;s way of generating the salt.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">encrypt</span>(<span class="ide">password</span>, <span class="ide">salt</span>) <span class="com"># You provide you own salt according to crypt(3)s specification: $5$salt$</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Success: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">addUser</span>( <span class="com"># Add user with your own self-encrypted password.</span></div></div><div class="line"><div class="line-content">  <span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;mygenericusername&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">uid</span> <span class="op">=</span> <span class="num">99121</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">gid</span> <span class="op">=</span> <span class="num">99322</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">home</span> <span class="op">=</span> <span class="str">&quot;/home/testuserapi&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">pw</span> <span class="op">=</span> <span class="op">$</span><span class="ide">encrypt</span>(<span class="ide">password</span>, <span class="ide">salt</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">pwIsEncrypted</span> <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>See the <a href="https://linux.die.net/man/3/crypt">crypt(3)</a> manual for more information on how to properly create the salt.</p>
+<h3>Hints</h3>
+<ul>
+<li><code>root</code> permissions are needed, as we are modifying system files.</li>
+</ul>
+<h2>Features</h2>
+<ul>
+<li>Automatic File Locking -&gt; Do not worry about corrupting <code>/etc/passwd</code>, <code>/etc/shadow</code> or <code>/etc/group</code>!</li>
+<li>Automatic Password Encryption -&gt; Do not worry about properly hashing the password, if providing one!</li>
+<li>Convenient API -&gt; For example, providing a UID but no GID, will assign the UID&apos;s value to the GID. It won&apos;t break your user creation!</li>
+<li>Optional Advanced API -&gt; Migrating an existing <code>/etc/shadow</code> database? No, problem, just provide the password hashes and turn on <code>pwIsEncrypted</code>!</li>
+<li>Optional Advanced API -&gt; Want to omit the C API and modify the databases directly, by reading/writing to the actual files? Just replace your <code>addUser</code> usages with <code>addUserMan</code> (same API)!</li>
+</ul>
+<h2>Where</h2>
+<p>Linux.</p>
+<p>Other UNIX derivatives might work, but are not officially supported.
+This project is primarily supposed to work on Linux.</p>
+<p>If you want to provide reliable macOS or *BSD support, go ahead I will check it out. But I only will accept it, if it does not reduce the quality of the Linux related implementation. (Hint: using <code>when</code>s is probably the way to go.)</p>
+<h2>Goals</h2>
+<ul>
+<li>Reliability</li>
+<li>Convenience</li>
+</ul>
+<h2>Project Status</h2>
+<p>Stable Beta.</p>
+<p>This library is well tested &amp; works, but needs more testing and feedback from 3rd parties. --&gt; Please help!</p>
+<h2>TODO</h2>
+<ul>
+<li>  <del>Publish on Nimble.</del></li>
+<li>  <del>Provide runnable Examples</del></li>
+<li>  <del>Track Project Tests with this Git repository.</del></li>
+</ul>
+<h2>License</h2>
+<p>Copyright © 2022  Akito <a href="mailto:the@akito.ooo">the@akito.ooo</a></p>
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        GPL-3.0-or-later
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

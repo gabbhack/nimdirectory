@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">trayx</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">raytracing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">package</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Ray tracing")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install trayx" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1 align="center">
+  <br />
+  <a href="https://github.com/teob97/T-RayX/">  <img src="logo/T-RayX.png" style="max-width: 100%;" width="300" alt="T-RayX" height="300" /></a>
+  <br />
+  T-RayX
+  <br />
+</h1>
+<h2 align="center">A <a target="_blank" href="https://nim-lang.org/">NIM</a> Raytracing Library.</h2>
+<p align="center">
+  <a href="https://github.com/teob97/T-RayX/releases">
+  <img src="https://img.shields.io/github/v/release/teob97/T-RayX?color=%23FDD835&amp;label=version&amp;style=for-the-badge" style="max-width: 100%;" />
+  </a>
+  <a href="https://github.com/teob97/T-RayX/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/teob97/T-RayX?style=for-the-badge" style="max-width: 100%;" />
+  </a>
+  <a href="https://www.paypal.me/EGatti619">
+  <img src="https://img.shields.io/badge/Donate-PayPal-DE00A5.svg?style=for-the-badge" style="max-width: 100%;" />
+  </a>
+</p>
+<hr />
+<h2>:t-rex:  Overview</h2>
+<p>T-RayX: a Nim library aimed to generate a photorealistic image.</p>
+<p>The project has been developed during the course <a href="https://www.unimi.it/en/education/degree-programme-courses/2022/numerical-tecniques-photorealistic-image-generation">  <em>Numerical techniques for photorealistic image generation</em></a> held by Prof. <a href="https://github.com/ziotom78">Maurizio Tomasi</a> at Università degli Studi di Milano (A.Y. 2021/2022)</p>
+<p>The main functionality of this library is to generate photorealistic images from input files that describe a scene. (See more details <a href="#small_orange_diamond-render">here</a>).
+With T-RayX you are also able to convert PFM files to PNG using the <a href="#pfm2png">pfm2png</a> command.</p>
+<h2>:desktop_computer:  System Requirements</h2>
+<p>T-RayX works on Linux, MacOSX and Windows (not so sure) machine.</p>
+<p>For a proper use of the library you need:</p>
+<ul>
+<li><a href="https://nim-lang.org/">Nim</a> version required: 1.6.4</li>
+<li><a href="https://github.com/nim-lang/nimble">Nimble</a> package manager</li>
+<li><a href="https://github.com/jrenner/nim-simplepng">simplepng</a>: use <code>nimble install simplepng</code> to install it.</li>
+<li><a href="https://github.com/docopt/docopt.nim">docopt</a>: use <code>nimble install docopt</code> to install it.</li>
+<li><a href="https://ffmpeg.org/">ffmpeg</a> and <a href="https://www.gnu.org/software/parallel/">GNU parallel</a> just for the animations (see <em>scripts</em> folder).</li>
+</ul>
+<h2>:wrench: Download and build</h2>
+<p>You can download the latest stable release <a href="https://github.com/teob97/T-RayX/releases">here</a>, and unpack it</p>
+<pre>  <code class="language-bash">tar -xvf /path/to/tar #or zip file -C /path/to/your/directory
+</code></pre>
+<p>or if you want, you can clone this repository</p>
+<pre>  <code class="language-bash">git clone https://github.com/teob97/T-RayX.git
+</code></pre>
+<p>To generate the executable file, use:</p>
+<pre>  <code class="language-bash">nimble build -d:release
+</code></pre>
+<p>It is also possible to install T-RayX using nimble package menager:</p>
+<pre>  <code class="language-bash">nimble intall trayx
+</code></pre>
+<p>In this case the program is automaticaly compiled and it is possible to use it via terminal simply with <code>trayx</code> without <code>./</code></p>
+<h2>:rocket:  Usage</h2>
+<p>You can run the following command to visualize through the CLI all the possible procedures:</p>
+<pre>  <code class="language-bash">./trayx --help
+</code></pre>
+<h3>:small_orange_diamond: render</h3>
+<p>To run the render, use:</p>
+<pre>  <code class="language-bash">./trayx render &lt;SCENE_FILE.txt&gt; &lt;width&gt; &lt;height&gt; [options]
+</code></pre>
+<p>To see all the possible options use <code>./trayx --help</code>.</p>
+<p>The input file SCENE_FILE.txt must contain the detailed description of the scene that has to be rendered. See <a href="#page_facing_up-input-file-format">the next section</a></p>
+<h3>:small_orange_diamond: pfm2png</h3>
+<p>Convert pfm file in png image using:</p>
+<pre>  <code class="language-bash">./trayx pfm2png &lt;file.pfm&gt; &lt;alpha&gt; &lt;gamma&gt; &lt;output.png&gt;
+</code></pre>
+<p>It is necessary to set specific values for alpha and gamma parameters.</p>
+<h3>:small_orange_diamond: demo</h3>
+<p>To run the demo, use:</p>
+<pre>  <code class="language-bash">./trayx demo
+</code></pre>
+<p>This will produce the following 960x540 image:</p>
+<p float="center">
+  <img src="examples/demo.png" style="max-width: 100%;" width="600" />
+</p>
+<h2>:page_facing_up: Input file format</h2>
+<p>To describe the scene that has to be rendered it is necessary to create a .txt file and use a specific syntax. Below are all the keywords that can be used within the input file:</p>
+<table>
+<thead>
+<tr>
+<th>  <strong>FIGURE</strong></th>
+<th>  <strong>BRDF</strong></th>
+<th>  <strong>PIGMENT</strong></th>
+<th>  <strong>TRANSFORMATION</strong></th>
+<th>  <strong>CAMERA_TYPE</strong></th>
+<th>  <strong>    <em>Extras</em>  </strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plane</td>
+<td>diffuse</td>
+<td>uniform</td>
+<td>identity</td>
+<td>orthogonal</td>
+<td>new</td>
+</tr>
+<tr>
+<td>sphere</td>
+<td>specular</td>
+<td>checkered</td>
+<td>translation</td>
+<td>perspective</td>
+<td>float</td>
+</tr>
+<tr>
+<td>aabox</td>
+<td />
+<td>image</td>
+<td>rotation_x</td>
+<td />
+<td>light</td>
+</tr>
+<tr>
+<td>cylinder</td>
+<td />
+<td />
+<td>rotation_y</td>
+<td />
+<td>material</td>
+</tr>
+<tr>
+<td />
+<td />
+<td />
+<td>rotation_z</td>
+<td />
+<td>camera</td>
+</tr>
+<tr>
+<td />
+<td />
+<td />
+<td>scaling</td>
+<td />
+<td />
+</tr></tbody></table>
+<p>First thing first it is necessary to define a camera, use the following syntax:</p>
+<pre>  <code>camera(CAMERA_TYPE, TRANSFORMATION, aspectRatio:float, distance:float)
+</code></pre>
+<p>where <code>aspectRatio</code> is a float representing the ration between the width and the height (expressed in # of pixel) of the image; <code>distance</code> is a float representing the distance of the camera from the screen.</p>
+<p>To define a space vector or a color it is necessary to specify three values:</p>
+<pre>  <code>[x:float, y:float, z:float] # This is a vector representing a 3D position or a direction
+&lt;r:float, g:float, b:float&gt; # This is a vector representing a RGB color
+</code></pre>
+<p>The first vectors are used to define translation. Here are the ways to define the various possible transformations:</p>
+<pre>  <code>identity # Use this if you don&apos;t want a transformation
+translation([x,y,z])
+scaling([x,y,z])
+rotation_x(rotation_angle:float) # Define a rotation around the x axis
+rotation_y(rotation_angle:float) # Define a rotation around the y axis
+rotation_z(rotation_angle:float) # Define a rotation around the z axis
+</code></pre>
+<p>To define a pigment use the RGB vectors:</p>
+<pre>  <code>uniform(&lt;r,g,b&gt;)
+chekered(&lt;r1,g1,b1&gt;, &lt;r2,g2,b2&gt;, n_step:int)
+image(image_PATH:string)
+</code></pre>
+<p>To define the material of the shapes that will be rendered it is necessary to use the correct BDRF:</p>
+<pre>  <code>material NAME(diffuse(PIGMENT), uniform(&lt;r,g,b&gt;)) # Diffuse brdf, the second pigment represent the emitted radiance.
+material NAME(specular(PIGMENT), uniform(&lt;0,0,0&gt;)) # Specural brdf
+</code></pre>
+<p>To define a shape use this syntax:</p>
+<pre>  <code>FIGURE (MATERIAL, TRANSFORMATION)
+</code></pre>
+<p>In <em>pointlight</em> render to define a light source use:</p>
+<pre>  <code>light ([x,y,z], &lt;r,g,b&gt;, radius:float)
+</code></pre>
+<p>It is also possible to define float variables:</p>
+<pre>  <code>float NAME(value:float)
+</code></pre>
+<p>You can find many examples in the <a href="./examples">examples</a> folder!</p>
+<h2>:book: Documentation</h2>
+<p>A complete documentation with all the procedures and the data structures is aviable at this <a href="https://teob97.github.io/T-RayX/">link</a></p>
+<h2>:police_car: License</h2>
+<p>The code is released under a GPL-3.0 license. See the file <a href="./LICENSE">LICENSE</a></p>
+<h2>:sunglasses: Examples</h2>
+<h3>Example 1 (pfm2png)</h3>
+<p>Run:</p>
+<pre>  <code class="language-bash">$ ./trayx pfm2png examples/pfm2png/lawn.pbm 0.6 1.45 examples/pfm2png/lawn_a0.6-gamma1.45.png
+</code></pre>
+<p>in order to create the following image:</p>
+<p float="center">
+  <img src="examples/pfm2png/lawn_a0.6-gamma1.45.png" style="max-width: 100%;" width="300" />
+</p>
+<p>It is possible to tune the parameters alpha and gamma.</p>
+<table>
+<thead>
+<tr>
+<th align="center">  <img src="examples/pfm2png/lawn_a0.3-gamma1.45.png" style="max-width: 100%;" alt="" /></th>
+<th align="center">  <img src="examples/pfm2png/lawn_a0.6-gamma1.45.png" style="max-width: 100%;" alt="" /></th>
+<th align="center">  <img src="examples/pfm2png/lawn_a0.9-gamma1.45.png" style="max-width: 100%;" alt="" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">  <code>alpha = 0.3</code></td>
+<td align="center">  <code>alpha = 0.6</code></td>
+<td align="center">  <code>alpha = 0.9</code></td>
+</tr></tbody></table>
+<h3>Example 2 (render)</h3>
+<p>Use the following command to produce the scene described <a href="examples/render/example1.txt">here</a>:</p>
+<pre>  <code class="language-bash">./trayx render examples/render/example1.txt 400 400 --output=examples/render/example1.png --luminosity=0.4 --gamma=2 --samplePerPixel=9
+
+</code></pre>
+<p>Use the following command to produce the scene described <a href="examples/render/example2.txt">here</a>:</p>
+<pre>  <code class="language-bash">./trayx render examples/render/example2.txt 400 400 --output=examples/render/example2.png --luminosity=0.2 --gamma=2 --maxDepth=3 --samplePerPixel=9
+</code></pre>
+<p>Use the following command to produce the scene described <a href="examples/render/example3.txt">here</a>:</p>
+<pre>  <code class="language-bash">./trayx render examples/render/example3.txt 400 400 --output=examples/render/example3.png --samplePerPixel=9
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">  <img src="examples/render/example1.png" style="max-width: 100%;" alt="" /></th>
+<th align="center">  <img src="examples/render/example2.png" style="max-width: 100%;" alt="" /></th>
+<th align="center">  <img src="examples/render/example3.png" style="max-width: 100%;" alt="" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">  <code>example 1</code></td>
+<td align="center">  <code>example 2</code></td>
+<td align="center">  <code>example 3</code></td>
+</tr></tbody></table>
+<p>You can also try to generate more artistic images. For the following image, we took inspiration from an artistic work by <a href="http://www.jeffkoons.com/artwork/celebration/balloon-dog-0">Jeff Koons</a>.</p>
+<p float="center">
+  <img src="examples/render/example4.png" style="max-width: 100%;" width="600" />
+</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        GPL3
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/teob97/T-RayX">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

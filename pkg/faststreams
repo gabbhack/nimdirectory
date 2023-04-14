@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">faststreams</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">I/O</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">memory-mapping</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">streams</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nearly zero-overhead input/output streams for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install faststreams" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nim-faststreams</h1>
+<p><a href="https://travis-ci.org/status-im/nim-faststreams">  <img src="https://img.shields.io/travis/status-im/nim-faststreams/master.svg?label=Linux%20/%20macOS" style="max-width: 100%;" alt="Build Status (Travis)" title="Linux/macOS build status (Travis)" /></a>
+<a href="https://ci.appveyor.com/project/nimbus/nim-faststreams">  <img src="https://img.shields.io/appveyor/ci/nimbus/nim-faststreams/master.svg?label=Windows" style="max-width: 100%;" alt="Windows build status (Appveyor)" title="Windows build status (Appveyor)" /></a>
+<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /><img src="https://github.com/status-im/nim-faststreams/workflows/nim-faststreams%20CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
+<p>FastStreams is a highly efficient library for all your I/O needs.</p>
+<p>It offers nearly zero-overhead synchronous and asynchronous streams
+for handling inputs and outputs of various types:</p>
+<ul>
+<li>Memory inputs and outputs for serialization frameworks and parsers</li>
+<li>File inputs and outputs</li>
+<li>Pipes and Process I/O</li>
+<li>Networking</li>
+</ul>
+<p>The library aims to provide a common interface between all stream types
+that allows the application code to be easily portable to different back-end
+event loops. In particular, <a href="https://github.com/status-im/nim-chronos">Chronos</a>
+and <a href="https://nim-lang.org/docs/asyncdispatch.html">AsyncDispatch</a>
+are already supported. It&apos;s envisioned that the library will also
+gain support for the Nginx event loop to allow the creation of web
+applications running as Nginx run-time modules and the <a href="http://seastar.io/">SeaStar event loop</a>
+for the development of extremely low-latency services taking advantage
+of <a href="https://blog.cloudflare.com/kernel-bypass/">kernel-bypass networking</a>.</p>
+<h2>What does zero-overhead mean?</h2>
+<p>Even though FastStreams support multiple stream types, the API is designed
+in a way that allows the read and write operations to be handled without any
+dynamic dispatch in the majority of cases.</p>
+<p>In particular, reading from a <code>memoryInput</code> or writing to a <code>memoryOutput</code>
+will have similar performance to a loop iterating over an <code>openArray</code> or
+another loop populating a pre-allocated <code>string</code>. <code>memFileInput</code> offers
+the same performance characteristics when working with files. The idiomatic
+use of the APIs with the rest of the stream types will result in a highly
+efficient memory allocation patterns and zero-copy performance in a great
+variety of real-world use cases such as:</p>
+<ul>
+<li>Parsers for data formats and protocols employing formal grammars</li>
+<li>Block ciphers</li>
+<li>Compressors and decompressors</li>
+<li>Stream multiplexers</li>
+</ul>
+<p>The zero-copy behavior and low-memory usage is maintained even when multiple
+streams are layered on top of each other while back-pressure is properly
+accounted for. This makes FastStreams ideal for implementing highly-flexible
+networking stacks such as <a href="https://github.com/status-im/nim-libp2p">LibP2P</a>.</p>
+<h2>The key ideas in the FastStreams design</h2>
+<p>FastStreams is heavily inspired by the <code>System.IO.Pipelines</code> API which was
+developed and released by Microsoft in 2018 and is considered the result of
+multiple years of evolution over similar APIs shipped in previous SDKs.</p>
+<p>We highly recommend reading the following two articles which provide an in-depth
+explanation for the benefits of the design:</p>
+<ul>
+<li>https://blog.marcgravell.com/2018/07/pipe-dreams-part-1.html</li>
+<li>https://blog.marcgravell.com/2018/07/pipe-dreams-part-2.html</li>
+</ul>
+<p>Here, we&apos;ll only summarize the main insights:</p>
+<h3>Obtaining data from the input device is not the same as consuming it.</h3>
+<p>When protocols and formats are layered on top of each other, it&apos;s highly
+inconvenient to handle a read operation that can return an arbitrary amount
+of data. If not enough data was returned, you may need to copy the available
+bytes into a local buffer and then repeat the reading operation until enough
+data is gathered and the local buffer can be processed. On the other hand,
+if more data was received, you need to complete the current stage of processing
+and then somehow feed the remaining bytes into the next stage of processing
+(e.g this might be a nested format or a different parsing branch in the formal
+grammar of the protocol). Both of these scenarios require logic that is
+difficult to write correctly and results in unnecessary copying of the input
+bytes.</p>
+<p>A major difference in the FastStreams design is that the arbitrary-length
+data obtained from the input device is managed by the stream itself and you
+are provided with an API allowing you to control precisely how much data
+is consumed from the stream. Consuming the buffered content does not invoke
+costly asynchronous calls and you are allowed to peek at the stream contents
+before deciding which step to take next (something crucial for handling formal
+grammars). Thus, using the FastStreams API results in code that is both highly
+efficient and easy to author.</p>
+<h3>Higher efficiency is possible if we say goodbye to the good old single buffer.</h3>
+<p>The buffering logic inside the stream divides the data into &quot;pages&quot; which
+are allocated with a known fast path in the Nim allocator and which can be
+efficiently transferred between streams and threads in the layered streams
+scenario or in IPC mechanisms such as <code>AsyncChannel</code>. The consuming code can
+be aware of this, but doesn&apos;t need to. The most idiomatic usage of the API
+handles the buffer switching logic automatically for the user.</p>
+<p>Nevertheless, the buffering logic can be configured for unbuffered reads
+and writes and it supports efficiently various common real-world patterns
+such as:</p>
+<ul>
+<li>
+<p>Length prefixes</p>
+<p>To handle protocols with length prefixes without any memory overhead,
+the output streams support &quot;delayed writes&quot; where a portion of the
+stream content is specified only after the prefixed content is written
+to the stream.</p>
+</li>
+<li>
+<p>Block compressors and Block ciphers</p>
+<p>These can benefit significantly from a more precise control over
+the stride of the buffered pages which can be configured to match
+the block size of the encoder.</p>
+</li>
+<li>
+<p>Content with known length</p>
+<p>Some streams have a known length which allows us to accurately estimate
+the size of the transformed content. The <code>len</code> and <code>ensureRunway</code> APIs
+make sure such cases are handled as optimally as possible.</p>
+</li>
+</ul>
+<h2>Basic API usage</h2>
+<p>The FastStreams API consists of ony few major object types:</p>
+<h3>  <code>InputStream</code></h3>
+<p>An <code>InputStream</code> manages a particular input device. The library offers out
+of the box the following input stream types:</p>
+<ul>
+<li>
+<p>  <code>fileInput</code></p>
+<p>For reading files through the familiar <code>fread</code> API from the C run-time.</p>
+</li>
+<li>
+<p>  <code>memFileInput</code></p>
+<p>For reading memory mapped files which provides best performance.</p>
+</li>
+<li>
+<p>  <code>unsafeMemoryInput</code></p>
+<p>For handling strings, sequences and openarrays as an input stream. <br />
+You are responsible for ensuring that the backing buffer won&apos;t be invalidated
+while the stream is being used.</p>
+</li>
+<li>
+<p>  <code>memoryInput</code></p>
+<p>Primarily used to consume the contents written to a previously populated
+output stream, but it can also be used to consume the contents of strings
+and sequences in a memory-safe way (by creating a copy).</p>
+</li>
+<li>
+<p><code>pipeInput</code> (async)</p>
+<p>For arbitrary conmmunication between a produced and a consumer.</p>
+</li>
+<li>
+<p><code>chronosInput</code> (async)</p>
+<p>Enabled by importing <code>faststreams/chronos_adapters</code>. <br />
+It can represent any Chronos <code>Transport</code> as an input stream.</p>
+</li>
+<li>
+<p><code>asyncSocketInput</code> (async)</p>
+<p>Enabled by importing <code>faststreams/std_adapters</code>. <br />
+Allows using Nim&apos;s standard library <code>AsyncSocket</code> type as an input stream.</p>
+</li>
+</ul>
+<p>You can extend the library with new <code>InputStream</code> types without modifying it.
+Please see the inline code documentation of <code>InputStreamVTable</code> for more details.</p>
+<p>All of the above APIs are possible constructors for creating an <code>InputStream</code>.
+The stream instances will manage their resources through destructors, but you
+might want to <code>close</code> them explicitly in async context or when you need to
+handle the possible errors from the closing operation.</p>
+<p>Here is an example usage:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">faststreams</span><span class="op">/</span><span class="ide">inputs</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">jsonString</span> <span class="op">=</span> <span class="str">&quot;[1, 2, 3]&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">jsonNodes</span> <span class="op">=</span> <span class="ide">parseJson</span>(<span class="ide">unsafeMemoryInput</span>(<span class="ide">jsonString</span>))</div></div><div class="line"><div class="line-content">  <span class="ide">moreNodes</span> <span class="op">=</span> <span class="ide">parseJson</span>(<span class="ide">fileInput</span>(<span class="str">&quot;data.json&quot;</span>))</div></div>  </code></pre>
+<p>The example above assumes we might have a <code>parseJson</code> function accepting an
+<code>InputStream</code>. Here how this function could be defined:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">faststreams</span><span class="op">/</span><span class="ide">inputs</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">scanString</span>(<span class="ide">stream</span>: <span class="ide">InputStream</span>): <span class="ide">JsonToken</span> {<span class="op">.</span><span class="ide">fsMultiSync</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">newStringToken</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">advance</span> <span class="ide">stream</span> <span class="com"># skip the opening quote</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">readable</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">nextChar</span> <span class="op">=</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">read</span><span class="op">.</span><span class="ide">char</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">nextChar</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> '\'':</div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">readable</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">let</span> <span class="ide">escaped</span> <span class="op">=</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">read</span><span class="op">.</span><span class="ide">char</span></div></div><div class="line"><div class="line-content">        <span class="kwd">case</span> <span class="ide">escaped</span></div></div><div class="line"><div class="line-content">        <span class="kwd">of</span> 'n': <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> '\n'</div></div><div class="line"><div class="line-content">        <span class="kwd">of</span> 't': <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> '\t'</div></div><div class="line"><div class="line-content">        <span class="kwd">else</span>: <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> <span class="ide">escaped</span></div></div><div class="line"><div class="line-content">      <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">error</span>(<span class="ide">UnexpectedEndOfFile</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> '"'</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> <span class="ide">nextChar</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">error</span>(<span class="ide">UnexpectedEndOfFile</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">nextToken</span>(<span class="ide">stream</span>: <span class="ide">InputStream</span>): <span class="ide">JsonToken</span> {<span class="op">.</span><span class="ide">fsMultiSync</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">readable</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">peek</span><span class="op">.</span><span class="ide">char</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> '"':</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">scanString</span>(<span class="ide">stream</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> '0'<span class="op">..</span>'9':</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">scanNumber</span>(<span class="ide">stream</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> 'a'<span class="op">..</span>'z', 'A'<span class="op">..</span>'Z', '_':</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">scanIdentifier</span>(<span class="ide">stream</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> '{':</div></div><div class="line"><div class="line-content">      <span class="ide">advance</span> <span class="ide">stream</span> <span class="com"># skip the character</span></div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">objectStartToken</span></div></div><div class="line"><div class="line-content">    <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">eofToken</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">parseJson</span>(<span class="ide">stream</span>: <span class="ide">InputStream</span>): <span class="ide">JsonNode</span> {<span class="op">.</span><span class="ide">fsMultiSync</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> (<span class="kwd">let</span> <span class="ide">token</span> <span class="op">=</span> <span class="ide">nextToken</span>(<span class="ide">stream</span>); <span class="ide">token</span> <span class="op">!=</span> <span class="ide">eofToken</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">token</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">numberToken</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">newJsonNumber</span>(<span class="ide">token</span><span class="op">.</span><span class="ide">num</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">stringToken</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">newJsonString</span>(<span class="ide">token</span><span class="op">.</span><span class="ide">str</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">objectStartToken</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">parseObject</span>(<span class="ide">stream</span>)</div></div><div class="line"><div class="line-content">    <span class="op">...</span></div></div>  </code></pre>
+<p>The above example is nothing but a toy program, but we can already see many
+usage patterns of the <code>InputStream</code> type. For a more sophisticated and complete
+implementation of a JSON parser, please see the <a href="https://github.com/status-im/nim-json-serialization">nim-json-serialization</a>
+package.</p>
+<p>As we can see from the example above, calling <code>stream.read</code> should always be
+preceded by a call to <code>stream.readable</code>. When the stream is in the readable
+state, we can also <code>peek</code> at the next character before we decide how to
+proceed. Besides calling <code>read</code>, we can also mark the data as consumed by
+calling <code>stream.advance</code>.</p>
+<p>The above APIs demonstrate how you can consume the data one byte at the time.
+Common wisdom might tell you that this should be inefficient, but that&apos;s not
+the case with FastStreams. The loop <code>while stream.readable: stream.read</code> will
+compile to very efficient inlined code that performs nothing more than pointer
+increments and comparisons. This will be true even when working with async
+streams.</p>
+<p>The <code>readable</code> check is the only place where our code may block (or await).
+Only when all the data in the stream buffers have been consumed, the stream
+will invoke a new read operation on the backing input device and this may
+repopulate the buffers with an arbitrary number of new bytes.</p>
+<p>Sometimes, you need to check whether the stream contains at least a specific
+number of bytes. You can use the <code>stream.readable(N)</code> API to achieve this.</p>
+<p>Reading multiple bytes at once is then possible with <code>stream.read(N)</code>, but
+if you need to store the bytes in an object field or another long-term storage
+location, consider using <code>stream.readInto(destination)</code> which may result in
+zero-copy operation. It can also be used to implement unbuffered reading.</p>
+<h4><code>AsyncInputStream</code> and <code>fsMultiSync</code></h4>
+<p>An astute reader might have wondered what is the purpose of the custom pragma
+<code>fsMultiSync</code> used in the examples above? It is a simple macro generating an
+additional <code>async</code> copy of our stream processing functions where all the input
+types are replaced by their async counterparts (e.g. <code>AsyncInputStream</code>) and
+the return type is wrapped in a <code>Future</code> as usual.</p>
+<p>The standard API of <code>InputStream</code> and <code>AsyncInputStream</code> is exactly the same.
+Operations such as <code>readable</code> will just invoke <code>await</code> behind the scenes, but
+there is one key difference - the <code>await</code> will be triggered only when there
+is not enough data already stored in the stream buffers. Thus, in the great
+majority of cases, we avoid the high cost of instantiating a <code>Future</code> and
+yielding control to the event loop.</p>
+<p>We highly recommend implementing most of your stream processing code through
+the <code>fsMultiSync</code> pragma. This ensures the best possible performance and makes
+the code more easily testable (e.g. with inputs stored on disk). FastStreams
+ships with a set of fuzzing tools that will help you ensure that your code
+behaves correctly with arbitrary data and/or arbitrary interruption points.</p>
+<p>Nevertheless, if you need a more traditional async API, please be aware that
+all of the functions discussed in this README also have an <code>*Async</code> suffix
+form that returns a <code>Future</code> (e.g. <code>readableAsync</code>, <code>readAsync</code>, etc).</p>
+<p>One exception to the above rule is the helper <code>stream.timeoutToNextByte(t)</code>
+which can be used to detect situations where your communicating party is
+failing to send data in time. It accepts a <code>Duration</code> or an existing deadline
+<code>Future</code> and it&apos;s usually used like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">performHandshake</span>(<span class="ide">c</span>: <span class="ide">Connection</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">c</span><span class="op">.</span><span class="ide">inputStream</span><span class="op">.</span><span class="ide">timeoutToNextByte</span>(<span class="ide">HANDSHAKE_TIMEOUT</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># The other party didn&apos;t send us anything in time,</span></div></div><div class="line"><div class="line-content">    <span class="com"># We close the connection:</span></div></div><div class="line"><div class="line-content">    <span class="ide">close</span> <span class="ide">c</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">c</span><span class="op">.</span><span class="ide">inputStream</span><span class="op">.</span><span class="ide">readable</span>:</div></div><div class="line"><div class="line-content">    <span class="op">...</span></div></div>  </code></pre>
+<p>It is assumed that in traditional async code, timeouts will be managed more
+explicitly with <code>sleepAsync</code> and the <code>or</code> operator defined over futures.</p>
+<h4>Range-restricted reads</h4>
+<p>Protocols transmitting serialized payloads often provide information regarding
+the size of the payload. When you invoke the deserialization routine, it&apos;s
+preferable if the provided boundaries are treated like an &quot;end of file&quot; marker
+for the deserializer. FastStreams provides an easy way to achieve this without
+extra copies and memory allocations through the <code>withReadableRange</code> facility.
+Here is a typical usage:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">decodeFrame</span>(<span class="ide">s</span>: <span class="ide">AsyncInputStream</span>, <span class="ide">DecodedType</span>: <span class="kwd">type</span>): <span class="ide">Option</span>[<span class="ide">DecodedType</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">s</span><span class="op">.</span><span class="ide">readable</span>(<span class="num">4</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">lengthPrefix</span> <span class="op">=</span> <span class="ide">toInt32</span> <span class="ide">s</span><span class="op">.</span><span class="ide">read</span>(<span class="num">4</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">s</span><span class="op">.</span><span class="ide">readable</span>(<span class="ide">lengthPrefix</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">s</span><span class="op">.</span><span class="ide">withReadableRange</span>(<span class="ide">lengthPrefix</span>, <span class="ide">range</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">range</span><span class="op">.</span><span class="ide">readValue</span>(<span class="ide">Json</span>, <span class="ide">DecodedType</span>)</div></div>  </code></pre>
+<p>Please note that the above example uses the <a href="https://github.com/status-im/nim-serialization/">nim-serialization library</a></p>
+<p>Simply, inside the <code>withReadableRange</code> block, <code>range</code> becomes a stream for
+which <code>s.readable</code> will return <code>false</code> as soon as the Json parser has consumed
+the specified number of bytes.</p>
+<p>Furthermore, <code>withReadableRange</code> guarantees that all stream operations within
+the block will be non-blocking, so it will transform the <code>AsyncInputStream</code>
+into a regular <code>InputStream</code>. Depending on the complexity of the stream
+processing functions, this will often lead to significant performance gains.</p>
+<h3><code>OutputStream</code> and <code>AsyncOutputStream</code></h3>
+<p>An <code>OutputStream</code> manages a particular output device. The library offers out
+of the box the following output stream types:</p>
+<ul>
+<li>
+<p>  <code>writeFileOutput</code></p>
+<p>For writing files through the familiar <code>fwrite</code> API from the C run-time.</p>
+</li>
+<li>
+<p>  <code>memoryOutput</code></p>
+<p>For building a <code>string</code> or a <code>seq[byte]</code> result.</p>
+</li>
+<li>
+<p>  <code>unsafeMemoryOutput</code></p>
+<p>For writing to an arbitrary existing buffer. <br />
+You are responsible for ensuring that the backing buffer won&apos;t be invalidated
+while the stream is being used.</p>
+</li>
+<li>
+<p><code>pipeOutput</code> (async)</p>
+<p>For arbitrary conmmunication between a produced and a consumer.</p>
+</li>
+<li>
+<p><code>chronosOutput</code> (async)</p>
+<p>Enabled by importing <code>faststreams/chronos_adapters</code>. <br />
+It can represent any Chronos <code>Transport</code> as an input stream.</p>
+</li>
+<li>
+<p><code>asyncSocketOutput</code> (async)</p>
+<p>Enabled by importing <code>faststreams/std_adapters</code>. <br />
+Allows using Nim&apos;s standard library <code>AsyncSocket</code> type as an output stream.</p>
+</li>
+</ul>
+<p>You can extend the library with new <code>OutputStream</code> types without modifying it.
+Please see the inline code documentation of <code>OutputStreamVTable</code> for more details.</p>
+<p>All of the above APIs are possible constructors for creating an <code>OutputStream</code>.
+The stream instances will manage their resources through destructors, but you
+might want to <code>close</code> them explicitly in async context or when you need to
+handle the possible errors from the closing operation.</p>
+<p>Here is an example usage:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">faststreams</span><span class="op">/</span><span class="ide">outputs</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">ABC</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">a</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">b</span>: <span class="ide">char</span></div></div><div class="line"><div class="line-content">    <span class="ide">c</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">stream</span> <span class="op">=</span> <span class="ide">memoryOutput</span>()</div></div><div class="line"><div class="line-content"><span class="ide">stream</span><span class="op">.</span><span class="ide">writeNimRepr</span>(<span class="ide">ABC</span>(<span class="ide">a</span>: <span class="num">1</span>, <span class="ide">b</span>: 'b', <span class="ide">c</span>: <span class="str">&quot;str&quot;</span>))</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">repr</span> <span class="op">=</span> <span class="ide">stream</span><span class="op">.</span><span class="ide">getOutput</span>(<span class="ide">string</span>)</div></div>  </code></pre>
+<p>The <code>writeNimRepr</code> in the above example is not part of the library, but
+let&apos;s see how it can be implemented:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">typetraits</span>, <span class="ide">faststreams</span><span class="op">/</span><span class="ide">outputs</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeNimRepr</span><span class="op">*</span>(<span class="ide">stream</span>: <span class="ide">OutputStream</span>, <span class="ide">str</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> '"'</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">c</span> <span class="kwd">in</span> <span class="ide">str</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">c</span> <span class="op">==</span> '"':</div></div><div class="line"><div class="line-content">      <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> ['\'', '"']</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> <span class="ide">c</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> '"'</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeNimRepr</span><span class="op">*</span>(<span class="ide">stream</span>: <span class="ide">OutputStream</span>, <span class="ide">x</span>: <span class="ide">char</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> ['\'', <span class="ide">x</span>, '\'']</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeNimRepr</span><span class="op">*</span>(<span class="ide">stream</span>: <span class="ide">OutputStream</span>, <span class="ide">x</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> <span class="op">$</span><span class="ide">x</span> <span class="com"># Making this more optimal has been left</span></div></div><div class="line"><div class="line-content">                  <span class="com"># as an exercise for the reader</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeNimRepr</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">stream</span>: <span class="ide">OutputStream</span>, <span class="ide">obj</span>: <span class="ide">T</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> <span class="ide">typetraits</span><span class="op">.</span><span class="ide">name</span>(<span class="ide">T</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> '('</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">firstField</span> <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">name</span>, <span class="ide">val</span> <span class="kwd">in</span> <span class="ide">fieldPairs</span>(<span class="ide">obj</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">firstField</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> <span class="str">&quot;, &quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> <span class="ide">name</span></div></div><div class="line"><div class="line-content">    <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> <span class="str">&quot;: &quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">stream</span><span class="op">.</span><span class="ide">writeNimRepr</span> <span class="ide">val</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">firstField</span> <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">stream</span><span class="op">.</span><span class="ide">write</span> ')'</div></div>  </code></pre>
+<p>When the stream is created, its output buffers will be initialized with a
+single page of <code>pageSize</code> bytes (specified at stream creation). Calls to
+<code>write</code> will just populate this page until it becomes full and only then
+it would be sent to the output device.</p>
+<p>As the example demonstrates, a <code>memoryOutput</code> will continue buffering
+pages until they can be finally concatenated and returned in <code>stream.getOutput</code>.
+If the output fits within a single page, it will be efficiently moved to
+the <code>getOutput</code> result. When the output size is known upfront you can ensure
+that this optimization is used by calling <code>stream.ensureRunway</code> before any
+writes, but please note that the library is free to ignore this hint in async
+context or if a maximum memory usage policy is specified.</p>
+<p>In a non-memory stream, any writes larger than a page or issued through the
+<code>writeNow</code> API will be sent to the output device immediately.</p>
+<p>Please note that even in async context, <code>write</code> will complete immediately.
+To handle back-pressure properly, use <code>stream.flush</code> or <code>stream.waitForConsumer</code>
+which will ensure that the buffered data is drained to a specified number of
+bytes before continuing. The rationale here is that introducing an interruption
+point at every <code>write</code> produces less optimal code, but if this is desired you
+can use the <code>stream.writeAndWait</code> API.</p>
+<p>If you have existing algorithms that output data to an <code>openArray</code>, you can use
+the <code>stream.getWritableBytes</code> API to continue using them without introducing any
+intermediate buffers.</p>
+<h4>Delayed Writes</h4>
+<p>Many protocols and formats employ fixed-size and variable-size length prefixes
+that have been tradionally difficult to handle because they require you to
+either measure the size of the content before writing it to the stream, or
+even worse, serialize it to a memory buffer in order to determine its size.</p>
+<p>FastStreams supports handling such length prefixes with a zero-copy mechanism
+that doesn&apos;t require additional memory allocations. <code>stream.delayFixedSizeWrite</code>
+and <code>stream.delayVarSizeWrite</code> are APIs that return a <code>WriteCursor</code> object that
+can be used to implement a delayed write to the stream. After obtaining the
+write cursor you can take a note of the current <code>pos</code> in the stream and then
+continue issuing <code>stream.write</code> operations normally. After all of the content
+is written, you obtain <code>pos</code> again to determine the final value of the length
+prefix. Throughout the whole time, you are free to call <code>write</code> on the cursor
+to populate the &quot;hole&quot; left in the stream with bytes, but at the end you must
+call <code>finalize</code> to unlock the stream for flushing. You can also perform the
+finalization in one step with <code>finalWrite</code> (the one-step approach is manatory
+for variable-size prefixes).</p>
+<h3>  <code>Pipeline</code></h3>
+<p>(This section is a stub and it will be expanded with more details in the future)</p>
+<p>A <code>Pipeline</code> represents a chain of transformations that should be applied to a
+stream. It starts with an <code>InputStream</code> followed by one or more transformation
+steps and ending with a result.</p>
+<p>Each transformation step is a function of the kind:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">PipelineStep</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">proc</span> (<span class="ide">i</span>: <span class="ide">InputStream</span>, <span class="ide">o</span>: <span class="ide">OutputStream</span>)</div></div><div class="line"><div class="line-content">                          {<span class="op">.</span><span class="ide">gcsafe</span>, <span class="ide">raises</span>: [<span class="ide">Defect</span>, <span class="ide">CatchableError</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<p>A result obtaining operation is a function of the kind:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">PipelineResultProc</span><span class="op">*</span>[<span class="ide">T</span>] <span class="op">=</span> <span class="kwd">proc</span> (<span class="ide">i</span>: <span class="ide">InputStream</span>): <span class="ide">T</span></div></div><div class="line"><div class="line-content">                                   {<span class="op">.</span><span class="ide">gcsafe</span>, <span class="ide">raises</span>: [<span class="ide">Defect</span>, <span class="ide">CatchableError</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<p>Please note that <code>stream.getOutput</code> is an example of such a function.</p>
+<p>Pipelnes executed in place with <code>executePipeline</code> API. If the first input source is
+async, then the whole pipeline with be executing asynchronously which can result
+in a much lower memory usage.</p>
+<p>The pipeline transformation steps are usually employing the <code>fsMultiSync</code>
+pragma to make them usable in both synchronous and asynchronous scenarios.</p>
+<p>Please note that the above higher-level APIs are just about simplifying the
+instantiation of multiple <code>Pipe</code> objects that can be used to hook input and
+output streams in arbitrary ways.</p>
+<p>A stream multiplexer for example is likely to rely on the lower-level <code>Pipe</code>
+objects and the underlying <code>PageBuffers</code> directly.</p>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. This file may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-faststreams">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

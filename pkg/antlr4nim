@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">antlr4nim</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">antlr</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">antlr4</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">visitor</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">listener</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">DSL</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim interface to ANTLR4 listener/visitor via jsffi")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install antlr4nim" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>antlr4nim</h1>
+<p>Nim interface to ANTLR4 listener/visitor via jsffi.</p>
+<p>Current version supports interpreter generation - compiler functionality is in the pipeline.</p>
+<p>  <a href="https://jan0sc.github.io/antlr4nim.html">API</a></p>
+<h2>Who is this for?</h2>
+<p>You have an idea for an amazing new DSL that you&apos;re itching to implement.</p>
+<p>You know that the <a href="https://www.antlr.org/">ANTLR4</a> parser generator makes it possible to</p>
+<ul>
+<li>specify your language formally as a grammar.</li>
+<li>autogenerate a lexer and parser for that grammar in several target languages.</li>
+<li>repeat the process as much as you like, knowing that any changes you make to the grammar are dealt with seamlessly.</li>
+</ul>
+<p>You also know that <a href="https://nim-lang.org/">Nim</a> is an expressive general-purpose language that</p>
+<ul>
+<li>compiles to efficient C, C++ or JavaScript code.</li>
+<li>has powerful metaprogramming tools that should <em>(see FAQ below)</em> make it much easier to write a compiler for your new language.</li>
+</ul>
+<p>You want to use both together? Of course you do. But ANTLR4 has no Nim target :(</p>
+<p>Fortunately, Nim has good interops with JavaScript. <strong>antlr4nim</strong> is a module to support an ANTLR4/Nim workflow, using Nim&apos;s <a href="https://nim-lang.org/docs/jsffi.html">JavaScript FFI</a>.</p>
+<p>  <em>A similar approach should be possible for the C++ ANTLR4 target, but unfortuately   <a href="https://github.com/nim-lang/c2nim">c2nim</a> doesn&apos;t like the header files that ANTLR4 generates. My C++ experience is zero so I would welcome a PR on this issue if someone wants to work on it :)</em></p>
+<h2>How does it work?</h2>
+<p>Parsing is executed on the JavaScript side, using the default listener/visitor code that ANTLR4 generates for you.</p>
+<p>You override the default behaviour with custom methods in Nim that will be bound to your listener/visitor object.</p>
+<p>A basic JavaScript entry point is provided, which you can modify to your own needs.</p>
+<p>The <strong>antlr4nim</strong> module provides macros and procs that help to reduce boilerplate in your Nim code.</p>
+<h2>Instructions</h2>
+<p>(commands in parentheses are how I do each step on MacOS)</p>
+<h3>You will need:</h3>
+<ul>
+<li>Nim (<code>brew install nim</code>)</li>
+<li>Node.js (<code>brew install node</code>)</li>
+<li>The ANTLR4 tool (<code>brew install antlr@4</code>)</li>
+<li>The ANTLR4 JavaScript runtime (<code>npm install antlr4</code>)</li>
+<li>Your grammar file, <code>&lt;grammar&gt;.g4</code></li>
+</ul>
+<p>For the example, I will use the <a href="https://github.com/antlr/grammars-v4/tree/master/csv">CSV grammar</a> from the ANTLR repo.
+(<code>wget https://raw.githubusercontent.com/antlr/grammars-v4/master/csv/CSV.g4</code>)</p>
+<h3>1. Clone the <em>antlr4nim</em> package</h3>
+<pre>  <code>nimble develop antlr4nim
+</code></pre>
+<h3>2. Copy your grammar into the <em>antlr4nim</em> directory and build the ANTLR4 JS target</h3>
+<p>For the purposes of the example, we will build both the visitor and the listener. Probably you only want one of them.</p>
+<pre>  <code>antlr -Dlanguage=JavaScript -visitor -listener &lt;grammar&gt;.g4
+</code></pre>
+<p>Where our <code>&lt;grammar&gt;</code> is <code>CSV</code>. The following files (and others) will be created:</p>
+<ul>
+<li>  <code>CSVLexer.js</code></li>
+<li>  <code>CSVParser.js</code></li>
+<li>  <code>CSVListener.js</code></li>
+<li>  <code>CSVVisitor.js</code></li>
+</ul>
+<h3>3. Convert the ANTLR4 files to .mjs</h3>
+<pre>  <code>nimble prepare &lt;grammar&gt;
+</code></pre>
+<p>In our example, running <code>nimble prepare CSV</code> creates the following files:</p>
+<ul>
+<li><code>CSVLexer.mjs</code>  (a copy of <code>CSVLexer.js</code>)</li>
+<li><code>CSVParser.mjs</code> (a copy of <code>CSVParser.js</code>, edited to import the .mjs files)</li>
+<li><code>CSVListener.mjs</code> (a copy of <code>CSVListener.js</code>, if present)</li>
+<li><code>CSVVisitor.mjs</code> (a copy of <code>CSVVisitor.js</code> if present)</li>
+</ul>
+<p>The .mjs files are needed for Node.js to import everything correctly.</p>
+<p>Note that <code>nimble prepare</code> won&apos;t clobber any <code>.mjs</code> files that already exist, so you will need to remove them if you want to start again or make changes to your grammar.</p>
+<h3>4. Prepare your Nim parser code</h3>
+<p>Your Nim parser (<code>&lt;myParser&gt;.nim</code>) should be structured following one of these skeletons:</p>
+<p><code>myListener.nim</code>:</p>
+<pre>  <code class="language-{nim}">## antlr4nim listener skeleton
+
+import antlr4nim, jsffi
+
+
+listener &quot;&lt;grammar&gt;&quot;:
+
+  enter:
+    # insert &apos;enter&apos; procs here
+
+  exit:
+    # insert &apos;exit&apos; procs here
+
+</code></pre>
+<p><code>myVisitor.nim</code>:</p>
+<pre>  <code class="language-{nim}">## antlr4nim visitor skeleton
+
+import antlr4nim, jsffi
+
+
+visitor &quot;&lt;grammar&gt;&quot;:
+
+  visit:
+    # insert &apos;visit&apos; procs here
+
+
+</code></pre>
+<p>The <a href="https://nim-lang.org/docs/jsffi.html">  <strong>jsffi</strong></a> module is needed for your code to interact with JS.</p>
+<p>Insert procs within the macro blocks to associate them with the parsing events <em>enter</em>, <em>exit</em> or <em>visit</em> for the specified parse tree nodes. See below for simple examples of a listener and a visitor pattern.</p>
+<p>The ANTLR4 context object will be passed to your proc as <code>ctx</code>, and you have access to its methods and attributes in the same way as you would have on the JS side. All JS objects within Nim have type <code>JsObject</code>, so need conversions before they can be used.</p>
+<h3>5. Compile and run</h3>
+<pre>  <code>nim js &lt;myParser&gt;.nim
+</code></pre>
+<p>compiles your code to <code>&lt;myParser&gt;.js</code>, then</p>
+<pre>  <code>node runAntlr.mjs &lt;myParser&gt;.js &lt;inputFile&gt; &lt;startNode&gt;
+</code></pre>
+<p>will run it on the input file <code>&lt;inputFile&gt;</code>, starting from the first node in the tree of type <code>&lt;startNode&gt;</code>.</p>
+<p><code>runAntlr.mjs</code> is just a basic JS entry point, which you can adapt to your needs. It handles both the listener and visitor cases.</p>
+<h2>Example 1: Listener</h2>
+<p>We will make a listener to convert a CSV file to a Markdown table.</p>
+<p>Here&apos;s our example input:</p>
+<pre>  <code>&quot;REVIEW_DATE&quot;,&quot;AUTHOR&quot;,&quot;ISBN&quot;,&quot;DISCOUNTED_PRICE&quot;
+&quot;1985/01/21&quot;,&quot;Douglas Adams&quot;,0345391802,5.95
+&quot;1990/01/12&quot;,&quot;Douglas Hofstadter&quot;,0465026567,9.95
+&quot;1998/07/15&quot;,&quot;Timothy &quot;&quot;The Parser&quot;&quot; Campbell&quot;,0968411304,18.99
+&quot;1999/12/03&quot;,&quot;Richard Friedman&quot;,0060630353,5.95
+&quot;2001/09/19&quot;,&quot;Karen Armstrong&quot;,0345384563,9.95
+&quot;2002/06/23&quot;,&quot;David Jones&quot;,0198504691,9.95
+&quot;2002/06/23&quot;,&quot;Julian Jaynes&quot;,0618057072,12.50
+&quot;2003/09/30&quot;,&quot;Scott Adams&quot;,0740721909,4.95
+&quot;2004/10/04&quot;,&quot;Benjamin Radcliff&quot;,0804818088,4.95
+&quot;2004/10/04&quot;,&quot;Randel Helms&quot;,0879755725,4.50
+</code></pre>
+<p>Here is <code>CSV.g4</code>:</p>
+<pre>  <code class="language-{g4}">grammar CSV;
+
+csvFile: hdr row+ ;
+hdr : row ;
+
+row : field (&apos;,&apos; field)* &apos;\r&apos;? &apos;\n&apos; ;
+
+field
+    : TEXT
+    | STRING
+    |
+    ;
+
+TEXT   : ~[,\n\r&quot;]+ ;
+STRING : &apos;&quot;&apos; (&apos;&quot;&quot;&apos;|~&apos;&quot;&apos;)* &apos;&quot;&apos; ; // quote-quote is an escaped quote
+</code></pre>
+<p>Here is my parser code, <code>myCSVListener.nim</code>:</p>
+<pre>  <code class="language-{nim}">## antlr4nim listener example
+
+import antlr4nim, jsffi, strutils
+
+var width = 0
+var finishedHeader = false
+
+var output = &quot;&quot;
+
+proc doOutput =
+  echo output
+
+
+listener &quot;CSV&quot;:
+
+  enter:
+    proc row =
+      output &amp;= &quot;|&quot;                         # each row starts with |
+
+  exit:
+    proc csvFile =
+      doOutput()                            # finished! call output proc
+    proc hdr =
+      finishedHeader = true
+      output &amp;= &quot;|&quot;                         # start the header divider
+      for i in 1..width: output &amp;= &quot;---|&quot;   # complete the header divider
+      output &amp;= &quot;\n&quot;                        # newline
+    proc row =
+      output &amp;= &apos;\n&apos;                        # newline on finishing row
+    proc field =
+      if( ctx.STRING() != nil ):            # if the match is to the STRING alternative:
+        var x = ctx.txt
+        x = x[ 1 .. ^2 ]                    #   removes outside &quot; &quot;
+        x = x.replace(&quot;\&quot;\&quot;&quot;,&quot;\&quot;&quot;)          #   replaces &quot;&quot; with &quot;
+        output &amp;= x &amp; &quot;|&quot;                   #   cell content + |
+      else:                                 # otherwise:
+        output &amp;= ctx.txt &amp; &quot;|&quot;             #   cell content + |
+      if not finishedHeader: width += 1     # count the columns
+</code></pre>
+<p>The procs for parse tree nodes need to be named with the identifiers taken from the .g4 file. It&apos;s fine to have both an <em>enter</em> and an <em>exit</em> proc with the same name: the macros are going to rename everything.</p>
+<p>The proc <code>txt</code> provides a shorthand for the text content of a node, as a Nim string. <code>x.txt</code> means <code>$(x.getText().to(cstring))</code>.</p>
+<p>Note that the Nim listener is responsible for creating its own output. It won&apos;t be able to return anything to the JS side.</p>
+<p>When I run <code>nim js myCSVListener.nim</code>, the macros convert it to</p>
+<pre>  <code>import antlr4nim, jsffi, strutils
+
+var width = 0
+var finishedHeader = false
+
+var output = &quot;&quot;
+
+proc doOutput =
+  echo output
+
+
+
+proc enterRow(this: JsObject; ctx: JsObject): void =
+  output &amp;= &quot;|&quot;
+  
+proc bindEnterMethods(this: JsObject) =
+  this.enterRow = bindMethod enterRow
+
+
+
+proc exitCsvFile(this: JsObject; ctx: JsObject): void =
+  doOutput()
+
+proc exitHdr(this: JsObject; ctx: JsObject): void =
+  finishedHeader = true
+  output &amp;= &quot;|&quot;
+  for i in 1 .. width:
+    output &amp;= &quot;---|&quot;
+  output &amp;= &quot;\n&quot;
+
+proc exitRow(this: JsObject; ctx: JsObject): void =
+  output &amp;= &apos;\n&apos;
+
+proc exitField(this: JsObject; ctx: JsObject): void =
+  if (ctx.STRING() != nil):
+    var x = ctx.txt
+    x = x[1 .. ^2]
+    x = x.replace(&quot;\&quot;\&quot;&quot;, &quot;\&quot;&quot;)
+    output &amp;= x &amp; &quot;|&quot;
+  else:
+    output &amp;= ctx.txt &amp; &quot;|&quot;
+  if not finishedHeader:
+    width += 1
+
+proc bindExitMethods(this: JsObject) =
+  this.exitCsvFile = bindMethod exitCsvFile
+  this.exitHdr = bindMethod exitHdr
+  this.exitRow = bindMethod exitRow
+  this.exitField = bindMethod exitField
+
+
+
+proc bindMethods(this: JsObject) =
+  when declared(bindEnterMethods):
+    bindEnterMethods(this)
+  when declared(bindExitMethods):
+    bindExitMethods(this)
+
+module.exports.bindMethods = bindMethods
+module.exports.grammar = &quot;CSV&quot;.toJs
+module.exports.type = &quot;listener&quot;.toJs
+</code></pre>
+<p>which is then compiled directly to JS and output as <code>myCSVListener.js</code>.</p>
+<p>Note that the automatically generated <code>bindMethods</code> proc will be used to override the empty default JS listener methods with the ones defined in Nim.</p>
+<p>Finally, we run the listener with <code>node runMyCSVListener.mjs example.csv csvFile</code> to produce</p>
+<pre>  <code>|REVIEW_DATE|AUTHOR|ISBN|DISCOUNTED_PRICE|
+|---|---|---|---|
+|1985/01/21|Douglas Adams|0345391802|5.95|
+|1990/01/12|Douglas Hofstadter|0465026567|9.95|
+|1998/07/15|Timothy &quot;The Parser&quot; Campbell|0968411304|18.99|
+|1999/12/03|Richard Friedman|0060630353|5.95|
+|2001/09/19|Karen Armstrong|0345384563|9.95|
+|2002/06/23|David Jones|0198504691|9.95|
+|2002/06/23|Julian Jaynes|0618057072|12.50|
+|2003/09/30|Scott Adams|0740721909|4.95|
+|2004/10/04|Benjamin Radcliff|0804818088|4.95|
+|2004/10/04|Randel Helms|0879755725|4.50|
+</code></pre>
+<p>which renders as</p>
+<table>
+<thead>
+<tr>
+<th>REVIEW_DATE</th>
+<th>AUTHOR</th>
+<th>ISBN</th>
+<th>DISCOUNTED_PRICE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1985/01/21</td>
+<td>Douglas Adams</td>
+<td>0345391802</td>
+<td>5.95</td>
+</tr>
+<tr>
+<td>1990/01/12</td>
+<td>Douglas Hofstadter</td>
+<td>0465026567</td>
+<td>9.95</td>
+</tr>
+<tr>
+<td>1998/07/15</td>
+<td>Timothy &quot;The Parser&quot; Campbell</td>
+<td>0968411304</td>
+<td>18.99</td>
+</tr>
+<tr>
+<td>1999/12/03</td>
+<td>Richard Friedman</td>
+<td>0060630353</td>
+<td>5.95</td>
+</tr>
+<tr>
+<td>2001/09/19</td>
+<td>Karen Armstrong</td>
+<td>0345384563</td>
+<td>9.95</td>
+</tr>
+<tr>
+<td>2002/06/23</td>
+<td>David Jones</td>
+<td>0198504691</td>
+<td>9.95</td>
+</tr>
+<tr>
+<td>2002/06/23</td>
+<td>Julian Jaynes</td>
+<td>0618057072</td>
+<td>12.50</td>
+</tr>
+<tr>
+<td>2003/09/30</td>
+<td>Scott Adams</td>
+<td>0740721909</td>
+<td>4.95</td>
+</tr>
+<tr>
+<td>2004/10/04</td>
+<td>Benjamin Radcliff</td>
+<td>0804818088</td>
+<td>4.95</td>
+</tr>
+<tr>
+<td>2004/10/04</td>
+<td>Randel Helms</td>
+<td>0879755725</td>
+<td>4.50</td>
+</tr></tbody></table>
+<h2>Example 2: Visitor</h2>
+<p>An ANTLR visitor is more complicated than a listener, but also more powerful:</p>
+<ul>
+<li>The <code>visit</code> method can return something.</li>
+<li>The order of visits isn&apos;t fixed, but needs to be handled by the visitor.</li>
+</ul>
+<p>Visitors can be useful for constructing an AST from the parse tree, because the visitor can define a <code>visit</code> method for each different node type, which will construct and return the node&apos;s representation.</p>
+<p>For our visitor example, we will construct a <code>Book</code> object for each row of the table.</p>
+<p>Here is <code>myCSVVisitor.nim</code>:</p>
+<pre>  <code>## antlr4nim visitor example
+
+import antlr4nim, jsffi, jsre, strutils, times, strformat, algorithm
+
+var dateFormat = initTimeFormat(&quot;yyyy/MM/dd&quot;)
+var moneyFormat = newRegExp(r&quot;^\d+\.\d\d$&quot;, r&quot;&quot;)
+
+type Book = object
+  author, isbn: string
+  reviewDate: DateTime
+  discountedPrice: float
+
+var library = newSeq[Book](0)
+
+proc addToLibrary( newBooks: seq[Book] ) =
+  library &amp;= newBooks
+  echo &quot;You added the following books to the library:&quot;
+  for b in newBooks.sortedByIt(it.isbn):
+    echo &amp;&quot;{b.isbn} ({b.author})&quot;
+
+
+visitor &quot;CSV&quot;:
+  visit:
+    proc csvFile =
+      var books = newSeq[Book](0)
+      for x in this.visitChildren(ctx):         # get the result from each child node
+        if( x != nil ):                         # exclude any rows that return nil
+          books &amp;= x.to(Book)
+      addToLibrary( books )
+    proc hdr =
+      return nil                                # the header row returns nil
+    proc row =
+      var b = Book(                             # construct a new Book object for this row
+        author: $( this.visit(ctx.field(1)) ),  # get the result from a specific node
+        isbn: $( this.visit(ctx.field(2)) ),
+        reviewDate: parse( $( this.visit(ctx.field(0)) ), dateFormat ),
+        discountedPrice: this.visit(ctx.field(3)).to(float)
+      )
+      return b.toJs                         # return the Book
+    proc field =
+      var x = ctx.txt
+      if( ctx.STRING() != nil ):                                # if the node contains a STRING:
+        x = x[ 1 .. ^2 ]                                        #   remove outside &quot; &quot;
+        x = x.replace(&quot;\&quot;\&quot;&quot;,&quot;\&quot;&quot;)                              #   replace &quot;&quot; with &quot;
+      elif( test( moneyFormat, ctx.getText().to(cstring) ) ):   # else if the node text is an amount:
+          return parseFloat(x).toJs                             #   return a float
+      return x.toJs                                             # return a string
+
+</code></pre>
+<p>The variable <code>this</code> refers to the visitor itself.
+The variable <code>ctx</code> is the ANTLR context object, as in the listener example.</p>
+<p>The default <em>visit</em> method provided by <code>CSVVisitor.mjs</code> for every node is <code>return( this.visitChildren(ctx) )</code>.
+If we override a <em>visit</em> method for a node then we have the choice whether or not to call its children. Use <code>this.visitChildren(ctx)</code> to call all of them, or call them individually with <code>this.visit(child)</code>.</p>
+<p>We need to be careful with type handling, because all of the <em>visit</em> methods will return a <code>JsObject</code>:</p>
+<ul>
+<li>To wrap a Nim object to a JsObject, use <code>x.toJs</code>.</li>
+<li>To unwrap a JsObject, use <code>x.to(type)</code>.</li>
+<li>To unwrap a JsObject to a <code>cstring</code> (i.e. a JS String), use <code>x.to(cstring)</code> - in the example code, we need this to match to a jsre regex.</li>
+<li>To unwrap a JsObject to a <code>cstring</code> and then convert it to a <code>string</code> (i.e. a Nim String), use the shorthand <code>$(x)</code></li>
+</ul>
+<p><code>this.visitChildren(ctx)</code> returns a collection wrapped as a single JsObject - you can iterate this directly as in the example, or convert to a <code>seq[JsObject]</code> using <code>toSeq</code> from <code>sequtils</code>.</p>
+<p>We compile the example visitor with <code>nim js myCSVVisitor.nim</code>. The macros translate the Nim code into</p>
+<pre>  <code>import antlr4nim, jsffi, jsre, strutils, times, strformat, algorithm
+
+var dateFormat = initTimeFormat(&quot;yyyy/MM/dd&quot;)
+var moneyFormat = newRegExp(r&quot;^\d+\.\d\d$&quot;, r&quot;&quot;)
+
+type Book = object
+  author, isbn: string
+  reviewDate: DateTime
+  discountedPrice: float
+
+var library = newSeq[Book](0)
+
+proc addToLibrary( newBooks: seq[Book] ) =
+  library &amp;= newBooks
+  echo &quot;You added the following books to the library:&quot;
+  for b in newBooks.sortedByIt(it.isbn):
+    echo &amp;&quot;{b.isbn} ({b.author})&quot;
+    
+    
+
+proc visitCsvFile(this: JsObject; ctx: JsObject): JsObject =
+  var books = newSeq[Book](0)
+  for x in this.visitChildren(ctx):
+    if (x != nil):
+      books &amp;= x.to(Book)
+  addToLibrary(books)
+
+proc visitHdr(this: JsObject; ctx: JsObject): JsObject =
+  return nil
+
+proc visitRow(this: JsObject; ctx: JsObject): JsObject =
+  var b = Book(author: $(this.visit(ctx.field(1))),
+               isbn: $(this.visit(ctx.field(2))),
+               reviewDate: parse($(this.visit(ctx.field(0))), dateFormat),
+               discountedPrice: this.visit(ctx.field(3)).to(float))
+  return b.toJs
+
+proc visitField(this: JsObject; ctx: JsObject): JsObject =
+  var x = ctx.txt
+  if (ctx.STRING() != nil):
+    x = x[1 .. ^2]
+    x = x.replace(&quot;\&quot;\&quot;&quot;, &quot;\&quot;&quot;)
+  elif (test(moneyFormat, ctx.getText().to(cstring))):
+    return parseFloat(x).toJs
+  return x.toJs
+
+proc bindVisitMethods(this: JsObject) =
+  this.visitCsvFile = bindMethod visitCsvFile
+  this.visitHdr = bindMethod visitHdr
+  this.visitRow = bindMethod visitRow
+  this.visitField = bindMethod visitField
+
+
+
+proc bindMethods(this: JsObject) =
+  when declared(bindVisitMethods):
+    bindVisitMethods(this)
+
+module.exports.bindMethods = bindMethods
+module.exports.grammar = &quot;CSV&quot;.toJs
+module.exports.type = &quot;visitor&quot;.toJs
+
+</code></pre>
+<p>which is then compiled directly to JS and output as <code>myCSVVisitor.js</code>.</p>
+<p>Running with <code>node runAntlr.mjs MyCSVVisitor.js example.csv csvFile</code> then produces:</p>
+<pre>  <code>You added the following books to the library:
+0060630353 (Richard Friedman)
+0198504691 (David Jones)
+0345384563 (Karen Armstrong)
+0345391802 (Douglas Adams)
+0465026567 (Douglas Hofstadter)
+0618057072 (Julian Jaynes)
+0740721909 (Scott Adams)
+0804818088 (Benjamin Radcliff)
+0879755725 (Randel Helms)
+0968411304 (Timothy &quot;The Parser&quot; Campbell)
+</code></pre>
+<h2>Wait, I still don&apos;t understand!</h2>
+<p>Here&apos;s some further reading that might help:</p>
+<h3>ANTLR4</h3>
+<ul>
+<li>You can learn all the necessary parts of ANTLR4 from the <a href="https://tomassetti.me/antlr-mega-tutorial/">mega-tutorial</a>.</li>
+<li>There is also <a href="https://github.com/antlr/antlr4/blob/master/doc/index.md">the documentation</a>.</li>
+<li>The <a href="https://www.antlr.org/api/Java/index.html">ANTLR4 Runtime API</a> can be helpful in understanding what you can do with the <a href="https://www.antlr.org/api/Java/org/antlr/v4/runtime/ParserRuleContext.html">context object</a>.</li>
+<li>Remember that you can <a href="https://github.com/antlr/antlr4/blob/master/doc/parser-rules.md#alternative-labels">label alternatives</a> in your grammar to get more specific enter/exit/visit events.</li>
+<li><a href="https://saumitra.me/blog/antlr4-visitor-vs-listener-pattern/">This blogpost</a> might help you to decide between the listener and the visitor pattern.</li>
+</ul>
+<h3>Nim</h3>
+<ul>
+<li>If you&apos;re new to Nim, <a href="https://narimiran.github.io/nim-basics/">Nim basics</a> is a great beginners&apos; tutorial.</li>
+<li>The <a href="https://nim-lang.org/docs/tut1.html">official tutorial</a> has extensions that explain <a href="https://nim-lang.org/docs/tut2.html#object-oriented-programming">OOP</a>, <a href="https://nim-lang.org/docs/tut2.html#templates">templates</a> and <a href="https://nim-lang.org/docs/tut3.html">macros</a>.</li>
+<li>There is documentation for the <a href="https://nim-lang.org/docs/jsffi.html">jsffi</a> and <a href="https://nim-lang.org/docs/macros.html">macros</a> packages.</li>
+<li>Metaprogramming in Nim consists of constructing an AST, which you can then execute or output as Nim code. You will probably want to work with the <code>dumpTree</code> and <code>dumpAstGen</code> macros to construct code that correctly builds your AST, and the <code>repr</code> proc to check it. Here are a few examples:
+<ul>
+<li><a href="https://howistart.org/posts/nim/1/">Building a brainfuck interpreter and compiler</a> (very helpful)</li>
+<li>  <a href="https://nim-by-example.github.io/macros/">Nim by Example</a></li>
+<li>  <a href="https://hookrace.net/blog/introduction-to-metaprogramming-in-nim/">Introduction to Metaprogramming in Nim</a></li>
+<li>  <a href="https://dev.to/beef331/demystification-of-macros-in-nim-13n8">Demystification of Macros in Nim</a></li>
+</ul>
+</li>
+</ul>
+<h2>FAQ</h2>
+<h3>Can I get my parser working in the browser?</h3>
+<p>Probably, but... you will need to make a big bundle of JS including the ANTLR4 runtime - the ANTLR team suggest to use <a href="https://webpack.js.org/">webpack</a>. I haven&apos;t attempted this yet. Suggestions welcome.</p>
+<h3>What about compilation?</h3>
+<p>The ultimate goal for this project is to create a simple platform for compiler production based on any ANTLR4 grammar.</p>
+<p>At the moment antlr4nim can be used to make JS-hosted interpreters, but all the nice AST tools that Nim provides remain off-limits because they can&apos;t be used at runtime. I am working on an update that will cleanly separate the parse tree generation from traversal, so that compilation to any Nim target will be possible... soon.</p>
+<h2>Credits</h2>
+<p>The code to export a symbol from Nim to JS is taken from an answer on <a href="https://stackoverflow.com/a/62728515">Stack Overflow</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/jan0sc/antlr4nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

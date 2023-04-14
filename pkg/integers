@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">integers</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wrapper</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">GMP</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">integers</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bigint</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">numbers</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">number-theory</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">math</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Ergonomic arbitrary precision integers wrapping GMP")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install integers" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Integers</h1>
+<p>This package simply aims to provide <em>integers</em> (also known as &quot;bigints,&quot;
+&quot;bignums,&quot; &quot;arbitrary precision integers,&quot; &quot;true integers,&quot; and so on) by
+wrapping GMP in a nice ergonomic way for Nim.</p>
+<p>See the <a href="https://fsh.github.io/integers/integers.html">generated documentation</a>
+for the most up-to-date and complete information. Some parts of it has been
+copied below, <em>but this README is incomplete</em>.</p>
+<h2>Basics</h2>
+<p><code>Integers</code> can be conveniently written as literals directly in Nim code with
+the postfix <code>&apos;gmp</code>. They can also be instantiated via <code>newInteger</code>. A rich
+set of conversions from string and bytes also exist. The usual suspects like
+<code>$</code> and so on will also work.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">i</span> <span class="op">=</span> <span class="num">101&apos;</span><span class="ide">gmp</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">i</span> <span class="kwd">is</span> <span class="ide">Integer</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Hexadecimal, binary, and octal also works. Here&apos;s a 192-bit prime literal.</span></div></div><div class="line"><div class="line-content">  <span class="com"># Note that underscores are ignored.</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">0x82aaeef3_975e3407_a98c6c72_f6c872f0_5521d137_91c5f8cd&apos;</span><span class="ide">gmp</span> <span class="kwd">is</span> <span class="ide">Integer</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">newInteger</span>(<span class="num">101</span>) <span class="com"># equivalent to 101&apos;gmp</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="ide">newInteger</span>(<span class="str">&quot;19_000_000_000_000_000&quot;</span>) <span class="com"># string conversion</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">z</span> <span class="op">=</span> <span class="ide">newInteger</span>(<span class="str">&quot;1000101&quot;</span>, <span class="num">2</span>) <span class="com"># second argument is base.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Integers can also be constructed from any array of primitive unsigned</span></div></div><div class="line"><div class="line-content">  <span class="com"># integers or a series of raw bytes. Numerous options exist for order</span></div></div><div class="line"><div class="line-content">  <span class="com"># and interpretation. See documentation under `integers/bytes`.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">f</span> <span class="op">=</span> <span class="ide">newInteger</span>([<span class="num">255&apos;</span><span class="ide">u8</span>, <span class="num">1</span>, <span class="num">2</span>], <span class="ide">woMSF</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">f</span> <span class="op">==</span> <span class="num">0xff0102&apos;</span><span class="ide">gmp</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">f</span><span class="op">.</span><span class="ide">toBytes</span>(<span class="ide">woLSF</span>) <span class="op">==</span> <span class="op">@</span>[<span class="num">2&apos;</span><span class="ide">u8</span>, <span class="num">1</span>, <span class="num">255</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="op">$</span><span class="ide">x</span> <span class="op">==</span> <span class="str">&quot;101&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">strformat</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="op">&amp;</span><span class="str">&quot;{z:010b}&quot;</span> <span class="op">==</span> <span class="str">&quot;0001000101&quot;</span></div></div>  </code></pre>
+<h3>Arithmetic</h3>
+<p>Ordinary arithmetic operations <code>+</code>, <code>-</code>, <code>*</code>, <code>div</code>, <code>mod</code> should work as
+expected. The same goes for comparison operators, <code>==</code>, <code>!=</code>, <code>&lt;=</code>, <code>&lt;</code>, and
+so on.</p>
+<p>Most operators can be used with any integer operands. That is, as long as at
+least one operand is an <code>Integer</code> the other operand can be of type
+<code>AnyInteger</code> (a GMP <code>Integer</code> or any primitive fixed-size integer, like
+<code>int</code> or <code>uint8</code>). This might look like auto-promotion, but in code
+there&apos;s specializations to make it more efficient, as GMP often has
+specialized routines for handling fixed-sized arguments.</p>
+<p>In general, doing operations the natural way with primitive integers tends to
+be more efficient than forcing everything to be <code>Integer</code> ahead of time.
+That is, prefer <code>x + 1</code>, over <code>x + 1&apos;gmp</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">five</span> <span class="op">=</span> <span class="num">5&apos;</span><span class="ide">gmp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">five</span> <span class="op">*</span> <span class="num">5</span> <span class="op">==</span> <span class="num">25</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">5&apos;</span><span class="ide">u64</span> <span class="op">+</span> <span class="ide">five</span> <span class="op">==</span> <span class="num">10&apos;i8</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">n</span> <span class="op">=</span> <span class="ide">Integer</span><span class="op">.</span><span class="ide">one</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">1</span> <span class="op">..</span> <span class="num">32</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">n</span> <span class="op">*=</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">n</span> <span class="op">==</span> <span class="ide">factorial</span>(<span class="num">32</span>)</div></div>  </code></pre>
+<p>Exponentiation is implemented as <code>^</code>. It works for any combination of
+integer arguments, but the result is always an <code>Integer</code>.</p>
+<p>Another primitive operation is <code>divMod</code> which does the same as <code>(x div y, x mod y)</code> but more efficiently. See <code>math and number theory</code> for a lot more.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="num">2</span><span class="op">^</span><span class="num">1000</span> <span class="op">==</span> <span class="num">2</span><span class="op">^</span><span class="num">500</span> <span class="op">*</span> <span class="num">2</span><span class="op">^</span><span class="num">500</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">divMod</span>(<span class="num">3</span><span class="op">^</span><span class="num">100</span>, <span class="num">40</span>) <span class="op">==</span> (<span class="num">3</span><span class="op">^</span><span class="num">100</span> <span class="kwd">div</span> <span class="num">40</span>, <span class="num">1&apos;</span><span class="ide">gmp</span>)</div></div>  </code></pre>
+<h3>Comparisons</h3>
+<p>In addition to the normal comparison operators (<code>==</code>, <code>!=</code>, <code>&lt;=</code>, <code>&lt;</code>, etc.), there&apos;s
+also an equivalent set of <em>absolute</em> comparisons, using a suffix <code>%</code>.</p>
+<ul>
+<li><code>x ==% y</code> is equivalent to <code>abs(x) == abs(y)</code></li>
+<li><code>x !=% y</code> is equivalent to <code>abs(x) != abs(y)</code></li>
+<li><code>x &lt;% y</code> is equivalent to <code>abs(x) &lt; abs(y)</code></li>
+<li><code>x &gt;=% y</code> is equivalent to <code>abs(x) &gt;= abs(y)</code></li>
+<li>... and so on.</li>
+</ul>
+<p>For very simple domain checks there&apos;s also a number of
+universal functions that are designed to be as lightweight as humanly
+possible (they guarantee no external function call will be made into the GMP
+library).</p>
+<ul>
+<li>  <code>isZero(AnyInteger): bool</code></li>
+<li>  <code>isNonZero(AnyInteger): bool</code></li>
+<li>  <code>isPositive(AnyInteger): bool</code></li>
+<li>  <code>isNegative(AnyInteger): bool</code></li>
+<li><code>isNatural(AnyInteger): bool</code>: if a number is greater than or equal to 0, i.e. it&apos;s non-negative.</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="op">-</span><span class="num">1&apos;</span><span class="ide">gmp</span> <span class="op">==%</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">2</span> <span class="op">&lt;%</span> <span class="op">-</span><span class="num">20</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">0.</span><span class="ide">isZero</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">uint64</span><span class="op">.</span><span class="ide">one</span><span class="op">.</span><span class="ide">isNonZero</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">10&apos;</span><span class="ide">gmp</span><span class="op">.</span><span class="ide">isNatural</span></div></div>  </code></pre>
+<h2>Mutability</h2>
+<p>For reasons of efficiency, <code>Integer</code>s are <em>mutable</em>.</p>
+<p>Every time a new non-zero <code>Integer</code> is instantiated a heap allocation occurs
+(in GMP), thus it is usually more efficient to re-use variables if possible.
+As such this package provides a cornucopia of in-place and assignment
+operators.</p>
+<p>As such there&apos;s a lot of in-place and assignment operators provided.</p>
+<p>Note that Nim weirdly does not have an assignment operator equivalent of
+<code>div</code>, <code>mod</code>, <code>and</code>, <code>xor</code>, etc. So operators have been added to make up for
+this fact.</p>
+<p>For example:</p>
+<ul>
+<li><code>//</code> can be used instead of <code>div</code>, with <code>//=</code> being the assignment operator.</li>
+<li><code>%</code> can be used instead of <code>mod</code>, with <code>%=</code> being the assignment operator.</li>
+</ul>
+<p>See also <code>bit operations</code> for more such operator aliases.</p>
+<p>The in-place version of unary <code>-</code> is <code>setNegative</code>.</p>
+<p>There is also <code>addMul</code> and <code>subMul</code> which are trinary operators that does
+fused multiply-and-add or multiply-and-sub. If you are writing something like
+<code>x += y * z</code> it is usually more efficient to use <code>x.addMul(y, z)</code> instead.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="num">60&apos;</span><span class="ide">gmp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">x</span><span class="op">.</span><span class="ide">inc</span> <span class="com"># x == 61</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">+=</span> <span class="num">10</span> <span class="com"># x == 71</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">//=</span> <span class="num">2</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="num">35</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Equivalent to `x += 2 * 100&apos;gmp`</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span><span class="op">.</span><span class="ide">addMul</span>(<span class="num">2</span>, <span class="num">100&apos;</span><span class="ide">gmp</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="num">235</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">x</span><span class="op">.</span><span class="ide">setNegative</span>() <span class="com"># Extremely cheap operation.</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="op">-</span><span class="num">235</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Equivalent to `x = 200 - x`.</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span><span class="op">.</span><span class="ide">assign</span>(<span class="num">200</span> <span class="op">-</span> <span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="num">435</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">%=</span> <span class="num">10</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="num">5</span></div></div>  </code></pre>
+<h2>Bit Operations</h2>
+<p>For reasons mentioned in <code>mutability</code>, the bit operators have also been
+given symbolic aliases. These all use <code>&amp;</code> as a prefix:</p>
+<ul>
+<li><code>&amp;&amp;</code>, <code>&amp;&amp;=</code> bitwise AND (<code>and</code> can also be used)</li>
+<li><code>&amp;|</code>, <code>&amp;|=</code> bitwise OR (<code>or</code> can also be used)</li>
+<li><code>&amp;^</code>, <code>&amp;^=</code> bitwise XOR (<code>xor</code> can also be used)</li>
+<li><code>&amp;&gt;&gt;</code>, <code>&amp;&gt;&gt;=</code> shift bits right (<code>shr</code> can also be used)</li>
+<li><code>&amp;&lt;&lt;</code>, <code>&amp;&lt;&lt;=</code> shift bits left (<code>shl</code> can also be used)</li>
+<li><code>~</code> does bitwise NOT (<code>not</code> can also be used). The in-place version of this is <code>setNot</code>.</li>
+</ul>
+<p>  <em>I agree this is rather ugly but it&apos;s the best I could do within
+Nim. The keyword operators are special cased in the language, and there&apos;s
+no way to customize precedence rules. (For example, as far as I know,
+there&apos;s no way to make anything have the same precedence as   <code>and</code> or   <code>or</code>,
+nor to make assignment-operator versions of those.)</em></p>
+<p>  <em>Originally I experimented with using the less noisy   <code>:</code> as a prefix
+instead. But then it turns out that they would have lower precedence than
+comparison operators, which creates its own chaos, as intuitive expressions
+like   <code>x :&amp; 0xf == 1</code> wouldn&apos;t parse correctly.</em></p>
+<p>  <em>Even so the headache is not over, as   <code>not</code> now has lower precedence than
+the   <code>&amp;..</code> operators, so it also needed to be made into a symbolic
+operator.</em></p>
+<p>  <em>It&apos;s a bit of a mess.</em></p>
+<p>  <em>Although these operations also work on regular primitive integers,
+the result is always an   <code>Integer</code> (might change?), so they&apos;re not
+recommended for regular use.</em></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="num">0xff</span> <span class="op">&amp;^</span> <span class="num">0x0f</span> <span class="op">==</span> <span class="num">0xf0</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">3</span> <span class="op">&amp;&lt;&lt;</span> <span class="num">100</span> <span class="op">==</span> <span class="num">2</span><span class="op">^</span><span class="num">100</span> <span class="op">*</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="num">4</span><span class="op">^</span><span class="num">10</span> <span class="op">&amp;&gt;&gt;</span> <span class="num">2</span> <span class="op">==</span> <span class="num">4</span><span class="op">^</span><span class="num">9</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">z</span> <span class="op">=</span> <span class="num">0xff01&apos;</span><span class="ide">gmp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="op">~</span><span class="ide">z</span> <span class="op">&amp;&amp;</span> <span class="num">0xff</span> <span class="op">==</span> <span class="num">0xfe</span></div></div>  </code></pre>
+<h3>Bit Sets</h3>
+<p>As a <em>radical convenience</em>, <code>Integer</code>s can be treated directly as implementing
+fast dynamic bitsets.</p>
+<p>If you think about it, arbitrary precision integers and dynamically sized
+bitsets are usually built upon the same core data structure, but differ only
+in exposed functionality (with the bitsets having a vastly simpler API and
+implementation of course).</p>
+<p>As such, <code>Integer</code>s can be indexed, iterated over, they have a <code>size</code> and a <code>count</code>,
+and so on.
+The above bit operations can be used to do unions, intersections, et cetera.</p>
+<p>The indexing operator <code>[]</code> returns <code>true</code> or <code>false</code> depending on
+whether the given bit is <code>1</code> or <code>0</code>. Likewise, <code>[]=</code> can be used to set
+arbitrary bits.</p>
+<p><code>count(n)</code> gives the total number of bits set to 1.</p>
+<p><code>scanOne(n, [pos])</code> and <code>scanZero(n, [pos])</code> finds the first 1- or 0-bit at or after
+the given position.</p>
+<p><code>size(n)</code> (an alias for <code>nbits(n)</code>) gives the total number of bits
+required to express the absolute value of <code>n</code>.</p>
+<p>And finally, iterating over an <code>Integer</code> will loop over the indices of its
+1-bits. See XXX for more ## information.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">newInteger</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">x</span>[<span class="num">10</span>] <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="num">1024</span> <span class="com"># 2^10</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">x</span>[<span class="num">2</span>] <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span>[<span class="num">0</span>] <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span> <span class="op">==</span> <span class="num">1029</span> <span class="com"># 2^10 + 2^2 + 2^0</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">count</span> <span class="op">==</span> <span class="num">3</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">nbits</span> <span class="op">==</span> <span class="num">11</span> <span class="com"># == one higher than index of highest 1-bit</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">sequtils</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">items</span>(<span class="ide">x</span>)<span class="op">.</span><span class="ide">toSeq</span>() <span class="op">==</span> <span class="op">@</span>[<span class="num">0</span>, <span class="num">2</span>, <span class="num">10</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="num">10&apos;</span><span class="ide">gmp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">y</span><span class="op">.</span><span class="ide">scanOne</span>() <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">y</span>[<span class="num">1</span>] <span class="kwd">and</span> <span class="kwd">not</span> <span class="ide">y</span>[<span class="num">0</span>]</div></div>  </code></pre>
+<h2>And So On...</h2>
+<p>Again, see the <a href="https://fsh.github.io/integers/integers.html">generated documentation</a> for
+more information.</p>
+<h3>Caveats</h3>
+<ul>
+<li>
+<p>The biggest caveat currently is that this is <em>entirely untested on Windows,
+OSX, and 32-bit platforms (any OS)</em>. It will probably work on OSX, but it&apos;s
+likely to fail on Windows without some modifications. Feedback is desired.</p>
+</li>
+<li>
+<p>There&apos;s an underlying assumption that GMP is compiled with &quot;nails&quot; set to 0.
+I think this is true for GMP distributed on all modern platforms.</p>
+</li>
+<li>
+<p>I also take some shortcuts and skip out on explicitly calling <code>mpz_init</code> most
+of the time, assuming that Nim&apos;s zero-initialization and <code>mpz_init</code> are
+equivalent. As far as I know this is true in all GMP versions I&apos;ve seen on all
+relevant platforms. However if it turns out this breaks functionality on a
+major platform, do file a bug report.</p>
+</li>
+<li>
+<p>There&apos;s a more serious assumption that <code>sizeof(mp_limb_t) == sizeof(uint)</code>
+(i.e. that the limb-size matches Nim&apos;s default int size), which might
+practically break on some platforms. However, it should be easy to fix if
+someone can show me how to &quot;import&quot; a pure <code>typedef</code> from a header file in
+Nim.</p>
+</li>
+</ul>
+<h3>Why GMP?</h3>
+<p>Unfortunately there is just no beating GMP when it comes to performance. It
+is the unequivocal gold standard.</p>
+<p>All &quot;home-made&quot; or &quot;from scratch&quot; integer implementations by hobbyists, such
+as Nim&apos;s official <code>bigints</code> (and even Python&apos;s built-in <code>int</code>) are <em>laughably
+slow</em> compared to GMP, often on the order of magnitudes.</p>
+<p>Alternative projects such as <code>libtomath</code> come much closer, but are still not
+quite as optimized as GMP.</p>
+<p>The reason projects shy away from GMP is two-fold:</p>
+<ul>
+<li>
+<p>The &quot;serious&quot; reason is that GMP is dual-licensed with LGPLv3 and GPLv2,
+and many consider even the LGPL too restrictive or convoluted (e.g. static
+linking can be problematic), so this makes it simply a no-go for many
+projects.</p>
+</li>
+<li>
+<p>The less practical reason is that implementing one&apos;s own arbitrary
+precision integers from scratch is (at the onset) a very attractive and
+exciting project for many programmers, so it is a common mind trap to fall
+into.</p>
+</li>
+</ul>
+<p>The first reason is unavoidable and unfortunate. The second reason is very
+<em>understandable</em> (I feel the same pull), although it is incredibly
+frustrating when I&apos;m stuck with these cowboy implemenations as a user.</p>
+<p>Since I am of the opinion that (big) integers is a <em>core</em> data type that
+should be universally available, thus also implicitly demanding it should be
+<em>as efficient as humanly possible</em>, I&apos;m always going to bite the bullet on
+the (L)GPL license.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/fsh/integers">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">rainbow</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">256-colors</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cli</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("256 colors for shell")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install rainbow" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1 align="center">
+<img src="https://user-images.githubusercontent.com/22755228/66673982-79765f00-ec6a-11e9-90c3-95f81f844c74.png" style="max-width: 100%;" />
+ </h1>
+<p align="center">  
+ <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/license-MIT-blue.svg" style="max-width: 100%;" /></a>
+</p>
+<h1 align="center">Rainbow</h1>
+<p align="center">Rainbow is a Nim Library supporting 256-color for console. You can use it to color your output, log or anything you want.</p>
+<h2>Table of contents</h2>
+<ul>
+<li>  <a href="#description">Description</a></li>
+<li>  <a href="#installation">Installation</a></li>
+<li>  <a href="#documentation">Documentation</a></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li>  <a href="#example-1">Example 1</a></li>
+<li>  <a href="#example-2">Example 2</a></li>
+<li>  <a href="#example-3">Example 3</a></li>
+<li>  <a href="#example-4">Example 4</a></li>
+</ul>
+</li>
+<li>  <a href="#contributing">Contributing</a></li>
+<li><a href="#issue-template">Issue Template</a>
+<ul>
+<li>  <a href="#bug-report">Bug report</a></li>
+<li>  <a href="#feature-request">Feature request</a></li>
+</ul>
+</li>
+<li>  <a href="#pull-requests">Pull Requests</a></li>
+<li>  <a href="#membership">Membership</a></li>
+<li>  <a href="#license">License</a></li>
+</ul>
+<h2>Description</h2>
+<p>Rainbow is a Nim Library supporting 256-color for console. You can use it to color your output, log or anything you want.</p>
+<h2>Installation</h2>
+<p>To install it you must have Nim and Nimble Package Manager installed in your Computer. If you are then type:</p>
+<pre>  <code>$ nimble install rainbow
+</code></pre>
+<h2>Documentation</h2>
+<p>Rainbow is easy to use. Choose any color you want from here:</p>
+<p>  <img src="https://user-images.githubusercontent.com/22755228/66672471-04555a80-ec67-11e9-8c20-aa5d159bc320.png" style="max-width: 100%;" alt="256" /></p>
+<p>and just add <code>rf </code> in front of the color for foreground or <code>rb</code> for background color.</p>
+<h2>Examples</h2>
+<p>First you need to import rainbow in top of your file</p>
+<p>  <code>import rainbow</code></p>
+<h3>Example 1</h3>
+<p>  <code>echo &quot;This is the output&quot;.rfLime</code></p>
+<h3>Example 2</h3>
+<p>  <code>echo &quot;This is the output&quot;.rbFuchsia</code></p>
+<h3>Example 3</h3>
+<p>Or you can compine them:</p>
+<p>  <code>echo &quot;Let&apos;s SEE !!!&quot;.rbSkyBlue2.rfSilver</code></p>
+<h3>Example 4</h3>
+<p>Rainbow supports RGB colors in terminal</p>
+<p>Example:</p>
+<pre>  <code>echo &quot;Hello world&quot;.fgRGB(0,0,255) # Put &quot;Hello world&quot; in blue
+echo &quot;Hello world&quot;.bgRGB(0,0,255) # Put &quot;Hello world&quot; background in blue
+
+</code></pre>
+<blockquote>
+<h3>Notes:</h3>
+<p>Values can go from 0 (Black) to 255 (Lightest). Higher values will result in none colored output
+On windows OS the VirtualTerminalLevel register key need to be set to 1 in HKCU\Console as a D_WORD
+Use that command to add it permanantly reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 00000001</p>
+</blockquote>
+<h2>Contributing</h2>
+<p>When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.</p>
+<p>You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples.</p>
+<h2>Issue Template</h2>
+<h3>Bug report</h3>
+<hr />
+<p>name: Bug report</p>
+<p>about: Create a report to help us improve</p>
+<p>title:</p>
+<p>labels:</p>
+<p>assignees:</p>
+<hr />
+<p><strong>Describe the bug</strong>
+A clear and concise description of what the bug is.</p>
+<p><strong>To Reproduce</strong>
+Steps to reproduce the behavior:</p>
+<ol>
+<li>Go to &apos;...&apos;</li>
+<li>Click on &apos;....&apos;</li>
+<li>Scroll down to &apos;....&apos;</li>
+<li>See error</li>
+</ol>
+<p><strong>Expected behavior</strong>
+A clear and concise description of what you expected to happen.</p>
+<p><strong>Screenshots</strong>
+If applicable, add screenshots to help explain your problem.</p>
+<p>  <strong>Desktop (please complete the following information):</strong></p>
+<ul>
+<li>OS: [e.g. MACOS]</li>
+<li>Browser [e.g. chrome, safari]</li>
+<li>Version of Software or Programming Language [e.g. Nim 1.0.0]</li>
+</ul>
+<p><strong>Additional context</strong>
+Add any other context about the problem here.</p>
+<h3>Feature request</h3>
+<hr />
+<p>name: Feature request</p>
+<p>about: Suggest an idea for this project</p>
+<p>title:</p>
+<p>labels:</p>
+<p>assignees:</p>
+<hr />
+<p><strong>Is your feature request related to a problem? Please describe.</strong>
+A clear and concise description of what the problem is. Ex. I&apos;m always frustrated when [...]</p>
+<p><strong>Describe the solution you&apos;d like</strong>
+A clear and concise description of what you want to happen.</p>
+<p><strong>Describe alternatives you&apos;ve considered</strong>
+A clear and concise description of any alternative solutions or features you&apos;ve considered.</p>
+<p><strong>Additional context</strong>
+Add any other context or screenshots about the feature request here.</p>
+<h2>Pull Requests</h2>
+<h3>Description of the Change</h3>
+<p>We must be able to understand the design of your change from this description. If we can&apos;t get a good idea of what the code will be doing from the description here, the pull request may be closed at the maintainers&apos; discretion. Keep in mind that the maintainer reviewing this PR may not be familiar with or have worked with the code here recently, so please walk us through the concepts.</p>
+<h3>Alternate Designs</h3>
+<p>Explain what other alternates were considered and why the proposed version was selected</p>
+<h3>Benefits</h3>
+<p>What benefits will be realized by the code change?</p>
+<h3>Possible Drawbacks</h3>
+<p>What are the possible side-effects or negative impacts of the code change?</p>
+<h2>Membership</h2>
+<p>New members are welcome if they have the same philosophy with the organization.</p>
+<h2>License</h2>
+<p><a href="https://opensource.org/licenses/MIT">MIT</a> - Free Software for Everyone.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/Willyboar/rainbow">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

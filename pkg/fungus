@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">fungus</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">adt</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">enum</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rust</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">match</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tagged union</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Rust-like tuple enums")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install fungus" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>fungus</h1>
+<p>Rust-like tuple enums.
+Give me a macro and a fulcrum to rest it on and I&apos;ll likely make an obnoxious macro.</p>
+<h2>What does it do?</h2>
+<p>Does what it says on the tin... generates Rust-like ADT enums, those weird ones with fields.
+Consider the following idiomatic Nim code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">ShapeKind</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">NoneKind</span>, <span class="ide">CircleKind</span>, <span class="ide">RectangleKind</span>, <span class="ide">LineKind</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">Shape</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">kind</span>: <span class="ide">ShapeKind</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">LineKind</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">lx1</span>, <span class="ide">ly1</span>, <span class="ide">lx2</span>, <span class="ide">ly2</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">RectangleKind</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">rx</span>, <span class="ide">ry</span>, <span class="ide">rw</span>, <span class="ide">rh</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">CircleKind</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">cRadius</span>, <span class="ide">cx</span>, <span class="ide">cy</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">NoneKind</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">discard</span></div></div>  </code></pre>
+<p>This is a bit messy due to rightly not being able to share field names(Nim variants are great for specific things, for other things they are a bit in the way).
+Other languages get around it doing something similar to what this library does, statically enforcing unpacking each kind.
+What one writes with fungus instead is:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">fungus</span></div></div><div class="line"><div class="line-content"><span class="ide">adtEnum</span>(<span class="ide">Shape</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">None</span></div></div><div class="line"><div class="line-content">  <span class="ide">Circle</span>: <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">r</span>: <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">Rectangle</span>: <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">w</span>, <span class="ide">h</span>: <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">Line</span>: <span class="kwd">tuple</span>[<span class="ide">x1</span>, <span class="ide">y1</span>, <span class="ide">x2</span>, <span class="ide">y2</span>: <span class="ide">int</span>]</div></div>  </code></pre>
+<p>This generates a static type per each branch, and also a bunch of accessor procedures.
+The type definitions look like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">ShapeKind</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">NoneKind</span>, <span class="ide">CircleKind</span>, <span class="ide">RectangleKind</span>, <span class="ide">LineKind</span></div></div><div class="line"><div class="line-content">  <span class="ide">Shape</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">kind</span>: <span class="ide">ShapeKind</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">LineKind</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">LineData</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">tuple</span>[<span class="ide">x1</span>, <span class="ide">y1</span>, <span class="ide">x2</span>, <span class="ide">y2</span>: <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">RectangleKind</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">RectangleData</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">w</span>, <span class="ide">h</span>: <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">CircleKind</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">CircleData</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">r</span>: <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">NoneKind</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">nil</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">None</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">Shape</span></div></div><div class="line"><div class="line-content">  <span class="ide">Circle</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">Shape</span></div></div><div class="line"><div class="line-content">  <span class="ide">Rectangle</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">Shape</span></div></div><div class="line"><div class="line-content">  <span class="ide">Line</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">Shape</span></div></div>  </code></pre>
+<p>Which means the following is possible:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">Shape</span> <span class="ide">Circle</span><span class="op">.</span><span class="ide">init</span>(<span class="num">10</span>, <span class="num">10</span>, <span class="num">100</span>)</div></div><div class="line"><div class="line-content"><span class="ide">a</span><span class="op">.</span><span class="ide">to</span>(<span class="ide">Circle</span>)<span class="op">.</span><span class="ide">r</span> <span class="op">=</span> <span class="num">300</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">a</span><span class="op">.</span><span class="ide">to</span>(<span class="ide">Circle</span>)</div></div><div class="line"><div class="line-content"><span class="ide">a</span> <span class="op">=</span> <span class="ide">Shape</span> <span class="ide">Line</span><span class="op">.</span><span class="ide">init</span>(<span class="num">0</span>, <span class="num">0</span>, <span class="num">1</span>, <span class="num">1</span>)</div></div>  </code></pre>
+<p>This doesnt solve much altogether, which is what the <code>match</code> and <code>from</code> macros are for.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">if</span> (<span class="kwd">var</span> <span class="ide">myVar</span>: <span class="ide">Line</span>) <span class="kwd">from</span> <span class="ide">a</span>: <span class="com"># notice `var` this is a mutable match</span></div></div><div class="line"><div class="line-content">  <span class="ide">inc</span> <span class="ide">myVar</span><span class="op">.</span><span class="ide">x1</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">myVar</span></div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> (<span class="ide">myOtherVar</span>: <span class="ide">Circle</span>) <span class="kwd">from</span> <span class="ide">a</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">myOtherVar</span></div></div>  </code></pre>
+<p>What this macro expands into is <code>a.kind == CircleKind and (let myOtherVar = Circle(a); true)</code>.
+This allows you to work similarly to Rust&apos;s <code>if let</code> construct, but this composes better(it should not bug out as easily :P ).
+Now to do some primitive pattern matching!</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">match</span> <span class="ide">a</span>:</div></div><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="ide">Circle</span> <span class="kwd">as</span> <span class="ide">mut</span> <span class="ide">circ</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">circ</span><span class="op">.</span><span class="ide">r</span> <span class="op">=</span> <span class="num">1000</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">circ</span></div></div><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="ide">Rectangle</span> <span class="kwd">as</span> <span class="ide">rect</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">rect</span></div></div><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="ide">Line</span> <span class="kwd">as</span> (<span class="ide">mut</span> <span class="ide">x1</span>, <span class="ide">_</span>, <span class="ide">x2</span>, <span class="ide">_</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">inc</span> <span class="ide">x1</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">a</span><span class="op">.</span><span class="ide">to</span>(<span class="ide">Line</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">else</span>: <span class="kwd">discard</span></div></div>  </code></pre>
+<p>The <code>match</code> macro is very very basic pattern matching.
+It is not too disimilar to the <code>from</code> macro.
+As one can see though it allows a <code>as mut name</code> to introduce a mutable name to the matching variable.
+There is also the <code>as name</code> which is an immutable variable match.
+Finally there is a <code>tuple</code> match which is <code>(x, y, z, w)</code>, much like the other match <code>mut</code> can prefix a name to indicate it is a mutable match.
+Tuple unpacking works just like normally for this matching, although one can match as few positional fields as they want.</p>
+<h3>Non tuple types</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">fungus</span></div></div><div class="line"><div class="line-content"><span class="ide">adtEnum</span>(<span class="ide">Data</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">None</span></div></div><div class="line"><div class="line-content">  <span class="ide">String</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">Int</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">Float</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">  <span class="ide">Arr</span>: <span class="ide">array</span>[<span class="num">3</span>, <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">Vector2</span>: <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">float32</span>]</div></div>  </code></pre>
+<p>Is valid code, there exists <code>toInternal</code> converts to implicitly convert, but some operations will require explicit invocation.
+For example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">doThing</span>(<span class="ide">f</span>: <span class="ide">float</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="ide">match</span> <span class="ide">a</span>:</div></div><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="ide">Vector2</span> <span class="kwd">as</span> (<span class="ide">x</span>, <span class="ide">y</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">x</span>, <span class="str">&quot; &quot;</span>, <span class="ide">y</span></div></div><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="ide">Float</span> <span class="kwd">as</span> <span class="ide">mut</span> <span class="ide">x</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">x</span><span class="op">.</span><span class="ide">toInternal</span> <span class="op">+=</span> <span class="num">0.3</span> <span class="com"># Need `.toInternal` for some cases</span></div></div><div class="line"><div class="line-content">  <span class="ide">doThing</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">else</span>: <span class="kwd">discard</span></div></div>  </code></pre>
+<h3>Generics?!</h3>
+<p>Yes this also supports some subset of generics.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">fungus</span></div></div><div class="line"><div class="line-content"><span class="ide">adtEnum</span>(<span class="ide">LinkedList</span>[<span class="ide">T</span>]):</div></div><div class="line"><div class="line-content">  <span class="kwd">Nil</span></div></div><div class="line"><div class="line-content">  <span class="ide">Node</span>: <span class="kwd">tuple</span>[<span class="ide">n</span>: <span class="kwd">ref</span> <span class="ide">LinkedList</span>[<span class="ide">T</span>], <span class="ide">val</span>: <span class="ide">T</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newNode</span>[<span class="ide">T</span>](<span class="ide">val</span>: <span class="ide">T</span>): <span class="ide">Node</span>[<span class="ide">T</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">Node</span>[<span class="ide">T</span>]<span class="op">.</span><span class="ide">init</span>((<span class="kwd">ref</span> <span class="ide">LinkedList</span>[<span class="ide">T</span>])(), <span class="ide">val</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">n</span>[] <span class="op">=</span> <span class="ide">LinkedList</span>[<span class="ide">T</span>] <span class="kwd">Nil</span>[<span class="ide">T</span>]<span class="op">.</span><span class="ide">init</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">prepend</span>[<span class="ide">T</span>](<span class="ide">node</span>: <span class="ide">LinkedList</span>[<span class="ide">T</span>], <span class="ide">val</span>: <span class="ide">T</span>): <span class="ide">LinkedList</span>[<span class="ide">T</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">LinkedList</span>[<span class="ide">T</span>] <span class="ide">Node</span>[<span class="ide">T</span>]<span class="op">.</span><span class="ide">init</span>(<span class="ide">new</span> <span class="ide">LinkedList</span>[<span class="ide">T</span>], <span class="ide">val</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">Node</span>[<span class="ide">T</span>](<span class="ide">result</span>)<span class="op">.</span><span class="ide">n</span>[] <span class="op">=</span> <span class="ide">node</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">len</span>[<span class="ide">T</span>](<span class="ide">list</span>: <span class="ide">LinkedList</span>[<span class="ide">T</span>]): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">theList</span> <span class="op">=</span> <span class="ide">list</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> (<span class="ide">node</span>: <span class="ide">Node</span>) <span class="kwd">from</span> <span class="ide">theList</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">inc</span> <span class="ide">result</span></div></div><div class="line"><div class="line-content">    <span class="ide">theList</span> <span class="op">=</span> <span class="ide">node</span><span class="op">.</span><span class="ide">n</span>[]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">$</span>`[<span class="ide">T</span>](<span class="ide">list</span>: <span class="ide">LinkedList</span>[<span class="ide">T</span>]): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">theList</span> <span class="op">=</span> <span class="ide">list</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="str">&quot;[&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> (<span class="ide">node</span>: <span class="ide">Node</span>) <span class="kwd">from</span> <span class="ide">theList</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> <span class="op">$</span><span class="ide">node</span><span class="op">.</span><span class="ide">val</span></div></div><div class="line"><div class="line-content">    <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> <span class="str">&quot;, &quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">theList</span> <span class="op">=</span> <span class="ide">node</span><span class="op">.</span><span class="ide">n</span>[]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">result</span><span class="op">.</span><span class="ide">len</span> <span class="op">&gt;</span> <span class="num">1</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">result</span><span class="op">.</span><span class="ide">setLen</span>(<span class="ide">result</span><span class="op">.</span><span class="ide">len</span> <span class="op">-</span> <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> <span class="str">&quot;]&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">myList</span> <span class="op">=</span> <span class="ide">LinkedList</span>[<span class="ide">int</span>] <span class="ide">newNode</span>(<span class="num">10</span>)</div></div><div class="line"><div class="line-content"><span class="ide">myList</span> <span class="op">=</span> <span class="ide">myList</span><span class="op">.</span><span class="ide">prepend</span>(<span class="num">11</span>)</div></div><div class="line"><div class="line-content"><span class="ide">myList</span> <span class="op">=</span> <span class="ide">myList</span><span class="op">.</span><span class="ide">prepend</span>(<span class="num">12</span>)</div></div><div class="line"><div class="line-content"><span class="ide">myList</span> <span class="op">=</span> <span class="ide">myList</span><span class="op">.</span><span class="ide">prepend</span>(<span class="num">13</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myList</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myList</span><span class="op">.</span><span class="ide">len</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">myList2</span> <span class="op">=</span> <span class="ide">LinkedList</span>[<span class="ide">string</span>] <span class="ide">newNode</span>(<span class="str">&quot;world&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">myList2</span> <span class="op">=</span> <span class="ide">myList2</span><span class="op">.</span><span class="ide">prepend</span> <span class="str">&quot;cruel&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">myList2</span> <span class="op">=</span> <span class="ide">myList2</span><span class="op">.</span><span class="ide">prepend</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myList2</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myList2</span><span class="op">.</span><span class="ide">len</span></div></div>  </code></pre>
+<p>The above <em>just works</em>(thanks to the Rust book for a small example of linked lists using an ADT).</p>
+<h2>Implementing custom <code>==</code></h2>
+<p>Fungus has a <code>adtEqual</code> procedure which can be used to invoke default comparisons for a type.
+This means kind is checked then the tuples are compared.
+An example for thel linked list looks like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">==</span>`[<span class="ide">T</span>](<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">LinkedList</span>[<span class="ide">T</span>]): <span class="ide">bool</span> <span class="op">=</span> <span class="ide">adtEqual</span>(<span class="ide">a</span>, <span class="ide">b</span>)</div></div>  </code></pre>
+<h2>Implementing custom <code>$</code></h2>
+<p>Fungus has a <code>$</code> procedure defined as a generic, which means you can overload it for your own type.
+Otherwise it should call this one.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">$</span>`[<span class="ide">T</span>](<span class="ide">nl</span>: <span class="kwd">Nil</span>[<span class="ide">T</span>]): <span class="ide">string</span> <span class="op">=</span> <span class="str">&quot;nil&quot;</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/beef331/fungus">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

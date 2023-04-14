@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">threadproxy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">thread</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ITC</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">communication</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multithreading</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">threading</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Simplify Nim Inter-Thread Communication")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install threadproxy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>ThreadProxy</h1>
+<p>Simplify Nim Inter-Thread Communication</p>
+<h2>Overview</h2>
+<p>ThreadProxy help you manage threads and channels. You don&apos;t have to declare them explicitly.
+ThreadProxy also provide a little thread-name-system and do name resolution for you.</p>
+<p>Some key-points:</p>
+<ul>
+<li>JSON is the <em>ONLY</em> data exchange format.</li>
+<li>Each thread has a unique <code>name</code> assigned at creation.</li>
+<li>Each thread can register a handle on action with <code>on(...)</code></li>
+<li>Each thread start processesing its messages with <code>poll()</code>.</li>
+<li>Threads can talk with each other with <code>name</code> reference.</li>
+<li>Threads can talk with each other in one-way with <code>send(...): Future[void]</code>.</li>
+<li>Threads can talk with each other in two-way with <code>ask(...): Future[JsonNode]</code>.</li>
+<li>The order of creation of threads does not matter as long as the target thread is running at the time of calling <code>send</code> or <code>ask</code>.</li>
+</ul>
+<p>Internally:</p>
+<ul>
+<li>After 0.2.0, each thread is associated with two channels. One is for internal messages that need to preempt other messages. The other one is for normal messages.</li>
+</ul>
+<h2>Usage</h2>
+<p>The typical pattern should look like the following.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">threadproxy</span>                                    <span class="com"># ---- 1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fooMain</span>(<span class="ide">proxy</span>: <span class="ide">ThreadProxy</span>) {<span class="op">.</span><span class="ide">thread</span><span class="op">.</span>} <span class="op">=</span>         <span class="com"># ---- 2 </span></div></div><div class="line"><div class="line-content">  <span class="com"># setup and then poll threadProxy</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">on</span> <span class="str">&quot;action1&quot;</span>, <span class="kwd">proc</span>(<span class="ide">data</span>: <span class="ide">JsonNode</span>): <span class="ide">Future</span>[<span class="ide">JsonNode</span>] {<span class="op">.</span><span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span>   <span class="com"># ---- 3 </span></div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">action1</span>(<span class="ide">data</span>)</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;action2&quot;</span>:                             <span class="com"># ---- 4</span></div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">action2</span>(<span class="ide">data</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onDefault</span> <span class="kwd">proc</span>(<span class="ide">action</span>: <span class="ide">string</span>, <span class="ide">data</span>: <span class="ide">JsonNode</span>): <span class="ide">Future</span>[<span class="ide">JsonNode</span>] {<span class="op">.</span><span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span>  <span class="com"># ---- 5</span></div></div><div class="line"><div class="line-content">    <span class="ide">reuslt</span> <span class="op">=</span> <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ... </span></div></div><div class="line"><div class="line-content">  <span class="ide">asyncCheck</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()                             <span class="com"># ---- 6</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ... </span></div></div><div class="line"><div class="line-content">  <span class="com"># do something here</span></div></div><div class="line"><div class="line-content">  <span class="com"># ... </span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">runForever</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># create, setup and then poll mainThreadProxy</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">proxy</span> <span class="op">=</span> <span class="ide">newMainThreadProxy</span>(<span class="str">&quot;main&quot;</span>)              <span class="com"># ---- 7</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;action1&quot;</span>: <span class="ide">result</span> <span class="op">=</span> <span class="ide">action1</span>(<span class="ide">data</span>)      <span class="com"># ---- 8</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onDefaultData</span>: <span class="ide">result</span> <span class="op">=</span> <span class="ide">handler</span>(<span class="ide">action</span>, <span class="ide">data</span>) </div></div><div class="line"><div class="line-content">  <span class="com"># ...</span></div></div><div class="line"><div class="line-content">  <span class="ide">asyncCheck</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()                             <span class="com"># ---- 9</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># create threads</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">createThread</span>(<span class="str">&quot;foo1&quot;</span>, <span class="ide">fooMain</span>)                 <span class="com"># ---- 10</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">createThread</span>(<span class="str">&quot;foo2&quot;</span>, <span class="ide">fooMain</span>)</div></div><div class="line"><div class="line-content">  <span class="com">#... </span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ...</span></div></div><div class="line"><div class="line-content">  <span class="com"># do something here</span></div></div><div class="line"><div class="line-content">  <span class="com"># ...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">runForever</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModeul</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">main</span>()</div></div>  </code></pre>
+<ol>
+<li><code>import threadproxy</code> will also <code>import json, asyncdispatch</code>. They are almost always used together.</li>
+<li>Define an entry function for threads. The argument have to be a <code>ThreadProxy</code> unless you want to create thread manually. Also note that the <code>{.thread.}</code> pragma must be present.</li>
+<li>Define a handler for <code>action</code>. The handler function is responsible for both <code>send</code> and <code>ask</code> handling. A <code>nil</code> return value will be converted to <code>JNull</code></li>
+<li><code>onData</code> is a template version of <code>on</code>. It saves you from typing <code>proc...</code> everytime. The argument <code>data</code> is injected and so the name on<strong>Data</strong></li>
+<li>Default handler for all unregistered actions. There is also a template version <code>onDefaultData</code> that work similarly. Only the last <em>ONE</em> default hanlder is registered.</li>
+<li>Start processing messages on channels asychronously. This must be called exactly once. If poll is not called, nothing will happen. If it is called more than one time during running, a <code>PollConflictError</code> will raise.</li>
+<li>Create a <code>MainThreadProxy</code> with a name.  <code>MainThreadProxy</code> is also a <code>ThreadProxy</code> but with responsibilities to handle threads and channels.</li>
+<li>Define handlers for MainThreadProxy similar to that in fooMain.</li>
+<li>Start processing messages similar to that in fooMain.</li>
+<li>Create thread with a name and entry function.</li>
+</ol>
+<h2>Examples</h2>
+<p>Example 1: simple ask</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">threadproxy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">workerMain</span>(<span class="ide">proxy</span>: <span class="ide">ThreadProxy</span>) {<span class="op">.</span><span class="ide">thread</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># register action handler</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;sum&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">n</span> <span class="kwd">in</span> <span class="ide">data</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">x</span> <span class="op">+=</span> <span class="ide">n</span><span class="op">.</span><span class="ide">getInt</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="op">%</span><span class="ide">x</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># start processing channel</span></div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">proxy</span> <span class="op">=</span> <span class="ide">newMainThreadProxy</span>(<span class="str">&quot;master&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">asyncCheck</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># create worker thread</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">createThread</span>(<span class="str">&quot;worker_0&quot;</span>, <span class="ide">workerMain</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ask worker_0 to double 10</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">answer</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">ask</span>(<span class="str">&quot;worker_0&quot;</span>, <span class="str">&quot;sum&quot;</span>, <span class="op">%</span>[<span class="num">2</span>,<span class="num">3</span>,<span class="num">5</span>,<span class="num">7</span>])</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">answer</span> <span class="op">==</span> <span class="op">%</span><span class="num">17</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">main</span>()</div></div>  </code></pre>
+<p>Example 2: pulling M jobs from N workers and collect result in collector</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">threadproxy</span>, <span class="ide">deques</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">M</span> <span class="op">=</span> <span class="num">40</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fib</span>(<span class="ide">x</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span> </div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">x</span> <span class="op">&lt;=</span> <span class="num">1</span>: <span class="num">1</span> </div></div><div class="line"><div class="line-content">  <span class="kwd">else</span>: <span class="ide">fib</span>(<span class="ide">x</span><span class="op">-</span><span class="num">1</span>) <span class="op">+</span> <span class="ide">fib</span>(<span class="ide">x</span><span class="op">-</span><span class="num">2</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">collectorMain</span>(<span class="ide">proxy</span>: <span class="ide">ThreadProxy</span>) {<span class="op">.</span><span class="ide">thread</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">done</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;result&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">name</span> <span class="op">=</span> <span class="ide">data</span>[<span class="str">&quot;name&quot;</span>]<span class="op">.</span><span class="ide">getStr</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">data</span>[<span class="str">&quot;x&quot;</span>]<span class="op">.</span><span class="ide">getInt</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="ide">data</span>[<span class="str">&quot;y&quot;</span>]<span class="op">.</span><span class="ide">getInt</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;collector receive job &quot;</span>, <span class="ide">x</span>, <span class="str">&quot; result from &quot;</span>, <span class="ide">name</span>, <span class="str">&quot; fib(&quot;</span>, <span class="ide">x</span>, <span class="str">&quot;) = &quot;</span>, <span class="ide">y</span></div></div><div class="line"><div class="line-content">    <span class="ide">done</span> <span class="op">+=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">done</span> <span class="op">&gt;=</span> <span class="ide">M</span>:</div></div><div class="line"><div class="line-content">      <span class="com"># all done</span></div></div><div class="line"><div class="line-content">      <span class="ide">asyncCheck</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">send</span>(<span class="str">&quot;master&quot;</span>, <span class="str">&quot;stop&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">workerMain</span>(<span class="ide">proxy</span>: <span class="ide">ThreadProxy</span>) {<span class="op">.</span><span class="ide">thread</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># start processing channel</span></div></div><div class="line"><div class="line-content">  <span class="ide">asyncCheck</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">process</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">job</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">ask</span>(<span class="str">&quot;master&quot;</span>, <span class="str">&quot;job&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">job</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">JNull</span>: </div></div><div class="line"><div class="line-content">      <span class="com"># no more job</span></div></div><div class="line"><div class="line-content">      <span class="ide">proxy</span><span class="op">.</span><span class="ide">stop</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="com"># process job</span></div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">job</span><span class="op">.</span><span class="ide">getInt</span>()</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">name</span>, <span class="str">&quot; is finding fib(&quot;</span>, <span class="ide">x</span>, <span class="str">&quot;)&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">await</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">send</span>(<span class="str">&quot;collector&quot;</span>, <span class="str">&quot;result&quot;</span>, <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">        <span class="str">&quot;name&quot;</span>: <span class="ide">proxy</span><span class="op">.</span><span class="ide">name</span>,</div></div><div class="line"><div class="line-content">        <span class="str">&quot;x&quot;</span>: <span class="ide">x</span>,</div></div><div class="line"><div class="line-content">        <span class="str">&quot;y&quot;</span>: <span class="ide">fib</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">      })</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">isRunning</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">waitFor</span> <span class="ide">process</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># prepare jobs</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">jobs</span> <span class="op">=</span> <span class="ide">initDeque</span>[<span class="ide">int</span>]()</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">1.</span><span class="op">.</span><span class="ide">M</span>: <span class="ide">jobs</span><span class="op">.</span><span class="ide">addLast</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># create and setup MainThreadProxy</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">proxy</span> <span class="op">=</span> <span class="ide">newMainThreadProxy</span>(<span class="str">&quot;master&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;stop&quot;</span>: <span class="ide">proxy</span><span class="op">.</span><span class="ide">stop</span>()</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;job&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">jobs</span><span class="op">.</span><span class="ide">len</span> <span class="op">&gt;</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="op">%</span><span class="ide">jobs</span><span class="op">.</span><span class="ide">popFirst</span></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="com"># return null if no more job</span></div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">newJNull</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># create collector thread</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">createThread</span>(<span class="str">&quot;collector&quot;</span>, <span class="ide">collectorMain</span>)</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="com"># create N threads</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">N</span> <span class="op">=</span> <span class="num">4</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="ide">N</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">proxy</span><span class="op">.</span><span class="ide">createThread</span>(<span class="str">&quot;worker_&quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">i</span>, <span class="ide">workerMain</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># poll until proxy stop</span></div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">main</span>()</div></div>  </code></pre>
+<p>see <a href="/examples">/examples</a> for more examples.</p>
+<h2>Manually Create Thread</h2>
+<p>If you want to pass more things into the main procedure of threads, you need to generate a token by calling <code>createToken</code> in mainThreadProxy and then pass the token to the main procedure and then call <code>newThreadProxy</code> in that threads.</p>
+<p>Example</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">threadproxy</span>, <span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">WorkerThreadArgs</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">multiplier</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">token</span>: <span class="ide">ThreadToken</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">workerMain</span>(<span class="ide">args</span>: <span class="ide">WorkerThreadArgs</span>) {<span class="op">.</span><span class="ide">thread</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">proxy</span> <span class="op">=</span> <span class="ide">newThreadProxy</span>(<span class="ide">args</span><span class="op">.</span><span class="ide">token</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># register action handler</span></div></div><div class="line"><div class="line-content">  <span class="ide">proxy</span><span class="op">.</span><span class="ide">onData</span> <span class="str">&quot;multiply&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">data</span><span class="op">.</span><span class="ide">getInt</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="op">%</span>(<span class="ide">args</span><span class="op">.</span><span class="ide">multiplier</span><span class="op">*</span><span class="ide">x</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># start processing channel</span></div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">proxy</span> <span class="op">=</span> <span class="ide">newMainThreadProxy</span>(<span class="str">&quot;master&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">asyncCheck</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># create thread token</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">token</span> <span class="op">=</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">createToken</span>(<span class="str">&quot;worker_0&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># NOTE: You are responsible to make sure that</span></div></div><div class="line"><div class="line-content">  <span class="com"># the variable workerThread live longer than the thread itself</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">workerThread</span>: <span class="ide">Thread</span>[<span class="ide">WorkerThreadArgs</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">createThread</span>(<span class="ide">workerThread</span>, <span class="ide">workerMain</span>, <span class="ide">WorkerThreadArgs</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">multiplier</span>: <span class="num">3</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">token</span>: <span class="ide">token</span></div></div><div class="line"><div class="line-content">  ))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># ask worker_0 to double 10</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">answer</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">proxy</span><span class="op">.</span><span class="ide">ask</span>(<span class="str">&quot;worker_0&quot;</span>, <span class="str">&quot;multiply&quot;</span>, <span class="op">%</span><span class="num">10</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">answer</span> <span class="op">==</span> <span class="op">%</span><span class="num">30</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">main</span>()</div></div>  </code></pre>
+<h2>API</h2>
+<p>see <a href="https://jackhftang.github.io/threadproxy.nim/">here</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/jackhftang/threadproxy.nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nim_telegram_bot</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">telegram</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bot</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">telebot</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">async</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multipurpose</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">chat</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Generic Configurable Telegram Bot for Nim, with builtin basic functionality and Plugins")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nim_telegram_bot" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nim-telegram-bot</h1>
+<ul>
+<li>Easy <code>*.ini</code> &amp; <code>*.md</code> Customization. Single Binary, ~150 Kilobytes size. Tiny CPU &amp; Net use. Plugins.</li>
+</ul>
+<p>  <img src="https://raw.githubusercontent.com/juancarlospaco/nim-telegram-bot/master/art/nim-telegram-bot-rlye.jpg" style="max-width: 100%;" alt="Rlyeh HackLab" title="Art by Rlyeh HackLab http://rlab.be" /></p>
+<h2>Install</h2>
+<ul>
+<li>  <code>nimble install nim_telegram_bot</code></li>
+</ul>
+<h2>Compile</h2>
+<p>To compile from sources, get the Code:</p>
+<pre>  <code class="language-bash">git clone https://github.com/juancarlospaco/nim-telegram-bot.git
+cd nim-telegram-bot/
+</code></pre>
+<p>Compile:</p>
+<pre>  <code class="language-bash">nim e build_nim_telegram_bot.nims
+</code></pre>
+<p><strong>Optional</strong>, Compilation and Run for Development only (Hacks, testing, dev, etc)</p>
+<pre>  <code class="language-bash">nim c -r -d:ssl nim_telegram_bot.nim
+</code></pre>
+<h2>Config</h2>
+<ul>
+<li>Rename the file <code>config.ini.TEMPLATE</code> to <code>config.ini</code>.</li>
+<li>Edit the file <code>config.ini</code> to set <code>api_key</code>, <code>polling_interval</code>, etc.</li>
+<li>Edit the file <code>coc_text.md</code> to customize <strong>Code Of Conduct</strong> text (AKA Rules).</li>
+<li>Edit the file <code>motd_text.md</code> to customize <strong>Message Of The Day</strong> text.</li>
+<li>Edit the file <code>help_text.md</code> to customize <strong>Help</strong> text.</li>
+<li>Edit the file <code>donate_text.md</code> to customize <strong>Donations</strong> text.</li>
+</ul>
+<p>You can hack any of the <code>*.ini</code> and <code>*.md</code> to customize.</p>
+<p>When ever you have the error of missing <code>*.md</code> files, you can just use an empty file.</p>
+<p>  <a href="https://nimble.directory/docs/nimtelegrambot">Check the Docs on Nimble!.</a></p>
+<p>Run <code>nim doc nim_telegram_bot.nim</code> for more Docs!.</p>
+<h2>Plugins</h2>
+<p>On run the bot creates the following folders:</p>
+<pre>  <code>./plugins/
+./plugins/bash/
+./plugins/python/
+./plugins/geo/
+./plugins/static/
+</code></pre>
+<p>  <strong>Bash scripts plugins:</strong></p>
+<p><code>./plugins/bash/</code> are for <code>*.sh</code> Bash scripts plugins,
+the filename must be all lowercase and not contain whitespaces and end with <code>*.sh</code>,
+the filename will be the command to trigger the plugin, eg <code>foo.sh</code> will be <code>/foo</code> on Telegram chat,
+output of the script will be sent as string to chat by the bot,
+anything you want the bot to say just print it to standard output.
+Comments are allowed on the SH file.
+File extension is case sensitive, so its <code>*.sh</code>, not <code>*.SH</code>.</p>
+<p>Example Bash plugin:</p>
+<pre>  <code class="language-bash"># example.sh
+echo &quot;This is an example Bash plugin.&quot;
+</code></pre>
+<p>  <strong>Python plugins:</strong></p>
+<p><code>./plugins/python/</code> are for <code>*.py</code> Python 3 plugins,
+the filename must be all lowercase and not contain whitespaces and end with <code>*.py</code>,
+the filename will be the command to trigger the plugin, eg <code>lol.py</code> will be <code>/lol</code> on Telegram chat,
+the return of the <code>main()</code> function of the script will be sent as string to chat by the bot,
+anything you want the bot to say just return it on <code>main()</code> as <code>str</code> type,
+the <code>main()</code> function name is a convention, is hardcoded and can not be changed.
+No other functions are needed on the INI. Comments are allowed on the Python file.
+File extension is case sensitive, so its <code>*.py</code>, not <code>*.PY</code>.</p>
+<p>Example <code>./plugins/python/foo.py</code> will be <code>/foo</code> on Telegram chat and will call <code>foo.main()</code>.</p>
+<p>Example Python plugin:</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="com"># example.py</span></div></div><div class="line"><div class="line-content"><span class="kwd">def</span> main():</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="str">&quot;Example Python Plugin.&quot;</span></div></div>  </code></pre>
+<p>  <strong>Geo Location Sharing plugins:</strong></p>
+<p><code>./plugins/geo/</code> are for <code>*.ini</code> Geo Location Sharing plugins,
+the filename must be all lowercase and not contain whitespaces and end with <code>*.ini</code>,
+the filename will be the command to trigger the plugin, eg <code>bar.ini</code> will be <code>/bar</code> on Telegram chat,
+Geo Location of the INI will be sent as Map Thumbnail and Open Street Map Link to chat by the bot,
+anything you want the bot to Geo Locate just add <code>latitude</code> and <code>longitude</code> to the INI.
+No other keys are needed on the INI. Comments are allowed on the INI.
+File extension is case sensitive, so its <code>*.ini</code>, not <code>*.INI</code>.</p>
+<p>Example Geo Location Sharing plugin:</p>
+<pre>  <code class="language-ini"># example.ini
+latitude = 55.42
+longitude = 42.66
+</code></pre>
+<p>  <strong>Static Files plugins:</strong></p>
+<p><code>./plugins/static/</code> are for <code>*.*</code> Static Files &quot;plugins&quot;,
+the filename must be all lowercase and not contain whitespaces,
+the filename will be the command to trigger the plugin, eg <code>baz.jpg</code> will be <code>/baz</code> on Telegram chat,
+the file will be sent as attached Document file to chat by the bot,
+anything you want the bot to share just copy it to that folder.
+File extension is case sensitive, so it must be lower case.</p>
+<p>Example Static Files plugin: Any file is Ok.</p>
+<p>  <strong>Nim-based Plugins:</strong></p>
+<p>Maybe in the future we implement it, but right now it has few builtin functionalities
+that if you want to create a new functionality using Nim just send the Pull Request,
+to be integrated into the Core directly instead of as a Plugin,
+all functionalities can be Enabled / Disabled from the <code>config.ini</code> anyways.</p>
+<h1>CrossCompilation On Demand</h1>
+<p>The bot will reply any valid <code>*.nim</code> plain text source code file with
+CrossCompiled stripped native binary executables for Linux and Windows,
+including the SHA1 CheckSums on the chat (it compiles, does not run),
+theres limits on total file size and total line count,
+it can be disabled and configured from the <code>config.ini</code>.</p>
+<p>No extra hardening security features are in place for this feature,
+since Telegram already has Kick and Ban, check <code>firejails</code> or <code>docker</code> for this,
+disable if you expect malware code.</p>
+<h2>Run</h2>
+<pre>  <code class="language-bash">./nim_telegram_bot
+</code></pre>
+<p>The source code needs the following files on the same current folder to compile:</p>
+<ul>
+<li>  <code>coc_text.md</code></li>
+<li>  <code>motd_text.md</code></li>
+<li>  <code>help_text.md</code></li>
+<li>  <code>donate_text.md</code></li>
+</ul>
+<p>The binary executable needs the following files on the same current folder to run:</p>
+<ul>
+<li>  <code>config.ini</code></li>
+</ul>
+<p>Example to compile:</p>
+<pre>  <code>/home/user/bot/nim_telegram_bot.nim
+/home/user/bot/coc_text.md
+/home/user/bot/motd_text.md
+/home/user/bot/help_text.md
+/home/user/bot/donate_text.md
+</code></pre>
+<p>Example to run:</p>
+<pre>  <code>/home/user/bot/nim_telegram_bot
+/home/user/bot/config.ini
+</code></pre>
+<p><strong>Optional</strong>, you can use any Linux command like <code>chrt</code>, <code>trickle</code>, <code>firejails</code>, <code>docker</code>, <code>rkt</code> with the Bot too.</p>
+<h2>Requisites</h2>
+<p>  <em>For Compilation only!, if it compiles it does not need Nim nor Telebot.</em></p>
+<ul>
+<li><a href="https://nim-lang.org/install_unix.html">Nim</a> <code>&gt;= 0.18.0</code></li>
+<li><a href="https://github.com/ba0f3/telebot.nim">Telebot</a> <a href="https://nimble.directory/pkg/telebot">  <code>nimble install telebot</code></a></li>
+<li><a href="https://github.com/juancarlospaco/nim-openexchangerates#nim-openexchangerates">OpenExchangeRates</a> <a href="https://nimble.directory/pkg/openexchangerates">  <code>nimble install openexchangerates</code></a></li>
+<li><a href="https://github.com/yglukhov/nimpy">NimPy</a> <a href="https://nimble.directory/pkg/nimpy">  <code>nimble install nimpy</code></a></li>
+</ul>
+<p><strong>Optional</strong> For Photos on-demand:</p>
+<ul>
+<li>1 Working USB WebCam Camera on <code>/dev/video0</code>.</li>
+<li>FFMPEG (Linux package, with WebP support).</li>
+</ul>
+<p><strong>Optional</strong> For CrossCompilation on-demand:</p>
+<ul>
+<li><code>strip</code> (Linux package).</li>
+<li><code>upx</code> (Linux package).</li>
+<li><code>sha1sum</code> (Linux package).</li>
+</ul>
+<p><strong>Optional</strong> For Python Plugins:</p>
+<ul>
+<li><code>python</code> (3.7+, older Python versions maybe works but its not supported).</li>
+</ul>
+<p><strong>Optional</strong> For Web Screenshots on-demand:</p>
+<ul>
+<li><code>CutyCapt</code> http://cutycapt.sourceforge.net</li>
+<li><code>XVFB</code> for HeadLess Servers without X only, if you have X running is not required.</li>
+</ul>
+<p><strong>Optional</strong> For Python Compilation:</p>
+<ul>
+<li><code>nuitka</code> (Linux package).</li>
+</ul>
+<h3>Single File</h3>
+<p><strong>Optional</strong>, this is for advanced users only.</p>
+<p>If you want to compile to 1 file, without any extra <code>*.md</code> files.</p>
+<p>On the source code find and remove the lines:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">helps_texts</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;help_text.md&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">coc_text</span> <span class="op">=</span>    <span class="ide">readFile</span>(<span class="str">&quot;coc_text.md&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">motd_text</span> <span class="op">=</span>   <span class="ide">readFile</span>(<span class="str">&quot;motd_text.md&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">donate_text</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;donate_text.md&quot;</span>)</div></div>  </code></pre>
+<p>On the source code find and uncomment the lines:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">helps_texts</span> <span class="op">=</span> <span class="ide">staticRead</span>(<span class="str">&quot;help_text.md&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">coc_text</span> <span class="op">=</span>    <span class="ide">staticRead</span>(<span class="str">&quot;coc_text.md&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">motd_text</span> <span class="op">=</span>   <span class="ide">staticRead</span>(<span class="str">&quot;motd_text.md&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">donate_text</span> <span class="op">=</span> <span class="ide">staticRead</span>(<span class="str">&quot;donate_text.md&quot;</span>)</div></div>  </code></pre>
+<p>Recompile, it will Embed all the <code>*.md</code> files on the binary executable.</p>
+<p>You will need to Recompile to change any content of the <code>*.md</code> files.</p>
+<p>You can later delete all the <code>*.md</code> files.</p>
+<h3>Performance Profiling</h3>
+<p><strong>Optional</strong>, this is for advanced developers only.</p>
+<p>Find and uncomment the line <code>import nimprof</code> on <code>nim_telegram_bot.nim</code>.</p>
+<pre>  <code class="language-bash">nim c --profiler:on --stacktrace:on -d:ssl -d:release --app:console --opt:size nim_telegram_bot.nim
+./nim_telegram_bot
+</code></pre>
+<p>Then open the file <code>profile_results.txt</code>.</p>
+<h2>Check code</h2>
+<p><strong>Optional</strong>, this is for advanced developers only.</p>
+<p>How to Lint the code.</p>
+<pre>  <code class="language-bash">nimble check
+nim check src/nim_telegram_bot.nim
+</code></pre>
+<h3>CrossCompile</h3>
+<p><strong>Optional</strong>, this is for advanced developers only.</p>
+<p>Linux -&gt; Windows, this allows to generate a <code>*.EXE</code> for Windows on Linux.</p>
+<p>On Linux install all this packages:</p>
+<pre>  <code>mingw-w64-binutils mingw-w64-crt mingw-w64-gcc mingw-w64-headers mingw-w64-winpthreads mingw-w64-gcc-base mingw-w64-*
+</code></pre>
+<p>Usually only installing <code>mingw-w64-gcc</code> gets all the rest as dependency.</p>
+<p>Names are from ArchLinux AUR, should be similar on other Distros</p>
+<h3>Contributions</h3>
+<ul>
+<li>This is cross-collaboration work of <a href="https://rlab.be">Rlyeh HackLab</a> and <a href="https://t.me/NimArgentina">NimAr</a> communities.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/nim-telegram-bot">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

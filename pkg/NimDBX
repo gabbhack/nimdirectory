@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">NimDBX</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">libmdbx</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">LMDB</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bindings</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Fast persistent key-value store, based on libmdbx")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install NimDBX" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p><strong>April 2023:</strong> In light of statements made by Leonid Yuriev in the <a href="https://abf.io/erthink/libmdbx/blob/master/README.md">libmdx README</a>, I&apos;m abandoning this project and archiving the repo. Namely:</p>
+<blockquote>
+<p>However, <em>MithrilDB</em> [the successor to libmdbx] will not be available for countries unfriendly to
+Russia (i.e. acceded the sanctions, devil adepts and/or NATO). [...]
+Basically we are not inclined to allow our work to contribute to the
+profit that goes to weapons that kill our relatives and friends.
+NO OPTIONS.
+[...] Contrary to <em>MithrilDB</em>, <em>libmdbx</em> will forever free and open source.</p>
+</blockquote>
+<p>I have nothing against the Russian people, but I don&apos;t want to contribute (indirectly) to a project whose author explicitly takes Putin&apos;s party line in support of an unjustified war of conquest. I could say the same thing about profits that go to killing innocents. (I won&apos;t contribute to projects created by right-wingers at home, either -- I dropped Urbit like a rock after learning about Curtis Yarvin.)</p>
+<p>If the author&apos;s politics bother you less than me, you are of course welcome to fork this repo or contribute to one of the (currently five) existing forks. And kudos to Yuriev for committing to keeping libmdbx available.</p>
+<p>Unfortunately I&apos;m not aware of a good alternative to libmdbx. Its ancestor LMDB is less advanced and not in active development. You can of course use SQLite as a key-value store by creating very simple tables, but it&apos;s not nearly as fast. If anyone finds a better alternative, let me know :)</p>
+<p>--Jens</p>
+<hr />
+<h1>nimdbx</h1>
+<p>An extremely fast persistent key-value store for the <a href="https://nim-lang.org">Nim</a> language, based on the amazing <a href="https://abf.io/erthink/libmdbx">MDBX</a> library.</p>
+<p>NimDBX just maps arbitrary keys to values, in multiple namespaces, storing them in a local file. The file is memory-mapped, which makes reads <em>ridiculously</em> fast, with zero copying and zero system calls: the library literally just locates the data in the mapped address space and hands you a pointer to it.</p>
+<p>Even though it&apos;s low-level, it provides full ACID semantics: Atomic commits, Consistent views of data, Isolation from other commits, and Durable changes. Multiple threads and processes can open the same database file without trouble. The database is not corrupted by program crashes, kernel panics, nor power failures.</p>
+<p>For more details I highly recommend reading the libmdbx <a href="https://abf.io/erthink/libmdbx/blob/master/README.md">README</a> and at least skimming the API documentation.</p>
+<h2>Credits and Origins</h2>
+<p>NimDBX is by Jens Alfke. libmdbx is by Леонид Юрьев (Leonid Yuriev) and is a heavily modified extension of Howard Chu&apos;s <a href="http://lmdb.tech">LMDB</a>. Many of the concepts and even C APIs date back through <a href="https://en.wikipedia.org/wiki/Berkeley_DB">Berkeley DB</a> to the original <a href="https://en.wikipedia.org/wiki/DBM_%28computing%29">1979 dbm library</a>.</p>
+<p>I don&apos;t call NimDBX a libmdbx &quot;wrapper&quot; because it doesn&apos;t present exactly the same API. For instance, I&apos;ve renamed some entities, like &quot;database&quot; instead of &quot;environment&quot;, &quot;collection&quot; instead of &quot;DBI&quot;, &quot;snapshot&quot; instead of &quot;read-only transaction&quot;. NimDBX also tries to be safer, as befits a Nim API, preventing most dangling pointers and NULL-derefs.</p>
+<p>But yes, this is really just a thin Nim shell around the libmdbx C library.</p>
+<h3>License</h3>
+<p>NimDBX is released under the Apache 2 license.</p>
+<p>However, libmdbx itself is under the OpenLDAP Public License -- see <code>vendor/libmdbx/LICENSE</code>.</p>
+<h2>The Data Model</h2>
+<ul>
+<li>A <strong>database</strong> is contained in a regular file (normally wrapped in a directory.)</li>
+<li>Each database can contain multiple named <strong>collections</strong>.</li>
+<li>Each collection can contain any number of <strong>keys</strong> and their associated <strong>values</strong>.
+A collection may optionally support multiple values per key (or duplicate keys; same thing.)</li>
+<li>A <strong>cursor</strong> lets you iterate a collection&apos;s keys and values in order.</li>
+<li>A <strong>snapshot</strong> is a self-consistent read-only view of the database.
+It stays the same even if some other thread or process makes changes.
+<em>The only way to access keys and values is within a snapshot.</em></li>
+<li>A <strong>transaction</strong> is like a snapshot but writeable.
+Changes you make in a transaction are private until you commit it.
+<em>The only way to modify the database is within a transaction.</em></li>
+</ul>
+<p>That&apos;s it. No columns, no indexes, no query language. Those kinds of things can be built on top of this foundation.</p>
+<h3>Keys and Values</h3>
+<p>Values are just arbitrary blobs, up to 4GB long.</p>
+<p>Keys are arbitrary blobs, up to about 1KB long. The NimDBX API lets you treat a key as Nim <code>string</code>, <code>seq[byte]</code>, <code>int32</code>, or <code>int64</code>.</p>
+<p>(There is a <code>Collatable</code> helper class that encodes multiple values in a single byte array, which lets you use compound (primary/secondary) keys.)</p>
+<p>A collection may support <strong>duplicate keys</strong>: multiple records with the same key and distinct values. The values are kept in sorted order too. This is useful when using collections to implement indexes.</p>
+<p>When you read data, the API calls return pointers to keys and values. These point directly into the mapped address space of the database file. That&apos;s super fast! But it&apos;s important to keep in mind that <em>the data only remains valid for the duration of the snapshot or transaction that you used to read it.</em> Afterwards, that part of the database might get reused for something else.</p>
+<p>That means that, if you plan on keeping keys or values around, you need to copy them. Fortunately NimDBX includes converters to transparently convert keys/values to strings or <code>seq</code>s or integers.</p>
+<h3>&quot;Snapshots&quot;?</h3>
+<p>A snapshot is a read-only transaction. (In fact, in the libmdbx API it <em>is</em> a transaction, just with the <code>MDBX_TXN_RDONLY</code> flag.) Like a regular transaction, it gives you a Consistent, Isolated view of the data.</p>
+<p>One thing that may seem weird if you&apos;re used to other databases is that you can&apos;t directly read values from a <code>Collection</code> object. There&apos;s no API for that. Instead you have to create a <code>CollectionSnapshot</code>, which is basically a tuple of the <code>Collection</code> and a database-wide <code>Snapshot</code> -- that&apos;s where the accessors are.</p>
+<p>This is for two important reasons: first, the snapshot ensures that all the data you read comes from the same moment in time and isn&apos;t affected by some other thread or process making changes. Second, the snapshot marks the database pages you read as being in use, so that the keys and values in mapped memory don&apos;t get overwritten by other transactions.</p>
+<p>Because of this, it&apos;s important not to leave snapshots around too long. As long as a snapshot exists, it&apos;s preventing many pages of the file from being reused, even if the data in those pages becomes obsolete. That means transactions have to grow the file instead of overwriting pages.</p>
+<h2>Building</h2>
+<p>If you&apos;re using NimDBX, simply install it with <code>nimble install nimdbx</code>, then in your source code <code>import nimdbx</code>.</p>
+<p>Behind the scenes, NimDBX uses <a href="https://github.com/nimterop/nimterop">Nimterop</a> to build the libmdbx C library and generate the Nim bridging header. One visible side effect of this is that libmdbx isn&apos;t built until the first time you compile something that imports <code>nimdbx</code>. In general this should result only in some extra build output like:</p>
+<pre>  <code># Running make
+#   Path: ~/.nimble/pkgs/nimdbx/libmdbx-dist
+# Including library ~/.nimble/pkgs/nimdbx/libmdbx-dist/libmdbx.a
+# Importing ~/.nimble/pkgs/nimdbx/libmdbx-dist/mdbx.h
+# Saved to ~/.cache/nim/nimterop/toastCache/nimterop_4071036711.nim
+</code></pre>
+<p>I mention this only because, if there are any errors building libmdbx, they&apos;ll show up here.</p>
+<h2>Working On NimDBX</h2>
+<p>If you want to work on NimDBX itself, then instead of the normal install process you should clone the repo from Github, since nimble only installs a portion of the repo.</p>
+<p>After that, just <code>cd</code> to the source tree and run <code>nimble test</code> to compile and run the unit tests.</p>
+<h3>Updating libmdbx</h3>
+<p><code>libmdbx</code> is a submodule, at <code>vendor/libmdbx</code>. However, because of conflicts between nimble and libmdbx&apos;s build scripts, we don&apos;t actually build it from that directory. Instead, we build a &quot;distribution&quot; version of the libmdbx source, then copy that into the <code>libmdbx-dist</code> directory. That&apos;s the code that actually gets built by Nimterop.</p>
+<p>So to update the version/commit of libmdbx, there are a few steps involved:</p>
+<ol>
+<li>  <code>cd vendor/libmdbx</code></li>
+<li>Pull or checkout the desired commit.</li>
+<li>  <code>make dist</code></li>
+<li>Copy the resulting <code>dist</code> directory to the <code>libmdbx-dist</code> directory at the top level.</li>
+<li>Build and test NimDBX.</li>
+</ol>
+<p>When you commit your changes, make sure you commit both the updated files in <code>libmdbx-dist</code>, and the updated submodule reference in <code>vendor/libmdbx</code>.</p>
+<h2>Status</h2>
+<p>This is pretty new code (as of December 2020). It has tests, but hasn&apos;t been exercised much yet.
+And libMDBX is still under development, though I&apos;ve found it quite solid.</p>
+<p>I plan to expose some more libmdbx features, and add some more idiomatic Nim APIs.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache-2.0
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

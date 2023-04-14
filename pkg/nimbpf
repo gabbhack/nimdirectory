@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimbpf</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">libbpf</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ebpf</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bpf</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("libbpf for nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimbpf" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nimbpf</h1>
+<p>libbpf for nim</p>
+<h2>API</h2>
+<p>The API is simple, there are only a few calls available:</p>
+<p>  <code>proc bootBpf*(elfBpfFile: cstring): void</code></p>
+<p>Loads any maps and code available in the given file. The file should be
+compiled along the lines of the instructions further along in this document.</p>
+<p>  <code>proc openPinnedMap*(map: string, filename: string): Option[uint64]</code></p>
+<p>Opens a previously pinned BPF map. The map name is an identifier that can be
+used in later calls to fetchFromMap. The filename refers to the pinned map
+path in bpf filesystem: <code>/sys/fs/bpf/..</code>.</p>
+<p>  <code>iterator getKeys*([T](map: string): T</code></p>
+<p>Returns an iterator that will iterate all keys in a map.</p>
+<p>  <code>proc fetchUint16FromMap*(map: string, key: var any): Option[T]</code></p>
+<p>  <code>proc fetchUint64FromMap*(map: string, key: var any): Option[T]</code></p>
+<p>Fetches a uint16 or uint64 value from a BPF map. The map name should be a string
+that matches the name in the bcc code. The key can be a pointer to any type
+such as a culong or a normal nim object (aka struct). Obviously, it should
+map to the same type as whatever bcc code was written.</p>
+<h3>Teardown</h3>
+<p>When the process terminates, all BPF maps and probes will be destroyed by the
+kernel.</p>
+<h2>Defining a compatible ELF binary</h2>
+<p>  <em>This should really be captured in a better place, nonetheless this will do
+for now.</em></p>
+<p>Use clang to compile an ELF binary containing the BPF IR. Include the struct
+map sections so that the BPF maps can be automatically created.</p>
+<ul>
+<li>
+<p>Create <code>bpf_helpers.h</code>, you can copy this straight from the project repo.
+This will include any relevant code and headers needed for your BCC
+compilation.</p>
+</li>
+<li>
+<p>Your BCC code. This should be basically the same as any existing BCC code,
+with a few specific pointers:</p>
+<ul>
+<li>Declare any of the bpf maps you want instantiated in section &quot;maps&quot;, and
+name them accordingly. <code>SEC</code> is defined in <code>bpf_helpers.h</code>
+<pre>  <code>SEC(&quot;maps&quot;)
+struct bpf_map_def ovfs_write_bytes = {
+    .type = BPF_MAP_TYPE_HASH,
+    .key_size = sizeof(unsigned int),
+    .value_size = sizeof(unsigned long),
+    .max_entries = MAX_MAP_ENTRIES,
+};
+</code></pre>
+</li>
+<li>Create the function code you need. Place the code in a section named as per
+the probe you want to attach them to.
+<pre>  <code>SEC(&quot;kprobe/ovl_read_iter&quot;)
+int trace_ovl_read_iter(struct pt_regs *ctx)
+{
+    // bcc code
+}
+</code></pre>
+</li>
+<li>You also need to include a <code>license</code> and a <code>version</code> section to tell the
+kernel what to load and ensure your code is compliant with kernel licensing
+process. Version section can be ignored as nimbpf will overwrite it for
+you even if it is incorrect.</li>
+</ul>
+</li>
+<li>
+<p>The Makefile, containing a single target to build your ELF binary. This will
+call clang, ask for <code>-emit-llvm</code>, include any required linux kernel headers,
+and pipe the output through <code>llc -march=bpf ..</code></p>
+<pre>  <code>headers=/usr/src/linux-headers
+build-elf:
+      clang \
+              -D__KERNEL__ \
+              -D __BPF_TRACING__ \
+              -emit-llvm \
+              -O2 \
+              -g \
+              -c ovfs.c \
+              -I $(headers)/include \
+              -I $(headers)/arch/x86/include \
+              -I $(headers)/arch/x86/include/generated \
+              -I $(headers)/include/generated/uapi \
+              -I $(headers)/arch/x86/include/uapi \
+              -I $(headers)/include/uapi \
+              -o - | \
+              llc -march=bpf -filetype=obj -o ovfs.o
+.PHONY: build-elf
+</code></pre>
+</li>
+</ul>
+<p>You should now have a working ELF file. Inspect it. Notice the:</p>
+<ul>
+<li>section headers, including your kprobe code, the relocation information for
+it (so that maps will be correctly fixed up), the maps, version, and license
+areas</li>
+<li>relocation section details including for each probe what maps are used</li>
+</ul>
+<pre>  <code>$ llvm-readelf-9 -a ovfs.o
+
+Section Headers:
+  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al
+  ...
+  [ 3] kprobe/ovl_read_iter PROGBITS     0000000000000000 000040 0000b8 00  AX  0   0  8
+  [ 4] .relkprobe/ovl_read_iter REL      0000000000000000 019150 000020 10     31   3  8
+  ...
+  [11] maps              PROGBITS        0000000000000000 000de0 0000c4 00  WA  0   0  4
+  [12] version           PROGBITS        0000000000000000 000ea4 000004 00  WA  0   0  4
+  [13] license           PROGBITS        0000000000000000 000ea8 000004 00  WA  0   0  1
+
+...
+
+Relocation section &apos;.relkprobe/ovl_read_iter&apos; at offset 0x19150 contains 2 entries:
+    Offset             Info             Type               Symbol&apos;s Value  Symbol&apos;s Name
+0000000000000038  000006c200000001 R_BPF_64_64            0000000000000070 ovfs_op_start_times
+0000000000000088  000006c200000001 R_BPF_64_64            0000000000000070 ovfs_op_start_times
+</code></pre>
+<p>You can see how your code disassembles to BPF IR (which is great for
+debugging).</p>
+<pre>  <code>$ llvm-objdump-9 -S ovfs.o
+
+ovfs.o:	file format ELF64-BPF
+
+
+Disassembly of section kprobe/ovl_read_iter:
+
+0000000000000000 trace_ovl_read_iter:
+;     unsigned int pid = bpf_get_current_pid_tgid();
+       0:	85 00 00 00 0e 00 00 00	call 14
+       1:	63 0a f4 ff 00 00 00 00	*(u32 *)(r10 - 12) = r0
+;     unsigned long ts = bpf_ktime_get_ns();
+       2:	85 00 00 00 05 00 00 00	call 5
+       3:	bf 06 00 00 00 00 00 00	r6 = r0
+       4:	7b 6a f8 ff 00 00 00 00	*(u64 *)(r10 - 8) = r6
+       5:	bf a2 00 00 00 00 00 00	r2 = r10
+; int trace_ovl_read_iter(struct pt_regs *ctx)
+       6:	07 02 00 00 f4 ff ff ff	r2 += -12
+;     unsigned long *value = bpf_map_lookup_elem(map, key);
+       7:	18 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00	r1 = 0 ll
+
+...
+
+</code></pre>
+<h2>TODO</h2>
+<ul>
+<li>Attach to more than just kprobes. This should be pretty easy to extend.</li>
+<li>Probably there are more wrapper functions that we can create to support
+iteration, reading large maps, etc.</li>
+<li>Functions to delete and clear maps.</li>
+</ul>
+<h2>Credits</h2>
+<p>Thanks to various developers of BPF and BCC bindings around, bpf, etc to show
+the correct use of the API.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/jasonk000/nimbpf">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">ast_pattern_matching</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">macros</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pattern-matching</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ast</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("a general ast pattern matching library with a focus on correctness and good error messages")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install ast_pattern_matching" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Ast Pattern Matching</h1>
+<pre>  <code>matchAst(arg, matchErrors):
+of nnkStmtList(
+  _,
+  _,
+  nnkForStmt(
+    ident&quot;i&quot;,
+    nnkInfix,
+    `mysym` @ nnkStmtList
+  )
+):
+  echo &quot;The AST did match!!!&quot;
+  echo &quot;The matched sub tree is the following:&quot;
+  echo mysym.lispRepr
+else:
+  echo matchErrors
+  echo &quot;sadly the AST did not match :(&quot;
+</code></pre>
+<p><code>matchAst</code> is where the magic happens. In the of-branch is a tree that
+is close to the output of <code>lispRepr</code> on an arbitrary <code>NimNode</code>.  But
+it is not quite the same, for example the node kinds still have the
+nnk-Prefix for the node kinds. The pattern language also has some
+additional constructs, to widen the possibilities of the pattern.</p>
+<p>The grammar for the pattern matching looks like this:</p>
+<ul>
+<li>
+<p><code>&lt;pattern&gt;</code> is an arbitrary pattern</p>
+</li>
+<li>
+<p><code>of &lt;pattern&gt;:</code> is a branch of the pattern matching library.</p>
+</li>
+<li>
+<p><code>nnkInfix</code> an example how to just check the node kind. It matches
+on any node of kind <code>nnkInfix</code>. It won&apos;t check the length or any
+of the children.</p>
+</li>
+<li>
+<p><code>nnkStmtList(&lt;pattern&gt;, &lt;pattern&gt;, &lt;pattern&gt;)</code> will match on any
+any node of kind <code>nnkStmtList</code> with length 3, if also the
+subpatterns of the children match.</p>
+</li>
+<li>
+<p><code>nnkStmtList</code> without an opening brace <code>(</code> is just like
+<code>nnkInfix</code> again. It won&apos;t check for any children.</p>
+</li>
+<li>
+<p><code>nnkStmtList()</code> matches only an empty statement list.</p>
+</li>
+<li>
+<p><code>_</code> the wildcard, matches on everything.
+.</p>
+</li>
+<li>
+<p><code>`somename`</code> is a named subtree. Like the wildcard, it matches
+on everything. But it creates an identifier for that subtree, so that
+it can be called by name in the branch body.</p>
+</li>
+<li>
+<p><code>nnkIntLit(intVal = 123)</code> will match the integer literal <code>123</code> but
+not <code>123&apos;u32</code>.</p>
+</li>
+<li>
+<p><code>_(intVal = myConst)</code> matches any literal with the value of
+<code>myConst</code>. This is the recommended way if you want to match
+constants. Currently the lhs side of the matching expression is
+completely ignored, so you could match strings with <code>_(intVal = myStrConst)</code> and the other way around. But please don&apos;t do
+that. It will confuse programmers, and I will break that code if
+I found a reliable way to disallow it.</p>
+</li>
+<li>
+<p>Just literals like <code>123</code> will also match any literals with the
+same value.  So it would match on a literal such as <code>123</code>, but not on
+literals of a different kind such as <code>123&apos;u32</code>.</p>
+</li>
+<li>
+<p><code>`somename` @ &lt;pattern&gt;</code> a named subtree. it matches on
+<code>&lt;pattern&gt;</code> but binds the name <code>somename</code> to that node.
+checked by <code>&lt;pattern&gt;</code></p>
+</li>
+<li>
+<p><code>else:</code> the else branch is the code path that is taken when the
+pattern fails to match. The else branch is optional. When a
+pattern does not match, an error will be raised.</p>
+</li>
+<li>
+<p><code>matchErrors</code> in the example above is used as an identifier for a
+seq of match errors. it will be available in the else branch as
+<code>let matchErrors: seq[MatchingError]</code>. It&apos;s an optional argument
+and the purpose is to debug matching expressions.</p>
+</li>
+<li>
+<p><code>ident&quot;abc&quot;</code> will match all symbols and identifiers etc that are
+equal to &quot;abc&quot;. For equality checks eqIdent will be used. A node
+<code>n</code> that returns true in <code>eqIdent(n, &quot;abc&quot;)</code> will be matched
+with that expression.</p>
+</li>
+<li>
+<p>An identifier can also be matched with <code>nnkIdent(strVal = &quot;abc&quot;)</code> but that would not match on symbols choices or identifiers with a
+different style such as <code>aB_c</code>. Please don&apos;t use this for
+identifier matching.</p>
+</li>
+<li>
+<p><code>&lt;expr&gt;(...)</code> any expression can be used to match for the
+identifier, as long as it is an expression that evaluates to
+<code>NimNodeKind</code> or <code>set[NimNodeKind]</code>. For example
+<code>{nnkElifExpr, nnkElifBranch}(_)</code> is a totally valid pattern to
+match for <code>elif:</code>.</p>
+</li>
+<li>
+<p><code>&lt;expr&gt;</code> meaning any expression that is not one of the other
+expressions is expected to evaluate to a <code>NimNodeKind</code> or
+<code>set[NimNodeKind]</code> and is used to match the kind for an
+expression.</p>
+</li>
+<li>
+<p><code>&lt;pattern&gt; |= &lt;cond&gt;</code> can be used to match for arbitrary
+conditions. <code>&lt;cond&gt;</code> here needs to be an arbitrary expression of
+type bool.  The operator here appears to be quite random, and it
+is.  It has been chosen, because it has very low operator
+precedence.</p>
+</li>
+</ul>
+<h2>Examples</h2>
+<p>When you pass a second argument to match as, as in the following
+example with <code>matchErrors</code>, this identifier will be usable in the
+<em>else</em> branch as a name for all error kinds. But please use this error
+type only for debugging purpose. If for the sake of nice error messages
+the type has to change, it will be changed, please don&apos;t rely on
+the structure of this type.</p>
+<pre>  <code>matchAst(arg, matchErrors):
+of &lt;pattern&gt;: # branch A
+  discard
+of &lt;pattern&gt;: # branch B
+  discard
+of &lt;pattern&gt;: # branch C
+  discard
+else:
+  echo &quot;branch A could not match because:&quot;
+  echo matchErrors[0]
+  echo &quot;branch B could not match because:&quot;
+  echo matchErrors[1]
+  echo &quot;branch C could not match because:&quot;
+  echo matchErrors[2]
+</code></pre>
+<p>When you leave out the else branch and there is only one of branch,
+you will get the nicest error message possible, why the pattern did
+not match.  Just try it out with this example:</p>
+<pre>  <code>let ast = quote do:
+  abc
+  def
+  ghi
+  jkl
+
+ast.matchAst:
+of nnkStmtList( `a`, `b`, `c`):
+  echo &quot;the branch did match&quot;
+  echo &quot;but I do know that is impossible&quot;
+</code></pre>
+<p>In this example, you see how recursive pattern matching can be used.</p>
+<p>In Recursive pattern matching the ast is traversed recursively.  So
+the patterns are not just matched against <code>arg</code>, but also against all
+of the children of <code>arg</code> and their children and so on.  Recursion
+stops at nodes that are matched by a pattern.  So it might make sense
+to add some empty <em>of-branches</em> just to cut down the search space.
+But it does not make sense at all to add an else branch, because then
+it is just not possible anymore to do recursion at all.</p>
+<pre>  <code>import macros, ast_pattern_matching
+
+macro foobar(arg: untyped): untyped =
+  arg.matchAstRecursive:
+  of nnkOfBranch( ident&quot;false&quot;, `recList` ):
+    echo &quot;got false record List: &quot;
+    echo recList.treeRepr
+  of nnkOfBranch( ident&quot;true&quot;, `recList` ):
+    echo &quot;got true record List: &quot;
+    echo recList.treeRepr
+
+
+foobar:
+  type Obj[T] = object {.inheritable.}
+    name: string
+    case isFat: bool
+    of true:
+      m: array[100_000, T]
+    of false:
+      m: array[10, T]
+</code></pre>
+<p>Do not use <code>break</code> in <code>matchAstRecursive</code> yet, it is not implemented.
+The name <code>matchAstRecursive</code> is not final and it might get another
+name or syntax in the future, but this syntax will be kept for
+backwards compatibility.</p>
+<p>for more examples, take a look at the sourcecode. The file
+<code>tests/test1.nim</code> has a lot of examples that should you get started.</p>
+<h2>discussion</h2>
+<p>Maybe at some point the pattern matching library will contain
+operators to match more flexible patterns with operators such as <code>+</code>,
+<code>*</code>, <code>|</code>, <code>?</code>. but that is not implemented. It would be possible though.</p>
+<p>It would just raise the question how are named subexpressions are
+handled in such optional pattern branches.</p>
+<p>if the parser allows it to add custom conditions to of branches, such
+as <code>of &lt;pattern&gt; if a &gt; b:</code> it might replace the
+<code>of &lt;pattern&gt; |= a &gt; b</code> syntax.</p>
+<p>The ast matching statement does not work as an expression (yet).</p>
+<p>A <code>matchAstFind</code> that would recursively search though
+the ast and stop at the first match would make sense. Here it would
+also be sane to use the else branch for the case that the entire ast
+does not have any match at all.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/nim-lang/ast-pattern-matching">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">cron</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cron</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">scheduled-tasks</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">task-scheduler</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">periodic-jobs</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">jobs</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">demon</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">daemon</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Library to ease writing cron-like programs")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install cron" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Overview</h1>
+<p>When things break at 3am, instead of having to figure out what</p>
+<pre>  <code>0,6 3 * 3-6 */5 act
+</code></pre>
+<p>means in a config file, you can instead read a <em>whole program</em>:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cron</span>; <span class="ide">loop</span> <span class="ide">y</span>,<span class="ide">mo</span>,<span class="ide">d</span>, <span class="ide">h</span>,<span class="ide">m</span>,<span class="ide">s</span>,<span class="ide">ns</span>, <span class="ide">w</span>: <span class="com"># Runs EVERY minute</span></div></div><div class="line"><div class="line-content">  <span class="ide">J</span> <span class="ide">w</span> <span class="kwd">in</span> {<span class="ide">Sat</span>,<span class="ide">Sun</span>} <span class="kwd">and</span> <span class="ide">mo</span><span class="op">==</span><span class="ide">Mar</span> <span class="kwd">and</span> <span class="ide">h</span> <span class="kwd">in</span> <span class="num">3.</span><span class="ide">H</span><span class="op">..</span><span class="num">6.</span><span class="ide">H</span> <span class="kwd">and</span> <span class="ide">m</span> <span class="kwd">mod</span> <span class="num">5.</span><span class="ide">M</span><span class="op">==</span><span class="num">0</span>: <span class="str">&quot;act&quot;</span></div></div>  </code></pre>
+<h1>Background</h1>
+<p>The whole <code>cron</code> system design has accumulated much complexity that is no longer
+needed and was maybe never a great idea - from a setuid-root (or cron) crontab
+to manage job files, to demons running as root changing UIDs and hopefully not
+leaking anything, to bespoke syntaxes for specifying periodicity.  Even spartan
+busybox crond/tab is 1200 lines of C.<a href="I">^1</a></p>
+<p>Instead of all that, I give you <code>cron</code>: cron in Nim with its core only ~70
+non-space / comment lines, 12 bonus/quality of life lines &amp; a 20 line shell
+script to update &amp; install new versions of a periodic runner.  This is a
+simplification along the lines of <a href="https://github.com/c-blake/kslog">kslog</a>.</p>
+<p><em>  <strong>The key idea is re-cast the cron problem to be &quot;a library to make writing a
+cron-like demon easy for a user&quot; that uses some independent way to get user
+demons launched at boot.  <a href="Well,">^2</a></strong></em>  To my knowledge this is a novel take (but too
+simple to publish anywhere).<a href="Famous">^3</a></p>
+<p>Such a demon just runs as a regular, unprivileged user all the time.  It can be
+written with a fully Turing complete programming language and any library that
+eases a main loop, &quot;run now?&quot; tests and job launch easy.  Indeed, you can
+<em>  <strong>write Nim code rather than scripts</strong></em> for your actions.<a href="While">^4</a></p>
+<p>If your system/sysadmin provides no way to launch user demons at boot then you
+may need to launch it yourself.  One traditional way for unprivileged users to
+ensure something comes up at boot has been to use a traditional cron with a
+&quot;check for existence&quot; to avoid duplicates.  By rotating that to &quot;have sysadmin
+provide some other way to launch at boot&quot; and then relying upon a compiler/PL,
+the whole problem is simplified a lot.  Personally, I just put a line in my <code>rc</code>
+scripts for non-root users.  I would guess systemd has some story.</p>
+<h1>Some Niceties</h1>
+<p>There are basic syntax niceties.  These are best understood by just looking at
+<a href="examples/jobsE0.nim">  <code>jobsE0.nim</code></a>.  Among these are <code>sysly</code> to do <code>runPat</code>
+over the monthly, weekly, and daily system job directories for the root demon.
+For Nim code actions, <code>if ..: Do</code> is what you want.  For old-style external
+program jobs, see <code>J</code>.</p>
+<h2>Compile-time Checked Ranges</h2>
+<p>Using a Nim <code>distinct range[0..23]</code> for &quot;hours&quot; prevents you from successfully
+compiling a program with dumb mistakes in numbers.  Similar ideas are enforced
+on the other common time fields.  The only cost is writing <code>.H</code> after using an
+hour.  This also prevents mistakes if you mismatch fields in tuples, such as
+<code>(m, h) == (0.H, 30.M)</code>.  Similar comments apply to month/weekday enums or days
+of the month.  (No calendar of days in each month is done, however.)  This will
+not stop you from accidentally running jobs each loop (an intended use case).</p>
+<h2>Re-compile/updates with <a href="crup.sh">  <code>crup.sh</code></a></h2>
+<p>One thing <code>crontab</code> does is tell the cron demon to re-read job configs.  That
+functionality is replaced here by either the provided <code>crup.sh</code> or some similar
+device of your own creation.  Basically, <code>cron.nim</code> programs just re-exec when
+sent a <code>SIGHUP</code>.  So, <code>crup.sh</code> just checks if the binary executable is out of
+date, recompiles if so, and sends <code>SIGHUP</code> if all that worked.  So, you just
+edit your jobs program and run <code>./crup.sh</code> &amp; done.<a href="If">^5</a></p>
+<p>Personally, I like to have a <code>/n -&gt; /dev/null</code> symlink on my systems (this grew
+out of a Zsh global alias) to be brief.  In this case, it also helps log
+messages be shorter but still explicit.  So, <code>$n</code> &amp; <code>$h</code> for host name and
+<code>$nimc</code> are all overridable environment variables.  I.e., what I run on my
+system is <code>n=/n nimc=&apos;nim c --mm:arc&apos; ./crup.sh</code>.  If you have many hosts to
+compile for you can <code>for h in A B C; do sh -c &quot;h=$h ./crup.sh&quot;; done</code>.  Program
+names are arbitrary.  My <code>jobsXuser</code> is just an easy convention.  It is likely
+you will want to use <code>crup.sh</code> just as a basis to write your own.<a href="This">^6</a></p>
+<h2>Version Control</h2>
+<p>While one <em>can</em> put cron jobs files under version control and use the crontab
+program to manage such, this careful activity &quot;feels&quot; more &quot;natural&quot; with actual
+source code in a prog.lang.  This is a more higher order aspect, of course.</p>
+<h2>Desync/Jitter</h2>
+<p>A more subtle one is the <code>cron.jitter</code> variable.  One hazard I have run into
+unaddressed by most <code>cron</code>s is that of &quot;load spikes&quot;.  Essentially, just one
+centralized demon (without even a natural desync of process scheduling) waking
+up every minute and launching various activity for various users spikes system
+load.  I have seen such cause UDP packet loss and even actual data loss in
+financial data systems.</p>
+<p>One mitigation is to add a random sleep before programs to jitter/desync system
+activity.  This advice is probably as old as exponential back off, but just to
+give a concrete example the
+<a href="https://stackoverflow.com/questions/41535546/how-do-i-schedule-the-lets-encrypt-certbot-to-automatically-renew-my-certificat">  <code>certbot</code></a>
+guys were recommending it.  However, it is less costly to have <code>cron.loop</code> just
+sleep by extra random amounts, and it is best to default to <code>&gt;0</code>.  So, that is
+what this <code>cron</code> library does.<a href="If">^7</a></p>
+<p>Jobs written with <code>cron</code> are in fact usually very low overhead - on the order of
+100 parts per billion of one CPU (much like <code>kslog</code>).  I have not done so, but I
+suspect this can be shrunk without compromising Turing completeness by &quot;faking
+the future&quot; to tests in a batch to compute much longer sleeps.<a href="While">^8</a> This would,
+however, break jobs that reach out to dynamic system state, e.g. file presence,
+to decide if they run (which cronds do not even allow).</p>
+<h2>Time Zones</h2>
+<p>More subtle than jitter/desynchronization is the unending saga of time zones.
+If you like, you can just set <code>cron.utc = true</code> to use UTC for everything.  If
+you have a Nim lib you like to convert to local zones then you can engage that
+as inline code right in your tests (in Nim with probably some type conversions
+to <code>int</code>).  There is no new specification language to learn - only proc calls /
+lib access in Nim (or if you rewrite this in your PL of choice).</p>
+<h1>Missing Things</h1>
+<p><code>crond</code> detects non-empty output and spams users with local emails that these
+days may not even be routed to somewhere they will be seen.  This seems.. less
+than useful.  So, <code>cron.nim</code> does not do that.  In fact, <code>cron.nim</code> does not
+close inherited file descriptors on its own.  I usually run my demons with a
+wrapper program that does that<a href="If">^9</a>.  Hence, if you do not re-direct your output
+to a file, it will probably just get put to the launching demon&apos;s fds, like a
+/var/log/cron0 or something.  For this reason, even if you do <em>usually</em> use a
+wrapper program, it is better practice to have your jobs redirect their output.</p>
+<p><code>cron.nim</code> <em>does</em> make it easy to redirect to /dev/null.  The <code>J</code> job <code>template</code>
+does this by default, for example.  If you have somewhere you want things to go,
+like <code>/var/log/HappyNY</code> in the example program, you can just do that.  Or, if a
+sysadmin doesn&apos;t let you put things in <code>/var/log</code>, but only where you have a
+disk quota, like <code>$HOME/log/</code>, you can direct it there.  Or if that is a net FS
+then <code>/var/tmp/$ME/log</code>.  Or wherever.</p>
+<p>can only speculate why the original cron system was so complex - that is
+more a question for TUHS.</p>
+<p>and a demon for the system as well.</p>
+<p>last words.  And right here is &quot;somewhere&quot;.  Also, by this I mean
+for outright crond-tab replacement, not the zillions of async frameworks with
+their various internal work schedulers/timer systems.</p>
+<p>Nim does make for a compact syntax for this use case, I use hardly
+anything that could not be done with C preprocessor macros or facilities in
+Python or many PLs.  In fact, the first version of this system was in ANSI C and
+barely any larger than the Nim.  Also, <code>fork</code> is much cheaper than <code>fork&amp;exec</code>.</p>
+<p>you miss the full <code>crontab -e</code> experience you can always put a &quot;vim
+jobsXme.nim&quot; at the top of crup.sh. ;-)</p>
+<p>kind of &quot;config-free&quot; programming is not unlike the <a href="https://suckless.org/">suck
+less</a> philosophy of <code>st</code> or <code>dwm</code> where you just edit a
+header file to configure things.  Here the library makes it such that the entire
+program is often not even a whole page.</p>
+<p>you prefer &quot;more precise&quot; scheduling, just set <code>cron.jitter = 0</code> in
+your own cron-like programs.  This is a rare case where controlled jitter is
+often desirable, not a bug. :)</p>
+<p>the same amount of total calculation would happen, CPU caching and
+other effects might mean up to 10X less actual time/power consumption done in a
+batch.  Also more infrequent wake ups would be nicer to the system from the
+perspective of everything else that needs to be spun up every minute in the
+usual mode.  This smells like something someone has probably written a paper on.
+Happy to cite if someone provides a reference.</p>
+<p>you ask nicely I can add a tiny demonize proc to <code>cron.nim</code> to call
+before <code>cron.loop</code> or port my C program wrapper to Nim &amp; toss it in <code>bu</code>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT/ISC
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/cron">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

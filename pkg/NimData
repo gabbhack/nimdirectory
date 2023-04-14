@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">NimData</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">dataframe</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("DataFrame API enabling fast out-of-core data analytics")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install NimData" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>NimData  <a href="https://github.com/bluenote10/NimData/actions?query=workflow%3Aci">  <img src="https://github.com/bluenote10/NimData/workflows/ci/badge.svg" style="max-width: 100%;" alt="Build Status" /></a> <a href="LICENSE">  <img src="https://img.shields.io/github/license/mashape/apistatus.svg" style="max-width: 100%;" alt="license" /></a> <a href="https://github.com/yglukhov/nimble-tag">  <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" height="23" /></a></h1>
+<h2>Overview</h2>
+<p><strong>NimData</strong> is a data manipulation and analysis library for the Nim programming language. It combines Pandas-like syntax with the type-safe, lazy APIs of distributed frameworks like Spark/Flink/Thrill. Although NimData is  currently non-distributed, it harnesses the power of Nim to perform out-of-core processing at native speed.</p>
+<p>NimData&apos;s core data type is the generic <code>DataFrame[T]</code>. All <code>DataFrame</code> methods are based on the MapReduce paradigm and fall into two categories:</p>
+<ul>
+<li><strong>Transformations</strong>: Operations like <code>map</code> or <code>filter</code> transform one <code>DataFrame</code> into another. Transformations are lazy, meaning that they are not executed until an <em>action</em> is called. They can also be chained.</li>
+<li><strong>Actions</strong>: Operations like <code>count</code>, <code>min</code>, <code>max</code>, <code>sum</code>, <code>reduce</code>, <code>fold</code>, <code>collect</code>, or <code>show</code> perform an aggregation on a <code>DataFrame</code>. Calling an action triggers the processing pipeline.</li>
+</ul>
+<p>For a complete list of NimData&apos;s supported operations, see the
+<a href="https://bluenote10.github.io/NimData/nimdata.html">module docs</a>.</p>
+<h2>Installation</h2>
+<ol>
+<li><a href="https://nim-lang.org/install.html">Install Nim</a> and ensure that both Nim and Nimble (Nim&apos;s package manager) are added to your PATH.</li>
+<li>From the command line, run <code>$ nimble install NimData</code> (this will download NimData&apos;s source from GitHub to <code>~/.nimble/pkgs</code>).</li>
+</ol>
+<h2>Quickstart</h2>
+<h3>Hello, World!</h3>
+<p>Once NimData is installed, we&apos;ll write a simple program to test it. Create a new file named <code>test.nim</code> with the following contents:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimdata</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">DF</span><span class="op">.</span><span class="ide">fromRange</span>(<span class="num">0</span>, <span class="num">10</span>)<span class="op">.</span><span class="ide">collect</span>()</div></div>  </code></pre>
+<p>From the command line, use <code>$ nim c -r test.nim</code> to compile and run the program (<code>c</code> for <em>compile</em>, and <code>-r</code> to <em>run</em> directly after compilation). It should print this <a href="https://nim-by-example.github.io/seqs/">sequence</a>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># =&gt; @[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></div></div>  </code></pre>
+<p><em>Pandas users</em>: This is roughly equivalent to <code>print(pd.DataFrame(range(10))[0].values)</code></p>
+<h3>Reading raw text data</h3>
+<p>Next we&apos;ll use <a href="examples/Bundesliga.csv">this</a> German soccer data set to explore NimData&apos;s main functionality.</p>
+<p>To create a <code>DataFrame</code> which simply iterates over the raw text content
+of a file, we can use <code>DF.fromFile()</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">dfRawText</span> <span class="op">=</span> <span class="ide">DF</span><span class="op">.</span><span class="ide">fromFile</span>(<span class="str">&quot;examples/Bundesliga.csv&quot;</span>)</div></div>  </code></pre>
+<p>Note that <code>fromFile</code> is a <em>lazy</em> operation, meaning that NimData doesn&apos;t actually read the contents of the file yet. To read the file, we need to call an <em>action</em> on our dataframe. Calling <code>count</code>, for example, triggers a line-by-line reading of the file and returns the number of rows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">dfRawText</span><span class="op">.</span><span class="ide">count</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt; 14018</span></div></div>  </code></pre>
+<p>We can chain multiple operations on <code>dfRawText</code>. For example, we can use <code>take</code> to filter the file down to its first five rows, and <code>show</code> to print the result:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">dfRawText</span><span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)<span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># &quot;1&quot;,&quot;Werder Bremen&quot;,&quot;Borussia Dortmund&quot;,3,2,1,1963,1963-08-24 09:30:00</span></div></div><div class="line"><div class="line-content"><span class="com"># &quot;2&quot;,&quot;Hertha BSC Berlin&quot;,&quot;1. FC Nuernberg&quot;,1,1,1,1963,1963-08-24 09:30:00</span></div></div><div class="line"><div class="line-content"><span class="com"># &quot;3&quot;,&quot;Preussen Muenster&quot;,&quot;Hamburger SV&quot;,1,1,1,1963,1963-08-24 09:30:00</span></div></div><div class="line"><div class="line-content"><span class="com"># &quot;4&quot;,&quot;Eintracht Frankfurt&quot;,&quot;1. FC Kaiserslautern&quot;,1,1,1,1963,1963-08-24 09:30:00</span></div></div><div class="line"><div class="line-content"><span class="com"># &quot;5&quot;,&quot;Karlsruher SC&quot;,&quot;Meidericher SV&quot;,1,4,1,1963,1963-08-24 09:30:00</span></div></div>  </code></pre>
+<p><em>Pandas users</em>: This is equivalent to <code>print(dfRawText.head(5))</code>.</p>
+<p>Note, however, that every time an action is called, the file is read from scratch, which is inefficient. We&apos;ll improve on that in a moment.</p>
+<h3>Type-safe schema parsing</h3>
+<p>At this stage, <code>dfRawText</code>&apos;s data type is a plain <code>DataFrame[string]</code>. It also doesn&apos;t have any column headers, and the first field isn&apos;t a proper index, but rather contains <a href="https://nim-lang.org/docs/manual.html#lexical-analysis-generalized-raw-string-literals">string literals</a>. Let&apos;s transform our dataframe into something more useful for analysis:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">schema</span> <span class="op">=</span> [</div></div><div class="line"><div class="line-content">  <span class="ide">strCol</span>(<span class="str">&quot;index&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">strCol</span>(<span class="str">&quot;homeTeam&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">strCol</span>(<span class="str">&quot;awayTeam&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">intCol</span>(<span class="str">&quot;homeGoals&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">intCol</span>(<span class="str">&quot;awayGoals&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">intCol</span>(<span class="str">&quot;round&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">intCol</span>(<span class="str">&quot;year&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">dateCol</span>(<span class="str">&quot;date&quot;</span>, <span class="ide">format</span><span class="op">=</span><span class="str">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>)</div></div><div class="line"><div class="line-content">]</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">df</span> <span class="op">=</span> <span class="ide">dfRawText</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">schemaParser</span>(<span class="ide">schema</span>, ','))</div></div><div class="line"><div class="line-content">                  <span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">projectAway</span>(<span class="ide">index</span>))</div></div><div class="line"><div class="line-content">                  <span class="op">.</span><span class="ide">cache</span>()</div></div>  </code></pre>
+<p>This code does three things:</p>
+<ol>
+<li>
+<p>The <a href="https://bluenote10.github.io/NimData/nimdata/schema_parser.html#12"><code>schemaParser</code> macro</a> constructs a specialized parsing function for each field, which takes a string as input and returns a type-safe named tuple corresponding to the type definition in <code>schema</code>. For instance, <code>dateCol(&quot;date&quot;)</code> tells the parser that the last column is named &quot;date&quot; and contains <code>datetime</code> values. We can even specify the datetime format by passing a format string to <code>dateCol()</code> as a named parameter. A key benefit of defining the schema at compile time is that the parser produces highly optimized machine code, resulting in very fast performance.</p>
+</li>
+<li>
+<p>The <code>projectAway</code> macro transforms the results of <code>schemeParser</code> into a new dataframe with the &quot;index&quot; column removed (<em>Pandas users</em>: this is roughly equivalent to <code>dfRawText.drop(columns=[&apos;index&apos;])</code>). See also <code>projectTo</code>, which instead <em>keeps</em> certain fields, and <code>addFields</code>, which extends the schema by new fields.</p>
+</li>
+<li>
+<p>The <code>cache</code> method stores the parsing result in memory. This allows us to perform multiple actions on the data without having to re-read the file contents every time. <em>Spark users</em>: In contrast to Spark, <code>cache</code> is currently implemented as an action.</p>
+</li>
+</ol>
+<p>Now we can perform the same operations as before, but this time our dataframe contains the parsed tuples:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">df</span><span class="op">.</span><span class="ide">count</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt; 14018</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)<span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | homeTeam   | awayTeam   |  homeGoals |  awayGoals |      round |       year | date       |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Werder B… | &quot;Borussia… |          3 |          2 |          1 |       1963 | 1963-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Hertha B… | &quot;1. FC Nu… |          1 |          1 |          1 |       1963 | 1963-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Preussen… | &quot;Hamburge… |          1 |          1 |          1 |       1963 | 1963-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Eintrach… | &quot;1. FC Ka… |          1 |          1 |          1 |       1963 | 1963-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Karlsruh… | &quot;Meideric… |          1 |          4 |          1 |       1963 | 1963-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div>  </code></pre>
+<p>Note that instead of starting the pipeline from <code>dfRawText</code> and using
+caching, we could always write the pipeline from scratch:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">DF</span><span class="op">.</span><span class="ide">fromFile</span>(<span class="str">&quot;examples/Bundesliga.csv&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">map</span>(<span class="ide">schemaParser</span>(<span class="ide">schema</span>, ','))</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">projectAway</span>(<span class="ide">index</span>))</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div>  </code></pre>
+<h3>Filter</h3>
+<p>Data can be filtered by using <code>filter</code>. For instance, we can filter the data to get games
+of a certain team only:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">filter</span>(<span class="ide">record</span> <span class="op">=&gt;</span></div></div><div class="line"><div class="line-content">    <span class="ide">record</span><span class="op">.</span><span class="ide">homeTeam</span><span class="op">.</span><span class="ide">contains</span>(<span class="str">&quot;Freiburg&quot;</span>) <span class="kwd">or</span></div></div><div class="line"><div class="line-content">    <span class="ide">record</span><span class="op">.</span><span class="ide">awayTeam</span><span class="op">.</span><span class="ide">contains</span>(<span class="str">&quot;Freiburg&quot;</span>)</div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | homeTeam   | awayTeam   |  homeGoals |  awayGoals |      round |       year | date       |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Bayern M… | &quot;SC Freib… |          3 |          1 |          1 |       1993 | 1993-08-0… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;SC Freib… | &quot;Wattensc… |          4 |          1 |          2 |       1993 | 1993-08-1… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;SC Freib… |          3 |          2 |          3 |       1993 | 1993-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;SC Freib… | &quot;Hamburge… |          0 |          1 |          4 |       1993 | 1993-08-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;1. FC Ko… | &quot;SC Freib… |          2 |          0 |          5 |       1993 | 1993-09-0… |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div>  </code></pre>
+<p>  <em>Note: Without the   <code>strutils</code> module,   <code>contains</code> will throw a type error here.</em></p>
+<p>Or search for games with many home goals:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">filter</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">homeGoals</span> <span class="op">&gt;=</span> <span class="num">10</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | homeTeam   | awayTeam   |  homeGoals |  awayGoals |      round |       year | date       |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Schalke … |         11 |          0 |         18 |       1966 | 1967-01-0… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Borussia… |         10 |          0 |         12 |       1967 | 1967-11-0… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Bayern M… | &quot;Borussia… |         11 |          1 |         16 |       1971 | 1971-11-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Borussia… |         12 |          0 |         34 |       1977 | 1978-04-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Arminia … |         11 |          1 |         12 |       1982 | 1982-11-0… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Eintrach… |         10 |          0 |          8 |       1984 | 1984-10-1… |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div>  </code></pre>
+<p>Note that we can now fully benefit from type-safety:
+The compiler knows the exact fields and types of a record.
+No dynamic field lookup and/or type casting is required.
+Assumptions about the data structure are moved to the earliest
+possible step in the pipeline, allowing to fail early if they
+are wrong. After transitioning into the type-safe domain, the
+compiler helps to verify the correctness of even long processing
+pipelines, reducing the risk of runtime errors.</p>
+<p>Other filter-like transformation are:</p>
+<ul>
+<li><code>take</code>, which takes the first N records as already seen.</li>
+<li><code>drop</code>, which discard the first N records.</li>
+<li><code>filterWithIndex</code>, which allows to define a filter function that take both the index and the elements as input.</li>
+</ul>
+<h3>Collecting data</h3>
+<p>A <code>DataFrame[T]</code> can be converted easily into a <code>seq[T]</code> (Nim&apos;s native dynamic
+arrays) by using <code>collect</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">homeGoals</span>)</div></div><div class="line"><div class="line-content">       <span class="op">.</span><span class="ide">filter</span>(<span class="ide">goals</span> <span class="op">=&gt;</span> <span class="ide">goals</span> <span class="op">&gt;=</span> <span class="num">10</span>)</div></div><div class="line"><div class="line-content">       <span class="op">.</span><span class="ide">collect</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt; @[11, 10, 11, 12, 11, 10]</span></div></div>  </code></pre>
+<h3>Numerical aggregation</h3>
+<p>A DataFrame of a numerical type allows to use functions like <code>min</code>/<code>max</code>/<code>mean</code>.
+This allows to get things like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Min date: &quot;</span>, <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">year</span>)<span class="op">.</span><span class="ide">min</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Max date: &quot;</span>, <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">year</span>)<span class="op">.</span><span class="ide">max</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Average home goals: &quot;</span>, <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">homeGoals</span>)<span class="op">.</span><span class="ide">mean</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Average away goals: &quot;</span>, <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">awayGoals</span>)<span class="op">.</span><span class="ide">mean</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># Min date: 1963</span></div></div><div class="line"><div class="line-content"><span class="com"># Max date: 2008</span></div></div><div class="line"><div class="line-content"><span class="com"># Average home goals: 1.898130974461407</span></div></div><div class="line"><div class="line-content"><span class="com"># Average away goals: 1.190754743900699</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Let&apos;s find the highest defeat</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">maxDiff</span> <span class="op">=</span> <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> (<span class="ide">record</span><span class="op">.</span><span class="ide">homeGoals</span> <span class="op">-</span> <span class="ide">record</span><span class="op">.</span><span class="ide">awayGoals</span>)<span class="op">.</span><span class="ide">abs</span>)<span class="op">.</span><span class="ide">max</span>()</div></div><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">filter</span>(<span class="ide">record</span> <span class="op">=&gt;</span> (<span class="ide">record</span><span class="op">.</span><span class="ide">homeGoals</span> <span class="op">-</span> <span class="ide">record</span><span class="op">.</span><span class="ide">awayGoals</span>) <span class="op">==</span> <span class="ide">maxDiff</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | homeTeam   | awayTeam   |  homeGoals |  awayGoals |      round |       year | date       |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Borussia… |         12 |          0 |         34 |       1977 | 1978-04-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div>  </code></pre>
+<h3>Sorting</h3>
+<p>A <code>DataFrame</code> can be transformed into a sorted <code>DataFrame</code> by the <code>sort()</code> method.
+Without specifying any arguments, the operation would sort using default
+comparison over all columns. By specifying a key function and the sort order,
+we can for instance rank the games by the number of away goals:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">sort</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">awayGoals</span>, <span class="ide">SortOrder</span><span class="op">.</span><span class="ide">Descending</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | homeTeam   | awayTeam   |  homeGoals |  awayGoals |      round |       year | date       |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Tasmania… | &quot;Meideric… |          0 |          9 |         27 |       1965 | 1966-03-2… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;TSV 1860… |          1 |          9 |         29 |       1965 | 1966-04-1… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;SSV Ulm&quot;  | &quot;Bayer Le… |          1 |          9 |         25 |       1999 | 2000-03-1… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Rot-Weis… | &quot;Eintrach… |          1 |          8 |         32 |       1976 | 1977-05-0… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Borussia… | &quot;Bayer Le… |          2 |          8 |         10 |       1998 | 1998-10-3… |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+------------+------------+------------+------------+</span></div></div>  </code></pre>
+<h3>Unique values</h3>
+<p>The <code>DataFrame[T].unique()</code> transformation filters a <code>DataFrame</code> to unique elements.
+This can be used for instance to find the number of teams that appear in the data:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">homeTeam</span>)<span class="op">.</span><span class="ide">unique</span>()<span class="op">.</span><span class="ide">count</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt; 52</span></div></div>  </code></pre>
+<p><em>Pandas user note</em>: In contrast to Pandas, there is no differentiation between
+a one-dimensional series and multi-dimensional <code>DataFrame</code> (<code>unique</code> vs <code>drop_duplicates</code>).
+<code>unique</code> works the same in for any hashable type <code>T</code>, e.g., we might as well get
+a <code>DataFrame</code> of unique pairs:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">projectTo</span>(<span class="ide">homeTeam</span>, <span class="ide">awayTeam</span>))</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">unique</span>()</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | homeTeam   | awayTeam   |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Werder B… | &quot;Borussia… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Hertha B… | &quot;1. FC Nu… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Preussen… | &quot;Hamburge… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Eintrach… | &quot;1. FC Ka… |</span></div></div><div class="line"><div class="line-content"><span class="com"># | &quot;Karlsruh… | &quot;Meideric… |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+</span></div></div>  </code></pre>
+<h3>Value counts</h3>
+<p>The <code>DataFrame[T].valueCounts()</code> transformation extends the functionality of
+<code>unique()</code> by returning the unique values and their respective counts.
+The type of the transformed <code>DataFrame</code> is a tuple of <code>(key: T, count: int)</code>,
+where <code>T</code> is the original type.</p>
+<p>In our example, we can use <code>valueCounts()</code> for instance to find the most
+frequent results in German soccer:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">df</span><span class="op">.</span><span class="ide">map</span>(<span class="ide">record</span> <span class="op">=&gt;</span> <span class="ide">record</span><span class="op">.</span><span class="ide">projectTo</span>(<span class="ide">homeGoals</span>, <span class="ide">awayGoals</span>))</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">valueCounts</span>()</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">sort</span>(<span class="ide">x</span> <span class="op">=&gt;</span> <span class="ide">x</span><span class="op">.</span><span class="ide">count</span>, <span class="ide">SortOrder</span><span class="op">.</span><span class="ide">Descending</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">map</span>(<span class="ide">x</span> <span class="op">=&gt;</span> (</div></div><div class="line"><div class="line-content">    <span class="ide">homeGoals</span>: <span class="ide">x</span><span class="op">.</span><span class="ide">key</span><span class="op">.</span><span class="ide">homeGoals</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">awayGoals</span>: <span class="ide">x</span><span class="op">.</span><span class="ide">key</span><span class="op">.</span><span class="ide">awayGoals</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">count</span>: <span class="ide">x</span><span class="op">.</span><span class="ide">count</span></div></div><div class="line"><div class="line-content">  ))</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">take</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content">  <span class="op">.</span><span class="ide">show</span>()</div></div><div class="line"><div class="line-content"><span class="com"># =&gt;</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># |  homeGoals |  awayGoals |      count |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+</span></div></div><div class="line"><div class="line-content"><span class="com"># |          1 |          1 |       1632 |</span></div></div><div class="line"><div class="line-content"><span class="com"># |          2 |          1 |       1203 |</span></div></div><div class="line"><div class="line-content"><span class="com"># |          1 |          0 |       1109 |</span></div></div><div class="line"><div class="line-content"><span class="com"># |          2 |          0 |       1092 |</span></div></div><div class="line"><div class="line-content"><span class="com"># |          0 |          0 |        914 |</span></div></div><div class="line"><div class="line-content"><span class="com"># +------------+------------+------------+</span></div></div>  </code></pre>
+<p>This transformation first projects the data onto a named tuple of
+<code>(homeGoals, awayGoals)</code>. After applying <code>valueCounts()</code> the data
+frame is sorted according to the counts. The final <code>map()</code> function
+is purely for cosmetics of the resulting table, projecting the nested
+<code>(key: (homeGaols: int, awayGoals: int), counts: int)</code> tuple back
+to a flat result.</p>
+<h3><code>DataFrame</code> viewer</h3>
+<p><code>DataFrame</code>s can be opened and inspected in the browser by using <code>df.openInBrowser()</code>,
+which offers a simple Javascript based data browser:</p>
+<p>  <img src="docs/viewer_example.png" style="max-width: 100%;" alt="Viewer example" /></p>
+<p>Note that the viewer uses static HTML, so it should only be applied to small
+or heavily filtered <code>DataFrame</code>s.</p>
+<h2>Benchmarks</h2>
+<p>More meaningful benchmarks are still on the todo list. This just shows a
+few first results. The benchmarks will be split into small (data
+which fits into memory so we can compare against Pandas or R easily) and
+big (where we can only compare against out-of-core frameworks).</p>
+<p>All implementations are available in the <a href="benchmarks">benchmarks</a> folder.</p>
+<h3>Basic operations (small data)</h3>
+<p>The test data set is 1 million rows CSV with two int and two float columns.
+The test tasks are:</p>
+<ul>
+<li>
+<p>Parse/Count: Just the most basic operations -- iterating the file, applying
+parsing, and return a count.</p>
+</li>
+<li>
+<p>Column Averages: Same steps, plus an additional computation of all 4 column means.</p>
+</li>
+</ul>
+<p>The results are average runtime in seconds of three runs:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Task</th>
+<th align="right">NimData</th>
+<th align="right">Pandas</th>
+<th align="right">Spark (4 cores)</th>
+<th align="right">Dask (4 cores)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Parse/Count</td>
+<td align="right">0.165</td>
+<td align="right">0.321</td>
+<td align="right">1.606</td>
+<td align="right">0.182</td>
+</tr>
+<tr>
+<td align="left">Column Averages</td>
+<td align="right">0.259</td>
+<td align="right">0.340</td>
+<td align="right">1.179</td>
+<td align="right">0.622</td>
+</tr></tbody></table>
+<p>Note that Spark internally caches the file over the three runs, so the first iteration
+is much slower (with &gt; 3 sec) while it reaches run times of 0.6 sec in the last iterations
+(obviously the data is too small to justify the overhead anyway).</p>
+<h2>Next steps</h2>
+<ul>
+<li>More transformations:
+<ul>
+<li>[x] map</li>
+<li>[x] filter</li>
+<li>[x] flatMap</li>
+<li>[x] sort</li>
+<li>[x] unique</li>
+<li>[x] valueCounts</li>
+<li>[x] groupBy (reduce)</li>
+<li>[ ] groupBy (transform)</li>
+<li>[x] join (inner)</li>
+<li>[ ] join (outer)</li>
+<li>[ ] concat/union</li>
+<li>[ ] window</li>
+</ul>
+</li>
+<li>More actions:
+<ul>
+<li>[x] numerical aggergations (count, min, max, sum, mean)</li>
+<li>[x] collect</li>
+<li>[x] show</li>
+<li>[x] openInBrowser</li>
+</ul>
+</li>
+<li>More data formats/sources
+<ul>
+<li>[x] csv</li>
+<li>[x] gzipped csv</li>
+<li>[ ] parquet</li>
+<li>[ ] S3</li>
+</ul>
+</li>
+<li>REPL or Jupyter kernel?</li>
+<li>Plotting (maybe in the form of Bokeh bindings)?</li>
+</ul>
+<h2>License</h2>
+<p>This project is licensed under the terms of the MIT license.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/bluenote10/NimData">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

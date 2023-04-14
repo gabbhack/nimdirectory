@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">karax</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">browser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">DOM</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">virtual-DOM</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">UI</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Karax is a framework for developing single page applications in Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install karax" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <img src="https://user-images.githubusercontent.com/22755228/117183486-482b2a00-ade0-11eb-88e6-d8eeb28951ca.png" style="max-width: 100%;" alt="karax" /></p>
+<p>  <img src="https://img.shields.io/github/workflow/status/karaxnim/karax/CI?style=for-the-badge" style="max-width: 100%;" alt="Github Actions" />  <img src="https://img.shields.io/github/issues-raw/karaxnim/karax?style=for-the-badge" style="max-width: 100%;" alt="GitHub issues" />  <img src="https://img.shields.io/github/license/karaxnim/karax?style=for-the-badge" style="max-width: 100%;" alt="GitHub" />  <img src="https://img.shields.io/github/v/tag/karaxnim/karax?sort=semver&amp;style=for-the-badge" style="max-width: 100%;" alt="GitHub tag (latest SemVer)" />  <img src="https://img.shields.io/badge/nim-powered-ffc200?style=for-the-badge" style="max-width: 100%;" alt="https://nim-lang.org" /></p>
+<h1>Karax</h1>
+<p>Karax is a framework for developing single page applications in Nim.</p>
+<h2>Install</h2>
+<p>To use Karax you must have nim installed. You can follow the instructions <a href="https://nim-lang.org/install.html">here</a>.</p>
+<p>Then you can install karax through nimble:
+<code>nimble install karax</code></p>
+<h2>Try Karax</h2>
+<p>To try it out, run:</p>
+<p>  <code>cd ~/projects # Insert your favourite directory for projects</code></p>
+<p>  <code>nimble develop karax # This will clone Karax and create a link to it in ~/.nimble</code></p>
+<p>  <code>cd karax</code></p>
+<p>  <code>cd examples/todoapp</code></p>
+<p>  <code>nim js todoapp.nim</code></p>
+<p>  <code>open todoapp.html</code></p>
+<p>  <code>cd ../..</code></p>
+<p>  <code>cd examples/mediaplayer</code></p>
+<p>  <code>nim js playerapp.nim</code></p>
+<p>  <code>open playerapp.html</code></p>
+<p>It uses a virtual DOM like React, but is much smaller than the existing
+frameworks plus of course it&apos;s written in Nim for Nim. No external
+dependencies! And thanks to Nim&apos;s whole program optimization only what
+is used ends up in the generated JavaScript code.</p>
+<h2>Goals</h2>
+<ul>
+<li>Leverage Nim&apos;s macro system to produce a framework that allows
+for the development of applications that are boilerplate free.</li>
+<li>Keep it small, keep it fast, keep it flexible.</li>
+</ul>
+<h2>Hello World</h2>
+<p>The simplest Karax program looks like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">karax</span> <span class="op">/</span> <span class="ide">prelude</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">createDom</span>(): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">text</span> <span class="str">&quot;Hello World!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">createDom</span></div></div>  </code></pre>
+<p>Since <code>div</code> is a keyword in Nim, karax choose to use <code>tdiv</code> instead
+here. <code>tdiv</code> produces a <code>&lt;div&gt;</code> virtual DOM node.</p>
+<p>As you can see, karax comes with its own <code>buildHtml</code> DSL for convenient
+construction of (virtual) DOM trees (of type <code>VNode</code>). Karax provides
+a tiny build tool called <code>karun</code> that generates the HTML boilerplate code that
+embeds and invokes the generated JavaScript code::</p>
+<p><code>nim c karax/tools/karun</code>
+<code>karax/tools/karun -r helloworld.nim</code></p>
+<p>Via <code>-d:debugKaraxDsl</code> we can have a look at the produced Nim code by
+<code>buildHtml</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tmp1</span> <span class="op">=</span> <span class="ide">tree</span>(<span class="ide">VNodeKind</span><span class="op">.</span><span class="ide">tdiv</span>)</div></div><div class="line"><div class="line-content"><span class="ide">add</span>(<span class="ide">tmp1</span>, <span class="ide">text</span> <span class="str">&quot;Hello World!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">tmp1</span></div></div>  </code></pre>
+<p>(I shortened the IDs for better readability.)</p>
+<p>Ok, so <code>buildHtml</code> introduces temporaries and calls <code>add</code> for the tree
+construction so that it composes with all of Nim&apos;s control flow constructs:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">karax</span> <span class="op">/</span> <span class="ide">prelude</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">random</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">createDom</span>(): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">rand</span>(<span class="num">100</span>) <span class="op">&lt;=</span> <span class="num">50</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">text</span> <span class="str">&quot;Hello World!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">text</span> <span class="str">&quot;Hello Universe&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">randomize</span>()</div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">createDom</span></div></div>  </code></pre>
+<p>Produces:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tmp1</span> <span class="op">=</span> <span class="ide">tree</span>(<span class="ide">VNodeKind</span><span class="op">.</span><span class="ide">tdiv</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">rand</span>(<span class="num">100</span>) <span class="op">&lt;=</span> <span class="num">50</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">add</span>(<span class="ide">tmp1</span>, <span class="ide">text</span> <span class="str">&quot;Hello World!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">add</span>(<span class="ide">tmp1</span>, <span class="ide">text</span> <span class="str">&quot;Hello Universe&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">tmp1</span></div></div>  </code></pre>
+<h2>Event model</h2>
+<p>Karax does not change the DOM&apos;s event model much, here is a program
+that writes &quot;Hello simulated universe&quot; on a button click:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">karax</span> <span class="op">/</span> <span class="ide">prelude</span></div></div><div class="line"><div class="line-content"><span class="com"># alternatively: import karax / [kbase, vdom, kdom, vstyles, karax, karaxdsl, jdict, jstrutils, jjson]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">lines</span>: <span class="ide">seq</span>[<span class="ide">kstring</span>] <span class="op">=</span> <span class="op">@</span>[]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">createDom</span>(): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">button</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">text</span> <span class="str">&quot;Say hello!&quot;</span></div></div><div class="line"><div class="line-content">      <span class="kwd">proc</span> <span class="ide">onclick</span>(<span class="ide">ev</span>: <span class="ide">Event</span>; <span class="ide">n</span>: <span class="ide">VNode</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="ide">lines</span><span class="op">.</span><span class="ide">add</span> <span class="str">&quot;Hello simulated universe&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">lines</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">tdiv</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="ide">x</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">createDom</span></div></div>  </code></pre>
+<p><code>kstring</code> is Karax&apos;s alias for <code>cstring</code> (which stands for &quot;compatible
+string&quot;; for the JS target that is an immutable JavaScript string) which
+is preferred for efficiency on the JS target. However, on the native targets
+<code>kstring</code> is mapped  to <code>string</code> for efficiency. The DSL for HTML
+construction is also avaible for the native targets (!) and the <code>kstring</code>
+abstraction helps to deal with these conflicting requirements.</p>
+<p>Karax&apos;s DSL is quite flexible when it comes to event handlers, so the
+following syntax is also supported:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">karax</span> <span class="op">/</span> <span class="ide">prelude</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">sugar</span> <span class="kwd">import</span> `<span class="op">=&gt;</span>`</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">lines</span>: <span class="ide">seq</span>[<span class="ide">kstring</span>] <span class="op">=</span> <span class="op">@</span>[]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">createDom</span>(): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">button</span>(<span class="ide">onclick</span> <span class="op">=</span> () <span class="op">=&gt;</span> <span class="ide">lines</span><span class="op">.</span><span class="ide">add</span> <span class="str">&quot;Hello simulated universe&quot;</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">text</span> <span class="str">&quot;Say hello!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">lines</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">tdiv</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="ide">x</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">createDom</span></div></div>  </code></pre>
+<p>The <code>buildHtml</code> macro produces this code for us:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tmp2</span> <span class="op">=</span> <span class="ide">tree</span>(<span class="ide">VNodeKind</span><span class="op">.</span><span class="ide">tdiv</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tmp3</span> <span class="op">=</span> <span class="ide">tree</span>(<span class="ide">VNodeKind</span><span class="op">.</span><span class="ide">button</span>)</div></div><div class="line"><div class="line-content"><span class="ide">addEventHandler</span>(<span class="ide">tmp3</span>, <span class="ide">EventKind</span><span class="op">.</span><span class="ide">onclick</span>,</div></div><div class="line"><div class="line-content">                () <span class="op">=&gt;</span> <span class="ide">lines</span><span class="op">.</span><span class="ide">add</span> <span class="str">&quot;Hello simulated universe&quot;</span>, <span class="ide">kxi</span>)</div></div><div class="line"><div class="line-content"><span class="ide">add</span>(<span class="ide">tmp3</span>, <span class="ide">text</span> <span class="str">&quot;Say hello!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">add</span>(<span class="ide">tmp2</span>, <span class="ide">tmp3</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">x</span> <span class="kwd">in</span> <span class="ide">lines</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">tmp4</span> <span class="op">=</span> <span class="ide">tree</span>(<span class="ide">VNodeKind</span><span class="op">.</span><span class="ide">tdiv</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">add</span>(<span class="ide">tmp4</span>, <span class="ide">text</span> <span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">add</span>(<span class="ide">tmp2</span>, <span class="ide">tmp4</span>)</div></div><div class="line"><div class="line-content"><span class="ide">tmp2</span></div></div>  </code></pre>
+<p>As the examples grow larger it becomes more and more visible of what
+a DSL that composes with the builtin Nim control flow constructs buys us.
+Once you have tasted this power there is no going back and languages
+without AST based macro system simply don&apos;t cut it anymore.</p>
+<h2>Reactivity</h2>
+<p>Karax&apos;s reactivity model is different to mainstream frameworks, who usually implement it by creating reactive state. Karax instead reacts to events.</p>
+<p>This approach is simpler and easier to reason about, with the tradeoff being that events need to be wrapped to trigger a redraw. Karax does this for you with dom event handlers (<code>onclick</code>, <code>keyup</code>, etc) and ajax network calls (when using <code>karax/kajax</code>), but you will need to add it for things outside of that (websocket messages, document timing functions, etc).</p>
+<p><code>karax/kdom</code> includes a definition for <code>setInterval</code>, the browser api that repeatedly calls a given function. By default it is not reactive, so this is how we might add reactivity with a call to <code>redraw</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">karax</span><span class="op">/</span><span class="ide">prelude</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">karax</span><span class="op">/</span><span class="ide">kdom</span> <span class="kwd">except</span> <span class="ide">setInterval</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">setInterval</span>(<span class="ide">cb</span>: <span class="kwd">proc</span>(), <span class="ide">interval</span>: <span class="ide">int</span>): <span class="ide">Interval</span> {<span class="op">.</span><span class="ide">discardable</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">kdom</span><span class="op">.</span><span class="ide">setInterval</span>(<span class="kwd">proc</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">cb</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">kxi</span><span class="op">.</span><span class="ide">surpressRedraws</span>: <span class="ide">redraw</span>(<span class="ide">kxi</span>)</div></div><div class="line"><div class="line-content">  , <span class="ide">interval</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> <span class="num">10</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">update</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">+=</span> <span class="num">10</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setInterval</span>(<span class="ide">update</span>, <span class="num">200</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>: <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">text</span> <span class="op">$</span><span class="ide">v</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">main</span></div></div>  </code></pre>
+<h2>Attaching data to an event handler</h2>
+<p>Since the type of an event handler is <code>(ev: Event; n: VNode)</code> or <code>()</code> any
+additional data that should be passed to the event handler needs to be
+done via Nim&apos;s closures. In general this means a pattern like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">menuAction</span>(<span class="ide">menuEntry</span>: <span class="ide">kstring</span>): <span class="kwd">proc</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="kwd">proc</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;clicked &quot;</span>, <span class="ide">menuEntry</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">buildMenu</span>(<span class="ide">menu</span>: <span class="ide">seq</span>[<span class="ide">kstring</span>]): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">m</span> <span class="kwd">in</span> <span class="ide">menu</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">nav</span>(<span class="ide">class</span><span class="op">=</span><span class="str">&quot;navbar is-primary&quot;</span>):</div></div><div class="line"><div class="line-content">        <span class="ide">tdiv</span>(<span class="ide">class</span><span class="op">=</span><span class="str">&quot;navbar-brand&quot;</span>):</div></div><div class="line"><div class="line-content">          <span class="ide">a</span>(<span class="ide">class</span><span class="op">=</span><span class="str">&quot;navbar-item&quot;</span>, <span class="ide">onclick</span> <span class="op">=</span> <span class="ide">menuAction</span>(<span class="ide">m</span>)):</div></div>  </code></pre>
+<h2>DOM diffing</h2>
+<p>Ok, so now we have seen DOM creation and event handlers. But how does
+Karax actually keep the DOM up to date? The trick is that every event
+handler is wrapped in a helper proc that triggers a <em>redraw</em> operation
+that calls the <em>renderer</em> that you initially passed to <code>setRenderer</code>.
+So a new virtual DOM is created and compared against the previous
+virtual DOM. This comparison produces a patch set that is then applied
+to the real DOM the browser uses internally. This process is called
+&quot;virtual DOM diffing&quot; and other frameworks, most notably Facebook&apos;s
+<em>React</em>, do quite similar things. The virtual DOM is faster to create
+and manipulate than the real DOM so this approach is quite efficient.</p>
+<h2>Form validation</h2>
+<p>Most applications these days have some &quot;login&quot;
+mechanism consisting of <code>username</code> and <code>password</code> and
+a <code>login</code> button. The login button should only be clickable
+if <code>username</code> and <code>password</code> are not empty. An error
+message should be shown as long as one input field is empty.</p>
+<p>To create new UI elements we write a <code>loginField</code> proc that
+returns a <code>VNode</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">loginField</span>(<span class="ide">desc</span>, <span class="ide">field</span>, <span class="ide">class</span>: <span class="ide">kstring</span>;</div></div><div class="line"><div class="line-content">                <span class="ide">validator</span>: <span class="kwd">proc</span> (<span class="ide">field</span>: <span class="ide">kstring</span>): <span class="kwd">proc</span> ()): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">label</span>(`<span class="kwd">for</span>` <span class="op">=</span> <span class="ide">field</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">text</span> <span class="ide">desc</span></div></div><div class="line"><div class="line-content">    <span class="ide">input</span>(<span class="ide">class</span> <span class="op">=</span> <span class="ide">class</span>, <span class="ide">id</span> <span class="op">=</span> <span class="ide">field</span>, <span class="ide">onchange</span> <span class="op">=</span> <span class="ide">validator</span>(<span class="ide">field</span>))</div></div>  </code></pre>
+<p>We use the <code>karax / errors</code> module to help with this error
+logic. The <code>errors</code> module is mostly a mapping from strings to
+strings but it turned out that the logic is tricky enough to warrant
+a library solution. <code>validateNotEmpty</code> returns a closure that
+captures the <code>field</code> parameter:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">validateNotEmpty</span>(<span class="ide">field</span>: <span class="ide">kstring</span>): <span class="kwd">proc</span> () <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="kwd">proc</span> () <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">getVNodeById</span>(<span class="ide">field</span>)<span class="op">.</span><span class="ide">getInputText</span></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">x</span><span class="op">.</span><span class="ide">isNil</span> <span class="kwd">or</span> <span class="ide">x</span> <span class="op">==</span> <span class="str">&quot;&quot;</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">errors</span><span class="op">.</span><span class="ide">setError</span>(<span class="ide">field</span>, <span class="ide">field</span> <span class="op">&amp;</span> <span class="str">&quot; must not be empty&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">errors</span><span class="op">.</span><span class="ide">setError</span>(<span class="ide">field</span>, <span class="str">&quot;&quot;</span>)</div></div>  </code></pre>
+<p>This indirection is required because
+event handlers in Karax need to have the type <code>proc ()</code>
+or <code>proc (ev: Event; n: VNode)</code>. The errors module also
+gives us a handy <code>disableOnError</code> helper. It returns
+<code>&quot;disabled&quot;</code> if there are errors. Now we have all the
+pieces together to write our login dialog:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># some consts in order to prevent typos:</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">username</span> <span class="op">=</span> kstring"username"</div></div><div class="line"><div class="line-content">  <span class="ide">password</span> <span class="op">=</span> kstring"password"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">loggedIn</span>: <span class="ide">bool</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">loginDialog</span>(): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">loggedIn</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">loginField</span>(<span class="str">&quot;Name :&quot;</span>, <span class="ide">username</span>, <span class="str">&quot;input&quot;</span>, <span class="ide">validateNotEmpty</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">loginField</span>(<span class="str">&quot;Password: &quot;</span>, <span class="ide">password</span>, <span class="str">&quot;password&quot;</span>, <span class="ide">validateNotEmpty</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">button</span>(<span class="ide">onclick</span> <span class="op">=</span> () <span class="op">=&gt;</span> (<span class="ide">loggedIn</span> <span class="op">=</span> <span class="ide">true</span>), <span class="ide">disabled</span> <span class="op">=</span> <span class="ide">errors</span><span class="op">.</span><span class="ide">disableOnError</span>()):</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="str">&quot;Login&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">p</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="ide">errors</span><span class="op">.</span><span class="ide">getError</span>(<span class="ide">username</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">p</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="ide">errors</span><span class="op">.</span><span class="ide">getError</span>(<span class="ide">password</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">p</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="str">&quot;You are now logged in.&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">loginDialog</span></div></div>  </code></pre>
+<p>(Full example <a href="https://github.com/karaxnim/karax/blob/master/examples/login.nim">here</a>.)</p>
+<p>This code still has a bug though, when you run it, the <code>login</code> button is not
+disabled until some input fields are validated! This is easily fixed,
+at initialization we have to do:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">setError</span> <span class="ide">username</span>, <span class="ide">username</span> <span class="op">&amp;</span> <span class="str">&quot; must not be empty&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">setError</span> <span class="ide">password</span>, <span class="ide">password</span> <span class="op">&amp;</span> <span class="str">&quot; must not be empty&quot;</span></div></div>  </code></pre>
+<p>There are likely more elegant solutions to this problem.</p>
+<h2>Boolean attributes</h2>
+<p>Some HTML attributes don&apos;t have meaningful values; instead, they are treated like
+a boolean whose value is <code>false</code> when the attribute is not set, and <code>true</code> when
+the attribute is set to any value. Some examples of these attributes are <code>disabled</code>
+and <code>contenteditable</code>.</p>
+<p>In Karax, these attributes can be set/cleared with a boolean value:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">submitButton</span>(<span class="ide">dataIsValid</span>: <span class="ide">bool</span>): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">button</span>(<span class="ide">disabled</span> <span class="op">=</span> <span class="kwd">not</span> <span class="ide">dataIsValid</span>):</div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">dataIsValid</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="str">&quot;Submit&quot;</span></div></div><div class="line"><div class="line-content">      <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">text</span> <span class="str">&quot;Cannot submit, data is invalid!&quot;</span></div></div>  </code></pre>
+<h2>Routing</h2>
+<p>For routing <code>setRenderer</code> can be called with a callback that takes a parameter of
+type <code>RouterData</code>. Here is the relevant excerpt from the famous &quot;Todo App&quot; example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">createDom</span>(<span class="ide">data</span>: <span class="ide">RouterData</span>): <span class="ide">VNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">data</span><span class="op">.</span><span class="ide">hashPart</span> <span class="op">==</span> <span class="str">&quot;#/&quot;</span>: <span class="ide">filter</span> <span class="op">=</span> <span class="ide">all</span></div></div><div class="line"><div class="line-content">  <span class="kwd">elif</span> <span class="ide">data</span><span class="op">.</span><span class="ide">hashPart</span> <span class="op">==</span> <span class="str">&quot;#/completed&quot;</span>: <span class="ide">filter</span> <span class="op">=</span> <span class="ide">completed</span></div></div><div class="line"><div class="line-content">  <span class="kwd">elif</span> <span class="ide">data</span><span class="op">.</span><span class="ide">hashPart</span> <span class="op">==</span> <span class="str">&quot;#/active&quot;</span>: <span class="ide">filter</span> <span class="op">=</span> <span class="ide">active</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>(<span class="ide">class</span><span class="op">=</span><span class="str">&quot;todomvc-wrapper&quot;</span>)):</div></div><div class="line"><div class="line-content">    <span class="ide">section</span>(<span class="ide">class</span> <span class="op">=</span> <span class="str">&quot;todoapp&quot;</span>):</div></div><div class="line"><div class="line-content">        <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setRenderer</span> <span class="ide">createDom</span></div></div>  </code></pre>
+<p>(Full example <a href="https://github.com/karaxnim/karax/blob/master/examples/todoapp/todoapp.nim">here</a>.)</p>
+<h2>Server Side HTML Rendering</h2>
+<p>Karax can also be used to render HTML on the server.  Only a subset of
+modules can be used since there is no JS interpreter.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">karax</span> <span class="op">/</span> [<span class="ide">karaxdsl</span>, <span class="ide">vdom</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">places</span> <span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;boston&quot;</span>, <span class="str">&quot;cleveland&quot;</span>, <span class="str">&quot;los angeles&quot;</span>, <span class="str">&quot;new orleans&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">render</span><span class="op">*</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">vnode</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>(<span class="ide">class</span> <span class="op">=</span> <span class="str">&quot;mt-3&quot;</span>)):</div></div><div class="line"><div class="line-content">    <span class="ide">h1</span>: <span class="ide">text</span> <span class="str">&quot;My Web Page&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">p</span>: <span class="ide">text</span> <span class="str">&quot;Hello world&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">ul</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">for</span> <span class="ide">place</span> <span class="kwd">in</span> <span class="ide">places</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">li</span>: <span class="ide">text</span> <span class="ide">place</span></div></div><div class="line"><div class="line-content">    <span class="ide">dl</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">dt</span>: <span class="ide">text</span> <span class="str">&quot;Can I use Karax for client side single page apps?&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">dd</span>: <span class="ide">text</span> <span class="str">&quot;Yes&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">dt</span>: <span class="ide">text</span> <span class="str">&quot;Can I use Karax for server side HTML rendering?&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">dd</span>: <span class="ide">text</span> <span class="str">&quot;Yes&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="op">$</span><span class="ide">vnode</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">render</span>()</div></div>  </code></pre>
+<p>You can embed raw html using the <code>verbatim</code> proc:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">vg</span> <span class="op">=</span> """
+<svg height="100" width="100">
+<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+Sorry, your browser does not support inline SVG.
+</svg>
+"""</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">wrap</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">tdiv</span>(<span class="ide">class</span><span class="op">=</span><span class="str">&quot;wrapper&quot;</span>)):</div></div><div class="line"><div class="line-content">    <span class="ide">verbatim</span>(<span class="ide">vg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">wrap</span></div></div>  </code></pre>
+<h2>Generate HTML with event handlers</h2>
+<p>If you are writing a static site generator or do server-side HTML rendering
+via <code>nim c</code>, you may want to override <code>addEventHandler</code> when using event
+handlers to avoid compiler complaints.</p>
+<p>Here&apos;s an example of auto submit a dropdown when a value is selected:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">kxi</span>(): <span class="ide">int</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">addEventHandler</span>(<span class="ide">n</span>: <span class="ide">VNode</span>; <span class="ide">k</span>: <span class="ide">EventKind</span>; <span class="ide">action</span>: <span class="ide">string</span>; <span class="ide">kxi</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">n</span><span class="op">.</span><span class="ide">setAttr</span>(<span class="op">$</span><span class="ide">k</span>, <span class="ide">action</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">names</span> <span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;nim&quot;</span>, <span class="str">&quot;c&quot;</span>, <span class="str">&quot;python&quot;</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">selected_name</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">params</span><span class="op">.</span><span class="ide">getOrDefault</span>(<span class="str">&quot;name&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">hello</span> <span class="op">=</span> <span class="ide">buildHtml</span>(<span class="ide">html</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">form</span>(`<span class="kwd">method</span>` <span class="op">=</span> <span class="str">&quot;get&quot;</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">select</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;name&quot;</span>, <span class="ide">onchange</span><span class="op">=</span><span class="str">&quot;this.form.submit()&quot;</span>):</div></div><div class="line"><div class="line-content">        <span class="kwd">for</span> <span class="ide">name</span> <span class="kwd">in</span> <span class="ide">names</span>:</div></div><div class="line"><div class="line-content">          <span class="kwd">if</span> <span class="ide">name</span> <span class="op">==</span> <span class="ide">selected_name</span>:</div></div><div class="line"><div class="line-content">            <span class="ide">option</span>(<span class="ide">selected</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>): <span class="ide">text</span> <span class="ide">name</span></div></div><div class="line"><div class="line-content">          <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">            <span class="ide">option</span>: <span class="ide">text</span> <span class="ide">name</span></div></div>  </code></pre>
+<h2>Debugging</h2>
+<p>Karax will accept various compile time flags to add additional checks and debug info.</p>
+<p>e.g. <code>nim js -d:debugKaraxDsl myapp.nim</code></p>
+<table>
+<thead>
+<tr>
+<th>flag name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>debugKaraxDsl</td>
+<td>prints the Nim code produced by the <code>buildHtml</code> macro to the terminal at compile time</td>
+</tr>
+<tr>
+<td>debugKaraxSame</td>
+<td>Ensures that the rendered html dom matches the expected output from the vdom. Note that some browser extensions will modify the page and cause false positives</td>
+</tr>
+<tr>
+<td>karaxDebug*</td>
+<td>prints debug info when checking the dom output and applying component state</td>
+</tr>
+<tr>
+<td>stats*</td>
+<td>track statistics about recursion depth when rendering</td>
+</tr>
+<tr>
+<td>profileKarax*</td>
+<td>track statistics about why nodes differ</td>
+</tr></tbody></table>
+<p>  <em>* = used when debugging karax itself, not karax apps</em></p>
+<h2>License</h2>
+<p>MIT License. See <a href="https://github.com/karaxnim/karax/blob/master/LICENSE.txt">here</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/karaxnim/karax/">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

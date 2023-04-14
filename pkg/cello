@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">cello</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">string</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">succinct-data-structure</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rank</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">select</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">Burrows-Wheeler</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">FM-index</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wavelet-tree</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("String algorithms with succinct data structures")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install cello" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Cello</h1>
+<p>  <img src="https://raw.githubusercontent.com/andreaferretti/cello/master/img/logo.jpg" style="max-width: 100%;" alt="logo" /></p>
+<p>Cello is a library of <a href="https://en.wikipedia.org/wiki/Succinct_data_structure">succinct data structures</a>,
+oriented in particular for string searching and other string operations.</p>
+<p>Usually, searching for patterns in a string takes <code>O(n)</code> time, where <code>n</code> is
+the length of the string. Indices can speedup the search, but take additional
+space, which can be costly for very large strings. A data structure is called
+succinct when it takes <code>n + o(n)</code> space, where <code>n</code> is the space needed to store
+the data anyway. Hence succinct data structures can provide additional
+operations with limited space overhead.</p>
+<p>It turns out that strings admit succinct indices, which do not take much more
+space than the string itself, but allow for <code>O(k)</code> substring search, where <code>k</code>
+is the length of the <em>substring</em>. Usually, this is much shorter, and this
+considerably improves search times. Cello provide such indices and many other
+related string operations.</p>
+<p>An example of usage would be:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="ide">someLongString</span></div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span> <span class="op">=</span> <span class="ide">someShortString</span></div></div><div class="line"><div class="line-content">  <span class="ide">index</span> <span class="op">=</span> <span class="ide">searchIndex</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">positions</span> <span class="op">=</span> <span class="ide">index</span><span class="op">.</span><span class="ide">search</span>(<span class="ide">pattern</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">positions</span></div></div>  </code></pre>
+<p>Many intermediate data structures are constructed to provide such indices,
+though, and as they may be of independent interest, we describe them in the
+following.</p>
+<p>Notice that a string here just stands for a (usually very long) sequence of
+symbols taken from a (usually small) alphabet. Prototypical examples include</p>
+<ul>
+<li>genomic data, where the alphabet is <code>A, C, G, T</code> or</li>
+<li>time series, where each value is represented by a symbol, such as <code>HIGH</code>,
+<code>MEDIUM</code>, <code>LOW</code>, or <code>UP</code>, <code>DOWN</code></li>
+<li>where only two values are available, it is often convenient to store the
+data as bit sequences to save space.</li>
+</ul>
+<p>At the moment all operations are implemented on</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">AnyString</span> <span class="op">=</span> <span class="ide">string</span> <span class="kwd">or</span> <span class="ide">seq</span>[<span class="ide">char</span>] <span class="kwd">or</span> <span class="ide">Spill</span>[<span class="ide">char</span>]</div></div>  </code></pre>
+<p>where <a href="https://github.com/andreaferretti/spills">spills</a> are just memory-mapped
+sequences. The library may become generic in the future, although this is not
+a priority.</p>
+<p>Notice that Cello is not Unicode-aware: think more of searching large genomic
+strings or symbolized time series, rather then using it for internationalized
+text, although I may consider Unicode operations in the future.</p>
+<h2>Versions</h2>
+<p>Cello recent version (&gt;= 0.2) requires Nim &gt;= 0.20. For usage with Nim up to
+0.19.4, use Cello 0.1.6.</p>
+<h2>Basic operations</h2>
+<p>The most common operations that we implement on various kind of sequence data
+are <code>rank</code> and <code>select</code>. We first describe them for sequences of bits, which are
+the foundation we use to store more complex kind of data.</p>
+<p>For bit sequences, <code>rank(i)</code> counts the number of 1 bits in the first <code>i</code>
+places. The number of 0 bits can easily be obtained as <code>i - rank(i)</code>. Viceversa,
+<code>select(i)</code> finds the position of the <code>i</code>-th 1 bit in the sequence. In this
+case, there is not an obvious relation to the position of the <code>i</code>-th 0 bit,
+so we provide a similar operation <code>select0(i)</code>.</p>
+<p>To ensure that <code>rank(select(i)) == i</code>, we define <code>select(i)</code> to be 1-based,
+that is, we count bits starting from 1.</p>
+<p>As a reference, we implement <code>rank</code> and <code>select</code> on Nim built-in sets, so
+that for instance the following is valid:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> { <span class="num">13.</span><span class="op">.</span><span class="num">27</span>, <span class="num">35.</span><span class="op">.</span><span class="num">80</span> }</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">rank</span>(<span class="num">16</span>)  <span class="com"># 3</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">select</span>(<span class="num">3</span>) <span class="com"># 16</span></div></div>  </code></pre>
+<p>More generally, one can define &apos;rank&apos; and <code>select</code> for sequence of symbols
+taken from a finite alphabet, relative to a certain symbol. Here, <code>rank(c, i)</code>
+is the number of symbols equal to <code>c</code> among the first <code>i</code> symbols, and
+<code>select(c, i)</code> is the position of the <code>i</code>-th symbol <code>c</code> in the sequence.</p>
+<p>Again, we give a reference implementation for strings, so that the following
+is valid:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;ABRACADABRA&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">rank</span>('A', <span class="num">8</span>)   <span class="com"># 4</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">select</span>('A', <span class="num">4</span>) <span class="com"># 8</span></div></div>  </code></pre>
+<p>Notice that in both cases, the implementation of <code>rank</code> and <code>select</code> is a
+naive implementation which takes <code>O(i)</code> operations. More sophisticated data
+structures allow to perform similar operations in constant (for rank) or
+logarithmic (for select) time, by using indices. <em>Succinct</em> data structures
+allow to do this using indices that take at most <code>o(n)</code> space in addition
+to the sequence data itself, where <code>n</code> is the sequence length.</p>
+<h2>Data structures</h2>
+<p>We now describe the succinct data structures that will generalize the bitset
+and the string examples above. In doing so, we also need a few intermediate
+data structures that may be of independent interest.</p>
+<h3>Bit arrays</h3>
+<p>Bit arrays are a generalization of Nim default <code>set</code> collections. They can
+be seen as an ordered sequence of <code>bool</code>, which are actually backed by a
+<code>seq[int]</code>. We implement random access - both read and write - as well as
+naive <code>rank</code> and <code>select</code>. An example follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">bits</span>(<span class="num">13.</span><span class="op">.</span><span class="num">27</span>, <span class="num">35.</span><span class="op">.</span><span class="num">80</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span>[<span class="num">12</span>]   <span class="com"># false</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span>[<span class="num">13</span>]   <span class="com"># true</span></div></div><div class="line"><div class="line-content"><span class="ide">x</span>[<span class="num">12</span>] <span class="op">=</span> <span class="ide">true</span> <span class="com"># or incl(x, 12)</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span>[<span class="num">12</span>]   <span class="com"># true</span></div></div><div class="line"><div class="line-content"><span class="ide">x</span>[<span class="num">12</span>] <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">rank</span>(<span class="num">16</span>)    <span class="com"># 3</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">select</span>(<span class="num">3</span>)   <span class="com"># 16</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">select0</span>(<span class="num">30</span>) <span class="com"># 90</span></div></div>  </code></pre>
+<h3>Int arrays</h3>
+<p>Int arrays are just integer sequences of fixed length. What distinguishes
+them by the various types <code>seq[uint64]</code>, <code>seq[uint32]</code>, <code>seq[uint16]</code>, <code>seq[uint8]</code>
+is that the integers can have any length, such as 23.</p>
+<p>They are backed by a bit array, and can be used to store many integer numbers
+of which an upper bound is known without wasting space. For instance, a sequence
+of positive numbers less that 512 can be backed by an int array where each
+number has size 9. Using a <code>seq[uint16]</code> would almost double the space
+consumption.</p>
+<p>Most sequence operations are available, but they cannot go after the initial
+capacity. Here is an example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">ints</span>(<span class="num">200</span>, <span class="num">13</span>) <span class="com"># 200 ints at most 2^13 - 1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">x</span><span class="op">.</span><span class="ide">add</span>(<span class="num">123</span>)</div></div><div class="line"><div class="line-content"><span class="ide">x</span><span class="op">.</span><span class="ide">add</span>(<span class="num">218</span>)</div></div><div class="line"><div class="line-content"><span class="ide">x</span><span class="op">.</span><span class="ide">add</span>(<span class="num">651</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span>[<span class="num">2</span>]   <span class="com"># 651</span></div></div><div class="line"><div class="line-content"><span class="ide">x</span>[<span class="num">12</span>] <span class="op">=</span> <span class="num">1234</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span>[<span class="num">12</span>]   <span class="com"># 1234</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">len</span>       <span class="com"># 13</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">capacity</span>  <span class="com"># 200</span></div></div>  </code></pre>
+<h3>RRR</h3>
+<p>The <a href="http://alexbowe.com/rrr/">RRR</a> bit vector is the first of our collections
+that is actually succinct. It consists of a bit arrays, plus two int arrays
+that stores <code>rank(i)</code> values for various <code>i</code>, at different scales.</p>
+<p>It can be created after a bit array, and allows constant time <code>rank</code> and
+logarithmic time <code>select</code> and <code>select0</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">b</span>: <span class="ide">BitArray</span> <span class="op">=</span> <span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">rrr</span>(<span class="ide">b</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">r</span><span class="op">.</span><span class="ide">rank</span>(<span class="num">123456</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">r</span><span class="op">.</span><span class="ide">select</span>(<span class="num">123456</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">r</span><span class="op">.</span><span class="ide">select0</span>(<span class="num">123456</span>)</div></div>  </code></pre>
+<p>To convince oneself that the structure really is succinct, <code>stats(rrr)</code> returns
+a data structures that shows the space taken (in bits) by the bit array, as
+well as the two auxiliary indices.</p>
+<p>  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.538.8528&amp;rep=rep1&amp;type=pdf">Reference</a></p>
+<h3>Wavelet tree</h3>
+<p>The <a href="http://alexbowe.com/wavelet-trees/">wavelet tree</a> is a tree constructed
+in the following way. An input string over a finite alphabet is given. The
+alphabet is split in two parts - the left and the right one, call them L and R.</p>
+<p>For each character of the string, we use a 1 bit to denote that the character
+belongs to R and a 0 bit to denote that it belongs to L. In this way, we
+obtain a bit sequence. The node stores the bit sequence as an RRR structures,
+and has two children: the one to the left is the wavelet tree associated to
+the substring composed by the characters in L, taken in order, and similarly
+for the right child.</p>
+<p>This structure allows to compute <code>rank(c, i)</code>, where <code>c</code> is a character in the
+alphabet, in time <code>O(log(l))</code>, and <code>select(c, i)</code> in time <code>O(log(l)log(n))</code>
+where <code>l</code> is the size of the alphabet and <code>n</code> is the size of the string.
+It also allows <code>O(log(l))</code> random access to read elements of the string.</p>
+<p>It can be used as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;ACGGTACTACGAGAGTAGCAGTTTAGCGTAGCATGCTAGCG&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">w</span> <span class="op">=</span> <span class="ide">waveletTree</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">rank</span>('A', <span class="num">20</span>)   <span class="com"># 7</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">select</span>('A', <span class="num">7</span>)  <span class="com"># 20</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span>[<span class="num">12</span>]             <span class="com"># &apos;G&apos;</span></div></div>  </code></pre>
+<p>  <a href="http://people.unipmn.it/manzini/papers/icalp06.pdf">Reference</a></p>
+<h3>Rotated strings</h3>
+<p>The next ingredient that we need it the Burrows-Wheeler transform of a string.
+It can be implemented using string rotations, so that&apos;s what we implement
+first. It turns out that this implementation is too slow for our purposes,
+but rotated strings may be useful anyway, so we left them in.</p>
+<p>A rotated strings is just a view over a string, rotated by a certain amount
+and wrapping around the end of the string. If the underlying string is a <code>var</code>,
+our implementation reuses that memory (which is then shared) to avoid the
+copy of the string. We just implement random access and printing:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span> <span class="op">=</span> <span class="str">&quot;The quick brown fox jumps around the lazy dog&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">t</span> <span class="op">=</span> <span class="ide">s</span><span class="op">.</span><span class="ide">rotate</span>(<span class="num">20</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">t</span>[<span class="num">10</span>] <span class="com"># n</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">t</span>[<span class="num">20</span>] <span class="com"># u</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">t</span>[<span class="num">18</span>] <span class="op">=</span> <span class="ide">e</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">s</span> <span class="com"># The quick brown fox jumps around the lezy dog</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">t</span> <span class="com"># jumps around the lezy dogThe quick brown fox</span></div></div>  </code></pre>
+<h3>Suffix array</h3>
+<p>The suffix array of a string is a permutation of the numbers from 0 up to the
+string length excluded. The permutation is obtained by considering, for each
+<code>i</code>, the suffix starting at <code>i</code>, and sorting these strings in lexicographical
+order. The resulting order is the suffix array.</p>
+<p>Here the suffix array is represented as an IntArray. It can be obtained as
+follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;this is a test.&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">y</span> <span class="op">=</span> <span class="ide">suffixArray</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">y</span> <span class="com"># @[7, 4, 9, 14, 8, 11, 1, 5, 2, 6, 3, 12, 13, 10, 0]</span></div></div>  </code></pre>
+<p>Sorting the indices may be a costly operation. One can use the fact that the
+suffixes of a string are a quite special collection to produce more efficient
+algorithms. Other than the sort-based one, we offer the
+<a href="http://spencer-carroll.com/the-dc3-algorithm-made-simple/">DC3 algorithm</a>.</p>
+<p>Notice that at the moment DC3 is not really optimized and may be neither
+space nor time efficient.</p>
+<p>To use an alternative algorithm, just pass an additional parameter, of type</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">SuffixArrayAlgorithm</span><span class="op">*</span> {<span class="op">.</span><span class="ide">pure</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">  <span class="ide">Sort</span>, <span class="ide">DC3</span></div></div>  </code></pre>
+<p>like this</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;this is a test.&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">y</span> <span class="op">=</span> <span class="ide">suffixArray</span>(<span class="ide">x</span>, <span class="ide">SuffixArrayAlgorithm</span><span class="op">.</span><span class="ide">DC3</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">y</span> <span class="com"># @[7, 4, 9, 14, 8, 11, 1, 5, 2, 6, 3, 12, 13, 10, 0]</span></div></div>  </code></pre>
+<p>  <a href="https://www.cs.helsinki.fi/u/tpkarkka/publications/jacm05-revised.pdf">Reference</a></p>
+<h3>Burrows-Wheeler transform</h3>
+<p>The <a href="http://michael.dipperstein.com/bwt/">Burrows-Wheeler transform</a> of a string
+is a string one character longer, together with a distinguished character.
+Once one has a suffix array <code>sa</code> for the string <code>s &amp; &apos;\0&apos;</code>, where <code>\0</code> is our
+distinguished character, the Burrows-Wheeler transform is the string which at
+the index <code>i</code> has the last character of the rotation of <code>s</code> by <code>sa[i]</code>. The
+distinguished index if the permutation of <code>\0</code>.</p>
+<p>We recall the following two facts:</p>
+<ul>
+<li>the Burrows-Wheeler transform can be inverted - the exact algorithm is
+outside the purposes of this documentation</li>
+<li>whenever a character is a good predictor for the next one (in the original
+string), the string in the Burrows-Wheeler transform tends to have many
+repeated characters, which allows to compress it by run-length encoding.</li>
+</ul>
+<p>An example of usage is this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span> <span class="op">=</span> <span class="str">&quot;The quick brown fox jumps around the lazy dog&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">t</span> <span class="op">=</span> <span class="ide">burrowsWheeler</span>(<span class="ide">s</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">u</span> <span class="op">=</span> <span class="ide">inverseBurrowsWheeler</span>(<span class="ide">t</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">t</span> <span class="com"># gskynxeed\0 l in hh otTu c uwudrrfm abp qjoooza</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">u</span> <span class="com"># The quick brown fox jumps around the lazy dog</span></div></div>  </code></pre>
+<p>Notice that for this to work we assume that <code>s</code> does not contain <code>\0</code> itself.
+We use the fact that Nim strings are not null terminated, hence <code>\0</code> is a
+valid character. Notice that printing the transformed string may not work as
+intended, since the terminal may interpret the embedded <code>\0</code> as a string
+terminator.</p>
+<p>  <a href="http://www.hpl.hp.com/techreports/Compaq-DEC/SRC-RR-124.pdf">Reference</a></p>
+<h3>FM indices</h3>
+<p>An <a href="http://alexbowe.com/fm-index/">FM index</a> for a string puts together
+essentially all the pieces that we have described so far. The index itself
+holds a walevet tree for the Burrows-Wheeler transform of the string, together
+with a small auxiliary table having the size of the string alphabet.</p>
+<p>It can be used for various purposes, but the simplest one is backward search.
+Given a pattern <code>p</code> (a small string) and possibly long string <code>s</code>, there is a
+way to search all occurrences of <code>p</code> in time <code>O(L)</code>, where <code>L</code> is the length
+of <code>p</code> - the time is independent of <code>s</code> - using an FM index for <code>s</code>.</p>
+<p>Every occurrence of <code>p</code> appears as the prefix of some rotation of <code>s</code> - hence
+all such occurrences correspond to consecutive positions into the suffix
+array for <code>s</code>. The first and last such positions can be found as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;mississippi&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span> <span class="op">=</span> <span class="str">&quot;iss&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">fm</span> <span class="op">=</span> <span class="ide">fmIndex</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">sa</span> <span class="op">=</span> <span class="ide">suffixArray</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">positions</span> <span class="op">=</span> <span class="ide">fm</span><span class="op">.</span><span class="ide">search</span>(<span class="ide">pattern</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">positions</span><span class="op">.</span><span class="ide">first</span> <span class="com"># 2</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">positions</span><span class="op">.</span><span class="ide">last</span>  <span class="com"># 3</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">j</span> <span class="kwd">in</span> <span class="ide">positions</span><span class="op">.</span><span class="ide">first</span> <span class="op">..</span> <span class="ide">positions</span><span class="op">.</span><span class="ide">last</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">i</span> <span class="op">=</span> <span class="ide">sa</span>[<span class="ide">j</span><span class="op">.</span><span class="ide">int</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">x</span><span class="op">.</span><span class="ide">rotate</span>(<span class="ide">i</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># issippimiss</span></div></div><div class="line"><div class="line-content"><span class="com"># ississippim</span></div></div>  </code></pre>
+<p>For economy, the FM index itself does not include the suffix array, as some
+applications do not require the latter. Still, it is quite frequent to need
+both; since computing the FM index requires the suffix array in any case, and
+computing the suffix array is quite costly, there is a way to get both at the
+same time. In the above example, we could write as well</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">index</span> <span class="op">=</span> <span class="ide">searchIndex</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">fm</span> <span class="op">=</span> <span class="ide">index</span><span class="op">.</span><span class="ide">fmIndex</span></div></div><div class="line"><div class="line-content">  <span class="ide">sa</span> <span class="op">=</span> <span class="ide">index</span><span class="op">.</span><span class="ide">suffixArray</span></div></div>  </code></pre>
+<p>The above type can be used to streamline search:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">index</span> <span class="op">=</span> <span class="ide">searchIndex</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">positions</span> <span class="op">=</span> <span class="ide">index</span><span class="op">.</span><span class="ide">search</span>(<span class="ide">pattern</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">positions</span> <span class="com"># @[1, 4]</span></div></div>  </code></pre>
+<p>  <a href="http://people.unipmn.it/manzini/papers/focs00draft.pdf">Reference</a></p>
+<h2>Applications</h2>
+<p>Here we describe a few applications of the above data structures, together
+with some other string utilities included in Cello.</p>
+<h3>Boyer-Moore-Horspool search</h3>
+<p>To make a comparison with naive string searching (without using indices),
+an implementation of Boyer-Moore-Horspool string searching is provided.</p>
+<p>The Boyer-Moore algorithm and variations (such as the one used here, due to
+Horspool) scan a string linearly to find a pattern, but use a precomputed table
+based on the pattern to skip more than one charachter at a time.
+The key observation is that after making a comparison for the pattern in a given
+position, one already knows that some subsequent positions will not match for
+sure, hence can be skipped. The resulting algorithm is still <code>O(n)</code> in the
+length of the string, but may perform less than <code>n</code> actual comparisons.</p>
+<p>The API mimics <code>strutils.find</code> and it is meant to be used as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;mississippi&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span> <span class="op">=</span> <span class="str">&quot;iss&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">boyerMooreHorspool</span>(<span class="ide">x</span>, <span class="ide">pattern</span>) <span class="com"># 1 (ississippi)</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">boyerMooreHorspool</span>(<span class="ide">x</span>, <span class="ide">pattern</span>, <span class="ide">start</span> <span class="op">=</span> <span class="num">2</span>)  <span class="com"># 4 (issippi)</span></div></div>  </code></pre>
+<p>  <a href="http://onlinelibrary.wiley.com/doi/10.1002/spe.4380100608/abstract">Reference</a></p>
+<h3>Levenshtein similarity</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a>
+(or edit distance) between two strings is the minimum number of insertions,
+deletions or substitutions required to change one string into the other.</p>
+<p>It is computed by <code>strutils.editDistance</code>. Here we expose a similarity measure
+derived from it, defined as <code>s = (L - e) / L</code>, where <code>L</code> is the cumulative
+length of the two strings, and <code>e</code> is the edit distance. It is a number
+between 0 and 1, which is 1 only if the two strings are equal.</p>
+<p>It is simply used as</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span> <span class="op">=</span> <span class="ide">someString</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span> <span class="op">=</span> <span class="ide">someOtherString</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span> <span class="op">=</span> <span class="ide">levenhstein</span>(<span class="ide">a</span>, <span class="ide">b</span>)</div></div>  </code></pre>
+<h3>Ratcliff-Obershelp similarity</h3>
+<p>The Levenshtein similarity is a quite crude measure of whether two strings
+resemble each other. A better measure is given by the
+<a href="https://xlinux.nist.gov/dads/HTML/ratcliffObershelp.html">Ratcliff-Obershelp similarity</a>
+which is defined as <code>s = (2 * m) / L</code>, where <code>L</code> is the cumulative
+length of the two strings, and <code>m</code> is the number of matching characters.</p>
+<p>Matching characters are defined recursively: first we find the longest common
+substring <code>lcs</code> between the two and count the number of characters of <code>lcs</code> as
+matching. Then, recursively, we compare the number of matching characters in
+the chunks to the left of <code>lcs</code> and to the right of <code>lcs</code>.</p>
+<p>For instance, when comparing <code>ALEXANDRE</code> and <code>ALEKSANDER</code>, we find the following
+sequence of longest common substrings:</p>
+<ul>
+<li>ALE</li>
+<li>AND</li>
+<li>R</li>
+</ul>
+<p>giving a Ratcliff-Obershelp similarity of <code>2 * (3 + 3 + 1) / (9 + 10).</code></p>
+<p>It is simply used as</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span> <span class="op">=</span> <span class="ide">someString</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span> <span class="op">=</span> <span class="ide">someOtherString</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span> <span class="op">=</span> <span class="ide">ratcliffObershelp</span>(<span class="ide">a</span>, <span class="ide">b</span>)</div></div>  </code></pre>
+<p>  <a href="http://collaboration.cmc.ec.gc.ca/science/rpn/biblio/ddj/Website/articles/DDJ/1988/8807/8807c/8807c.htm">Reference</a></p>
+<h3>Jaro similarity</h3>
+<p>The Jaro similarity of two strings <code>a</code> and <code>b</code> is given by</p>
+<pre>  <code>0 if m == 0
+((m / len(a)) + (m / len(b)) + ((m - t / 2) / m)) / 3 otherwise
+</code></pre>
+<p>where <code>m</code> is number of matching characters and <code>t</code> is the number of transpositions.
+Here two characters are considered matching if they are equal and their ì
+distance is less then <code>max(len(a), len(b)) / 2</code>. The substrings of <code>a</code> and <code>b</code>
+given by matching characters are permutations of each other. Characters that
+match but appear in different positions in these strings are considered transpositions.</p>
+<p>For instance, when comparing <code>ALEXANDRE</code> and <code>ALEKSANDER</code>, we find the following
+matches inside <code>a</code> and <code>b</code> respectively: <code>ALEANDRE</code>, <code>ALEANDER</code>. Hence here
+<code>m = 8</code>, <code>t = 2</code>, so that the similarity is <code>((8 / 9) + (8 / 10) + (7 / 8)) / 3</code>.</p>
+<p>  <a href="https://ilyankou.files.wordpress.com/2015/06/ib-extended-essay.pdf">Reference</a></p>
+<h3>Jaro-Winkler similarity</h3>
+<p>The Jaro-Winkler similarity of two strings is a correction to the Jaro similarity
+that favours strings which have a long common prefix. If <code>L</code> is the length of
+the common prefix of two strings and <code>J</code> is the Jaro similarity, the Jaro-Winkler
+similarity is computed as</p>
+<pre>  <code>J + p * L * (1 - J)
+</code></pre>
+<p>where <code>p</code> is a constant factor, commonly set as <code>p=0.1</code>.</p>
+<p><strong>NB</strong> The Jaro Winkler similarity can be higher than 1, unlike the other
+metrics implemented in Cello.</p>
+<h3>Approximate search</h3>
+<p>We implement a naif form of approximate search for strings. The algorithm is
+as follows: when looking for a pattern we randomly select a substring of the
+pattern whose length is a given fraction (<code>exactness</code>) of the pattern itself.
+We then search for this substring exactly in the target string. If we find it,
+we focus on a window around this match having the same length as the pattern.
+We compare the similarity of the window with the pattern itself, using one
+of the similarity functions above. If this is above a given threshold
+(<code>tolerance</code>) we accept the match and return the position of the window;
+otherwise we try with another attempt. After a certain number of attempts
+fail, we return <code>-1</code>.</p>
+<p>The algorithm is driven by the following type:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Similarity</span> {<span class="op">.</span><span class="ide">pure</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">RatcliffObershelp</span>, <span class="ide">Levenshtein</span>, <span class="ide">LongestSubstring</span>, <span class="ide">Jaro</span>, <span class="ide">JaroWinkler</span></div></div><div class="line"><div class="line-content">  <span class="ide">SearchOptions</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">exactness</span>, <span class="ide">tolerance</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">    <span class="ide">attempts</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">similarity</span>: <span class="ide">Similarity</span></div></div>  </code></pre>
+<p>and can be used like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span> <span class="op">=</span> <span class="ide">someLongString</span></div></div><div class="line"><div class="line-content">  <span class="ide">pattern</span> <span class="op">=</span> <span class="ide">someShortString</span></div></div><div class="line"><div class="line-content">  <span class="ide">index</span> <span class="op">=</span> <span class="ide">searchIndex</span>(<span class="ide">s</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">options</span> <span class="op">=</span> <span class="ide">searchOptions</span>(<span class="ide">exactness</span> <span class="op">=</span> <span class="num">0.2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">position</span> <span class="op">=</span> <span class="ide">index</span><span class="op">.</span><span class="ide">searchApproximate</span>(<span class="ide">x</span>, <span class="ide">pattern</span>, <span class="ide">options</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">position</span></div></div>  </code></pre>
+<p>The defaults are <code>exactness = 0.1</code>, <code>tolerance = 0.7</code>, <code>attempts = 30</code> and
+<code>similarity = Similarity.RatcliffObershelp</code></p>
+<h2>TODO</h2>
+<ul>
+<li>Improve DC3 algorithm</li>
+<li>More applications of suffix arrays</li>
+<li>Construct wavelet trees in threads</li>
+<li>Make use of SIMD operations to improve performance</li>
+<li>Allow data structures to work on memory-mapped files</li>
+<li>Implement assembly on top of FM indices following <a href="ftp://ftp.sanger.ac.uk/pub/resources/theses/js18/thesis.pdf">this thesis</a></li>
+</ul>
+<h1>Thanks</h1>
+<p>The logo comes from <a href="http://cliparts.co/clipart/2313124">cliparts.co</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache2
+                    </p>
+                
+
+                
+                    <p> <a href="https://andreaferretti.github.io/cello/">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">drchaos</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">security</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">binary</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">structured</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">fuzzing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">unit-testing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">coverage-guided</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">grammar-fuzzer</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mutator-based</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A powerful and easy-to-use fuzzing framework in Nim for C/C++/Obj-C targets")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install drchaos" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>drchaos</h1>
+<p>Fuzzing is a technique for automated bug detection that involves providing random inputs
+to a target program to induce crashes. This approach can increase test coverage, enabling
+the identification of edge cases and more efficient triggering of bugs.</p>
+<p>Drchaos extends the Nim interface to LLVM/Clang libFuzzer, an in-process, coverage-guided,
+and evolutionary fuzzing engine, while also introducing support for
+<a href="https://github.com/google/fuzzing/blob/master/docs/structure-aware-fuzzing.md">structured fuzzing</a>.
+To utilize this functionality, users must specify the input type as a parameter for the
+target function, and the fuzzer generates valid inputs. This process employs value
+profiling to direct the fuzzer beyond these comparisons more efficiently than relying on
+the probability of finding the exact sequence of bytes by chance.</p>
+<h2>Usage</h2>
+<p>Creating a fuzz target by defining a data type and a target function that performs
+operations and verifies if the invariants are maintained via assert conditions is usually
+an uncomplicated task for most scenarios. For more information on creating effective fuzz
+targets, please refer to
+<a href="https://github.com/google/fuzzing/blob/master/docs/good-fuzz-target.md">What makes a good fuzz target</a>
+Once the target function is defined, the <code>defaultMutator</code> can be called with that function
+as argument.</p>
+<p>A basic fuzz target, such as verifying that the software under test remains stable without
+crashing by defining a fixed-size type, can suffice:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">drchaos</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fuzzMe</span>(<span class="ide">s</span>: <span class="ide">string</span>, <span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>: <span class="ide">int32</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># The function being tested.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">a</span> <span class="op">==</span> <span class="num">0xdeadc0de&apos;i32</span> <span class="kwd">and</span> <span class="ide">b</span> <span class="op">==</span> <span class="num">0x11111111&apos;i32</span> <span class="kwd">and</span> <span class="ide">c</span> <span class="op">==</span> <span class="num">0x22222222&apos;i32</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">s</span><span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">100</span>: <span class="ide">doAssert</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fuzzTarget</span>(<span class="ide">data</span>: (<span class="ide">string</span>, <span class="ide">int32</span>, <span class="ide">int32</span>, <span class="ide">int32</span>)) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> (<span class="ide">s</span>, <span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>) <span class="op">=</span> <span class="ide">data</span></div></div><div class="line"><div class="line-content">  <span class="ide">fuzzMe</span>(<span class="ide">s</span>, <span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">defaultMutator</span>(<span class="ide">fuzzTarget</span>)</div></div>  </code></pre>
+<blockquote>
+<p><strong>WARNING</strong>: Modifying the input variable within fuzz targets is not allowed.
+If you are using ref types, you can prevent modifications by utilizing the <code>func</code> keyword
+and <code>{.experimental: &quot;strictFuncs&quot;.}</code> in your code.</p>
+</blockquote>
+<p>It is also possible to create more complex fuzz targets, such as the one shown below:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">drchaos</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">ContentNodeKind</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">P</span>, <span class="ide">Br</span>, <span class="ide">Text</span></div></div><div class="line"><div class="line-content">  <span class="ide">ContentNode</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">kind</span>: <span class="ide">ContentNodeKind</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">P</span>: <span class="ide">pChildren</span>: <span class="ide">seq</span>[<span class="ide">ContentNode</span>]</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">Br</span>: <span class="kwd">discard</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">Text</span>: <span class="ide">textStr</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">==</span>`(<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">ContentNode</span>): <span class="ide">bool</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">a</span><span class="op">.</span><span class="ide">kind</span> <span class="op">!=</span> <span class="ide">b</span><span class="op">.</span><span class="ide">kind</span>: <span class="kwd">return</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">a</span><span class="op">.</span><span class="ide">kind</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">P</span>: <span class="kwd">return</span> <span class="ide">a</span><span class="op">.</span><span class="ide">pChildren</span> <span class="op">==</span> <span class="ide">b</span><span class="op">.</span><span class="ide">pChildren</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">Br</span>: <span class="kwd">return</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">Text</span>: <span class="kwd">return</span> <span class="ide">a</span><span class="op">.</span><span class="ide">textStr</span> <span class="op">==</span> <span class="ide">b</span><span class="op">.</span><span class="ide">textStr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fuzzTarget</span>(<span class="ide">x</span>: <span class="ide">ContentNode</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Convert or translate `x` to any desired format (JSON, HMTL, binary, etc.),</span></div></div><div class="line"><div class="line-content">  <span class="com"># and then feed it into the API being tested.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">defaultMutator</span>(<span class="ide">fuzzTarget</span>)</div></div>  </code></pre>
+<p>Using drchaos, it is possible to generate millions of inputs and execute fuzzTarget within
+just a few seconds. More elaborate examples, such as fuzzing a graph library, can be
+located in the <a href="examples/">examples</a> directory.</p>
+<p>It is critical to define a <code>==</code> proc for the input type. Overloading
+<code>proc default(_: typedesc[T]): T</code> can also be advantageous, especially when <code>nil</code> is not a
+valid value for <code>ref</code>.</p>
+<h3>Needed config</h3>
+<p>To compile the fuzz target, it is recommended to use at least the following flags:
+<code>--cc:clang -d:useMalloc -t:&quot;-fsanitize=fuzzer,address,undefined&quot; -l:&quot;-fsanitize=fuzzer,address,undefined&quot; -d:nosignalhandler --nomain:on -g</code>.
+Additionally, it is recommended to use <code>--mm:arc|orc</code> when possible.</p>
+<p>Sample nim.cfg and .nimble files can be found in the <a href="tests/nim.cfg">tests/</a> directory and
+<a href="https://github.com/planetis-m/fuzz-playground/blob/master/playground.nimble">this repository</a>, respectively.</p>
+<p>Alternatively, drchaos offers structured input for fuzzing using <a href="https://github.com/status-im/nim-testutils">nim-testutils</a>. This includes a convenient <a href="https://github.com/status-im/nim-testutils/blob/master/testutils/readme.md">testrunner</a>.</p>
+<h3>Post-processors</h3>
+<p>In some cases, it may be necessary to modify the randomized input to include specific
+values or create dependencies between certain fields. To support this functionality,
+drchaos offers a post-processing step that runs on compound types like object, tuple, ref,
+seq, string, array, and set. This step is only executed on these types for performance and
+clarity purposes, with distinct types being the exception.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">postProcess</span>(<span class="ide">x</span>: <span class="kwd">var</span> <span class="ide">ContentNode</span>; <span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">Rand</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">x</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">Text</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">.</span><span class="ide">textStr</span> <span class="op">=</span> <span class="str">&quot;The man the professor the student has studies Rome.&quot;</span></div></div>  </code></pre>
+<h3>Custom mutator</h3>
+<p>The <code>defaultMutator</code> is a convenient way to generate and mutate inputs for a given
+fuzz target. However, if more fine-grained control is needed, the <code>customMutator</code>
+can be used. With <code>customMutator</code>, the mutation procedure can be customized to
+perform specific actions, such as uncompressing a <code>seq[byte]</code> before calling
+<code>runMutator</code> on the raw data, and then compressing the output again.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myTarget</span>(<span class="ide">x</span>: <span class="ide">seq</span>[<span class="ide">byte</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">data</span> <span class="op">=</span> <span class="ide">uncompress</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># ...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myMutator</span>(<span class="ide">x</span>: <span class="kwd">var</span> <span class="ide">seq</span>[<span class="ide">byte</span>]; <span class="ide">sizeIncreaseHint</span>: <span class="ide">Natural</span>; <span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">Rand</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">data</span> <span class="op">=</span> <span class="ide">uncompress</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">runMutator</span>(<span class="ide">data</span>, <span class="ide">sizeIncreaseHint</span>, <span class="ide">r</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">x</span> <span class="op">=</span> <span class="ide">compress</span>(<span class="ide">data</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">customMutator</span>(<span class="ide">myTarget</span>, <span class="ide">myMutator</span>)</div></div>  </code></pre>
+<h3>User-defined mutate procs</h3>
+<p>Distinct types can be used to provide a mutate overload for fields with unique values or
+to restrict the search space. For example, it is possible to define a distinct type for
+file signatures or other specific values that may be of interest.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Inside the library being fuzzed</span></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">runFuzzTests</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">ClientId</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> `<span class="op">==</span>`(<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">ClientId</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">borrow</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">ClientId</span> <span class="op">=</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Inside a test file</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">drchaos</span><span class="op">/</span><span class="ide">mutator</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">idA</span> <span class="op">=</span> <span class="num">0.</span><span class="ide">ClientId</span></div></div><div class="line"><div class="line-content">  <span class="ide">idB</span> <span class="op">=</span> <span class="num">2.</span><span class="ide">ClientId</span></div></div><div class="line"><div class="line-content">  <span class="ide">idC</span> <span class="op">=</span> <span class="num">4.</span><span class="ide">ClientId</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mutate</span>(<span class="ide">value</span>: <span class="kwd">var</span> <span class="ide">ClientId</span>; <span class="ide">sizeIncreaseHint</span>: <span class="ide">int</span>; <span class="ide">enforceChanges</span>: <span class="ide">bool</span>; <span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">Rand</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Call `random.rand()` to return a new value.</span></div></div><div class="line"><div class="line-content">  <span class="ide">repeatMutate</span>(<span class="ide">r</span><span class="op">.</span><span class="ide">sample</span>([<span class="ide">idA</span>, <span class="ide">idB</span>, <span class="ide">idC</span>]))</div></div>  </code></pre>
+<p>The <code>drchaos/mutator</code> module exports mutators for every supported type to aid in the
+creation of mutate functions.</p>
+<h3>User-defined serializers</h3>
+<p>User overloads should follow the following <code>proc</code> signatures:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fromData</span>(<span class="ide">data</span>: <span class="ide">openArray</span>[<span class="ide">byte</span>]; <span class="ide">pos</span>: <span class="kwd">var</span> <span class="ide">int</span>; <span class="ide">output</span>: <span class="kwd">var</span> <span class="ide">T</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">toData</span>(<span class="ide">data</span>: <span class="kwd">var</span> <span class="ide">openArray</span>[<span class="ide">byte</span>]; <span class="ide">pos</span>: <span class="kwd">var</span> <span class="ide">int</span>; <span class="ide">input</span>: <span class="ide">T</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">byteSize</span>(<span class="ide">x</span>: <span class="ide">T</span>): <span class="ide">int</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>} <span class="com"># The amount of memory that the serialized type will occupy, measured in bytes.</span></div></div>  </code></pre>
+<p>The need for this arises only in the case of objects that include raw pointers. To address
+this, <code>drchaos/common</code> offers read/write procedures to simplify the process.</p>
+<p>It is necessary to define the <code>mutate</code>, <code>default</code> and <code>==</code> procedures. For container
+types, it is also necessary to define <code>mitems</code> or <code>mpairs</code> iterators.</p>
+<h3>Best practices and considerations</h3>
+<ul>
+<li>
+<p>Avoid using <code>echo</code> in a fuzz target as it can significantly slow down the execution speed.</p>
+</li>
+<li>
+<p>Prefer using <code>-d:danger</code> for maximum performance, but ensure that your code is free from
+undefined behavior and does not rely on any assumptions that may break in unexpected ways.</p>
+</li>
+<li>
+<p>Once you have identified a crash, you can recompile the program with <code>-d:debug</code> and pass the
+crashing test case as a parameter to further investigate the cause of the crash.</p>
+</li>
+<li>
+<p>Use <code>debugEcho(x)</code> in a target to print the input that caused the crash, which can be
+helpful in debugging and reproducing the issue.</p>
+</li>
+<li>
+<p>Although disabling sanitizers may improve performance, it is not recommended as
+AddressSanitizer can help catch memory errors and undefined behavior that may lead to
+crashes or other bugs.</p>
+</li>
+</ul>
+<h3>What&apos;s not supported</h3>
+<ul>
+<li>Polymorphic types do not have serialization support.</li>
+<li>References with cycles are not supported. However, a .noFuzz custom pragma will be added soon for cursors.</li>
+<li>Object variants only work with the latest memory management model, which is <code>--mm:arc|orc</code>.</li>
+</ul>
+<h2>Advantages of using drchaos for fuzzing</h2>
+<p>drchaos offers a number of advantages over frameworks based on
+<a href="https://github.com/google/fuzzing/blob/master/docs/split-inputs.md">FuzzDataProvider</a>,
+which  often have difficulty handling nested dynamic types. For a more detailed
+explanation of these issues, you can read an article by the author of Fuzzcheck, available
+at the following link: <a href="https://github.com/loiclec/fuzzcheck-rs/blob/main/articles/why_not_bytes.md">https://github.com/loiclec/fuzzcheck-rs/blob/main/articles/why_not_bytes.md</a></p>
+<h2>Bugs discovered with the assistance of drchaos</h2>
+<p>The drchaos framework has helped discover various bugs in software projects. Here are some
+examples of bugs that were found in the Nim reference implementation with the help of
+drchaos:</p>
+<ul>
+<li>Use-after-free bugs in object variants (https://github.com/nim-lang/Nim/issues/20305)</li>
+<li>OpenArray on an empty sequence triggers undefined behavior (https://github.com/nim-lang/Nim/issues/20294)</li>
+</ul>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. These files may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-drchaos">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimfm</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">machine-learning</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">factorization-machine</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A library for factorization machines in Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimfm" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nimfm</h1>
+<p>A library for factorization machines in <a href="https://nim-lang.org/">Nim</a>.</p>
+<p>  <a href="https://github.com/neonnnnn/nimfm/actions">    <img src="https://github.com/neonnnnn/nimfm/workflows/Build/badge.svg" style="max-width: 100%;" alt="Actions Status" />  </a></p>
+<p>Factorization machines (FMs)[1,2] are machine learning models using second-order feature combinations (e.g., x1 * x2, x2 * x5) efficiently.</p>
+<p>nimfm provides</p>
+<ul>
+<li>Not-only second-order but also higher-order factorization machines [3].</li>
+<li>Coordinate descent (a.k.a alternative least squares) solver.</li>
+<li>Stochastic gradient descent solver with some step-size scheduling methods [4] and AdaGrad solver [5].</li>
+<li>Greedy coordinate descent [6] and Hazan&apos;s (Frank-Wolfe) algorithm [7] (with some heuristics) solvers for convex factorization machines.</li>
+<li>Some sparse regularizers [8,9,10,11] for feature selection and feature interaction selection, and various optimizers for such regularizers [11,12,13,14].</li>
+<li>Field-aware factorization machines [15] and AdaGrad/SGD solver for them.</li>
+<li>Various loss functions: Squared, Huber, SquaredHinge, and Logistic.</li>
+<li>Binary file for end users.</li>
+</ul>
+<h2>Data format</h2>
+<h3>For <code>FactorizationMachine</code> and <code>ConvexFactorizationMachine</code></h3>
+<p>nimfm uses its own data type for datasets, <code>CSRDataset</code> and <code>CSCDataset</code>, and provides procs for loading <strong><a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/">libsvm</a>/<a href="http://svmlight.joachims.org/">svmlight</a> format</strong> file as such datasets.
+<code>CSRDataset</code> is for <code>SGD</code>, <code>Adagrad</code>, <code>PSGD</code>, <code>Katyusha</code>, <code>PGD</code>, <code>MBPSGD</code>, <code>FISTA</code> and <code>NMAPGD</code> solvers.
+<code>CSCDataset</code> is for <code>CD</code>, <code>GreedyCD</code>, <code>Hazan</code>, <code>PCD</code>, and <code>PBCD</code> solvers.</p>
+<p>In addition, nimfm provides binary data formats: <code>StreamCSRDataset</code> and <code>StreamCSCDataset</code>.
+They have only parts of a dataset in main memory and therefore are useful for a very large-scale dataset.
+<code>convertSVMLightFile</code> converts a svmlight format file to a <code>StreamCSRDataset</code> format file.
+<code>transposeFile</code> converts a <code>StreamCSRDataset</code> format file to a <code>StreamCSCDataset</code> format file.</p>
+<p>The two-dimensional sequence <code>seq[seq[float64]]</code> can be easily transformed to such datasets by <code>toCSR</code> and <code>toCSC</code>.</p>
+<h3>For <code>FieldAwareFactorizationMachine</code></h3>
+<p>For field-aware factorization machines, nimfm provides <code>CSRFieldDataset</code>, <code>CSCFieldDataset</code>, and procs for loading <strong><a href="https://www.csie.ntu.edu.tw/~cjlin/libffm/">libffm</a> format</strong> file as such datasets.
+Binary formats for field-aware datasets, <code>StreamCSRFieldDataset</code> and <code>StreamCSCFieldDataset</code>, are also supported.
+Note that currently (version 0.3.0) nimfm provides no solver using <code>CSCFieldDataset</code>.</p>
+<h2>Sparse regularizers</h2>
+<p>nimfm provides some sparse regularizers [8,9,10,11] and various optimizers for such regularizers [11,12,13,14].
+The following table shows whether each optimizer can be used for each regularizer or not.</p>
+<table>
+<thead>
+<tr>
+<th>Optimizer \ Regularizer</th>
+<th><code>L1</code> [8]</th>
+<th><code>L21</code> [9,10]</th>
+<th><code>SquaredL12</code> [11]</th>
+<th><code>SquaredL21</code> [11]</th>
+<th><code>OmegaTI</code> [11]</th>
+<th><code>OmegaCS</code> [11]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PCD</code> [11]</td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>PBCD</code> [11]</td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>  <strong>Yes</strong></td>
+</tr>
+<tr>
+<td>  <code>PGD</code></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>FISTA</code> [12]</td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>NMAPGD</code> [13]</td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>  <code>PSGD</code></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>MBPSGD</code> (MB = MiniBatch)</td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>Katyusha</code> [14]</td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>  <strong>Yes</strong></td>
+<td>No</td>
+<td>No</td>
+</tr></tbody></table>
+<p><code>L21</code>, <code>SquaredL21</code>, and <code>OmegaCS</code> are for feature selection and others are for feature interaction selection.
+Note that <code>PSGD</code> for <code>SquaredL12</code> and <code>SquaredL21</code> might be slow when a dataset is sparse.</p>
+<h2>Multi-threading</h2>
+<p>Currently (version 0.3.0), <code>SGD</code> and <code>AdaGrad</code> solvers for <code>FactorizationMachine</code> and <code>FieldAwareFactorizationMachine</code> can run with multi-threading.
+They update model parameters <strong>asynchronously</strong>, so their results are different from those of single-thearding version.</p>
+<h2>Installation for Nim users</h2>
+<p>Install by <a href="https://github.com/nim-lang/nimble/">nimble</a>:</p>
+<pre>  <code>nimble install nimfm
+</code></pre>
+<h2>Installation for end users</h2>
+<ol>
+<li>
+<p>Download the source codes by</p>
+<p>git clone https://github.com/neonnnnn/nimfm.git</p>
+</li>
+<li>
+<p>Make:</p>
+<p>nimble make</p>
+</li>
+</ol>
+<p>Then, <code>nimfm</code>, <code>nimfm_cfm</code>, and <code>nimfm_sparsefm</code> binary will be created in the ./bin directory.
+<code>nimfm</code> is for conventional factorization machines, <code>nimfm_cfm</code> is for convex factorization machines, and <code>nimfm_sparsefm</code> is for factorization machines with sparse regularization.
+<code>./bin/[binary-name] --help</code> shows the usage.</p>
+<h2>How to use nimfm?</h2>
+<p>Please see examples at <code>benchmarks</code> directory.
+If you are familiar with <strong>  <a href="https://scikit-learn.org/stable/">scikit-learn</a></strong>, you probably will be able to use nimfm well.</p>
+<h2>References</h2>
+<ol>
+<li>
+<p>S. Rendle. Factorization machines. In ICDM, pp. 995--1000, 2010.</p>
+</li>
+<li>
+<p>S. Rendle. Factorization machines with libfm. ACM Transactions on Intelligent Systems and Technology, 3(3):57--78, 2012.</p>
+</li>
+<li>
+<p>M. Blondel, A. Fujino, N. Ueda, M. Ishihata. Higher-order factorization machines. In NeurIPS, pp. 3351--3359, 2016.</p>
+</li>
+<li>
+<p>L. Bottou. Stochastic gradient descent tricks. Neural Networks, Tricks of the Trade, Reloaded, pp. 430–445, Lecture Notes in Computer Science (LNCS 7700), Springer, 2012.</p>
+</li>
+<li>
+<p>J. Duchi, E. Hazan, and Y. Singer. Adaptive subgradient methods for online learning and stochastic optimization. Journal of Machine Learning Research, 12(Jul):2121-–2159, 2011.</p>
+</li>
+<li>
+<p>M. Blondel, A. Fujino, and N. Ueda. Convex factorization machines. In ECML-PKDD, pp. 19--35, 2015.</p>
+</li>
+<li>
+<p>M. Yamada, W. Lian, A. Goyal, J. Chen, K. Wimalawarne, S. A. Khan, S. Kaski, H. Mamitsuka, and Y. Chang. Convex factorization machine for toxicogenomics prediction. In KDD, pp. 1215--1224, 2017.</p>
+</li>
+<li>
+<p>Z. Pan, E. Chen, Q. Liu, T. Xu, H. Ma, and H. Lin. Sparse factorization machines for click-through rate prediction. In ICDM, pp. 400--409, 2016.</p>
+</li>
+<li>
+<p>J Xu, K Lin, P. Tan, and J. Zhou. Synergies that matter: Efficient interaction selection via sparse factorization machine. In SDM, pp. 1008-–0116, 2016.</p>
+</li>
+<li>
+<p>H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee. Meta-graph based recommendation fusion over heterogeneous information networks. In KDD, pp. 635–-644, 2017</p>
+</li>
+<li>
+<p>K. Atarashi, S. Oyama, and M. Kurihara. Factorization machines with regularization for sparse feature interactions. https://arxiv.org/abs/2010.09225</p>
+</li>
+<li>
+<p>A. Beck and M. Teboulle. A fast iterative shrinkage-thresholding algorithm for linear inverse problems. SIAM Journal on Imaging Sciences, 2(1):183-–202, 2009.</p>
+</li>
+<li>
+<p>H. Li and Z. Lin. Accelerated proximal gradient methods for nonconvex programming. In NeurIPS, pp. 379-–387, 2015.</p>
+</li>
+<li>
+<p>Z. Allen-Zhu. Katyusha: The first direct acceleration of stochastic gradient methods. Journal of Machine Learning Research, 18(1):8194–-8244, 2017.</p>
+</li>
+<li>
+<p>Y. Juan, Y. Zhuang, W-S. Chin, and C-J. Lin: Field-aware factorization machines for CTR prediction. In SIGIR, pp. 43--50, 2016.</p>
+</li>
+</ol>
+<h2>Authors</h2>
+<ul>
+<li>Kyohei Atarashi, 2020-present</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/neonnnnn/nimfm">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

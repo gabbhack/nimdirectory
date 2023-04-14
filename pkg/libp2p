@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">libp2p</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">networking</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">libp2p</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ipfs</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ethereum</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("libp2p implementation in Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install libp2p" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1 align="center">
+  <a href="https://libp2p.io">  <img src="./.assets/full-logo.svg?raw=true" style="max-width: 100%;" width="250" alt="nim-libp2p logo" /></a>
+</h1>
+<h3 align="center">The <a href="https://nim-lang.org/">Nim</a> implementation of the <a href="https://libp2p.io/">libp2p</a> Networking Stack.</h3>
+<p align="center">
+<a href="https://github.com/status-im/nim-libp2p/actions">  <img src="https://github.com/status-im/nim-libp2p/actions/workflows/ci.yml/badge.svg" style="max-width: 100%;" /></a>
+<a href="https://codecov.io/gh/status-im/nim-libp2p">  <img src="https://codecov.io/gh/status-im/nim-libp2p/branch/master/graph/badge.svg?token=UR5JRQ249W" style="max-width: 100%;" /></a>
+</p>
+<p align="center">
+<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" /></a>
+<img src="https://img.shields.io/badge/nim-%3E%3D1.2.0-orange.svg?style=flat-square" style="max-width: 100%;" />
+</p>
+<h1>Table of Contents</h1>
+<ul>
+<li>  <a href="#background">Background</a></li>
+<li>  <a href="#install">Install</a></li>
+<li>  <a href="#getting-started">Getting Started</a></li>
+<li>  <a href="#modules">Modules</a></li>
+<li>  <a href="#users">Users</a></li>
+<li>  <a href="#stability">Stability</a></li>
+<li><a href="#development">Development</a>
+<ul>
+<li>  <a href="#contribute">Contribute</a></li>
+<li>  <a href="#contributors">Contributors</a></li>
+<li>  <a href="#core-maintainers">Core Maintainers</a></li>
+</ul>
+</li>
+<li>  <a href="#license">License</a></li>
+</ul>
+<h2>Background</h2>
+<p>libp2p is a <a href="https://en.wikipedia.org/wiki/Peer-to-peer">Peer-to-Peer</a> networking stack, with <a href="https://github.com/libp2p/libp2p#implementations">implementations</a> in multiple languages derived from the same <a href="https://github.com/libp2p/specs">specifications.</a></p>
+<p>Building large scale peer-to-peer systems has been complex and difficult in the last 15 years and libp2p is a way to fix that. It&apos;s striving to be a modular stack, with sane and secure defaults, useful protocols, while remain open and extensible.
+This implementation in native Nim, relying on <a href="https://github.com/status-im/nim-chronos">chronos</a> for async. It&apos;s used in production by a few <a href="#users">projects</a></p>
+<p>Learn more about libp2p at <a href="https://libp2p.io">  <strong>libp2p.io</strong></a> and follow libp2p&apos;s documentation <a href="https://docs.libp2p.io">  <strong>docs.libp2p.io</strong></a>.</p>
+<h2>Install</h2>
+<p>  <strong>Prerequisite</strong></p>
+<ul>
+<li>  <a href="https://nim-lang.org/install.html">Nim</a></li>
+</ul>
+<pre>  <code>nimble install libp2p
+</code></pre>
+<h2>Getting Started</h2>
+<p>You&apos;ll find the nim-libp2p documentation <a href="https://status-im.github.io/nim-libp2p/docs/">here</a>.</p>
+<p><strong>Go Daemon:</strong>
+Please find the installation and usage intructions in <a href="examples/go-daemon/daemonapi.md">daemonapi.md</a>.</p>
+<h2>Modules</h2>
+<p>List of packages modules implemented in nim-libp2p:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <strong>Libp2p</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/switch.nim">libp2p</a></td>
+<td>The core of the project</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/connmanager.nim">connmanager</a></td>
+<td>Connection manager</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/identify.nim">identify / push identify</a></td>
+<td><a href="https://docs.libp2p.io/concepts/fundamentals/protocols/#identify">Identify</a> protocol</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/ping.nim">ping</a></td>
+<td><a href="https://docs.libp2p.io/concepts/fundamentals/protocols/#ping">Ping</a> protocol</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/daemon/daemonapi.nim">libp2p-daemon-client</a></td>
+<td><a href="https://github.com/libp2p/go-libp2p-daemon">go-daemon</a> nim wrapper</td>
+</tr>
+<tr>
+<td>  <a href="tests/testinterop.nim">interop-libp2p</a></td>
+<td>Interop tests</td>
+</tr>
+<tr>
+<td>  <strong>Transports</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/transports/tcptransport.nim">libp2p-tcp</a></td>
+<td>TCP transport</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/transports/wstransport.nim">libp2p-ws</a></td>
+<td>WebSocket &amp; WebSocket Secure transport</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/transports/tortransport.nim">libp2p-tor</a></td>
+<td>Tor Transport</td>
+</tr>
+<tr>
+<td>  <strong>Secure Channels</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/secure/secio.nim">libp2p-secio</a></td>
+<td>Secio secure channel</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/secure/noise.nim">libp2p-noise</a></td>
+<td><a href="https://docs.libp2p.io/concepts/secure-comm/noise/">Noise</a> secure channel</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/secure/plaintext.nim">libp2p-plaintext</a></td>
+<td>Plain Text for development purposes</td>
+</tr>
+<tr>
+<td>  <strong>Stream Multiplexers</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/muxers/mplex/mplex.nim">libp2p-mplex</a></td>
+<td><a href="https://github.com/libp2p/specs/tree/master/mplex">MPlex</a> multiplexer</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/muxers/yamux/yamux.nim">libp2p-yamux</a></td>
+<td><a href="https://docs.libp2p.io/concepts/multiplex/yamux/">Yamux</a> multiplexer</td>
+</tr>
+<tr>
+<td>  <strong>Data Types</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/peerid.nim">peer-id</a></td>
+<td>  <a href="https://docs.libp2p.io/concepts/fundamentals/peers/#peer-id">Cryptographic identifiers</a></td>
+</tr>
+<tr>
+<td>  <a href="libp2p/peerstore.nim">peer-store</a></td>
+<td>  <a href="https://docs.libp2p.io/concepts/fundamentals/peers/#peer-store">&quot;Address book&quot; of known peers</a></td>
+</tr>
+<tr>
+<td>  <a href="libp2p/multiaddress.nim">multiaddress</a></td>
+<td>  <a href="https://github.com/multiformats/multiaddr">Composable network addresses</a></td>
+</tr>
+<tr>
+<td>  <a href="libp2p/signed_envelope.nim">signed envelope</a></td>
+<td>  <a href="https://github.com/libp2p/specs/blob/master/RFC/0002-signed-envelopes.md">Signed generic data container</a></td>
+</tr>
+<tr>
+<td>  <a href="libp2p/routing_record.nim">routing record</a></td>
+<td>  <a href="https://github.com/libp2p/specs/blob/master/RFC/0003-routing-records.md">Signed peer dialing informations</a></td>
+</tr>
+<tr>
+<td>  <a href="libp2p/discovery/discoverymngr.nim">discovery manager</a></td>
+<td>Discovery Manager</td>
+</tr>
+<tr>
+<td>  <strong>Utilities</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/crypto">libp2p-crypto</a></td>
+<td>Cryptographic backend</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/crypto/secp.nim">libp2p-crypto-secp256k1</a></td>
+<td />
+</tr>
+<tr>
+<td>  <strong>Pubsub</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/pubsub/pubsub.nim">libp2p-pubsub</a></td>
+<td>Pub-Sub generic interface</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/pubsub/floodsub.nim">libp2p-floodsub</a></td>
+<td>FloodSub implementation</td>
+</tr>
+<tr>
+<td>  <a href="libp2p/protocols/pubsub/gossipsub.nim">libp2p-gossipsub</a></td>
+<td><a href="https://docs.libp2p.io/concepts/publish-subscribe/">GossipSub</a> implementation</td>
+</tr></tbody></table>
+<h2>Users</h2>
+<p>nim-libp2p is used by:</p>
+<ul>
+<li><a href="https://github.com/status-im/nimbus-eth2">Nimbus</a>, an Ethereum client</li>
+<li><a href="https://github.com/status-im/nwaku">nwaku</a>, a decentralized messaging application</li>
+<li><a href="https://github.com/status-im/nim-codex">nim-codex</a>, a decentralized storage application</li>
+<li>(open a pull request if you want to be included here)</li>
+</ul>
+<h2>Stability</h2>
+<p>nim-libp2p has been used in production for over a year in high-stake scenarios, so its core is considered stable.
+Some modules are more recent and less stable.</p>
+<p>The versioning follows <a href="https://semver.org/">semver</a>, with some additions:</p>
+<ul>
+<li>Some of libp2p procedures are marked as <code>.public.</code>, they will remain compatible during each <code>MAJOR</code> version</li>
+<li>The rest of the procedures are considered internal, and can change at any <code>MINOR</code> version (but remain compatible for each new <code>PATCH</code>)</li>
+</ul>
+<p>We aim to be compatible at all time with at least 2 Nim <code>MINOR</code> versions, currently <code>1.2 &amp; 1.6</code></p>
+<h2>Development</h2>
+<p>Clone and Install dependencies:</p>
+<pre>  <code class="language-sh">git clone https://github.com/status-im/nim-libp2p
+cd nim-libp2p
+# to use dependencies computed by nimble
+nimble install -dy
+# OR to install the dependencies versions used in CI
+nimble install_pinned
+</code></pre>
+<p>Run unit tests:</p>
+<pre>  <code class="language-sh"># run all the unit tests
+nimble test
+</code></pre>
+<p>This requires the go daemon to be available. To only run native tests, use <code>nimble testnative</code>.
+Or use <code>nimble tasks</code> to show all available tasks.</p>
+<h3>Contribute</h3>
+<p>The libp2p implementation in Nim is a work in progress. We welcome contributors to help out! Specifically, you can:</p>
+<ul>
+<li>Go through the modules and <strong>check out existing issues</strong>. This would be especially useful for modules in active development. Some knowledge of IPFS/libp2p may be required, as well as the infrastructure behind it.</li>
+<li><strong>Perform code reviews</strong>. Feel free to let us know if you found anything that can a) speed up the project development b) ensure better quality and c) reduce possible future bugs.</li>
+<li><strong>Add tests</strong>. Help nim-libp2p to be more robust by adding more tests to the <a href="tests/">tests folder</a>.</li>
+</ul>
+<p>The code follows the <a href="https://status-im.github.io/nim-style-guide/">Status Nim Style Guide</a>.</p>
+<h3>Contributors</h3>
+<p>  <a href="https://github.com/status-im/nim-libp2p/graphs/contributors">    <img src="https://contrib.rocks/image?repo=status-im/nim-libp2p" style="max-width: 100%;" alt="nim-libp2p contributors" />  </a></p>
+<h3>Core Maintainers</h3>
+<table>
+  <tbody>
+    <tr>
+      <td align="center">  <a href="https://github.com/Menduist">    <img src="https://avatars.githubusercontent.com/u/13471753?v=4?s=100" style="max-width: 100%;" width="100px;" alt="Tanguy" />    <br />    <sub>      <b>Tanguy (Menduist)</b>    </sub>  </a></td>
+      <td align="center">  <a href="https://github.com/lchenut">    <img src="https://avatars.githubusercontent.com/u/11214565?v=4?s=100" style="max-width: 100%;" width="100px;" alt="Ludovic" />    <br />    <sub>      <b>Ludovic</b>    </sub>  </a></td>
+      <td align="center">  <a href="https://github.com/diegomrsantos">    <img src="https://avatars.githubusercontent.com/u/7316595?v=4?s=100" style="max-width: 100%;" width="100px;" alt="Diego" />    <br />    <sub>      <b>Diego</b>    </sub>  </a></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Compile time flags</h3>
+<p>Enable expensive metrics (ie, metrics with per-peer cardinality):</p>
+<pre>  <code class="language-bash">nim c -d:libp2p_expensive_metrics some_file.nim
+</code></pre>
+<p>Set list of known libp2p agents for metrics:</p>
+<pre>  <code class="language-bash">nim c -d:libp2p_agents_metrics -d:KnownLibP2PAgents=nimbus,lighthouse,lodestar,prysm,teku some_file.nim
+</code></pre>
+<p>Specify gossipsub specific topics to measure in the metrics:</p>
+<pre>  <code class="language-bash">nim c -d:KnownLibP2PTopics=topic1,topic2,topic3 some_file.nim
+</code></pre>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. These files may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-libp2p">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

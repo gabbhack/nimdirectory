@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">awk</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">awk</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim for awk programmers")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install awk" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim for awk programmers</h1>
+<p>A library of GNU awk functions for nim. Standard awk library functions written in and for nim.</p>
+<ul>
+<li>Program in nim using the familair regex-enabled awk toolset.</li>
+<li>For nim programers, a small set of powerful regex tools from the awk world.</li>
+<li>Convert GNU awk scripts to C (and binary executable) without coding in C by using the nim macro language.</li>
+</ul>
+<p>Awk and nim can look very similair. Example awk program that prints the word &quot;text&quot;:</p>
+<pre>  <code class="language-awk">BEGIN{
+  str = &quot;This is &lt;a href=\&quot;my text\&quot;&gt;here&lt;/a&gt;&quot;
+  if(match(str, &quot;&lt;a href=\&quot;my text\&quot;&gt;&quot;, dest)) {
+    split(dest[0], arr, &quot;\&quot;&quot;)
+    if(arr[2] ~ /text/)
+      print substr(arr[2], 4, length(arr[2]))
+  }
+}
+</code></pre>
+<p>nim version:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">awk</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;This is &lt;a href=</span>\"<span class="str">my text</span>\"<span class="str">&gt;here&lt;/a&gt;&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span>(<span class="ide">match</span>(<span class="ide">str</span>, <span class="str">&quot;&lt;a href=</span>\"<span class="str">my text</span>\"<span class="str">&gt;&quot;</span>, <span class="ide">dest</span>) <span class="op">&gt;</span> <span class="num">0</span>):   </div></div><div class="line"><div class="line-content">  <span class="ide">awk</span><span class="op">.</span><span class="ide">split</span>(<span class="ide">dest</span>, <span class="ide">arr</span>, <span class="str">&quot;</span>\"<span class="str">&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span>(<span class="ide">arr</span>[<span class="num">1</span>] <span class="op">~</span> <span class="str">&quot;text&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">awk</span><span class="op">.</span><span class="ide">substr</span>(<span class="ide">arr</span>[<span class="num">1</span>], <span class="num">3</span>, <span class="ide">len</span>(<span class="ide">arr</span>[<span class="num">1</span>]) <span class="op">-</span> <span class="num">1</span>)</div></div>  </code></pre>
+<p>Nim compiles to C source, which compiles to a standalone binary executable using gcc. The nim compile (c) and run (-r) command:</p>
+<pre>  <code>nim c -r &quot;test.nim&quot;
+text
+</code></pre>
+<h1>Versions</h1>
+<p>Most of the nim procs in this package deal with awk&apos;s regex functionality.</p>
+<p>Two versions are included: awk.nim uses the &quot;re&quot; module and awknre.nim uses the &quot;nre&quot; module.</p>
+<p>The re module is significantly faster and recommended, but awknre.nim is included for backwards compat since the first version of this package used it and there may be some differences in regex options.</p>
+<h1>Functions</h1>
+<h2>~ and !~</h2>
+<p>Emulate awk&apos;s ~ and !~ commands which can be thought of as a regex-enabled version of contains() in nim.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">~</span>`<span class="op">*</span>(<span class="ide">source</span>, <span class="ide">pattern</span>: <span class="ide">string</span>): <span class="ide">bool</span> </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">!~</span>`<span class="op">*</span>(<span class="ide">source</span>, <span class="ide">pattern</span>: <span class="ide">string</span>): <span class="ide">bool</span></div></div>  </code></pre>
+<p>Nim does not have an equivilent of awk&apos;s // to signify a text is regex. Therefore all text to the right of ~ is treated as regex. To do a literal
+string test use == instead of ~</p>
+<p>Use grouping () when building a string with &apos;&amp;&apos;, for example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">s</span> <span class="op">~</span> (<span class="str">&quot;^&quot;</span> <span class="op">&amp;</span> <span class="ide">re</span> <span class="op">&amp;</span> <span class="str">&quot;$&quot;</span>):</div></div>  </code></pre>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">awk</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="str">&quot;george&quot;</span> <span class="op">~</span> <span class="str">&quot;ge.*?rge&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;true&quot;</span> <span class="com">#=&gt; true</span></div></div>  </code></pre>
+<h2>&gt;* and &gt;&gt;</h2>
+<p>Write text to a file (append or overwrite)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">&gt;*</span>`(<span class="ide">text</span>, <span class="ide">filename</span>: <span class="ide">string</span>): <span class="ide">bool</span></div></div>  </code></pre>
+<p>Write <code>text</code> to <code>filename</code>, overwrite previous content. Close on finish.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">&gt;&gt;</span>`(<span class="ide">text</span>, <span class="ide">filename</span>: <span class="ide">string</span>): <span class="ide">bool</span></div></div>  </code></pre>
+<p>Append <code>text</code> to <code>filename</code>. Close on finish.</p>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="str">&quot;Hello&quot;</span> <span class="op">&amp;</span> <span class="str">&quot; world&quot;</span> <span class="op">&gt;*</span> <span class="str">&quot;/tmp/test.txt&quot;</span></div></div><div class="line"><div class="line-content"><span class="str">&quot;Hello&quot;</span> <span class="op">&gt;*</span> <span class="str">&quot;/dev/stderr&quot;</span></div></div>  </code></pre>
+<p>Note that awk&apos;s &quot;&gt;&quot; is refactored as &quot;&gt;*&quot; to avoid conflicting with nim&apos;s &quot;&gt;&quot;</p>
+<h2>match</h2>
+<p>Find regex <code>pattern</code> in <code>source</code> and optionally store result in <code>dest</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">match</span>(<span class="ide">source</span>: <span class="ide">string</span>, <span class="ide">pattern</span>: <span class="ide">string</span> [, <span class="ide">dest</span>: <span class="ide">string</span>]): <span class="ide">int</span></div></div>  </code></pre>
+<ul>
+<li><code>source</code> is the string to match against.</li>
+<li><code>pattern</code> is the regex pattern.</li>
+<li><code>dest</code> is an optional string to hold the matched text.</li>
+<li>If <code>dest</code> was not declared previously, it will be created. If it exists, match() will overwrite the contents with the results of the match.</li>
+<li>The return value is the number of characters from the start, starting with 1, where the matched text is located, or 0 if no match.</li>
+<li>Consider using index() instead assuming <code>pattern</code> is not a regex and not using <code>dest</code>, it&apos;s faster.</li>
+</ul>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">awk</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">match</span>(<span class="str">&quot;this is a test a&quot;</span>, <span class="str">&quot;s.*?a&quot;</span>, <span class="ide">a</span>) <span class="op">&gt;</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">a</span> <span class="com">#=&gt; &quot;s is a&quot;</span></div></div>  </code></pre>
+<h2>split</h2>
+<p>Split <code>source</code> along regex <code>match</code> and store segments in <code>dest</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">split</span>(<span class="ide">source</span>: <span class="ide">string</span>, <span class="ide">dest</span>: <span class="ide">untyped</span>, <span class="ide">match</span>: <span class="ide">string</span>): <span class="ide">int</span></div></div>  </code></pre>
+<ul>
+<li><code>source</code> is the source string to be split.</li>
+<li><code>dest</code> is a seq[] filled with results of the split.</li>
+<li><code>match</code> is a string (regex or not) that will be used to split <code>source</code></li>
+</ul>
+<p>The function behaves much like awk:</p>
+<ul>
+<li>Returns the number of splits (discardable).</li>
+<li>The <code>dest</code> seq is created by split, it does not need to exist before calling split().</li>
+<li>If the seq does exist, the contents will be overwritten.</li>
+<li>If there are 0 splits <code>dest</code> will be 0-length ie. check the return value of split and/or length of <code>dest</code> before accessing <code>dest</code></li>
+<li>The first element of <code>dest</code> is 0 (unlike awk which is 1).</li>
+<li>Because nim&apos;s system.split() has the same order and type of arguments it should be invoked as awk.split() to avoid ambiguity.</li>
+</ul>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">awk</span></div></div><div class="line"><div class="line-content"><span class="ide">awk</span><span class="op">.</span><span class="ide">split</span>(<span class="str">&quot;This is a string&quot;</span>, <span class="ide">arr</span>, <span class="str">&quot;is&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">arr</span>[<span class="num">0</span>] <span class="com">#&gt; &quot;Th&quot;</span></div></div>  </code></pre>
+<h2>gsub</h2>
+<p>Global substitute the regex <code>pattern</code> with <code>replacement</code> in the <code>source</code> string</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">gsub</span>(<span class="ide">pattern</span>: <span class="ide">string</span>, <span class="ide">replacement</span>: <span class="ide">string</span>, <span class="ide">source</span>: <span class="ide">string</span>): <span class="ide">string</span></div></div>  </code></pre>
+<ul>
+<li><code>pattern</code> is a regex string. For literal strings use gsubs()</li>
+<li><code>replacement</code> is the new text to replace the pattern text.</li>
+<li><code>source</code> is the source string.</li>
+</ul>
+<p>gsub() returns the new string in addition to changing the source string in-place. It is discardable.</p>
+<p>If the source string is not a var (let, const or literal string) the source string is not modified in-place.</p>
+<p>Example 1:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;this is is string&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">gsub</span>(<span class="str">&quot;[ ]is.*?st&quot;</span>, <span class="str">&quot; is a st&quot;</span>, <span class="ide">str</span>)   </div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">str</span> <span class="com">#=&gt; &quot;this is a string&quot;</span></div></div>  </code></pre>
+<p>Example 2:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">gsub</span>(<span class="str">&quot;[ ]is.*?st&quot;</span>, <span class="str">&quot; is a st&quot;</span>, <span class="str">&quot;this is is string&quot;</span>)   </div></div><div class="line"><div class="line-content"><span class="op">=&gt;</span> <span class="str">&quot;this is a string&quot;</span></div></div>  </code></pre>
+<p>Caution: a self-reference will not produce expected results. For example this doesn&apos;t produce an error but doesn&apos;t work:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;abc&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">str</span> <span class="op">=</span> <span class="ide">gsub</span>(<span class="str">&quot;b&quot;</span>, <span class="str">&quot;z&quot;</span>, <span class="ide">str</span>)</div></div>  </code></pre>
+<h2>gsubi</h2>
+<p>Global substitute the regex <code>pattern</code> with <code>replacement</code> in the <code>source</code> string, leaving the source string unmodified</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">gsubi</span>(<span class="ide">pattern</span>: <span class="ide">string</span>, <span class="ide">replacement</span>: <span class="ide">string</span>, <span class="ide">source</span>: <span class="ide">string</span>): <span class="ide">string</span></div></div>  </code></pre>
+<ul>
+<li><code>pattern</code> is a regex string. For literal strings use gsubs()</li>
+<li><code>replacement</code> is the new text to replace the pattern text.</li>
+<li><code>source</code> is the source string.</li>
+</ul>
+<p>gsubi() returns the new string but leaves the source string untouched.</p>
+<p>Example 1:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;this is is string&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">gsubi</span>(<span class="str">&quot;[ ]is.*?st&quot;</span>, <span class="str">&quot; is a st&quot;</span>, <span class="ide">str</span>)  <span class="com">#=&gt; &quot;this is a string&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">str</span> <span class="com">#=&gt; &quot;this is is string&quot;</span></div></div>  </code></pre>
+<h2>gsubs</h2>
+<p>Global substitute non-regex <code>pattern</code> with <code>replacement</code> in the <code>source</code> string. A literal-string version of gsub()</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">gsubs</span>(<span class="ide">pattern</span>: <span class="ide">string</span>, <span class="ide">replacement</span>: <span class="ide">string</span>, <span class="ide">source</span>: <span class="ide">string</span>): <span class="ide">string</span></div></div>  </code></pre>
+<ul>
+<li><code>pattern</code> is a literal string</li>
+<li><code>replacement</code> is the new text to replace the pattern text.</li>
+<li><code>source</code> is the source string.</li>
+</ul>
+<p>gsubs() returns the new string in addition to changing the source string in-place. It is discardable.</p>
+<p>Example 1:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;this is is string&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">gsubs</span>(<span class="str">&quot; is is st&quot;</span>, <span class="str">&quot; is a st&quot;</span>, <span class="ide">str</span>)   </div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">str</span> <span class="com">#=&gt; &quot;this is a string&quot;</span></div></div>  </code></pre>
+<p>Example 2:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">gsubs</span>(<span class="str">&quot; is is st&quot;</span>, <span class="str">&quot; is a st&quot;</span>, <span class="ide">str</span>)   </div></div><div class="line"><div class="line-content"><span class="op">=&gt;</span> <span class="str">&quot;this is a string&quot;</span></div></div>  </code></pre>
+<h2>sub</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">sub</span>(<span class="ide">pattern</span>: <span class="ide">string</span>, <span class="ide">replacement</span>: <span class="ide">string</span>, <span class="ide">source</span>: <span class="ide">string</span> [, <span class="ide">occurance</span>: <span class="ide">int</span>]): <span class="ide">string</span></div></div>  </code></pre>
+<p>Substitute in-place the first occurance of regex <code>pattern</code> with <code>replacement</code> in <code>source</code> string
+Optional <code>occurance</code> substitute at the Xth occurance.</p>
+<ul>
+<li><code>pattern</code> is a regex used in making the substitution</li>
+<li><code>replacement</code> the new string</li>
+<li><code>source</code> is the string matched against</li>
+<li><code>occurance</code> optional (default 1) which occurance to substitute</li>
+</ul>
+<p>If <code>source</code> is not a pre-declared variable, sub returns the new string but does not sub in-place
+Substitutions are non-overlap eg. sub(&quot;22&quot;,&quot;33&quot;,&quot;222222&quot;) =&gt; &quot;333333&quot; not &quot;3333333333&quot;</p>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;This is a sring&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">sub</span>(<span class="str">&quot;[ ]is[ ]&quot;</span>, <span class="str">&quot; or &quot;</span>, <span class="ide">str</span>)                       <span class="com"># substitute &apos;str&apos; in-place.</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">str</span> <span class="com">#=&gt; &quot;This or a string&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">sub</span>(<span class="str">&quot;[ ]is[ ]&quot;</span>, <span class="str">&quot; or &quot;</span>, <span class="str">&quot;This is a sring&quot;</span>)    <span class="com"># doesn&apos;t sub &quot;This is a sring&quot; in-place, returns a new string</span></div></div>  </code></pre>
+<h2>subs</h2>
+<p>Single substitute non-regex <code>pattern</code> with <code>replacement</code> in the <code>source</code> string. A literal-string version of sub(). See gsubs() for documentation</p>
+<h2>patsplit</h2>
+<p>Divide <code>source</code> into pieces defined by regex <code>pattern</code> and store the pieces in seq <code>field</code>. Optional <code>sep</code> stores the seperators.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">patsplit</span>(<span class="ide">source</span>: <span class="ide">string</span>, <span class="ide">field</span>: <span class="ide">seq</span>, <span class="ide">pattern</span>: <span class="ide">string</span> [, <span class="ide">sep</span>: <span class="ide">seq</span>]): <span class="ide">int</span></div></div>  </code></pre>
+<ul>
+<li><code>source</code> is the source string</li>
+<li><code>field</code> is a sequence containing the field pieces</li>
+<li><code>pattern</code> is a regex (or literal) pattern string</li>
+<li><code>sep</code> is a sequence containing the seperator pieces. Optional.</li>
+</ul>
+<p>patsplit() behaves as follows:</p>
+<ul>
+<li>The <code>field</code> (and <code>sep</code>) sequences must be created beforehand (see example how).</li>
+<li>Returns number of field elements found.</li>
+<li>If no match found, <code>field</code> is set to the value of <code>source</code></li>
+</ul>
+<p>Example 1:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;This is &lt;!--comment1--&gt; a string &lt;!--comment2--&gt; with comments.&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">field</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">string</span>](<span class="num">0</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">patsplit</span>(<span class="ide">str</span>, <span class="ide">field</span>, <span class="str">&quot;&lt;[ ]{0,}[!].*?&gt;&quot;</span>) <span class="op">&gt;</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">field</span>[<span class="num">0</span>] <span class="com">#=&gt; &quot;&lt;!--comment1--&gt;&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">field</span>[<span class="num">1</span>] <span class="com">#=&gt; &quot;&lt;!--comment2--&gt;&quot;</span></div></div>  </code></pre>
+<p>Example 2:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ps</span> <span class="op">=</span> <span class="str">&quot;This is &lt;!--comment--&gt; a string &lt;!--comment2--&gt; with comments.&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">field</span>, <span class="ide">sep</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">string</span>](<span class="num">0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">patsplit</span>(<span class="ide">ps</span>, <span class="ide">field</span>, <span class="str">&quot;&lt;[ ]{0,}[!].*?&gt;&quot;</span>, <span class="ide">sep</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">sep</span>[<span class="num">1</span>] <span class="com">#=&gt; &quot; a string &quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">unpatsplit</span>(<span class="ide">field</span>, <span class="ide">sep</span>)</div></div>  </code></pre>
+<h2>unpatsplit</h2>
+<p>Recombine two sequences created by patsplit()</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">unpatsplit</span>(<span class="ide">field</span>: <span class="ide">seq</span>, <span class="ide">sep</span>: <span class="ide">seq</span>)</div></div>  </code></pre>
+<p>Given two seq&apos;s created by patsplit, recombine into a single string in alternating sequence ie. field[0] &amp; seq[0] &amp; field[1] &amp; seq[1] etc.</p>
+<p>If field has more elements than sep, return &quot;&quot;</p>
+<h2>substr</h2>
+<p>Return <code>length</code>-character long substring of <code>source</code> starting at char number <code>start</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">substr</span>(<span class="ide">source</span>: <span class="ide">string</span>, <span class="ide">start</span>: <span class="ide">int</span> [, <span class="ide">length</span>: <span class="ide">int</span>]): <span class="ide">str</span></div></div>  </code></pre>
+<ul>
+<li>The first character is 0 (diff from awk which is 1)</li>
+<li>If <code>length</code> not present return the string from <code>start</code> to end</li>
+<li>If <code>start</code> &lt; 0, treat as 0</li>
+<li>If <code>start</code> &gt; length of source, return &quot;&quot;</li>
+<li>If <code>length</code> &lt; 1, return &quot;&quot;</li>
+<li>Because nim&apos;s system.substr() has the same order and type of arguments this proc should be invoked as awk.substr() to avoid ambiguity.</li>
+</ul>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">awk</span><span class="op">.</span><span class="ide">substr</span>(<span class="str">&quot;Hello World&quot;</span>, <span class="num">3</span>)</div></div><div class="line"><div class="line-content"><span class="com">#&gt; &quot;lo World&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">awk</span><span class="op">.</span><span class="ide">substr</span>(<span class="str">&quot;Hello World&quot;</span>, <span class="num">3</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content"><span class="com">#&gt; &quot;lo&quot;</span></div></div>  </code></pre>
+<h2>index</h2>
+<p>Return the start location (index) of the first occurance of non-regex <code>target</code> in <code>source</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">index</span>(<span class="ide">source</span>: <span class="ide">string</span>, <span class="ide">target</span>: <span class="ide">string</span>): <span class="ide">int</span></div></div>  </code></pre>
+<ul>
+<li>First character is 0 (not 1 as in awk)</li>
+<li>If none found or error return -1</li>
+</ul>
+<p>Example</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">loc</span> <span class="op">=</span> <span class="ide">index</span>(<span class="str">&quot;This is string&quot;</span>, <span class="str">&quot;is&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">loc</span> <span class="com">#=&gt; 2</span></div></div>  </code></pre>
+<h1>Techniques</h1>
+<h2>associative arrays</h2>
+<p>Awk uses associative arrays. Nim also supports associative arrays, called &quot;tables&quot;.</p>
+<p>For example in awk to uniqe a list of words:</p>
+<pre>  <code class="language-awk">split(&quot;Blue Blue Red Green&quot;, arr, &quot; &quot;)        # Whoops, let&apos;s get rid of the extra &quot;Blue&quot;
+
+for(i in arr)
+  uarr[i] = 1
+for(i in uarr)
+  print i
+</code></pre>
+<p>The equivilent in Nim:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span>, <span class="ide">tables</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> </div></div><div class="line"><div class="line-content">  <span class="ide">arr</span> <span class="op">=</span> <span class="ide">split</span>(<span class="str">&quot;Blue Blue Red Green&quot;</span>, <span class="str">&quot; &quot;</span>)     <span class="com"># list of words containing a duplicate</span></div></div><div class="line"><div class="line-content">  <span class="ide">uarr</span> <span class="op">=</span> <span class="ide">initTable</span>[<span class="ide">string</span>, <span class="ide">int</span>]()             <span class="com"># create empty table (associative array) to hold words</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">arr</span>:                                 <span class="com"># unique the list</span></div></div><div class="line"><div class="line-content">  <span class="ide">uarr</span>[<span class="ide">i</span>] <span class="op">=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">j</span> <span class="kwd">in</span> <span class="ide">uarr</span><span class="op">.</span><span class="ide">keys</span>:                           <span class="com"># print the list     </span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">j</span></div></div>  </code></pre>
+<h1>Getting started with nim</h1>
+<ul>
+<li><a href="http://howistart.org/posts/nim/1">How I Start</a> has good instructions for installing nim. It takes 5 minutes and everything is contained in a single directory.</li>
+<li><a href="http://nim-lang.org/">Nim Language</a>, official website.</li>
+<li>  <a href="https://www.gnu.org/software/gawk/manual/gawk.html">GNU awk manual</a></li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/greencardamom/awk">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

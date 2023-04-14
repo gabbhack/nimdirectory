@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">hldiff</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">difflib</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">diff</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">terminal</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">text</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">color</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">colors</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">colorize</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">highlight</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">highlighting</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A highlighter for diff -u-like output & port of Python difflib")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install hldiff" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Index</h1>
+<ul>
+<li>  <a href="#overview">Overview</a></li>
+<li>  <a href="#motivation">Motivation</a></li>
+<li>  <a href="#performance-evaluation">Performance Evaluation</a></li>
+<li>  <a href="#installation">Installation</a></li>
+</ul>
+<h3>Overview</h3>
+<p>This package is a port of Python&apos;s <code>difflib</code> algorithms to compute edits, diffs,
+patches on pairs of <code>seq[T]</code> (lines, chars, etc.) in <code>hldiffpkg/edits.nim</code>.
+An example re-implementation of <code>diff -u</code> ends <code>hldiffpkg/edits.nim</code> which is
+example code/a mini tutorial for how to use the <code>edits</code> API.  The <code>edits</code> API is
+the engine for the <code>hldiff</code> program to (re)highlight intraline the output of
+<code>diff -u</code>, <code>git diff</code>, or <code>hg diff</code> with user-customizable ANSI/SGR escapes.
+Color configuration is similar to
+<a href="https://github.com/c-blake/cligen">cligen</a>/<a href="https://github.com/c-blake/lc">lc</a>/<a href="https://github.com/c-blake/procs">procs</a>
+using the same internal engine.  <code>edits</code> also provides/exports an edit distance
+based on the algorithm (from Ratcliff1988), here called <code>similarity</code> and a
+common-needs API <code>closeTo</code> that gives &quot;nearby suggestions&quot; for Nim <code>string</code>s.</p>
+<h3>Motivation</h3>
+<p>While writing it, it became clear that <code>git diff</code> as a standalone <code>diff</code> program
+(via e.g. <code>--color-words</code>, <code>--word-diff-regex</code>, etc.) supports the highlighting
+I had wanted.  In spite of this, it wasn&apos;t a waste of time for me, personally,
+since I use side-by-side terminals with varying <code>LC_THEME</code> already set up for
+<code>cligen</code>, <code>procs</code>, <code>lc</code>, etc.  On the other hand, in light of this, many may be
+better served by learning to better use <code>git diff</code>.  { And, yes, I may have been
+better served by just hacking <code>LC_THEME</code> into <code>git diff</code>, though that is a less
+fun micro-project. ;-) }</p>
+<p>After writing it, a secondary motivation emerged.  The core difflib part of this
+package is ~100x faster than the Python impl.  Applied to highlighting, this
+yields a useful trait.  Since <code>hldiff</code> is typically 2-7x faster than <code>git log -p</code>, if you have &gt;=1.5 free CPU cores (a common case for me) then <code>git log -p | hldiff</code> should take <em>no more real time</em> than <code>git log -p</code> (which can take an
+annoyingly long time itself).  I found no other package with a similar &quot;no extra
+time&quot; trait.</p>
+<p>Assuming 2 free CPU cores, such a program would need to be no more than 2x
+slower than <code>hldiff</code>.  E.g., Perl <code>diff-so-fancy</code> is 9..12x slower.  Meanwhile
+<code>hldiff</code> is 17-33x faster than Rust https://github.com/da-x/delta program which
+crashes immediately for me on a Linux kernel <code>git log -p</code>. { <code>delta</code> does (or
+tries to do) more work to syntax highlight the text on a per prog.lang basis. }
+I&apos;ve not timed various <code>git diff --word-diff-regex</code> configs, but regexes get
+awfully slow and git does not go multi-threaded for highlighting purposes.  So,
+as far as I can tell, <code>hldiff</code> may be the only way (at present) to highlight
+diff output that does not make users wait longer on already slow jobs.</p>
+<h3>Performance Evaluation</h3>
+<p>Here is a table of timing results from reproducible logs.  Times are in seconds.
+Input is from the mentioned newest commit to the beginning of time saved to a
+RAM FS (Linux tmpfs) on an Intel i6700k.  <code>git log -p</code> is also off of a tmpfs
+<code>.git</code>.  <code>hldiff</code> is PGO-gcc compiled highlighting its own history as a test
+program.  <code>diff-so-fancy-1.3.0</code> runs under gcc-10.2-compiled perl-5.32.
+| Source  | Newest Commit |      Bytes | log -p | hldiff | diff-so-fancy |
+| :------ | :-----------: | ---------: | -----: | -----: | ------------: |
+| Nim-dev | ..db6b1e5769b |  176119650 |   8.73 |   4.36 |         45.82 |
+| CPython | ..d3277048ac6 | 1032265657 |  69.58 |  31.33 |        289.10 |
+| Linux   | ..71d8e5ff763 | 5124372488 | 731.48 | 100.58 |       1325.12 |</p>
+<p><code>git log -p</code> varies from 7..20 MB/s, <code>hldiff</code> hits 33..51 MB/s, <code>diff-so-fancy</code>
+does 3.57..3.87 MB/s.  Chances are default <code>hldiff</code> is fast enough, but you can
+speed it up with, e.g., <code>hldiff -b10</code> to lower abort thresholds for char-by-char
+highlights of substitution hunks.  For the above 3 e.g.s times become 3.5,
+22.0, 85.5 seconds.</p>
+<h3>Installation</h3>
+<p>First compile it (<code>git clone &lt;CLIGEN&gt;</code>, <code>git clone &lt;THIS&gt;</code>, and then
+<code>nim c --path:to/cligen --gc:orc -d:danger hldiff</code>.  Alternatively, you can
+<code>nimble install hldiff</code>).  A profile-guided optimization (PGO) build is a
+user-exercise but only about 10% faster in this case.</p>
+<p>Then to <code>$HOME/.config/hg/hgrc</code> add</p>
+<pre>  <code>[pager]
+pager = hldiff|less -R
+</code></pre>
+<p>and in your <code>$HOME/.config/git/config</code> add</p>
+<pre>  <code>[pager]
+  log  = &quot;hldiff|less -R&quot;
+  diff = &quot;hldiff|less -R&quot;
+</code></pre>
+<p>You may also want a wrapper script/shell function <code>diffu</code> to do <code>diff -u &quot;$@&quot;|hldiff</code> or similar.  With a default build and the files <code>a</code> and <code>b</code> in this
+repository, I get:</p>
+<pre>  <code class="language-sh">diff -u a b | hldiff
+</code></pre>
+<p>producing <a href="egOut.png">this output</a>.</p>
+<p>You will also want to <code>cp example.cf $HOME/.config/hldiff</code> and edit it to your
+liking.  ANSI SGR escape names are the usual suspects from <code>cligen/humanUt.nim</code>:</p>
+<pre>  <code>plain, bold, italic, underline, blink, inverse, struck, NONE,
+black, red, green, yellow, blue, purple, cyan, white;
+UPPERCASE =&gt;HIGH intensity; &quot;on_&quot; prefix =&gt; BACKGROUND color
+256-color attrs are [fb][0..23] for FORE/BACK grey scl &amp; [fb]RGB
+a 6x6x6 color cube; each [RGB] is on [0,5].
+xterm/st/kitty/alacrity true color: [fb]HHHHHH (usual RGB order).
+</code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT/ISC
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/hldiff">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-14T17:47:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
