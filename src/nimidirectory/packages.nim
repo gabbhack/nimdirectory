@@ -7,8 +7,7 @@ import std/[
   httpclient,
   htmlparser,
   xmltree,
-  strtabs,
-  sugar
+  strtabs
 ]
 
 import packages/docutils/highlite
@@ -199,8 +198,9 @@ SOFTWARE.
     of "img":
       element.attrs["style"] = "max-width: 100%;"
     else:
-      for sub in element.mitems:
-        sub.highlite()
+      if element.kind == xnElement:
+        for sub in element.mitems:
+          sub.highlite()
 
 proc getHtmlReadme*(package: string): Option[string] =
   let readme = getReadme(package)
