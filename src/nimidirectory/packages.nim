@@ -149,7 +149,7 @@ SOFTWARE.
       result.add substr(source, tokenizer.start, tokenizer.length + tokenizer.start - 1)
   result.add "</div></div>"
 
-proc highliteHtml*(content: string): string =
+proc highlite*(parsed: var XmlNode) =
   #[
 MIT License
 
@@ -173,8 +173,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
   ]#
-  var parsed = parseHtml(content)
-
   for element in parsed.mitems:
     if element.kind != xnElement:
       continue
@@ -201,13 +199,18 @@ SOFTWARE.
     of "img":
       element.attrs["style"] = "max-width: 100%;"
     else:
-      discard
-  
-  result = $parsed
+      for sub in element.mitems:
+        sub.highlite()
 
 proc getHtmlReadme*(package: string): Option[string] =
-  result = getReadme(package)
-    .map(x => markdown(x, initGfmConfig()).highliteHtml())
+  let readme = getReadme(package)
+
+  if readme.isSome:
+    var readme = parseHtml(markdown(readme.get(), initGfmConfig()))
+    readme.highlite
+    some $readme
+  else:
+    none string
 
 proc processPackage*(package: var Package) =
   if package.kind != Alias and package.installMethod.isSome:

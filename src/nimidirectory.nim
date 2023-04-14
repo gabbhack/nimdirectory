@@ -25,13 +25,13 @@ proc packagePage(package: Package): string =
 
 proc main() =
   let
-    packagesJson = getPackagesJson(packagesURL)[0..2]
+    packagesJson = getPackagesJson(packagesURL)
     jsContent = readFile(getCurrentDir() / "public" / "js" / "app.js")
     patchedJs = fmt"const packages = {packagesJson}{jsContent}"
     publicDir = getCurrentDir() / "public" 
     packageDir = getCurrentDir() / "public" / "pkg"
 
-  var packages = parsePackagesJson(packagesJson)
+  var packages = parsePackagesJson(packagesJson)[0..2]
 
   writeFile(publicDir / "js" / "app.js", patchedJs)
   writeFile(publicDir / "index.html", homePage())
@@ -40,9 +40,9 @@ proc main() =
   createDir(publicDir / "pkg")
 
   for package in packages.mitems:
-    echo fmt"Processing `{package}`..."
+    echo fmt"Processing `{package.name}`..."
     processPackage(package)
     writeFile(packageDir / package.name, packagePage(package))
 
-when isMainModule: 
+when isMainModule:
   main()
