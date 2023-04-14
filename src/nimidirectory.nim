@@ -31,7 +31,7 @@ proc main() =
     publicDir = getCurrentDir() / "public" 
     packageDir = getCurrentDir() / "public" / "pkg"
 
-  var packages = parsePackagesJson(packagesJson)[0..2]
+  var packages = parsePackagesJson(packagesJson)
 
   writeFile(publicDir / "js" / "app.js", patchedJs)
   writeFile(publicDir / "index.html", homePage())
