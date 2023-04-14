@@ -29879,8 +29879,13 @@ const options = {
     ignoreLocation: true
 }
 const fuse = new Fuse(packages, options)
+let results
 
-function set_dark_mode() {
+window.addEventListener("DOMContentLoaded", function() {
+    results = document.getElementById("search_results")
+})
+
+function setDarkMode() {
     if (window.localStorage.getItem("theme") == "dark")
         document.body.classList.add("dark-theme")
     else {
@@ -29888,21 +29893,17 @@ function set_dark_mode() {
     }
 }
 
-function toggle_dark_mode() {
+function toggleDarkMode() {
     if (window.localStorage.getItem("theme") == "dark") {
         window.localStorage.setItem("theme", "light")
     } else {
         window.localStorage.setItem("theme", "dark")
     }
-    set_dark_mode()
+    setDarkMode()
 }
 
-function on_search() {
-    const oldResults = document.getElementById('results');
-
-    if (oldResults !== null) {
-        oldResults.remove()
-    }
+function onSearch() {
+    results.innerHTML = ""
 
     const input = document.getElementById("search").value
 
@@ -29910,21 +29911,11 @@ function on_search() {
         return
     }
 
-    const content = document.getElementsByClassName("content")[0]
     const result = fuse.search(input)
-    const resultLenHtml = `
-    <div class="row">
-        <div class="col-12">
-            <h2 class="fw-bold mb-2"><strong>${result.length}</strong> Package(s) Found</h2>
-        </div>
-    </div>
-    `
-    var packagesHtml = ""
 
     for (const item of result) {
         const package = item.item
-        packagesHtml += `
-        <div class="col-lg-4 col-md-6">
+        const packageHtml = `
             <div class="box box-pkg rounded p-3" stars="">
                 <h3 class="lh-1 display-1 mb-2"><a href="/pkg/${package.name}">${package.name}</a></h3>
                 <p class="mb-0 pb-0" style="height:1.2em;overflow:hidden;">${package.description}</p>
@@ -29939,16 +29930,10 @@ function on_search() {
                     </li>
                 </ul>
             </div>
-      </div>
         `
+        const packageElement = document.createElement("div")
+        packageElement.classList.add("col-lg-4", "col-md-6")
+        packageElement.innerHTML = packageHtml
+        results.appendChild(packageElement)
     }
-    const resultHtml = `
-    <div id="results" class="container py-8">
-        ${resultLenHtml}
-        <div class="row g-4">
-            ${packagesHtml}
-        </div>
-    </div>
-    `
-    content.insertAdjacentHTML("beforeend", resultHtml)
 }
