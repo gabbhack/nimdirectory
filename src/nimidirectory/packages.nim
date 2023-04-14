@@ -29,9 +29,9 @@ type
 makeDeserializable(Package, public=true)
 
 
-proc getPackages*(): seq[Package] =
-  let
-    client = newHttpClient()
-    content = client.getContent("https://raw.githubusercontent.com/nim-lang/packages/master/packages.json")
+proc getPackagesJson*(url: string): string =
+  let client = newHttpClient()
+  result = client.getContent(url)
 
-  result = seq[Package].fromJson(content)
+proc parsePackagesJson*(content: string): seq[Package] =
+  result = typeof(result).fromJson(content)

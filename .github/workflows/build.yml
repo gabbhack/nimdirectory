@@ -8,6 +8,8 @@ on:
       - 'src/**'
       - 'public/**'
       - '.github/workflows/**'
+  schedule:
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
@@ -27,11 +29,8 @@ jobs:
       - name: Install dependencies
         run: nimble install -d -y
 
-      - name: Build frontend
-        run: nimble frontend
-
-      - name: Run build
-        run: nimble run
+      - name: Build
+        run: nimble make
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

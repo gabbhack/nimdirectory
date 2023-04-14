@@ -13,6 +13,7 @@ bin           = @["nimidirectory"]
 requires "nim >= 1.6.0"
 requires "deser_json == 0.2.0"
 requires "nimja == 0.8.7"
+requires "karax == 1.3.0"
 
-task frontend, "Build frontend":
-  exec "nim js -o:public/js/app.js -d:release -d:danger src/js/app"
+task make, "Do the job":
+  exec "nim r -d:ssl src/nimidirectory"

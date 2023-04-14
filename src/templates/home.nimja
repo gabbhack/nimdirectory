@@ -1,27 +1,4 @@
 {% extends templates/base.nimja%}
 {% block content -%}
 {% importnimja "templates/searchbox.nimja" %}
-<div class="container py-8">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="fw-bold mb-2">Trending Packages</h2>
-    </div>
-  </div>
-</div>
-
-<div class="container py-8 mt-4">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="fw-bold mb-2">New Packages</h2>
-    </div>
-  </div>
-</div>
-
-<div class="container py-8 mt-4">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="fw-bold mb-2">Most Queried</h2>
-    </div>
-  </div>
-</div>
 {%- endblock %}
