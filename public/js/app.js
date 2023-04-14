@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function() {
     results = document.getElementById("search_results")
 })
 
-function setDarkMode() {
+function set_dark_mode() {
     if (window.localStorage.getItem("theme") == "dark")
         document.body.classList.add("dark-theme")
     else {
@@ -19,7 +19,7 @@ function setDarkMode() {
     }
 }
 
-function toggleDarkMode() {
+function toggle_dark_mode() {
     if (window.localStorage.getItem("theme") == "dark") {
         window.localStorage.setItem("theme", "light")
     } else {
@@ -28,7 +28,7 @@ function toggleDarkMode() {
     setDarkMode()
 }
 
-function onSearch() {
+function on_search() {
     results.innerHTML = ""
 
     const input = document.getElementById("search").value
