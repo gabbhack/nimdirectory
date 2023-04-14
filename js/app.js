@@ -29899,7 +29899,7 @@ function toggle_dark_mode() {
     } else {
         window.localStorage.setItem("theme", "dark")
     }
-    setDarkMode()
+    set_dark_mode()
 }
 
 function on_search() {
