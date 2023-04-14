@@ -216,7 +216,10 @@ proc processPackage*(package: var Package) =
       let directory = clone(package.url.get())
       if directory.isSome:
         package.readme = getHtmlReadme(directory.get())
-        removeDir(getCurrentDir() / directory.get())
+
+        let dirToRemove = getCurrentDir() / directory.get()
+        echo fmt"Removing dir `{dirToRemove}`"
+        removeDir(dirToRemove)
     else:
       echo "Package has non git install method or doesnt have url"
   else:
