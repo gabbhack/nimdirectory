@@ -1,5 +1,6 @@
 import std/[
-  strformat
+  strformat,
+  times
 ]
 
 import nimja/parser
@@ -11,6 +12,7 @@ const
 
 
 proc homePage(): string =
+  let buildTime = $now().utc
   compileTemplateFile(getScriptDir() / "templates" / "home.nimja")
 
 proc main() =

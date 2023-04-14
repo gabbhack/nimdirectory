@@ -103,6 +103,9 @@
         <a href="https://github.com/gabbhack/nimidirectory">Available</a>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
+        <p class="text-muted">
+        Builded at {{buildTime}}
+        </p>
       </div>
     </div>
   </div>
