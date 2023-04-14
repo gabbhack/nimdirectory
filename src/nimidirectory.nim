@@ -1,7 +1,8 @@
 import std/[
   strformat,
   times,
-  options
+  options,
+  os
 ]
 
 import nimja/parser
@@ -36,6 +37,8 @@ proc main() =
   writeFile(publicDir / "js" / "app.js", patchedJs)
   writeFile(publicDir / "index.html", homePage())
   writeFile(publicDir / "about.html", aboutPage())
+
+  putEnv("GIT_TERMINAL_PROMPT", "0")
 
   createDir(publicDir / "pkg")
 

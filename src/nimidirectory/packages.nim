@@ -58,14 +58,13 @@ proc getPackagesJson*(url: string): string =
 proc parsePackagesJson*(content: string): seq[Package] =
   result = typeof(result).fromJson(content)
 
-proc clone*(url: string): Option[string] =
-  let (output, exitCode) = execCmdEx(fmt"git clone {url}")
+proc clone*(package: Package): bool =
+  let (output, exitCode) = execCmdEx(fmt"git clone {package.url.get()} {package.name}")
 
-  if exitCode == 0:
-    some url.strip(false, true, {'/'}).rsplit('/', maxsplit=2)[^1]
-  else:
+  result = exitCode == 0
+
+  if not result:
     echo fmt"Non-zero code from git. Output: `{output}`"
-    none string
 
 proc getReadme*(package: string): Option[string] =
   let packageDir = getCurrentDir() / package
@@ -213,16 +212,13 @@ proc getHtmlReadme*(package: string): Option[string] =
 proc processPackage*(package: var Package) =
   if package.installMethod.isSome:
     if package.installMethod.get() == "git" and package.url.isSome:
-      let directory = clone(package.url.get())
-      if directory.isSome:
-        if directory.get().len != 0:
-          package.readme = getHtmlReadme(directory.get())
+      let cloned = clone(package)
+      if cloned:
+        package.readme = getHtmlReadme(package.name)
 
-          let dirToRemove = getCurrentDir() / directory.get()
-          echo fmt"Removing dir `{dirToRemove}`"
-          removeDir(dirToRemove)
-        else:
-          echo fmt"Package has invalid url: {package.url.get()}"
+        let dirToRemove = getCurrentDir() / package.name
+        echo fmt"Removing dir `{dirToRemove}`"
+        removeDir(dirToRemove)
     else:
       echo "Package has non git install method or doesnt have url"
   else:
