@@ -38,5 +38,4 @@ outputExpected.txt
 tests/megatest
 src/*.js
 public/*.js
-public/js/*.js
 public/js/*.json
