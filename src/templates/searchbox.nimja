@@ -5,7 +5,7 @@
         <p class="fw-normal h2 mb-4">Discover Nim's ecosystem of libraries and tools</p>
         <div class="row">
           <div class="col-12 spotlight position-relative">
-            <input id="search" onkeyup="on_search()" name="query" type="text" class="border-radius-full w-100" placeholder="Search for packages...">
+            <input id="search" onkeyup="onSearch()" name="query" type="text" class="border-radius-full w-100" placeholder="Search for packages...">
           </div>
         </div>
         <div class="mt-4 tags-area">

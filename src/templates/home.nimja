@@ -1,4 +1,8 @@
 {% extends templates/base.nimja%}
 {% block content -%}
 {% importnimja "templates/searchbox.nimja" %}
+<div class="container py-8">
+    <div id="search_results" class="row g-4">
+    </div>
+</div>
 {%- endblock %}
