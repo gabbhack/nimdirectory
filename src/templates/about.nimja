@@ -1,0 +1,14 @@
+{% extends templates/base.nimja%}
+{% block content -%}
+<div id="about" class="container pt-10 text-center">
+    <img class="logo-img" src="img/nimble-logo.png" width="128px" height="auto">
+    <h3>Welcome to the Nimi Package Directory</h3>
+    <p>
+        This is a fork of <a href="https://github.com/FedericoCeratto/nim-package-directory">nimble.directory</a>, which works without a backend and is hosted on GitHub Pages.
+    </p>
+
+    <p>Learn here how you can <a href="https://github.com/nim-lang/packages/">add your own packages</a>.</p>
+    <p>You can contribute to this website <a href="https://github.com/gabbhack/nimidirectory">on
+            GitHub</a>.</p>
+</div>
+{%- endblock %}
