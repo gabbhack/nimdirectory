@@ -62,7 +62,7 @@ proc clone*(url: string): Option[string] =
   let (output, exitCode) = execCmdEx(fmt"git clone {url}")
 
   if exitCode == 0:
-    some url.split("/")[^1]
+    some url.strip(false, true, {'/'}).rsplit('/', maxsplit=2)[^1]
   else:
     echo fmt"Non-zero code from git. Output: `{output}`"
     none string
@@ -215,11 +215,14 @@ proc processPackage*(package: var Package) =
     if package.installMethod.get() == "git" and package.url.isSome:
       let directory = clone(package.url.get())
       if directory.isSome:
-        package.readme = getHtmlReadme(directory.get())
+        if directory.get().len != 0:
+          package.readme = getHtmlReadme(directory.get())
 
-        let dirToRemove = getCurrentDir() / directory.get()
-        echo fmt"Removing dir `{dirToRemove}`"
-        removeDir(dirToRemove)
+          let dirToRemove = getCurrentDir() / directory.get()
+          echo fmt"Removing dir `{dirToRemove}`"
+          removeDir(dirToRemove)
+        else:
+          echo fmt"Package has invalid url: {package.url.get()}"
     else:
       echo "Package has non git install method or doesnt have url"
   else:
