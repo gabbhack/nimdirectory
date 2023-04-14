@@ -195,18 +195,16 @@ SOFTWARE.
           let source = code.innerText
           code.clear
           code.add newVerbatimText(highlightSyntax(source.strip(), lang))
-    of "img":
-      element.attrs["style"] = "max-width: 100%;"
     else:
-      if element.kind == xnElement:
-        for sub in element.mitems:
-          sub.highlite()
+      discard
 
 proc getHtmlReadme*(package: string): Option[string] =
   let readme = getReadme(package)
 
   if readme.isSome:
     var readme = parseHtml(markdown(readme.get(), initGfmConfig()))
+    for img in readme.findAll("img"):
+      img.attrs["style"] = "max-width: 100%;"
     readme.highlite
     some $readme
   else:
