@@ -89,7 +89,27 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>NimraylibNow! - The Ultimate Raylib wrapper for Nim</h1>
+                <document><h1>End of life</h1>
+<p>The project will no longer be maintained. Reasons:</p>
+<ul>
+<li>
+<p>I personally don&apos;t do any game development for some time now.</p>
+</li>
+<li>
+<p>The approach of automatic bindings generation was very new and easy to
+maintain. Unfortunately as the Nim language progresses, it adds a lot of
+features that help with automatic memory management, boundary detection and
+other quality of life things. It is not feasible to automatically generate
+these things, so the whole approach doesn&apos;t look very lucrative to continue
+with. Proper Nim bindings will require lots of manual code to accomodate all
+the fascinating language features.</p>
+</li>
+</ul>
+<p>The successor bindings can be considered <a href="https://github.com/planetis-m/naylib">https://github.com/planetis-m/naylib</a>,
+feel free to take a look at them! Other projects can also emerge but as of
+2023-04-15 these bindings look like the most promising ones.</p>
+<p>Feel free to fork this repository and do anything with the code, happy hacking!</p>
+<h1>NimraylibNow! - The Ultimate Raylib wrapper for Nim</h1>
 <p>The most idiomatic and up-to-date wrapper for <a href="https://github.com/raysan5/raylib">Raylib</a> gaming C library.
 Use this library if you want to write games using <a href="https://github.com/raysan5/raylib">Raylib</a> in <a href="https://nim-lang.org/">Nim</a>.</p>
 <p>This library is an effort to create an automatically generated wrapper which can
@@ -328,7 +348,7 @@ was the initial inspiration for this library.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-15T01:20:13Z
+        Builded at 2023-04-16T01:23:14Z
         </p>
       </div>
     </div>

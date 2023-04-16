@@ -82,9 +82,7 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>nim-serialization</h1>
-<p><a href="https://travis-ci.org/status-im/nim-serialization">  <img src="https://travis-ci.org/status-im/nim-serialization.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a>
-<a href="https://ci.appveyor.com/project/nimbus/nim-serialization/branch/master">  <img src="https://ci.appveyor.com/api/projects/status/muejuk735c11brjd/branch/master?svg=true" style="max-width: 100%;" alt="Build status" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" /></a>
 <img src="https://github.com/status-im/nim-serialization/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
 <h2>Introduction</h2>
@@ -222,7 +220,7 @@ test suite successfully.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-15T01:20:13Z
+        Builded at 2023-04-16T01:23:14Z
         </p>
       </div>
     </div>

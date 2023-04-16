@@ -86,9 +86,7 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>Stint (Stack-based multiprecision integers)</h1>
-<p><a href="https://travis-ci.org/status-im/nim-stint">  <img src="https://img.shields.io/travis/status-im/nim-stint/master.svg?label=Linux%20/%20macOS" style="max-width: 100%;" alt="Build Status (Travis)" title="Linux/macOS build status (Travis)" /></a>
-<a href="https://ci.appveyor.com/project/nimbus/nim-stint">  <img src="https://img.shields.io/appveyor/ci/nimbus/nim-stint/master.svg?label=Windows" style="max-width: 100%;" alt="Windows build status (Appveyor)" title="Windows build status (Appveyor)" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
 <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /><img src="https://github.com/status-im/nim-stint/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
 <p>A fast and portable stack-based multi-precision integer library in pure Nim</p>
@@ -201,7 +199,7 @@ However, the library itself does not resort to assembly for portability.</li>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-15T01:20:13Z
+        Builded at 2023-04-16T01:23:14Z
         </p>
       </div>
     </div>
