@@ -83,33 +83,19 @@
             
                 <document><h1>nim-picohttpparser</h1>
 <p>Nim binding for <a href="https://github.com/h2o/picohttpparser">picohttpparser</a>.</p>
-<p>##Setup
-In order to use these bindings in your program, you must install the
-<a href="https://github.com/h2o/picohttpparser/blob/master/picohttpparser.h">picohttpparser.h</a>
-header on your machine, and link your Nim program with
-<a href="https://github.com/h2o/picohttpparser/blob/master/picohttpparser.c">picohttpparser.c</a>.</p>
-<p>The easiest way to do this is to:</p>
-<ol>
-<li>Copy the <a href="https://github.com/h2o/picohttpparser">picohttpparser</a> sources into your
-project sources,</li>
-<li>Use the <a href="http://nim-lang.org/docs/nimc.html">cincludes</a> Nim compiler flag
-to add the picohttpparser sources to the C compiler include search path,</li>
-<li>And create a Nim file that uses the
-<a href="http://nim-lang.org/docs/manual.html#implementation-specific-pragmas-compile-pragma">compile pragma</a>
-to compile
-<a href="https://github.com/h2o/picohttpparser/blob/master/picohttpparser.c">picohttpparser.c</a>.</li>
-</ol>
-<p>##Usage
-To use the low level picohttpparser API binding, <code>import picohttpparser_api</code>
+<h2>Setup</h2>
+<p>Install <code>picohttpparser</code> with Nimble and you&apos;re ready to go.</p>
+<h2>Usage</h2>
+<p>To use the low level picohttpparser API binding, <code>import picohttpparser/api</code>
 in your program, and use <code>parseRequest</code> or <code>tryParseRequest</code>.</p>
 <p>Converter <code>proc</code>s <code>toStringTableRef</code> and <code>toHttpHeaders</code> are provided to
 convert picohttpparser&apos;s native <code>seq[phr_header]</code> header type to types that
 are often used in Nim libraries.</p>
-<p>##Todo
-A high level picohttpparser API named <code>picohttpparser</code> would be nice. Patches
+<h2>TODO</h2>
+<p>A high level picohttpparser API named <code>picohttpparser</code> would be nice. Patches
 welcome!</p>
-<p>##License
-This project is licensed under the same license as
+<h2>License</h2>
+<p>This project is licensed under the same license as
 <a href="https://github.com/h2o/picohttpparser">picohttpparser</a>, which is
 dual-licensed under the Perl License or the MIT License.</p>
 </document>
@@ -180,7 +166,7 @@ dual-licensed under the Perl License or the MIT License.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-16T01:23:14Z
+        Builded at 2023-04-17T01:19:38Z
         </p>
       </div>
     </div>

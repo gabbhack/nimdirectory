@@ -107,7 +107,7 @@
 <p>First, define your routes as an array or sequence of pattern-renderer pairs.</p>
 <p><strong>Pattern</strong> is a string that Kraut uses to match against the hash part of the URI.</p>
 <p><strong>Renderer</strong> is proc that takes a single argument of type <code>Context</code> and returns a <code>VNode</code>.</p>
-<p><strong>Context</strong> is an object that holds the URL params extracted from the hash part in its <code>urlParams</code> field.</p>
+<p><strong>Context</strong> is an object that holds the URL params extracted from the hash part in its <code>urlParams</code> field and the query params in <code>qryParams</code>.</p>
 <p>Nim offers nice syntax to define Kraut routes:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># app.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">routes</span> <span class="op">=</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;/&quot;</span>: <span class="ide">index</span><span class="op">.</span><span class="ide">render</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;/users/&quot;</span>: <span class="ide">users</span><span class="op">.</span><span class="ide">render</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;/users/{userId}/&quot;</span>: <span class="ide">user</span><span class="op">.</span><span class="ide">render</span></div></div><div class="line"><div class="line-content">}</div></div>  </code></pre>
 <p>In this example, <code>&quot;/users/{userId}&quot;</code> is a pattern and <code>user.render</code> us a renderer.</p>
@@ -192,7 +192,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-16T01:23:14Z
+        Builded at 2023-04-17T01:19:38Z
         </p>
       </div>
     </div>

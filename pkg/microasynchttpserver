@@ -91,11 +91,11 @@
             
                 <document><h1>microasynchttpserver</h1>
 <p>microasynchttpserver is a thin asynchronous HTTP server library for Nim. It is
-API compatible with Nim&apos;s built-in
-<a href="https://github.com/nim-lang/Nim/blob/devel/lib/pure/asynchttpserver.nim">asynchttpserver</a>,
+API-compatible with Nim&apos;s built-in
+<a href="https://nim-lang.org/docs/asynchttpserver.html">asynchttpserver</a>,
 and allows programs greater control over the HTTP connection than
 asynchttpserver does.</p>
-<p>##Features</p>
+<h2>Features</h2>
 <ul>
 <li>Production-ready</li>
 <li>Uses
@@ -108,24 +108,8 @@ for HTTP header parsing</li>
 </ul>
 </li>
 </ul>
-<p>##Setup
-In order to use this in your program, you must install the
-<a href="https://github.com/h2o/picohttpparser/blob/master/picohttpparser.h">picohttpparser.h</a>
-header on your machine, and link your Nim program with
-<a href="https://github.com/h2o/picohttpparser/blob/master/picohttpparser.c">picohttpparser.c</a>.</p>
-<p>The easiest way to do this is to:</p>
-<ol>
-<li>Copy the <a href="https://github.com/h2o/picohttpparser">picohttpparser</a> sources into your
-project sources,</li>
-<li>Use the <a href="http://nim-lang.org/docs/nimc.html">cincludes</a> Nim compiler flag
-to add the picohttpparser sources to the C compiler include search path,</li>
-<li>And create a Nim file that uses the
-<a href="http://nim-lang.org/docs/manual.html#implementation-specific-pragmas-compile-pragma">compile pragma</a>
-to compile
-<a href="https://github.com/h2o/picohttpparser/blob/master/picohttpparser.c">picohttpparser.c</a>.</li>
-</ol>
-<p>##Usage
-microasynchttpserver is mostly API compatible with
+<h2>Usage</h2>
+<p>microasynchttpserver is mostly API compatible with
 <a href="https://github.com/nim-lang/Nim/blob/devel/lib/pure/asynchttpserver.nim">asynchttpserver</a>.
 Use the <code>newMicroAsyncHttpServer</code> proc to instantiate a <code>MicroAsyncHttpServer</code>,
 and use it just like an <code>AsyncHttpServer</code>.</p>
@@ -133,8 +117,10 @@ and use it just like an <code>AsyncHttpServer</code>.</p>
 <code>protocol</code>, <code>url</code>, and <code>hostname</code> fields of <code>Request</code> objects. HTTP request
 bodies/data must be handled by your application, and read directly from the
 <code>client</code> socket.</p>
-<p>##License
-This project is licensed under the MIT License. For full license text, see
+<p>As a convenience, you can use the <code>readBody</code> proc provided by this library to read the entire request body to memory.
+Note that this will not set the <code>Request</code> object&apos;s <code>body</code> field; it will only return the body that was read.</p>
+<h2>License</h2>
+<p>This project is licensed under the MIT License. For full license text, see
 <a href="LICENSE">  <code>LICENSE</code></a>.</p>
 </document>
             
@@ -204,7 +190,7 @@ This project is licensed under the MIT License. For full license text, see
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-16T01:23:14Z
+        Builded at 2023-04-17T01:19:38Z
         </p>
       </div>
     </div>

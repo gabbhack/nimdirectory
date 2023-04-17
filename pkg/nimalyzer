@@ -131,7 +131,10 @@ them to the selected directory.</p>
 <h4>Build from the source</h4>
 <p>You will need:</p>
 <ul>
-<li>  <a href="https://nim-lang.org/install.html">Nim compiler</a></li>
+<li><a href="https://nim-lang.org/install.html">Nim compiler</a> and its source code. If you
+installed the compiler from website or via <em>choosenim</em>, you should have installed
+it. Otherwise, you may need to install it manually either with <em>nimble install
+compiler@[yourCompilerVersion]</em> or with your package manager.</li>
 <li>  <a href="https://github.com/Udiknedormin/NimContracts">Contracts package</a></li>
 </ul>
 <p>You can install them manually or by using <a href="https://github.com/nim-lang/nimble">Nimble</a>.
@@ -227,7 +230,7 @@ project&apos;s source code.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-16T01:23:14Z
+        Builded at 2023-04-17T01:19:38Z
         </p>
       </div>
     </div>
