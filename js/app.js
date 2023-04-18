@@ -1,5 +1,20 @@
 const packages = [
   {
+    "name": "youtubescraper",
+    "url": "https://github.com/TaxMachine/youtubescraper",
+    "method": "git",
+    "tags": [
+      "youtube",
+      "scraper",
+      "api",
+      "wrapper",
+      "library"
+    ],
+    "description": "Very fast and lightweight YouTube scraper for Nim.",
+    "license": "WTFPL",
+    "web": "https://github.com/TaxMachine/youtubescraper"
+  },
+  {
     "name": "mcsrvstat.nim",
     "url": "https://github.com/hitblast/mcsrvstat.nim",
     "method": "git",
@@ -29899,6 +29914,19 @@ const packages = [
     "description": "Nim parser for the vCard format version 3.0 (4.0 planned).",
     "license": "MIT",
     "web": "https://github.com/jdbernard/nim-vcard"
+  },
+  {
+    "name": "nimppt",
+    "url": "https://github.com/HUSKI3/Nimppt",
+    "method": "git",
+    "tags": [
+      "presentation",
+      "cli",
+      "markdown"
+    ],
+    "description": "A simple and elegant presentation generator",
+    "license": "MIT",
+    "web": "https://github.com/HUSKI3/Nimppt"
   }
 ]
 const options = {

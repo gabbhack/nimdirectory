@@ -86,9 +86,7 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>nim-json-serialization</h1>
-<p><a href="https://travis-ci.org/status-im/nim-json-serialization">  <img src="https://img.shields.io/travis/status-im/nim-json-serialization/master.svg?label=Linux%20/%20macOS" style="max-width: 100%;" alt="Build Status (Travis)" title="Linux/macOS build status (Travis)" /></a>
-<a href="https://ci.appveyor.com/project/nimbus/nim-json-serialization">  <img src="https://img.shields.io/appveyor/ci/nimbus/nim-json-serialization/master.svg?label=Windows" style="max-width: 100%;" alt="Windows build status (Appveyor)" title="Windows build status (Appveyor)" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
 <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /><img src="https://github.com/status-im/nim-json-serialization/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
 <p>Flexible JSON serialization not relying on run-time type information.</p>
@@ -170,7 +168,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-17T01:19:38Z
+        Builded at 2023-04-18T01:17:41Z
         </p>
       </div>
     </div>

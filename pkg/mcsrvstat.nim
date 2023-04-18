@@ -116,7 +116,7 @@
 <br />
 <h2>📦 Installation</h2>
 <ul>
-<li>using <a href="https://github.com/nim-lang/nimble">Nimble</a>:</li>
+<li>Install the package using <a href="https://github.com/nim-lang/nimble">Nimble</a>:</li>
 </ul>
 <pre>  <code class="language-bash"># requires Nim v1.6 or greater
 $ nimble install mcsrvstat.nim
@@ -124,10 +124,14 @@ $ nimble install mcsrvstat.nim
 <ul>
 <li>or, using <a href="https://brew.sh">Homebrew</a>:</li>
 </ul>
-<pre>  <code class="language-bash">$ brew install mcsrvstat.nim
+<pre>  <code class="language-bash"># tapping the formula
+$ brew tap hitblast/mcsrvstat
+
+# installing it
+$ brew install mcsrvstat
 </code></pre>
 <ul>
-<li>or, you can manually download the packages required from the latest release in the <a href="https://github.com/hitblast/mcsrvstat.nim/releases">Releases</a> section. <a href="https://github.com/hitblast/mcsrvstat.nim/actions/workflows/builds.yml">Build artifacts</a> are also stored for you to download as well.</li>
+<li>or, you can manually download the packages required from the latest release in the <a href="https://github.com/hitblast/mcsrvstat.nim/releases">Releases</a> section. The <a href="https://github.com/hitblast/mcsrvstat.nim/actions/workflows/builds.yml">build artifacts</a> are also stored for you to download as well.</li>
 </ul>
 <br />
 <h2>⚡ Usage</h2>
@@ -246,7 +250,7 @@ $ nimble -d:release build --accept
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-17T01:19:38Z
+        Builded at 2023-04-18T01:17:41Z
         </p>
       </div>
     </div>
