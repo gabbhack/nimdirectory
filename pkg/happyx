@@ -92,7 +92,7 @@
                 <document><div align="center">
 <p>  <img src="https://user-images.githubusercontent.com/49402667/228402522-6dd72d4b-c21c-4acf-b1e2-8318b6e809da.png" style="max-width: 100%;" alt="Happyx" /></p>
 <h3>Asynchronous web-framework written in Nim with ♥</h3>
-<p>  <img src="https://img.shields.io/badge/%3E=1.4.0-1b1e2b?style=for-the-badge&amp;logo=nim&amp;logoColor=f1fa8c&amp;label=Nim&amp;labelColor=2b2e3b" style="max-width: 100%;" alt="Nim language" /></p>
+<p>  <img src="https://img.shields.io/badge/%3E=1.6.12-1b1e2b?style=for-the-badge&amp;logo=nim&amp;logoColor=f1fa8c&amp;label=Nim&amp;labelColor=2b2e3b" style="max-width: 100%;" alt="Nim language" /></p>
 <p>  <a href="https://wakatime.com/badge/user/eaf11f95-5e2a-4b60-ae6a-38cd01ed317b/project/bbd13748-36e6-4383-ac40-9c4e72c060d1">    <img src="https://wakatime.com/badge/user/eaf11f95-5e2a-4b60-ae6a-38cd01ed317b/project/bbd13748-36e6-4383-ac40-9c4e72c060d1.svg?style=for-the-badge" style="max-width: 100%;" alt="wakatime" />  </a></p>
 <p>  <a href="https://github.com/HapticX/happyx/actions/workflows/tests.yml">    <img src="https://github.com/HapticX/happyx/actions/workflows/tests.yml/badge.svg?style=for-the-badge" style="max-width: 100%;" alt="Testing" />  </a></p>
 </div>
@@ -139,7 +139,7 @@
 &lt;/html&gt;
 </code></pre>
 <p>  <code>main.nim</code></p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">happyx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">newApp</span>()</div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">routes</span>:</div></div><div class="line"><div class="line-content">  <span class="str">&quot;/user{userId:int}&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;User ID is {userId}&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">start</span>()</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">happyx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">registerApp</span>()</div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">routes</span>:</div></div><div class="line"><div class="line-content">  <span class="str">&quot;/user{userId:int}&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;User ID is {userId}&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">start</span>()</div></div>  </code></pre>
 <h4>Run 💻</h4>
 <p>Compile nim script and open HTML file in your browser.</p>
 <pre>  <code class="language-bash">nim js main
@@ -214,7 +214,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-18T01:17:41Z
+        Builded at 2023-04-19T01:20:07Z
         </p>
       </div>
     </div>

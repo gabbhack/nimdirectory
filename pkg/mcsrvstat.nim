@@ -102,16 +102,16 @@
 </div>
 <h2>Table of Contents</h2>
 <ul>
-<li>  <a href="#%F0%9F%93%A6-installation">Installation</a></li>
-<li><a href="#%E2%9A%A1-usage">Usage</a>
+<li>  <a href="#-installation">Installation</a></li>
+<li><a href="#-usage">Usage</a>
 <ul>
-<li>  <a href="#as-a-cli-application">as a CLI application</a></li>
-<li>  <a href="#as-a-nim-library">as a Nim library</a></li>
+<li>  <a href="#-as-a-cli-application">as a CLI application</a></li>
+<li>  <a href="#-as-a-nim-library">as a Nim library</a></li>
 </ul>
 </li>
-<li>  <a href="#%F0%9F%94%A8-building">Building</a></li>
-<li>  <a href="#%E2%9C%A8-check-out-my-other-similar-projects">Similar Projects</a></li>
-<li>  <a href="#%F0%9F%94%96-license">License</a></li>
+<li>  <a href="#-building">Building</a></li>
+<li>  <a href="#-check-out-my-other-similar-projects">Similar Projects</a></li>
+<li>  <a href="#-license">License</a></li>
 </ul>
 <br />
 <h2>📦 Installation</h2>
@@ -250,7 +250,7 @@ $ nimble -d:release build --accept
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-18T01:17:41Z
+        Builded at 2023-04-19T01:20:07Z
         </p>
       </div>
     </div>
