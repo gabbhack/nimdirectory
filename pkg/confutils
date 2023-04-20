@@ -271,8 +271,9 @@ By default, these will be obtained through Nim&apos;s <code>os</code> module.</p
 variables. The default format is called <code>CmdLineFormat</code> and it uses the
 same <code>parseCmdArg</code> calls responsible for parsing the command-line.</p>
 <p>The names of the environment variables are prefixed by the name of the
-program by default. They are matched in case-insensitive fashion and
-certain characters such as <code>-</code> and <code>_</code> are ignored.</p>
+program by default and joined with the name of command line option, which is
+uppercased and characters <code>-</code> and spaces are replaced with underscore:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">env_variable_name</span> <span class="op">=</span> <span class="op">&amp;</span><span class="str">&quot;{prefix}_{key}&quot;</span><span class="op">.</span><span class="ide">toUpperAscii</span><span class="op">.</span><span class="ide">multiReplace</span>((<span class="str">&quot;-&quot;</span>, <span class="str">&quot;_&quot;</span>), (<span class="str">&quot; &quot;</span>, <span class="str">&quot;_&quot;</span>))</div></div>  </code></pre>
 <h4>  <code>configFileEnumerator</code></h4>
 <p>A function responsible for returning a sequence of <code>ConfigFilePath</code> objects.
 To support heterogenous config file types, you can also return a tuple of
@@ -411,7 +412,7 @@ test suite successfully.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-19T01:20:07Z
+        Builded at 2023-04-20T01:17:01Z
         </p>
       </div>
     </div>

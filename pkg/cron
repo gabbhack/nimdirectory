@@ -223,9 +223,9 @@ jobsXme.nim&quot; at the top of crup.sh. ;-)</p>
 less</a> philosophy of <code>st</code> or <code>dwm</code> where you just edit a
 header file to configure things.  Here the library makes it such that the entire
 program is often not even a whole page.</p>
-<p>you prefer &quot;more precise&quot; scheduling, just set <code>cron.jitter = 0</code> in
-your own cron-like programs.  This is a rare case where controlled jitter is
-often desirable, not a bug. :)</p>
+<p>you prefer &quot;more precise&quot; scheduling, just set <code>cron.jitter=0</code> in your
+own cron-like programs.  In this case, jitter gives an oft desired, controlled
+load spreading.</p>
 <p>the same amount of total calculation would happen, CPU caching and
 other effects might mean up to 10X less actual time/power consumption done in a
 batch.  Also more infrequent wake ups would be nicer to the system from the
@@ -302,7 +302,7 @@ before <code>cron.loop</code> or port my C program wrapper to Nim &amp; toss it 
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-19T01:20:07Z
+        Builded at 2023-04-20T01:17:01Z
         </p>
       </div>
     </div>
