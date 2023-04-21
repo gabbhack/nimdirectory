@@ -82,9 +82,7 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>nim-chronicles</h1>
-<p><a href="https://travis-ci.org/status-im/nim-chronicles">  <img src="https://travis-ci.org/status-im/nim-chronicles.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a>
-<a href="https://ci.appveyor.com/project/nimbus/nim-chronicles/branch/master">  <img src="https://ci.appveyor.com/api/projects/status/tu9cap72jxdhri9m/branch/master?svg=true" style="max-width: 100%;" alt="Build status" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" /></a>
 <img src="https://github.com/status-im/nim-chronicles/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
 <pre>  <code>nimble install chronicles
@@ -596,7 +594,7 @@ test suite successfully.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-20T01:17:01Z
+        Builded at 2023-04-21T01:17:40Z
         </p>
       </div>
     </div>

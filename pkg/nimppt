@@ -110,16 +110,22 @@
 </ul>
 <h2>Usage</h2>
 <p>Using nimppt is simple</p>
-<p>First you need to create a markdown file which will have the slides and content of the presentation.</p>
-<pre>  <code class="language-md"># Title
+<h2>First you need to create a markdown file which will have the slides and content of the presentation.
+```md
+# Title
 Body
 - list item 1
 - list item 2
 &gt; Description
-![image](image-source.png)
-</code></pre>
-<p>Then you can start nimppt with the following:</p>
-<pre>  <code class="language-bash"># Host the web server
+<img src="image-source.png" style="max-width: 100%;" alt="image" /></h2>
+<h2>Note that we use --- to delim the slides.
+You can also add custom css by doing the following</h2>
+<p>p { color: red; }
+--css--</p>
+<pre>  <code>
+Then you can start nimppt with the following:
+```bash
+# Host the web server
 $ ./nimppt -f your_presentation.md
 
 # Do a speed test
@@ -209,7 +215,7 @@ $ nimble test
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-20T01:17:01Z
+        Builded at 2023-04-21T01:17:40Z
         </p>
       </div>
     </div>
