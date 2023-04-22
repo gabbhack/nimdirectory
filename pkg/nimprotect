@@ -82,17 +82,20 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>NimProtect</h1>
-<p>NimProtect is a tiny single-macro library for protecting sensitive strings in compiled binaries.</p>
+<p>NimProtect is a tiny macro library for protecting sensitive strings in compiled binaries.</p>
 <p>I built it in order to fullfill the need for compile-time string encryptor that will decrypt the strings at runtime whenever needed, just as the great but abandoned <a href="https://github.com/Yardanico/nim-strenc">nim-strenc</a> did.</p>
 <p>Every string is RC4 encrypted with different MD5 key (quick disclaimer: remember that RC4 is insecure algorithm and all strings can be decrypted with some reverse engineering work).</p>
 <p>Compile with: <code>--benchmarkVM:on</code></p>
+<h3>Update:</h3>
+<p>Added <code>splitString()</code> macro to split and hide big suspicious strings (takes LONG to compile!)</p>
 <h2>Installation</h2>
-<pre>  <code>nimble install nimprotect
+<pre>  <code>nimble install NimProtect
 </code></pre>
 <h2>Usage</h2>
 <pre>  <code>import nimprotect
 
 let c2_url = protectString(&quot;https://protected-c2-server.com&quot;)
+let malicious_base64_shellcode_blob = protectString(splitString(&quot;&quot;H4sIAAAAAAAACuy9eXgUxdYw3hMyEBCYY...&quot;))  # Takes long to compile, be patient
 </code></pre>
 <h3>  <em>Easy Peasy :grin: :metal:</em></h3>
 </document>
@@ -163,7 +166,7 @@ let c2_url = protectString(&quot;https://protected-c2-server.com&quot;)
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-21T01:17:40Z
+        Builded at 2023-04-22T01:19:16Z
         </p>
       </div>
     </div>

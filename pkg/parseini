@@ -82,37 +82,60 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>parseini</h1>
-<p>A high-performance ini parse library for nim.
-the <code>parseini</code> module implements a high performance configuration file
-parser, evolved from <code>parsecfg</code>.
-the configuration file&apos;s syntax is similar to the Windows <code>.ini</code>
-format, but much more powerful, as it is not a line based parser. string
-literals, raw string literals and triple quoted string literals are
-supported as in the nim programming language.
-the module supports annotation statements, does not delete comment
-statements and redundant blank characters, leaving the original style
-and you can specify comment symbol.</p>
+<p>A high-performance ini parse library for nim. the module implements a high performance configuration file parser, the configuration file&apos;s syntax is similar to the Windows format, but much more powerful, as it is not a line based parser. string literals, raw string literals and triple quoted string literals are supported as in the nim programming language. the module supports annotation statements, does not delete comment statements and redundant blank characters,when saving a file, the original file format can be retained without losing comments and blank lines and you can specify comment symbol,but the built-in library &apos;parsecfg&apos; in the nim language does not support this feature.</p>
 <h1>This is a simple example of a configuration file.</h1>
-<pre>  <code class="language-ini">charset=&quot;utf-8&quot;
-[Package]
-name=&quot;hello&quot;
---threads:&quot;on&quot;
-[Author]
-name=&quot;lihf8515&quot;
-qq=&quot;10214028&quot;
-email=&quot;lihaifeng@wxm.com&quot;
+<pre>  <code class="language-ini">    charset=&quot;utf-8&quot;
+    [Package]
+    name=&quot;hello&quot;
+    --threads:&quot;on&quot;
+    [Author]
+    name=&quot;lihf8515&quot;
+    qq=&quot;10214028&quot;
+    email=&quot;lihaifeng@wxm.com&quot;
 </code></pre>
 <h1>Specifies the comment symbol, the default comment symbol is &quot;#&quot; and &quot;;&quot;.</h1>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">parseini</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cfg</span><span class="op">=</span><span class="ide">loadConfig</span>(<span class="str">&quot;config.ini&quot;</span>, {'&'})</div></div>  </code></pre>
+<pre>  <code class="language-ini">    import parseini
+    var cfg=loadConfig(&quot;config.ini&quot;, {&apos;&amp;&apos;})
+</code></pre>
 <h1>Creating a configuration file.</h1>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">parseini</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cfg</span><span class="op">=</span><span class="ide">newConfig</span>()</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;&quot;</span>,<span class="str">&quot;charset&quot;</span>,<span class="str">&quot;utf-8&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Package&quot;</span>,<span class="str">&quot;name&quot;</span>,<span class="str">&quot;hello&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Package&quot;</span>,<span class="str">&quot;--threads&quot;</span>,<span class="str">&quot;on&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;name&quot;</span>,<span class="str">&quot;lihf8515&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;qq&quot;</span>,<span class="str">&quot;10214028&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;email&quot;</span>,<span class="str">&quot;lihaifeng@wxm.com&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">writeConfig</span>(<span class="str">&quot;config.ini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">cfg</span></div></div>  </code></pre>
+<pre>  <code class="language-ini">    import parseini
+    var cfg=newConfig()
+    cfg.setSectionKey(&quot;&quot;,&quot;charset&quot;,&quot;utf-8&quot;)
+    cfg.setSectionKey(&quot;Package&quot;,&quot;name&quot;,&quot;hello&quot;)
+    cfg.setSectionKey(&quot;Package&quot;,&quot;--threads&quot;,&quot;on&quot;)
+    cfg.setSectionKey(&quot;Author&quot;,&quot;name&quot;,&quot;lihf8515&quot;)
+    cfg.setSectionKey(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;)
+    cfg.setSectionKey(&quot;Author&quot;,&quot;email&quot;,&quot;lihaifeng@wxm.com&quot;)
+    cfg.writeConfig(&quot;config.ini&quot;)
+    echo cfg
+</code></pre>
 <h1>Reading a configuration file.
 returns the specified default value if the specified key does not exist.</h1>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">parseini</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cfg</span> <span class="op">=</span> <span class="ide">loadConfig</span>(<span class="str">&quot;config.ini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">charset</span> <span class="op">=</span> <span class="ide">cfg</span><span class="op">.</span><span class="ide">getSectionValue</span>(<span class="str">&quot;&quot;</span>,<span class="str">&quot;charset&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">threads</span> <span class="op">=</span> <span class="ide">cfg</span><span class="op">.</span><span class="ide">getSectionValue</span>(<span class="str">&quot;Package&quot;</span>,<span class="str">&quot;--threads&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">pname</span> <span class="op">=</span> <span class="ide">cfg</span><span class="op">.</span><span class="ide">getSectionValue</span>(<span class="str">&quot;Package&quot;</span>,<span class="str">&quot;name&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">name</span> <span class="op">=</span> <span class="ide">cfg</span><span class="op">.</span><span class="ide">getSectionValue</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;name&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">qq</span> <span class="op">=</span> <span class="ide">cfg</span><span class="op">.</span><span class="ide">getSectionValue</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;qq&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">email</span> <span class="op">=</span> <span class="ide">cfg</span><span class="op">.</span><span class="ide">getSectionValue</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;email&quot;</span>,<span class="str">&quot;10214028@qq.com&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">pname</span> <span class="op">&amp;</span> <span class="str">&quot;</span>\n<span class="str">&quot;</span> <span class="op">&amp;</span> <span class="ide">name</span> <span class="op">&amp;</span> <span class="str">&quot;</span>\n<span class="str">&quot;</span> <span class="op">&amp;</span> <span class="ide">qq</span> <span class="op">&amp;</span> <span class="str">&quot;</span>\n<span class="str">&quot;</span> <span class="op">&amp;</span> <span class="ide">email</span></div></div>  </code></pre>
+<pre>  <code class="language-ini">    import parseini
+    var cfg = loadConfig(&quot;config.ini&quot;)
+    var charset = cfg.getSectionValue(&quot;&quot;,&quot;charset&quot;)
+    var threads = cfg.getSectionValue(&quot;Package&quot;,&quot;--threads&quot;)
+    var pname = cfg.getSectionValue(&quot;Package&quot;,&quot;name&quot;)
+    var name = cfg.getSectionValue(&quot;Author&quot;,&quot;name&quot;)
+    var qq = cfg.getSectionValue(&quot;Author&quot;,&quot;qq&quot;)
+    var email = cfg.getSectionValue(&quot;Author&quot;,&quot;email&quot;,&quot;10214028@qq.com&quot;)
+    echo pname &amp; &quot;\n&quot; &amp; name &amp; &quot;\n&quot; &amp; qq &amp; &quot;\n&quot; &amp; email
+</code></pre>
 <h1>Modifying a configuration file.</h1>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">parseini</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cfg</span> <span class="op">=</span> <span class="ide">loadConfig</span>(<span class="str">&quot;config.ini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;name&quot;</span>,<span class="str">&quot;lhf&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">setSectionKey</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;qq&quot;</span>,<span class="str">&quot;10214028&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">writeConfig</span>(<span class="str">&quot;config.ini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">cfg</span></div></div>  </code></pre>
+<pre>  <code class="language-ini">    import parseini
+    var cfg = loadConfig(&quot;config.ini&quot;)
+    cfg.setSectionKey(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
+    cfg.setSectionKey(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;)
+    cfg.writeConfig(&quot;config.ini&quot;)
+    echo cfg
+</code></pre>
 <h1>Deleting a section key in a configuration file.</h1>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">parseini</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cfg</span> <span class="op">=</span> <span class="ide">loadConfig</span>(<span class="str">&quot;config.ini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">delSectionKey</span>(<span class="str">&quot;Author&quot;</span>,<span class="str">&quot;email&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">cfg</span><span class="op">.</span><span class="ide">writeConfig</span>(<span class="str">&quot;config.ini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">cfg</span></div></div>  </code></pre>
+<pre>  <code class="language-ini">    import parseini
+    var cfg = loadConfig(&quot;config.ini&quot;)
+    cfg.delSectionKey(&quot;Author&quot;,&quot;email&quot;)
+    cfg.writeConfig(&quot;config.ini&quot;)
+    echo cfg
+</code></pre>
 </document>
             
         </div>
@@ -181,7 +204,7 @@ returns the specified default value if the specified key does not exist.</h1>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-21T01:17:40Z
+        Builded at 2023-04-22T01:19:16Z
         </p>
       </div>
     </div>

@@ -209,6 +209,9 @@
 <li>
 <p>Vim like register</p>
 </li>
+<li>
+<p>Git support</p>
+</li>
 </ul>
 <h2>Planned features</h2>
 <ul>
@@ -235,9 +238,6 @@
 </li>
 <li>
 <p>Terminal</p>
-</li>
-<li>
-<p>Git support</p>
 </li>
 <li>
 <p>Select data structures</p>
@@ -367,7 +367,7 @@ And one more, it comes from the Japanese slang 萌え(moe).</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-21T01:17:40Z
+        Builded at 2023-04-22T01:19:16Z
         </p>
       </div>
     </div>

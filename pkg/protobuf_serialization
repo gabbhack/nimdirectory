@@ -94,9 +94,7 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>nim-protobuf-serialization</h1>
-<p><a href="https://travis-ci.org/status-im/nim-protobuf-serialization">  <img src="https://img.shields.io/travis/status-im/nim-protobuf-serialization/master.svg?label=Linux%20/%20macOS" style="max-width: 100%;" alt="Build Status (Travis)" title="Linux/macOS build status (Travis)" /></a>
-<a href="https://ci.appveyor.com/project/nimbus/nim-protobuf-serialization">  <img src="https://img.shields.io/appveyor/ci/nimbus/nim-protobuf-serialization/master.svg?label=Windows" style="max-width: 100%;" alt="Windows build status (Appveyor)" title="Windows build status (Appveyor)" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
 <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /><img src="https://github.com/status-im/nim-protobuf-serialization/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
 <p>Protobuf implementation compatible with the <a href="https://github.com/status-im/nim-serialization">nim-serialization</a> framework.</p>
@@ -117,7 +115,7 @@ message ExampleMsg {
 <p>  <strong>Annotated Nim code</strong></p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">ExampleMsg</span> {<span class="op">.</span><span class="ide">proto3</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span> {<span class="op">.</span><span class="ide">fieldNumber</span>: <span class="num">1</span>, <span class="ide">pint</span><span class="op">.</span>}: <span class="ide">int32</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span> {<span class="op">.</span><span class="ide">fieldNumber</span>: <span class="num">2.</span>}: <span class="ide">float32</span></div></div>  </code></pre>
 <p><strong>Importing proto file</strong>:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">protocol_serialization</span><span class="op">/</span><span class="ide">proto_parser</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This generates the same definition as above using a compile-time macro / parser</span></div></div><div class="line"><div class="line-content"><span class="ide">import_proto3</span> <span class="str">&quot;my_protocol.proto3&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">protobuf_serialization</span><span class="op">/</span><span class="ide">proto_parser</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This generates the same definition as above using a compile-time macro / parser</span></div></div><div class="line"><div class="line-content"><span class="ide">import_proto3</span> <span class="str">&quot;my_protocol.proto3&quot;</span></div></div>  </code></pre>
 <p>  <strong>Encoding and decoding</strong></p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">ExampleMsg</span>(<span class="ide">a</span>: <span class="num">10</span>, <span class="ide">b</span>: <span class="num">20.0</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">encoded</span> <span class="op">=</span> <span class="ide">Protobuf</span><span class="op">.</span><span class="ide">encode</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">decoded</span> <span class="op">=</span> <span class="ide">Protobuf</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">encoded</span>, <span class="ide">ExampleMsg</span>)</div></div>  </code></pre>
 <p>Both Protobuf 2 and Protobuf 3 objects have the following properties:</p>
@@ -211,7 +209,7 @@ message ExampleMsg {
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-21T01:17:40Z
+        Builded at 2023-04-22T01:19:16Z
         </p>
       </div>
     </div>
