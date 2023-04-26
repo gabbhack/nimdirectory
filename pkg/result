@@ -93,7 +93,7 @@
 <p>Result type that can hold either a value or an error, but not both</p>
 <h2>Usage</h2>
 <p>Add the following to your <code>.nimble</code> file:</p>
-<pre>  <code>requires &quot;result&quot;
+<pre>  <code>requires &quot;results&quot;
 </code></pre>
 <p>or just drop the file in your project!</p>
 <h2>Example</h2>
@@ -170,7 +170,7 @@ towards the end where there are plenty of examples!</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-25T01:20:33Z
+        Builded at 2023-04-26T01:18:52Z
         </p>
       </div>
     </div>
