@@ -99,11 +99,12 @@ all procedures have defined proper pragmas. Additionally, it can be used as an
 advanced search through a code tool, for example find all public variables type
 of <em>int</em> with name which starts with <em>newVar</em>. It is controlled by
 configuration files containing a set of rules, their parameters and options
-related to the program behavior. At this moment, the project is in early alpha
-stage, it doesn&apos;t offer too much, its configuration syntax can change and
-should have a nice amount of bugs. If you read this file on GitHub:
-<strong>please don&apos;t send pull requests here</strong>. All will be automatically closed. Any
-code propositions should go to the <a href="https://www.laeran.pl/repositories/nimalyzer">Fossil</a> repository.</p>
+related to the program behavior.</p>
+<p>At this moment, the project is in <strong>early alpha</strong> stage, it doesn&apos;t offer too much,
+its configuration syntax can change and should have a nice amount of bugs.</p>
+<p>If you read this file on GitHub: <strong>please don&apos;t send pull requests here</strong>. All will
+be automatically closed. Any code propositions should go to the
+<a href="https://www.laeran.pl/repositories/nimalyzer">Fossil</a> repository.</p>
 <p><strong>IMPORTANT:</strong> If you read the file in the project code repository: This
 version of the file is related to the future version of the program. It may
 contain information not present in released versions of the program. For
@@ -230,7 +231,7 @@ project&apos;s source code.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-26T01:18:52Z
+        Builded at 2023-04-27T01:20:18Z
         </p>
       </div>
     </div>

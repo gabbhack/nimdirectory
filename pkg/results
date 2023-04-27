@@ -55,7 +55,7 @@
 <div class="content">
   <div class="container">
     <div class="container pt-10">
-        <h3 class="mb-3 fw-bold display-6 pt-4">result</h3>
+        <h3 class="mb-3 fw-bold display-6 pt-4">results</h3>
         <p class="tags">
             
                 <span class="tag">
@@ -67,6 +67,10 @@
                 </span>
             
                 <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">results</button></a>
+                </span>
+            
+                <span class="tag">
                     <button class="btn-tag pkg-btn-tag">errors</button></a>
                 </span>
             
@@ -74,13 +78,21 @@
                     <button class="btn-tag pkg-btn-tag">functional</button></a>
                 </span>
             
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">option</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">options</button></a>
+                </span>
+            
         </p>
-        <p class="pkg-desc">some("Friendly, exception-free value-or-error returns, similar to Option[T]")</p>
+        <p class="pkg-desc">some("Friendly value-or-error type")</p>
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
         </a>
-        <input id="cmd" onclick="this.select();" value="nimble install result" readonly="">
+        <input id="cmd" onclick="this.select();" value="nimble install results" readonly="">
         <br>
         <small style="font-size: 0.8rem;">Need help? Read <a
                 href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
@@ -115,7 +127,7 @@ towards the end where there are plenty of examples!</p>
                 
 
                 
-                    <p> <a href="https://github.com/arnetheduck/nim-result">Project website</a> </p>
+                    <p> <a href="https://github.com/arnetheduck/nim-results">Project website</a> </p>
                 
 
                 
@@ -170,7 +182,7 @@ towards the end where there are plenty of examples!</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-04-26T01:18:52Z
+        Builded at 2023-04-27T01:20:18Z
         </p>
       </div>
     </div>
