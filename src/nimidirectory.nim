@@ -46,7 +46,7 @@ proc main() =
     if package.kind != Alias:
       echo fmt"Processing `{package.name}`..."
       processPackage(package)
-      writeFile(packageDir / package.name, packagePage(package))
+      writeFile(packageDir / package.name & ".html", packagePage(package))
 
 when isMainModule:
   main()
