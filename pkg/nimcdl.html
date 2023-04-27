@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimcdl</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">circuit</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">HDL</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">PCB</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">DSL</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Circuit Design language made in Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimcdl" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>NimCDL: Nim Circuit Design Language</h1>
+<p>This package is a small DSL (Domain Specific Language) for Nim that allows to design electronic circuits, make a small evaluation (composer.nim) and generate a netlist for Fritzing or Kicad.</p>
+<p>It is still in the experimental phase and has many things to finish (See TODO).</p>
+<h1>Installation</h1>
+<p>Having installed nim and nimble, it is installed with just a simple command:
+<code>nimble install nimcdl</code></p>
+<h1>Use</h1>
+<p>This library defines a DSL to firstly define the circuit components, then the circuit itself and finally compose and export it.</p>
+<p>Clearly the first thing we will have to do in our Nim script is to import this library:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimcdl</span></div></div>  </code></pre>
+<h2>Defining a component</h2>
+<p>In the future, components may be imported and/or this library will have standard components. For the moment we will have to define each one of the components that we are going to use.</p>
+<p>The first thing will be to assign the component to a variable and start a definition:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">led</span> <span class="op">=</span> <span class="ide">component</span>(<span class="str">&quot;led&quot;</span>):</div></div>  </code></pre>
+<h3>add pins</h3>
+<p>Each electronic component has a series of pins that can be inputs or outputs (they can also be both, but this is not yet supported), to define these pins, we simply add the following to the previous code:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">led</span> <span class="op">=</span> <span class="ide">component</span>(<span class="str">&quot;led&quot;</span>):</div></div><div class="line"><div class="line-content"><span class="ide">pins</span>:</div></div><div class="line"><div class="line-content"><span class="ide">P1</span> <span class="op">-&gt;</span> <span class="ide">PinIn</span>((<span class="num">1.0</span>,<span class="num">5.0</span>), (<span class="num">0.1</span>,<span class="num">0.3</span>))</div></div><div class="line"><div class="line-content"><span class="ide">P2</span><span class="op">..</span><span class="ide">P3</span> <span class="op">-&gt;</span> <span class="ide">PinOut</span>()</div></div>  </code></pre>
+<p>Here we see pin 1(<em>P1</em>), which is assigned as an input pin (<em>PinIn</em>), then we assign a minimum and maximum voltage supported by the component (<em>(1.0,5.0)</em>) and do the same with the amperage it requires (<em>(0.1,0.3)</em>).</p>
+<p>Then, we see how you can assign a range of pin (<em>PX..PY</em>), in this case from pin 2 to pin 3 is assigned as an output pin (<em>PinOut</em>), in this case these default pins do not provide any electrical current (Voltage 0 and Amperage 0).</p>
+<h3>Logic of pins conections</h3>
+<p>The pins of our component may not work identical when certain pins are connected, so we can define the internal connections and their logics as follows:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">led</span> <span class="op">=</span> <span class="ide">component</span>(<span class="str">&quot;led&quot;</span>):</div></div><div class="line"><div class="line-content"><span class="ide">pins</span>:</div></div><div class="line"><div class="line-content"><span class="ide">P1</span> <span class="op">-&gt;</span> <span class="ide">PinIn</span>((<span class="num">1.0</span>,<span class="num">5.0</span>), (<span class="num">0.1</span>,<span class="num">0.3</span>))</div></div><div class="line"><div class="line-content"><span class="ide">P2</span><span class="op">..</span><span class="ide">P3</span> <span class="op">-&gt;</span> <span class="ide">PinOut</span>()</div></div><div class="line"><div class="line-content"><span class="ide">pinsLogic</span>:</div></div><div class="line"><div class="line-content"><span class="ide">logic</span> <span class="ide">L1</span>:</div></div><div class="line"><div class="line-content"><span class="ide">p2</span><span class="op">.</span><span class="ide">p</span><span class="op">.</span><span class="ide">maxVoltage</span> <span class="op">=</span> <span class="ide">p1</span><span class="op">.</span><span class="ide">p</span><span class="op">.</span><span class="ide">maxVoltage</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">P1</span> <span class="op">&lt;-&gt;</span> <span class="ide">P2</span></div></div><div class="line"><div class="line-content"><span class="ide">P1</span><span class="op">&lt;</span><span class="ide">L1</span><span class="op">&gt;</span><span class="ide">P3</span></div></div>  </code></pre>
+<h2>Let&apos;s go in parts, first connect pin 1 to pin 2, that is, if current enters through this, it leaves without being altered by pin 2 (<em>P1 &lt;-&gt; P2</em>).
+Then, between pin 1 and 3 we want to assign a logic, either resistance or any other alteration to the output pin or to the input current(net). For this we define the following:
+<code>Nim logic L1: p2.p.maxVoltage = p1.p.maxVoltage</code>
+Que gracias a macros se convertira en:
+<code>Nim proc (netIn: var Net, p1, p2: var tuple[n: uint, p: Pin]) = p2.p.maxVoltage = p1.p.maxVoltage</code>
+In the meantime, we specified to which pins this logic was assigned(<em>P1<l1>P3</l1></em>De esta forma ya tendríamos nuestro componente listo.</h2>Define a circuit
+<p>With our components already in variables, we are ready to initialize our circuit:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ledCircuit</span> <span class="op">=</span> <span class="ide">cirucit</span>(<span class="str">&quot;ledTest&quot;</span>):</div></div>  </code></pre>
+<h3>Creating a net</h3>
+<p>When defining nets, the first one we define will be our input network while the last one, the output network.
+At the moment, we can only name it but not assign the input current. Although after composing the circuit, we will be able to know the minimum and maximum voltage and amperage necessary for these.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ledCircuit</span> <span class="op">=</span> <span class="ide">cirucit</span>(<span class="str">&quot;ledTest&quot;</span>):</div></div><div class="line"><div class="line-content"><span class="ide">nets</span>:</div></div><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">-&gt;</span> <span class="ide">Net</span>(<span class="ide">name</span>: <span class="str">&quot;VDD&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">N1</span> <span class="op">-&gt;</span> <span class="ide">Net</span>()</div></div>  </code></pre>
+<h3>Adding components</h3>
+<p>Another fundamental part of any circuit, without a doubt, are its components. These are assigned in such a way:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ledCircuit</span> <span class="op">=</span> <span class="ide">cirucit</span>(<span class="str">&quot;ledTest&quot;</span>):</div></div><div class="line"><div class="line-content"><span class="ide">nets</span>:</div></div><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">-&gt;</span> <span class="ide">Net</span>(<span class="ide">name</span>: <span class="str">&quot;VDD&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">N1</span> <span class="op">-&gt;</span> <span class="ide">Net</span>()</div></div><div class="line"><div class="line-content"><span class="ide">components</span>:</div></div><div class="line"><div class="line-content"><span class="ide">CL0</span> <span class="op">-&gt;</span> <span class="ide">f</span></div></div><div class="line"><div class="line-content"><span class="ide">CL1</span> <span class="op">-&gt;</span> <span class="ide">f</span></div></div>  </code></pre>
+<p>As we can see, we can choose a reference for the component with this format <code>CXY</code>, where X is just a letter to identify the component and Y a number that can have as many digits as you want.</p>
+<h3>Conections</h3>
+<p>Now the final touch, the connections between networks and components or between components, for this we have several ways to express it thanks to DSL.
+The first is the connection of pin to pin or network to pin, ideal for making circuits in serial, which can be put in these ways:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">&lt;-&gt;</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL0</span><span class="op">.</span><span class="ide">P2</span> <span class="op">&lt;-&gt;</span> <span class="ide">N1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">&lt;-&gt;</span> <span class="ide">CL0</span><span class="op">.</span><span class="ide">P1</span></div></div><div class="line"><div class="line-content"><span class="ide">N1</span> <span class="op">&lt;-&gt;</span> <span class="ide">CL0</span><span class="op">.</span><span class="ide">P2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">&lt;-&gt;</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL0</span><span class="op">.</span><span class="ide">P2</span> <span class="op">&lt;-&gt;</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL1</span><span class="op">.</span><span class="ide">P2</span> <span class="op">&lt;-&gt;</span> <span class="ide">N1</span></div></div>  </code></pre>
+<p>The second is a multi-pin network, perfect for parallel connections:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">||</span> <span class="ide">N1</span></div></div><div class="line"><div class="line-content"><span class="op">||</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL0</span><span class="op">.</span><span class="ide">P2</span></div></div><div class="line"><div class="line-content"><span class="op">||</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL1</span><span class="op">.</span><span class="ide">P2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="op">|</span> <span class="ide">N0</span></div></div><div class="line"><div class="line-content"><span class="op">|</span> <span class="ide">CL0</span><span class="op">.</span><span class="ide">P1</span></div></div><div class="line"><div class="line-content"><span class="op">|</span> <span class="ide">CL1</span><span class="op">.</span><span class="ide">P1</span></div></div>  </code></pre>
+<hr />
+<p>So, our circuit could be something like this:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ledCircuit</span> <span class="op">=</span> <span class="ide">cirucit</span>(<span class="str">&quot;ledTest&quot;</span>):</div></div><div class="line"><div class="line-content"><span class="ide">nets</span>:</div></div><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">-&gt;</span> <span class="ide">Net</span>(<span class="ide">name</span>: <span class="str">&quot;VDD&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">N1</span> <span class="op">-&gt;</span> <span class="ide">Net</span>()</div></div><div class="line"><div class="line-content"><span class="ide">components</span>:</div></div><div class="line"><div class="line-content"><span class="ide">CL0</span> <span class="op">-&gt;</span> <span class="ide">f</span></div></div><div class="line"><div class="line-content"><span class="ide">CL1</span> <span class="op">-&gt;</span> <span class="ide">f</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">connections</span>:</div></div><div class="line"><div class="line-content"><span class="ide">N0</span> <span class="op">||</span> <span class="ide">N1</span></div></div><div class="line"><div class="line-content"><span class="op">||</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL0</span><span class="op">.</span><span class="ide">P2</span></div></div><div class="line"><div class="line-content"><span class="op">||</span> <span class="ide">P1</span><span class="op">.</span><span class="ide">CL1</span><span class="op">.</span><span class="ide">P2</span></div></div>  </code></pre>
+<h2>Composer</h2>
+<p>Finally, we compose the circuit, where the composer transforms the network to be easily exported and make a slight evaluation of it (In the future it will be more exhaustive).</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">final</span> <span class="op">=</span> <span class="ide">ledCircuit</span><span class="op">.</span><span class="ide">compose</span>(<span class="num">2</span>)</div></div>  </code></pre>
+<p>The 2 is the total number of networks that we have defined in the nets section.
+This function returns a <code>tuple</code> with the final circuit (<em>final.circuit</em>) and a collection of errors found in the circuit (<em>final.errors</em>).</p>
+<h2>Export</h2>
+<p>With this circuit in Nim we will not be able to do much more (for the moment), therefore we have to export it to a netlist:</p>
+<ul>
+<li>Kicad: with the function <code>toKicadNetlist(&apos;D&apos;)</code> (<em>final.toKicadNetlist(&apos;D&apos;)</em>)</li>
+<li>Fritzing: with the function toFritzingNetlist(&quot;circuit name&quot;)` (<em>final.toFritzingNetlist(&quot;ledTest&quot;)</em>)</li>
+</ul>
+<h1>Cotribute</h1>
+<p>Pulls requests accepted and well valued!!. I&apos;m going to start another project and I don&apos;t have time to keep progressing in this one.
+Besides the TODOs in the code, here is a list of things to do:</p>
+<ul>
+<li>Composer: Make a more correct ERC check and optimize.</li>
+<li>types: add more important information.</li>
+<li>DSL: add the buses (and document them) and allow to add logics when you get the necessary current for a network.</li>
+<li>Create an importer to be able to import components from outside.</li>
+<li>make a general code improvement</li>
+<li>Other</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        GPLv3
+                    </p>
+                
+
+                
+                    <p> <a href="https://gitlab.com/endes123321/nimcdl">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">spacy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">2d</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">collision</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">quadtree</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">kdtree</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">partition</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Spatial data structures for Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install spacy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Spatial data structures for Nim.</h1>
+<p>  <code>nimble install spacy</code></p>
+<p>  <img src="https://github.com/treeform/spacy/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/treeform/spacy">API reference</a></p>
+<h2>About</h2>
+<p>Spatial algorithms are used to find the &quot;closest&quot; things faster than simple brute force iteration would. They make your code run faster using smarter data structures. This library has different &quot;Spaces&quot; that you can use to speed up games and graphical applications.</p>
+<p>One key design decision is that all spaces have a very similar API and can be easily swapped. This way you can swap out spaces and see which one works best for your use case.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">spacy</span>, <span class="ide">vmath</span>, <span class="ide">random</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">rand</span> <span class="op">=</span> <span class="ide">initRand</span>(<span class="num">2021</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Create one of the BruteSpace, SortSpace, HashSpace, QuadSpace or KdSpace.</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">space</span> <span class="op">=</span> <span class="ide">newSortSpace</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">1000</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># All entries should have a id and pos.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">e</span> <span class="op">=</span> <span class="ide">Entry</span>(<span class="ide">id</span>: <span class="ide">i</span><span class="op">.</span><span class="ide">uint32</span>, <span class="ide">pos</span>: <span class="ide">rand</span><span class="op">.</span><span class="ide">randVec2</span>())</div></div><div class="line"><div class="line-content">  <span class="com"># Insert entries.</span></div></div><div class="line"><div class="line-content">  <span class="ide">space</span><span class="op">.</span><span class="ide">insert</span> <span class="ide">e</span></div></div><div class="line"><div class="line-content"><span class="com"># Call finalize to start using the space.</span></div></div><div class="line"><div class="line-content"><span class="ide">space</span><span class="op">.</span><span class="ide">finalize</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Iterate N x N entires and get the closest.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">distance</span> <span class="op">=</span> <span class="num">0.001</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">a</span> <span class="kwd">in</span> <span class="ide">space</span><span class="op">.</span><span class="ide">all</span>():</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">b</span> <span class="kwd">in</span> <span class="ide">space</span><span class="op">.</span><span class="ide">findInRange</span>(<span class="ide">a</span>, <span class="ide">distance</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">a</span>, <span class="str">&quot; is close to &quot;</span>, <span class="ide">b</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Clear the space when you are done.</span></div></div><div class="line"><div class="line-content"><span class="ide">space</span><span class="op">.</span><span class="ide">clear</span>()</div></div>  </code></pre>
+<h3>Perf time (1000 vs 1000 at 0.001 distance):</h3>
+<pre>  <code>BruteSpace ......................... 1.839 ms      1.869 ms    ±0.052   x100
+SortSpace .......................... 1.511 ms      1.539 ms    ±0.028   x100
+HashSpace .......................... 0.441 ms      0.457 ms    ±0.022   x100
+QuadSpace .......................... 0.185 ms      0.195 ms    ±0.010   x100
+KdSpace ............................ 0.519 ms      0.548 ms    ±0.037   x100
+</code></pre>
+<p>You would usually pick the best one for your use case by profiling and tuning. There is a cost to generating each space, you need to make sure it justifies the lookup time savings.</p>
+<h1>BruteSpace</h1>
+<p>BruteSpace is basically a brute force algorithm that takes every inserted element and compares to every other inserted element.</p>
+<p>  <img src="examples/BruteSpace.png" style="max-width: 100%;" alt="examples/BruteSpace.png" /></p>
+<p>The BruteSpace is faster when there are few elements in the space or you don&apos;t do many look ups. It’s a good baseline space that enables you to see how slow things actually can be. Don&apos;t discount it! Linear scans are pretty fast when you are just zipping through memory. Brute force might be all you need!</p>
+<h1>SortSpace</h1>
+<p>SortSpace is probably the simplest spatial algorithm you can have. All it does is sorts all entries on one axis. Here it does the X axis. Then all it does is looks to the right and the left for matches. It’s very simple to code and produces good results when the radius is really small.</p>
+<p>  <img src="examples/SortSpace.png" style="max-width: 100%;" alt="examples/SortSpace.png" /></p>
+<p>You can see we are checking way less elements compared to BruteSpace. Instead of checking vs all elements we are only checking in the vertical slice.</p>
+<p>SortSpace draws its power from the underlying sorting algorithm n×log(n) nature. It’s really good for very small distances when you don’t expect many elements to appear in the vertical slice. SortSpace is really good at cache locality because you are searching things next to each other and are walking linearly in memory.</p>
+<h1>HashSpace</h1>
+<p>HashSpace is a little more complex than SortSpace but it’s still pretty simple. Instead of drawing its power from a sorting algorithm it draws its power from hash tables. HashSpace has a resolution and every entry going in is put into a grid-bucket. To check for surrounding entries you simply look up closest grid buckets and then loop through their entries.</p>
+<p>  <img src="examples/HashSpace.png" style="max-width: 100%;" alt="examples/HashSpace.png" /></p>
+<p>HashSpaces are really good for when your entries are uniformly distributed with even density and things can’t really bunch up too much. They work even better when entries are really far apart. They are also really good when you are always searching the same distance in that you can make the grid size match your search radius. You can tune this space for your usecase.</p>
+<h1>QuadSpace</h1>
+<p>QuadSpace is basically the same as &quot;quad tree&quot; (I just like the space theme). Quad trees are a little harder to make but usually winners in all kinds of spatial applications. They work by starting out with a single quad and as more elements are inserted into the quad they hit maximum elements in a quad and split into 4. The elements are redistributed. As those inner quads begin to fill up they are split as well. When looking up stuff you just have to walk into the closets quads.</p>
+<p>  <img src="examples/QuadSpace.png" style="max-width: 100%;" alt="examples/QuadSpace.png" /></p>
+<p>QuadSpaces are really good at almost everything. But they might miss out in some niche cases where SortSpaces (really small distances) or HashSpaces (uniform density) might win out. They are also bad at cache locality as many pointers or references might make you jump all over the place in memory.</p>
+<h1>KdSpace</h1>
+<p>Just like QuadSpace is about Quad Trees, KdSpace is about kd-tree. Kd-Trees differ from quad trees in that they are binary and they sort their results as they divide. Potentially getting less nodes and less bounds to check. Quad trees build their nodes as new elements are inserted while kd-trees build all the nodes in one big final step.</p>
+<p>  <img src="examples/KdSpace.png" style="max-width: 100%;" alt="examples/KdSpace.png" /></p>
+<p>KdSpace trees take a long time to build. In theory KdSpace would be good when the entries are static, the tree is built once and used often. While QuadSpace might be better when the tree is rebuilt all the time.</p>
+<h1>Always be profiling.</h1>
+<p>You can’t really say one Space is faster than the others, you always need to check. The hardware or your particular problem might drastically change the speed characteristics. This is why all spaces have a similar API and you can just swap them out when another space seems better for your use case.</p>
+<h1>API: spacy</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">spacy</span></div></div>  </code></pre>
+<h2><strong>type</strong> Entry</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Entry</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">id</span><span class="op">*:</span> <span class="ide">uint32</span></div></div><div class="line"><div class="line-content"> <span class="ide">pos</span><span class="op">*:</span> <span class="ide">Vec2</span></div></div>  </code></pre>
+<h2><strong>type</strong> BruteSpace</h2>
+<p>Brute-force space just compares every entry vs every other entry. Supposed to be good for very small number or large ranges.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">BruteSpace</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">list</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">Entry</span>]</div></div>  </code></pre>
+<h2><strong>proc</strong> newBruteSpace</h2>
+<p>Creates a new brute-force space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newBruteSpace</span>(): <span class="ide">BruteSpace</span></div></div>  </code></pre>
+<h2><strong>proc</strong> insert</h2>
+<p>Adds entry to the space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">insert</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> finalize</h2>
+<p>Finishes the space and makes it ready for use.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">finalize</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> clear</h2>
+<p>Clears the spaces and makes it ready to be used again.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">clear</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> len</h2>
+<p>Number of entries inserted</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">len</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>): <span class="ide">int</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>iterator</strong> all</h2>
+<p>Iterates all entries in a space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">all</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRangeApprox</h2>
+<p>Iterates all entries in range of an entry but does not cull them. Useful if you need distance anyways and will compute other computations.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRangeApprox</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRange</h2>
+<p>Iterates all entries in range of an entry.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRange</span>(<span class="ide">bs</span>: <span class="ide">BruteSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>type</strong> SortSpace</h2>
+<p>Sort space sorts all entires on one axis X. Supposed to be good for very small ranges.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">SortSpace</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">list</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">Entry</span>]</div></div>  </code></pre>
+<h2><strong>proc</strong> newSortSpace</h2>
+<p>Creates a new sorted space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newSortSpace</span>(): <span class="ide">SortSpace</span></div></div>  </code></pre>
+<h2><strong>proc</strong> insert</h2>
+<p>Adds entry to the space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">insert</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> finalize</h2>
+<p>Finishes the space and makes it ready for use.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">finalize</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> clear</h2>
+<p>Clears the spaces and makes it ready to be used again.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">clear</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> len</h2>
+<p>Number of entries inserted.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">len</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>): <span class="ide">int</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>iterator</strong> all</h2>
+<p>Iterates all entries in a space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">all</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRangeApprox</h2>
+<p>Iterates all entries in range of an entry but does not cull them. Useful if you need distance anyways and will compute other computations.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRangeApprox</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRange</h2>
+<p>Iterates all entries in range of an entry.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRange</span>(<span class="ide">ss</span>: <span class="ide">SortSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>type</strong> HashSpace</h2>
+<p>Divides space into little tiles that objects are hashed too. Supposed to be good for very uniform filled space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">HashSpace</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">hash</span><span class="op">*:</span> <span class="ide">TableRef</span>[(<span class="ide">int32</span>, <span class="ide">int32</span>), <span class="ide">seq</span>[<span class="ide">Entry</span>]]</div></div><div class="line"><div class="line-content"> <span class="ide">resolution</span><span class="op">*:</span> <span class="ide">float</span></div></div>  </code></pre>
+<h2><strong>proc</strong> newHashSpace</h2>
+<p>Creates a hash table space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newHashSpace</span>(<span class="ide">resolution</span>: <span class="ide">float</span>): <span class="ide">HashSpace</span></div></div>  </code></pre>
+<h2><strong>proc</strong> insert</h2>
+<p>Adds entry to the space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">insert</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">KeyError</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> finalize</h2>
+<p>Finishes the space and makes it ready for use.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">finalize</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> clear</h2>
+<p>Clears the spaces and makes it ready to be used again.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">clear</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> len</h2>
+<p>Number of entries inserted</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">len</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>): <span class="ide">int</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>iterator</strong> all</h2>
+<p>Iterates all entries in a space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">all</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRangeApprox</h2>
+<p>Iterates all entries in range of an entry but does not cull them. Useful if you need distance anyways and will compute other computations.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRangeApprox</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span> {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">KeyError</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRange</h2>
+<p>Iterates all entries in range of an entry.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRange</span>(<span class="ide">hs</span>: <span class="ide">HashSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span> {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">KeyError</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>type</strong> QuadSpace</h2>
+<p>QuadTree, divide each node down if there is many elements. Supposed to be for large amount of entries.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">QuadSpace</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">root</span><span class="op">*:</span> <span class="ide">QuadNode</span></div></div><div class="line"><div class="line-content"> <span class="ide">maxThings</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content"> <span class="ide">maxLevels</span><span class="op">*:</span> <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>type</strong> QuadNode</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">QuadNode</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">things</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">Entry</span>]</div></div><div class="line"><div class="line-content"> <span class="ide">nodes</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">QuadNode</span>]</div></div><div class="line"><div class="line-content"> <span class="ide">bounds</span><span class="op">*:</span> <span class="ide">Rect</span></div></div><div class="line"><div class="line-content"> <span class="ide">level</span><span class="op">*:</span> <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>proc</strong> newQuadSpace</h2>
+<p>Creates a new quad-tree space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newQuadSpace</span>(<span class="ide">bounds</span>: <span class="ide">Rect</span>; <span class="ide">maxThings</span> <span class="op">=</span> <span class="num">10</span>; <span class="ide">maxLevels</span> <span class="op">=</span> <span class="num">10</span>): <span class="ide">QuadSpace</span></div></div>  </code></pre>
+<h2><strong>proc</strong> insert</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">insert</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>; <span class="ide">qn</span>: <span class="kwd">var</span> <span class="ide">QuadNode</span>; <span class="ide">e</span>: <span class="ide">Entry</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">Exception</span>], <span class="ide">tags</span>: [<span class="ide">RootEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> insert</h2>
+<p>Adds entry to the space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">insert</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">Exception</span>], <span class="ide">tags</span>: [<span class="ide">RootEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> finalize</h2>
+<p>Finishes the space and makes it ready for use.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">finalize</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> clear</h2>
+<p>Clears the spaces and makes it ready to be used again.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">clear</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> len</h2>
+<p>Number of entries inserted.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">len</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>): <span class="ide">int</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>iterator</strong> all</h2>
+<p>Iterates all entries in a space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">all</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRangeApprox</h2>
+<p>Iterates all entries in range of an entry but does not cull them. Useful if you need distance anyways and will compute other computations.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRangeApprox</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRange</h2>
+<p>Iterates all entries in range of an entry.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRange</span>(<span class="ide">qs</span>: <span class="ide">QuadSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>type</strong> KdSpace</h2>
+<p>KD-Tree, each cell is divided vertically or horizontally. Supposed to be good for large amount of entries.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">KdSpace</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">root</span><span class="op">*:</span> <span class="ide">KdNode</span></div></div><div class="line"><div class="line-content"> <span class="ide">maxThings</span><span class="op">*:</span> <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>type</strong> KdNode</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">KdNode</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">things</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">Entry</span>]</div></div><div class="line"><div class="line-content"> <span class="ide">nodes</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">KdNode</span>]</div></div><div class="line"><div class="line-content"> <span class="ide">bounds</span><span class="op">*:</span> <span class="ide">Rect</span></div></div><div class="line"><div class="line-content"> <span class="ide">level</span><span class="op">*:</span> <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>proc</strong> newKdSpace</h2>
+<p>Creates a new space based on kd-tree.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newKdSpace</span>(<span class="ide">bounds</span>: <span class="ide">Rect</span>; <span class="ide">maxThings</span> <span class="op">=</span> <span class="num">10</span>; <span class="ide">maxLevels</span> <span class="op">=</span> <span class="num">10</span>): <span class="ide">KdSpace</span></div></div>  </code></pre>
+<h2><strong>proc</strong> insert</h2>
+<p>Adds entry to the space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">insert</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> finalize</h2>
+<p>Finishes the space and makes it ready for use.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">finalize</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> clear</h2>
+<p>Clears the spaces and makes it ready to be used again.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">clear</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> len</h2>
+<p>Number of entries inserted.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">len</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>): <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> all</h2>
+<p>Iterates all entries in a space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">all</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRangeApprox</h2>
+<p>Iterates all entries in range of an entry but does not cull them. Useful if you need distance anyways and will compute other computations.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRangeApprox</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+<h2><strong>iterator</strong> findInRange</h2>
+<p>Iterates all entries in range of an entry.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">findInRange</span>(<span class="ide">ks</span>: <span class="ide">KdSpace</span>; <span class="ide">e</span>: <span class="ide">Entry</span>; <span class="ide">radius</span>: <span class="ide">float</span>): <span class="ide">Entry</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/spacy">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">magic</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">libmagic</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">magic</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">guessfile</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("libmagic for nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install magic" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>magic</h1>
+<p>Libmagic is a magic number recognition library, remember everytime you called <code>file</code> utility on a file to know its type?</p>
+<pre>  <code>➜  file /usr/bin/rm
+/usr/bin/rm: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=cbae26b2a032b1ce3129d56aee2bcf70dd8deeb0, stripped
+➜  nim-magic file /
+/: directory
+➜  file /usr/include/stdio.h
+/usr/include/stdio.h: C source, ASCII text
+</code></pre>
+<h2>Example</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">magic</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">magic</span><span class="op">.</span><span class="ide">guessFile</span>(<span class="str">&quot;/usr/bin/rm&quot;</span>)</div></div>  </code></pre>
+<p>The output should be something like</p>
+<pre>  <code>ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=cbae26b2a032b1ce3129d56aee2bcf70dd8deeb0, stripped
+</code></pre>
+<h2>Tutorial</h2>
+<p><a href="https://livebook.manning.com/#%21/book/nim-in-action/chapter-8/1">FFI Chapter</a> of <a href="https://www.manning.com/books/nim-in-action">Nim in Action</a> is freely available.</p>
+<h3>Step 1: Get the library info</h3>
+<p>Well, libmagic has <code>libmagic.so</code> in your library path <code>/usr/lib/libmagic.so</code> and a header file <code>magic.h</code> in <code>/usr/include/magic.h</code>.
+create a constant for the libmagic library name.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">libName</span><span class="op">*</span> <span class="op">=</span> <span class="str">&quot;libmagic.so&quot;</span></div></div>  </code></pre>
+<h3>Step 2: Extract constants</h3>
+<p>We should extract the constants from the header</p>
+<pre>  <code class="language-c"><div class="line"><div class="line-content">#define <span class="ide">MAGIC_NONE</span>              0x0000000 /* No flags */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_DEBUG</span>             0x0000001 /* Turn on debugging */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_SYMLINK</span>           0x0000002 /* Follow symlinks */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_COMPRESS</span>          0x0000004 /* Check inside compressed files */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_DEVICES</span>           0x0000008 /* Look at the contents of devices */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_MIME_TYPE</span>         0x0000010 /* Return the MIME type */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_CONTINUE</span>          0x0000020 /* Return all matches */</div></div><div class="line"><div class="line-content">#define <span class="ide">MAGIC_CHECK</span>             0x0000040 /* Print warnings to stderr */</div></div><div class="line"><div class="line-content">....</div></div>  </code></pre>
+<p>So in nim It&apos;d be something like this</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NONE</span><span class="op">*</span>  <span class="op">=</span> <span class="num">0x000000</span>                 <span class="com"># No flags </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_DEBUG</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000001</span>                 <span class="com"># Turn on debugging </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_SYMLINK</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000002</span>                 <span class="com"># Follow symlinks </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_COMPRESS</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000004</span>                <span class="com"># Check inside compressed files </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_DEVICES</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000008</span>                 <span class="com"># Look at the contents of devices </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_MIME_TYPE</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000010</span>            <span class="com"># Return only the MIME type </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_CONTINUE</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000020</span>             <span class="com"># Return all matches </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_CHECK</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000040</span>                 <span class="com"># Print warnings to stderr </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_PRESERVE_ATIME</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000080</span>        <span class="com"># Restore access time on exit </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_RAW</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000100</span>                    <span class="com"># Don&apos;t translate unprint chars </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_ERROR</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000200</span>                 <span class="com"># Handle ENOENT etc as real errors </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_MIME_ENCODING</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x000400</span>         <span class="com"># Return only the MIME encoding </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_COMPRESS</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x001000</span>     <span class="com"># Don&apos;t check for compressed files </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_TAR</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x002000</span>         <span class="com"># Don&apos;t check for tar files </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_SOFT</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x004000</span>         <span class="com"># Don&apos;t check magic entries </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_APPTYPE</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x008000</span>        <span class="com"># Don&apos;t check application type </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_ELF</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x010000</span>            <span class="com"># Don&apos;t check for elf details </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_ASCII</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x020000</span>         <span class="com"># Don&apos;t check for ascii files </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span>  <span class="ide">MAGIC_NO_CHECK_TOKENS</span><span class="op">*</span> <span class="op">=</span> <span class="num">0x100000</span>         <span class="com"># Don&apos;t check ascii/tokens</span></div></div>  </code></pre>
+<h3>Step 3: Extract the types</h3>
+<p><code>typedef struct magic_set *magic_t;</code>
+so the only type we have is a pointer to some struct (object)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Magic</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">MagicPtr</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ptr</span> <span class="ide">Magic</span></div></div>  </code></pre>
+<h3>Step 4: Extract procedures</h3>
+<pre>  <code class="language-c"><div class="line"><div class="line-content"><span class="ide">magic_t</span> <span class="ide">magic_open</span>(<span class="kwd">int</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">void</span> <span class="ide">magic_close</span>(<span class="ide">magic_t</span>);</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span><span class="ide">magic_getpath</span>(<span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span>, <span class="kwd">int</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span><span class="ide">magic_file</span>(<span class="ide">magic_t</span>, <span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span><span class="ide">magic_descriptor</span>(<span class="ide">magic_t</span>, <span class="kwd">int</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span><span class="ide">magic_buffer</span>(<span class="ide">magic_t</span>, <span class="kwd">const</span> <span class="kwd">void</span> <span class="op">*</span>, <span class="ide">size_t</span>);</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span><span class="ide">magic_error</span>(<span class="ide">magic_t</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_getflags</span>(<span class="ide">magic_t</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_setflags</span>(<span class="ide">magic_t</span>, <span class="kwd">int</span>);</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_version</span>(<span class="kwd">void</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_load</span>(<span class="ide">magic_t</span>, <span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_load_buffers</span>(<span class="ide">magic_t</span>, <span class="kwd">void</span> <span class="op">**</span>, <span class="ide">size_t</span> <span class="op">*</span>, <span class="ide">size_t</span>);</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_compile</span>(<span class="ide">magic_t</span>, <span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_check</span>(<span class="ide">magic_t</span>, <span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_list</span>(<span class="ide">magic_t</span>, <span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">magic_errno</span>(<span class="ide">magic_t</span>);</div></div>  </code></pre>
+<p>we only care about <code>magic_open</code>, <code>magic_load</code>, <code>magic_close</code>, <code>magic_file</code>, <code>magic_error</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># magic_t magic_open(int);</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">magic_open</span>(<span class="ide">i</span>:<span class="ide">cint</span>) : <span class="ide">MagicPtr</span> {<span class="op">.</span><span class="ide">importc</span>, <span class="ide">dynlib</span>:<span class="ide">libName</span><span class="op">.</span>}</div></div>  </code></pre>
+<p><code>magic_open</code> is a proc declared in dynamic lib <code>libmagic.so</code>, that is takes a cint &quot;compatible c int&quot; <code>i</code> and returns a <code>MagicPtr</code>.</p>
+<p>From the manpage</p>
+<pre>  <code>The function magic_open() creates a magic cookie pointer and returns it.  It returns NULL if there was an error allocating the magic cookie.  The flags argument specifies how the other magic functions should behave
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># void magic_close(magic_t);</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">magic_close</span>(<span class="ide">p</span>:<span class="ide">MagicPtr</span>): <span class="ide">void</span> {<span class="op">.</span><span class="ide">importc</span>,  <span class="ide">dynlib</span>:<span class="ide">libName</span><span class="op">.</span>}</div></div>  </code></pre>
+<p><code>magic_close</code> is a proc declared in dynlib <code>libmagic.so</code> and takes an argumnet p of type <code>MagicPtr</code> and returns <code>void</code></p>
+<p>From the manpage:</p>
+<pre>  <code>The magic_close() function closes the magic(5) database and deallocates any resources used.
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com">#int magic_load(magic_t, const char *);</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">magic_load</span>(<span class="ide">p</span>:<span class="ide">MagicPtr</span>, <span class="ide">s</span>:<span class="ide">cstring</span>) : <span class="ide">cint</span> {<span class="op">.</span><span class="ide">importc</span>, <span class="ide">dynlib</span>: <span class="ide">libName</span><span class="op">.</span>}</div></div>  </code></pre>
+<p><code>magic_load</code> is a proc declared in dynlib <code>libmagic.so</code> takes argument p of type <code>MagicPtr</code> and a <code>cstring</code> &quot;compatible c string&quot; <code>s</code> and returns a <code>cint</code></p>
+<p>From manpage:</p>
+<pre>  <code> The magic_load() function must be used to load the colon separated list of database files passed in as filename, or NULL for the default database
+     file before any magic queries can performed.
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com">#int magic_errno(magic_t);</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">magic_error</span>(<span class="ide">p</span>: <span class="ide">MagicPtr</span>) : <span class="ide">cstring</span>  {<span class="op">.</span><span class="ide">importc</span>, <span class="ide">dynlib</span>:<span class="ide">libName</span><span class="op">.</span>}</div></div>  </code></pre>
+<p><code>magic_errno</code> is a proc declared in dynlib <code>libmagic.so</code> and takes argument p of type <code>MagicPtr</code> and returns a <code>cstring</code></p>
+<p>From manpage</p>
+<pre>  <code>     The magic_error() function returns a textual explanation of the last error, or NULL if there was no error.
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com">#const char *magic_file(magic_t, const char *);</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">magic_file</span>(<span class="ide">p</span>:<span class="ide">MagicPtr</span>, <span class="ide">filepath</span>: <span class="ide">cstring</span>): <span class="ide">cstring</span> {<span class="op">.</span><span class="ide">importc</span>, <span class="ide">dynlib</span>: <span class="ide">libName</span><span class="op">.</span>}</div></div>  </code></pre>
+<p><code>magic_file</code> is proc declared in dynlib <code>libmagic.so</code> takes argument p of type <code>MagicPtr</code> and a filepath of type <code>cstring</code> and returns a <code>cstring</code></p>
+<p>From manpage:</p>
+<pre>  <code>     The magic_file() function returns a textual description of the contents of the filename argument, or NULL if an error occurred.  If the filename is
+     NULL, then stdin is used.
+</code></pre>
+<h3>Step 5: Friendly API</h3>
+<p>It&apos;d be annoying for people to write C code and take care of pointers and such in a higher level language like nim</p>
+<p>So let&apos;s expose a proc <code>guessFile</code> takes a filepath and flags and internally use the functions we exposed through the FFI in the previous step.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">guessFile</span><span class="op">*</span>(<span class="ide">filepath</span>: <span class="ide">string</span>, <span class="ide">flags</span>: <span class="ide">cint</span> <span class="op">=</span> <span class="ide">MAGIC_NONE</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">mt</span> : <span class="ide">MagicPtr</span></div></div><div class="line"><div class="line-content">    <span class="ide">mt</span> <span class="op">=</span> <span class="ide">magic_open</span>(<span class="ide">flags</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">magic_load</span>(<span class="ide">mt</span>, <span class="kwd">nil</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">fileExists</span>(<span class="ide">expandFilename</span>(<span class="ide">filepath</span>)):</div></div><div class="line"><div class="line-content">        <span class="ide">result</span> <span class="op">=</span> <span class="op">$</span><span class="ide">magic_file</span>(<span class="ide">mt</span>, <span class="ide">cstring</span>(<span class="ide">filepath</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">magic_close</span>(<span class="ide">mt</span>)</div></div>  </code></pre>
+<p>Only one note here to convert from <code>cstring</code> to <code>string</code> we use the <code>toString</code> operator <code>$</code></p>
+<pre>  <code>        result = $magic_file(mt, cstring(filepath))
+</code></pre>
+<p>Feel free to send me PRs to improve the library or tutorial :)</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/xmonader/nim-magic">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

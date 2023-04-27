@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">fugitive</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">git</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">github</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cli</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">extras</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">utility</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tool</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Simple command line tool to make git more intuitive, along with useful GitHub addons.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install fugitive" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>fugitive · <a href="https://nimble.directory/pkg/fugitive">  <img src="https://flat.badgen.net/badge/available%20on/nimble/yellow" style="max-width: 100%;" alt="nimble" /></a> <img src="https://flat.badgen.net/github/license/haltcase/fugitive" style="max-width: 100%;" alt="license" /></h1>
+<blockquote>
+<p>Simple command line tool to make git more intuitive, along with useful GitHub addons.</p>
+</blockquote>
+<p>fugitive provides new or alternative commands to use with git, and also
+adds a few helpful tools for GitHub repositories.</p>
+<p>It&apos;s similar to <a href="https://github.com/tj/git-extras">  <code>git-extras</code></a> but is designed to be more
+portable. <code>git-extras</code> is written entirely as a set of shell scripts,
+which means platform support outside Unix is at best hit or miss.</p>
+<p>On the other hand, fugitive is written in <a href="https://nim-lang.org">Nim</a> to allow for better
+portability. Other benefits are that Nim is super fast, flexible, and more
+readable than the often cryptic bash syntax.</p>
+<p><a href="https://github.com/Originate/git-town">Git Town</a> is a project with similar goals written in Go.</p>
+<h2>installation</h2>
+<p>Linux, Windows, and macOS prebuilt binaries are available from <a href="https://github.com/haltcase/fugitive/releases">releases</a>.
+Download the file for your system from the latest release and extract the binary
+within to somewhere in your <code>$PATH</code>.</p>
+<p>Alternatively if you have <a href="https://nim-lang.org">Nim</a> and <a href="https://github.com/nim-lang/nimble">Nimble</a> installed
+( and <code>~/.nimble/bin</code> is in your path ), you can also simply run:</p>
+<pre>  <code class="language-shell">nimble install fugitive
+</code></pre>
+<p>This will make the latest version of <code>fugitive</code> available to you anywhere.
+Check out <a href="https://github.com/nim-lang/nimble">Nimble</a> if you&apos;d like to know more about package installation.</p>
+<h2>usage</h2>
+<pre>  <code class="language-shell">Usage: fugitive [command] [...args] (...options)
+
+Commands:
+  alias     [name [--remove|-r]] [expansion]
+                                 List, add, or remove git aliases
+  config    [key] [value] [--remove|-r]
+                                 Set, update, or remove fugitive settings
+  changelog [file] [--tag|-t:&lt;tag&gt;] [--last-tag|-l:&lt;tag&gt;] [--overwrite|-o]
+            [--no-anchor] [--no-title] [--no-divider] [--init]
+                                 Write a list of changes since last tag or between two tags
+  clone     &lt;...repos&gt;           Alias for `fugitive mirror`
+  install   [--override|-o] [--force|-y]
+                                 Alias various fugitive commands as git subcommands
+  lock      &lt;...files&gt;           Prevent changes to the specified files from being tracked
+  mirror    &lt;...repos&gt;           Wrapper around `git clone` with various URL shorthands
+  open      [repo]               Open the current or specified repository&apos;s homepage
+  profile   [username]           View a summary of a GitHub user profile
+  release   &lt;tag&gt; [--repo|-r:&lt;repo&gt;] [--file|-f:&lt;filepath&gt;] [--description|-d:&lt;desc&gt;]
+            [--desc-file|-D:&lt;filepath&gt;] [--draft|-N] [--prerelease|-p]
+            [--target-commit|-T:&lt;commitish&gt;]
+                                 Create a GitHub release and/or upload assets to a release
+  scrap     &lt;...files&gt;  [--all|-a]
+                                 Discard local changes to the specified files
+  summary                        Summarize git repository statistics
+  undo      [#] [--hard|-h]      Undo the last commit ( or last # commits )
+  uninstall                      Remove git aliases added by `install`
+  unlock    &lt;...files&gt;           Resume tracking changes to these locked files
+  unstage   &lt;...files&gt; [--all|-a]
+                                 Remove files from the git stage area
+
+Options:
+  --help, -h       Show this help message
+  --version, -v    Output the fugitive version number
+</code></pre>
+<p>For help on a specific command, provide the <code>--help</code>/<code>-h</code> flag <em>after</em>
+that command, ie. <code>fugitive changelog -h</code>.</p>
+<h2>configuration</h2>
+<p>fugitive stores a configuration file in your user configuration directory
+called <code>fugitive.ini</code>. You can manage this file using the <code>fugitive config</code>
+command.</p>
+<blockquote>
+<p>TIP: Using the <code>fugitive config</code> command with no arguments will print the full
+filepath to your config file.</p>
+</blockquote>
+<p>You can, for example, tell fugitive explicitly what to use as your GitHub
+username when using various shorthand features:</p>
+<pre>  <code class="language-shell">fugitive config github.username &lt;name&gt;
+</code></pre>
+<p>Here&apos;s the full list of available settings:</p>
+<table>
+<thead>
+<tr>
+<th>setting name</th>
+<th>type</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terminal_colors</td>
+<td>  <code>bool</code></td>
+<td>on</td>
+</tr>
+<tr>
+<td>github.username</td>
+<td>  <code>string</code></td>
+<td>-</td>
+</tr></tbody></table>
+<blockquote>
+<p>Settings of the type <code>bool</code> are retrieved using Nim&apos;s <a href="https://nim-lang.org/docs/strutils.html#parseBool%2Cstring">  <code>parseBool</code></a>,
+so they can be set to any of <code>y</code>, <code>yes</code>, <code>true</code>, <code>1</code>, <code>on</code> or <code>n</code>, <code>no</code>, <code>false</code>, <code>0</code>, <code>off</code>.</p>
+</blockquote>
+<h3>username</h3>
+<p>Some commands support a shorthand for referring to GitHub repositories,
+provided you&apos;ve configured your GitHub username or it can be inferred
+from your git config.</p>
+<h4>  <code>&lt;name&gt;</code></h4>
+<p>The simplest shorthand is for referencing one of your own repositories,
+which you can do by simply entering its name. For example if you&apos;re
+<strong>  <a href="https://github.com/haltcase">@haltcase</a></strong>, entering <code>fugitive open cascade</code> would open
+your browser to <strong>  <a href="https://github.com/haltcase/cascade">    <code>cascade</code>  </a></strong>.</p>
+<h4>  <code>&lt;owner&gt;/&lt;name&gt;</code></h4>
+<p>You can also use any <code>&lt;owner&gt;/&lt;project&gt;</code> combination you&apos;d like, such as:</p>
+<ul>
+<li>  <code>fugitive open nim-lang/nim</code></li>
+<li>  <code>fugitive mirror soasme/nim-markdown</code></li>
+</ul>
+<p>By default fugitive will use your local git username (from
+<code>git config --global user.name</code>) for these shorthands but you can explicitly
+set it yourself. You&apos;ll also be prompted to provide it if you try to use
+these shorthands and fugitive isn&apos;t able to infer it.</p>
+<h2>alias installation</h2>
+<p>After installation, you can make some of fugitive&apos;s commands more accessible by
+running <code>fugitive install</code>, which will attach them to git as subcommands,
+making <code>git undo == fugitive undo</code>.</p>
+<p>Commands installed to git include:</p>
+<pre>  <code>alias
+changelog
+lock
+mirror
+open
+profile
+release
+scrap
+summary
+undo
+unlock
+unstage
+</code></pre>
+<p>Existing aliases are safe as fugitive will not override them unless
+the <code>--override</code> ( or <code>-o</code> ) flag is explicitly passed.</p>
+<p>If you want to remove these installed aliases, use <code>fugitive uninstall</code>.
+Only aliases that fugitive installed and match the fugitive command will
+be removed.</p>
+<blockquote>
+<p>Note the <code>mirror</code> command - git commands can&apos;t be overridden, so while
+<code>fugitive clone</code> is possible it can&apos;t be aliased as a git subcommand.
+Therefore <code>fugitive mirror</code> is the main command and the one that will
+be attached to git, while <code>clone</code> is just an alias for convenience.</p>
+</blockquote>
+<h2>building</h2>
+<p>To build fugitive from source you&apos;ll need to install <a href="https://nim-lang.org">Nim</a> and its package
+manager <a href="https://github.com/nim-lang/nimble">Nimble</a>.</p>
+<ol>
+<li>Clone the repo: <code>git clone https://github.com/haltcase/fugitive.git</code></li>
+<li>Move into the newly cloned directory: <code>cd fugitive</code></li>
+<li>Compile a development build for your current platform: <code>nimble build</code></li>
+<li>Compile a release build for your current platform: <code>nimble release</code></li>
+</ol>
+<h2>contributing</h2>
+<p>This project is open to contributions of all kinds! Please check and search
+the <a href="https://github.com/haltcase/fugitive/issues">issues</a> if you encounter a problem before opening a new one.
+<a href="https://help.github.com/articles/creating-a-pull-request/">Pull requests</a> for improvements are also welcome — see the
+steps above for <a href="#building">development</a>.</p>
+<h2>license</h2>
+<p>MIT © <a href="https://github.com/haltcase">Bo Lingen / haltcase</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/haltcase/fugitive">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

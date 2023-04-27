@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">simple_parseopt</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parseopt</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">command</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">line</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">simple</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">option</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">argument</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parameter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">options</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">arguments</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parameters</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim module which provides clean, zero-effort command line parsing.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install simple_parseopt" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>simple_parseopt</h1>
+<p>Nim module which provides clean, zero-effort command line parsing.</p>
+<hr />
+<h2>Basic Use</h2>
+<p>This module gives you two ways to parse the command line: <code>get_options</code> and <code>get_options_and_supplied</code></p>
+<p>  <strong>get_options</strong></p>
+<p>At its simplest, declare a block like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># foo.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">options</span> <span class="op">=</span> <span class="ide">get_options</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">name</span>          <span class="op">=</span> <span class="str">&quot;Default Name&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">active</span>        <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">    <span class="ide">letter_one</span>    <span class="op">=</span> 'a'</div></div><div class="line"><div class="line-content">    <span class="ide">age</span>           <span class="op">=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">    <span class="ide">hello</span>:<span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">big</span>:<span class="ide">float64</span>   <span class="op">=</span> <span class="num">1.1</span></div></div><div class="line"><div class="line-content">    <span class="ide">small</span>:<span class="ide">float</span>   <span class="op">=</span> <span class="num">2.2</span></div></div><div class="line"><div class="line-content">    <span class="ide">flat</span>:<span class="ide">uint</span>     <span class="op">=</span> <span class="num">2</span></div></div><div class="line"><div class="line-content">    <span class="ide">arguments</span>:<span class="ide">seq</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">options</span><span class="op">.</span><span class="ide">name</span> <span class="op">&amp;</span> <span class="str">&quot; is &quot;</span> <span class="op">&amp;</span> <span class="ide">options</span><span class="op">.</span><span class="ide">age</span><span class="op">.</span><span class="ide">repr</span> <span class="op">&amp;</span> <span class="str">&quot; years old!&quot;</span></div></div>  </code></pre>
+<p>Notice it follows the same syntax as a <code>var</code> block.</p>
+<p>In the example <code>foo.nim</code> above, the variable <code>options</code> will be set to an <code>object</code> with fields as described in the <code>get_options</code> block.  Each field will also be set up as a command-line parameter for the user running the program to use; bools will toggle, while other fields will take a value argument.</p>
+<pre>  <code class="language-bash">foo -name &quot;J. Random&quot; -active -big 1011121.121498 -letter-one z
+</code></pre>
+<p>This will set the <code>name</code> <code>string</code> to <code>&quot;J. Random&quot;</code>, toggle the <code>active</code> <code>bool</code> to <code>true</code>, set the <code>big</code> <code>float64</code> to <code>1011121.121498</code>, and set <code>letter_one</code> to <code>z</code> (notice the underscore in the field becomes a hyphen at the command line).</p>
+<p>You may use any basic type: <code>bool</code>, <code>string</code>, <code>int</code>, <code>float</code>, <code>uint</code>, <code>char</code>, and the sized variants thereof, as well as <code>seq</code>s of those types: <code>seq[string]</code>, <code>seq[int]</code>, <code>seq[float]</code>, etc. (You may not use <code>seq[bool]</code>)</p>
+<p>The last <code>seq[string]</code> will automatically be used to store any arguments set without a parameter name (you can disable this behaviour with <code>no_implicit_bare()</code>)</p>
+<p>  <em>Details</em></p>
+<p>The code above will translate into the equivalent of:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Options</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span>:<span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">active</span>:<span class="ide">bool</span></div></div><div class="line"><div class="line-content">    <span class="ide">letter_one</span>:<span class="ide">char</span></div></div><div class="line"><div class="line-content">    <span class="ide">age</span>:<span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">hello</span>:<span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">big</span>:<span class="ide">float64</span></div></div><div class="line"><div class="line-content">    <span class="ide">small</span>:<span class="ide">float</span></div></div><div class="line"><div class="line-content">    <span class="ide">flat</span>:<span class="ide">uint</span></div></div><div class="line"><div class="line-content">    <span class="ide">arguments</span>:<span class="ide">seq</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">options</span> <span class="op">=</span> <span class="ide">Options</span>(<span class="ide">name</span>: <span class="str">&quot;Default Name&quot;</span>, <span class="ide">active</span>: <span class="ide">false</span>, <span class="ide">letter_one</span>: 'a', <span class="ide">age</span>: <span class="num">1</span>, <span class="ide">big</span>: <span class="num">1.1</span>, <span class="ide">small</span>: <span class="num">2.2</span>, <span class="ide">flat</span>: <span class="num">2</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">parse_command_line_into</span>(<span class="ide">options</span>)</div></div>  </code></pre>
+<p>Where <code>parse_command_line_into</code> is some hypothetical procedure which parses the user-supplied command line and sets fields in <code>options</code> appropriately.</p>
+<hr />
+<p>  <strong>get_options_and_supplied</strong></p>
+<p>Using a <code>get_options_and_supplied</code> block will behave just like <code>get_options</code>, except it will return a tuple of two objects.  The first is as detailed above.  The second object will have identical field names, but all its fields will be of type <code>bool</code>.</p>
+<p>Any field which the user has supplied on the command line will have its <code>bool</code> in the second object set to <code>true</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># foo.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">options</span>, <span class="ide">supplied</span>) <span class="op">=</span> <span class="ide">get_options_and_supplied</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">name</span>          <span class="op">=</span> <span class="str">&quot;Default Name&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">active</span>        <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">    <span class="ide">letter</span>        <span class="op">=</span> 'a'</div></div><div class="line"><div class="line-content">    <span class="ide">age</span>           <span class="op">=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">    <span class="ide">big</span>:<span class="ide">float64</span>   <span class="op">=</span> <span class="num">1.1</span></div></div><div class="line"><div class="line-content">    <span class="ide">small</span>:<span class="ide">float</span>   <span class="op">=</span> <span class="num">2.2</span></div></div><div class="line"><div class="line-content">    <span class="ide">flat</span>:<span class="ide">uint</span>     <span class="op">=</span> <span class="num">2</span></div></div><div class="line"><div class="line-content">    <span class="ide">hello</span>:<span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">supplied</span><span class="op">.</span><span class="ide">name</span> <span class="kwd">and</span> <span class="ide">supplied</span><span class="op">.</span><span class="ide">age</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">options</span><span class="op">.</span><span class="ide">name</span> <span class="op">&amp;</span> <span class="str">&quot; is &quot;</span> <span class="op">&amp;</span> <span class="ide">options</span><span class="op">.</span><span class="ide">age</span><span class="op">.</span><span class="ide">repr</span> <span class="op">&amp;</span> <span class="str">&quot; years old!&quot;</span></div></div>  </code></pre>
+<hr />
+<h2>Default command-line syntax</h2>
+<p>By default, each named parameter may be set on the command line by the user prefixing it with a <code>-</code> or a <code>/</code>.  For <code>bool</code> fields, this will toggle the field.  For other fields, the next argument on the command line is used to set the field.</p>
+<p>All of these will work:</p>
+<pre>  <code class="language-bash">foo -name &quot;Joe Random&quot; -active
+foo /active /flat 100
+foo /hello Greetings! -big 100 /small 20
+</code></pre>
+<hr />
+<h2>Extra Parameter Info: Pragmas</h2>
+<p>You may also add pragmas to the end of any line to modify parameter behaviour.  Each pragma has a more verbose alias, if you prefer that style of code.</p>
+<ul>
+<li>
+<p><code>{. info(&quot;text&quot;) .}</code> <em>or</em> <code>{. description(&quot;text&quot;) .}</code></p>
+<p>Description of the parameter which will be shown in help text.</p>
+</li>
+<li>
+<p><code>{. aka(&quot;a&quot;, &quot;b&quot;, ...) .}</code> <em>or</em> <code>{. alias(&quot;a&quot;, &quot;b&quot;, ...) .}</code></p>
+<p>Aliases for the parameter - user may use these as parameters; they will write to the field.</p>
+</li>
+<li>
+<p><code>{. bare .}</code> <em>or</em> <code>{. positional .}</code></p>
+<p>Accepts a bare, positional argument (an argument which has not been prefixed with a parameter name).  User will not be able to refer to the argument with its parameter name.</p>
+</li>
+<li>
+<p><code>{. need .}</code> <em>or</em> <code>.{ required .}</code></p>
+<p>Parameter must be supplied by user or an error is shown.</p>
+</li>
+<li>
+<p><code>{. len(i) .}</code> <em>or</em> <code>.{ count(i) .}</code></p>
+<p>Place on a <code>seq</code> field to require that many values be supplied to it. For example:</p>
+<p>  <code>position:seq[float] {. len(3) .} # x y z</code></p>
+<p>Note that this does not set a limit on the total length of the <code>seq</code>, only on how many values the user must specify.  Using <code>len</code> in conjunction with the <code>allow_repetition</code> setting, you can accept multiple batches of values (see <code>normalize.nim</code> example)</p>
+</li>
+</ul>
+<hr />
+<h2>Settings</h2>
+<p>You may tailor the parser with the following calls:</p>
+<ul>
+<li>
+<p>  <strong>no_dash()</strong></p>
+<p>Disable parameter being identified by prefixing with <code>-</code></p>
+</li>
+<li>
+<p>  <strong>no_slash()</strong></p>
+<p>Disable parameter being identified by prefixing with <code>/</code></p>
+</li>
+<li>
+<p>  <strong>dash_dash_parameters()</strong></p>
+<p>Require that parameters which have more than one character in their name be prefixed with <code>--</code> instead of <code>-</code>. Single-character parameters may then be entered grouped together under one <code>-</code></p>
+</li>
+<li>
+<p>  <strong>dash_dash_separator()</strong></p>
+<p><code>--</code> on its own in the command line will disable parameter names on every argument after it; they will all be treated as bare</p>
+</li>
+<li>
+<p>  <strong>value_after_colon()</strong></p>
+<p>Allow the user to specify parameter &amp; value together, separated by a <code>:</code></p>
+<p>e.g. <code>-param:value</code></p>
+<p>Note this will not play nicely with quoted string values.</p>
+</li>
+<li>
+<p>  <strong>value_after_equals()</strong></p>
+<p>Allow the user to specify parameter &amp; value together, separated by a <code>=</code></p>
+<p>e.g. <code>-param=value</code></p>
+<p>Note this will not play nicely with quoted string values.</p>
+</li>
+<li>
+<p>  <strong>allow_repetition()</strong></p>
+<p>Allow the user to specify the same parameter more than once without reporting an error.</p>
+</li>
+<li>
+<p>  <strong>allow_errors()</strong></p>
+<p>Allow program execution to continue after erroneous input.</p>
+</li>
+<li>
+<p>  <strong>no_implicit_bare()</strong></p>
+<p>Do not automatically use the last <code>seq[string]</code> parameter to gather any bare parameters the user enters (they become erroneous instead)</p>
+</li>
+<li>
+<p>  <strong>can_name_bare()</strong></p>
+<p>Allows user to set bare parameters by name.</p>
+</li>
+<li>
+<p>  <strong>manual_help()</strong></p>
+<p>Disable automatic generation of help message when user enters <code>-?</code>, <code>-h</code> or <code>-help</code> (when you do not include them as parameters)</p>
+</li>
+<li>
+<p>  <strong>command_name(name: string)</strong></p>
+<p>Set the name of the executable, for use in the auto-generated
+help-message when the user enters <code>-?</code>, <code>-h</code>, or <code>-help</code>.</p>
+<p>Note: <code>command_name</code> may not be included in a <code>config:</code> chain</p>
+</li>
+<li>
+<p>  <strong>help_text(text: string, footer = &quot;&quot;)</strong></p>
+<p>Set the text which is included in the auto-generated help-message when the user enters <code>-?</code>, <code>-h</code>, or <code>-help</code>.</p>
+<ul>
+<li><code>text</code> is displayed at the top, before the parameters.</li>
+<li><code>footer</code> is displayed at the bottom, after them.</li>
+</ul>
+<p>Note: <code>help_text</code> may not be included in a <code>config:</code> chain</p>
+</li>
+<li>
+<p>  <strong>config:</strong></p>
+<p>A helper macro which allows you to specify the above options (except <code>help_text</code> and <code>command_name</code>) as a call chain.  For example:</p>
+<p>  <code>simple_parseopt.config: no_slash.dash_dash_parameters.allow_repetition</code></p>
+</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/onelivesleft/simple_parseopt">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

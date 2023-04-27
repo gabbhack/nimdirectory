@@ -1,5 +1,25 @@
 const packages = [
   {
+    "name": "nimwkhtmltox",
+    "url": "https://github.com/neroist/nim-wkhtmltox",
+    "method": "git",
+    "tags": [
+      "wkhtmltopdf",
+      "wkhtmltoimage",
+      "wkhtmltox",
+      "pdf",
+      "image",
+      "html",
+      "htmltopdf",
+      "htmltoimage",
+      "bindings",
+      "wrapper"
+    ],
+    "description": "Nim bindings for wkhtmltox",
+    "license": "LGPL-3.0-or-later",
+    "web": "https://github.com/neroist/nim-wkhtmltox"
+  },
+  {
     "name": "youtubescraper",
     "url": "https://github.com/TaxMachine/youtubescraper",
     "method": "git",
@@ -30021,7 +30041,7 @@ function do_search(input) {
         const package = item.item
         const packageHtml = `
             <div class="box box-pkg rounded p-3" stars="">
-                <h3 class="lh-1 display-1 mb-2"><a href="${package.url}">${package.name}</a></h3>
+                <h3 class="lh-1 display-1 mb-2"><a href="/pkg/${package.name}.html">${package.name}</a></h3>
                 <p class="mb-0 pb-0" style="height:1.2em;overflow:hidden;">${package.description}</p>
                 <ul class="package-box-meta-foot mt-1">
                     <li>

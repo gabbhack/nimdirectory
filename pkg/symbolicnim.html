@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">symbolicnim</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">symbolic</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">math</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">derivative</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">algebra</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A symbolic library written purely in Nim with the ability to compile expressions into efficient functions.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install symbolicnim" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>SymbolicNim</h1>
+<p>  <img src="https://github.com/HugoGranstrom/symbolicnim/workflows/test/badge.svg" style="max-width: 100%;" alt="test" /></p>
+<p>A symbolic library written purely in Nim with the ability to compile expressions into efficient functions.</p>
+<h2>Requires Nim 1.2.6 to run!</h2>
+<h1>Basic usage</h1>
+<p>SymbolicNim exposes a interface of variables and expressions to the user. Symbolic variables are created with the <code>newVariable</code> proc:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;x&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;y&quot;</span>)</div></div>  </code></pre>
+<p>The name of the variable is used to identify it and is used in printing. If two variables are given the same name, they will be interpreted as equal. If you want to create a lot of variables easily you can do it with the <code>createSymbols</code> macro:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">createSymbols</span>(<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">coolVar</span>)</div></div>  </code></pre>
+<p>This is transformed to:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;x&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;y&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">coolVar</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;coolVar&quot;</span>)</div></div>  </code></pre>
+<p>Expressions are created when we do arithmetic with variables and constants:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">expr1</span> <span class="op">=</span> <span class="num">2</span> <span class="op">*</span> <span class="ide">x</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">expr2</span> <span class="op">=</span> <span class="ide">x</span> <span class="op">*</span> <span class="ide">y</span> <span class="op">+</span> <span class="num">1</span> <span class="op">-</span> <span class="ide">x</span> <span class="op">^</span> <span class="num">2</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">expr3</span> <span class="op">=</span> <span class="ide">sin</span>(<span class="ide">x</span><span class="op">*</span><span class="ide">y</span>) <span class="op">/</span> <span class="ide">cos</span>(<span class="num">2</span><span class="op">*</span><span class="ide">sym_pi</span>) <span class="com"># sym_pi is an exported variable that SymbolicNim interprets as pi.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">expr4</span> <span class="op">=</span> <span class="ide">exp</span>(<span class="num">3</span><span class="op">*</span><span class="ide">x</span>) <span class="op">*</span> <span class="ide">ln</span>(<span class="ide">exp</span>(<span class="ide">y</span><span class="op">^</span><span class="num">5</span>))</div></div><div class="line"><div class="line-content"><span class="com"># expressions can be used as well:</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">expr5</span> <span class="op">=</span> <span class="ide">expr1</span> <span class="op">-</span> <span class="ide">expr2</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">expr6</span> <span class="op">=</span> <span class="ide">expr4</span> <span class="op">/</span> <span class="ide">expr3</span></div></div>  </code></pre>
+<h2>Derivatives</h2>
+<p>SymbolicNim can perform symbolic differentitation:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;x&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;y&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">diff</span>(<span class="ide">x</span><span class="op">^</span><span class="num">2</span>, <span class="ide">x</span>) <span class="com"># 2*x</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">diff</span>(<span class="ide">sin</span>(<span class="num">2</span><span class="op">*</span><span class="ide">y</span>), <span class="ide">y</span>) <span class="com"># 2*cos(2*y)</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">diff</span>(<span class="ide">x</span><span class="op">^</span><span class="num">2</span>, <span class="ide">x</span>, <span class="num">2</span>) <span class="com"># d^2/dx^2(x^2) = 2</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">diff</span>(<span class="ide">x</span><span class="op">*</span><span class="ide">y</span>, <span class="ide">x</span>, <span class="ide">y</span>) <span class="com"># d/dy(d/dx(x*y)) = 1</span></div></div>  </code></pre>
+<p>As you can see there are two different ways to call <code>diff</code>:</p>
+<ul>
+<li>ONE variable and an int: <code>diff(x^2, x, 2)</code>. That is the second derivative with respect to <code>x</code>.</li>
+<li>A varargs of variables: <code>diff(x*y, x, y)</code>. The derivatives are performed from left to right so the first variable is associated with the innermost derivative.</li>
+</ul>
+<p>Note: SymbolicNim&apos;s simplification algorithms aren&apos;t anything to brag about really so expect that some expressions can look quite ugly and long even though there is a &quot;easy&quot; simplification that could make it neater.</p>
+<h2>Subs</h2>
+<p><code>subs</code> does what you would expect, it substitutes one expression with another:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">subs</span>(<span class="ide">sin</span>(<span class="ide">x</span><span class="op">+</span><span class="ide">y</span>), <span class="ide">x</span> <span class="op">+</span> <span class="ide">y</span>, <span class="ide">z</span>) <span class="com"># sin(z)</span></div></div>  </code></pre>
+<h2>Taylor expansions</h2>
+<p>SymbolicNim can calculate Taylor expansions up to 20 terms at the moment. If we want to get the first 10 terms of the taylor series of <code>sin(x)</code> around <code>x = 0</code> we just have to:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">taylor</span>(<span class="ide">sin</span>(<span class="ide">x</span>), <span class="ide">x</span>, <span class="num">0</span>, <span class="num">10</span>)</div></div>  </code></pre>
+<h1>Generating efficient Nim procs</h1>
+<p>One of SymbolicNim&apos;s main features is that it can do the symbolic calculations at compiletime and generate a fast Nim proc that get&apos;s optimized by the compiler. It could be useful if it&apos;s used in a tight loop for example. The syntax for generating the procs is to use the <code>generate</code> macro:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">x</span> {<span class="op">.</span><span class="ide">compileTime</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;x&quot;</span>) <span class="com"># we must define all the variables we want to use at compileTime with the {.compileTime.} pragma.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">y</span> {<span class="op">.</span><span class="ide">compileTime</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;y&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">z</span> {<span class="op">.</span><span class="ide">compileTime</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">newSymbol</span>(<span class="str">&quot;z&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">exprToCompile</span> {<span class="op">.</span><span class="ide">compileTime</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">exp</span>(<span class="ide">x</span><span class="op">*</span><span class="ide">y</span>) <span class="op">^</span> <span class="ide">sin</span>(<span class="ide">z</span><span class="op">/</span><span class="ide">x</span>) <span class="op">+</span> <span class="num">1</span> <span class="com"># this is the expression we want to generate into a function</span></div></div><div class="line"><div class="line-content"><span class="ide">exprToCompile</span><span class="op">.</span><span class="ide">generate</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">f</span>(<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">z</span>: <span class="ide">float</span>): <span class="ide">float</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">fInline</span>(<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">z</span>: <span class="ide">float</span>): <span class="ide">float</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>} <span class="com"># you can define how many procs as you want with pragmas and different types</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">f</span>(<span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>)</div></div>  </code></pre>
+<p>That wasn&apos;t that hard, wasn&apos;t it? If you are not sure of the types of the arguments you can try <code>auto</code> and see if it works. One thing to be aware of is that you must be careful when mixing floats and ints.</p>
+<h1>Symbolic Matricies</h1>
+<h2>Constants</h2>
+<p>Symbolic constants are represented as Nim&apos;s stdlib <code>Rational[int]</code> from <a href="https://nim-lang.org/docs/rationals.html">rationals</a>. Ints and floats are automatically converted to it when entered. Hence if you input a float it will be converted to the best matching fraction and the output may look quite ugly. If you want to write a fraction exactly you can use the <code>//</code> proc that will create a Rational:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">frac</span> <span class="op">=</span> <span class="num">1</span> <span class="op">//</span> <span class="num">3</span> <span class="com"># exactly 1 / 3 and not 0.3333333333332 or something.</span></div></div>  </code></pre>
+<h1>Status: Alpha</h1>
+<p>This package is in it&apos;s very first stages and will have tonnes of bugs everywhere. If you find something not working, I would very much appreciate if you filed a issue :D</p>
+<h1>Credits</h1>
+<ul>
+<li>@jiro4989 for adding the CI workflow.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/HugoGranstrom/symbolicnim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">pipelines</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">python</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pipeline</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pipelines</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parallel</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A tiny framework & language for crafting massively parallel data pipelines")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install pipelines" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p align="center">
+<!--  &lt;img width=&quot;250px&quot; src=&quot;https://i.imgur.com/kTap42K.png&quot;/&gt;  -->
+    <img src="https://i.imgur.com/rbx2Hlh.png" style="max-width: 100%;" height="90px" /><!-- https://i.imgur.com/YfK7YdY.png -->
+</p>
+<!-- - https://i.imgur.com/rbx2Hlh.png or https://i.imgur.com/YfK7YdY.png) - -->
+<!-- - https://carbon.now.sh/?bg=rgba(239%2C228%2C176%2C1)&amp;t=zenburn&amp;wt=none&amp;l=python&amp;ds=true&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=false&amp;wa=true&amp;pv=56px&amp;ph=56px&amp;ln=false&amp;fm=Ubuntu%20Mono&amp;fs=17px&amp;lh=136%25&amp;si=false&amp;code=from%2520utils%2520import%2520customers%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520as%2520customers%2520%2523%2520a%2520generator%2520function%2520in%2520the%2520utils%2520module%250Afrom%2520utils%2520import%2520parse_row%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520as%2520parser%250Afrom%2520utils%2520import%2520get_recommendations%2520%2520%2520as%2520recommender%250Afrom%2520utils%2520import%2520print_recommendations%2520as%2520printer%250A%250Acustomers%2520%257C%253E%2520parser%2520%257C%253E%2520recommender%2520%257C%253E%2520printer&amp;es=2x&amp;wm=false - -->
+<p>Pipelines is a language and runtime for crafting massively parallel pipelines. Unlike other languages for defining data flow, the Pipeline language requires implementation of components to be defined separately in the Python scripting language. This allows the details of implementations to be separated from the structure of the pipeline, while providing access to thousands of active libraries for machine learning, data analysis and processing. Skip to <a href="https://github.com/calebwin/pipelines#some-next-steps">Getting Started</a> to install the Pipeline compiler.</p>
+<h3>An example</h3>
+<p>As an introductory example, a simple pipeline for Fizz Buzz on even numbers could be written as follows -</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">from</span> fizzbuzz <span class="kwd">import</span> numbers</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> fizzbuzz <span class="kwd">import</span> even</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> fizzbuzz <span class="kwd">import</span> fizzbuzz</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> fizzbuzz <span class="kwd">import</span> printer</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">numbers</div></div><div class="line"><div class="line-content"><span class="op">/&gt;</span> even </div></div><div class="line"><div class="line-content"><span class="op">|&gt;</span> fizzbuzz where (number<span class="op">=*</span>, fizz<span class="op">=</span><span class="str">&quot;Fizz&quot;</span>, buzz<span class="op">=</span><span class="str">&quot;Buzz&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="op">|&gt;</span> printer</div></div>  </code></pre>
+<p>Meanwhile, the implementation of the components would be written in Python -</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">def</span> numbers():</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> number <span class="kwd">in</span> range(<span class="num">1</span>, <span class="num">100</span>):</div></div><div class="line"><div class="line-content">        <span class="kwd">yield</span> number</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">def</span> even(number):</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> number <span class="op">%</span> <span class="num">2</span> <span class="op">==</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">def</span> fizzbuzz(number, fizz, buzz):</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> number <span class="op">%</span> <span class="num">15</span> <span class="op">==</span> <span class="num">0</span>: <span class="kwd">return</span> fizz <span class="op">+</span> buzz</div></div><div class="line"><div class="line-content">    <span class="kwd">elif</span> number <span class="op">%</span> <span class="num">3</span> <span class="op">==</span> <span class="num">0</span>: <span class="kwd">return</span> fizz</div></div><div class="line"><div class="line-content">    <span class="kwd">elif</span> number <span class="op">%</span> <span class="num">5</span> <span class="op">==</span> <span class="num">0</span>: <span class="kwd">return</span> buzz</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>: <span class="kwd">return</span> number</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">def</span> printer(number):</div></div><div class="line"><div class="line-content">    print(number)</div></div>  </code></pre>
+<p>Running the Pipeline document would safely execute each component of the pipeline in parallel and output the expected result.</p>
+<h3>The imports</h3>
+<p>Components are scripted in Python and linked into a pipeline using imports. The syntax for an import has 3 parts - (1) the path to the module, (2) the name of the function, and (3) the alias for the component. Here&apos;s an example -</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">from</span> parser <span class="kwd">import</span> parse_fasta <span class="kwd">as</span> parse</div></div>  </code></pre>
+<p>That&apos;s really all there is to imports. Once a component is imported it can be referenced anywhere in the document with the alias.</p>
+<h3>The stream</h3>
+<p>Every pipeline is operated on a stream of data. The stream of data is created by a Python <a href="https://docs.python.org/3/tutorial/classes.html#generators">generator</a>. The following is an example of a generator that generates a stream of numbers from 0 to 1000.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">def</span> numbers():</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> number <span class="kwd">in</span> range(<span class="num">0</span>, <span class="num">1000</span>):</div></div><div class="line"><div class="line-content">        <span class="kwd">yield</span> number</div></div>  </code></pre>
+<p>Here&apos;s a generator that reads entries from a file</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">def</span> customers():</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> line <span class="kwd">in</span> open(<span class="str">&quot;customers.csv&quot;</span>, 'r'):</div></div><div class="line"><div class="line-content">        <span class="kwd">yield</span> line</div></div>  </code></pre>
+<p>The first component in a pipeline is always the generator. The generator is run in parallel with all other components and each element of data is passed through the other components.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">from</span> utils <span class="kwd">import</span> customers             <span class="kwd">as</span> customers <span class="com"># a generator function in the utils module</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> utils <span class="kwd">import</span> parse_row             <span class="kwd">as</span> parser</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> utils <span class="kwd">import</span> get_recommendations   <span class="kwd">as</span> recommender</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> utils <span class="kwd">import</span> print_recommendations <span class="kwd">as</span> printer</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">customers <span class="op">|&gt;</span> parser <span class="op">|&gt;</span> recommender <span class="op">|&gt;</span> printer</div></div>  </code></pre>
+<h3>The pipes</h3>
+<p>Pipes are what connect components together to form a pipeline. As of now, there are 2 types of pipes in the Pipeline language - (1) transformer pipes, and (2) filter pipes. Transformer pipes are used when input is to be passed through a component. For example, a function can be defined to determine the potential of a particle and a function can be defined to print the potential.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<p>The above pipeline code would pass data from the stream generated by <code>particles</code> through <code>get_potential</code> and then the output of <code>get_potential</code> through <code>printer</code>. Filter pipes work similarly except they use the following component to filter data. For example, a function can be defined to determine if a person is over 50 and then print their names to a file.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<p>This would use the function referenced by <code>over_50</code> to filter out data from the stream generated by <code>population</code> and then pass output to <code>printer</code>.</p>
+<h3>The <code>where</code> keyword</h3>
+<p>The <code>where</code> keyword lets you pass in multiple parameters to a component as opposed to just what the output from the previous component was. For example, a function can be defined to print to a file the names of all applicants under a certain age.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<p>This could be done using a filter as well.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<p>In this case, the function for <code>age_limit</code> could look something like this -</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"><span class="kwd">def</span> age_limit(person, age):</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> person<span class="op">.</span><span class="op">age</span> <span class="op">&lt;=</span> age</div></div>  </code></pre>
+<p>Note that this function still has just one return value - the boolean expression that is used to determine wether input to the component is passed on as output.</p>
+<h3>The <code>to</code> keyword</h3>
+<p>The <code>to</code> keyword is for when you want the previous component has multiple return values and you want to specify which ones to pass on to the next component. As an example, if you had a function for calculating the electronegativity and electron affinity of an atom, you could use it in a pipeline as follows -</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<p>Here&apos;s an example using a filter.</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<p>Note the use of the <code>with</code> keyword here. This is necessary for filters to specify which return value of the function is used to filter out elements in the stream.</p>
+<h3>Getting started</h3>
+<p>All you need to get started is the Pipelines compiler. You can install it by downloading the executable from <a href="https://github.com/calebwin/pipelines/releases">Releases</a>.</p>
+<blockquote>
+<p>If you have the <a href="https://github.com/nim-lang/nimble/">Nimble</a> package manager installed and <code>~/.nimble/bin</code> permanantly added to your PATH environment variable (look this up &gt; if you don&apos;t know how to do this), you can also install by running the following command.</p>
+<pre>  <code>nimble install pipelines
+</code></pre>
+</blockquote>
+<p>Pipelines&apos; only dependency is <a href="https://www.python.org/downloads/release/python-2715/">the Python interpreter</a> being installed on your system. At the moment, most versions 2.7 and earlier are supported and support for Python 3 is in the works. Once Pipelines is installed and added to your PATH, you can create a <code>.pipeline</code> file, run or compile anywhere on your system -</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">pipelines</span></div></div><div class="line"><div class="line-content"><span class="out">the .pipeline compiler (v:0.1.0)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="out">usage:</span></div></div><div class="line"><div class="line-content">  <span class="out">pipelines                Show this</span></div></div><div class="line"><div class="line-content">  <span class="out">pipelines &lt;file&gt;         Compile .pipeline file</span></div></div><div class="line"><div class="line-content">  <span class="out">pipelines &lt;folder&gt;       Compile all .pipeline files in folder</span></div></div><div class="line"><div class="line-content">  <span class="out">pipelines run &lt;file&gt;     Run .pipeline file</span></div></div><div class="line"><div class="line-content">  <span class="out">pipelines clean &lt;folder&gt; Remove all compiled .py files from folder</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="out">for more info, go to github.com/calebwin/pipelines</span></div></div>  </code></pre>
+<h3>Some next steps</h3>
+<p>There are several things I&apos;m hoping to implement in the future for this project. I&apos;m hoping to implement some sort of <code>and</code> operator for piping data from the stream into multiple components in parallel with the output ending up in the stream in a nondeterministic order. Further down the line, I plan on porting the whole thing to C and putting in a complete error handling system</p>
+<!-- -
+- String imports
+- Control allocation of processes with Pool
+- Use Pipe instead of multiple Queue
+- Only have num_cpus running at one time
+- -->
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/calebwin/pipelines">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

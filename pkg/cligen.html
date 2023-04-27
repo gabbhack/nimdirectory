@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">cligen</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cli</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">command-line</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">command line</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">commandline</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">arguments</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">switches</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">options</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">argparse</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">optparse</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parsing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">formatter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">formatting</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">template engines</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">highlighting</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">terminal</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">color</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">completion</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">help generation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">abbreviation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multiprocessing</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Infer & generate command-line interface/option/argument parsers")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install cligen" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>cligen: A Native API-Inferred Command-Line Interface Generator For Nim</h1>
+<p>This approach to CLIs was inspired by Andrey Mikhaylenko&apos;s Python
+<a href="https://pythonhosted.org/argh/">argh</a>
+(<a href="https://github.com/pallets/click/">Click</a> became more popular).
+The key observation is that proc signatures already encode what you need to
+generate CLIs - names, types, and default values.  Reflection then suffices to
+generate parser-dispatchers translating <code>seq[string]</code> command input into calls
+to a wrapped proc.  In Nim, adding a CLI can be 1-line of code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fun</span>(<span class="ide">foo</span><span class="op">=</span><span class="num">1</span>,<span class="ide">bar</span><span class="op">=</span><span class="num">2.0</span>,<span class="ide">baz</span><span class="op">=</span><span class="str">&quot;x&quot;</span>,<span class="ide">verb</span><span class="op">=</span><span class="ide">false</span>,<span class="ide">args</span>: <span class="ide">seq</span>[<span class="ide">string</span>]): <span class="ide">int</span><span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## An API call doc comment</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="num">1</span>      <span class="com"># Of course, real code would have real work here</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cligen</span>; <span class="ide">dispatch</span> <span class="ide">fun</span> <span class="com"># Whoa..Just 1 line??</span></div></div>  </code></pre>
+<p>Compile it to <code>fun</code> (e.g., <code>nim c fun.nim</code>) and then run <code>./fun --help</code>
+to get a minimal (but not so useless!) help message:</p>
+<pre>  <code>Usage:
+  fun [optional-params] [args: string...]
+An API call doc comment
+Options:
+  -h, --help                    print this cligen-erated help
+  --help-syntax                 advanced: prepend,plurals,..
+  -f=, --foo=    int     1      set foo
+  -b=, --bar=    float   2.0    set bar
+  --baz=         string  &quot;x&quot;    set baz
+  -v, --verb     bool    false  set verb
+</code></pre>
+<p>That&apos;s it!  No specification language/complex arg parsing API/Nim pragma tags
+to learn.  Installing can be as simple as <code>nimble install cligen</code> or even just
+<code>git clone &lt;thisRepo&gt;</code> and <code>nim c --path:whereYouClonedTo myProgram.nim</code>.  If
+you aren&apos;t sold already, here is more
+<a href="https://github.com/c-blake/cligen/tree/master/MOTIVATION.md">MOTIVATION</a>.</p>
+<p>The <code>help</code> column is filled with generic <code>set foo</code> placeholders by default.
+You can override that using parameter-keyed association-list literals:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">dispatch</span> <span class="ide">fun</span>, <span class="ide">help</span><span class="op">=</span>{<span class="str">&quot;foo&quot;</span>: <span class="str">&quot;the beginning&quot;</span>, <span class="str">&quot;bar&quot;</span>: <span class="str">&quot;the rate&quot;</span>}</div></div>  </code></pre>
+<p>The same goes for <code>short</code> versions of the CLI arguments.  More on that
+<a href="#common-overrides-program-exit-config-fileenvironment-vars">below</a>.</p>
+<p>Other invocations (<code>./fun --foo 2 -b=2.7 --baz:&quot;ho&quot;...</code>) work as expected.</p>
+<p>Default help tables work with automated &quot;help to X&quot; tools such as <code>complete -F _longopt</code> in bash, <code>compdef _gnu_generic</code> in Zsh, or the GNU <code>help2man</code> (e.g.
+<code>help2man -N ./fun|man /dev/stdin</code>).</p>
+<p>Nim CLI authors who have read this far can mostly use <code>cligen</code> already.  Enter
+<code>--help</code>, <code>--help-syntax</code>/<code>--helps</code>, or illegal commands to get help messages,
+syntax, exhibit mappings, etc.  Out of the box, <code>cligen</code> supports conversion for
+most basic Nim types (<code>int</code>s, <code>float</code>s, <code>enum</code>s, <code>seq</code>s, <code>set</code>s, <code>HashSet</code>s of
+them, ranges, etc.) <a href="#custom-parameter-types-or-parsing">but can be extended</a>.</p>
+<h3>CLusage: Param Match/Help Render, Trailing &amp; Required Args</h3>
+<p><code>cligen</code>-erated parsers accept <strong>any unambiguous prefix</strong> for long options.
+In other words, long options can be as short as possible.  In yet other words,
+hitting the TAB key to complete is unnecessary <strong>if</strong> the completion is unique.
+This is patterned after, e.g. gnuplot, gdb, Vim ex-commands, etc.  Long options
+can also be <strong>spelled flexibly</strong>, e.g. <code>--dry-run</code>|<code>--dryRun</code>, like Nim&apos;s
+style-insensitive identifiers, but with extra &quot;kebab-case-insensitivity&quot;.
+The exact spelling of the key in <code>help</code> controls the look of printed help.</p>
+<p>Layout details like column spacing and help colorization are controlled <a href="https://github.com/c-blake/cligen/tree/master/configs">by a
+CL user config file</a>.
+Here are screenshots of example
+<a href="https://raw.githubusercontent.com/c-blake/cligen/master/screenshots/dirqHelpNight.png">night</a>
+and
+<a href="https://raw.githubusercontent.com/c-blake/cligen/master/screenshots/dupsHelpDay.png">day</a>
+themes.)</p>
+<hr />
+<p>Most commands have some trailing variable length sequence of arguments like
+<code>args</code> in the first example.  <code>cligen</code> automatically treats the first
+non-defaulted <code>seq[T]</code> proc parameter as such an optional sequence.  <code>cligen</code>
+applies the same basic string-to-native type converters/parsers used for option
+values to such parameters.</p>
+<hr />
+<p>If a proc parameter has no <strong>explicit</strong> default value (via <code>=</code>) then it becomes
+required.  The input syntax is the same as for optional values.  So, in</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fun</span>(<span class="ide">myRequired</span>: <span class="ide">float</span>, <span class="ide">mynums</span>: <span class="ide">seq</span>[<span class="ide">int</span>], <span class="ide">foo</span><span class="op">=</span><span class="num">1</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>: <span class="com"># Preserve ability to `import api`/call from Nim</span></div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">cligen</span>; <span class="ide">dispatch</span> <span class="ide">fun</span></div></div>  </code></pre>
+<p>the command-line user must give <code>--myRequired=something</code> somewhere.  Non-option
+arguments must be parsable as <code>int</code> with whitespace stripped, e.g. <code>./fun --myRequired=2.0 1 2 &quot; -3&quot; -- -4</code>.</p>
+<p>More general user semantics for argument validation (required-ness, length,
+&quot;sub-parsing&quot;, etc.) can be done like
+<a href="https://github.com/c-blake/cligen/blob/master/test/UserError.nim">UserError.nim</a>.</p>
+<h3>Custom Parameter Types or Parsing</h3>
+<p>While <code>cligen/argcvt</code> supports basic Nim types, the parsing/printing system is
+<em>extensible</em> via in-<code>dispatch</code> scope <code>argParse</code> &amp; <code>argHelp</code> overloads for types.
+A simple example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">times</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">i</span> <span class="op">=</span> <span class="num">42</span>, <span class="ide">d</span> <span class="op">=</span> <span class="ide">now</span>()): <span class="ide">void</span> <span class="op">=</span> <span class="ide">echo</span> <span class="ide">d</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">cligen</span><span class="op">/</span><span class="ide">argcvt</span>, <span class="ide">cligen</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">argParse</span>(<span class="ide">dst</span>: <span class="kwd">var</span> <span class="ide">DateTime</span>, <span class="ide">dfl</span>: <span class="ide">DateTime</span>,</div></div><div class="line"><div class="line-content">                <span class="ide">a</span>: <span class="kwd">var</span> <span class="ide">ArgcvtParams</span>): <span class="ide">bool</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">try</span>: <span class="ide">dst</span> <span class="op">=</span> <span class="ide">times</span><span class="op">.</span><span class="ide">parse</span>(<span class="ide">a</span><span class="op">.</span><span class="ide">val</span>, <span class="str">&quot;yyyyMMdd&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">except</span> <span class="ide">TimeParseError</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;bad DateTime: &quot;</span>, <span class="ide">a</span><span class="op">.</span><span class="ide">val</span>; <span class="kwd">return</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">argHelp</span>(<span class="ide">dfl</span>: <span class="ide">DateTime</span>, <span class="ide">a</span>: <span class="kwd">var</span> <span class="ide">ArgcvtParams</span>): <span class="ide">seq</span>[<span class="ide">string</span>]<span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="ide">a</span><span class="op">.</span><span class="ide">argKeys</span>, <span class="str">&quot;DateTime&quot;</span>, <span class="ide">getDateStr</span>(<span class="ide">dfl</span>)]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">dispatch</span> <span class="ide">foo</span>, <span class="ide">help</span><span class="op">=</span>{<span class="str">&quot;i&quot;</span>: <span class="str">&quot;favorite number&quot;</span>, <span class="str">&quot;d&quot;</span>: <span class="str">&quot;birthday&quot;</span>}</div></div>  </code></pre>
+<p>These two &quot;argument IO&quot; procs take a shared coordination parameter for argument
+metadata (more fully documented in <code>cligen/argcvt.nim</code>).  As just a simple e.g.,
+<code>a.parNm</code> is the name of the parameter being parsed.  While not usually useful,
+this can be used to parse the same Nim type differently (based on the name),
+detect when CLusers alter parameters from defaults, count uses, etc.</p>
+<p>This same mechanism can <em>  <strong>override existing</strong></em> <code>cligen/argcvt</code> parser/helpers
+if the built-ins are not what you want.  Consulting <code>cligen/argcvt</code> for examples
+is a good idea.  Ambitious CLauthors can re-define <em>all</em> conversions by creating
+their own private <code>cligen/argcvt.nim</code> in their project directories.</p>
+<h3>Subcommands, dispatch to object init</h3>
+<p><code>dispatchMulti</code> lets you expose two or more procs with subcommands a la <code>git</code> or
+<code>nimble</code>. Each <code>[]</code> list in <code>dispatchMulti</code> is the argument list for each
+sub-<code>dispatch</code>.  Tune command syntax and help strings in the same way as
+<code>dispatch</code> as in:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">myRequired</span>: <span class="ide">int</span>, <span class="ide">mynums</span>: <span class="ide">seq</span>[<span class="ide">int</span>], <span class="ide">foo</span><span class="op">=</span><span class="num">1</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content">  <span class="com">## Some API call</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">bar</span>(<span class="ide">yippee</span>: <span class="ide">int</span>, <span class="ide">myFlts</span>: <span class="ide">seq</span>[<span class="ide">float</span>], <span class="ide">verb</span><span class="op">=</span><span class="ide">false</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content">  <span class="com">## Some other API call</span></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">cligen</span></div></div><div class="line"><div class="line-content">  <span class="ide">dispatchMulti</span>([<span class="ide">foo</span>, <span class="ide">help</span><span class="op">=</span>{<span class="str">&quot;myRequired&quot;</span>: <span class="str">&quot;Need it!&quot;</span>}], [<span class="ide">bar</span>])</div></div>  </code></pre>
+<p>With the above in <code>cmd.nim</code>, CLI users can run <code>./cmd foo -m1</code> or
+<code>./cmd bar -y10 1.0 2.0</code>.  <code>./cmd</code> or <code>./cmd --help</code> print brief help messages
+while <code>./cmd help</code> prints a comprehensive message, and <code>./cmd SUBCMD --help</code>
+or <code>./cmd help SUBCMD</code> print a message for just <code>SUBCMD</code> (e.g. <code>foo</code>|<code>bar</code>).</p>
+<p>Like long option keys or <code>enum</code> value names, subcommand names can also be <em>  <strong>any
+unambiguous prefix and are case-kebab-insensitive</strong></em>.  So, <code>./cmd f-O -m1</code> would
+also work above.</p>
+<hr />
+<p>Rather than dispatching to a proc and exiting, you can also initialize the
+<em>  <strong>fields of an object/tuple</strong></em> from the command-line with <code>initFromCL</code> which
+has the same keyword parameters as the most salient features of <code>dispatch</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">App</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">srcFile</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">show</span><span class="op">*:</span> <span class="ide">bool</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">dfl</span><span class="op">*</span> <span class="op">=</span> <span class="ide">App</span>(<span class="ide">srcFile</span>: <span class="str">&quot;junk&quot;</span>) <span class="com"># set defaults!=default for type</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">logic</span><span class="op">*</span>(<span class="ide">a</span>: <span class="kwd">var</span> <span class="ide">App</span>) <span class="op">=</span> <span class="ide">echo</span> <span class="str">&quot;app is: &quot;</span>, <span class="ide">a</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">cligen</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">initFromCL</span>(<span class="ide">dfl</span>, <span class="ide">help</span> <span class="op">=</span> { <span class="str">&quot;srcFile&quot;</span>: <span class="str">&quot;yadda yadda&quot;</span> })</div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">logic</span> <span class="com"># Only --help/--version/parse errors cause early exit</span></div></div>  </code></pre>
+<h3>Common Overrides, Program Exit, Config File/Environment Vars</h3>
+<p>You can manually control the short option for any parameter via <code>short</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">dispatch</span> <span class="ide">fun</span>, <span class="ide">short</span><span class="op">=</span>{<span class="str">&quot;bar&quot;</span> : 'r'}</div></div>  </code></pre>
+<p>If you&apos;d like to define <code>short</code> or <code>help</code> parameters outside of a <code>dispatch</code>
+call, you need an explicit conversion to a <code>Table</code> symbol:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cligen</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">std</span><span class="op">/</span><span class="ide">tables</span> <span class="kwd">import</span> <span class="ide">toTable</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">Help</span>  <span class="op">=</span> { <span class="str">&quot;foo&quot;</span>: <span class="str">&quot;the beginning&quot;</span>, <span class="str">&quot;bar&quot;</span>: <span class="str">&quot;the rate&quot;</span> }<span class="op">.</span><span class="ide">toTable</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">Short</span> <span class="op">=</span> { <span class="str">&quot;foo&quot;</span>: 'f', <span class="str">&quot;bar&quot;</span>: 'r'}<span class="op">.</span><span class="ide">toTable</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fun</span>(<span class="ide">foo</span> <span class="op">=</span> <span class="num">1</span>, <span class="ide">bar</span> <span class="op">=</span> <span class="num">2</span>, <span class="ide">baz</span> <span class="op">=</span> <span class="str">&quot;hi&quot;</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="ide">dispatch</span>(<span class="ide">fun</span>, <span class="ide">help</span> <span class="op">=</span> <span class="ide">Help</span>, <span class="ide">short</span> <span class="op">=</span> <span class="ide">Short</span>)</div></div>  </code></pre>
+<p>With that <code>&quot;bar&quot;</code> gets <code>&apos;r&apos;</code> while <code>&quot;baz&quot;</code> gets <code>&apos;b&apos;</code> as short options.  To
+suppress a long option getting <em>any</em> short option, specify a short key <code>&apos;\0&apos;</code>.
+To suppress <em>all</em> short options, give <code>short</code> a key of <code>&quot;&quot;</code>.</p>
+<p>To suppress API parameters in the CLI, pass <code>suppress = @[&quot;apiParam&quot;, ...]</code>.
+(For object init, &quot;ALL AFTER field&quot; stops fieldPairs iteration.)  To suppress
+presence only in help messages use <code>help={&quot;apiParam&quot;: &quot;CLIGEN-NOHELP&quot;}</code>.  Pass
+<code>implicitDefault = @[&quot;apiParam&quot;,...]</code> to let the CLI wrapper default API
+parameter values with no explicit initialization to the Nim default for a type.</p>
+<hr />
+<p>The default exit protocol is (with boolean short-circuiting) <code>quit(int(result)) or (echo $result or discard; quit(0))</code>.  If <code>echoResult==true</code>, it&apos;s just
+<code>echo $result; quit(0)</code>, while if <code>noAutoEcho==true</code> it&apos;s <code>quit(int(result)) or (discard; quit(0))</code>.  The <code>or</code>s above are based on whether the wrapped proc has
+a return type or <code>$</code> defined on the type.  So,</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">editdistance</span>, <span class="ide">cligen</span> <span class="com"># gen CLI for a Nim stdlib API</span></div></div><div class="line"><div class="line-content"><span class="ide">dispatch</span>(<span class="ide">editDistanceASCII</span>, <span class="ide">echoResult</span><span class="op">=</span><span class="ide">true</span>)</div></div>  </code></pre>
+<p>makes a program to print edit distance between two required parameters while
+without <code>echoResult</code> it would be in the shell <code>$?</code> variable.</p>
+<p>If these exit protocols are inadequate then you may need to call <code>dispatchGen()</code>
+and later call <code>try: dispatchFoo(someSeqString) except: discard</code> yourself.
+This is all <code>dispatch</code> itself does.  <em>  <strong>Return</strong></em> <em>types and values</em> of the
+generated dispatcher match the wrapped proc. { Other parameters to generated
+dispatchers are for internal use in <code>dispatchMulti</code> and probably don&apos;t matter to
+you. }  A dispatcher raises 3 exception types: <code>HelpOnly</code>, <code>VersionOnly</code>,
+<code>ParseError</code>.  These are hopefully self-explanatory.</p>
+<hr />
+<p>If you want <code>cligen</code> to merge parameters from other sources, like a per-program
+config file and/or <code>$CMD</code> environment variable, then you can redefine
+<code>mergeParams()</code> after <code>import cligen</code> but before <code>dispatch</code>/<code>dispatchMulti</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cligen</span>, <span class="ide">os</span>, <span class="ide">strutils</span> <span class="com"># multi foo/multi bar are like subcommand example</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">mergeParams</span>(<span class="ide">cmdNames</span>: <span class="ide">seq</span>[<span class="ide">string</span>], <span class="ide">cmdLine</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">                 <span class="ide">commandLineParams</span>()): <span class="ide">seq</span>[<span class="ide">string</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">e</span> <span class="op">=</span> <span class="ide">cmdNames</span><span class="op">.</span><span class="ide">join</span>(<span class="str">&quot;_&quot;</span>)<span class="op">.</span><span class="ide">toUpperAscii</span><span class="op">.</span><span class="ide">getEnv</span> <span class="com"># $MULTI_(FOO|BAR)</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">e</span><span class="op">.</span><span class="ide">len</span><span class="op">&gt;</span><span class="num">0</span>: <span class="ide">e</span><span class="op">.</span><span class="ide">parseCmdLine</span> <span class="op">&amp;</span> <span class="ide">cmdLine</span> <span class="kwd">else</span>: <span class="ide">cmdLine</span> <span class="com"># os.parseCmdLine</span></div></div><div class="line"><div class="line-content"><span class="ide">dispatchMulti</span>([<span class="ide">foo</span>, <span class="ide">short</span><span class="op">=</span>{<span class="str">&quot;verb&quot;</span>: 'v'}], [<span class="ide">bar</span>])</div></div>  </code></pre>
+<p>You can <code>include cligen/mergeCfgEnv</code> between <code>import cligen</code> &amp; <code>dispatch</code> to
+merge <code>${CMD_CONFIG:-${XDG_CONFIG_HOME:-$HOME/.config}}/CMD</code> (with Nim stdlib&apos;s
+<code>parsecfg</code> module) and then <code>$CMD</code> with <code>parseCmdLine</code> as above.</p>
+<p><code>cligen</code> programs look for <code>${XDG_CONFIG_HOME:-$HOME/.config}/cligen</code>, e.g.
+<a href="https://github.com/c-blake/cligen/wiki/Example-Config-File">~/.config/cligen/config</a>
+which allows command-line end users to tweak colors, layout, syntax, and usage
+help templates.</p>
+<h3>Restrictions</h3>
+<ol>
+<li>
+<p>Can only wrap basic funcs/procs -- no <code>auto|var</code> types, generics, etc.</p>
+</li>
+<li>
+<p>Param types used must have argParse, argHelp in scope (including generic
+parameters like the <code>T</code> in <code>seq[T]</code>).</p>
+</li>
+<li>
+<p>No param of a wrapped proc can be named &quot;help&quot;.  (Name collision!)</p>
+</li>
+</ol>
+<h2>Even More Controls and Details</h2>
+<p><code>cligen</code> grew many features upon request &amp; usage.  The <a href="https://github.com/c-blake/cligen/tree/master/test/">test
+suite</a> has suggestively
+named examples.  There&apos;s also <a href="https://github.com/c-blake/cligen/wiki">a Wiki</a>,
+<a href="https://c-blake.github.io/cligen/">generated docs for various modules</a> (which
+include various system interfaces useful in writing CLIs) and a <a href="https://github.com/c-blake/bu">set of fully
+worked utilities</a> which may be useful to you in
+their own right.  I also try to mention breaking changes &amp; new features in
+<a href="https://github.com/c-blake/cligen/tree/master/RELEASE-NOTES.md">RELEASE-NOTES</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/cligen">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

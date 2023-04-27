@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nicy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">zsh</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">shell</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">prompt</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">git</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A nice and icy ZSH prompt in Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nicy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1 align="center">                                                              
+    <img src="https://x.icyphox.sh/5DyAD.png" style="max-width: 100%;" width="280" />                            
+</h1>
+<blockquote>
+<p>A nice and icy zsh and bash prompt in Nim</p>
+</blockquote>
+<p>  <a href="https://travis-ci.org/icyphox/nicy">    <img src="https://travis-ci.org/icyphox/nicy.svg?branch=master" style="max-width: 100%;" alt="Build Status" />  </a></p>
+<p>  <img src="https://x.icyphox.sh/SltdI.png" style="max-width: 100%;" alt="scrot" /></p>
+<h3>Why?</h3>
+<p>I’ve always wanted to minimize my reliance on frameworks like <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>, so I figured, why not write my own ZSH prompt in my new favourite language? Turned out to be a really fun exercise.</p>
+<h3>Highlights</h3>
+<ul>
+<li>Written in Nim 👑</li>
+<li>Fast (in theory, since Nim compiles to C)</li>
+<li>Pretty defaults.</li>
+<li>Plugin-like system for prompt customization, in case you didn’t like the pretty defaults.</li>
+<li>Support both zsh and bash.</li>
+<li>Fun, I guess.</li>
+</ul>
+<h2>Installation</h2>
+<p><strong>Note</strong>: It’s probably a good idea to uninstall <code>oh-my-zsh</code>, or any other plugin framework you’re using
+altogether. It may cause conflicts.</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">nimble</span> install nicy</div></div>  </code></pre>
+<p>Don’t know what that is? New to Nim? Check out the Nim <a href="https://nim-lang.org/documentation.html">docs</a>. <code>nimble</code> is packaged with Nim by default.</p>
+<h2>Quick start</h2>
+<p>Add this to your <code>~/.zshrc</code>. If you installed via <code>nimble</code>, set <code>PROMPT</code> to <code>$(~/.nimble/bin/nicy)</code>.</p>
+<pre>  <code class="language-zsh">autoload -Uz add-zsh-hook
+_nicy_prompt() {
+    PROMPT=$(&quot;/path/to/nicy&quot;)
+}
+add-zsh-hook precmd _nicy_prompt
+</code></pre>
+<p>Make sure you disable all other themes.</p>
+<p>Nicy supports BASH also, and you could simply add it to your <code>~/.bashrc</code> or <code>~/.bash_profile</code>:</p>
+<pre>  <code class="language-bash">function nicy_prompt_command {
+    PS1=$(/path/to/nicy)
+}
+PROMPT_COMMAND=&quot;nicy_prompt_command&quot;
+</code></pre>
+<h2>Configuration</h2>
+<p>If you want to configure <code>nicy</code> as it is, you’ll have to edit the <code>src/nicy.nim</code> file and recompile. Messy, I know.</p>
+<h3>Build your own prompt</h3>
+<p>Alternatively, you can just as easily write your own prompt in Nim using <code>nicy</code>’s built-in API. Refer to the <a href="#Examples">Examples</a> section for some insight.</p>
+<p>Once you’re done, compile it and add a similar function to your <code>.zshrc</code> as above, replacing <code>PROMPT</code> with the path to your own binary.</p>
+<h3>Examples</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># ‘user@host $’ prompt</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nicy</span>, <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">user</span> <span class="op">=</span> <span class="ide">color</span>(<span class="ide">user</span>(), <span class="ide">green</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">host</span> <span class="op">=</span> <span class="ide">color</span>(<span class="ide">host</span>(), <span class="ide">red</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">prompt</span> <span class="op">=</span> <span class="ide">color</span>(<span class="str">&quot;$ &quot;</span>, <span class="ide">cyan</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">at</span> <span class="op">=</span> <span class="ide">color</span>(<span class="str">&quot;@&quot;</span>, <span class="ide">yellow</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> fmt"{user}{at}{host} {prompt}"</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># fish’s default prompt &apos;~&gt;&apos;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nicy</span>, <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">prompt</span> <span class="op">=</span> <span class="ide">color</span>(<span class="str">&quot;&gt; &quot;</span>, <span class="ide">green</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">tilde</span> <span class="op">=</span> <span class="ide">tilde</span>(<span class="ide">getCwd</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> fmt"{tilde}{prompt}"</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># pure by @sindresorhus (kinda)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nicy</span>, <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">prompt</span> <span class="op">=</span> <span class="ide">color</span>(<span class="str">&quot;❯ &quot;</span>, <span class="ide">magenta</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">tilde</span> <span class="op">=</span> <span class="ide">color</span>(<span class="ide">tilde</span>(<span class="ide">getCwd</span>()), <span class="ide">cyan</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">git</span> <span class="op">=</span> <span class="ide">color</span>(<span class="ide">gitBranch</span>() <span class="op">&amp;</span> <span class="ide">gitStatus</span>(<span class="str">&quot;*&quot;</span>, <span class="str">&quot;&quot;</span>), <span class="ide">red</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">nl</span> <span class="op">=</span> <span class="str">&quot;</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> fmt"{tilde}{git}{nl}{prompt}"</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># switching by return code</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nicy</span>, <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">prompt</span> <span class="op">=</span> <span class="ide">returnCondition</span>(<span class="ide">ok</span> <span class="op">=</span> <span class="str">&quot;👍&quot;</span>, <span class="ide">ng</span> <span class="op">=</span> <span class="str">&quot;👎&quot;</span>) <span class="op">&amp;</span> <span class="str">&quot; &quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">tilde</span> <span class="op">=</span> <span class="ide">color</span>(<span class="ide">tilde</span>(<span class="ide">getCwd</span>()), <span class="ide">cyan</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">git</span> <span class="op">=</span> <span class="ide">color</span>(<span class="ide">gitBranch</span>() <span class="op">&amp;</span> <span class="ide">gitStatus</span>(<span class="str">&quot;*&quot;</span>, <span class="str">&quot;&quot;</span>), <span class="ide">red</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">nl</span> <span class="op">=</span> <span class="str">&quot;</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> fmt"{tilde}{git}{nl}{prompt}"</div></div><div class="line"><div class="line-content"><span class="com"># ~ master</span></div></div><div class="line"><div class="line-content"><span class="com"># 👍</span></div></div>  </code></pre>
+<p>If you like to know more details about git status, you may want to try the following powerful example which is including the number of untracked, modified, staged, conflicted and the number of commits your local branch is ahead, behind, etc:</p>
+<pre>  <code>nim c -d:release examples/power.nim
+</code></pre>
+<h3>API</h3>
+<p><strong>  <code>zeroWidth(s: string): string</code></strong><br />
+Returns the given string wrapped in zsh zero-width codes. Useful for prompt alignment and cursor positioning.<br />
+All procs below return strings wrapped by this.</p>
+<p><strong>  <code>foreground(s: string, color: Color): string</code></strong><br />
+Returns the given string, colorized.<br />
+Possible colors are <code>black</code>, <code>red</code>, <code>green</code>, <code>blue</code>, <code>cyan</code>, <code>yellow</code>, <code>magenta</code>, <code>white</code>.</p>
+<p><strong>  <code>background(s, color: string): string</code></strong><br />
+Returns the given string with its background colorized.<br />
+Same possible colors as above.</p>
+<p><strong>  <code>bold(s: string): string</code></strong><br />
+Makes the given string bold.</p>
+<p><strong>  <code>underline(s: string): string</code></strong><br />
+Adds an underline to the given string.</p>
+<p><strong>  <code>italics(s: string): string</code></strong><br />
+Italicizes the given text. <strong>May not work in some terminal emulators!</strong></p>
+<p><strong>  <code>reverse(s: string): string</code></strong><br />
+Swaps the foreground/background colors for the given string.</p>
+<p><strong>  <code>reset(s: string): string</code></strong><br />
+Resets all attributes. Useful for disabling all styling.</p>
+<p><strong>  <code>color*(s: string, fg, bg = Color.none, b, u, r = false): string</code></strong><br />
+Convenience proc that sets all attributes to a given string.<br />
+<code>fg</code>: foreground, <code>bg</code>: background, <code>b</code>: bold, <code>u</code>: underline, <code>r</code>: reverse</p>
+<p><strong>  <code>horizontalRule(c: char): string</code></strong><br />
+Returns a string of characters <code>c</code>, having the length of the current terminal width. Useful for positioning right-side prompts.</p>
+<p><strong>  <code>tilde(path: string): string</code></strong><br />
+If <code>path</code> starts with <code>/home/user</code>, it is replaced by a <code>~/</code>.</p>
+<p><strong>  <code>getCwd(): string</code></strong><br />
+Returns the full path of the current working directory, or returns the string <code>[not found]</code> if current path doesn’t exist. (eg: <code>rm -rf ../curpath</code>)</p>
+<p><strong>  <code>virtualenv(): string</code></strong><br />
+Returns the current virtualenv name if in one.</p>
+<p><strong>  <code>gitBranch(): string</code></strong><br />
+Returns the current git branch, if in a git directory.</p>
+<p><strong>  <code>gitStatus(dirty, clean: string): string</code></strong><br />
+Returns either <code>dirty</code> or <code>clean</code> if in a git repository. For example, return <code>•</code> if clean and <code>×</code> if dirty.</p>
+<p><strong>  <code>user(): string</code></strong><br />
+Returns the current username.</p>
+<p><strong>  <code>host(): string</code></strong><br />
+Returns the current hostname.</p>
+<p><strong>  <code>returnCondition*(ok: string, ng: string, delimiter = &quot;.&quot;): string</code></strong><br />
+If the return code is <code>0</code> then returns <code>ok</code> string, otherwise <code>ng</code>.</p>
+<p><strong>  <code>returnCondition*(ok: proc(): string, ng: proc(): string, delimiter = &quot;.&quot;): string</code></strong><br />
+Returns result of <code>ok</code> proc or <code>ng</code> proc.
+If the return code is <code>0</code> then this proc calls <code>ok</code> proc, otherwise calls <code>ng</code> proc.</p>
+<p><strong>  <code>shellName*: string</code></strong>
+Contains the name of shell in which your prompt progoram is running.
+Currently it may be <code>zsh</code> or <code>bash</code>.
+You can specify it during compilation using the switch <code>-d:zsh</code> or <code>-d:bash</code>, or you can let the program detect it automatically, which may slow it down by a few milliseconds.</p>
+<h4>GitStats API</h4>
+<p><strong>  <code>newGitStats*(): GitStats</code></strong><br />
+Returns a <code>GitStats</code> object which contains the name of the local branch, the name of remote reference, number of commits your local branch is ahead or behind remote ref, number of untracked, modified, staged, conflicted, and the number of stashed changes.</p>
+<p><strong>  <code>branch*(gs: GitStats, detachedPrefix = &quot;&quot;, postfix = &quot; &quot;): string</code></strong><br />
+Returns the current git branch name.</p>
+<p><strong>  <code>status*(gs: GitStats, ahead, behind, untracked, changed, staged, conflicted, stash: string, separator, postfix = &quot; &quot;): string</code></strong><br />
+Returns the git status string.</p>
+<p><strong>  <code>dirty*(gs: GitStats): bool</code></strong><br />
+Returns whether the current directory has been changed.</p>
+<h2>Contributing</h2>
+<p>Bad code? New feature in mind? Open an issue. Better still, learn <a href="https://nim-lang.org/documentation.html">Nim</a> and shoot a PR :sparkles:</p>
+<h2>License</h2>
+<p>MIT © <a href="https://icyphox.sh">Anirudh Oppiliappan</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/icyphox/nicy">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

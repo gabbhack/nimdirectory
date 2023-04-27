@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">zfdbms</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">dbms</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">zendbit</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">zendflow</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mysql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sqlite</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">postgre</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Simple database generator, connector and query tools.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install zfdbms" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h3>zfdbms simple dbms generator, connector and query tools</h3>
+<p>https://github.com/zendbit/nim.zfdbms</p>
+<h4>install</h4>
+<pre>  <code>nimble install zfdbms
+</code></pre>
+<h4>install latest</h4>
+<pre>  <code>nimble install zfdbms@#head
+</code></pre>
+<h4>direct install</h4>
+<pre>  <code>nimble install https://github.com/zendbit/nim.zfdbms
+</code></pre>
+<h4>important note</h4>
+<p>need to pass when compile -d:mysqldb or -d:pgsqldb or -d:sqlitedb depend on your database target. or can pass all parameter.</p>
+<pre>  <code>nim c -d:mysqldb myapp.nim
+</code></pre>
+<h4>usage</h4>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># </span></div></div><div class="line"><div class="line-content"><span class="com"># console app example</span></div></div><div class="line"><div class="line-content"><span class="com"># database engine: mysql</span></div></div><div class="line"><div class="line-content"><span class="com"># database name: testdb</span></div></div><div class="line"><div class="line-content"><span class="com"># database username: admin</span></div></div><div class="line"><div class="line-content"><span class="com"># database password: helloworld</span></div></div><div class="line"><div class="line-content"><span class="com"># database host: localhost</span></div></div><div class="line"><div class="line-content"><span class="com"># database port: 3306</span></div></div><div class="line"><div class="line-content"><span class="com">#</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">zfdbms</span><span class="op">/</span><span class="ide">dbms</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="com">## create database connection</span></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">dbi</span> {<span class="op">.</span><span class="ide">global</span><span class="op">.</span>}: <span class="ide">DBMS</span>[<span class="ide">MySql</span>] <span class="op">=</span> <span class="ide">newDBMS</span>[<span class="ide">MySql</span>](</div></div><div class="line"><div class="line-content">  <span class="str">&quot;testdb&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;admin&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;helloworld&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;localhost&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="num">3306</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="com">## function check database connection when call it</span></div></div><div class="line"><div class="line-content"><span class="com">## if connection doesn&apos;t exist or destroyed try to connect</span></div></div><div class="line"><div class="line-content"><span class="com">## return DBMS type</span></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">dbConn</span><span class="op">*</span>(): <span class="ide">DBMS</span>[<span class="ide">MySql</span>] {<span class="op">.</span><span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># disable gcsafe checking</span></div></div><div class="line"><div class="line-content">  {<span class="op">.</span><span class="kwd">cast</span>(<span class="ide">gcsafe</span>)<span class="op">.</span>}:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">dbi</span><span class="op">.</span><span class="ide">isNil</span> <span class="kwd">or</span> <span class="kwd">not</span> <span class="ide">dbi</span><span class="op">.</span><span class="ide">ping</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;try connect to database: &quot;</span> <span class="op">&amp;</span></div></div><div class="line"><div class="line-content">        <span class="op">$</span><span class="ide">dbi</span><span class="op">.</span><span class="ide">tryConnect</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">dbi</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="com">## test create database</span></div></div><div class="line"><div class="line-content"><span class="com">## using the macro</span></div></div><div class="line"><div class="line-content"><span class="com">## see file zfdbms/dbms.nim template section</span></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Users</span><span class="op">*</span></div></div><div class="line"><div class="line-content">    {<span class="op">.</span><span class="ide">dbmsTable</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span><span class="op">*</span></div></div><div class="line"><div class="line-content">      {<span class="op">.</span><span class="ide">dbmsField</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">dataType</span> <span class="op">=</span> <span class="ide">SERIAL</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">dbmsPrimaryKey</span><span class="op">.</span>}: <span class="ide">Option</span>[<span class="ide">int64</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">email</span><span class="op">*</span></div></div><div class="line"><div class="line-content">      {<span class="op">.</span><span class="ide">dbmsField</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">isNull</span> <span class="op">=</span> <span class="ide">false</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">dataType</span> <span class="op">=</span> <span class="ide">VARCHAR</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">length</span> <span class="op">=</span> <span class="num">100</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">dbmsUniqueKey</span><span class="op">.</span>}: <span class="ide">Option</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">name</span><span class="op">*</span></div></div><div class="line"><div class="line-content">      {<span class="op">.</span><span class="ide">dbmsField</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">isNull</span> <span class="op">=</span> <span class="ide">false</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">dataType</span> <span class="op">=</span> <span class="ide">VARCHAR</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">length</span> <span class="op">=</span> <span class="num">100</span>)<span class="op">.</span>}: <span class="ide">Option</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">UsersDetails</span><span class="op">*</span></div></div><div class="line"><div class="line-content">    {<span class="op">.</span><span class="ide">dbmsTable</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span><span class="op">*</span></div></div><div class="line"><div class="line-content">      {<span class="op">.</span><span class="ide">dbmsField</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">dataType</span> <span class="op">=</span> <span class="ide">SERIAL</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">dbmsPrimaryKey</span><span class="op">.</span>}: <span class="ide">Option</span>[<span class="ide">int64</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">usersId</span><span class="op">*</span></div></div><div class="line"><div class="line-content">      {<span class="op">.</span><span class="ide">dbmsField</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">isNull</span> <span class="op">=</span> <span class="ide">false</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">dataType</span> <span class="op">=</span> <span class="ide">BIGINT</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">dbmsForeignKeyRef</span>: <span class="ide">Users</span></div></div><div class="line"><div class="line-content">        <span class="ide">dbmsForeignKeyFieldRef</span>: <span class="ide">Users</span><span class="op">.</span><span class="ide">id</span></div></div><div class="line"><div class="line-content">        <span class="ide">dbmsForeignKeyConstraint</span>(</div></div><div class="line"><div class="line-content">          <span class="ide">onDelete</span> <span class="op">=</span> <span class="ide">FK_CASCADE</span>,</div></div><div class="line"><div class="line-content">          <span class="ide">onUpdate</span> <span class="op">=</span> <span class="ide">FK_CASCADE</span>)<span class="op">.</span>}: <span class="ide">Option</span>[<span class="ide">int64</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">address</span><span class="op">*</span></div></div><div class="line"><div class="line-content">      {<span class="op">.</span><span class="ide">dbmsField</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">dataType</span> <span class="op">=</span> <span class="ide">VARCHAR</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">length</span> <span class="op">=</span> <span class="num">255</span>)<span class="op">.</span>}: <span class="ide">Option</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="com">##  create table structure depend on the above type</span></div></div><div class="line"><div class="line-content"><span class="com">##</span></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;create table {$@Users} {dbConn().createTable(Users()).msg}&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;create table {$@UsersDetails} {dbConn().createTable(UsersDetails()).msg}&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com">##</span></div></div><div class="line"><div class="line-content">  <span class="com">##  insert users</span></div></div><div class="line"><div class="line-content">  <span class="com">##</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">newuser</span> <span class="op">=</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">insert</span>(</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[<span class="ide">Users</span>(<span class="ide">name</span>: <span class="ide">some</span> <span class="str">&quot;John Doe&quot;</span>, <span class="ide">email</span>: <span class="ide">some</span> <span class="str">&quot;jdoe@email.com&quot;</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">Users</span>(<span class="ide">name</span>: <span class="ide">some</span> <span class="str">&quot;Jogn Foe&quot;</span>, <span class="ide">email</span>: <span class="ide">some</span> <span class="str">&quot;jfoe@email.com&quot;</span>)])</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">newUser</span><span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">    <span class="com">##  get jdoe</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">jdoe</span> <span class="op">=</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">selectOne</span>(<span class="ide">Users</span>(<span class="ide">email</span>: <span class="ide">some</span> <span class="str">&quot;jdoe@email.com&quot;</span>))</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">jdoe</span><span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">      <span class="com">##  add new users details</span></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">insert</span>(<span class="ide">UsersDetails</span>(<span class="ide">usersId</span>: <span class="ide">jdoe</span><span class="op">.</span><span class="ide">row</span><span class="op">.</span><span class="ide">id</span>, <span class="ide">address</span>: <span class="ide">some</span> <span class="str">&quot;Yogyakarta&quot;</span>))<span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;jdoe address updated&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com">##  get jfoe</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">jfoe</span> <span class="op">=</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">selectOne</span>(<span class="ide">Users</span>(<span class="ide">email</span>: <span class="ide">some</span> <span class="str">&quot;jfoe@email.com&quot;</span>))</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">jfoe</span><span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">      <span class="com">##  add new users details</span></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">insert</span>(<span class="ide">UsersDetails</span>(<span class="ide">usersId</span>: <span class="ide">jfoe</span><span class="op">.</span><span class="ide">row</span><span class="op">.</span><span class="ide">id</span>, <span class="ide">address</span>: <span class="ide">some</span> <span class="str">&quot;Bantul&quot;</span>))<span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;jfoe address updated&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com">##  select users with details</span></div></div><div class="line"><div class="line-content">    <span class="com">##  select with join multiple table</span></div></div><div class="line"><div class="line-content">    <span class="com">##  return RowResults[JsonNode]</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;</span>\n\n<span class="str">select with join</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">usersdata</span> <span class="op">=</span> <span class="ide">dbConn</span>()</div></div><div class="line"><div class="line-content">      <span class="op">.</span><span class="ide">select</span>(</div></div><div class="line"><div class="line-content">        <span class="op">@</span>[<span class="op">%@</span><span class="ide">Users</span>, <span class="op">%@</span><span class="ide">UsersDetails</span>],</div></div><div class="line"><div class="line-content">        <span class="op">@</span>[<span class="op">$&gt;</span><span class="ide">Users</span><span class="op">.</span><span class="ide">id</span>, <span class="op">$&gt;</span><span class="ide">Users</span><span class="op">.</span><span class="ide">name</span>, <span class="op">$&gt;</span><span class="ide">Users</span><span class="op">.</span><span class="ide">email</span>, <span class="op">$&gt;</span><span class="ide">UsersDetails</span><span class="op">.</span><span class="ide">address</span>],</div></div><div class="line"><div class="line-content">        <span class="ide">Users</span><span class="op">.</span><span class="ide">innerJoin</span>(<span class="ide">UsersDetails</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">u</span> <span class="kwd">in</span> <span class="ide">usersdata</span><span class="op">.</span><span class="ide">rows</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;---------------------&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;id: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">u</span>{<span class="op">$&gt;</span><span class="ide">Users</span><span class="op">.</span><span class="ide">id</span>}<span class="op">.</span><span class="ide">getInt</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;name: &quot;</span> <span class="op">&amp;</span> <span class="ide">u</span>{<span class="op">$&gt;</span><span class="ide">Users</span><span class="op">.</span><span class="ide">name</span>}<span class="op">.</span><span class="ide">getStr</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;email:&quot;</span> <span class="op">&amp;</span> <span class="ide">u</span>{<span class="op">$&gt;</span><span class="ide">Users</span><span class="op">.</span><span class="ide">email</span>}<span class="op">.</span><span class="ide">getStr</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;address:&quot;</span> <span class="op">&amp;</span> <span class="ide">u</span>{<span class="op">$&gt;</span><span class="ide">UsersDetails</span><span class="op">.</span><span class="ide">address</span>}<span class="op">.</span><span class="ide">getStr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com">##  select users</span></div></div><div class="line"><div class="line-content">    <span class="com">##  select user with no join will return the table object</span></div></div><div class="line"><div class="line-content">    <span class="com">##  return RowResults[T]</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;</span>\n\n<span class="str">select single table multiple rows</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">users</span> <span class="op">=</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">select</span>(<span class="ide">Users</span>())</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">u</span> <span class="kwd">in</span> <span class="ide">users</span><span class="op">.</span><span class="ide">rows</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;---------------------&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;id: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">u</span><span class="op">.</span><span class="ide">id</span><span class="op">.</span><span class="ide">get</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;name: &quot;</span> <span class="op">&amp;</span> <span class="ide">u</span><span class="op">.</span><span class="ide">name</span><span class="op">.</span><span class="ide">get</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;email:&quot;</span> <span class="op">&amp;</span> <span class="ide">u</span><span class="op">.</span><span class="ide">email</span><span class="op">.</span><span class="ide">get</span></div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;</span>\n\n<span class="str">select single table single row</span>\n<span class="str">&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">user</span> <span class="op">=</span> <span class="ide">dbConn</span>()<span class="op">.</span><span class="ide">selectOne</span>(<span class="ide">Users</span>(), <span class="ide">Sql</span>()<span class="op">.</span><span class="ide">where</span>(<span class="op">&amp;</span><span class="str">&quot;{$@Users.email}=?&quot;</span>, <span class="op">%</span><span class="str">&quot;jdoe@email.com&quot;</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;---------------------&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;id: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">user</span><span class="op">.</span><span class="ide">row</span><span class="op">.</span><span class="ide">id</span><span class="op">.</span><span class="ide">get</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;name: &quot;</span> <span class="op">&amp;</span> <span class="ide">user</span><span class="op">.</span><span class="ide">row</span><span class="op">.</span><span class="ide">name</span><span class="op">.</span><span class="ide">get</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;email:&quot;</span> <span class="op">&amp;</span> <span class="ide">user</span><span class="op">.</span><span class="ide">row</span><span class="op">.</span><span class="ide">email</span><span class="op">.</span><span class="ide">get</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        BSD
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/zendbit/nim_zfdbms">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

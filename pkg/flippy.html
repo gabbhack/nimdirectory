@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">flippy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">image</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graphics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">2d</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Flippy is a simple 2d image and drawing library.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install flippy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Flippy</h1>
+<p>⚠️⚠️⚠️ Flippy is not longer developed, all development has moved to <a href="https://github.com/treeform/pixie">pixie</a>. ⚠️⚠️⚠️</p>
+<p>  <img src="docs/flippyLogo.png" style="max-width: 100%;" alt="Flippy Logo" /></p>
+<p>Flippy is a simple 2d image and drawing library.</p>
+<p>Basic usage:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">flippy</span>, <span class="ide">vmath</span>, <span class="ide">chroma</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># load an image</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">image</span> <span class="op">=</span> <span class="ide">loadImage</span>(<span class="str">&quot;tests/lenna.png&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># print it out</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">image</span></div></div><div class="line"><div class="line-content"><span class="com"># get a color pixel</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">image</span><span class="op">.</span><span class="ide">getRgba</span>(<span class="num">100</span>, <span class="num">100</span>)</div></div><div class="line"><div class="line-content"><span class="com"># put a color pixel</span></div></div><div class="line"><div class="line-content"><span class="ide">image</span><span class="op">.</span><span class="ide">putRgba</span>(<span class="num">10</span>, <span class="num">10</span>, <span class="ide">rgba</span>(<span class="num">255</span>, <span class="num">0</span>, <span class="num">0</span>, <span class="num">255</span>))</div></div><div class="line"><div class="line-content"><span class="com"># blit a rectangular part from one place to another</span></div></div><div class="line"><div class="line-content"><span class="ide">blit</span>(<span class="ide">image</span>, <span class="ide">image</span>, <span class="ide">rect</span>(<span class="num">0</span>, <span class="num">0</span>, <span class="num">100</span>, <span class="num">100</span>), <span class="ide">rect</span>(<span class="num">100</span>, <span class="num">100</span>, <span class="num">100</span>, <span class="num">100</span>))</div></div><div class="line"><div class="line-content"><span class="com"># draw a line</span></div></div><div class="line"><div class="line-content"><span class="ide">image</span><span class="op">.</span><span class="ide">line</span>(<span class="ide">vec2</span>(<span class="num">11</span>, <span class="num">11</span>), <span class="ide">vec2</span>(<span class="num">100</span>, <span class="num">100</span>), <span class="ide">rgba</span>(<span class="num">0</span>, <span class="num">0</span>, <span class="num">0</span>, <span class="num">255</span>))</div></div><div class="line"><div class="line-content"><span class="com"># minify image by 2 or 1/2 or scale by 50%</span></div></div><div class="line"><div class="line-content"><span class="ide">image</span> <span class="op">=</span> <span class="ide">image</span><span class="op">.</span><span class="ide">minify</span>(<span class="num">2</span>)</div></div><div class="line"><div class="line-content"><span class="com"># save the image to a file</span></div></div><div class="line"><div class="line-content"><span class="ide">image</span><span class="op">.</span><span class="ide">save</span>(<span class="str">&quot;tests/lenna2.png&quot;</span>)</div></div>  </code></pre>
+<p>  <img src="tests/lenna2.png?raw=true" style="max-width: 100%;" alt="Alt text" title="Title" /></p>
+<h1>API: flippy</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">flippy</span></div></div>  </code></pre>
+<h2><strong>type</strong> Image</h2>
+<p>Main image object that holds the bitmap data.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Image</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">filePath</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content"> <span class="ide">width</span><span class="op">*</span>, <span class="ide">height</span><span class="op">*</span>, <span class="ide">channels</span><span class="op">*</span>, <span class="ide">format</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content"> <span class="ide">data</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">uint8</span>]</div></div>  </code></pre>
+<h2><strong>type</strong> Flippy</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Flippy</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"> <span class="ide">mipmaps</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">Image</span>]</div></div>  </code></pre>
+<h2><strong>proc</strong> <code>$</code></h2>
+<p>Display the image path, size and channels.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> `<span class="op">$</span>`(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">string</span></div></div>  </code></pre>
+<h2><strong>proc</strong> newImage</h2>
+<p>Creates a new image with appropriate dimensions.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newImage</span>(<span class="ide">width</span>, <span class="ide">height</span>, <span class="ide">channels</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> newImage</h2>
+<p>Creates a new image with a path.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newImage</span>(<span class="ide">filePath</span>: <span class="ide">string</span>; <span class="ide">width</span>, <span class="ide">height</span>, <span class="ide">channels</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> loadImage</h2>
+<p>Loads a png image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">loadImage</span>(<span class="ide">filePath</span>: <span class="ide">string</span>): <span class="ide">Image</span> {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">IOError</span>], <span class="ide">tags</span>: [<span class="ide">ReadIOEffect</span>, <span class="ide">RootEffect</span>, <span class="ide">WriteIOEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> copy</h2>
+<p>Copies an image creating a new image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">copy</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> save</h2>
+<p>Saves a png image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">save</span>(<span class="ide">image</span>: <span class="ide">Image</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">IOError</span>], <span class="ide">tags</span>: [<span class="ide">WriteIOEffect</span>, <span class="ide">RootEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> save</h2>
+<p>Sets image path and save the image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">save</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">filePath</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">IOError</span>], <span class="ide">tags</span>: [<span class="ide">WriteIOEffect</span>, <span class="ide">RootEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> inside</h2>
+<p>Returns true if (x, y) is inside the image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">inside</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> getRgbaUnsafe</h2>
+<p>Gets a color from (x, y) coordinates.</p>
+<ul>
+<li>No bounds checking *</li>
+</ul>
+<p>Make sure that x, y are in bounds. Failure in the assumptions will case unsafe memory reads.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getRgbaUnsafe</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>): <span class="ide">ColorRGBA</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> getRgbaUnsafe</h2>
+<p>Gets a pixel as (x, y) floats.</p>
+<ul>
+<li>No bounds checking *</li>
+</ul>
+<p>Make sure that x, y are in bounds. Failure in the assumptions will case unsafe memory reads.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getRgbaUnsafe</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">float64</span>): <span class="ide">ColorRGBA</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> getRgba</h2>
+<p>Gets a pixel at (x, y) or returns transparent black if outside of bounds. Slower due to bounds checking.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getRgba</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>): <span class="ide">ColorRGBA</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> getRgbaSmooth</h2>
+<p>Gets a pixel as (x, y) floats.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getRgbaSmooth</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">float64</span>): <span class="ide">ColorRGBA</span> {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> putRgbaUnsafe</h2>
+<p>Puts a ColorRGBA pixel back.</p>
+<ul>
+<li>No bounds checking *</li>
+</ul>
+<p>Make sure that x, y are in bounds. Failure in the assumptions will case unsafe memory writes.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">putRgbaUnsafe</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> putRgbaUnsafe</h2>
+<p>Puts a ColorRGBA pixel back as x, y floats (does not do blending).</p>
+<ul>
+<li>No bounds checking *</li>
+</ul>
+<p>Make sure that x, y are in bounds. Failure in the assumptions will case unsafe memory writes.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">putRgbaUnsafe</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">float64</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>) {<span class="op">.</span><span class="ide">inline</span>, <span class="ide">tags</span>: []<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> putRgba</h2>
+<p>Puts pixel onto the image or safely ignored if pixel is outside the image. Slower due to bounds checking.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">putRgba</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>) {<span class="op">.</span><span class="ide">inline</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> minifyBy2</h2>
+<p>Scales the image down by an integer scale.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">minifyBy2</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> minify</h2>
+<p>Scales the image down by an integer scale.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">minify</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">scale</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> magnify</h2>
+<p>Scales image image up by an integer scale.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">magnify</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">scale</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> blitUnsafe</h2>
+<p>Blits rectangle from one image to the other image.</p>
+<ul>
+<li>No bounds checking *</li>
+</ul>
+<p>Make sure that src and dest rect are in bounds. Make sure that channels for images are the same. Failure in the assumptions will case unsafe memory writes.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blitUnsafe</span>(<span class="ide">destImage</span>: <span class="ide">Image</span>; <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">src</span>, <span class="ide">dest</span>: <span class="ide">Rect</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> blit</h2>
+<p>Blits rectangle from one image to the other image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blit</span>(<span class="ide">destImage</span>: <span class="ide">Image</span>; <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">src</span>, <span class="ide">dest</span>: <span class="ide">Rect</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> blit</h2>
+<p>Blits rectangle from one image to the other image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blit</span>(<span class="ide">destImage</span>: <span class="ide">Image</span>; <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">pos</span>: <span class="ide">Vec2</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> blitWithAlpha</h2>
+<p>Blits rectangle from one image to the other image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blitWithAlpha</span>(<span class="ide">destImage</span>: <span class="ide">Image</span>; <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">src</span>, <span class="ide">dest</span>: <span class="ide">Rect</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> blitWithMask</h2>
+<p>Blits rectangle from one image to the other image with masking color.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blitWithMask</span>(<span class="ide">destImage</span>: <span class="ide">Image</span>; <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">src</span>, <span class="ide">dest</span>: <span class="ide">Rect</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> getSubImage</h2>
+<p>Gets a sub image of the main image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">getSubImage</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">w</span>, <span class="ide">h</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> trim</h2>
+<p>Trims the transparent (alpha=0) border around the image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">trim</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> flipHorizontal</h2>
+<p>Flips the image around the Y axis.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">flipHorizontal</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> flipVertical</h2>
+<p>Flips the image around the X axis.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">flipVertical</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> blit</h2>
+<p>Blits one image onto another using matrix with alpha blending.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blit</span>(<span class="ide">destImage</span>, <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">mat</span>: <span class="ide">Mat4</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> blitWithAlpha</h2>
+<p>Blits one image onto another using matrix with alpha blending.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blitWithAlpha</span>(<span class="ide">destImage</span>: <span class="ide">Image</span>; <span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">mat</span>: <span class="ide">Mat4</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> fill</h2>
+<p>Fills the image with a solid color.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fill</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> line</h2>
+<p>Draws a line from one at vec to to vec.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">line</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">at</span>, <span class="ide">to</span>: <span class="ide">Vec2</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> fillRect</h2>
+<p>Draws a filled rectangle.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fillRect</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">rect</span>: <span class="ide">Rect</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> strokeRect</h2>
+<p>Draws a rectangle borders only.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">strokeRect</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">rect</span>: <span class="ide">Rect</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> fillCircle</h2>
+<p>Draws a filled circle with antialiased edges.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fillCircle</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">pos</span>: <span class="ide">Vec2</span>; <span class="ide">radius</span>: <span class="ide">float</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> strokeCircle</h2>
+<p>Draws a border of circle with antialiased edges.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">strokeCircle</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">pos</span>: <span class="ide">Vec2</span>; <span class="ide">radius</span>, <span class="ide">border</span>: <span class="ide">float</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> fillRoundedRect</h2>
+<p>Fills image with a rounded rectangle.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fillRoundedRect</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">rect</span>: <span class="ide">Rect</span>; <span class="ide">radius</span>: <span class="ide">float</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> strokeRoundedRect</h2>
+<p>Fills image with a stroked rounded rectangle.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">strokeRoundedRect</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">rect</span>: <span class="ide">Rect</span>; <span class="ide">radius</span>, <span class="ide">border</span>: <span class="ide">float</span>; <span class="ide">rgba</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> ninePatch</h2>
+<p>Draws a 9-patch</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">ninePatch</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">rect</span>: <span class="ide">Rect</span>; <span class="ide">radius</span>, <span class="ide">border</span>: <span class="ide">float</span>; <span class="ide">fill</span>, <span class="ide">stroke</span>: <span class="ide">ColorRGBA</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> rotate90Degrees</h2>
+<p>Rotates the image clockwise.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">rotate90Degrees</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> rotateNeg90Degrees</h2>
+<p>Rotates the image anti-clockwise.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">rotateNeg90Degrees</span>(<span class="ide">image</span>: <span class="ide">Image</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> shearX</h2>
+<p>Shears the image horizontally; resizes to fit.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">shearX</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">shear</span>: <span class="ide">float</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> shearY</h2>
+<p>Shears the image vertically; resizes to fit.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">shearY</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">shear</span>: <span class="ide">float</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> rotate</h2>
+<p>Rotates the image by given angle (in degrees) using the 3-shear method (Paeth method)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">rotate</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">angle</span>: <span class="ide">float</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> removeAlpha</h2>
+<p>Removes alpha channel from the images by: Setting it to 255 everywhere.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">removeAlpha</span>(<span class="ide">image</span>: <span class="ide">Image</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> alphaBleed</h2>
+<p>PNG saves space by encoding alpha = 0 areas as black however scaling such images lets the black or gray come out. This bleeds the real colors into invisible space.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alphaBleed</span>(<span class="ide">image</span>: <span class="ide">Image</span>)</div></div>  </code></pre>
+<h2><strong>proc</strong> blur</h2>
+<p>Blurs the image by x and y directions.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">blur</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">xBlur</span>: <span class="ide">int</span>; <span class="ide">yBlur</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> resize</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">resize</span>(<span class="ide">srcImage</span>: <span class="ide">Image</span>; <span class="ide">width</span>, <span class="ide">height</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>proc</strong> outlineBorder</h2>
+<p>Adds n pixel border around alpha parts of the image.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">outlineBorder</span>(<span class="ide">image</span>: <span class="ide">Image</span>; <span class="ide">borderPx</span>: <span class="ide">int</span>): <span class="ide">Image</span></div></div>  </code></pre>
+<h2><strong>func</strong> width</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">width</span>(<span class="ide">flippy</span>: <span class="ide">Flippy</span>): <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>func</strong> height</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">height</span>(<span class="ide">flippy</span>: <span class="ide">Flippy</span>): <span class="ide">int</span></div></div>  </code></pre>
+<h2><strong>proc</strong> save</h2>
+<p>Flippy is a special file format that is fast to load and save with mip maps.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">save</span>(<span class="ide">flippy</span>: <span class="ide">Flippy</span>; <span class="ide">filePath</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">Exception</span>, <span class="ide">IOError</span>, <span class="ide">OSError</span>, <span class="ide">SnappyException</span>], <span class="ide">tags</span>: [<span class="ide">WriteIOEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> pngToFlippy</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">pngToFlippy</span>(<span class="ide">pngPath</span>, <span class="ide">flippyPath</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">IOError</span>, <span class="ide">Exception</span>, <span class="ide">OSError</span>, <span class="ide">SnappyException</span>], <span class="ide">tags</span>: [<span class="ide">ReadIOEffect</span>, <span class="ide">RootEffect</span>, <span class="ide">WriteIOEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> loadFlippy</h2>
+<p>Flippy is a special file format that is fast to load and save with mip maps.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">loadFlippy</span>(<span class="ide">filePath</span>: <span class="ide">string</span>): <span class="ide">Flippy</span> {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">Exception</span>, <span class="ide">IOError</span>, <span class="ide">OSError</span>, <span class="ide">ValueError</span>, <span class="ide">SnappyException</span>], <span class="ide">tags</span>: [<span class="ide">WriteIOEffect</span>, <span class="ide">ReadIOEffect</span>]<span class="op">.</span>}</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/flippy">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

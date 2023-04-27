@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">hashlib</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hashes</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hmac</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Hash Library for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install hashlib" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Hashlib</h1>
+<p>Hashlib contains almost all the hash functions for Nim and provides uniform interface, hmac, and benchmark for all hashes. The C source codes are collected from <a href="https://github.com/rhash/RHash">RHash</a>, <a href="http://mhash.sourceforge.net">MHash</a>, <a href="https://github.com/aidansteele/sphlib">Sphlib</a>, <a href="https://keccak.team/keccak.html">Team Keccak</a>, <a href="https://blake2.net">BLAKE2</a>, <a href="https://github.com/BLAKE3-team/BLAKE3">BLAKE3</a>, <a href="https://github.com/mjosaarinen/tiny_sha3">tiny_sha3</a>, <a href="https://github.com/Cyan4973/xxHash">xxHash</a> etc. This module also provides the same interface for <a href="https://gnupg.org/software/libgcrypt/index.html">libgcrypt</a>, <a href="https://github.com/cheatfate/nimcrypto">nimcrypto</a>, and Nim builtin <a href="https://nim-lang.org/docs/md5.html">MD5</a>/<a href="https://nim-lang.org/docs/sha1.html">SHA1</a>.</p>
+<h2>Install</h2>
+<pre>  <code>nimble install hashlib
+</code></pre>
+<p>For Linux user:</p>
+<pre>  <code>sudo apt install libgcrypt20 libgcrypt20-dev
+</code></pre>
+<p>This module already includes libgcrypt for Windows (mingw32/64 only).</p>
+<h2>Usage</h2>
+<h3>How to Import</h3>
+<p>Hash functions can be imported all-in-one or one-by-one.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span> <span class="com"># import all available hashes</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">rhash</span> <span class="com"># import all hashes from RHash</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">mhash</span> <span class="com"># import all hashes from MHash</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">sph</span> <span class="com"># import all hashes from Sphlib</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">gcrypt</span> <span class="com"># import all hashes from libgcrypt</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">misc</span> <span class="com"># import other hashes</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">lean</span> <span class="com"># import commonly used hashes</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">bench</span> <span class="com"># import runBench() template</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">rhash</span><span class="op">/</span>[<span class="ide">aich</span>, <span class="ide">crc32</span>, <span class="ide">ed2k</span>, <span class="ide">edonr</span>, <span class="ide">gost</span>, <span class="ide">has160</span>, <span class="ide">md4</span>, <span class="ide">md5</span>, <span class="ide">ripemd160</span>, <span class="ide">sha1</span>, <span class="ide">sha256</span>, <span class="ide">sha3</span>, <span class="ide">sha512</span>, <span class="ide">snefru</span>, <span class="ide">streebog</span>, <span class="ide">tiger</span>, <span class="ide">tth</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">mhash</span><span class="op">/</span>[<span class="ide">adler32</span>, <span class="ide">crc32</span>, <span class="ide">gost</span>, <span class="ide">haval</span>, <span class="ide">md2</span>, <span class="ide">md4</span>, <span class="ide">md5</span>, <span class="ide">ripemd</span>, <span class="ide">sha1</span>, <span class="ide">sha256</span>, <span class="ide">sha512</span>, <span class="ide">snefru</span>, <span class="ide">tiger</span>, <span class="ide">whirlpool</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">sph</span><span class="op">/</span>[<span class="ide">blake</span>, <span class="ide">bmw</span>, <span class="ide">cubehash</span>, <span class="ide">echohash</span>, <span class="ide">fugue</span>, <span class="ide">groestl</span>, <span class="ide">hamsi</span>, <span class="ide">haval</span>, <span class="ide">jh</span>, <span class="ide">keccak</span>, <span class="ide">luffa</span>, <span class="ide">md2</span>, <span class="ide">md4</span>, <span class="ide">md5</span>, <span class="ide">panama</span>, <span class="ide">radiogatun</span>, <span class="ide">ripemd</span>, <span class="ide">sha0</span>, <span class="ide">sha1</span>, <span class="ide">sha256</span>, <span class="ide">sha512</span>, <span class="ide">shabal</span>, <span class="ide">shavite</span>, <span class="ide">simd</span>, <span class="ide">skein</span>, <span class="ide">tiger</span>, <span class="ide">whirlpool</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">misc</span><span class="op">/</span>[<span class="ide">blake2</span>, <span class="ide">blake3</span>, <span class="ide">crypto</span>, <span class="ide">kangarootwelve</span>, <span class="ide">nimhash</span>, <span class="ide">sha3</span>, <span class="ide">tinysha3</span>, <span class="ide">tinyshabal</span>, <span class="ide">xxhash</span>]</div></div>  </code></pre>
+<p>Use import ... as ... to avoid name conflict. For example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">rhash</span><span class="op">/</span><span class="ide">md5</span> <span class="kwd">as</span> <span class="ide">rhash_md5</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">mhash</span><span class="op">/</span><span class="ide">md5</span> <span class="kwd">as</span> <span class="ide">mhash_md5</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">bench</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">runBench</span>()</div></div>  </code></pre>
+<h3>Simple API</h3>
+<pre>  <code>count[HashType](DataTypes): HashType
+count[HashType](DataTypes, DigestTypes)
+
+DataTypes = string | openarray[byte] | openarray[char] | Stream | MemoryBlock
+DigestTypes = HashType | Digest | openarray[byte] | openarray[char]
+</code></pre>
+<h3>Stream API</h3>
+<pre>  <code>init[HashType](): Context[HashType]
+init(var Context[HashType])
+
+update(var Context[HashType], DataTypes)
+
+final(var Context[HashType]): HashType
+final(var Context[HashType], var DigestTypes)
+
+DataTypes = string | openarray[byte] | openarray[char] | Stream | MemoryBlock
+DigestTypes = HashType | Digest | openarray[byte] | openarray[char]
+</code></pre>
+<h3>Simple HMAC API</h3>
+<pre>  <code>count[Hmac[HashType]](KeyTypes, DataTypes): HashType
+count[Hmac[HashType]](KeyTypes, DataTypes, var DigestTypes)
+
+KeyTypes = string | openarray[byte] | openarray[char] | MemoryBlock
+DataTypes = string | openarray[byte] | openarray[char] | Stream | MemoryBlock
+DigestTypes = HashType | Digest | openarray[byte] | openarray[char]
+</code></pre>
+<h3>Stream HMAC API</h3>
+<pre>  <code>init[Hmac[HashType]](KeyTypes): Hmac[HashType]
+init(var Hmac[HashType], KeyTypes)
+
+update(var Hmac[HashType], DataTypes)
+
+final(var Hmac[HashType]): HashType
+final(var Hmac[HashType], var DigestTypes)
+
+KeyTypes = string | openarray[byte] | openarray[char] | MemoryBlock
+DataTypes = string | openarray[byte] | openarray[char] | Stream | MemoryBlock
+DigestTypes = HashType | Digest | openarray[byte] | openarray[char]
+</code></pre>
+<h3>Example</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">rhash</span><span class="op">/</span><span class="ide">md5</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Now we have RHASH_MD5</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">declared</span>(<span class="ide">RHASH_MD5</span>))</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">RHASH_MD5</span> <span class="kwd">is</span> <span class="ide">HashType</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Gets information from HashType</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">RHASH_MD5</span><span class="op">.</span><span class="ide">digestSize</span> <span class="op">==</span> <span class="num">16</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">RHASH_MD5</span><span class="op">.</span><span class="ide">blockSize</span> <span class="op">==</span> <span class="num">64</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Counts the hash for empty string, returns a RHASH_MD5 object</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">hash</span> <span class="op">=</span> <span class="ide">count</span>[<span class="ide">RHASH_MD5</span>](<span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">hash</span><span class="op">.</span><span class="kwd">type</span> <span class="kwd">is</span> <span class="ide">RHASH_MD5</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># hash.data should be array[16, byte]</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">hash</span><span class="op">.</span><span class="ide">data</span> <span class="op">==</span> [<span class="ide">byte</span> <span class="num">212</span>, <span class="num">29</span>, <span class="num">140</span>, <span class="num">217</span>, <span class="num">143</span>, <span class="num">0</span>, <span class="num">178</span>, <span class="num">4</span>, <span class="num">233</span>, <span class="num">128</span>, <span class="num">9</span>, <span class="num">152</span>, <span class="num">236</span>, <span class="num">248</span>, <span class="num">66</span>, <span class="num">126</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># `$` convert HashType to string</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">hash</span> <span class="op">==</span> <span class="str">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Result can store in Digest object.</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">digest</span>: <span class="ide">Digest</span></div></div><div class="line"><div class="line-content"><span class="ide">count</span>[<span class="ide">RHASH_MD5</span>](<span class="str">&quot;&quot;</span>, <span class="ide">digest</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># digest.data should be seq[byte] in length of RHASH_MD5.digestSize</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">digest</span><span class="op">.</span><span class="ide">data</span> <span class="op">==</span> <span class="op">@</span>[<span class="ide">byte</span> <span class="num">212</span>, <span class="num">29</span>, <span class="num">140</span>, <span class="num">217</span>, <span class="num">143</span>, <span class="num">0</span>, <span class="num">178</span>, <span class="num">4</span>, <span class="num">233</span>, <span class="num">128</span>, <span class="num">9</span>, <span class="num">152</span>, <span class="num">236</span>, <span class="num">248</span>, <span class="num">66</span>, <span class="num">126</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># `$` convert Digest object to string</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">hash</span> <span class="op">==</span> <span class="str">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Try another input data type: openarray[char]</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">count</span>[<span class="ide">RHASH_MD5</span>](<span class="ide">toOpenArray</span>(<span class="str">&quot;abc&quot;</span>, <span class="num">0</span>, <span class="num">2</span>)) <span class="op">==</span> <span class="str">&quot;900150983cd24fb0d6963f7d28e17f72&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Try another ouptut data type: openarray[byte]</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">digestSeq</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">byte</span>](<span class="num">16</span>)</div></div><div class="line"><div class="line-content"><span class="ide">count</span>[<span class="ide">RHASH_MD5</span>](<span class="str">&quot;abc&quot;</span>, <span class="ide">digestSeq</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">digestSeq</span> <span class="op">==</span> <span class="op">@</span>[<span class="ide">byte</span> <span class="num">144</span>, <span class="num">1</span>, <span class="num">80</span>, <span class="num">152</span>, <span class="num">60</span>, <span class="num">210</span>, <span class="num">79</span>, <span class="num">176</span>, <span class="num">214</span>, <span class="num">150</span>, <span class="num">63</span>, <span class="num">125</span>, <span class="num">40</span>, <span class="num">225</span>, <span class="num">127</span>, <span class="num">114</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">misc</span><span class="op">/</span><span class="ide">sha3</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Now we have SHAKE128, it support extendable-output functions (XOFs)</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">declared</span>(<span class="ide">SHAKE128</span>))</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">SHAKE128</span><span class="op">.</span><span class="ide">xof</span> <span class="op">==</span> <span class="ide">true</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Gets 1024 bytes output, use initDigest()</span></div></div><div class="line"><div class="line-content"><span class="ide">digest</span> <span class="op">=</span> <span class="ide">initDigest</span>(<span class="num">1024</span>)</div></div><div class="line"><div class="line-content"><span class="ide">count</span>[<span class="ide">SHAKE128</span>](<span class="str">&quot;&quot;</span>, <span class="ide">digest</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>((<span class="op">$</span><span class="ide">digest</span>)<span class="op">.</span><span class="ide">startsWith</span>(<span class="str">&quot;7f9c2ba4e88f827d616045507605853e&quot;</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Gets 2048 bytes output, use setLen()</span></div></div><div class="line"><div class="line-content"><span class="ide">digest</span><span class="op">.</span><span class="ide">setLen</span>(<span class="num">2048</span>)</div></div><div class="line"><div class="line-content"><span class="ide">count</span>[<span class="ide">SHAKE128</span>](<span class="str">&quot;&quot;</span>, <span class="ide">digest</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>((<span class="op">$</span><span class="ide">digest</span>)<span class="op">.</span><span class="ide">endsWith</span>(<span class="str">&quot;10e7e33816e581d85fc48a77254c23bb&quot;</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Try stream API</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">init</span>[<span class="ide">RHASH_MD5</span>]()</div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">update</span>(<span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">ctx</span><span class="op">.</span><span class="ide">final</span>() <span class="op">==</span> <span class="str">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Reuses the ctx and stores result in digest object</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">ctx</span><span class="op">.</span><span class="kwd">type</span> <span class="kwd">is</span> <span class="ide">Context</span>[<span class="ide">RHASH_MD5</span>])</div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">init</span>()</div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">update</span>(<span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">final</span>(<span class="ide">digest</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">digest</span> <span class="op">==</span> <span class="str">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Try simple HMAC API</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">count</span>[<span class="ide">Hmac</span>[<span class="ide">RHASH_MD5</span>]](<span class="str">&quot;key&quot;</span>, <span class="str">&quot;data&quot;</span>) <span class="op">==</span> <span class="str">&quot;9d5c73ef85594d34ec4438b7c97e51d8&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Try stream HMAC API</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">hmac</span> <span class="op">=</span> <span class="ide">init</span>[<span class="ide">Hmac</span>[<span class="ide">RHASH_MD5</span>]](<span class="str">&quot;key&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">hmac</span><span class="op">.</span><span class="ide">update</span>(<span class="str">&quot;data&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">hmac</span><span class="op">.</span><span class="ide">final</span>() <span class="op">==</span> <span class="str">&quot;9d5c73ef85594d34ec4438b7c97e51d8&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Reuses the HMAC ctx and stores result in digest object</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">hmac</span><span class="op">.</span><span class="kwd">type</span> <span class="kwd">is</span> <span class="ide">Hmac</span>[<span class="ide">RHASH_MD5</span>])</div></div><div class="line"><div class="line-content"><span class="ide">hmac</span><span class="op">.</span><span class="ide">init</span>(<span class="str">&quot;key&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">hmac</span><span class="op">.</span><span class="ide">update</span>(<span class="str">&quot;data&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">hmac</span><span class="op">.</span><span class="ide">final</span>(<span class="ide">digest</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="op">$</span><span class="ide">digest</span> <span class="op">==</span> <span class="str">&quot;9d5c73ef85594d34ec4438b7c97e51d8&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashlib</span><span class="op">/</span><span class="ide">bench</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Now we have runBench template</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span>(<span class="ide">declared</span>(<span class="ide">runBench</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Runs benchmark for all available hashes: RHASH_MD5, KECCAKnnn, SHA3_nnn, SHAKEnnn, etc</span></div></div><div class="line"><div class="line-content"><span class="ide">runBench</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Runs benchmark for MD5 only</span></div></div><div class="line"><div class="line-content"><span class="ide">runBench</span>(<span class="str">&quot;MD5&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Runs benchmark for SHA3 and SHAKE</span></div></div><div class="line"><div class="line-content"><span class="ide">runBench</span> <span class="kwd">do</span> (<span class="ide">name</span>: <span class="ide">string</span>) <span class="op">-&gt;</span> <span class="ide">bool</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">name</span><span class="op">.</span><span class="ide">startsWith</span>(<span class="str">&quot;SHA3&quot;</span>) <span class="kwd">or</span> <span class="ide">name</span><span class="op">.</span><span class="ide">startsWith</span>(<span class="str">&quot;SHAKE&quot;</span>)</div></div>  </code></pre>
+<h2>Available Hashes</h2>
+<details>
+  <summary>Details</summary>
+<p>| Module | Submodule | Hashes |
+| ------ | ------ | ------ |
+| rhash | aich | RHASH_AICH |
+| rhash | crc32 | RHASH_CRC32, RHASH_CRC32C |
+| rhash | ed2k | RHASH_ED2K |
+| rhash | edonr | RHASH_EDONR224, RHASH_EDONR256, RHASH_EDONR384, RHASH_EDONR512 |
+| rhash | gost | RHASH_GOST94, RHASH_GOST94PRO |
+| rhash | has160 | RHASH_HAS160 |
+| rhash | md4 | RHASH_MD4 |
+| rhash | md5 | RHASH_MD5 |
+| rhash | ripemd | RHASH_RIPEMD160 |
+| rhash | sha1 | RHASH_SHA1 |
+| rhash | sha256 | RHASH_SHA224, RHASH_SHA256 |
+| rhash | sha512 | RHASH_SHA384, RHASH_SHA512 |
+| rhash | sha3 or keccak | RHASH_KECCAK224, RHASH_KECCAK256, RHASH_KECCAK384, RHASH_KECCAK512, RHASH_SHA3_224, RHASH_SHA3_256, RHASH_SHA3_384, RHASH_SHA3_512 |
+| rhash | snefru | RHASH_SNEFRU128, RHASH_SNEFRU256 |
+| rhash | streebog | RHASH_GOST2012_256, RHASH_GOST2012_512, RHASH_STREEBOG256, RHASH_STREEBOG512 |
+| rhash | tiger | RHASH_TIGER |
+| rhash | tth | RHASH_TTH |
+| mhash | adler32 | MHASH_ADLER32 |
+| mhash | crc32 | MHASH_CRC32, MHASH_CRC32B |
+| mhash | gost | MHASH_GOST |
+| mhash | haval | MHASH_HAVAL128_3, MHASH_HAVAL128_4, MHASH_HAVAL128_5, MHASH_HAVAL160_3, MHASH_HAVAL160_4, MHASH_HAVAL160_5, MHASH_HAVAL192_3, MHASH_HAVAL192_4, MHASH_HAVAL192_5, MHASH_HAVAL224_3, MHASH_HAVAL224_4, MHASH_HAVAL224_5, MHASH_HAVAL256_3, MHASH_HAVAL256_4, MHASH_HAVAL256_5 |
+| mhash | md2 | MHASH_MD2 |
+| mhash | md4 | MHASH_MD4 |
+| mhash | md5 | MHASH_MD5 |
+| mhash | ripemd | MHASH_RIPEMD128, MHASH_RIPEMD160, MHASH_RIPEMD256, MHASH_RIPEMD320 |
+| mhash | sha1 | MHASH_SHA1 |
+| mhash | sha256 | MHASH_SHA224, MHASH_SHA256 |
+| mhash | sha512 | MHASH_SHA384, MHASH_SHA512 |
+| mhash | snefru | MHASH_SNEFRU128, MHASH_SNEFRU256 |
+| mhash | tiger | MHASH_TIGER, MHASH_TIGER128, MHASH_TIGER160 |
+| mhash | whirlpool | MHASH_WHIRLPOOL |
+| sph | blake | SPH_BLAKE224, SPH_BLAKE256, SPH_BLAKE384, SPH_BLAKE512 |
+| sph | bmw | SPH_BMW224, SPH_BMW256, SPH_BMW384, SPH_BMW512 |
+| sph | cubehash | SPH_CUBEHASH224, SPH_CUBEHASH256, SPH_CUBEHASH384, SPH_CUBEHASH512 |
+| sph | echohash | SPH_ECHO224, SPH_ECHO256, SPH_ECHO384, SPH_ECHO512 |
+| sph | fugue | SPH_FUGUE224, SPH_FUGUE256, SPH_FUGUE384, SPH_FUGUE512 |
+| sph | groestl | SPH_GROESTL224, SPH_GROESTL256, SPH_GROESTL384, SPH_GROESTL512 |
+| sph | hamsi | SPH_HAMSI224, SPH_HAMSI256, SPH_HAMSI384, SPH_HAMSI512 |
+| sph | haval | SPH_HAVAL128_3, SPH_HAVAL128_4, SPH_HAVAL128_5, SPH_HAVAL160_3, SPH_HAVAL160_4, SPH_HAVAL160_5, SPH_HAVAL192_3, SPH_HAVAL192_4, SPH_HAVAL192_5, SPH_HAVAL224_3, SPH_HAVAL224_4, SPH_HAVAL224_5, SPH_HAVAL256_3, SPH_HAVAL256_4, SPH_HAVAL256_5 |
+| sph | jh | SPH_JH224, SPH_JH256, SPH_JH384, SPH_JH512 |
+| sph | luffa | SPH_LUFFA224, SPH_LUFFA256, SPH_LUFFA384, SPH_LUFFA512 |
+| sph | md2 | SPH_MD2 |
+| sph | md4 | SPH_MD4 |
+| sph | md5 | SPH_MD5 |
+| sph | panama | SPH_PANAMA |
+| sph | radiogatun | SPH_RADIOGATUN32, SPH_RADIOGATUN64 |
+| sph | ripemd | SPH_RIPEMD, SPH_RIPEMD128, SPH_RIPEMD160 |
+| sph | sha0 | SPH_SHA0 |
+| sph | sha1 | SPH_SHA1 |
+| sph | sha256 | SPH_SHA224, SPH_SHA256 |
+| sph | sha512 | SPH_SHA384, SPH_SHA512 |
+| sph | sha3 or keccak | SPH_KECCAK224, SPH_KECCAK256, SPH_KECCAK384, SPH_KECCAK512, SPH_SHA3_224, SPH_SHA3_256, SPH_SHA3_384, SPH_SHA3_512 |
+| sph | shabal | SPH_SHABAL192, SPH_SHABAL224, SPH_SHABAL256, SPH_SHABAL384, SPH_SHABAL512 |
+| sph | shavite | SPH_SHAVITE224, SPH_SHAVITE256, SPH_SHAVITE384, SPH_SHAVITE512 |
+| sph | simd | SPH_SIMD224, SPH_SIMD256, SPH_SIMD384, SPH_SIMD512 |
+| sph | skein | SPH_SKEIN224, SPH_SKEIN256, SPH_SKEIN384, SPH_SKEIN512 |
+| sph | tiger | SPH_TIGER, SPH_TIGER2 |
+| sph | whirlpool | SPH_WHIRLPOOL, SPH_WHIRLPOOL0, SPH_WHIRLPOOL1 |
+| misc | blake2 | BLAKE2S_224, BLAKE2S_256, BLAKE2B_384, BLAKE2B_512 |
+| misc | blake3 | BLAKE3, BLAKE3_128, BLAKE3_160, BLAKE3_192, BLAKE3_224, BLAKE3_256, BLAKE3_384, BLAKE3_512 |
+| misc | crypto | NIMCRYPTO_SHA1, NIMCRYPTO_SHA224, NIMCRYPTO_SHA256, NIMCRYPTO_SHA384, NIMCRYPTO_SHA512, NIMCRYPTO_SHA512_224, NIMCRYPTO_SHA512_256, NIMCRYPTO_RIPEMD128, NIMCRYPTO_RIPEMD160, NIMCRYPTO_RIPEMD256, NIMCRYPTO_RIPEMD320, NIMCRYPTO_BLAKE2S_224, NIMCRYPTO_BLAKE2S_256, NIMCRYPTO_BLAKE2B_384, NIMCRYPTO_BLAKE2B_512, NIMCRYPTO_KECCAK224, NIMCRYPTO_KECCAK256, NIMCRYPTO_KECCAK384, NIMCRYPTO_KECCAK512, NIMCRYPTO_SHA3_224, NIMCRYPTO_SHA3_256, NIMCRYPTO_SHA3_384, NIMCRYPTO_SHA3_512, NIMCRYPTO_SHAKE128, NIMCRYPTO_SHAKE256 |
+| misc | kangarootwelve | KANGAROO_TWELVE |
+| misc | nimhash | NIM_MD5, NIM_SHA1 |
+| misc | sha3 | KECCAK224, KECCAK256, KECCAK384, KECCAK512, SHA3_224, SHA3_256, SHA3_384, SHA3_512, SHAKE128, SHAKE256 |
+| misc | tinysha3 | TINY_SHA3_224, TINY_SHA3_256, TINY_SHA3_384, TINY_SHA3_512, TINY_SHAKE128, TINY_SHAKE256 |
+| misc | tinyshabal | TINY_SHABAL192, TINY_SHABAL224, TINY_SHABAL256, TINY_SHABAL384, TINY_SHABAL512 |
+| misc | xxhash | XXHASH32, XXHASH64, XXHASH3_64, XXHASH3_128 |</p>
+<p>| Module | Hashes |
+| ------ | ------ |
+| gcrypt | GCRYPT_BLAKE2S_128, GCRYPT_BLAKE2S_160, GCRYPT_BLAKE2S_224, GCRYPT_BLAKE2S_256, GCRYPT_BLAKE2B_160, GCRYPT_BLAKE2B_256, GCRYPT_BLAKE2B_384, GCRYPT_BLAKE2B_512, GCRYPT_CRC32, GCRYPT_CRC32_RFC1510, GCRYPT_CRC24_RFC2440, GCRYPT_GOST, GCRYPT_GOSTPRO, GCRYPT_MD4, GCRYPT_MD5, GCRYPT_RIPEMD160, GCRYPT_SHA1, GCRYPT_SHA512, GCRYPT_SHA224, GCRYPT_SHA256, GCRYPT_SHA384, GCRYPT_SHA3_224, GCRYPT_SHA3_256, GCRYPT_SHA3_384, GCRYPT_SHA3_512, GCRYPT_STREEBOG256, GCRYPT_STREEBOG512, GCRYPT_GOST2012_256, GCRYPT_GOST2012_512, GCRYPT_TIGER, GCRYPT_TIGER1, GCRYPT_TIGER2, GCRYPT_WHIRLPOOL, GCRYPT_SHAKE128, GCRYPT_SHAKE256 |
+| lean | RHASH_CRC32, RHASH_CRC32C, RHASH_MD5, RHASH_SHA1, RHASH_SHA224, RHASH_SHA256, KECCAK224, KECCAK256, KECCAK384, KECCAK512, SHA3_224, SHA3_256, SHA3_384, SHA3_512, SHAKE128, SHAKE256, XXHASH32, XXHASH64, XXHASH3_64, XXHASH3_128 |</p>
+</details>
+<h2>Benchmark</h2>
+<pre>  <code>Intel Core i7-8700, 16G DDR4 SDRAM
+Nim Compiler Version 1.2.0 [Windows: amd64]
+gcc version 10.1.0 (Rev2, Built by MSYS2 project)
+</code></pre>
+<p>  <code>nimble all_bench</code></p>
+<details>
+  <summary>Details</summary>
+<p>| Name | Speed |
+| :----| ----: |
+| MEMORY_COPY | 12832.029 MB/s |
+| GCRYPT_BLAKE2S_128 | 622.712 MB/s |
+| GCRYPT_BLAKE2S_160 | 628.243 MB/s |
+| GCRYPT_BLAKE2S_224 | 628.358 MB/s |
+| GCRYPT_BLAKE2S_256 | 628.334 MB/s |
+| GCRYPT_BLAKE2B_160 | 1020.794 MB/s |
+| GCRYPT_BLAKE2B_256 | 1019.898 MB/s |
+| GCRYPT_BLAKE2B_384 | 1020.346 MB/s |
+| GCRYPT_BLAKE2B_512 | 1020.616 MB/s |
+| GCRYPT_CRC32 | 16846.361 MB/s |
+| GCRYPT_CRC32_RFC1510 | 17717.931 MB/s |
+| GCRYPT_CRC24_RFC2440 | 16412.276 MB/s |
+| GCRYPT_GOST | 57.804 MB/s |
+| GCRYPT_GOSTPRO | 57.153 MB/s |
+| GCRYPT_MD4 | 1379.786 MB/s |
+| GCRYPT_MD5 | 780.110 MB/s |
+| GCRYPT_RIPEMD160 | 494.910 MB/s |
+| GCRYPT_SHA1 | 1104.924 MB/s |
+| GCRYPT_SHA512 | 695.154 MB/s |
+| GCRYPT_SHA224 | 481.515 MB/s |
+| GCRYPT_SHA256 | 481.793 MB/s |
+| GCRYPT_SHA384 | 695.957 MB/s |
+| GCRYPT_SHA3_224 | 501.060 MB/s |
+| GCRYPT_SHA3_256 | 471.950 MB/s |
+| GCRYPT_SHA3_384 | 361.849 MB/s |
+| GCRYPT_SHA3_512 | 252.960 MB/s |
+| GCRYPT_STREEBOG256 | 142.061 MB/s |
+| GCRYPT_STREEBOG512 | 142.253 MB/s |
+| GCRYPT_GOST2012_256 | 142.001 MB/s |
+| GCRYPT_GOST2012_512 | 141.977 MB/s |
+| GCRYPT_TIGER | 740.735 MB/s |
+| GCRYPT_TIGER1 | 740.593 MB/s |
+| GCRYPT_TIGER2 | 741.207 MB/s |
+| GCRYPT_WHIRLPOOL | 292.381 MB/s |
+| GCRYPT_SHAKE128 | 581.304 MB/s |
+| GCRYPT_SHAKE256 | 472.293 MB/s |
+| MHASH_ADLER32 | 744.585 MB/s |
+| MHASH_CRC32 | 448.916 MB/s |
+| MHASH_CRC32B | 501.668 MB/s |
+| MHASH_GOST | 76.759 MB/s |
+| MHASH_HAVAL128_3 | 900.552 MB/s |
+| MHASH_HAVAL128_4 | 606.619 MB/s |
+| MHASH_HAVAL128_5 | 505.628 MB/s |
+| MHASH_HAVAL160_3 | 888.439 MB/s |
+| MHASH_HAVAL160_4 | 607.024 MB/s |
+| MHASH_HAVAL160_5 | 507.189 MB/s |
+| MHASH_HAVAL192_3 | 898.771 MB/s |
+| MHASH_HAVAL192_4 | 607.135 MB/s |
+| MHASH_HAVAL192_5 | 507.097 MB/s |
+| MHASH_HAVAL224_3 | 901.965 MB/s |
+| MHASH_HAVAL224_4 | 606.208 MB/s |
+| MHASH_HAVAL224_5 | 504.195 MB/s |
+| MHASH_HAVAL256_3 | 901.136 MB/s |
+| MHASH_HAVAL256_4 | 607.437 MB/s |
+| MHASH_HAVAL256_5 | 507.259 MB/s |
+| MHASH_MD2 | 12.578 MB/s |
+| MHASH_MD4 | 1213.312 MB/s |
+| MHASH_MD5 | 742.038 MB/s |
+| MHASH_RIPEMD128 | 675.256 MB/s |
+| MHASH_RIPEMD160 | 409.326 MB/s |
+| MHASH_RIPEMD256 | 579.539 MB/s |
+| MHASH_RIPEMD320 | 379.713 MB/s |
+| MHASH_SHA1 | 693.308 MB/s |
+| MHASH_SHA224 | 212.474 MB/s |
+| MHASH_SHA256 | 213.506 MB/s |
+| MHASH_SHA384 | 338.561 MB/s |
+| MHASH_SHA512 | 338.696 MB/s |
+| MHASH_SNEFRU128 | 47.306 MB/s |
+| MHASH_SNEFRU256 | 31.432 MB/s |
+| MHASH_TIGER | 726.406 MB/s |
+| MHASH_TIGER128 | 728.247 MB/s |
+| MHASH_TIGER160 | 728.513 MB/s |
+| MHASH_WHIRLPOOL | 179.830 MB/s |
+| RHASH_SHA1 | 207.189 MB/s |
+| RHASH_AICH | 206.913 MB/s |
+| RHASH_CRC32 | 2171.034 MB/s |
+| RHASH_CRC32C | 10251.153 MB/s |
+| RHASH_MD4 | 1321.196 MB/s |
+| RHASH_ED2K | 1321.737 MB/s |
+| RHASH_EDONR224 | 995.827 MB/s |
+| RHASH_EDONR256 | 996.393 MB/s |
+| RHASH_EDONR384 | 2076.196 MB/s |
+| RHASH_EDONR512 | 2077.447 MB/s |
+| RHASH_GOST94 | 76.811 MB/s |
+| RHASH_GOST94PRO | 76.974 MB/s |
+| RHASH_HAS160 | 995.907 MB/s |
+| RHASH_MD5 | 775.116 MB/s |
+| RHASH_RIPEMD160 | 329.032 MB/s |
+| RHASH_SHA224 | 272.976 MB/s |
+| RHASH_SHA256 | 273.380 MB/s |
+| RHASH_KECCAK224 | 335.654 MB/s |
+| RHASH_KECCAK256 | 317.188 MB/s |
+| RHASH_KECCAK384 | 242.849 MB/s |
+| RHASH_KECCAK512 | 168.696 MB/s |
+| RHASH_SHA3_224 | 335.662 MB/s |
+| RHASH_SHA3_256 | 317.003 MB/s |
+| RHASH_SHA3_384 | 242.940 MB/s |
+| RHASH_SHA3_512 | 168.896 MB/s |
+| RHASH_SHA384 | 471.274 MB/s |
+| RHASH_SHA512 | 471.251 MB/s |
+| RHASH_SNEFRU128 | 55.563 MB/s |
+| RHASH_SNEFRU256 | 36.936 MB/s |
+| RHASH_GOST2012_256 | 141.778 MB/s |
+| RHASH_GOST2012_512 | 141.898 MB/s |
+| RHASH_STREEBOG256 | 141.774 MB/s |
+| RHASH_STREEBOG512 | 141.613 MB/s |
+| RHASH_TIGER | 770.185 MB/s |
+| RHASH_TTH | 645.682 MB/s |
+| SPH_BLAKE224 | 395.869 MB/s |
+| SPH_BLAKE256 | 394.580 MB/s |
+| SPH_BLAKE384 | 663.768 MB/s |
+| SPH_BLAKE512 | 666.236 MB/s |
+| SPH_BMW224 | 526.252 MB/s |
+| SPH_BMW256 | 522.171 MB/s |
+| SPH_BMW384 | 1136.260 MB/s |
+| SPH_BMW512 | 1138.667 MB/s |
+| SPH_CUBEHASH224 | 170.440 MB/s |
+| SPH_CUBEHASH256 | 170.267 MB/s |
+| SPH_CUBEHASH384 | 170.451 MB/s |
+| SPH_CUBEHASH512 | 170.312 MB/s |
+| SPH_ECHO224 | 170.155 MB/s |
+| SPH_ECHO256 | 170.220 MB/s |
+| SPH_ECHO384 | 86.824 MB/s |
+| SPH_ECHO512 | 87.691 MB/s |
+| SPH_FUGUE224 | 171.141 MB/s |
+| SPH_FUGUE256 | 170.973 MB/s |
+| SPH_FUGUE384 | 113.776 MB/s |
+| SPH_FUGUE512 | 86.328 MB/s |
+| SPH_GROESTL224 | 166.418 MB/s |
+| SPH_GROESTL256 | 165.883 MB/s |
+| SPH_GROESTL384 | 108.884 MB/s |
+| SPH_GROESTL512 | 108.750 MB/s |
+| SPH_HAMSI224 | 89.133 MB/s |
+| SPH_HAMSI256 | 89.579 MB/s |
+| SPH_HAMSI384 | 29.249 MB/s |
+| SPH_HAMSI512 | 29.390 MB/s |
+| SPH_HAVAL128_3 | 877.055 MB/s |
+| SPH_HAVAL128_4 | 587.741 MB/s |
+| SPH_HAVAL128_5 | 498.497 MB/s |
+| SPH_HAVAL160_3 | 887.406 MB/s |
+| SPH_HAVAL160_4 | 591.072 MB/s |
+| SPH_HAVAL160_5 | 499.323 MB/s |
+| SPH_HAVAL192_3 | 893.527 MB/s |
+| SPH_HAVAL192_4 | 592.814 MB/s |
+| SPH_HAVAL192_5 | 501.283 MB/s |
+| SPH_HAVAL224_3 | 893.655 MB/s |
+| SPH_HAVAL224_4 | 593.197 MB/s |
+| SPH_HAVAL224_5 | 501.276 MB/s |
+| SPH_HAVAL256_3 | 893.687 MB/s |
+| SPH_HAVAL256_4 | 593.268 MB/s |
+| SPH_HAVAL256_5 | 501.143 MB/s |
+| SPH_JH224 | 92.835 MB/s |
+| SPH_JH256 | 93.233 MB/s |
+| SPH_JH384 | 93.239 MB/s |
+| SPH_JH512 | 92.855 MB/s |
+| SPH_KECCAK224 | 341.654 MB/s |
+| SPH_KECCAK256 | 322.773 MB/s |
+| SPH_KECCAK384 | 247.248 MB/s |
+| SPH_KECCAK512 | 173.630 MB/s |
+| SPH_SHA3_224 | 340.566 MB/s |
+| SPH_SHA3_256 | 321.794 MB/s |
+| SPH_SHA3_384 | 246.112 MB/s |
+| SPH_SHA3_512 | 173.703 MB/s |
+| SPH_LUFFA224 | 222.853 MB/s |
+| SPH_LUFFA256 | 223.132 MB/s |
+| SPH_LUFFA384 | 167.544 MB/s |
+| SPH_LUFFA512 | 124.650 MB/s |
+| SPH_MD2 | 8.493 MB/s |
+| SPH_MD4 | 1321.737 MB/s |
+| SPH_MD5 | 771.772 MB/s |
+| SPH_PANAMA | 1858.874 MB/s |
+| SPH_RADIOGATUN32 | 689.394 MB/s |
+| SPH_RADIOGATUN64 | 1367.035 MB/s |
+| SPH_RIPEMD | 651.954 MB/s |
+| SPH_RIPEMD128 | 497.574 MB/s |
+| SPH_RIPEMD160 | 326.583 MB/s |
+| SPH_SHA0 | 761.076 MB/s |
+| SPH_SHA1 | 687.782 MB/s |
+| SPH_SHA224 | 262.055 MB/s |
+| SPH_SHA256 | 261.094 MB/s |
+| SPH_SHA384 | 500.553 MB/s |
+| SPH_SHA512 | 500.616 MB/s |
+| SPH_SHABAL192 | 718.716 MB/s |
+| SPH_SHABAL224 | 720.440 MB/s |
+| SPH_SHABAL256 | 716.055 MB/s |
+| SPH_SHABAL384 | 716.779 MB/s |
+| SPH_SHABAL512 | 720.918 MB/s |
+| SPH_SHAVITE224 | 286.701 MB/s |
+| SPH_SHAVITE256 | 287.189 MB/s |
+| SPH_SHAVITE384 | 178.625 MB/s |
+| SPH_SHAVITE512 | 179.425 MB/s |
+| SPH_SIMD224 | 154.389 MB/s |
+| SPH_SIMD256 | 154.313 MB/s |
+| SPH_SIMD384 | 135.536 MB/s |
+| SPH_SIMD512 | 135.496 MB/s |
+| SPH_SKEIN224 | 731.481 MB/s |
+| SPH_SKEIN256 | 731.791 MB/s |
+| SPH_SKEIN384 | 731.984 MB/s |
+| SPH_SKEIN512 | 732.011 MB/s |
+| SPH_TIGER | 723.458 MB/s |
+| SPH_TIGER2 | 719.730 MB/s |
+| SPH_WHIRLPOOL | 191.595 MB/s |
+| SPH_WHIRLPOOL0 | 190.070 MB/s |
+| SPH_WHIRLPOOL1 | 191.610 MB/s |
+| BLAKE2S_224 | 784.142 MB/s |
+| BLAKE2S_256 | 783.496 MB/s |
+| BLAKE2B_384 | 1030.577 MB/s |
+| BLAKE2B_512 | 1045.555 MB/s |
+| BLAKE3 | 3161.655 MB/s |
+| BLAKE3_128 | 3205.950 MB/s |
+| BLAKE3_160 | 3221.442 MB/s |
+| BLAKE3_192 | 3257.223 MB/s |
+| BLAKE3_224 | 3230.287 MB/s |
+| BLAKE3_256 | 3249.074 MB/s |
+| BLAKE3_384 | 3234.153 MB/s |
+| BLAKE3_512 | 3243.173 MB/s |
+| NIMCRYPTO_SHA1 | 642.170 MB/s |
+| NIMCRYPTO_SHA224 | 268.603 MB/s |
+| NIMCRYPTO_SHA256 | 268.705 MB/s |
+| NIMCRYPTO_SHA384 | 417.258 MB/s |
+| NIMCRYPTO_SHA512 | 419.078 MB/s |
+| NIMCRYPTO_SHA512_224 | 418.683 MB/s |
+| NIMCRYPTO_SHA512_256 | 417.519 MB/s |
+| NIMCRYPTO_RIPEMD128 | 483.505 MB/s |
+| NIMCRYPTO_RIPEMD160 | 318.973 MB/s |
+| NIMCRYPTO_RIPEMD256 | 561.877 MB/s |
+| NIMCRYPTO_RIPEMD320 | 372.492 MB/s |
+| NIMCRYPTO_BLAKE2S_224 | 208.432 MB/s |
+| NIMCRYPTO_BLAKE2S_256 | 208.728 MB/s |
+| NIMCRYPTO_BLAKE2B_384 | 291.281 MB/s |
+| NIMCRYPTO_BLAKE2B_512 | 292.888 MB/s |
+| NIMCRYPTO_KECCAK224 | 154.401 MB/s |
+| NIMCRYPTO_KECCAK256 | 146.087 MB/s |
+| NIMCRYPTO_KECCAK384 | 115.611 MB/s |
+| NIMCRYPTO_KECCAK512 | 81.163 MB/s |
+| NIMCRYPTO_SHA3_224 | 149.955 MB/s |
+| NIMCRYPTO_SHA3_256 | 146.956 MB/s |
+| NIMCRYPTO_SHA3_384 | 113.737 MB/s |
+| NIMCRYPTO_SHA3_512 | 82.342 MB/s |
+| NIMCRYPTO_SHAKE128 | 175.793 MB/s |
+| NIMCRYPTO_SHAKE256 | 146.929 MB/s |
+| KANGAROO_TWELVE | 786.040 MB/s |
+| NIM_MD5 | 578.182 MB/s |
+| NIM_SHA1 | 547.798 MB/s |
+| KECCAK224 | 358.977 MB/s |
+| KECCAK256 | 339.643 MB/s |
+| KECCAK384 | 260.442 MB/s |
+| KECCAK512 | 180.880 MB/s |
+| SHA3_224 | 359.340 MB/s |
+| SHA3_256 | 339.156 MB/s |
+| SHA3_384 | 260.399 MB/s |
+| SHA3_512 | 181.007 MB/s |
+| SHAKE128 | 419.043 MB/s |
+| SHAKE256 | 338.786 MB/s |
+| TINY_SHA3_224 | 155.440 MB/s |
+| TINY_SHA3_256 | 147.113 MB/s |
+| TINY_SHA3_384 | 106.315 MB/s |
+| TINY_SHA3_512 | 82.133 MB/s |
+| TINY_SHAKE128 | 179.626 MB/s |
+| TINY_SHAKE256 | 148.236 MB/s |
+| TINY_SHABAL192 | 493.854 MB/s |
+| TINY_SHABAL224 | 495.005 MB/s |
+| TINY_SHABAL256 | 494.428 MB/s |
+| TINY_SHABAL384 | 495.282 MB/s |
+| TINY_SHABAL512 | 495.133 MB/s |
+| XXHASH32 | 7688.759 MB/s |
+| XXHASH64 | 13670.540 MB/s |
+| XXHASH3_64 | 20712.510 MB/s |
+| XXHASH3_128 | 21376.657 MB/s |</p>
+</details>
+<h2>License</h2>
+<h3>Library and Source Codes</h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RHash</td>
+<td>  <a href="https://github.com/rhash/RHash/blob/master/COPYING">BSD Zero Clause License</a></td>
+</tr>
+<tr>
+<td>MHash</td>
+<td>GNU Lesser GPL</td>
+</tr>
+<tr>
+<td>Sphlib</td>
+<td>  <a href="https://github.com/aidansteele/sphlib/blob/master/LICENSE.txt">MIT-like, BSD-like</a></td>
+</tr>
+<tr>
+<td>XKCP</td>
+<td>  <a href="https://github.com/XKCP/XKCP#under-which-license-is-the-xkcp-distributed">Team Keccak XKCP License</a></td>
+</tr>
+<tr>
+<td>BLAKE2</td>
+<td>CC0</td>
+</tr>
+<tr>
+<td>BLAKE3</td>
+<td>  <a href="https://github.com/BLAKE3-team/BLAKE3/blob/master/LICENSE">CC0 1.0</a></td>
+</tr>
+<tr>
+<td>tiny_sha3</td>
+<td>  <a href="https://github.com/mjosaarinen/tiny_sha3/blob/master/LICENSE">MIT License</a></td>
+</tr>
+<tr>
+<td>xxHash</td>
+<td>  <a href="https://github.com/Cyan4973/xxHash/blob/dev/LICENSE">BSD 2-Clause</a></td>
+</tr>
+<tr>
+<td>libgcrypt</td>
+<td>LGPLv2.1+</td>
+</tr></tbody></table>
+<h3>Hashlib</h3>
+<p>Read license.txt for more details.
+Copyright (c) 2020 Kai-Hung Chen, Ward. All rights reserved.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/khchen/hashlib">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

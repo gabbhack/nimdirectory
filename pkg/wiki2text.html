@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">wiki2text</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nlp</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wiki</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">xml</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">text</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Quickly extracts natural-language text from a MediaWiki XML file.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install wiki2text" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>wiki2text (unmaintained)</h1>
+<p>I don&apos;t work on this project anymore, and the Nim language has probably moved
+far beyond the version I used to make this. You may be able to make it work for
+you, but no guarantees.</p>
+<p>I now work on a full-blown LL parser for wikitext,
+<a href="https://github.com/LuminosoInsight/wikiparsec">wikiparsec</a>.</p>
+<h1>Original introduction</h1>
+<p><strong>What you put in:</strong> a .xml.bz2 file downloaded from Wikimedia</p>
+<p><strong>What you get out</strong>: gigabytes of clean natural language text</p>
+<p>wiki2text is a fast pipeline that takes a MediaWiki XML dump -- such as the
+exports of Wikipedia that you can download from <a href="https://dumps.wikimedia.org/backup-index.html">dumps.wikimedia.org</a> -- and
+extract just the natural-language text from them, skipping the Wiki formatting
+characters and the HTML tags.</p>
+<p>This is particularly useful as a way to get free corpora, in many languages,
+for natural language processing.</p>
+<p>The only formatting you will get is that the titles of new articles and new
+sections will appear on lines that start and end with some number of <code>=</code> signs.
+I&apos;ve found it useful to distinguish titles from body text. If you don&apos;t need
+this, these lines are easy to exclude using <code>grep -v</code>.</p>
+<p>wiki2text is written with these goals in mind:</p>
+<ul>
+<li>Clean code that is clear about what it&apos;s doing</li>
+<li>Doing no more than is necessary</li>
+<li>Being incredibly fast (it parses an entire Wikipedia in minutes)</li>
+<li>Being usable as a step in a pipeline</li>
+</ul>
+<p>Thanks to def-, a core Nim developer, for making optimizations that make the
+code so incredibly fast.</p>
+<h2>Why Nim?</h2>
+<p>Why is this code written in a fast-moving, emerging programming language? It&apos;s
+an adaptation of a Python script that took <em>days</em> to run. Nim allowed me to
+keep the understandability of Python but also have the speed of C.</p>
+<h2>Setup</h2>
+<p>wiki2text needs to be compiled using Nim 0.11. Install it by following the
+directions on <a href="http://nim-lang.org/download.html">Nim&apos;s download page</a>.</p>
+<p>You can build Nim from this repository by running:</p>
+<pre>  <code>make
+</code></pre>
+<p>You can also install it using Nimble, Nim&apos;s package manager, instead:</p>
+<pre>  <code>nimble install wiki2text
+</code></pre>
+<h2>Usage</h2>
+<p>Download one of the database dumps from <a href="https://dumps.wikimedia.org/backup-index.html">dumps.wikimedia.org</a>. The filename
+you want should be the one of the form <code>*-pages-articles.xml.bz2</code>. These files
+can be many gigabytes in size, so you might want to start with a language besides
+English, with a smaller number of articles.</p>
+<p>But suppose you did download <code>enwiki-DATE-pages-articles.xml.bz2</code>. Then you should
+run:</p>
+<pre>  <code>bunzip2 -c enwiki-DATE-pages-articles.xml.bz2 | ./wiki2text &gt; enwiki.txt
+</code></pre>
+<p>To skip all headings, run:</p>
+<pre>  <code>bunzip2 -c enwiki-DATE-pages-articles.xml.bz2 | ./wiki2text | grep -v &apos;^=&apos; &gt; enwiki.txt
+</code></pre>
+<p>enwiki.txt will fill up with article text as quickly as it comes out of <code>bunzip2</code>.</p>
+<h2>Example output</h2>
+<p>Here&apos;s an example of part of the text that comes out of the English Wikipedia
+(with hard line wrapping added):</p>
+<pre>  <code>= Albedo =
+
+Albedo (), or reflection coefficient, derived from Latin albedo &quot;whiteness&quot;
+(or reflected sunlight) in turn from albus &quot;white&quot;, is the diffuse
+reflectivity or reflecting power of a surface. It is the ratio of reflected
+radiation from the surface to incident radiation upon it. Its dimensionless
+nature lets it be expressed as a percentage and is measured on a scale from
+zero for no reflection of a perfectly black surface to 1 for perfect
+reflection of a white surface.
+
+Albedo depends on the frequency of the radiation. When quoted unqualified,
+it usually refers to some appropriate average across the spectrum of
+visible light. In general, the albedo depends on the directional
+distribution of incident radiation, except for Lambertian surfaces, which
+scatter radiation in all directions according to a cosine function and
+therefore have an albedo that is independent of the incident distribution.
+In practice, a bidirectional reflectance distribution function (BRDF) may
+be required to accurately characterize the scattering properties of a
+surface, but albedo is very useful as a first approximation.
+
+The albedo is an important concept in climatology, astronomy, and
+calculating reflectivity of surfaces in LEED sustainable-rating systems for
+buildings. The average overall albedo of Earth, its planetary albedo, is 30
+to 35% because of cloud cover, but widely varies locally across the surface
+because of different geological and environmental features.
+
+The term was introduced into optics by Johann Heinrich Lambert in his 1760
+work Photometria.
+
+==Terrestrial albedo==
+
+Albedos of typical materials in visible light range from up to 0.9 for
+fresh snow to about 0.04 for charcoal, one of the darkest substances.
+Deeply shadowed cavities can achieve an effective albedo approaching the
+zero of a black body. When seen from a distance, the ocean surface has a
+low albedo, as do most forests, whereas desert areas have some of the
+highest albedos among landforms. Most land areas are in an albedo range of
+0.1 to 0.4. The average albedo of the Earth is about 0.3. This is far
+higher than for the ocean primarily because of the contribution of clouds.
+Earth&apos;s surface albedo is regularly estimated via Earth observation
+satellite sensors such as NASA&apos;s MODIS instruments on board the Terra and
+Aqua satellites. As the total amount of reflected radiation cannot be
+directly measured by satellite, a mathematical model of the BRDF is used to
+translate a sample set of satellite reflectance measurements into estimates
+of directional-hemispherical reflectance and bi-hemispherical reflectance
+(e.g.).
+
+Earth&apos;s average surface temperature due to its albedo and the greenhouse
+effect is currently about 15°C. If Earth were frozen entirely (and hence be
+more reflective) the average temperature of the planet would drop below
+−40°C. If only the continental land masses became covered by glaciers, the
+mean temperature of the planet would drop to about 0°C. In contrast, if the
+entire Earth is covered by water—a so-called aquaplanet—the average
+temperature on the planet would rise to just under 27°C.
+</code></pre>
+<h2>Limitations</h2>
+<p>You may notice that occasional words and phrases are missing from the text.
+These are the parts of the article that come from MediaWiki templates.</p>
+<p>Templates are an incredibly complicated, Turing-complete subset of MediaWiki,
+and are used for everything from simple formatting to building large infoboxes,
+tables, and navigation boxes.</p>
+<p>It would be nice if we could somehow keep only the simple ones and discard
+the complex ones, but what&apos;s easiest to do is to simply ignore every template.</p>
+<p>Sometimes templates contain the beginnings or ends of HTML or Wikitable
+formatting that we would normally skip, in which case extra crud may show up in
+the article.</p>
+<p>This probably doesn&apos;t work very well for wikis that have specific, meaningful
+formatting, such as Wiktionary. The <a href="https://github.com/commonsense/conceptnet5">conceptnet5</a> project includes a slow
+Wiktionary parser in Python that you might be able to use.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/rspeer/wiki2text">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

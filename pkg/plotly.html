@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">plotly</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">plot</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graphing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">chart</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim interface to plotly")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install plotly" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h2>nim-plotly: simple plots in nim</h2>
+<p><a href="http://scinim.github.io/nim-plotly/">  <img src="https://img.shields.io/badge/docs-latest-blue.svg" style="max-width: 100%;" alt="Docs" /></a>
+<a href="https://github.com/SciNim/nim-plotly/actions/workflows/ci.yml">  <img src="https://github.com/SciNim/nim-plotly/actions/workflows/ci.yml/badge.svg" style="max-width: 100%;" alt="plotly CI" /></a></p>
+<p>This is a functioning plotting library. It supports, <em>line</em> (with fill below), <em>scatter</em> (with errors), <em>bar</em>
+, <em>histogram</em>, <em>heatmap</em>, <em>candlestick</em> and combinations of those plot types. More standard types can be added on request.</p>
+<p>This is <strong>not</strong> specifically for the javascript nim target (but the
+javascript target is supported!).</p>
+<p>Internally, it serializes typed <code>nim</code> datastructures to JSON that matches what <a href="https://plot.ly/javascript/">plotly</a> expects.</p>
+<h2>Examples</h2>
+<p>See a collection of real-world examples in the <a href="https://github.com/brentp/nim-plotly/wiki/Examples">wiki</a></p>
+<h4>Simple Scatter plot</h4>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">plotly</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">chroma</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">colors</span> <span class="op">=</span> <span class="op">@</span>[<span class="ide">Color</span>(<span class="ide">r</span>:<span class="num">0.9</span>, <span class="ide">g</span>:<span class="num">0.4</span>, <span class="ide">b</span>:<span class="num">0.0</span>, <span class="ide">a</span>: <span class="num">1.0</span>),</div></div><div class="line"><div class="line-content">               <span class="ide">Color</span>(<span class="ide">r</span>:<span class="num">0.9</span>, <span class="ide">g</span>:<span class="num">0.4</span>, <span class="ide">b</span>:<span class="num">0.2</span>, <span class="ide">a</span>: <span class="num">1.0</span>),</div></div><div class="line"><div class="line-content">               <span class="ide">Color</span>(<span class="ide">r</span>:<span class="num">0.2</span>, <span class="ide">g</span>:<span class="num">0.9</span>, <span class="ide">b</span>:<span class="num">0.2</span>, <span class="ide">a</span>: <span class="num">1.0</span>),</div></div><div class="line"><div class="line-content">               <span class="ide">Color</span>(<span class="ide">r</span>:<span class="num">0.1</span>, <span class="ide">g</span>:<span class="num">0.7</span>, <span class="ide">b</span>:<span class="num">0.1</span>, <span class="ide">a</span>: <span class="num">1.0</span>),</div></div><div class="line"><div class="line-content">               <span class="ide">Color</span>(<span class="ide">r</span>:<span class="num">0.0</span>, <span class="ide">g</span>:<span class="num">0.5</span>, <span class="ide">b</span>:<span class="num">0.1</span>, <span class="ide">a</span>: <span class="num">1.0</span>)]</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">d</span> <span class="op">=</span> <span class="ide">Trace</span>[<span class="ide">int</span>](<span class="ide">mode</span>: <span class="ide">PlotMode</span><span class="op">.</span><span class="ide">LinesMarkers</span>, `<span class="kwd">type</span>`: <span class="ide">PlotType</span><span class="op">.</span><span class="ide">Scatter</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">size</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">16.</span><span class="ide">int</span>]</div></div><div class="line"><div class="line-content"><span class="ide">d</span><span class="op">.</span><span class="ide">marker</span> <span class="op">=</span><span class="ide">Marker</span>[<span class="ide">int</span>](<span class="ide">size</span>:<span class="ide">size</span>, <span class="ide">color</span>: <span class="ide">colors</span>)</div></div><div class="line"><div class="line-content"><span class="ide">d</span><span class="op">.</span><span class="ide">xs</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>]</div></div><div class="line"><div class="line-content"><span class="ide">d</span><span class="op">.</span><span class="ide">ys</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">1</span>, <span class="num">9</span>, <span class="num">5</span>]</div></div><div class="line"><div class="line-content"><span class="ide">d</span><span class="op">.</span><span class="ide">text</span> <span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;hello&quot;</span>, <span class="str">&quot;data-point&quot;</span>, <span class="str">&quot;third&quot;</span>, <span class="str">&quot;highest&quot;</span>, <span class="str">&quot;&lt;b&gt;bold&lt;/b&gt;&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">layout</span> <span class="op">=</span> <span class="ide">Layout</span>(<span class="ide">title</span>: <span class="str">&quot;testing&quot;</span>, <span class="ide">width</span>: <span class="num">1200</span>, <span class="ide">height</span>: <span class="num">400</span>,</div></div><div class="line"><div class="line-content">                    <span class="ide">xaxis</span>: <span class="ide">Axis</span>(<span class="ide">title</span>:<span class="str">&quot;my x-axis&quot;</span>),</div></div><div class="line"><div class="line-content">                    <span class="ide">yaxis</span>:<span class="ide">Axis</span>(<span class="ide">title</span>: <span class="str">&quot;y-axis too&quot;</span>), <span class="ide">autosize</span>:<span class="ide">false</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">p</span> <span class="op">=</span> <span class="ide">Plot</span>[<span class="ide">int</span>](<span class="ide">layout</span>:<span class="ide">layout</span>, <span class="ide">traces</span>: <span class="op">@</span>[<span class="ide">d</span>])</div></div><div class="line"><div class="line-content"><span class="ide">p</span><span class="op">.</span><span class="ide">show</span>()</div></div>  </code></pre>
+<p>  <img src="https://user-images.githubusercontent.com/1739/39875828-e65293a8-542e-11e8-9b18-12130b8694c3.png" style="max-width: 100%;" alt="simple scatter" /></p>
+<p>The <code>show</code> call opens a browser pointing to a plot like above, but the actual plot will
+be interactive.</p>
+<h4>Scatter with custom colors and sizes</h4>
+<p>  <a href="https://github.com/brentp/nim-plotly/blob/master/examples/fig2_scatter_colors_sizes.nim">source</a></p>
+<p>  <img src="https://user-images.githubusercontent.com/1739/39875826-e641acaa-542e-11e8-9c05-c936c112f36c.png" style="max-width: 100%;" alt="sizes and colors" /></p>
+<h4>Multiple plot types</h4>
+<p>  <a href="https://github.com/brentp/nim-plotly/blob/master/examples/fig3_multiple_plot_types.nim">source</a></p>
+<p>  <img src="https://user-images.githubusercontent.com/1739/39875825-e62d5c0a-542e-11e8-83be-cdbfa18cfec9.png" style="max-width: 100%;" alt="multiple plot types" /></p>
+<h4>Stacked Histogram</h4>
+<p>  <a href="https://github.com/brentp/nim-plotly/blob/master/examples/fig7_stacked_histogram.nim">source</a></p>
+<p>  <img src="https://user-images.githubusercontent.com/1739/40438473-66ce8a6e-5e75-11e8-8f27-79cef2752e52.png" style="max-width: 100%;" alt="stacked histogram" /></p>
+<h4>Other examples</h4>
+<p>  <a href="https://github.com/brentp/nim-plotly/blob/master/examples/">in examples</a></p>
+<h2>Note about C &amp; JS targets / interactive plots</h2>
+<p>The library supports both the <code>C</code> as well as <code>Javascript</code> targets of
+Nim. In case of the <code>C</code> target, the data and layout is statically
+parsed and inserted into a template Html file, which is stored in
+<code>/tmp/x.html</code>. A call to the default browser is made, which loads said
+file. The file is deleted thereafter.</p>
+<p>This static nature has the implication that it is not possible to
+update the data in the plots. However, thanks to Nim&apos;s ability to
+compile to Javascript, this can still be achieved if needed. When
+compiling to the <code>JS</code> target the native plotly functions are
+available, including <code>react</code> and <code>restyle</code>, which allow to change the
+data and / or layout of a plot defined in a <code>div</code> container. See the
+<code>fig8_js_interactive.nim</code> for such an example.</p>
+<h2>Note about plotly under Windows Subsystem for Linux (WSL)</h2>
+<p>Starting from version <code>v0.3.0</code> of plotly, WSL is supported. This
+requires the user to define the <code>BROWSER</code> environment variable and
+assumes the user wishes to use a normal Windows browser.</p>
+<p>When setting the <code>BROWSER</code> variable, make sure to handle the possible
+spaces (e.g. if browser installed in <code>Program Files</code>) by either
+escaping spaces and parenthesis with a backslash or just putting the
+whole path into quotation marks. E.g:</p>
+<pre>  <code class="language-sh">export BROWSER=&quot;/mnt/c/Program Files (x86)/MyBrowserCompany/Browser.exe&quot;
+</code></pre>
+<p>to set the variable for the local session.</p>
+<h2>TODO</h2>
+<ul>
+<li>[X] add .show() method to plot which looks for and opens a browser (similar to python webbrowser module)</li>
+<li>[X] support multiple axes (2 y-axes supported).</li>
+<li>[ ] experiment with syntax for multiple plots (https://plot.ly/javascript/subplots/ or use separate divs.)</li>
+<li>[ ] better side-stepping of https://github.com/nim-lang/Nim/issues/7794</li>
+<li>[ ] convert <code>%</code> procs into macros so I don&apos;t have to re-write the same code over and over.</li>
+<li>[ ] more of plotly API</li>
+<li>[ ] ergonomics / plotting DSL</li>
+<li>[ ] custom interactivity.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/SciNim/nim-plotly">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

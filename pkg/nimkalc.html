@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimkalc</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parsing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">math</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("An advanced parsing library for mathematical expressions and equations")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimkalc" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>NimKalc - A math parsing library</h1>
+<p>NimKalc is a simple implementation of a recursive-descent top-down parser that can evaluate
+mathematical expressions.</p>
+<p><strong>Disclaimer</strong>: This library is <strong>in beta</strong> and is not fully tested yet. It will be soon, though. If you
+find any bugs or issues, please report them so we can fix them and make a proper test suite!</p>
+<p>Features:</p>
+<ul>
+<li>Support for the following mathematical constants:
+<ul>
+<li>  <code>pi</code></li>
+<li><code>tau</code> (pi * 2)</li>
+<li><code>e</code> (Euler&apos;s number)</li>
+<li><code>inf</code> (Infinity)</li>
+<li><code>nan</code> (Not a number)</li>
+</ul>
+</li>
+<li>Support for the following of nim&apos;s <a href="https://nim-lang.org/docs/math.html#log10%2Cfloat32">math library</a> functions:
+<ul>
+<li>  <code>sin</code></li>
+<li>  <code>cos</code></li>
+<li>  <code>tan</code></li>
+<li>  <code>sinh</code></li>
+<li>  <code>tanh</code></li>
+<li>  <code>cosh</code></li>
+<li>  <code>arccos</code></li>
+<li>  <code>arcsin</code></li>
+<li>  <code>arctan</code></li>
+<li>  <code>arcsinh</code></li>
+<li>  <code>arccosh</code></li>
+<li>  <code>arctanh</code></li>
+<li>  <code>hypot</code></li>
+<li>  <code>sqrt</code></li>
+<li>  <code>cbrt</code></li>
+<li>  <code>log10</code></li>
+<li>  <code>log2</code></li>
+<li>  <code>ln</code></li>
+<li>  <code>log</code></li>
+</ul>
+</li>
+<li>Parentheses can be used to enforce different precedence levels</li>
+<li>Easy API for tokenization, parsing and evaluation of AST nodes</li>
+</ul>
+<p><strong>Note</strong>: Some procedures were not implemented because for any of the following reasons:</p>
+<ul>
+<li>They return booleans or other custom types that we don&apos;t support, like <code>classify</code></li>
+<li>They weren&apos;t useful enough or their functionality was already implemented in other ways (such as <code>pow</code> which we use as the <code>^</code> operator)</li>
+<li>They just haven&apos;t made their way into the library yet, be patient!</li>
+</ul>
+<h2>Current limitations</h2>
+<ul>
+<li>No equation-solving (coming soon)</li>
+</ul>
+<h2>How to use it</h2>
+<p>NimKalc parses mathematical expressions following this process:</p>
+<ul>
+<li>Tokenize the input</li>
+<li>Generate an AST</li>
+<li>Visit the nodes</li>
+</ul>
+<p>Each of these steps can be run separately, but for convenience a wrapper <code>eval</code> procedure has been defined which takes in a string
+and returns a single AST node containing the result of the given expression.</p>
+<h2>Supported operators</h2>
+<p>Beyond the classical 4 operators (<code>+</code>, <code>-</code>, <code>/</code> and <code>*</code>), NimKalc supports:</p>
+<ul>
+<li><code>%</code> for modulo division</li>
+<li><code>^</code> for exponentiation</li>
+<li>unary <code>-</code> for negation</li>
+</ul>
+<h2>Exceptions</h2>
+<p>NimKalc defines various exceptions:</p>
+<ul>
+<li><code>NimKalcException</code> is a generic superclass for all errors</li>
+<li><code>ParseError</code> is used when the expression is syntactically invalid</li>
+<li><code>MathError</code> is used when there is an arithmetical error such as division by 0 or domain errors (e.g. <code>log(0)</code>)</li>
+<li><code>EvaluationError</code> is used when the runtime evaluation of an expression fails (e.g. trying to call something that isn&apos;t a function)</li>
+</ul>
+<h2>Design</h2>
+<p>NimKalc treats all numerical values as <code>float</code> to simplify the implementation of the underlying operators. To tell integers
+from floating point numbers the <code>AstNode</code> object has a <code>kind</code> discriminant which will be equal to <code>NodeKind.Integer</code> for ints
+and <code>NodeKind.Float</code> for decimals. It is advised that you take this into account when using the library, since integers might
+start losing precision when converted from their float counterpart due to the difference of the two types. Everything should
+be fine as long as the value doesn&apos;t exceed 2 ^ 53 though.</p>
+<p><strong>Note</strong>: The string representation of integer nodes won&apos;t show the decimal part for clarity</p>
+<p>Some other notable design choices (due to the underlying simplicity of the language we parse) are as follows:</p>
+<ul>
+<li>Identifiers are checked when tokenizing, since they&apos;re all constant</li>
+<li>Mathematical constants are immediately mapped to their real values when tokenizing with no intermediate steps or tokens</li>
+<li>Type errors (such as trying to call an integer) are detected statically at parse time</li>
+</ul>
+<h2>String representations</h2>
+<p>All of NimKalc&apos;s objects implement the <code>$</code> operator and are therefore printable. Integer nodes will look like <code>Integer(x)</code>, while
+floats are represented with <code>Float(x.x)</code>. Unary operators print as <code>Unary(operator, right)</code>, while binary operators print as <code>Binary(left, operator, right)</code>.
+Parenthesized expressions print as <code>Grouping(expr)</code>, where <code>expr</code> is the expression enclosed in parentheses (as an AST node, obviously).
+Token objects will print as <code>Token(kind, lexeme)</code>: an example for the number 2 would be <code>Token(Integer, &apos;2&apos;)</code>. Function calls print like <code>Call(name, args)</code>
+where <code>name</code> is the function name and <code>args</code> is a list of arguments</p>
+<h2>Example</h2>
+<p>Here is an example of a REPL using all of NimKalc&apos;s functionality to evaluate expressions from stdin (can be found at <code>examples/repl.nim</code>)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimkalc</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strformat</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">repl</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## A simple REPL to demonstrate NimKalc&apos;s functionality</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">line</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">result</span>: <span class="ide">AstNode</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">tokens</span>: <span class="ide">seq</span>[<span class="ide">Token</span>]</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">lexerObj</span> <span class="op">=</span> <span class="ide">initLexer</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">parserObj</span> <span class="op">=</span> <span class="ide">initParser</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">visitor</span> <span class="op">=</span> <span class="ide">initNodeVisitor</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Welcome to the NimKalc REPL, type a math expression and press enter&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">true</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">stdout</span><span class="op">.</span><span class="ide">write</span>(<span class="str">&quot;=&gt; &quot;</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">line</span> <span class="op">=</span> <span class="ide">stdin</span><span class="op">.</span><span class="ide">readLine</span>()</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;Parsing and evaluation of {line} below:&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">tokens</span> <span class="op">=</span> <span class="ide">lexerObj</span><span class="op">.</span><span class="ide">lex</span>(<span class="ide">line</span>)</div></div><div class="line"><div class="line-content">      <span class="com"># No-one cares about the EOF token after all</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;Tokenization of {line}: {tokens[0..^2].join(</span>\"<span class="str">, </span>\"<span class="str">)}&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">parserObj</span><span class="op">.</span><span class="ide">parse</span>(<span class="ide">tokens</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;AST for {line}: {result}&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">result</span> <span class="op">=</span> <span class="ide">visitor</span><span class="op">.</span><span class="ide">eval</span>(<span class="ide">result</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">case</span> <span class="ide">result</span><span class="op">.</span><span class="ide">kind</span>:</div></div><div class="line"><div class="line-content">        <span class="com"># The result is an AstNode object, specifically</span></div></div><div class="line"><div class="line-content">        <span class="com"># either a node of type NodeKind.Float or a NodeKind.Integer</span></div></div><div class="line"><div class="line-content">        <span class="kwd">of</span> <span class="ide">NodeKind</span><span class="op">.</span><span class="ide">Float</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;Value of {line}: {result.value}&quot;</span></div></div><div class="line"><div class="line-content">        <span class="kwd">of</span> <span class="ide">NodeKind</span><span class="op">.</span><span class="ide">Integer</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;Value of {line}: {int(result.value)}&quot;</span></div></div><div class="line"><div class="line-content">        <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">          <span class="kwd">discard</span>  <span class="com"># Unreachable</span></div></div><div class="line"><div class="line-content">    <span class="kwd">except</span> <span class="ide">IOError</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;</span>\n<span class="str">Goodbye.&quot;</span></div></div><div class="line"><div class="line-content">      <span class="kwd">break</span></div></div><div class="line"><div class="line-content">    <span class="kwd">except</span> <span class="ide">ParseError</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;A parsing error occurred: {getCurrentExceptionMsg()}&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">except</span> <span class="ide">MathError</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;An arithmetic error occurred: {getCurrentExceptionMsg()}&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">except</span> <span class="ide">OverflowDefect</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="op">&amp;</span><span class="str">&quot;Value overflow/underflow detected: {getCurrentExceptionMsg()}&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">repl</span>()</div></div>  </code></pre>
+<p><strong>Note</strong>: If you don&apos;t need the intermediate representations shown here (tokens/AST) you can just <code>import nimkalc</code> and use
+the <code>eval</code> procedure, which takes in a string and returns the evaluated result as a primary AST node like so:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimkalc</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">eval</span>(<span class="str">&quot;2+2&quot;</span>)  <span class="com"># Prints Integer(4)</span></div></div>  </code></pre>
+<h2>Installing</h2>
+<p>You can install the package via nimble with this command: <code>nimble install nimkalc</code></p>
+<p><strong>Note</strong>: Nim 1.2.0 or higher is required to build NimKalc! Other versions are likely work if they&apos;re not too old, but they have not been tested</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/nocturn9x/nimkalc">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

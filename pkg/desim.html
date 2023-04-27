@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">desim</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">modeling</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">discrete</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">event</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">simulation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">simulator</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A lightweight discrete event simulator")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install desim" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Desim</h1>
+<p>Desim is a <a href="https://en.wikipedia.org/wiki/Discrete-event_simulation">Discrete Event Simulator</a> modeled on <a href="http://sst-simulator.org/">SST</a> but written in Nim and with a focus on making your own custom components. Desim allows you to model your problem with several components that communicate using messages. The structure of Desim focuses on message sending and receiving in a way that will allow parallel execution. At the moment, however, Desim only runs on a single thread.</p>
+<h1>Quick Examples</h1>
+<h2>One component Hello World</h2>
+<p>Below is a simple hello world style program. It creates a single component that prints &quot;Hello, World!&quot; on startup then performs no other actions. The simulation will start this component then immediately stop, as there are no pending messages. This illustrates much of the necessary boilerplate but a useful simulation will have additional functionality.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">desim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Define a custom component type</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">HelloComponent</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Component</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Define our component&apos;s constructor. The rest of its functionality is defined with the component template.</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newHelloComponent</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">HelloComponent</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span>(<span class="ide">name</span>: <span class="ide">name</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Define our component&apos;s behavior. The first argument gives a name to the component to use in this template.</span></div></div><div class="line"><div class="line-content"><span class="com"># The second is the type of the component.</span></div></div><div class="line"><div class="line-content"><span class="ide">component</span> <span class="ide">comp</span>, <span class="ide">HelloComponent</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># Define behavior for our component to do on startup</span></div></div><div class="line"><div class="line-content">  <span class="ide">startup</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content">  <span class="com"># Define behavior when our component is shut down</span></div></div><div class="line"><div class="line-content">  <span class="ide">shutdown</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Goodbye, World&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span></div></div><div class="line"><div class="line-content">    <span class="com"># Every simulation requires exactly one Simulator object.</span></div></div><div class="line"><div class="line-content">    <span class="ide">sim</span> <span class="op">=</span> <span class="ide">newSimulator</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">hello</span> <span class="op">=</span> <span class="ide">newHelloComponent</span>(<span class="str">&quot;hello&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># All components must be registered before the simulator starts</span></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">register</span> <span class="ide">hello</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="com"># Run the simulator until a shutdown condition occurs</span></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">run</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h2>One Component Timer Hello World</h2>
+<p>This example still uses one component but adds a timer, which sends a message to its component at some time in the future.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">desim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Component</span></div></div><div class="line"><div class="line-content">    <span class="com"># Define a timer object. The messages type is taken as a generic argument to the Timer type</span></div></div><div class="line"><div class="line-content">    <span class="ide">timer</span>: <span class="ide">Timer</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newHelloComponent</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">HelloComponent</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span>(<span class="ide">name</span>: <span class="ide">name</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">component</span> <span class="ide">comp</span>, <span class="ide">HelloComponent</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">startup</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Set the timer to go off to send the message &quot;Hello, World!&quot; in 1 tick.</span></div></div><div class="line"><div class="line-content">    <span class="ide">comp</span><span class="op">.</span><span class="ide">timer</span><span class="op">.</span><span class="ide">set</span>(<span class="str">&quot;Hello, World!&quot;</span>, <span class="num">1</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Iterate over all messages. All messages must be cleared as soon as they are received.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">msg</span> <span class="kwd">in</span> <span class="ide">messages</span>(<span class="ide">comp</span><span class="op">.</span><span class="ide">timer</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># The type of msg is the type given as the generic argument to Timer</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">msg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span></div></div><div class="line"><div class="line-content">    <span class="ide">sim</span> <span class="op">=</span> <span class="ide">newSimulator</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">hello</span> <span class="op">=</span> <span class="ide">newHelloComponent</span>(<span class="str">&quot;hello&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">register</span> <span class="ide">hello</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">run</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h2>Two component Hello World</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">desim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Component</span></div></div><div class="line"><div class="line-content">    <span class="com"># Messages are sent out on a Link with a given message type</span></div></div><div class="line"><div class="line-content">    <span class="ide">link</span>: <span class="ide">Link</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">RecvComponent</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Component</span></div></div><div class="line"><div class="line-content">    <span class="com"># Messages of a given type are received on a Port.</span></div></div><div class="line"><div class="line-content">    <span class="ide">port</span>: <span class="ide">Port</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newHelloComponent</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">HelloComponent</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># All links must be initialized with newLink. It takes the base delay as an argument</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span>(<span class="ide">name</span>: <span class="ide">name</span>, <span class="ide">link</span>: <span class="ide">newLink</span>[<span class="ide">string</span>](<span class="num">100</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newRecvComponent</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">RecvComponent</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># All ports must be initialized with newPort but take no arguments</span></div></div><div class="line"><div class="line-content">  <span class="ide">RecvComponent</span>(<span class="ide">name</span>: <span class="ide">name</span>, <span class="ide">port</span>: <span class="ide">newPort</span>[<span class="ide">string</span>]())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">component</span> <span class="ide">comp</span>, <span class="ide">HelloComponent</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">startup</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">comp</span><span class="op">.</span><span class="ide">link</span><span class="op">.</span><span class="ide">send</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">component</span> <span class="ide">comp</span>, <span class="ide">RecvComponent</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">msg</span> <span class="kwd">in</span> <span class="ide">messages</span>(<span class="ide">comp</span><span class="op">.</span><span class="ide">port</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">msg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span></div></div><div class="line"><div class="line-content">    <span class="ide">sim</span> <span class="op">=</span> <span class="ide">newSimulator</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">hello</span> <span class="op">=</span> <span class="ide">newHelloComponent</span>(<span class="str">&quot;hello&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">recv</span> <span class="op">=</span> <span class="ide">newRecvComponent</span>(<span class="str">&quot;recv&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">register</span> <span class="ide">hello</span></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">register</span> <span class="ide">recv</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Every Link must be connected to exactly one Port. Multiple Links may connect to the</span></div></div><div class="line"><div class="line-content">  <span class="com"># same port.</span></div></div><div class="line"><div class="line-content">  <span class="ide">connect</span> <span class="ide">hello</span><span class="op">.</span><span class="ide">link</span>, <span class="ide">recv</span><span class="op">.</span><span class="ide">port</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">run</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h2>Logging Hello World</h2>
+<p>This example uses logging instead of <code>echo</code> to print its message. It uses the only pre-defined component which is the <code>LogComponent</code>. The logger outputs in JSON but this can be configured.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">desim</span></div></div><div class="line"><div class="line-content"><span class="com"># The LogComponent requires this import</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">desim</span><span class="op">/</span><span class="ide">components</span><span class="op">/</span><span class="ide">logger</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">Component</span></div></div><div class="line"><div class="line-content">    <span class="com"># Although not necessary, it is recommended that you name Logger logger.</span></div></div><div class="line"><div class="line-content">    <span class="ide">logger</span>: <span class="ide">Logger</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newHelloComponent</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">HelloComponent</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">HelloComponent</span>(<span class="ide">name</span>: <span class="ide">name</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">component</span> <span class="ide">comp</span>, <span class="ide">HelloComponent</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">startup</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># The logger has convenience methods corresponding to each default log level.</span></div></div><div class="line"><div class="line-content">    <span class="com"># In this case we use the info log level.</span></div></div><div class="line"><div class="line-content">    <span class="ide">comp</span><span class="op">.</span><span class="ide">logger</span><span class="op">.</span><span class="ide">info</span> <span class="str">&quot;Hello, World&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span></div></div><div class="line"><div class="line-content">    <span class="ide">sim</span> <span class="op">=</span> <span class="ide">newSimulator</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">hello</span> <span class="op">=</span> <span class="ide">newHelloComponent</span>(<span class="str">&quot;hello&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="com"># If the simulation uses logging then it must have one LogComponent</span></div></div><div class="line"><div class="line-content">    <span class="ide">logcomp</span> <span class="op">=</span> <span class="ide">newLogComponent</span>()</div></div><div class="line"><div class="line-content">    <span class="com"># The LogBuilder is a convenience class that connects components to the LogComponent.</span></div></div><div class="line"><div class="line-content">    <span class="com"># It is initialized with a reference to the logging component.</span></div></div><div class="line"><div class="line-content">    <span class="ide">logbuilder</span> <span class="op">=</span> <span class="ide">newLoggerBuilder</span>(<span class="ide">logcomp</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Indicate that we want to log everything at or above the info level</span></div></div><div class="line"><div class="line-content">  <span class="ide">logbuilder</span><span class="op">.</span><span class="ide">setLevel</span> <span class="ide">LogLevel</span><span class="op">.</span><span class="ide">info</span></div></div><div class="line"><div class="line-content">  <span class="com"># Connect the hello component&apos;s logger to the LogComponent associated with this</span></div></div><div class="line"><div class="line-content">  <span class="com"># LoggerBuilder. This by default assumes the Logger is called logger (though this</span></div></div><div class="line"><div class="line-content">  <span class="com"># is configurable).</span></div></div><div class="line"><div class="line-content">  <span class="ide">logbuilder</span><span class="op">.</span><span class="ide">attach</span> <span class="ide">hello</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">register</span> <span class="ide">hello</span></div></div><div class="line"><div class="line-content">  <span class="com"># The LogComponent is a regular component and must be registered</span></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">register</span> <span class="ide">logcomp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sim</span><span class="op">.</span><span class="ide">run</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h1>Types</h1>
+<p>The operation of a discrete event simulation using Desim requires several types. Most of them have already been introduced in the examples section. More detailed API information can be found by compiling the documentation from the code.</p>
+<h2>Simulator</h2>
+<p>This class is in charge of orchestrating a simulation. Since Desim uses no global variables, all simulation state not contained in a <code>Component</code> is found in the <code>Simulator</code>. From the user&apos;s perspective this is mostly the current simulation time retrieved with the <code>currentTime</code> proc. All components must be <code>register</code>&apos;d with the same simulator before calling the simulator&apos;s <code>run</code> command.</p>
+<h2>Component</h2>
+<p>All functionality is expected to be provided by components derived from the <code>Component</code> base class. The base class has one user-accessible field, <code>name</code>, which can be any string. The <code>name</code> is currently not used by the Desim framework but is used by the logging framework. Communication between components requires creating fields that are a <code>Link</code>, <code>Port</code>, or <code>Timer</code>, explained further in their own sections.</p>
+<p>The behavior of a component is described with the <code>component</code> template. The code inside this macro is run once when the component is first created, once every simulation step in which it will receive at least one message, and once right before it is shut down. Any code in the template will be run every time one of those events happens. To limit code execution to those events, use the <code>startup</code> and <code>shutdown</code> templates and the <code>messages</code> iterator. See the examples section for usage ideas.</p>
+<h2>Link</h2>
+<p>A <code>Link</code> object handles the outgoing end of inter-component communication. A <code>Link</code> is a generic type that takes the message type as its generic argument. A <code>Link</code> will also have a base latency which cannot be zero. This is in immitation of SST, which uses this nonzero latency as a way to automatically separate components into different threads or MPI ranks. While Desim is currently single-threaded, it takes the same approach so as to leave open the option of efficient parallelization in the future. A message is sent with the <code>send</code> proc which takes the message and an optional amount of extra time, which is zero by default.</p>
+<p>Each <code>Link</code> must be connected to exactly one <code>Port</code>. It is an error to not connect a <code>Link</code> or to connect it to more than one <code>Port</code>. The <code>Port</code> must accept the same message type as the <code>Link</code> sends.</p>
+<h2>BcastLink</h2>
+<p>A <code>BcastLink</code> is used to broadcast messages to many <code>Port</code> objects. It operates identically to a <code>Link</code>, except without the restriction that it be connected to one, or indeed any, <code>Port</code>.</p>
+<h2>BatchLink</h2>
+<p>The <code>BatchLink</code> type is another type of <code>Link</code> which is likely not directly useful. It does not take a latency; rather the framework defines the latency for each message. The framework is therefore free to choose an efficient latency, or buffering scheme, in order to combine communication between components in the most efficient way possible. Since Desim is currently single threaded this is not taken advantage of, but could be.</p>
+<p>Since the whole point of a discrete event simulation is to simulate timing of actions between components, this link type is rarely useful. It is used in the logger, since the logger is a component but not part of the domain being simulated. Log messages may thus be batched and efficiently delivered to the logger. This behavior is all hidden from the user.</p>
+<h2>Port</h2>
+<p>All messages sent on a link are received on a <code>Port</code>. The <code>Port</code> is a generic type that takes the message type as its argument. The messages on a port can be read out using the <code>messages</code> iterator inside the <code>component</code> template. All messages must be read in the same simulation tick that they are received.</p>
+<h2>Timer</h2>
+<p>A timer takes care of the degenerate, but useful, case where a link and port that are connected together are part of the same component by design. Such self-loops may occur frequently enough to warrant special handling. A <code>Timer</code> is also a generic type that takes the message type as its argument. Messages are sent with the <code>send</code> proc and received with the <code>messages</code> iterator.</p>
+<h2>SimulationTime</h2>
+<p>The time in the simulation is tracked with a <code>SimulationTime</code> object. Currently implemented as an <code>int</code>, this value will always act like an integer but the actual implementation may change to accommodate larger numbers.</p>
+<h2>SimulationError</h2>
+<p>All exceptions thrown by the Desim framework will be a <code>SimulationError</code>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/jayvanderwall/desim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

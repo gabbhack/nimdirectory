@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">servy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">webframework</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">microwebframework</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">async</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">httpserver</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("a down to earth webframework in nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install servy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>servy</h1>
+<p>Servy is a fast, simple and lightweight micro web-framework for Nim</p>
+<h2>Installation</h2>
+<p>  <code>nimble install servy</code></p>
+<h2>quickstart</h2>
+<h3>First create the router</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">servy</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span> <span class="op">=</span> <span class="ide">initRouter</span>()</div></div>  </code></pre>
+<h3>Define your first handler function</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleHello</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>: <span class="ide">Response</span>) : <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">res</span><span class="op">.</span><span class="ide">code</span> <span class="op">=</span> <span class="ide">Http200</span></div></div><div class="line"><div class="line-content">    <span class="ide">res</span><span class="op">.</span><span class="ide">content</span> <span class="op">=</span> <span class="str">&quot;hello world from handler /hello&quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">req</span></div></div>  </code></pre>
+<h3>Wire the handler to a path</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/hello&quot;</span>, <span class="ide">handleHello</span>)</div></div>  </code></pre>
+<h3>Running Servy</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">opts</span> <span class="op">=</span> <span class="ide">ServerOptions</span>(<span class="ide">address</span>:<span class="str">&quot;127.0.0.1&quot;</span>, <span class="ide">port</span>:<span class="num">9000.</span><span class="ide">Port</span>, <span class="ide">debug</span>:<span class="ide">true</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">initServy</span>(<span class="ide">opts</span>, <span class="ide">router</span>)</div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">run</span>()</div></div>  </code></pre>
+<h3>Making first request</h3>
+<p>using curl or your web browser go to localhost:9000/hello</p>
+<pre>  <code>➜  servy git:(master) ✗ curl localhost:9000/hello
+hello world from handler /hello%    
+</code></pre>
+<h2>Defining handlers and wiring them</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleGreet</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>: <span class="ide">Response</span>) : <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">code</span> <span class="op">=</span> <span class="ide">Http200</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">content</span> <span class="op">=</span> <span class="str">&quot;generic greet&quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">req</span></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="str">&quot;username&quot;</span> <span class="kwd">in</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;username is: &quot;</span> <span class="op">&amp;</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>[<span class="str">&quot;username&quot;</span>]</div></div><div class="line"><div class="line-content">      </div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="str">&quot;first&quot;</span> <span class="kwd">in</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;first is: &quot;</span> <span class="op">&amp;</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>[<span class="str">&quot;first&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="str">&quot;second&quot;</span> <span class="kwd">in</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;second is: &quot;</span> <span class="op">&amp;</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>[<span class="str">&quot;second&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="str">&quot;lang&quot;</span> <span class="kwd">in</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;lang is: &quot;</span> <span class="op">&amp;</span> <span class="ide">req</span><span class="op">.</span><span class="ide">urlParams</span>[<span class="str">&quot;lang&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/greet&quot;</span>, <span class="ide">handleGreet</span>, <span class="ide">HttpGet</span>, <span class="op">@</span>[])</div></div><div class="line"><div class="line-content">    <span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/greet/:username&quot;</span>, <span class="ide">handleGreet</span>, <span class="ide">HttpGet</span>, <span class="op">@</span>[])</div></div><div class="line"><div class="line-content">    <span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/greet/:first/:second/:lang&quot;</span>, <span class="ide">handleGreet</span>, <span class="ide">HttpGet</span>, <span class="op">@</span>[])</div></div>  </code></pre>
+<p><code>addRoute</code> takes the following params</p>
+<ul>
+<li><code>pat</code> route pattern</li>
+<li><code>handlerFunc</code> to execute on match</li>
+<li><code>httpMethod</code> to only execute on a certain http method</li>
+<li><code>middlewares</code> list of middlewares to execute before request (for specific route)
+the captured route variables are available in <code>req.urlParams</code> table</li>
+</ul>
+<h3>Handling different HTTP methods</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handlePost</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>: <span class="ide">Response</span>) : <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="com">#   req.fullInfo</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;USERNAME: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span>(<span class="ide">req</span><span class="op">.</span><span class="ide">formData</span><span class="op">.</span><span class="ide">getValueOrNone</span>(<span class="str">&quot;username&quot;</span>))</div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">code</span> <span class="op">=</span> <span class="ide">Http200</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">content</span> <span class="op">=</span> <span class="op">$</span><span class="ide">req</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/post&quot;</span>, <span class="ide">handlePost</span>, <span class="ide">HttpPost</span>)</div></div>  </code></pre>
+<p>Here we handle <code>POST</code> on path <code>/post</code> with handler <code>handlePost</code></p>
+<ul>
+<li><code>formData</code> table is available on the request body handling both <code>multipart</code> and <code>x-www-form-urlencoded</code> post formats</li>
+<li><code>req.formData.getValueOrNone</code> gives you access to form data.</li>
+</ul>
+<h3>Abort</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleAbort</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>: <span class="ide">Response</span>) : <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">abortWith</span>(<span class="str">&quot;sorry mate&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/abort&quot;</span>, <span class="ide">handleAbort</span>, <span class="ide">HttpGet</span>)</div></div>  </code></pre>
+<p>response object has <code>abortWith</code> proc available</p>
+<h3>Redirect</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleRedirect</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>:  <span class="ide">Response</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">redirectTo</span>(<span class="str">&quot;https://python.org&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/redirect&quot;</span>, <span class="ide">handleRedirect</span>, <span class="ide">HttpGet</span>)</div></div>  </code></pre>
+<p>response object has <code>redirectTo</code> proc available, also you can set status code as optional param.</p>
+<h2>Defining middlewares</h2>
+<p>Here&apos;s an example of a logging middleware that runs before processing any handler</p>
+<h3>Logging Middleware</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">loggingMiddleware</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>,  <span class="ide">response</span>: <span class="ide">Response</span>): <span class="ide">Future</span>[<span class="ide">bool</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">path</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">path</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">headers</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">headers</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;===============================&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;from logger handler&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;path: &quot;</span> <span class="op">&amp;</span> <span class="ide">path</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;headers: &quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">headers</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;===============================&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">true</span></div></div>  </code></pre>
+<p>if you want to terminate the middleware chain return false</p>
+<h3>Trim slashes Middleware</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">trimTrailingSlash</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>,  <span class="ide">response</span>: <span class="ide">Response</span>): <span class="ide">Future</span>[<span class="ide">bool</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">path</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">path</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">path</span><span class="op">.</span><span class="ide">endswith</span>(<span class="str">&quot;/&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">request</span><span class="op">.</span><span class="ide">path</span> <span class="op">=</span> <span class="ide">path</span>[<span class="num">0.</span><span class="op">.^</span><span class="num">2</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;===============================&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;from slash trimmer &quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;path was : &quot;</span> <span class="op">&amp;</span> <span class="ide">path</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;path: &quot;</span> <span class="op">&amp;</span> <span class="ide">request</span><span class="op">.</span><span class="ide">path</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;===============================&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">true</span></div></div>  </code></pre>
+<h3>Static files middleware</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">serveTmpDir</span> <span class="op">=</span> <span class="ide">newStaticMiddleware</span>(<span class="str">&quot;/tmp&quot;</span>, <span class="str">&quot;/tmppublic&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">serveHomeDir</span> <span class="op">=</span> <span class="ide">newStaticMiddleware</span>(<span class="ide">getHomeDir</span>(), <span class="str">&quot;/homepublic&quot;</span>)</div></div>  </code></pre>
+<p>You can serve static assets from a certain directory using static middleware.</p>
+<p><code>newStaticMiddleware</code> takes in a directory to serve and a path <code>onRoute</code> to serve on.</p>
+<h3>Basic Auth</h3>
+<p>Here&apos;s how it&apos;s defined</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">basicAuth</span><span class="op">*</span>(<span class="ide">users</span>: <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">string</span>], <span class="ide">realm</span><span class="op">=</span><span class="str">&quot;private&quot;</span>, <span class="ide">text</span><span class="op">=</span><span class="str">&quot;Access denied&quot;</span>): <span class="kwd">proc</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">response</span>: <span class="ide">Response</span>): <span class="ide">Future</span>[<span class="ide">bool</span>] {<span class="op">.</span><span class="ide">async</span>, <span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="kwd">proc</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">response</span>: <span class="ide">Response</span>): <span class="ide">Future</span>[<span class="ide">bool</span>] {<span class="op">.</span><span class="ide">async</span>, <span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">processedUsers</span> <span class="op">=</span> <span class="ide">initTable</span>[<span class="ide">string</span>, <span class="ide">string</span>]()</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">u</span>, <span class="ide">p</span> <span class="kwd">in</span> <span class="ide">users</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> <span class="ide">encodedAuth</span> <span class="op">=</span> <span class="ide">encode</span>(fmt"{u}:{p}")</div></div><div class="line"><div class="line-content">      <span class="ide">processedUsers</span><span class="op">.</span><span class="ide">add</span>(fmt"Basic {encodedAuth}", <span class="ide">u</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">authHeader</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">headers</span><span class="op">.</span><span class="ide">getOrDefault</span>(<span class="str">&quot;authorization&quot;</span>, <span class="op">@</span>[<span class="str">&quot;&quot;</span>])[<span class="num">0</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">found</span> <span class="op">=</span> <span class="ide">authHeader</span> <span class="kwd">in</span> <span class="ide">processedUsers</span></div></div><div class="line"><div class="line-content">      </div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">found</span> <span class="kwd">or</span> <span class="ide">authHeader</span><span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> <span class="ide">realmstring</span> <span class="op">=</span> '"' <span class="op">&amp;</span> <span class="ide">realm</span> <span class="op">&amp;</span> '"'</div></div><div class="line"><div class="line-content">      <span class="ide">response</span><span class="op">.</span><span class="ide">headers</span><span class="op">.</span><span class="ide">add</span>(<span class="str">&quot;WWW-Authenticate&quot;</span>, fmt"Basic realm={realmstring}") </div></div><div class="line"><div class="line-content">      <span class="ide">response</span><span class="op">.</span><span class="ide">abortWith</span>(<span class="str">&quot;Access denied&quot;</span>, <span class="ide">Http401</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span> <span class="ide">true</span></div></div>  </code></pre>
+<h4>Example of HTTP Basic Auth</h4>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleBasicAuth</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>: <span class="ide">Response</span>) : <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">code</span> <span class="op">=</span> <span class="ide">Http200</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span><span class="op">.</span><span class="ide">content</span> <span class="op">=</span> <span class="str">&quot;logged in!!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">users</span> <span class="op">=</span> {<span class="str">&quot;ahmed&quot;</span>:<span class="str">&quot;password&quot;</span>, <span class="str">&quot;xmon&quot;</span>:<span class="str">&quot;xmon&quot;</span>}<span class="op">.</span><span class="ide">toTable</span></div></div><div class="line"><div class="line-content">    <span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/basicauth&quot;</span>, <span class="ide">handleBasicAuth</span>, <span class="ide">HttpGet</span>, <span class="op">@</span>[<span class="ide">basicAuth</span>(<span class="ide">users</span>)])</div></div>  </code></pre>
+<h2>Websockets</h2>
+<p>servy is integrated with <a href="https://github.com/treeform/ws">treeform/ws</a> for websocket support, here is an example</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleWS</span>(<span class="ide">req</span>: <span class="ide">Request</span>, <span class="ide">res</span>: <span class="ide">Response</span>) : <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">ws</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">newServyWebSocket</span>(<span class="ide">req</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">await</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">send</span>(<span class="str">&quot;Welcome to simple echo server&quot;</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">while</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">readyState</span> <span class="op">==</span> <span class="ide">Open</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">let</span> <span class="ide">packet</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">receiveStrPacket</span>()</div></div><div class="line"><div class="line-content">        <span class="ide">await</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">send</span>(<span class="ide">packet</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">router</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="str">&quot;/ws&quot;</span>, <span class="ide">handleWS</span>, <span class="ide">HttpGet</span>, <span class="op">@</span>[])</div></div>  </code></pre>
+<p>and to test you can use nim client e.g</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ws</span>, <span class="ide">asyncdispatch</span>, <span class="ide">asynchttpserver</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>(): <span class="ide">Future</span>[<span class="ide">void</span>]{<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">w</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">newWebSocket</span>(<span class="str">&quot;ws://127.0.0.1:9000/ws&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">await</span> <span class="ide">w</span><span class="op">.</span><span class="ide">receiveStrPacket</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">w</span><span class="op">.</span><span class="ide">send</span>(<span class="str">&quot;Hi, how are you?&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">await</span> <span class="ide">w</span><span class="op">.</span><span class="ide">receiveStrPacket</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">w</span><span class="op">.</span><span class="ide">close</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">main</span>()</div></div>  </code></pre>
+<p>or from javascript</p>
+<pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="op">&gt;</span> <span class="ide">ws</span> <span class="op">=</span> <span class="kwd">new</span> <span class="ide">WebSocket</span>(<span class="str">&quot;ws://127.0.0.1:9000/ws&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="op">&gt;</span> <span class="ide">ws</span>.<span class="ide">onmessage</span> <span class="op">=</span> (<span class="ide">m</span>)<span class="op">=&gt;</span><span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">m</span>.<span class="ide">data</span>)</div></div><div class="line"><div class="line-content">(<span class="ide">m</span>)<span class="op">=&gt;</span><span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">m</span>.<span class="ide">data</span>)</div></div><div class="line"><div class="line-content"><span class="op">&gt;</span> <span class="ide">ws</span>.<span class="ide">send</span>(<span class="str">&quot;bye&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">bye</span></div></div>  </code></pre>
+<h2>Running</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">opts</span> <span class="op">=</span> <span class="ide">ServerOptions</span>(<span class="ide">address</span>:<span class="str">&quot;127.0.0.1&quot;</span>, <span class="ide">port</span>:<span class="num">9000.</span><span class="ide">Port</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">initServy</span>(<span class="ide">opts</span>, <span class="ide">router</span>, <span class="op">@</span>[<span class="ide">loggingMiddleware</span>, <span class="ide">trimTrailingSlash</span>, <span class="ide">serveTmpDir</span>, <span class="ide">serveHomeDir</span>])</div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">run</span>()</div></div>  </code></pre>
+<p><code>initServy</code> takes in some options for binding address and the router to use for incoming requests in a list of middlewares to execute before handlers.</p>
+<h2>curl examples</h2>
+<p>Here are some curl examples to play with servy if you start it with <code>nimble run servy</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">hello</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">greet</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">greet</span><span class="op">/</span><span class="ide">ahmed</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">greet</span><span class="op">/</span><span class="ide">first</span><span class="op">/</span><span class="ide">sec</span><span class="op">/</span><span class="ide">en</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="op">-</span><span class="ide">XPOST</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">post</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="op">-</span><span class="ide">X</span> <span class="ide">POST</span> <span class="op">-</span><span class="ide">F</span> 'username=auser' <span class="op">-</span><span class="ide">F</span> 'password=apassword' <span class="ide">http</span>:<span class="op">//</span><span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">post</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="op">-</span><span class="ide">X</span> <span class="ide">POST</span> <span class="op">-</span><span class="ide">F</span> 'myfile=@servy.nimble' <span class="ide">http</span>:<span class="op">//</span><span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">post</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="op">-</span><span class="ide">L</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">abort</span></div></div><div class="line"><div class="line-content"><span class="ide">curl</span> <span class="op">-</span><span class="ide">L</span> <span class="ide">localhost</span>:<span class="num">9000</span><span class="op">/</span><span class="ide">redirect</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/xmonader/nim-servy">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

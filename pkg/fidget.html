@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">fidget</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ui</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">glfw</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">opengl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">js</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">android</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ios</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Figma based UI library for nim, with HTML and OpenGL backends.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install fidget" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><img src="docs/banner.png" style="max-width: 100%;" />
+<p>👏 👏 👏 Check out video about the library: <a href="https://www.youtube.com/watch?v=IB8Yt2dqZbo">Fidget: Let&apos;s rethink UI development with Nim (NimConf 2020)</a> 👏 👏 👏</p>
+<p>⚠️ WARNING: This library is still in heavy development. ⚠️</p>
+<h1>Fidget - A cross platform UI library for nim</h1>
+<p>  <code>nimble install fidget</code></p>
+<p>  <img src="https://github.com/treeform/fidget/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/treeform/fidget">API reference</a></p>
+<h2>About</h2>
+<p>Fidget aims to provide performant natively compiled cross platform UIs for any platform - Web with HTML5, Windows, macOS, Linux, iOS and Android with OpenGL.</p>
+<p>Fidget leverages <a href="https://www.figma.com/">Figma</a> - an app that is taking the design world by storm. It does this by providing a <a href="figma_plugin/code.ts">Figma Plugin</a> to export directly to fidget code! No more counting stupid pixels, no more CSS puzzles. Want to change some spaces? Change it in Figma and export.</p>
+<p>Fidget uses plain nim-procs, nim-templates, if-statements and for-loops. As well as providing only minimal primitives found in <a href="https://www.figma.com/">Figma</a>.</p>
+<h2>Example:</h2>
+<p align="center">
+  <br />
+  <img src="docs/uiExampleIce.png" style="max-width: 100%;" />
+</p>
+<p align="center" style="font-size:12px">
+  <a href="http://kate.vonhouck.com/">Design done by Kate von Houck. Available for hire.</a>
+</p>
+<p>See code here: <a href="examples/demo/demo.nim">examples/demo/demo.nim</a></p>
+<h2>Minimal Sample:</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">fidget</span>, <span class="ide">vmath</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">drawMain</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">frame</span> <span class="str">&quot;main&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">box</span> <span class="num">0</span>, <span class="num">0</span>, <span class="num">620</span>, <span class="num">140</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..</span> <span class="num">4</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">group</span> <span class="str">&quot;block&quot;</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">box</span> <span class="num">20</span><span class="op">+</span><span class="ide">i</span><span class="op">*</span><span class="num">120</span>, <span class="num">20</span>, <span class="num">100</span>, <span class="num">100</span></div></div><div class="line"><div class="line-content">        <span class="ide">fill</span> <span class="str">&quot;#2B9FEA&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">windowFrame</span> <span class="op">=</span> <span class="ide">vec2</span>(<span class="num">620</span>, <span class="num">140</span>)</div></div><div class="line"><div class="line-content"><span class="ide">startFidget</span>(<span class="ide">drawMain</span>)</div></div>  </code></pre>
+<p align="center">
+  <br />
+  <img src="docs/minimal.png" style="max-width: 100%;" />
+</p>
+<p>See code here: <a href="examples/minimal/minimal.nim">examples/minimal/minimal.nim</a></p>
+<h1>Backends</h1>
+<p>Fidget has several backends that are planned:</p>
+<ul>
+<li>HTML (best supported)</li>
+<li>Windows (next best support)</li>
+<li>Mac (less support)</li>
+<li>Linux (less support)</li>
+<li>iOS (proof of concept only)</li>
+<li>Android (proof of concept only)</li>
+</ul>
+<h1>Philosophy - Minimalism</h1>
+<ul>
+<li>Mimic how <a href="https://www.figma.com/">Figma</a> (Amazing UI/UX app) does it.</li>
+<li>Everything is a Node.</li>
+<li>There are Group, Rectangle, Image and Text Nodes.</li>
+<li>Nodes are positions relative to the parent</li>
+<li>Nodes have minimal set of properties that match Figma.</li>
+<li>Resizing is done same way as Fimga&apos;s <a href="https://www.youtube.com/watch?v=rRQAQ1d9q9w">Constraints</a>.</li>
+<li>Layout is done same way as Figma&apos;s <a href="https://www.youtube.com/watch?v=NrKX46DzkGQ">Auto Layout</a>.</li>
+</ul>
+<p>The main idea of fidget is to use standard imperative nim paradigms like nim-procs, nim-for-loops, nim-ifs, nim-templates instead of say providing a custom language, XML templates, HTML, Jinja templates, CSS ...</p>
+<p>Instead of creating CSS classes you just create a nim proc or a nim template with the things you want and reuse that. Instead of having some sort of list controller you just use a for loop to position your list elements.</p>
+<p>There are very little UI layout primitives just align left, center, right, both, or scale for the X axis and top, center, bottom, both, or scale for the Y axis. There is none of margin, padding, float, absolute, relative, border box, flex, recycle view controllers, stack layout, constraints ...</p>
+<p>If you want to do something fancy just do a little math. Many times a simple math formula is smaller, simpler, and easier to figure out then layout puzzles.</p>
+<h1>Why Nim?</h1>
+<p>Nim is a great languages because it’s easy on the eyes like Python, but typed and is performant as C. It can also compile to JavaScript, C, C++, ObjC. Nim is a great language for UI design because it has advanced templates and macros can make a really good DSL (domain specific language) - that makes writing UIs straightforward, intuitive and crossplatform.</p>
+<h1>Imperative UI Style</h1>
+<p>I like imperative style of programming. This is a style you probably learned to program at the start, but was forced to abandon with more complex and ill fitting object oriented style. Imperative style to me means when you are only using functions, if-statements and for-loops. Imperative style to me means simple data structures of structs, lists and tables. Simple functions that read from top to bottom with as few branches as possible.</p>
+<p>Each UI frame is drawn completely from start to finish all in the code you control. Use of callbacks is discouraged. Think liner, think simple. After any event by the user, data or timer, the UI is redrawn. The UI is redrawn in an efficient way as to allow this. With HTML a modification cache is used to ensure only a minimal amount of DOM changes are needed. With OpenGL you redraw the whole screen using as few state transitions and batching everything into a texture atlas and single global vertex buffer.</p>
+<h2>How to run the examples:</h2>
+<pre>  <code class="language-sh">git clone https://github.com/treeform/fidget
+cd fidget
+nimble install
+cd examples/minimal
+nim c -r minimal
+</code></pre>
+<h3>Native examples for Windows, macOS, and Linux:</h3>
+<p>First <code>cd</code> to each folder then compile and run.</p>
+<pre>  <code class="language-sh">nim c -r bars.nim
+nim c -r hovers.nim
+nim c -r inputs.nim
+nim c -r padoftext.nim
+nim c -r padofcode.nim
+nim c -r basic.nim
+</code></pre>
+<h3>Runs the same examples as HTML:</h3>
+<p>First <code>cd</code> to each folder then run <code>js</code> compile command then open the <code>.html</code> file in a browser.</p>
+<pre>  <code class="language-sh">nim js bars.nim
+nim js hovers.nim
+nim js inputs.nim
+nim js padoftext.nim
+nim js padofcode.nim
+nim js basic.nim
+</code></pre>
+<h2>Run all tests and save a screenshot</h2>
+<pre>  <code class="language-sh">nim c -r tests/run --compile --native --testOneFrame
+</code></pre>
+<h2>Figma Plug</h2>
+<p>To compile the figma plug run TypeScript in the figma_plugin folder.</p>
+<pre>  <code class="language-sh">tsc
+</code></pre>
+<p>Then go to figma and add a development plugin from this folder.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/fidget">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

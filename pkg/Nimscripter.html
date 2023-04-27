@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">Nimscripter</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">scripting</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimscript</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Easy to use Nim/Nimscript interop, for scripting logic in compiled binaries.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install Nimscripter" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nimscripter</h1>
+<p>Nimscripter is enables easy interop between Nim and Nimscript for realtime scriptable applications.</p>
+<h2>How to use</h2>
+<p>Install Nimscripter(<code>nimble install nimscripter</code>) with Nimble then create a .nim file with the following.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimscripter</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">doThing</span>(): <span class="ide">int</span> <span class="op">=</span> <span class="num">42</span></div></div><div class="line"><div class="line-content"><span class="ide">exportTo</span>(<span class="ide">myImpl</span>, <span class="ide">doThing</span>) <span class="com"># The name of our &quot;nimscript module&quot; is `myImpl`</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> </div></div><div class="line"><div class="line-content">  <span class="ide">scriptProcs</span> <span class="op">=</span> <span class="ide">implNimScriptModule</span>(<span class="ide">myImpl</span>) <span class="com"># This emits our exported code</span></div></div><div class="line"><div class="line-content">  <span class="ide">ourScript</span> <span class="op">=</span> <span class="ide">NimScriptFile</span>(<span class="str">&quot;assert doThing() == 42&quot;</span>) <span class="com"># Convert to `NimScriptFile` for loading from strings</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">intr</span> <span class="op">=</span> <span class="ide">loadScript</span>(<span class="ide">ourScript</span>, <span class="ide">scriptProcs</span>) <span class="com"># Load our script with our code and using our system `stdlib`(not portable)</span></div></div>  </code></pre>
+<p>Note that <code>exportTo</code> can take in multiple procedures, types, or global variables at once.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">doThing</span>(): <span class="ide">int</span> <span class="op">=</span> <span class="num">42</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">myGlobal</span> <span class="op">=</span> <span class="num">30</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">MyType</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span></div></div><div class="line"><div class="line-content"><span class="ide">exportTo</span>(<span class="ide">myImpl</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">doThing</span></div></div><div class="line"><div class="line-content">  <span class="ide">myGlobal</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">myType</span>)</div></div>  </code></pre>
+<h3>Calling code from Nim</h3>
+<p>Any exported non overloaded and non generic procedures can be called from Nim</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">script</span> <span class="op">=</span> NimScriptFile"proc fancyStuff*(a: int) = assert a in [10, 300]" <span class="com"># Notice `fancyStuff` is exported</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">intr</span> <span class="op">=</span> <span class="ide">loadScript</span>(<span class="ide">script</span>) <span class="com"># We are not exposing any procedures hence single parameter</span></div></div><div class="line"><div class="line-content"><span class="ide">intr</span><span class="op">.</span><span class="ide">invoke</span>(<span class="ide">fancyStuff</span>, <span class="num">10</span>) <span class="com"># Calls `fancyStuff(10)` in vm</span></div></div><div class="line"><div class="line-content"><span class="ide">intr</span><span class="op">.</span><span class="ide">invoke</span>(<span class="ide">fancyStuff</span>, <span class="num">300</span>) <span class="com"># Calls `fancyStuff(300)` in vm</span></div></div>  </code></pre>
+<p>The above works but does not impose any safety on the VM code, to do that the following can be done</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">addCallable</span>(<span class="ide">test3</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">fancyStuff</span>(<span class="ide">a</span>: <span class="ide">int</span>) <span class="com"># Has checks for the nimscript to ensure it&apos;s definition doesnt change to something unexpected.</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">addins</span> <span class="op">=</span> <span class="ide">implNimscriptModule</span>(<span class="ide">test3</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">script</span> <span class="op">=</span> NimScriptFile"proc fancyStuff*(a: int) = assert a in [10, 300]" <span class="com"># Notice `fancyStuff` is exported</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">intr</span> <span class="op">=</span> <span class="ide">loadScript</span>(<span class="ide">script</span>, <span class="ide">addins</span>) <span class="com"># This adds in out checks for the proc</span></div></div><div class="line"><div class="line-content"><span class="ide">intr</span><span class="op">.</span><span class="ide">invoke</span>(<span class="ide">fancyStuff</span>, <span class="num">10</span>) <span class="com"># Calls `fancyStuff(10)` in vm</span></div></div><div class="line"><div class="line-content"><span class="ide">intr</span><span class="op">.</span><span class="ide">invoke</span>(<span class="ide">fancyStuff</span>, <span class="num">300</span>) <span class="com"># Calls `fancyStuff(300)` in vm</span></div></div>  </code></pre>
+<h3>Getting global variables from nimscript</h3>
+<p>One may extract global variables from a nimscript file using a convenience macro.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimscripter</span>, <span class="ide">nimscripter</span><span class="op">/</span><span class="ide">variables</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">script</span> <span class="op">=</span> NimScriptFile"""
+let required* = "main"
+let defaultValueExists* = "foo"
+"""</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">intr</span> <span class="op">=</span> <span class="ide">loadScript</span> <span class="ide">script</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">getGlobalNimsVars</span> <span class="ide">intr</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">required</span>: <span class="ide">string</span> <span class="com"># required variable</span></div></div><div class="line"><div class="line-content">  <span class="ide">optional</span>: <span class="ide">Option</span>[<span class="ide">string</span>] <span class="com"># optional variable</span></div></div><div class="line"><div class="line-content">  <span class="ide">defaultValue</span>: <span class="ide">int</span> <span class="op">=</span> <span class="num">1</span> <span class="com"># optional variable with default value</span></div></div><div class="line"><div class="line-content">  <span class="ide">defaultValueExists</span> <span class="op">=</span> <span class="str">&quot;bar&quot;</span> <span class="com"># You may omit the type if there is a default value</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">required</span> <span class="op">==</span> <span class="str">&quot;main&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">optional</span><span class="op">.</span><span class="ide">isNone</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">defaultValue</span> <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">defaultValueExists</span> <span class="op">==</span> <span class="str">&quot;foo&quot;</span></div></div>  </code></pre>
+<p>Basic types are supported, such as string, int, bool, etc..</p>
+<h3>Exporting code verbatim</h3>
+<p><code>nimscriptr/expose</code> has <code>exportCode</code> and <code>exportCodeAndKeep</code> they both work the same, except the latter keeps the code so it can be used inside Nim.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exportCode</span>(<span class="ide">nimScripter</span>):</div></div><div class="line"><div class="line-content"> <span class="kwd">proc</span> <span class="ide">doThing</span>(<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">int</span>) <span class="op">=</span> <span class="ide">echo</span> <span class="ide">a</span>, <span class="str">&quot; &quot;</span>, <span class="ide">b</span> <span class="com"># This runs on nimscript if called there</span></div></div>  </code></pre>
+<h3>Keeping state inbetween loads</h3>
+<p><code>loadScriptWithState</code> will load a script, if it loads a valid script it will reset any global exported variables in the script with their preload values.</p>
+<p><code>safeloadScriptWithState</code> will attempt to load a script keeping global state, if it fails it does not change the interpeter, else it&apos;ll load the script and set it&apos;s state to the interpreters.</p>
+<p><code>saveState</code>/<code>loadState</code> can be used to manually manage the state inbetween loaded scripts.</p>
+<h3>VmOps</h3>
+<p>A subset of the nimscript interopped procedures are available inside <code>nimscripter/vmops</code>.
+If you feel a new op should be added feel free to PR it.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimscripter</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimscripter</span><span class="op">/</span><span class="ide">vmops</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">script</span> <span class="op">=</span> """
+proc build*(): bool =
+  echo "building nim... "
+  echo getCurrentDir()
+  echo "done"
+  true
+
+when isMainModule:
+  discard build()
+"""</div></div><div class="line"><div class="line-content"><span class="ide">addVmops</span>(<span class="ide">buildpackModule</span>)</div></div><div class="line"><div class="line-content"><span class="ide">addCallable</span>(<span class="ide">buildpackModule</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">build</span>(): <span class="ide">bool</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">addins</span> <span class="op">=</span> <span class="ide">implNimscriptModule</span>(<span class="ide">buildpackModule</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">loadScript</span>(<span class="ide">NimScriptFile</span>(<span class="ide">script</span>), <span class="ide">addins</span>)</div></div>  </code></pre>
+<h3>Using a custom/shipped stdlib</h3>
+<p>Make a folder entitled <code>stdlib</code> and copy all Nim files you wish to ship as a stdlib from Nim&apos;s stdlib and any of your own files.
+<code>system.nim</code> and the <code>system</code> folder are required.
+<code>You can copy any other pure libraries and ship them, though they&apos;re only usable if they support Nimscript.</code>If you use choosenim you can find the the Nim stdlib to copy from inside <code>~/.choosenim/toolchains/nim-version/lib</code>.
+When using a custom search paths add the root file only, if you provide more than that it will break modules.</p>
+<h3>Overriding the error hook</h3>
+<p>The error hook can be overridden for more behaviour like showing the error in the program,
+the builtin error hook is as follows:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">errorHook</span>(<span class="ide">config</span>: <span class="ide">ConfigRef</span>; <span class="ide">info</span>: <span class="ide">TLineInfo</span>; <span class="ide">msg</span>: <span class="ide">string</span>; <span class="ide">severity</span>: <span class="ide">Severity</span>) {<span class="op">.</span><span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">severity</span> <span class="op">==</span> <span class="ide">Error</span> <span class="kwd">and</span> <span class="ide">config</span><span class="op">.</span><span class="ide">error_counter</span> <span class="op">&gt;=</span> <span class="ide">config</span><span class="op">.</span><span class="ide">error_max</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">fileName</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">k</span>, <span class="ide">v</span> <span class="kwd">in</span> <span class="ide">config</span><span class="op">.</span><span class="ide">m</span><span class="op">.</span><span class="ide">filenameToIndexTbl</span><span class="op">.</span><span class="ide">pairs</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">v</span> <span class="op">==</span> <span class="ide">info</span><span class="op">.</span><span class="ide">fileIndex</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">fileName</span> <span class="op">=</span> <span class="ide">k</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Script Error: $1:$2:$3 $4.&quot;</span> <span class="op">%</span> [<span class="ide">fileName</span>, <span class="op">$</span><span class="ide">info</span><span class="op">.</span><span class="ide">line</span>, <span class="op">$</span>(<span class="ide">info</span><span class="op">.</span><span class="ide">col</span> <span class="op">+</span> <span class="num">1</span>), <span class="ide">msg</span>]</div></div><div class="line"><div class="line-content">    <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">VMQuit</span>)(<span class="ide">info</span>: <span class="ide">info</span>, <span class="ide">msg</span>: <span class="ide">msg</span>)</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/beef331/nimscripter">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

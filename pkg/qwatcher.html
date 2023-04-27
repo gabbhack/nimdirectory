@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">qwatcher</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">buffer-monitoring</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">queue</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linux</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tcp</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">udp</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">network</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Monitor TCP connections and diagnose buffer and connectivity issues on Linux machines related to input and output queues")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install qwatcher" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Queue Watcher</h1>
+<!--  ![qwatcher](artwork/qwatcher.png)  -->
+<!--  &lt;img src=&quot;https://github.com/pouriyajamshidi/qwatcher/blob/master/artwork/qwatcher.png?raw=true&quot; width=&quot;600&quot; /&gt;  -->
+<div align="center" style="width: 100%;">
+ <img src="https://github.com/pouriyajamshidi/qwatcher/blob/master/artwork/qwatcher.png?raw=true" style="max-width: 100%;" width="700" alt="qwatcher" />
+</div>
+<hr />
+<p><code>qwatcher</code> is designed to help monitor TCP connections and diagnose <strong>buffer</strong> and connectivity issues on Linux machines related to <code>input</code> and <code>output</code> queues.</p>
+<hr />
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#queue-watcher">Queue Watcher</a>
+<ul>
+<li>  <a href="#table-of-contents">Table of Contents</a></li>
+<li>  <a href="#why">Why</a></li>
+<li><a href="#how">How</a>
+<ul>
+<li>  <a href="#usage">Usage</a></li>
+<li>  <a href="#available-flags">Available flags</a></li>
+</ul>
+</li>
+<li>  <a href="#what">What</a></li>
+<li>  <a href="#nimble-directory">Nimble Directory</a></li>
+<li>  <a href="#tested-on">Tested on</a></li>
+<li>  <a href="#sponsor-me">Sponsor me</a></li>
+<li>  <a href="#contact-me">Contact me</a></li>
+<li>  <a href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Why</h2>
+<p>The idea of writing this program came to me after reading a few blog posts discussing how they faced odd connectivity issues and how it ended up being related to the send and receive queues.</p>
+<p>Had they had this tool, they would have been able to find the root cause much faster.</p>
+<hr />
+<h2>How</h2>
+<ol>
+<li>
+<p>Download and extract the file from this URL:</p>
+<pre>  <code class="language-bash">wget https://github.com/pouriyajamshidi/qwatcher/releases/latest/download/qwatcher.tar.gz
+tar xvf qwatcher.tar.gz
+</code></pre>
+<p>Optionally, you can use <code>Nimble</code> for installation <a href="https://nimble.directory/pkg/qwatcher">https://nimble.directory/pkg/qwatcher</a> and skip to step 3.</p>
+<pre>  <code class="language-bash">nimble install qwatcher
+</code></pre>
+</li>
+<li>
+<p>Make it executable and if you prefer, move it to your <code>$PATH</code>:</p>
+<pre>  <code class="language-bash">chmod +x qwatcher
+sudo cp qwatcher /usr/local/bin
+</code></pre>
+</li>
+<li>
+<p>Run it. There are two modes to run <code>qwatcher</code>.</p>
+<ol>
+<li><strong>Write mode</strong>. Provides two logging methods:
+<ol>
+<li>Using <code>--db_path</code> to log to a database. Default path: <code>/var/log/qwatcher.db</code></li>
+<li>Using <code>--log_path</code> to log to a text file. Default path: <code>/var/log/qwatcher.log</code></li>
+</ol>
+</li>
+<li><strong>Monitor mode</strong> (default). Prints the output to the console</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>:warning: Make sure to not feed a higher number than your current buffer size to the program.</p>
+</blockquote>
+<p>In order to get the current read and write buffer sizes, run the following commands:</p>
+<pre>  <code class="language-bash">cat /proc/sys/net/ipv4/tcp_rmem
+cat /proc/sys/net/ipv4/tcp_wmem
+</code></pre>
+<hr />
+<h3>Usage</h3>
+<p>Let&apos;s explore all modes:</p>
+<ol>
+<li>
+<p>check every <strong>5 seconds</strong> and <strong>log</strong> connections that surpass <strong>100 kilobytes</strong> in <strong>send</strong> or <strong>receive</strong> queues to a <strong>database</strong> located at <code>/var/log/qwatcher.db</code>:</p>
+<pre>  <code class="language-bash">qwatcher --recv_q=100000 --send_q=100000 --refresh=5 --db_path=/var/log/qwatcher.db
+</code></pre>
+<p>Then you can check the database. For instance, connections with <code>receive queue</code> bigger than zero:</p>
+<blockquote>
+<p><code>sqlite3</code> needs to be installed.</p>
+</blockquote>
+<pre>  <code class="language-bash"># Open the database file:
+sqlite3 /var/log/qwatcher.db
+# Beautify sqlite output:
+.mode line
+.headers on
+.separator ROW &quot;\n&quot;
+# Run your query:
+sqlite&gt; SELECT * FROM qwatcher WHERE receiveQ &gt; 0;
+</code></pre>
+</li>
+<li>
+<p>Should you prefer to log the stats in a <strong>log file</strong> instead of a database as shown in step 1 use <code>--log_path</code>:</p>
+<pre>  <code class="language-bash">qwatcher --recv_q=100000 --send_q=100000 --refresh=5 --log_path=/var/log/qwatcher.log
+</code></pre>
+<p>Then you can use tail to check the file contents:</p>
+<pre>  <code class="language-bash">tail -f /var/log/qwatcher.log
+</code></pre>
+</li>
+<li>
+<p><strong>Default mode</strong>. If you want the output to be shown on the <strong>console</strong> and not log to disk, use the commands above without <code>--log_path</code> or <code>--db_path</code> options:</p>
+<pre>  <code class="language-bash">qwatcher --recv_q=100000 --send_q=100000
+</code></pre>
+<blockquote>
+<p>The default refresh interval is 10 seconds.</p>
+</blockquote>
+</li>
+</ol>
+<p>The sample output can be seen <a href="#what">here</a></p>
+<p>Additionally, you can use the <a href="qwatcher.service">accompanying systemd</a> service to run <code>qwatcher</code> in the background and not worry about system restarts:</p>
+<pre>  <code class="language-bash">sudo cp qwatcher.service /etc/systemd/system/qwatcher.service
+sudo systemctl enable qwatcher.service
+sudo systemctl start qwatcher.service
+</code></pre>
+<h3>Available flags</h3>
+<pre>  <code class="language-console"><div class="line"><div class="line-content"><span class="out">-h, --help        : show help</span></div></div><div class="line"><div class="line-content">  <span class="out">--recv_q,         : Minimum receive-Q to trigger alert in bytes (default: 10000)</span></div></div><div class="line"><div class="line-content">  <span class="out">--send_q,         : Minimum send-Q to trigger alert in bytes (default: 10000)</span></div></div><div class="line"><div class="line-content">  <span class="out">--refresh,        : Refresh interval in seconds (default: 10)</span></div></div><div class="line"><div class="line-content">  <span class="out">--db_path,        : Path to SQLite database to log reports (default: /var/log/qwatcher.db)</span></div></div><div class="line"><div class="line-content">  <span class="out">--log_path,       : Path to log file to log reports (default: /var/log/qwatcher.log)</span></div></div><div class="line"><div class="line-content">  <span class="out">-v, --version,    : Show version</span></div></div>  </code></pre>
+<blockquote>
+<p>Please note that you cannot use <code>--db_path</code> and <code>--log_path</code> at the same time.</p>
+</blockquote>
+<hr />
+<h2>What</h2>
+<p>Below output depicts the provided information for a connection:</p>
+<p>  <img src="https://github.com/pouriyajamshidi/qwatcher/raw/master/images/qwatcher.png" style="max-width: 100%;" alt="output" /></p>
+<p>Apart from the send and receive queues, there are additional information that can be useful to diagnose connectivity issues such as <code>congestion window</code>, <code>mss</code>, <code>retransmits</code> and more.</p>
+<h2>Nimble Directory</h2>
+<p>This project is also hosted on <a href="https://nimble.directory/pkg/qwatcher">Nimble</a>.</p>
+<h2>Tested on</h2>
+<p>Ubuntu server 22.04.</p>
+<h2>Sponsor me</h2>
+<p><a href="https://www.buymeacoffee.com/pouriyajamshidi">  <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="max-width: 100%;" alt="&quot;Buy Me A Coffee&quot;" /></a><br />
+<a href="https://github.com/sponsors/pouriyajamshidi">  <img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" style="max-width: 100%;" alt="sponsor" /></a></p>
+<h2>Contact me</h2>
+<p>  <a href="https://www.linkedin.com/in/pouriya-jamshidi/">    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" style="max-width: 100%;" alt="LinkedIn" />  </a></p>
+<h2>License</h2>
+<p>  <a href="https://opensource.org/licenses/MIT">    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" />  </a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/pouriyajamshidi/qwatcher">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">jsony</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">json</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A loose, direct to object json parser with hooks.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install jsony" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>JSONy - A loose, direct to object json parser and serializer with hooks.</h1>
+<p>  <code>nimble install jsony</code></p>
+<p>  <img src="https://github.com/treeform/jsony/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/treeform/jsony">API reference</a></p>
+<p>This library has no dependencies other than the Nim standard library.</p>
+<h2>About</h2>
+<p>Real world json is <em>never what you want</em>. It might have extra fields that you don&apos;t care about. It might have missing fields requiring default values. It might change or grow new fields at any moment. Json might use <code>camelCase</code> or <code>snake_case</code>. It might use inconsistent naming.</p>
+<p>With this library you can use json your way, from the mess you get to the objects you want.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]<span class="op">.</span><span class="ide">toJson</span>() <span class="op">-&gt;</span> <span class="str">&quot;[1,2,3]&quot;</span></div></div><div class="line"><div class="line-content"><span class="str">&quot;[1,2,3]&quot;</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">seq</span>[<span class="ide">int</span>]) <span class="op">-&gt;</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]</div></div>  </code></pre>
+<h2>Fast.</h2>
+<p>Currently, the Nim standard module first parses or serializes json into JsonNodes and then turns the JsonNodes into your objects with the <code>to()</code> macro. This is slower and creates unnecessary work for the garbage collector. This library skips the JsonNodes and creates the objects you want directly.</p>
+<p>Another speed up comes from not using <code>StringStream</code>. Stream has a function dispatch overhead because it has to be able to switch between <code>StringStream</code> or <code>FileStream</code> at runtime. Jsony skips the overhead and just directly reads or writes to memory buffers.</p>
+<p>Another speed up comes from parsing and readings its own numbers directly from memory buffer. This allows it to bypass <code>string</code> allocations that <code>parseInt</code> or <code>$</code> create.</p>
+<h3>Serialize speed</h3>
+<pre>  <code>name ............................... min time      avg time    std dv  times
+treeform/jsony ..................... 1.317 ms      1.365 ms    ±0.054   x100
+status-im/nim-json-serialization ... 2.043 ms      3.448 ms    ±0.746   x100
+planetis-m/eminim .................. 5.951 ms      9.305 ms    ±3.210   x100
+disruptek/jason .................... 6.858 ms      7.043 ms    ±0.125   x100
+nim std/json ....................... 8.222 ms      8.510 ms    ±0.123   x100
+</code></pre>
+<h3>Deserialize speed</h3>
+<pre>  <code>name ............................... min time      avg time    std dv  times
+treeform/jsony ..................... 4.134 ms      4.196 ms    ±0.052   x100
+status-im/nim-json-serialization ... 7.119 ms     14.276 ms    ±2.033   x100
+planetis-m/eminim .................. 7.761 ms      8.001 ms    ±0.277   x100
+nim std/json ...................... 14.326 ms     14.473 ms    ±0.113   x100
+</code></pre>
+<p>Note: If you find a faster nim json parser or serializer let me know!</p>
+<h2>Can parse or serialize most types:</h2>
+<ul>
+<li>numbers and strings</li>
+<li>seq and arrays</li>
+<li>objects and ref objects</li>
+<li>options</li>
+<li>enums</li>
+<li>tuples</li>
+<li>characters</li>
+<li><code>HashTable</code>s and <code>OrderedTable</code>s</li>
+<li><code>HashSet</code>s and <code>OrderedSet</code>s</li>
+<li>json nodes</li>
+<li>and <code>parseHook()</code> enables you to parse any type!</li>
+</ul>
+<h2>Not strict.</h2>
+<p>Extra json fields are ignored and missing json fields keep their default values.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Entry1</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">color</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> """{"extra":"foo"}"""</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> <span class="ide">s</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Entry1</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">color</span> <span class="op">==</span> <span class="str">&quot;&quot;</span></div></div>  </code></pre>
+<h2>Converts snake_case to camelCase.</h2>
+<p>Nim usually uses <code>camelCase</code> for its variables, while a bunch of json in the wild uses <code>snake_case</code>. This library will convert <code>snake_case</code> to <code>camelCase</code> for you when reading json.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Entry4</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">colorBlend</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> """{"colorBlend":"red"}"""<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Entry4</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">colorBlend</span> <span class="op">==</span> <span class="str">&quot;red&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">v</span> <span class="op">=</span> """{"color_blend":"red"}"""<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Entry4</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">colorBlend</span> <span class="op">==</span> <span class="str">&quot;red&quot;</span></div></div>  </code></pre>
+<h2>Has hooks.</h2>
+<p>Hooks are a powerful concept that allows you to parse json &quot;your way&quot; and is the main idea behind <code>jsony</code>!</p>
+<ul>
+<li>Note: that hooks need to be exported to where you are parsing the json so that the parsing system can pick them up.</li>
+</ul>
+<h3><code>proc newHook*()</code> Can be used to populate default values.</h3>
+<p>Sometimes the absence of a field means it should have a default value. Normally this would just be Nim&apos;s default value for the variable type but that isn&apos;t always what you want. With the newHook() you can initialize the object&apos;s defaults before the main parsing happens.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Foo5</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">visible</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newHook</span><span class="op">*</span>(<span class="ide">foo</span>: <span class="kwd">var</span> <span class="ide">Foo5</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Populates the object before its fully deserialized.</span></div></div><div class="line"><div class="line-content">  <span class="ide">foo</span><span class="op">.</span><span class="ide">visible</span> <span class="op">=</span> <span class="str">&quot;yes&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> """{"id":"123"}"""</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> <span class="ide">s</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Foo5</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">id</span> <span class="op">==</span> <span class="str">&quot;123&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">visible</span> <span class="op">==</span> <span class="str">&quot;yes&quot;</span></div></div>  </code></pre>
+<h3><code>proc postHook*()</code> Can be used to run code after the object is fully parsed.</h3>
+<p>Sometimes we need run some code after the object is created. For example to set other values based on values that were set but are not part of the json data. Maybe to sanitize the object or convert older versions to new versions. Here I need to retain the original size as I will be messing with the object&apos;s regular size:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Sizer</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">size</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">originalSize</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">postHook</span><span class="op">*</span>(<span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">Sizer</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">v</span><span class="op">.</span><span class="ide">originalSize</span> <span class="op">=</span> <span class="ide">v</span><span class="op">.</span><span class="ide">size</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">sizer</span> <span class="op">=</span> """{"size":10}"""<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Sizer</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">sizer</span><span class="op">.</span><span class="ide">size</span> <span class="op">==</span> <span class="num">10</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">sizer</span><span class="op">.</span><span class="ide">originalSize</span> <span class="op">==</span> <span class="num">10</span></div></div>  </code></pre>
+<h3><code>proc enumHook*()</code> Can be used to parse enums.</h3>
+<p>In the wild json enum names almost never match to Nim enum names which usually have a prefix. The <code>enumHook*()</code> allows you to rename the enums to your internal names.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Color2</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">  <span class="ide">c2Red</span></div></div><div class="line"><div class="line-content">  <span class="ide">c2Blue</span></div></div><div class="line"><div class="line-content">  <span class="ide">c2Green</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">enumHook</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span>): <span class="ide">Color2</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">v</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="str">&quot;RED&quot;</span>: <span class="ide">c2Red</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="str">&quot;BLUE&quot;</span>: <span class="ide">c2Blue</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="str">&quot;GREEN&quot;</span>: <span class="ide">c2Green</span></div></div><div class="line"><div class="line-content">  <span class="kwd">else</span>: <span class="ide">c2Red</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> """ "RED" """<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Color2</span>) <span class="op">==</span> <span class="ide">c2Red</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> """ "BLUE" """<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Color2</span>) <span class="op">==</span> <span class="ide">c2Blue</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> """ "GREEN" """<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Color2</span>) <span class="op">==</span> <span class="ide">c2Green</span></div></div>  </code></pre>
+<h3><code>proc renameHook*()</code> Can be used to rename fields at run time.</h3>
+<p>In the wild json field names can be reserved words such as type, class, or array. With the <code>renameHook*()</code> you can rename fields to what you want.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Node</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">kind</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">renameHook</span><span class="op">*</span>(<span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">Node</span>, <span class="ide">fieldName</span>: <span class="kwd">var</span> <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">fieldName</span> <span class="op">==</span> <span class="str">&quot;type&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">fieldName</span> <span class="op">=</span> <span class="str">&quot;kind&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">node</span> <span class="op">=</span> """{"type":"root"}"""<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Node</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">node</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="str">&quot;root&quot;</span></div></div>  </code></pre>
+<h3><code>proc parseHook*()</code> Can be used to do anything.</h3>
+<p>Json can&apos;t store dates, so they are usually stored as strings. You can use
+<code>parseHook*()</code> to override default parsing and parse <code>DateTime</code> as a <code>string</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">jsony</span>, <span class="ide">times</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">parseHook</span><span class="op">*</span>(<span class="ide">s</span>: <span class="ide">string</span>, <span class="ide">i</span>: <span class="kwd">var</span> <span class="ide">int</span>, <span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">DateTime</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">str</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">parseHook</span>(<span class="ide">s</span>, <span class="ide">i</span>, <span class="ide">str</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">str</span>, <span class="str">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">dt</span> <span class="op">=</span> """ "2020-01-01 00:00:00" """<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">DateTime</span>)</div></div>  </code></pre>
+<p>Sometimes json gives you an object of entries with their id as keys, but you might want it as a sequence with ids inside the objects. You can handle this and many other scenarios with <code>parseHook*()</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Entry</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">id</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">count</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">filled</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">data</span> <span class="op">=</span> """{
+  "1": {"count":12, "filled": 11},
+  "2": {"count":66, "filled": 0},
+  "3": {"count":99, "filled": 99}
+}"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">parseHook</span><span class="op">*</span>(<span class="ide">s</span>: <span class="ide">string</span>, <span class="ide">i</span>: <span class="kwd">var</span> <span class="ide">int</span>, <span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">seq</span>[<span class="ide">Entry</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">table</span>: <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">Entry</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">parseHook</span>(<span class="ide">s</span>, <span class="ide">i</span>, <span class="ide">table</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">k</span>, <span class="ide">entry</span> <span class="kwd">in</span> <span class="ide">table</span><span class="op">.</span><span class="ide">mpairs</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">entry</span><span class="op">.</span><span class="ide">id</span> <span class="op">=</span> <span class="ide">k</span></div></div><div class="line"><div class="line-content">    <span class="ide">v</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">entry</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">data</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">seq</span>[<span class="ide">Entry</span>])</div></div>  </code></pre>
+<p>Gives us:</p>
+<pre>  <code>@[
+  (id: &quot;1&quot;, count: 12, filled: 11),
+  (id: &quot;2&quot;, count: 66, filled: 0),
+  (id: &quot;3&quot;, count: 99, filled: 99)
+]&quot;&quot;&quot;
+</code></pre>
+<h3><code>proc dumpHook*()</code> Can be used to serialize into custom representation.</h3>
+<p>Just like reading custom data types you can also write data types with <code>dumpHook*()</code>.
+The <code>dumpHook()</code> will receive the incomplete string representation of a given serialization (here <code>s</code>).
+You will need to add the serialization of your data type (here <code>v</code>) to that string.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Fraction</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">numerator</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">denominator</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">dumpHook</span><span class="op">*</span>(<span class="ide">s</span>: <span class="kwd">var</span> <span class="ide">string</span>, <span class="ide">v</span>: <span class="ide">Fraction</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## Output fraction type as a string &quot;x/y&quot;.</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">add</span> '"'</div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">add</span> <span class="op">$</span><span class="ide">v</span><span class="op">.</span><span class="ide">numerator</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">add</span> '/'</div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">add</span> <span class="op">$</span><span class="ide">v</span><span class="op">.</span><span class="ide">denominator</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">add</span> '"'</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">f</span> <span class="op">=</span> <span class="ide">Fraction</span>(<span class="ide">numerator</span>: <span class="num">10</span>, <span class="ide">denominator</span>: <span class="num">13</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">f</span><span class="op">.</span><span class="ide">toJson</span>()</div></div>  </code></pre>
+<p>Gives us:</p>
+<pre>  <code>&quot;10/13&quot;
+</code></pre>
+<h3><code>proc skipHook*()</code> Can be used to skip fields when serializing an object</h3>
+<p>If you want to skip some fields when serializing an object you can declare a <code>skipHook*()</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Conn</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">Foo</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">a</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">password</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">b</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">    <span class="ide">conn</span>: <span class="ide">Conn</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">skipHook</span><span class="op">*</span>(<span class="ide">T</span>: <span class="ide">typedesc</span>[<span class="ide">Foo</span>], <span class="ide">key</span>: <span class="kwd">static</span> <span class="ide">string</span>): <span class="ide">bool</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">key</span> <span class="kwd">in</span> [<span class="str">&quot;password&quot;</span>, <span class="str">&quot;conn&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> <span class="ide">Foo</span>(<span class="ide">a</span>:<span class="num">1</span>, <span class="ide">password</span>: <span class="str">&quot;12345&quot;</span>, <span class="ide">b</span>:<span class="num">0.5</span>, <span class="ide">conn</span>: <span class="ide">Conn</span>(<span class="ide">id</span>: <span class="num">1</span>))</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">v</span><span class="op">.</span><span class="ide">toJson</span>()</div></div>  </code></pre>
+<p>Gives us:</p>
+<pre>  <code>&quot;{&quot;a&quot;:1,&quot;b&quot;:0.5}&quot;
+</code></pre>
+<h2>Static writing with <code>toStaticJson</code>.</h2>
+<p>Sometimes you have some json, and you want to write it in a static way. There is a special function for that:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">thing</span><span class="op">.</span><span class="ide">toStaticJson</span>()</div></div>  </code></pre>
+<p>Make sure <code>thing</code> is a <code>static</code> or a <code>const</code> value, and you will get a compile time string with your JSON.</p>
+<h2>Full support for case variant objects.</h2>
+<p>Case variant objects like this are fully supported:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">RefNode</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">kind</span>: <span class="ide">NodeNumKind</span>  <span class="com"># The ``kind`` field is the discriminator.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">nkInt</span>: <span class="ide">intVal</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">nkFloat</span>: <span class="ide">floatVal</span>: <span class="ide">float</span></div></div>  </code></pre>
+<p>The discriminator does not have to come first, if they do come in the middle this library will scan the object, find the discriminator field, then rewind and parse the object normally.</p>
+<h2>Full support for json-in-json.</h2>
+<p>Sometimes your json objects could contain arbitrary json structures,
+maybe event user defined, that could only be walked as json nodes. This library allows you to parse json-in-json were you parse some of the structure as real nim objects but leave some parts of it as Json Nodes to be walked later with code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">jsony</span>, <span class="ide">json</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Entry</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">data</span>: <span class="ide">JsonNode</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">"""
+{
+  "name":"json-in-json",
+  "data":{
+    "random-data":"here",
+    "number":123,
+    "number2":123.456,
+    "array":[1,2,3],
+    "active":true,
+    "null":null
+  }
+}"""<span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Entry</span>)</div></div>  </code></pre>
+<h2>Full support for raw-json.</h2>
+<p>Sometimes you don&apos;t need to parse the json, but just send it or store it in the database. You can speed this up by using <code>RawJson</code> type. What it does is prevents full parsing of that json tree and instead returns it is a <code>RawJson</code> (<code>distinct string</code>) type. You can then do anything you want with that. Store it in a database or pass it along to some other API. Or maybe parse it later again with jsony.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">jsony</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Message</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span>: <span class="ide">uint64</span></div></div><div class="line"><div class="line-content">    <span class="ide">data</span>: <span class="ide">RawJson</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">messageData</span> <span class="op">=</span> """{"id":123,"data":{"page":"base64","arr":[1,2,3]}}"""</div></div><div class="line"><div class="line-content">  <span class="ide">message</span> <span class="op">=</span> <span class="ide">messageData</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">Message</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># make sure raw json was not parsed</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">message</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">string</span> <span class="op">==</span> """{"page":"base64","arr":[1,2,3]}"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># make sure that dumping raw json produces same result</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">message</span><span class="op">.</span><span class="ide">toJson</span>() <span class="op">==</span> <span class="ide">messageData</span></div></div>  </code></pre>
+<p>You can also wait to parse the json later or maybe even with different types:</p>
+<pre>  <code>message.data.string.fromJson(DataPayload)
+</code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/jsony">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">kdb</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">kdb</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">q</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">k</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bindings</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim structs to work with Kdb in type-safe manner and low-level Nim to Kdb bindings")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install kdb" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim to Kdb type-safe bindings</h1>
+<p>  <a href="https://github.com/inv2004/kdb_nim/actions?query=workflow%3ATests">    <img src="https://github.com/inv2004/kdb_nim/workflows/Tests/badge.svg" style="max-width: 100%;" alt="" />  </a></p>
+<p><strong>Kdb</strong> is a column-oriented database https://kx.com with built-in Q and K languages. It is quite popular for financial and time-series analytics.</p>
+<p><strong>Nim</strong> is a statically typed compiled programming language with an optional GC https://nim-lang.org. It compiles to very efficient C code, that is why its&apos; speed is often near or equals the vanilla-C implementation. In addition Nim shares a lot of Python-like aspects like syntax and simplicity of usage.</p>
+<h3>Reason</h3>
+<p>The goal of this package is not only to provide bindings between the two languages, but to build statically-checked code and structures on top of Kdb, which, due to it&apos;s duck-typed nature leads to a lot of exceptions and runtime errors in Kdb projects.</p>
+<h3>Features / TODO:</h3>
+<ul>
+<li>[x] Support all Kdb types in low-level binding</li>
+<li>[x] Automatic memory management</li>
+<li>[x] IPC + Sync Reply</li>
+<li>[x] Implicit casting between Nim and Kdb types</li>
+<li>[x] Iterators and mutable iterators</li>
+<li>[x] Separate types for static garanties</li>
+<li>[x] Generic types for K-structures</li>
+<li>[x] Async-await IO/IPC dispatching</li>
+<li>[x] IPC Routing macro</li>
+<li>[ ] Native implementation without k bindings</li>
+<li>[ ] Historical files access</li>
+<li>[ ] Translate the package into Java/Scala/Kotlin/Rust (by request)</li>
+</ul>
+<h3>Advantages</h3>
+<p>Except low-level binding from <code>kdb/low</code>, the main goal the library to interact via high-level type-checked interface.
+The best way to understand the advantages of this package is by going through an example:</p>
+<h4>Init part</h4>
+<p>  <strong>updated to async</strong></p>
+<p>Code to run on q-server side to simulate stream data after some-kind of subscription:</p>
+<pre>  <code class="language-kdb">.u.sub:{[x;y;z] system&quot;t 1000&quot;; .z.ts:{[x;y] -1 .Q.s2 x(`enrich;([] n:10?5))}[.z.w]; (1b; `ok)}
+</code></pre>
+<p>Full code is here <a href="/examples/enrich_req.nim">enrich_req.nim</a></p>
+<p>Nim-client:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">RequestT</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">RootObj</span></div></div><div class="line"><div class="line-content">    <span class="ide">n</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">ReplyT</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">RequestT</span></div></div><div class="line"><div class="line-content">    <span class="ide">s</span>: <span class="ide">Sym</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">defineTable</span>(<span class="ide">RequestT</span>)</div></div><div class="line"><div class="line-content"><span class="ide">defineTable</span>(<span class="ide">ReplyT</span>)</div></div>  </code></pre>
+<p>One of the main ideas of the library is to help to catch all type-related errors during compile time. That&apos;s why the first thing we want is to define schema for the tables we use. We generate the schema by <code>defineTable</code> declaration from basic language structures which represent a row of our table.</p>
+<p>Another point is that Nim has inheritance for structures, and we can use it, so the table <code>ReplyT</code> actually has two fields: <code>s</code> and <code>n</code> from <code>RequestT</code>.</p>
+<p><code>defineTable</code> automatically generates a functions to interact with the table according to the struct&apos;s fields and types during compiletime, not runtime.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">d</span> <span class="op">=</span> {<span class="num">1</span>: <span class="str">&quot;one&quot;</span>, <span class="num">2</span>: <span class="str">&quot;two&quot;</span>, <span class="num">3</span>: <span class="str">&quot;three&quot;</span>}<span class="op">.</span><span class="ide">toTable</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">client</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">asyncConnect</span>(<span class="str">&quot;your-server&quot;</span>, <span class="num">9999</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rep</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">client</span><span class="op">.</span><span class="ide">asyncCall</span>[:(<span class="ide">bool</span>, <span class="ide">Sym</span>)](<span class="str">&quot;.u.sub&quot;</span>, <span class="num">123.456</span>, <span class="str">&quot;str&quot;</span>, s"sym")</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">rep</span></div></div>  </code></pre>
+<p>I would like to point out that we provide a type for call function - and it converts the reply from kdb-side into the provided type if possible. Also, we have implicit converter from nim-types into kdb-structures, so we put most of the types into the function arguments without conversion.</p>
+<p>There is also a <code>Sym</code> type with an <code>s</code> constructor to easily distinguish sym from string kdb-types, but if you have Sym in the table, functions like add or transform will implicitly convert string into Sym</p>
+<h4>Main part</h4>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">serve</span>(<span class="ide">client</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">enrich</span>(<span class="ide">data</span>: <span class="ide">KTable</span>[<span class="ide">RequestT</span>]): <span class="ide">KTable</span>[<span class="ide">ReplyT</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>The serve macros generate simple routing for IPC-calls. So, if external server or client will call <code>enrich</code> procedure on the process - it will find definition provided in <code>serve</code> block and will call it. Also, the function can check that the data received from kdb-side matches the scheme for the table we defined and throw an exception otherwise.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">symCol</span> <span class="op">=</span> <span class="ide">data</span><span class="op">.</span><span class="ide">n</span><span class="op">.</span><span class="ide">mapIt</span>(<span class="ide">d</span><span class="op">.</span><span class="ide">getOrDefault</span>(<span class="ide">it</span>))</div></div>  </code></pre>
+<p>Here we generate a new column for our reply, see how we can access table&apos;s fields (<code>n</code> here) and if we made a mistake and typed <code>nn</code> then we would&apos;ve had a compilation error: <code>Error: undeclared field: &apos;nn&apos;</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">result</span> <span class="op">=</span> <span class="ide">data</span><span class="op">.</span><span class="ide">transform</span>(<span class="ide">ReplyT</span>, <span class="ide">symCol</span>)</div></div>  </code></pre>
+<p><code>transform</code> function was made to transform tables from one schema to another. By default it makes in-place transformation, so we do not copy the data, but internally enrich low-level kdb data with the new columns or delete some if necessary. We do not need old <code>data</code> anymore, <code>data</code> is not available after this transformation. So, to transform <code>RequestT</code> into <code>ReplyT</code> we have to add one more column and we provide it in the argument to the function. If <code>transform</code> does not have arguments except the type, then the column is created with default values for the column&apos;s type.</p>
+<p>It&apos;s important point out that we also do type checking here. If we try to put floats into the Sym column for some reasons, we will get a compilation error: <code>Error: transform error: expected: Sym, provided: float</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">result</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">ReplyT</span>(<span class="ide">n</span>: <span class="num">100</span>, <span class="ide">s</span>: <span class="str">&quot;hundred&quot;</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">result</span></div></div>  </code></pre>
+<p>Nim distinguishes between mutable and immutable data, by default result of the procedure is mutable, and it helps us because we are going to modify it by adding row. If we provided a wrong struct or types into the <code>add</code> function then we would get compilation error, I specifically mentioned this because in kdb the problem can only be found at runtime or even in production.</p>
+<p>Additional point that the library automatically detects is it sync or async call and sends reply back according to the requested message type, but it does not block thread in any case, because all logic is implemented in Nim&apos;s asynchronous IO.</p>
+<p>All types implement the output interface, so you will see a reply after <code>echo</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">┌─────┬─────────┐</span></div></div><div class="line"><div class="line-content"><span class="ide">│</span> <span class="ide">n</span>   <span class="ide">│</span> <span class="ide">s</span>       <span class="ide">│</span></div></div><div class="line"><div class="line-content"><span class="ide">├─────┼─────────┤</span></div></div><div class="line"><div class="line-content"><span class="ide">│</span> <span class="num">2</span>   <span class="ide">│</span> <span class="ide">two</span>     <span class="ide">│</span></div></div><div class="line"><div class="line-content"><span class="ide">│</span> <span class="num">4</span>   <span class="ide">│</span>         <span class="ide">│</span></div></div><div class="line"><div class="line-content"><span class="ide">│</span> <span class="num">3</span>   <span class="ide">│</span> <span class="ide">three</span>   <span class="ide">│</span></div></div><div class="line"><div class="line-content"><span class="op">.</span>     <span class="op">.</span>         <span class="op">.</span></div></div><div class="line"><div class="line-content"><span class="ide">│</span> <span class="num">100</span> <span class="ide">│</span> <span class="ide">hundred</span> <span class="ide">│</span></div></div><div class="line"><div class="line-content"><span class="ide">└─────┴─────────┘</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">runForever</span>()</div></div>  </code></pre>
+<p>The lib supports asyncdispatch module of the Nim language, that is why we start main event loop here.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache-2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/inv2004/kdb_nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

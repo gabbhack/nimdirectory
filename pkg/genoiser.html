@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">genoiser</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bam</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cram</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">vcf</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">genomics</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("functions to tracks for genomics data files")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install genoiser" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h4>genoiser: the noise is the signal</h4>
+<p>given a lot of alignment files, <code>genoiser</code> helps to find the areas of the genome that have noise signals
+that result in bad variant (small, SV, ME) calls. It finds per-sample noise and then aggregates across
+samples and reports the number of samples at each base in the genome that had a given noise signal.
+These regions can be used as black-list regions instead of or in addition to LCRs.</p>
+<p><a href="https://github.com/brentp/mosdepth">mosdepth</a> uses chromosome-sized arrays of
+int32&apos;s to track sequencing depth. This is <a href="https://brentp.github.io/post/arrays/">fast and flexible</a>.</p>
+<p>given <code>mosdepth</code> as a special-case for <em>depth</em>, <code>genoiser</code> is a general case for user-defined functions.
+<code>mosdepth</code> could be implemented with <code>genoiser</code>.</p>
+<p>An added benefit is the reduction of memory; <code>mosdepth</code> allocates an int32 array the size of each
+chromosome--meaning about 1GB of memory for chromosome 1. <code>genoiser</code> can use smaller-sized chunks to
+tile across each chromosome. This is important because it uses 1 array for each user-defined function.
+It defaults to 8 megabase chunks as that is the smallest size with no noticeable effect on performance
+in our tests. Chunk sizes down to 100KB have some, but minor effect on performance.</p>
+<p>The idea is of <code>genoiser</code> is that it will handle all accounting, a user
+simply defines a <a href="https://nim-lang.org">nim</a> function that takes an alignment and then
+indicates which genomic positions to increment. For example, to calculate depth, this user
+function would increment from start to end:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">depthfun</span><span class="op">*</span>(<span class="ide">aln</span>:<span class="ide">Record</span>, <span class="ide">posns</span>:<span class="kwd">var</span> <span class="ide">seq</span>[<span class="ide">mrange</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## depthfun is an example of a `fun` that can be sent to `genoiser`.</span></div></div><div class="line"><div class="line-content">  <span class="com">## it increments from aln.start to aln.stop of passing reads.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">f</span> <span class="op">=</span> <span class="ide">aln</span><span class="op">.</span><span class="ide">flag</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">f</span><span class="op">.</span><span class="ide">unmapped</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">secondary</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">qcfail</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">dup</span>: <span class="kwd">return</span></div></div><div class="line"><div class="line-content">  <span class="ide">posns</span><span class="op">.</span><span class="ide">add</span>((<span class="ide">aln</span><span class="op">.</span><span class="ide">start</span>, <span class="ide">aln</span><span class="op">.</span><span class="ide">stop</span>, <span class="num">1</span>))</div></div>  </code></pre>
+<p>The <code>posns</code> value is sent to the function by <code>genoiser</code> and the user-defined function
+can add to it as many elements as desired. In this case it increments from <code>aln.start</code>
+to <code>aln.stop</code> by <code>1</code>. It can inrement by any integer value.</p>
+<p>The user could also choose to increment any soft or hard-clip location:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">softfun</span><span class="op">*</span>(<span class="ide">aln</span>:<span class="ide">Record</span>, <span class="ide">posns</span>:<span class="kwd">var</span> <span class="ide">seq</span>[<span class="ide">mrange</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## softfun an example of a `fun` that can be sent to `genoiser`.</span></div></div><div class="line"><div class="line-content">  <span class="com">## it sets positions where there are soft-clips</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">f</span> <span class="op">=</span> <span class="ide">aln</span><span class="op">.</span><span class="ide">flag</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">f</span><span class="op">.</span><span class="ide">unmapped</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">secondary</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">supplementary</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">qcfail</span> <span class="kwd">or</span> <span class="ide">f</span><span class="op">.</span><span class="ide">dup</span>: <span class="kwd">return</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">cig</span> <span class="op">=</span> <span class="ide">aln</span><span class="op">.</span><span class="ide">cigar</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">cig</span><span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">1</span>: <span class="kwd">return</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">pos</span> <span class="op">=</span> <span class="ide">aln</span><span class="op">.</span><span class="ide">start</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">op</span> <span class="kwd">in</span> <span class="ide">cig</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">op</span><span class="op">.</span><span class="ide">op</span> <span class="op">==</span> <span class="ide">CigarOp</span><span class="op">.</span><span class="ide">soft_clip</span> <span class="kwd">or</span> <span class="ide">op</span><span class="op">.</span><span class="ide">op</span> <span class="op">==</span> <span class="ide">CigarOp</span><span class="op">.</span><span class="ide">hard_clip</span>:</div></div><div class="line"><div class="line-content">      <span class="com"># for this function, we want the exact break-points, not the span of the event,</span></div></div><div class="line"><div class="line-content">      <span class="com"># so we increment the position and the one that follows it.</span></div></div><div class="line"><div class="line-content">      <span class="ide">posns</span><span class="op">.</span><span class="ide">add</span>((<span class="ide">pos</span>, <span class="ide">pos</span><span class="op">+</span><span class="num">1</span>, <span class="num">1</span>))</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">op</span><span class="op">.</span><span class="ide">consumes</span><span class="op">.</span><span class="ide">reference</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">pos</span> <span class="op">+=</span> <span class="ide">op</span><span class="op">.</span><span class="ide">len</span></div></div>  </code></pre>
+<h3>Utility</h3>
+<p>This library provides the machinery. Other command-line tools will use this for more obviously useful things.</p>
+<h2>Speed</h2>
+<p>for maximum speed, compile with <code>nim c -d:release --passC:-flto --passL:-s --gc:markAndSweep src/genoiser.nim</code></p>
+<h2>CLI</h2>
+<p>The command-line interface allows running pre-specified noise filters in 2 steps. The first steps calculates the &quot;noise&quot; in each sample.</p>
+<pre>  <code>genoiser per-sample --fasta $reference results/$sample /path/to/$sample.bam # or cram
+</code></pre>
+<p>This will use a single thread and it will take about 1 hour for 30X bams and a bit more for crams. It will output 5 files per sample.
+at the specificied prefix, in this case, <code>results/$sample</code></p>
+<p>After all samples have been run, then the user can <code>aggregate</code> the signal across samples. The recommended commands are:</p>
+<pre>  <code>chroms=&quot;$(seq 1 22) X Y&quot;
+
+########
+## soft
+########
+# count number of samples at each site where more than 1 and less than 15% of reads were soft-clipped.
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value / depth) &lt; 0.15 &amp; (value &gt; 1)&apos; results/*.genoiser.{}.soft.bed &gt; soft.{}.bed&quot;
+
+# count number of samples at each site where more than 2 where soft-clipped.
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value &gt; 2)&apos; results/*.genoiser.{}.soft.bed &gt; high-soft.{}.bed&quot;
+
+
+###########
+## mq0
+###########
+
+# count number of samples at each site where more than 2 reads had MQ0.
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value &gt; 2)&apos; results/*.genoiser.{}.mq0.bed &gt; mq0.{}.bed&quot;
+
+
+############
+## weird
+############
+# count number of samples at each site where more than 1 and less than 15% of reads were weird.
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value / depth) &lt; 0.15 &amp; (value &gt; 1)&apos; results/*.genoiser.{}.weird.bed &gt; weird.{}.bed&quot;
+
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value &gt; 2)&apos; results/*.genoiser.{}.weird.bed &gt; high-weird.{}.bed&quot;
+
+############
+## mismatches
+############
+
+# count number of samples at each site where 10 or more reads read with 4 or more mismatches overlapped.
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;value &gt; 10&apos; results/*.genoiser.{}.mismatches.bed &gt; mismatches.{}.bed&quot;
+
+
+##################
+# interchromosomal
+##################
+
+# count number of samples at each site where more than 1 and less than 15% of reads were interchromosomal.
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value / depth) &lt; 0.15 &amp; (value &gt; 1)&apos; results/*.genoiser.{}.interchromosomal.bed &gt; interchromosomal.{}.bed&quot;
+
+echo $chroms | tr &apos; &apos; &apos;\n&apos; \
+    | gargs -d -v -p 5 &quot;genoiser aggregate -t 10 -e &apos;(value &gt; 2)&apos; results/*.genoiser.{}.interchromosomal.bed &gt; high-interchromosomal.{}.bed&quot;
+
+</code></pre>
+<p>where <code>gargs</code> is available as a static binary from <a href="https://github.com/brentp/gargs/releases">here</a></p>
+<p>This will output 1 file per chromosome, per metric. The resulting files are the desired output.</p>
+<p>Note that this will use <code>5*10</code> threads. Adjust this to match your CPU requirements.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">userdef</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">akito</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">gosu</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">su-exec</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">docker</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">kubernetes</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">helm</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">permission</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linux</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">posix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">postgres</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">process</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">security</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">alpine</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">busybox</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">useradd</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">adduser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">shadow</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">musl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">libc</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A more advanced adduser for your Alpine based Docker images.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install userdef" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <a href="https://nimble.directory/pkg/userdef">    <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" />  </a></p>
+<p><a href="https://github.com/theAkito/userdef">  <img src="https://img.shields.io/badge/project-source-2a2f33?style=plastic" style="max-width: 100%;" alt="Source" /></a>
+<a href="https://nim-lang.org/">  <img src="https://img.shields.io/badge/language-Nim-orange.svg?style=plastic" style="max-width: 100%;" alt="Language" /></a></p>
+<p>  <img src="https://img.shields.io/github/last-commit/theAkito/userdef?style=plastic" style="max-width: 100%;" alt="Last Commit" /></p>
+<p><a href="https://www.gnu.org/licenses/gpl-3.0.txt">  <img src="https://img.shields.io/badge/license-GPL--3.0-informational?style=plastic" style="max-width: 100%;" alt="GitHub" /></a>
+<a href="https://liberapay.com/Akito/">  <img src="https://img.shields.io/liberapay/patrons/Akito?style=plastic" style="max-width: 100%;" alt="Liberapay patrons" /></a></p>
+<h2>What</h2>
+<p>This tool is a more advanced <code>adduser</code> / <code>useradd</code> for your <a href="https://www.alpinelinux.org/">Alpine</a> and <a href="https://www.busybox.net/">BusyBox</a> based Docker images.</p>
+<p>For example, this tool may create a custom OS user with a custom ID inside pre-made Docker images, which perhaps already have a custom user defined and rebuilding the Docker image just to have your custom user in it is not an option.</p>
+<h2>Why</h2>
+<h3>Reason 1</h3>
+<p>Now, more and more server apps try to go with the current meta of being available on Kubernetes, etc. This is a good idea, however it&apos;s often not well executed.
+Almost all of the popular server apps are not cloud-native. Their structure is still of some legacy kind.
+Examples are <a href="https://mattermost.com/">Mattermost</a>, <a href="https://gitea.io/en-us/">Gitea</a>, <a href="https://nextcloud.com/">Nextcloud</a>.
+These server apps have Helm Charts available. However, applying best practices, especially the ones regarding security are not easy to achieve.
+Especially, when talking about the <code>podSecurityContext</code>. The <code>fsGroup</code> option is either not respected properly, which leads to broken deployments, or it&apos;s not even available and you have to add it yourself to the Helm Chart.</p>
+<p>For example, take the Gitea Helm Chart as an example. You are allowed to set the <code>podSecurityContext</code>:
+https://gitea.com/gitea/helm-chart/src/commit/d94226765d6e1f197a3112e1b1abbcd73a8bea33/values.yaml#L19-L20</p>
+<p>But, if you provide your custom <code>fsGroup</code> value, then the deployment will be broken. Why?
+https://github.com/go-gitea/gitea/blob/66f2210feca0b50d305a46a203c2b3d2f4d3790b/Dockerfile.rootless#L39-L48</p>
+<p>Because the user and group ID of <code>1000</code> is hard-coded into the Docker image.</p>
+<p>Now, imagine you have an <code>sshfs</code> mount, which requires you using the user of the ID <code>9234</code>.
+The hard-coded <code>1000</code> inside the image breaks usage of this <code>sshfs</code> mount, just because it does not let you define a custom user with a custom ID.</p>
+<p>To make all this work more smoothly, this tool aims to delete the existing user in that Docker image and then recreate it with <em>your</em> custom user, which has an ID defined by <em>you</em>, instead of being forced to use the randomly chosen hard-coded user ID.</p>
+<h3>Reason 2</h3>
+<p>You may just as well use this tool as a better <code>adduser</code> where the actual <code>adduser</code> or <code>useradd</code> (like the one in <a href="https://www.alpinelinux.org/">Alpine</a>) have arbitrary and unnecessary restrictions, like for example <a href="https://stackoverflow.com/q/41807026/7061105">limiting the UID/GID size to 256000</a>.</p>
+<h2>How</h2>
+<p>Example using the rootless Docker image for Gitea:</p>
+<pre>  <code class="language-dockerfile">## Get the binary.
+## The default Docker Tag provides the Alpine (musl) based binary.
+FROM akito13/userdef AS base
+## Pull the image you want to modify the executing user of.
+FROM gitea/gitea:1.16.5-linux-amd64-rootless
+
+## We temporarily need to use the root user,
+## as we are doing administrative tasks, like e.g. modifying an OS user.
+USER root:root
+COPY --from=base /userdef /userdef
+## 1. Change the existing user.
+## 2. Use that user to `chown` relevant folders.
+## 3. Remove the binary, because the user has been changed,
+##    i.e. our job is done here.
+RUN /userdef -h=/var/lib/gitea/git -n=git -u=9234 -g=9234 &amp;&amp; \
+  chown git:git -R /var/lib/gitea /etc/gitea &amp;&amp; \
+  rm -f /userdef
+
+## Switch to the now relevant executing user.
+USER 9234:9234
+## Taken from https://github.com/go-gitea/gitea/blob/66f2210feca0b50d305a46a203c2b3d2f4d3790b/Dockerfile.rootless#L71-L72
+ENTRYPOINT [&quot;/usr/local/bin/docker-entrypoint.sh&quot;]
+CMD []
+</code></pre>
+<p>This way, you get the behaviour of the original Docker image, but instead being forced to use the hard-coded user ID, you adjust the user inside the image to the one <em>you</em> specify.</p>
+<p>For a live example, run <code>nimble example</code>.</p>
+<h3>CLI Usage</h3>
+<pre>  <code>Usage:
+  userdef -n=&lt;user-name&gt; -u=&lt;user-id&gt; -h=&lt;user-home&gt;
+          [-g=&lt;user-group-id&gt;] [-l | -l=[true|false]]
+          [-c=&lt;path-to-config-file&gt; | &lt;path-to-config-file&gt;]
+
+Examples:
+  userdef --help
+  userdef -h=/var/lib/gitea/git -n=git -u=9234 -g=9234
+  userdef -h=/home/langlang -n=langlang -u=290111 -g=290111 --long
+  userdef -h=/overwrites/home/value/in/userdef.json -l=true /path/to/userdef.json
+
+Options:
+  -n, --name            Name of the user to modify or add.
+  -u, --uid             User ID.
+  -h, --home            Path to user&apos;s home.
+  -c, --config          (Optional) Provide path to configuration file.
+  -g, --gid             (Optional) Group ID. If empty, then GID will be same as UID.
+  -l, --long            (Optional) Whether long IDs (greater than 256000) are guaranteed to be supported.
+  -v, --version         App version information.
+  --help                This help text.
+
+Hints:
+  * If a user with the provided name already exists,
+    then it will be deleted and a new one will be created,
+    to replace the original one.
+
+  * Providing a configuration file works by using the `--config` option or
+    by providing the path without using any option.
+
+  * You may replace the equal signs with colons when providing CLI arguments.
+    Example: userdef -h:/home/langlang -n:langlang -u:290111 -g:290111 --long
+
+  * You also may replace the equal signs with nothing when providing CLI arguments.
+    Example: userdef -h/home/langlang -nlanglang -u290111 -g290111 --long
+</code></pre>
+<h3>Alternative Sources</h3>
+<blockquote>
+<p>Last week i bought a chain saw with a twisted handle. Perhaps i wasn&apos;t careful, but by accident it chopped one of my arm off, then i thought to myself &quot;gosh, this is POWERFUL!&quot;. [...]</p>
+</blockquote>
+<h6>---- <a href="http://xahlee.info/">Xah Lee</a></h6>
+<p><br />
+If you are one of those enthusiastic Linux fans, who want to do anything possible on Linux, even if it does not make sense, do not worry, I have you covered.</p>
+<h4>Installing the binary using <a href="https://github.com/nim-lang/nimble#readme">Nim&apos;s package manager</a>:</h4>
+<pre>  <code class="language-bash">nimble install userdef
+</code></pre>
+<h4>Installing the binary using <a href="https://github.com/theAkito/userdef/releases">Github Releases</a>:</h4>
+<pre>  <code class="language-bash">curl -fsSLo userdef https://github.com/theAkito/userdef/releases/download/0.3.0/userdef-github-0.3.0-linux-amd64
+chmod +x userdef
+mv userdef /usr/bin/userdef
+</code></pre>
+<h2>Where</h2>
+<p>Docker containers running Docker images based on Linux.
+You will need it most likely on BusyBox based images, like Alpine.</p>
+<p>Only Linux is officially supported.</p>
+<p>Works on <code>libc</code> (normal Linux) and <code>musl</code> (Alpine, Busybox, etc.) based Docker images.</p>
+<p>For further information on this topic, please visit this project&apos;s <a href="https://hub.docker.com/r/akito13/userdef">Docker Hub page</a>.</p>
+<h2>Goals</h2>
+<ul>
+<li>Reliability</li>
+</ul>
+<h2>Project Status</h2>
+<p>Stable Beta.</p>
+<p>This app is well tested &amp; works, but needs more testing and feedback from 3rd parties. --&gt; Please help!</p>
+<h2>TODO</h2>
+<ul>
+<li>  <del>Make ID adjustable</del></li>
+<li>  <del>Make Name adjustable</del></li>
+<li>  <del>Read from config.json</del></li>
+<li>  <del>Support long and short IDs</del></li>
+<li>  <del>Add base Dockerfile</del></li>
+<li>  <del>Add support for multi-arch Docker image</del></li>
+<li>  <del>Add some kind of Continuous Delivery for binary in Docker image</del></li>
+<li>  <del>Add meaningful example in README</del></li>
+<li>  <del>Add libc based Docker images for binary provision (Alpine is musl based)</del></li>
+<li>  <del>Add CLI Usage Info to README</del></li>
+<li>  <del>Publish to Nimble</del></li>
+<li>  <del>Publish to [Awesome Docker](https://github.com/veggiemonk/awesome-docker)</del></li>
+<li>  <del>Use Nimscript instead of Bash for Build scripts</del></li>
+<li>  <del>Add `nim.cfg` for optimised `nimble install` build</del></li>
+<li>  <del>Test with GID different from UID</del></li>
+<li>  <del>Provide BUILD_VERSION, BUILD_REVISION, BUILD_DATE in Docker Release images</del></li>
+<li>  <del>Add Github Release</del></li>
+<li>  <del>Use [nim-useradd](https://github.com/theAkito/nim-useradd) library for the backend</del></li>
+<li>Add meaningful practical examples</li>
+<li>Parse root Dockerfile and extract correct original user ID and user name</li>
+</ul>
+<h2>License</h2>
+<p>Copyright © 2022-2023  Akito <a href="mailto:the@akito.ooo">the@akito.ooo</a></p>
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        GPL-3.0-or-later
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

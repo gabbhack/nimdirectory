@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">amysql</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">async</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mysql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">client</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">connector</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">driver</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Async MySQL Connector write in pure Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install amysql" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>amysql  <a href="https://travis-ci.org/bung87/amysql">  <img src="https://travis-ci.org/bung87/amysql.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a></h1>
+<p><code>amysql</code> implements (a subset of) the MySQL/MariaDB client protocol based on asyncnet and asyncdispatch.</p>
+<p><code>amysql</code> implements both the <strong>text protocol</strong> (send a simple string query, get back results as strings) and the <strong>binary protocol</strong> (get a prepared statement handle from a string with placeholders; send a set of value bindings, get back results as various datatypes approximating what the server is using).</p>
+<p><code>amysql</code> implements async connection pool(<code>amysql/async_pool</code>) and a threaded pool(<code>amysql/db_pool</code>).</p>
+<h2>Usage</h2>
+<h3>Compile flags</h3>
+<pre>  <code>async macro:
+ChronosAsync 
+
+chronos use its own async macro will conflicts with std async macro , use this flag if your project use chronos.  
+
+socket io:
+const ReadTimeOut {.intdefine.} = 30_000
+const WriteTimeOut {.intdefine.} = 60_000  
+
+idle check:
+const TestWhileIdle* {.booldefine.} = true
+const MinEvictableIdleTime {.intdefine.} = 60_0000
+const TimeBetweenEvictionRuns {.intdefine.} = 30_000  
+
+compression:  
+const mysql_compression_mode {.booldefine.} = false
+const ZstdCompressionLevel {.intdefine.} = 3
+
+pool:
+const ResetConnection* {.booldefine.} = true # reset session when reuse 
+
+</code></pre>
+<h2>Goals</h2>
+<p>The goals of this project are:</p>
+<ol>
+<li>  <strong>Similar API to Nim&apos;s std db lib</strong></li>
+<li><strong>Async:</strong> All operations must be truly asynchronous whenever possible.</li>
+<li><strong>High performance:</strong> Avoid unnecessary allocations and copies when reading data.</li>
+<li><strong>Managed:</strong> Managed code only, no native code.</li>
+<li><strong>Independent:</strong> This is a clean-room reimplementation of the <a href="https://dev.mysql.com/doc/internals/en/client-server-protocol.html">MySQL Protocol</a>, not based on C lib.</li>
+</ol>
+<h2>Usage</h2>
+<h3>connection</h3>
+<p>open connection by passing host, username, password, database<br />
+last optional parameter is <code>connectAttrs: Table[system.string, system.string]</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">conn</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">amysql</span><span class="op">.</span><span class="ide">open</span>(<span class="str">&quot;localhost:3306&quot;</span>,<span class="ide">username</span>,<span class="ide">password</span>,<span class="ide">database</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">close</span>()</div></div>  </code></pre>
+<p>open connection by passing dsn</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">conn</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">amysql</span><span class="op">.</span><span class="ide">open</span>(fmt"mysql://{username}:{password}@{host}/{database}?charset=utf8mb4,utf8&sql_mode=TRADITIONAL")</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">close</span>()</div></div>  </code></pre>
+<p>open connection pool</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">amysql</span><span class="op">/</span><span class="ide">async_pool</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">amysql</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">pool</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">newAsyncPool</span>(<span class="ide">host</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">username</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">password</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">database</span>,<span class="num">2</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">conIdx</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">pool</span><span class="op">.</span><span class="ide">getFreeConnIdx</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">conn</span> <span class="op">=</span> <span class="ide">pool</span><span class="op">.</span><span class="ide">getFreeConn</span>(<span class="ide">conIdx</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;insert into `num_tests` (s, u8, s8, u, i, b) values (?, ?, ?, ?, ?, ?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="str">&quot;one&quot;</span>, <span class="num">1</span>, <span class="num">1</span>, <span class="num">1</span>, <span class="num">1</span>, <span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="str">&quot;max&quot;</span>, <span class="num">255</span>, <span class="num">127</span>, <span class="num">4294967295</span>, <span class="num">2147483647</span>, <span class="num">9223372036854775807&apos;</span><span class="ide">u64</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="str">&quot;min&quot;</span>, <span class="num">0</span>, <span class="op">-</span><span class="num">128</span>, <span class="num">0</span>, <span class="op">-</span><span class="num">2147483648</span>, (<span class="op">-</span><span class="num">9223372036854775807&apos;i64</span> <span class="op">-</span> <span class="num">1</span>))</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="str">&quot;foo&quot;</span>, <span class="num">128</span>, <span class="op">-</span><span class="num">127</span>, <span class="num">256</span>, <span class="op">-</span><span class="num">32767</span>, <span class="op">-</span><span class="num">32768</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div><div class="line"><div class="line-content"><span class="ide">pool</span><span class="op">.</span><span class="ide">returnConn</span>(<span class="ide">conIdx</span>)</div></div>  </code></pre>
+<h3>database</h3>
+<p>get current database</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">getCurrentDatabase</span>()</div></div>  </code></pre>
+<p>select database</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">selectDatabase</span>()</div></div>  </code></pre>
+<h3>exec and query</h3>
+<p><strong>rawQuery</strong> api return every row in form <code>seq[string]</code></p>
+<p><strong>query</strong> api return every row in variant bounded types</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> </div></div><div class="line"><div class="line-content">  <span class="ide">ColumnDefinition</span><span class="op">*</span> {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">object</span> </div></div><div class="line"><div class="line-content">    <span class="ide">catalog</span><span class="op">*</span>     : <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">schema</span><span class="op">*</span>      : <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">table</span><span class="op">*</span>       : <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">origTable</span><span class="op">*</span>  : <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span><span class="op">*</span>        : <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">origName</span><span class="op">*</span>   : <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">charset</span><span class="op">*</span>      : <span class="ide">int16</span></div></div><div class="line"><div class="line-content">    <span class="ide">length</span><span class="op">*</span>      : <span class="ide">uint32</span></div></div><div class="line"><div class="line-content">    <span class="ide">columnType</span><span class="op">*</span> : <span class="ide">FieldType</span></div></div><div class="line"><div class="line-content">    <span class="ide">flags</span><span class="op">*</span>       : <span class="ide">set</span>[<span class="ide">FieldFlag</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">decimals</span><span class="op">*</span>    : <span class="ide">int</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="ide">ResultSet</span><span class="op">*</span>[<span class="ide">T</span>] {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">object</span> </div></div><div class="line"><div class="line-content">    <span class="ide">status</span><span class="op">*</span>     : <span class="ide">ResponseOK</span></div></div><div class="line"><div class="line-content">    <span class="ide">columns</span><span class="op">*</span>    : <span class="ide">seq</span>[<span class="ide">ColumnDefinition</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">rows</span><span class="op">*</span>       : <span class="ide">seq</span>[<span class="ide">seq</span>[<span class="ide">T</span>]]</div></div>  </code></pre>
+<p><code>rawQuery</code> and <code>rawExec</code> returns <code>Future[ResultSet[system.string]]</code> , <code>rawExec</code> has empty rows.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawExec</span>(<span class="str">&quot;drop table if exists num_tests&quot;</span>)</div></div>  </code></pre>
+<p><code>rawQuery</code> has optional parameter <code>onlyFirst:bool</code> which determine whether only fetch first row.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r1</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;select s, u8, s8, u, i, b from num_tests order by u8 asc&quot;</span>)</div></div>  </code></pre>
+<p>prepare query returns <code>Future[amysql.SqlPrepared]</code> which can be used with <code>query</code> multiple times, after <code>query</code> executed don&apos;t forget call <code>conn.finalize(sqlPrepared)</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;insert into `num_tests` (s, u8, s8, u, i, b) values (?, ?, ?, ?, ?, ?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="str">&quot;one&quot;</span>, <span class="num">1</span>, <span class="num">1</span>, <span class="num">1</span>, <span class="num">1</span>, <span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="str">&quot;max&quot;</span>, <span class="num">255</span>, <span class="num">127</span>, <span class="num">4294967295</span>, <span class="num">2147483647</span>, <span class="num">9223372036854775807&apos;</span><span class="ide">u64</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div>  </code></pre>
+<p>Retrieves a single row</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r5</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">getRow</span>(sql"select s, u8, s8, u, i, b from num_tests order by u8 asc")</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">r5</span> <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;min&quot;</span>, <span class="str">&quot;0&quot;</span>, <span class="str">&quot;-128&quot;</span>, <span class="str">&quot;0&quot;</span>, <span class="str">&quot;-2147483648&quot;</span>, <span class="str">&quot;-9223372036854775808&quot;</span>]</div></div>  </code></pre>
+<p>executes the query and returns the first column of the first row</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">checkpoint</span> <span class="str">&quot;getValue&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r6</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">getValue</span>(sql"select s, u8, s8, u, i, b from num_tests order by u8 asc")</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">r6</span> <span class="op">==</span> <span class="str">&quot;min&quot;</span></div></div>  </code></pre>
+<h3>column types</h3>
+<p>float and double</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE `float_test`(`fla` FLOAT,`flb` FLOAT,`dba` DOUBLE(10,2),`dbb` DOUBLE(10,2))&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO `float_test` values (?,?,?,?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="num">1.2&apos;f32</span>, <span class="num">1.2&apos;f32</span>, <span class="num">1.2&apos;f64</span>, <span class="num">1.2&apos;f64</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div>  </code></pre>
+<p>datetime</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">times</span></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE test_dt(col DATETIME NOT NULL)&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO test_dt (col) VALUES (?),(?),(?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d1</span> <span class="op">=</span> <span class="ide">initDateTime</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>,<span class="num">10</span>,<span class="num">10</span>,<span class="num">10</span>,<span class="ide">utc</span>())</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d2</span> <span class="op">=</span> <span class="ide">initDateTime</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>,<span class="num">4</span>,<span class="num">40</span>,<span class="num">10</span>,<span class="ide">utc</span>())</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d3</span> <span class="op">=</span> <span class="ide">initDateTime</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>,<span class="num">18</span>,<span class="num">10</span>,<span class="num">10</span>,<span class="ide">utc</span>())</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="ide">d1</span>, <span class="ide">d2</span>, <span class="ide">d3</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div>  </code></pre>
+<p>timestamp</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE test_dt(col TIMESTAMP NOT NULL)&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO test_dt (col) VALUES (?),(?),(?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d1</span> <span class="op">=</span> <span class="ide">initDateTime</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>,<span class="num">10</span>,<span class="num">10</span>,<span class="num">10</span>,<span class="ide">utc</span>())</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d2</span> <span class="op">=</span> <span class="ide">initDateTime</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>,<span class="num">4</span>,<span class="num">40</span>,<span class="num">10</span>,<span class="ide">utc</span>())</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d3</span> <span class="op">=</span> <span class="ide">initDateTime</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>,<span class="num">18</span>,<span class="num">10</span>,<span class="num">10</span>,<span class="ide">utc</span>())</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="ide">d1</span><span class="op">.</span><span class="ide">toTime</span>, <span class="ide">d2</span><span class="op">.</span><span class="ide">toTime</span>, <span class="ide">d3</span><span class="op">.</span><span class="ide">toTime</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div>  </code></pre>
+<p>date</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE test_dt(col DATE NOT NULL)&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO test_dt (col) VALUES (?),(?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d1</span> <span class="op">=</span> <span class="ide">initDate</span>(<span class="num">1</span>,<span class="num">1.</span><span class="ide">Month</span>,<span class="num">2020</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d2</span> <span class="op">=</span> <span class="ide">initDate</span>(<span class="num">31</span>,<span class="num">12.</span><span class="ide">Month</span>,<span class="num">2020</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="ide">d1</span>, <span class="ide">d2</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div>  </code></pre>
+<p>time</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">times</span>  </div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE test_dt(start_at TIME,end_at TIME)&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO test_dt (start_at,end_at) VALUES (?,?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d1</span> <span class="op">=</span> <span class="ide">initDuration</span>(<span class="ide">hours</span><span class="op">=</span><span class="num">8</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d2</span> <span class="op">=</span> <span class="ide">initDuration</span>(<span class="ide">hours</span><span class="op">=</span><span class="num">10</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="ide">d1</span>, <span class="ide">d2</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div>  </code></pre>
+<p>json</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE test_dt(col JSON)&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO test_dt (col) VALUES (?),(?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d1</span> <span class="op">=</span> <span class="ide">parseJson</span>("""
+{
+"name": "Nimmer",
+"age": 21
+}
+""")</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d2</span> <span class="op">=</span> <span class="ide">parseJson</span>(<span class="str">&quot;[1, 2, 3, 4]&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="ide">d1</span>, <span class="ide">d2</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Read them back using the text protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r1</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;SELECT * FROM test_dt&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># mysql return `{&quot;age&quot;: 21, &quot;name&quot;: &quot;Nimmer&quot;}`</span></div></div><div class="line"><div class="line-content"><span class="com"># $d1 return `{&quot;name&quot;:&quot;Nimmer&quot;,&quot;age&quot;:21}`</span></div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">r1</span><span class="op">.</span><span class="ide">rows</span>[<span class="num">0</span>][<span class="num">0</span>] <span class="op">==</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">sqlFormat</span>(<span class="ide">d1</span>)</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">r1</span><span class="op">.</span><span class="ide">rows</span>[<span class="num">1</span>][<span class="num">0</span>] <span class="op">==</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">sqlFormat</span>(<span class="ide">d2</span>)</div></div>  </code></pre>
+<p>geometry</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="str">&quot;CREATE TABLE geotest (g GEOMETRY)&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Insert values using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">insrow</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;INSERT INTO geotest (g) VALUES (?)&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">d1</span> <span class="op">=</span> <span class="ide">newMyGeometry</span>(<span class="ide">data</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">insrow</span>, <span class="ide">d1</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">insrow</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Now read them back using the binary protocol</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rdtab</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">prepare</span>(<span class="str">&quot;SELECT * FROM geotest&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r2</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">rdtab</span>)</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">r2</span><span class="op">.</span><span class="ide">rows</span>[<span class="num">0</span>][<span class="num">0</span>] <span class="op">==</span> <span class="ide">d1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">finalize</span>(<span class="ide">rdtab</span>)</div></div>  </code></pre>
+<p>load data from csv</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">CreateTable</span> <span class="op">=</span> """
+  CREATE TABLE IF NOT EXISTS `person`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `fname` VARCHAR(100) NOT NULL,
+   `lname` VARCHAR(40) NOT NULL,
+   PRIMARY KEY ( `id` )
+  ) ENGINE=MyISAM DEFAULT CHARSET=utf8
+  """</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">EnableLocalInfileData</span> <span class="op">=</span> <span class="str">&quot;SET GLOBAL local_infile = true&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">tryQuery</span>(<span class="ide">SqlQuery</span> <span class="ide">EnableLocalInfileData</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(<span class="ide">CreateTable</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">filename</span> <span class="op">=</span> <span class="ide">currentSourcePath</span><span class="op">.</span><span class="ide">parentDir</span> <span class="op">/</span> <span class="str">&quot;localinfile.csv&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">rawQuery</span>(fmt"LOAD DATA LOCAL INFILE '{filename}' INTO TABLE person")</div></div>  </code></pre>
+<h2>Testing</h2>
+<p>platform: Linux and OSX</p>
+<p>mysql: 5.7 8.0</p>
+<p>mariadb: 10</p>
+<h2>TODO</h2>
+<ul>
+<li>[ ] Finish caching_sha2_password_auth.</li>
+<li>[ ] Testing ssl mode ,unix socket mode.</li>
+<li>[x] mutiple statements and mutilple resultsets.</li>
+<li>[x] compression mode (zstd)</li>
+<li>[x] handle connection options</li>
+</ul>
+<h2>Acknowledgements</h2>
+<p>  <a href="https://github.com/PyMySQL/PyMySQL">PyMySQL</a></p>
+<p>  <a href="https://github.com/mysql-net/MySqlConnector">MySqlConnector</a></p>
+<p><a href="https://github.com/tulayang">tulayang</a>&apos;s <a href="https://github.com/tulayang/asyncmysql">asyncmysql</a> and <a href="https://github.com/tulayang/mysqlparser">mysqlparser</a></p>
+<p>  <a href="https://github.com/wiml/nim-asyncmysql">wiml/nim-asyncmysql</a></p>
+<p>  <a href="https://github.com/go-sql-driver/mysql">go-sql-driver/mysql</a></p>
+<h2>History</h2>
+<p>When I starting this project, I have <code>wiml/nim-asyncmysql</code> and <code>asyncmysql</code> for inspiration, the initial goal is provide basic asynchronous apis compare to Nim std library <code>db_mysql</code>&apos;s synchronous apis, <code>asyncmysql</code> provide mutiple results feature and callback style apis by design, he map mysql protocol flags to exact to c types, <code>wiml/nim-asyncmysql</code> provide asynchronous apis and map flags to enum type and the project design is very obvious to me, so I choose base on <code>wiml/nim-asyncmysql</code>.</p>
+<p>When this project ready to use, it provide single statement and single results, I starting considering provide compression api, at that time data recevie as string and passing around procs, I starting store data to <code>seq[char]</code> as I dont want decompress data and passing around procs, and it also help me move next step, implements multiple results feature. Compare to <code>asyncmysql</code> ,<code>asyncmysql</code> use a constant size array buffer to store data, I may change as it so in the future.</p>
+<p>Above declaration may not explain &quot;Why this project exists ?&quot;, here&apos;s some key points.</p>
+<p>When I starting this project <code>asyncmysql</code> and <code>wiml/nim-asyncmysql</code> have no commits activities for years. <code>wiml/nim-asyncmysql</code> even can&apos;t compile for current Nim version.</p>
+<ol>
+<li><code>db_mysql</code> provide synchronous apis and need external c library.</li>
+<li><code>asyncmysql</code> provide callback style apis.</li>
+<li><code>wiml/nim-asyncmysql</code> satisify the design, but need update to current Nim version, more column data type mapping, more features , more client capbilities.</li>
+</ol>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/bung87/amysql">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

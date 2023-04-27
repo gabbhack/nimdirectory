@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimwc</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">website</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">webpage</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">blog</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">binary</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A website management tool. Run the file and access your webpage.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimwc" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim Website Creator</h1>
+<p>A quick website tool. Run the nim file and access your webpage. Website: <a href="https://nimwc.org">https://nimwc.org</a></p>
+<img src="private/screenshots/NimWC_logo_shadow.png" style="max-width: 100%;" />
+<p><img src="https://img.shields.io/github/languages/top/ThomasTJdev/nim_websitecreator?style=for-the-badge" style="max-width: 100%;" alt="" />
+<img src="https://img.shields.io/github/stars/ThomasTJdev/nim_websitecreator?style=for-the-badge" style="max-width: 100%;" alt="" /><img src="https://img.shields.io/github/languages/code-size/ThomasTJdev/nim_websitecreator?style=for-the-badge" style="max-width: 100%;" alt="" /></p>
+<h1>Features</h1>
+<ul>
+<li>Blog with custom meta-information and URL&apos;s</li>
+<li>Security - 2FA, Firejail, reCAPTCHA</li>
+<li>Fully customizable - log viewer, custom JS &amp; CSS</li>
+<li>Plugins with many features</li>
+</ul>
+<p>  <strong>See more in FEATURES.md</strong></p>
+<h1>Requirements</h1>
+<p>To get started you only need:</p>
+<ul>
+<li>Nim &gt;= <code>1.0.0</code> (tested with <code>1.4.8</code>)</li>
+</ul>
+<p>Optional dependencies (disabled by default):</p>
+<ul>
+<li>webp (<code>libwebp</code>) (only required when using <a href="https://github.com/juancarlospaco/nim-webp-tools">WebP</a>)</li>
+<li>firejail &gt;= <code>0.9.58</code> (only required when using <a href="https://github.com/juancarlospaco/nim-firejail">Firejail</a>)</li>
+<li>Xvfb (<code>xorg-server-xvfb</code>, required by firejail setting <code>noX=</code>)</li>
+<li><strong>When using Firejail and enabling/disabling a plugin a manual full restart of NimWC is required.</strong> It is therefore not advised to enable/disable plugins in the browser when using Firejail.</li>
+</ul>
+<h1>Install</h1>
+<h2>Install Nim</h2>
+<p>To compile and install you need <a href="https://nim-lang.org/">Nim</a>. You can easily install Nim using <a href="https://nim-lang.org/install_unix.html">choosenim</a> with:</p>
+<pre>  <code>curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+</code></pre>
+<h2>Install NimWC</h2>
+<p>You only need to perform 1a <strong>or</strong> 1b  <strong>or</strong> 1c - not both of them.</p>
+<h3>1a) Install with Nimble</h3>
+<details>
+If you are using [Nimble](https://github.com/nim-lang/nimble) an executable will be generated and symlinked to `nimwc`, which then can be executed anywhere on your system.
+<pre>  <code class="language-bash"># Install nimwc with nimble
+nimble install nimwc
+
+# Edit the config.cfg accordingly
+# (change the confg.cfg path to your nimble folder and the correct package version)
+nano ~/.nimble/pkgs/nimwc-[PACKAGE-VERSION]/config/config.cfg
+
+# Run nimwc
+# (to add an Admin append the arg &quot;newadmin&quot;: nimwc --newadmin)
+# (to include some standard pages: nimwc --insertdata)
+nimwc
+
+# Login
+127.0.0.1:7000/login
+</code></pre>
+</details>
+<h3>1b) Compile</h3>
+<details>
+<p>This will generate the executable in the folder.</p>
+<pre>  <code class="language-bash"># Clone the repository
+git clone https://github.com/ThomasTJdev/nim_websitecreator
+cd nim_websitecreator
+
+# Generate and edit the config.cfg accordingly
+cp config/config_default.cfg config/config.cfg
+nano config/config.cfg
+
+# Compile
+nimble -d:release build
+
+# Run nimwc
+# (to add an Admin append the arg &quot;newadmin&quot;: nimwc --newadmin)
+# (to include some standard pages: nimwc --insertdata)
+./nimwc
+
+# Login
+127.0.0.1:7000/login
+</code></pre>
+</details>
+<h3>1c) Curl</h3>
+<p>This will guide you through the installation.</p>
+<pre>  <code>curl https://raw.githubusercontent.com/ThomasTJdev/nim_websitecreator/master/devops/autoinstall.sh -sSf | sh
+# OR
+curl https://raw.githubusercontent.com/ThomasTJdev/nim_websitecreator/master/devops/autoinstall.sh -sSfLO &amp;&amp; echo &quot;6cc7510305db7b0ae5e3755137e71c23c7e08829264ddfb82702e6cac297f1063b46c48c01eafb16156c27a53aa23d1737c34f354ae1834c8498f5bd64b81b3c autoinstall.sh&quot; | sha512sum -c - &amp;&amp; sh ./autoinstall.sh
+</code></pre>
+<h1>Use</h1>
+<h2>Arguments</h2>
+<p>These arguments should be prepended to executable file, e.g. <code>./nimwc cdata</code></p>
+<ul>
+<li><code>--showconfig</code> = Show parsed INI configuration and compile options.</li>
+<li><code>--newadmin</code> = Add the Admin user.</li>
+<li><code>--gitupdate</code> = Updates and force a hard reset.</li>
+<li><code>--initplugin</code> = Create plugin skeleton inside tmp/.</li>
+<li><code>--vacuumdb</code> = Vacuum database and continue (database maintenance).</li>
+<li><code>--backupdb</code> = Compressed full backup of database.</li>
+<li><code>--backupdb-gpg</code> = Compressed signed full backup of database.</li>
+<li><code>--newdb</code> = Generates the database with standard tables (does <strong>not</strong> override or delete tables). <code>newdb</code> will be initialized automatic, if no database exists.</li>
+<li><code>--insertdata</code> = Insert standard data, e.g <code>--insertdata bulma</code> (this will override existing data)
+<ul>
+<li><code>bulma</code> = Use Bulma CSS, No JS required (official design) [Default official theme]</li>
+<li><code>bootstrap</code> = Use Bootstrap and jQuery</li>
+<li><code>water</code> = Water CSS framework, No JS, HTML Classless (No classes on HTML required)</li>
+</ul>
+</li>
+</ul>
+<h2>Compile options:</h2>
+<p>These options are only available at compiletime:</p>
+<ul>
+<li><code>-d:rc</code> = Recompile. NimWC is using a launcher, it is therefore needed to force a recompile.</li>
+<li><code>-d:adminnotify</code> = Send error logs (ERROR) to the specified admin email.</li>
+<li><code>-d:dev</code> = Development.</li>
+<li><code>-d:devemailon</code> = Send email when <code>-d:dev</code> is activated.</li>
+<li><code>-d:demo</code> = Used on public test site <a href="https://nimwc.org">Nim Website Creator</a>. This option will override the database every 1 hour with the standard data.</li>
+<li><code>-d:gitupdate</code> = Updates directly from Git and force a hard reset.</li>
+<li><code>-d:postgres</code> = Use Postgres database instead of SQLite.</li>
+<li><code>-d:packedjson</code> = Use <a href="https://github.com/Araq/packedjson#packedjson">PackedJSON</a> instead of <a href="https://nim-lang.github.io/Nim/json.html">std lib JSON</a>. Performance optimization.</li>
+</ul>
+<h1>User profiles</h1>
+<p>There are 3 main user profiles:</p>
+<ul>
+<li>User</li>
+<li>Moderator</li>
+<li>Admin</li>
+</ul>
+<p>The access rights below applies to main program. Plugins can have their own definition of user rights.</p>
+<details>
+<h2>User</h2>
+<p>The &quot;User&quot; can login and see private pages and blog pages. This user has no access to adding or editing anything.</p>
+<h2>Moderator</h2>
+<p>The &quot;Moderator&quot; can login and see private pages and blog pages. The user <strong>can</strong> add and delete users, but cannot delete or add &quot;Admin&quot; users. The user <strong>cannot</strong> edit JS, CSS and core HTML - only within the pages and blogposts.</p>
+<h2>Admin</h2>
+<p>The &quot;Admin&quot; has access to anything.</p>
+</details>
+<h1>Blog</h1>
+<p>You can easily add and edit blogpages. The blogpages support metadata: meta description and meta keywords. It is also possible to specify a category and tags.</p>
+<details>
+<h2>Blog sorting</h2>
+<p>In the settings menu you can specify how your blogposts should be sorted, e.g. on modfied date in ascending order.</p>
+<h2>Blog searching</h2>
+<p>To only show blogpost with a specific name, tag or category, you have to append the criteria to the URL. It is not possible to combine these.</p>
+<pre>  <code>website.com/blog?name=nim
+website.com/blog?category=article
+website.com/blog?tags=code
+</code></pre>
+</details>
+<h1>Plugins</h1>
+<p>Multiple plugins are available. You can download them within the program at <code>&lt;webpage&gt;/plugins/repo</code>.</p>
+<p>The plugin repository are located here: <a href="https://github.com/ThomasTJdev/nimwc_plugins">NimWC plugin repository</a></p>
+<h1>Shortcuts</h1>
+<p>When editing a blogpage or a normal page press Ctrl+S to save.</p>
+<h1>DevOps</h1>
+<details>
+  <summary>Docker, Vagrant, SystemD Service, NGNIX, Admin stuff, etc</summary>
+<p>  <strong>Docker</strong></p>
+<ul>
+<li><a href="https://github.com/ThomasTJdev/nim_websitecreator/blob/master/devops/docker/">Use the Dockerfile</a> as starting point for your NimWC containers.</li>
+<li>You can run the build_docker.sh and run_docker.sh scripts without changing anything to try out nimwc.</li>
+</ul>
+<p>  <strong>Vagrant</strong></p>
+<ul>
+<li><a href="https://github.com/ThomasTJdev/nim_websitecreator/blob/master/devops/Vagrantfile">Use the Vagrantfile</a> as starting point for your NimWC VMs.</li>
+</ul>
+<p>  <strong>NGNIX Config</strong></p>
+<ul>
+<li><a href="https://github.com/ThomasTJdev/nim_websitecreator/blob/master/devops/config_nginx_default.cfg">Use the NGNIX Config file</a> as starting point for your NGNIX Server configuration.</li>
+</ul>
+<p>  <strong>Google reCAPTCHA</strong></p>
+<p>To activate Google reCAPTCHA <a href="https://www.google.com/recaptcha/admin">claim you site and server key</a> and insert them into <code>config.cfg</code>.</p>
+<p>  <strong>SystemD</strong></p>
+<ul>
+<li><a href="https://github.com/ThomasTJdev/nim_websitecreator/blob/master/devops/nimwc.service">Use the SystemD Service file</a> as starting point for your NimWC SystemD Services.</li>
+</ul>
+<p>Copy the file <code>nimwc.service</code> into <code>/lib/systemd/system/</code></p>
+<pre>  <code>sudo nano /lib/systemd/system/nimwc.service
+</code></pre>
+<p>Enable auto start of NimWC:</p>
+<pre>  <code>sudo systemctl enable nimwc
+sudo systemctl start nimwc
+sudo systemctl status nimwc
+</code></pre>
+<p>  <strong>CI Builds</strong></p>
+<ul>
+<li>  <a href="https://github.com/ThomasTJdev/nim_websitecreator/tree/master/devops/sourcehut#whats-this">YAML Build templates for several Linux Distros (SourceHut).</a></li>
+</ul>
+<p>  <strong>CrossCompiling, Build for old Linux</strong></p>
+<p>Sometimes you may need Build for very very old Linux, like old Centos and Debian Old Stable,
+from a recent Linux, like new Arch or Ubuntu,
+heres how you can do it, without a virtual machine with an old Linux to build.</p>
+<ul>
+<li>https://github.com/wheybags/glibc_version_header#glibc-version-header-generator</li>
+<li>https://github.com/phusion/holy-build-box#system-for-building-cross-distribution-linux-binaries</li>
+<li>https://github.com/dockcross/dockcross#dockcross</li>
+</ul>
+</details>
+<h1>How to Firejail</h1>
+<p>Optional dependency.</p>
+<details>
+<ul>
+<li>Default settings will work Ok on most systems, sane defaults.</li>
+<li>Some settings are kind of technical, you should know some Linux Kernel related stuff.</li>
+<li>Links are provided on the Firejail config page when makes sense.</li>
+<li>You can harden your system even more by tweaking the Firejail config.</li>
+<li>You can always come back to the default settings and it will work Ok.</li>
+<li>Check that Firejail Status at bottom of the page is mostly green.</li>
+</ul>
+<p>You can choose how much CPU &amp; RAM NimWC can use,
+Firejail will make NimWC believe that theres less CPU &amp; RAM that the actually physically available.
+If you choose too small resources for too big load,
+then it will feel like when you try to run a heavy program on a VirtualBox with too small CPU &amp; RAM,
+but will still run, or do the best to try to run.
+This can be useful for Clouds that charge you extra when you pass certain threshold of CPU &amp; RAM usage.</p>
+<p>NimWC does not depend on any Hardware device to run, like audio, video, USB, DVD, etc,
+so you can block the access to the hardware peripehals,
+that also blocks its hardware drivers and libraries that may have vulnerabilities, making your NimWC more secure.</p>
+<p>There are options to block root user and the rest of the users on the Linux system,
+thats help protect your NimWC against Privilege Scalations,
+thats when an unprivileged normal user becomes superuser root, or an user can see other users stuff.</p>
+<p>Caches and Temporary directories are mounted as private temporary unique autogenerated TMPFS,
+meaning that the real ones can not be altered from within NimWC.</p>
+<p><code>noMnt=true</code> is for when you run 1 instance NimWC per server,
+<code>noMnt=false</code> is for when you run multiple instances NimWC per server,
+because it may or may not block other instances of accesing subfolders on <code>/mnt/</code> simultaneously.</p>
+<p><code>noX=false</code> if you are running a headless server or ChromeBook.
+<code>noX=true</code> uses <code>Xvfb</code> for X Isolation (<code>xorg-server-xvfb</code>),
+you may need to install it if you want to use it, but is not a hard dependency,
+just use <code>noX=false</code> and you dont need to install it if you dont want to.</p>
+<p>The features come from the Linux Kernel itself,
+so theres zero cost on performance and the technology is already there even if you use it or not.</p>
+<p>So in conclusion NimWC being compiled binary wont need access to most of your system,
+just its own folder, the integration with Firejails hides everything else.</p>
+<h3>Install</h3>
+<p>You local version of firejail to needs be &gt;= <code>0.9.58</code>. Install using your package manager:</p>
+<pre>  <code># Arch (package manager)
+sudo pacman -S firejail
+
+# Ubuntu (built files)
+https://launchpad.net/ubuntu/+source/firejail/0.9.58-1 # &lt;-- download
+sudo apt install ./firejail_0.9.58-1_arm64.deb
+
+# Compile
+git clone https://github.com/netblue30/firejail.git
+cd firejail
+./configure &amp;&amp; make &amp;&amp; sudo make install-strip
+</code></pre>
+</details>
+<h1>Resources</h1>
+<ul>
+<li>  <a href="https://github.com/ThomasTJdev/nim_websitecreator/tree/master/public/images/logo">NimWC Logo, high quality, PNG.</a></li>
+<li>  <a href="http://htmlpreview.github.io/?https://raw.githubusercontent.com/ThomasTJdev/nim_websitecreator/master/docs/nimwc-presentation-presentation.html">NimWC Presentation Slides, HTML5 3D, English.</a></li>
+<li>  <a href="http://htmlpreview.github.io/?https://raw.githubusercontent.com/ThomasTJdev/nim_websitecreator/master/docs/nimwc-presentation-es-presentation.html">NimWC Presentation Slides, HTML5 3D, Spanish.</a></li>
+<li>  <a href="https://t.me/addstickers/nimlang">NimWC Telegram Stickers on the Nim Pack.</a></li>
+</ul>
+<h1>Videos</h1>
+<p>  <a href="https://youtu.be/3R1l4Ha0tDI" title="NimWC Video!">    <img src="https://img.youtube.com/vi/3R1l4Ha0tDI/maxresdefault.jpg" style="max-width: 100%;" width="99%" />  </a></p>
+<h1>Stars</h1>
+<p>  <a href="https://starchart.cc/ThomasTJdev/nim_websitecreator" title="Star NimWC on GitHub!">    <img src="https://starchart.cc/ThomasTJdev/nim_websitecreator.svg" style="max-width: 100%;" alt="Stars over time" />  </a></p>
+<h1>License</h1>
+<p>NimWC uses The Peer Production License (<a href="https://tldrlegal.com/license/peer-production-license">PPL</a>).</p>
+<p>PPL is derived from the Creative Commons <em>Attribution-NonCommercial-ShareAlike</em> license.
+However unlike CC-BY-NC-SA, PPL demands reciprocation (whether monetary or otherwise)
+from non-contributing commercial entities (aka Big Corporations). This means, that <strong>mega-corporation cannot just take all your code, rename it, and sell it without contributing back to you.</strong></p>
+<p>The Peer Production License is a reciprocity-based license by which commons are freely accessible to those who contribute to create them,
+while third party non-contributing entities profiting from these commons can be charged a license fee to sustain the project in the long run.</p>
+<p>For all other meanings of license, is very similar to <a href="https://tldrlegal.com/license/mit-license">MIT license.</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        PPL
+                    </p>
+                
+
+                
+                    <p> <a href="https://nimwc.org/">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

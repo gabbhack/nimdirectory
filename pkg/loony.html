@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">loony</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">fifo</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">queue</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">concurrency</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cps</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Lock-free threadsafe MPMC with high throughput")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install loony" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><div align="center">
+    <br />
+    <a href="https://github.com/nim-works/loony">
+        <img src="papers/header.svg" style="max-width: 100%;" width="800" alt="Loony" height="200" />
+    </a>
+    <br />
+<p><a href="https://github.com/shayanhabibi/loony/actions?query=workflow%3ACI">  <img src="https://github.com/disruptek/cps/workflows/CI/badge.svg" style="max-width: 100%;" alt="Test Matrix" /></a>
+<a href="https://github.com/shayanhabibi/loony/releases/latest">  <img src="https://img.shields.io/github/v/release/shayanhabibi/loony?style=flat" style="max-width: 100%;" alt="GitHub release (latest by date)" /></a>
+<img src="https://img.shields.io/badge/nim-1.5.1%2B-informational?style=flat&amp;logo=nim" style="max-width: 100%;" alt="Minimum supported Nim version" /><a href="#license">  <img src="https://img.shields.io/github/license/shayanhabibi/loony?style=flat" style="max-width: 100%;" alt="License" /></a></p>
+</div>
+<!--  # Loony  -->
+<blockquote>
+<p>  <em>&quot;Don&apos;t let me block you&quot; - Araq</em></p>
+<p>  <em>&quot;We didn&apos;t have a good story about migrating continuations between threads.&quot; - Disruptek</em></p>
+</blockquote>
+<p>Have you ever asked yourself what would a lock-free MPMC queue look like in nim?</p>
+<p>What about a lock-free MPMC queue designed on an algorithm built for speed and memory safety?</p>
+<p>What about that algorithm implemented by some <em>  <strong>loonatics</strong></em>?</p>
+<p>Enter <strong>Loony</strong></p>
+<blockquote>
+<p>  <em>&quot;C&apos;mon man... 24,000 threads and 500,000,000 continuations... which are written in &quot;normal&quot; nim.&quot; - Disruptek</em></p>
+<p>  <em>&quot;OK, time to get my monies worth from all my cores&quot; - saem</em></p>
+<p>  <em>&quot;My eyes are bleeding&quot; - cabboose</em></p>
+</blockquote>
+<h2>About</h2>
+<blockquote>
+<p>A massive thank you to the author Oliver Giersch who proposed this algorithm and for being so kind as to have a look at our implementation and review it! We wish nothing but the best for the soon to be Dr Giersch.</p>
+</blockquote>
+<p>Loony is a 100% Nim-lang implementation of the algorithm depicted by Giersch &amp; Nolte in <a href="papers/GierschEtAl.pdf">&quot;Fast
+and Portable Concurrent FIFO Queues With Deterministic Memory Reclamation&quot;</a>.</p>
+<p>The algorithm was chosen to help progress the concurrency story of <a href="https://github.com/nim-works/cps">CPS</a> for which this was bespokingly made.</p>
+<p>After adapting the algorithm to nim CPS, disruptek adapted the queue for <strong>any ref object</strong> and was instrumental in ironing out the bugs and improving the performance of Loony.</p>
+<h2>What can it do</h2>
+<blockquote>
+<p>While the following is possible; this is only by increasing the alignment our &apos;node&apos; pointers to 16 which would invariably effect performance.</p>
+<ul>
+<li>Lock-free consumption by up to <strong>32,255</strong> threads</li>
+<li>Lock-free production by up to <strong>64,610</strong> threads</li>
+</ul>
+<p>You can use <code>-d:loonyNodeAlignment=16</code> or whatever alignment you wish to adjust the contention capacity.</p>
+</blockquote>
+<p>With the 11 bit aligned implementation we have:</p>
+<ul>
+<li>Lock-free consumption up to <strong>512</strong> threads</li>
+<li>Lock-free production up to <strong>1,025</strong> threads</li>
+<li>Memory-leak free under <strong>ARC</strong></li>
+<li>Can pass ANY ref object between threads; however:
+<ul>
+<li>Is perfectly designed for passing Continuations between threads</li>
+</ul>
+</li>
+<li>  <strong>0 memory copies</strong></li>
+</ul>
+<h2>Issues</h2>
+<p><strong>Loony queue only works on ARC</strong>.</p>
+<p>ORC is not supported (See <a href="https://github.com/shayanhabibi/loony/issues/4">Issue #4</a>)</p>
+<p>Spawn (Nims <code>threadpool</code> module) is not supported. <em>It won&apos;t ever be; don&apos;t use spawn unless you are a masochist in general.</em></p>
+<h2>Installation</h2>
+<p>Download with <code>nimble install loony</code> (CPS dependency for tests) or directly from the source.</p>
+<h3>How to use</h3>
+<p>Simple.</p>
+<p>First, ensure you compile with arc and threads (<code>--gc:arc --threads:on</code>)</p>
+<p>Then:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pkg</span><span class="op">/</span><span class="ide">loony</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">TestRef</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">loonyQueue</span> <span class="op">=</span> <span class="ide">newLoonyQueue</span>[<span class="ide">TestRef</span>]()</div></div><div class="line"><div class="line-content"><span class="com"># Loony takes reference pointers and sends them safely!</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">aro</span> <span class="op">=</span> <span class="ide">new</span> <span class="ide">TestRef</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">loonyQueue</span><span class="op">.</span><span class="ide">push</span> <span class="ide">aro</span></div></div><div class="line"><div class="line-content"><span class="com"># Enqueue objects onto the queue</span></div></div><div class="line"><div class="line-content"><span class="com"># unsafePush is available, see MemorySafety &amp; Cache Coherance below!</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">el</span> <span class="op">=</span> <span class="ide">loonyQueue</span><span class="op">.</span><span class="ide">pop</span></div></div><div class="line"><div class="line-content"><span class="com"># Dequeue objects from the queue</span></div></div><div class="line"><div class="line-content"><span class="com"># unsafePop is available, see MemorySafety &amp; Cache Coherance below!</span></div></div>  </code></pre>
+<p>There is now a preliminary sublibrary which provides state managers called <code>Ward</code>&apos;s.
+These can be imported with <code>import loony/ward</code>. The documentation is found below,
+tests and further documentation are to follow when time allows.</p>
+<h2>Documentation</h2>
+<p>  <a href="https://nim-works.github.io/loony/loony.html">The full API documentation is kept up-to-date on GitHub.</a></p>
+<p>  <a href="https://nim-works.github.io/loony/loony/ward.html">The API documentation for the Ward submodule is found here.</a></p>
+<h4>Memory Safety &amp; Cache Coherence</h4>
+<p>Loony&apos;s standard <code>push</code> and <code>pop</code> operations offer cache coherency by using
+primitives such as <code>atomic_thread_fence</code> to ensure a CPU&apos;s store buffer is
+committed on the push operation and read on the pop operation; this is a
+higher-cost primitive. You can use <code>unsafePush</code> and <code>unsafePop</code> to manipulate
+a <code>LoonyQueue</code> without regard to cache coherency for ultimate performance.</p>
+<h3>Debugging</h3>
+<p>Pass <code>--d:loonyDebug</code> in compilation or with a config nimscript to use debug
+procedures and templates.</p>
+<blockquote>
+<p>Warning :warning: this switch causes node allocations and deallocations to
+write on an atomic counter which does marginally effect performance!</p>
+</blockquote>
+<p>  <code>echoDebugNodeCounter() # Echos the current number of nodes in the queue</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">debugNodeCounter</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># Put things onto the queue an off the queue here! At the</span></div></div><div class="line"><div class="line-content">  <span class="com"># end of the template, if the number of nodes you started</span></div></div><div class="line"><div class="line-content">  <span class="com"># with does not equal the number of nodes you finished</span></div></div><div class="line"><div class="line-content">  <span class="com"># the block with, it will print information that is useful</span></div></div><div class="line"><div class="line-content">  <span class="com"># to finding the source of the leak! This template will not</span></div></div><div class="line"><div class="line-content">  <span class="com"># do anything if loonyDebug is off.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">discard</span></div></div>  </code></pre>
+<h3>Compiler Flags</h3>
+<p>We recommend against changing these values unless you know what you are doing. The suggested max alignment is 16 to achieve drastically higher contention capacities. Compilation will fail if your alignment does not fit the slot count index.</p>
+<p><code>-d:loonyNodeAlignment=11</code> - Adjust node alignment to increase/decrease contention capacity
+<code>-d:loonySlotCount=1024</code> - Adjust the number of slots in each node</p>
+<h2>What are Continuations?</h2>
+<p>If you&apos;ve somehow missed the next big thing for nim; see <a href="https://github.com/nim-works/cps">CPS</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/shayanhabibi/loony">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

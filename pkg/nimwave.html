@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimwave</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tui</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">terminal</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A TUI -> GUI library")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimwave" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>With NIMWAVE, you can build TUI programs for the terminal, the desktop (via OpenGL/GLFW) and the web (via web assembly). Pedantic nerds love to point out that TUI stands for <em>text</em> user interface, not terminal. NIMWAVE is what happens when one of those nerds writes a library. Let&apos;s decouple TUIs from the terminal by running them where the normies are.</p>
+<p align="center">
+  <img src="nimwave.png" style="max-width: 100%;" />
+</p>
+<h2>Getting Started</h2>
+<p>The best way to begin is to clone <a href="https://github.com/ansiwave/nimwave_starter">the starter project</a> and run the commands in its README.</p>
+<p>For a much more involved example project, see <a href="https://github.com/ansiwave/ansiwave">ANSIWAVE BBS</a>. It is the project that NIMWAVE was extracted from.</p>
+<h2>Documentation</h2>
+<p>NIMWAVE provides a way to build your UI with a hierarchy of nodes. Here&apos;s an example that renders a few lines of text:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">render</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">nw</span><span class="op">.</span><span class="ide">Box</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">direction</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Direction</span><span class="op">.</span><span class="ide">Vertical</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">border</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Border</span><span class="op">.</span><span class="ide">Single</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">children</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">seq</span>(</div></div><div class="line"><div class="line-content">      <span class="str">&quot;Hello, world!&quot;</span>,</div></div><div class="line"><div class="line-content">      <span class="str">&quot;Nim rocks&quot;</span>,</div></div><div class="line"><div class="line-content">    ),</div></div><div class="line"><div class="line-content">  ),</div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h3>Custom nodes</h3>
+<p>The <code>nw.Box</code> is a built-in node. You can easily define your own nodes as well. For example, let&apos;s move that into a custom node:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">MyCustomNode</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Node</span></div></div><div class="line"><div class="line-content">    <span class="ide">lines</span>: <span class="ide">seq</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">method</span> <span class="ide">render</span><span class="op">*</span>(<span class="ide">node</span>: <span class="ide">MyCustomNode</span>, <span class="ide">ctx</span>: <span class="kwd">var</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Context</span>[<span class="ide">State</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">render</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">nw</span><span class="op">.</span><span class="ide">Box</span>(</div></div><div class="line"><div class="line-content">      <span class="ide">direction</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Direction</span><span class="op">.</span><span class="ide">Vertical</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">border</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Border</span><span class="op">.</span><span class="ide">Single</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">children</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">seq</span>(<span class="ide">node</span><span class="op">.</span><span class="ide">lines</span>),</div></div><div class="line"><div class="line-content">    ),</div></div><div class="line"><div class="line-content">    <span class="ide">ctx</span></div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>Now it can be rendered like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">render</span>(<span class="ide">MyCustomNode</span>(<span class="ide">lines</span>: <span class="op">@</span>[<span class="str">&quot;Hello, world!&quot;</span>, <span class="str">&quot;Nim rocks&quot;</span>]), <span class="ide">ctx</span>)</div></div>  </code></pre>
+<h3>Resizing nodes</h3>
+<p>By default, a node will receive a size from its parent node. This size can be found from <code>iw.width(ctx.tb)</code> and <code>iw.height(ctx.tb)</code>. Any node can change its own size using <code>nw.slice</code> like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">method</span> <span class="ide">render</span><span class="op">*</span>(<span class="ide">node</span>: <span class="ide">MyCustomNode</span>, <span class="ide">ctx</span>: <span class="kwd">var</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Context</span>[<span class="ide">State</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">slice</span>(<span class="ide">ctx</span>, <span class="num">0</span>, <span class="num">0</span>, <span class="ide">iw</span><span class="op">.</span><span class="ide">width</span>(<span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>), <span class="ide">node</span><span class="op">.</span><span class="ide">lines</span><span class="op">.</span><span class="ide">len</span><span class="op">+</span><span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">render</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">nw</span><span class="op">.</span><span class="ide">Box</span>(</div></div><div class="line"><div class="line-content">      <span class="ide">direction</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Direction</span><span class="op">.</span><span class="ide">Vertical</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">border</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Border</span><span class="op">.</span><span class="ide">Single</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">children</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">seq</span>(<span class="ide">node</span><span class="op">.</span><span class="ide">lines</span>),</div></div><div class="line"><div class="line-content">    ),</div></div><div class="line"><div class="line-content">    <span class="ide">ctx</span></div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>Here, the node is retaining the width given to it by the parent, but it is resizing its height to be the number of lines of text plus 2 (for the border).</p>
+<h3>Adding styling</h3>
+<p>All low level render operations are dona via <a href="https://github.com/ansiwave/illwave">illwave</a>. You can manipulate individual cells in the <code>TerminalBuffer</code> like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># change the foreground/background color</span></div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>[<span class="num">0</span>, <span class="num">0</span>]<span class="op">.</span><span class="ide">fg</span> <span class="op">=</span> <span class="ide">iw</span><span class="op">.</span><span class="ide">fgBlue</span></div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>[<span class="num">0</span>, <span class="num">0</span>]<span class="op">.</span><span class="ide">bg</span> <span class="op">=</span> <span class="ide">iw</span><span class="op">.</span><span class="ide">bgYellow</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># change the character</span></div></div><div class="line"><div class="line-content"><span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>[<span class="num">0</span>, <span class="num">0</span>]<span class="op">.</span><span class="ide">ch</span> <span class="op">=</span> <span class="str">&quot;Z&quot;</span><span class="op">.</span><span class="ide">toRunes</span>[<span class="num">0</span>]</div></div>  </code></pre>
+<p>The coordinates here are relative, so <code>0, 0</code> will be the top left corner of the node you are in, not the top left corner of the entire terminal.</p>
+<p>Also, strings may include ANSI escape codes directly:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">render</span>(<span class="ide">nw</span><span class="op">.</span><span class="ide">Text</span>(<span class="ide">str</span>: <span class="str">&quot;</span>\e<span class="str">[32;43mHello, world!</span>\e<span class="str">[0m&quot;</span>), <span class="ide">ctx</span>)</div></div>  </code></pre>
+<h3>Stateful nodes</h3>
+<p>Some nodes require local state. For example, let&apos;s make a button that increments a number every time it is clicked. First, we&apos;ll make a custom node for the button:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Button</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Node</span></div></div><div class="line"><div class="line-content">    <span class="ide">str</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">mouse</span>: <span class="ide">iw</span><span class="op">.</span><span class="ide">MouseInfo</span></div></div><div class="line"><div class="line-content">    <span class="ide">action</span>: <span class="kwd">proc</span> ()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">method</span> <span class="ide">render</span><span class="op">*</span>(<span class="ide">node</span>: <span class="ide">Button</span>, <span class="ide">ctx</span>: <span class="kwd">var</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Context</span>[<span class="ide">State</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">slice</span>(<span class="ide">ctx</span>, <span class="num">0</span>, <span class="num">0</span>, <span class="ide">node</span><span class="op">.</span><span class="ide">str</span><span class="op">.</span><span class="ide">runeLen</span><span class="op">+</span><span class="num">2</span>, <span class="ide">iw</span><span class="op">.</span><span class="ide">height</span>(<span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>))</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">node</span><span class="op">.</span><span class="ide">mouse</span><span class="op">.</span><span class="ide">action</span> <span class="op">==</span> <span class="ide">iw</span><span class="op">.</span><span class="ide">MouseButtonAction</span><span class="op">.</span><span class="ide">mbaPressed</span> <span class="kwd">and</span> <span class="ide">iw</span><span class="op">.</span><span class="ide">contains</span>(<span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>, <span class="ide">node</span><span class="op">.</span><span class="ide">mouse</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">node</span><span class="op">.</span><span class="ide">action</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">render</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">nw</span><span class="op">.</span><span class="ide">Box</span>(</div></div><div class="line"><div class="line-content">      <span class="ide">direction</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Direction</span><span class="op">.</span><span class="ide">Horizontal</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">border</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Border</span><span class="op">.</span><span class="ide">Single</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">children</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">seq</span>(<span class="ide">node</span><span class="op">.</span><span class="ide">str</span>),</div></div><div class="line"><div class="line-content">    ),</div></div><div class="line"><div class="line-content">    <span class="ide">ctx</span></div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>Next, we make a node that places this button next to a count, and increments the count when the button is clicked:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Counter</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Node</span></div></div><div class="line"><div class="line-content">    <span class="ide">mouse</span>: <span class="ide">iw</span><span class="op">.</span><span class="ide">MouseInfo</span></div></div><div class="line"><div class="line-content">    <span class="ide">count</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">method</span> <span class="ide">render</span><span class="op">*</span>(<span class="ide">node</span>: <span class="ide">Counter</span>, <span class="ide">ctx</span>: <span class="kwd">var</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Context</span>[<span class="ide">State</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">mnode</span> <span class="op">=</span> <span class="ide">getMounted</span>(<span class="ide">node</span>, <span class="ide">ctx</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">slice</span>(<span class="ide">ctx</span>, <span class="num">0</span>, <span class="num">0</span>, <span class="num">15</span>, <span class="num">3</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">incCount</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">mnode</span><span class="op">.</span><span class="ide">count</span> <span class="op">+=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">  <span class="ide">render</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">nw</span><span class="op">.</span><span class="ide">Box</span>(</div></div><div class="line"><div class="line-content">      <span class="ide">direction</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Direction</span><span class="op">.</span><span class="ide">Horizontal</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">border</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Border</span><span class="op">.</span><span class="ide">None</span>,</div></div><div class="line"><div class="line-content">      <span class="ide">children</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">seq</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">nw</span><span class="op">.</span><span class="ide">Box</span>(</div></div><div class="line"><div class="line-content">          <span class="ide">direction</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Direction</span><span class="op">.</span><span class="ide">Horizontal</span>,</div></div><div class="line"><div class="line-content">          <span class="ide">border</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">Border</span><span class="op">.</span><span class="ide">Hidden</span>,</div></div><div class="line"><div class="line-content">          <span class="ide">children</span>: <span class="ide">nw</span><span class="op">.</span><span class="ide">seq</span>(<span class="op">$</span><span class="ide">mnode</span><span class="op">.</span><span class="ide">count</span>),</div></div><div class="line"><div class="line-content">        ),</div></div><div class="line"><div class="line-content">        <span class="ide">Button</span>(<span class="ide">str</span>: <span class="str">&quot;Count&quot;</span>, <span class="ide">mouse</span>: <span class="ide">node</span><span class="op">.</span><span class="ide">mouse</span>, <span class="ide">action</span>: <span class="ide">incCount</span>),</div></div><div class="line"><div class="line-content">      ),</div></div><div class="line"><div class="line-content">    ),</div></div><div class="line"><div class="line-content">    <span class="ide">ctx</span></div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>For a node to maintain state, it must be &quot;mounted&quot;, which just means its reference is stored in the context. When you call <code>getMounted</code>, it will look for the mounted version of that node and return it. If it hasn&apos;t been mounted yet, it&apos;ll do so. If you want to run custom code when a node mounts or unmounts, you can define a <code>mount</code> and <code>unmount</code> method with the same signature as <code>render</code>.</p>
+<p>The mounted version, called <code>mnode</code> here, is the one you should use to read/write stateful data. Meanwhile, if you want to read any new data that came after mounting, such as the <code>mouse</code> data, you should read from the original <code>node</code> argument. If you tried reading that from <code>mnode</code> it would give you the value that it was when it mounted.</p>
+<p>The <code>Counter</code> can then be rendered like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">render</span>(<span class="ide">Counter</span>(<span class="ide">id</span>: <span class="str">&quot;counter&quot;</span>, <span class="ide">mouse</span>: <span class="ide">mouse</span>), <span class="ide">ctx</span>)</div></div>  </code></pre>
+<p>Note that all mounted nodes <em>must</em> have a unique <code>id</code>. If the parent node has an id, it is best to combine them together, such as <code>node.id &amp; &quot;/counter&quot;</code>, to ensure it will be unique. NIMWAVE tries its best to throw an error if you reuse an id, but it&apos;s not always possible to tell, so it is up to you to ensure this.</p>
+<h3>Storing state in the Context</h3>
+<p>Another place to store state is inside the <code>Context</code> object. This object is passed to every node, so this is a nice way to pass state that should be accessible everywhere. The starter project defines it like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">State</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">focusIndex</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">focusAreas</span><span class="op">*:</span> <span class="kwd">ref</span> <span class="ide">seq</span>[<span class="ide">iw</span><span class="op">.</span><span class="ide">TerminalBuffer</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">initContext</span>[<span class="ide">State</span>]()</div></div>  </code></pre>
+<p>This object is completely up to you to define, and it will be accessible to you from <code>ctx.data</code>. In this case, it contains state for a simple focus system. The starter project defines this function:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">addFocusArea</span>(<span class="ide">ctx</span>: <span class="kwd">var</span> <span class="ide">nw</span><span class="op">.</span><span class="ide">Context</span>[<span class="ide">State</span>]): <span class="ide">bool</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">focusIndex</span> <span class="op">==</span> <span class="ide">ctx</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">focusAreas</span>[]<span class="op">.</span><span class="ide">len</span></div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">focusAreas</span>[]<span class="op">.</span><span class="ide">add</span>(<span class="ide">ctx</span><span class="op">.</span><span class="ide">tb</span>)</div></div>  </code></pre>
+<p>Inside nodes that should be focusable, you&apos;ll find <code>let focused = addFocusArea(ctx)</code> which adds the node&apos;s <code>TerminalBuffer</code> to the <code>focusAreas</code> and returns true if its length equals the <code>focusIndex</code>.</p>
+<p>This is just one way to implement a focus system. Notice that this object is using both a value type and a ref type. Always consider what kind of behavior you want; value types will be copied from node to node, so if they are modified from inside a node, the change will only be visible to its own children. Use a ref type if you want all nodes to see/modify the same data.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Public Domain
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

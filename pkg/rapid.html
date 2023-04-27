@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">rapid</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">game</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">engine</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">2d</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graphics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">audio</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A game engine for rapid development and easy prototyping")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install rapid" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p align="center">
+  <img src="logo-8x.png" style="max-width: 100%;" />
+</p>
+<p>A game engine written in Nim, optimized for making cool games fast.
+Made for convenience while coding and better performance than all-in-one
+solutions like Godot.</p>
+<p><strong>Note:</strong> As of June 2021, I&apos;m not longer actively working on rapid.
+Please fork the repository if you want to keep the project alive.</p>
+<h2>Goals</h2>
+<ul>
+<li>Be easy to understand,</li>
+<li>Have a rich set of flexible APIs,</li>
+<li>Compile all C libraries statically to avoid dependency hell/linker errors,</li>
+<li>Make game development a fun task for everyone.</li>
+</ul>
+<h2>Features</h2>
+<ul>
+<li>
+<p>  <code>rapid/graphics</code></p>
+<ul>
+<li><em>Almost stateless</em> graphics context API – the only state you ever have
+to worry about is the shape buffer
+<ul>
+<li>Supports text rendering using FreeType</li>
+<li>Has a built-in polyline renderer for drawing wires, graphs, etc.</li>
+</ul>
+</li>
+<li>Post-processing effects with HDR rendering support</li>
+<li>Built in texture packer</li>
+</ul>
+</li>
+<li>
+<p>  <code>rapid/game</code></p>
+<ul>
+<li>Fixed timestep game loop</li>
+<li>Fixed-size and infinite-size tilemaps</li>
+</ul>
+</li>
+<li>
+<p>  <code>rapid/ec</code></p>
+<ul>
+<li>Minimal <a href="https://gameprogrammingpatterns.com/component.html">entity-component</a> decoupling pattern implementation</li>
+</ul>
+</li>
+<li>
+<p>  <code>rapid/physics</code></p>
+<ul>
+<li><code>chipmunk</code> – General-purpose physics engine, using
+<a href="https://github.com/slembcke/Chipmunk2D">Chipmunk2D</a></li>
+<li><code>simple</code> – Simple and fast AABB-based physics engine</li>
+</ul>
+</li>
+<li>
+<p>  <code>rapid/input</code></p>
+<ul>
+<li>Simplified input event distribution using procs like
+<code>mouseButtonJustPressed</code> + callback support</li>
+</ul>
+</li>
+<li>
+<p>  <code>rapid/math</code></p>
+<ul>
+<li>Common math utilities for vector math, axis-aligned bounding boxes,
+interpolation, and type-safe units</li>
+</ul>
+</li>
+<li>
+<p><code>rapid/ui</code> – <a href="https://github.com/treeform/fidget">Fidget</a>-style UI framework for games
+and applications</p>
+</li>
+</ul>
+<h3>Coming soon</h3>
+<ul>
+<li><code>rapid/audio</code> – Sound mixer with real-time effect support</li>
+</ul>
+<h2>Installing</h2>
+<p>Note that the new version of rapid (2020) is still under development, so you
+will have to install a specific commit from the master branch. The current
+release version is not supported anymore.</p>
+<p>To install rapid, use the following command:</p>
+<pre>  <code class="language-bash">$ nimble install &quot;rapid@#3e831cb&quot;  # change the commit hash to the latest commit
+</code></pre>
+<p>In your <code>.nimble</code> file:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;rapid#3e831cb&quot;</span></div></div>  </code></pre>
+<p>Pinning to a specific commit rather than <code>#head</code> is recommended, because <code>#head</code>
+doesn&apos;t name a specific point in development. This means that two different
+packages may end up requiring <code>#head</code>, and the <code>#head</code> that&apos;s installed locally
+may not match the <code>#head</code> that&apos;s required by the package. Thanks nimble,
+you&apos;re the best.</p>
+<h3>Linux</h3>
+<p>On Linux, the development headers for the following libraries must be installed:</p>
+<ul>
+<li>for <code>rapid/graphics</code>:
+<ul>
+<li>GL</li>
+<li>X11</li>
+<li>Xrandr</li>
+<li>Xxf86vm</li>
+<li>Xi</li>
+<li>Xcursor</li>
+<li>Xinerama</li>
+</ul>
+</li>
+</ul>
+<h4>Debian and Ubuntu</h4>
+<pre>  <code class="language-sh">sudo apt install \
+  libgl-dev libx11-dev libxrandr-dev libxxf86vm-dev libxi-dev libxcursor-dev \
+  libxinerama-dev
+</code></pre>
+<h4>Fedora</h4>
+<pre>  <code class="language-sh">sudo dnf install \
+  mesa-libGL-devel libX11-devel libXrandr-devel libXxf86vm-devel \
+  libXinerama-devel libXi-devel libXcursor-devel
+</code></pre>
+<h4>openSUSE</h4>
+<pre>  <code class="language-sh">sudo zypper in \
+  Mesa-libGL-devel libX11-devel libXrandr-devel libXxf86vm-devel \
+  libXinerama-devel libXi-devel libXcursor-devel
+</code></pre>
+<h2>Examples</h2>
+<p>For examples, look in the <code>tests</code> directory.</p>
+<h2>Tips</h2>
+<ul>
+<li>Draw in batches whenever possible. This reduces the amount of time the CPU
+has to spend sending draw calls to the GPU, making your game run better.
+In general, whenever you have some object that doesn&apos;t change often, prefer
+an aglet <code>Mesh</code> rather than rapid&apos;s <code>Graphics</code>.</li>
+<li>Compile your game with <code>--opt:speed</code>. Nim&apos;s rather primitive stack trace
+system can slow programs down by quite a bit, so compiling with speed
+optimizations enabled can be quite important to maintain playable
+performance. Though if your game&apos;s so CPU-heavy that it becomes unplayable
+without <code>--opt:speed</code>, you&apos;re doing something wrong. Go fix your code.</li>
+</ul>
+<h2>Contributing</h2>
+<p>When contributing code, please follow the <a href="code_style.md">coding style guidelines</a>.</p>
+<h3>Super Secret Messages hidden in plain sight</h3>
+<h4>A message to Araq</h4>
+<p>Fast incremental compilation when</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/liquid600pgm/rapid">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

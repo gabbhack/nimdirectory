@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">itertools</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">itertools</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">iterutils</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">python</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">iter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">iterator</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">iterators</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Itertools for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install itertools" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Itertools</h1>
+<p>This package is a Nim rewrite of a <a href="https://docs.python.org/3/library/itertools.html">very popular Python module</a> of the same name.</p>
+<p>It also includes some of the iterators from <a href="https://boltons.readthedocs.io/en/latest/iterutils.html">iterutils</a>.</p>
+<p> </p>
+<h2>Installation</h2>
+<pre>  <code>nimble install itertools
+</code></pre>
+<p>Required Nim version is at least 0.18.0.</p>
+<p> </p>
+<h2>Supported iterators</h2>
+<ul>
+<li>
+<p>infinite iterators:</p>
+<ul>
+<li>count</li>
+<li>cycle</li>
+<li>repeat</li>
+</ul>
+</li>
+<li>
+<p>terminating iterators:</p>
+<ul>
+<li>accumulate</li>
+<li>chain</li>
+<li>compress</li>
+<li>dropWhile</li>
+<li>filterFalse</li>
+<li>groupBy</li>
+<li>groupConsecutive</li>
+<li>islice</li>
+<li>takeWhile</li>
+</ul>
+</li>
+<li>
+<p>combinatoric iterators:</p>
+<ul>
+<li>product</li>
+<li>distinctPermutations</li>
+<li>permutations</li>
+<li>combinations</li>
+</ul>
+</li>
+<li>
+<p>iterutils iterators:</p>
+<ul>
+<li>chunked</li>
+<li>windowed</li>
+<li>pairwise</li>
+<li>unique</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<h2>Usage</h2>
+<p>For more comprehensive examples, see the <a href="https://narimiran.github.io/itertools">documentation</a>.</p>
+<h3>Infinite iterators</h3>
+<p>WARNING: Version 0.3.0 introduced breaking changes regarding how these three iterators are implemented and used.
+See the examples below for the new behaviour.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">itertools</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">count</span>(<span class="num">5</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">i</span> <span class="op">&gt;</span> <span class="num">9</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 5; 6; 7; 8; 9</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">count</span>(<span class="num">100</span>, <span class="num">30</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">i</span> <span class="op">&gt;</span> <span class="num">200</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 100; 130; 160; 190</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">n</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="op">@</span>[<span class="str">&quot;I&quot;</span>, <span class="str">&quot;repeat&quot;</span>, <span class="str">&quot;myself&quot;</span>]<span class="op">.</span><span class="ide">cycle</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">inc</span> <span class="ide">n</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">n</span> <span class="op">&gt;</span> <span class="num">8</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># I; repeat; myself; I; repeat; myself; I; repeat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="str">&quot;Beetlejuice&quot;</span><span class="op">.</span><span class="ide">repeat</span>(<span class="num">3</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># Beetlejuice; Beetlejuice; Beetlejuice</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">k</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="str">&quot;forever&quot;</span><span class="op">.</span><span class="ide">repeat</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">inc</span> <span class="ide">k</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">k</span> <span class="op">&gt;</span> <span class="num">6</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># forever; forever; forever; forever; forever; forever</span></div></div>  </code></pre>
+<h3>Terminating iterators</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">itertools</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">future</span> <span class="com"># to use `=&gt;` for anonymous proc</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="com"># you can use: sequences, arrays, strings</span></div></div><div class="line"><div class="line-content">  <span class="ide">numbers</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">3</span>, <span class="num">7</span>, <span class="num">8</span>, <span class="num">4</span>, <span class="num">2</span>, <span class="num">6</span>, <span class="num">5</span>, <span class="num">9</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">constants</span> <span class="op">=</span> [<span class="num">2.7183</span>, <span class="num">3.1416</span>, <span class="num">1.4142</span>, <span class="num">1.7321</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">word</span> <span class="op">=</span> <span class="str">&quot;abracadabra&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">accumulate</span>(<span class="ide">constants</span>, (<span class="ide">x</span>, <span class="ide">y</span>) <span class="op">=&gt;</span> <span class="ide">x</span> <span class="op">+</span> <span class="ide">y</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 2.7183; 5.8599; 7.2741; 9.0062</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">compress</span>(<span class="ide">numbers</span>, [<span class="ide">true</span>, <span class="ide">true</span>, <span class="ide">false</span>, <span class="ide">true</span>, <span class="ide">false</span>, <span class="ide">true</span>]):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 1; 3; 8; 2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">dropWhile</span>(<span class="ide">numbers</span>, <span class="ide">x</span> <span class="op">=&gt;</span> (<span class="ide">x</span> <span class="op">!=</span> <span class="num">8</span>)):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 8; 4; 2; 6; 5; 9</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">filterFalse</span>(<span class="ide">word</span>, <span class="ide">x</span> <span class="op">=&gt;</span> (<span class="ide">x</span> <span class="op">==</span> 'a')):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># b; r; c; d; b; r</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">key</span>, <span class="ide">group</span> <span class="kwd">in</span> <span class="ide">numbers</span><span class="op">.</span><span class="ide">groupBy</span>(<span class="ide">x</span> <span class="op">=&gt;</span> <span class="ide">x</span> <span class="kwd">mod</span> <span class="num">2</span> <span class="op">==</span> <span class="num">0</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;key: &quot;</span>, <span class="ide">key</span>, <span class="str">&quot; group: &quot;</span>, <span class="ide">group</span></div></div><div class="line"><div class="line-content"><span class="com"># key: true, group: @[8, 4, 2, 6]; key: false, group: @[1, 3, 7, 5, 9]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">key</span>, <span class="ide">group</span> <span class="kwd">in</span> <span class="ide">word</span><span class="op">.</span><span class="ide">groupBy</span>():</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">group</span></div></div><div class="line"><div class="line-content"><span class="com"># @[&apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;]; @[&apos;b&apos;, &apos;b&apos;]; @[&apos;c&apos;]; @[&apos;d&apos;]; @[&apos;r&apos;, &apos;r&apos;]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">key</span>, <span class="ide">group</span> <span class="kwd">in</span> <span class="ide">groupConsecutive</span>(<span class="str">&quot;aaabaabb&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">group</span></div></div><div class="line"><div class="line-content"><span class="com"># @[&apos;a&apos;, &apos;a&apos;, &apos;a&apos;]; @[&apos;b&apos;]; @[&apos;a&apos;, &apos;a&apos;]; @[&apos;b&apos;, &apos;b&apos;]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">islice</span>(<span class="ide">numbers</span>, <span class="num">5</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 2; 6; 5; 9</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">islice</span>(<span class="ide">word</span>, <span class="num">1</span>, <span class="ide">step</span><span class="op">=</span><span class="num">2</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># b; a; a; a; r</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">islice</span>(<span class="ide">numbers</span>, <span class="ide">stop</span><span class="op">=</span><span class="num">5</span>, <span class="ide">step</span><span class="op">=</span><span class="num">2</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 1; 7; 4</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">takeWhile</span>(<span class="ide">constants</span>, <span class="ide">x</span> <span class="op">=&gt;</span> (<span class="ide">x</span> <span class="op">&gt;=</span> <span class="num">2.0</span>)):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 2.7183; 3.1416</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">chain</span>(<span class="op">@</span>[<span class="num">1</span>, <span class="num">3</span>, <span class="num">5</span>], <span class="op">@</span>[<span class="num">2</span>, <span class="num">4</span>, <span class="num">6</span>], <span class="op">@</span>[<span class="num">7</span>, <span class="num">8</span>, <span class="num">9</span>]):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># 1; 3; 5; 2; 4; 6; 7; 8; 9</span></div></div>  </code></pre>
+<h3>Combinatoric iterators</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">itertools</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span> <span class="com"># to join seq[char] into a string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="com"># you can use: sequences, arrays, strings</span></div></div><div class="line"><div class="line-content">  <span class="ide">numbers</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">3</span>, <span class="num">7</span>, <span class="num">8</span>, <span class="num">4</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">constants</span> <span class="op">=</span> [<span class="num">2.7183</span>, <span class="num">3.1416</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">word</span> <span class="op">=</span> <span class="str">&quot;abba&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">product</span>([<span class="num">0</span>, <span class="num">1</span>], <span class="ide">repeat</span> <span class="op">=</span> <span class="num">3</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># @[0, 0, 0]; @[0, 0, 1]; @[0, 1, 0]; @[0, 1, 1]; @[1, 0, 0]; @[1, 0, 1]; @[1, 1, 0]; @[1, 1, 1]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">product</span>(<span class="ide">numbers</span>, <span class="ide">constants</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># (a: 1, b: 2.7183); (a: 1, b: 3.1416); (a: 3, b: 2.7183); (a: 3, b: 3.1416); (a: 7, b: 2.7183); (a: 7, b: 3.1416); (a: 8, b: 2.7183); (a: 8, b: 3.1416); (a: 4, b: 2.7183); (a: 4, b: 3.1416)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">distinctPermutations</span>(<span class="ide">word</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span><span class="op">.</span><span class="ide">join</span></div></div><div class="line"><div class="line-content"><span class="com"># aabb; abab; abba; baab; baba; bbaa</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">permutations</span>(<span class="ide">word</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span><span class="op">.</span><span class="ide">join</span></div></div><div class="line"><div class="line-content"><span class="com"># abba; abab; abba; abab; aabb; aabb; baba; baab; bbaa; bbaa; baab; baba; baba; baab; bbaa; bbaa; baab; baba; aabb; aabb; abab; abba; abab; abba</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">combinations</span>(<span class="num">5</span>, <span class="num">3</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># @[0, 1, 2]; @[0, 1, 3]; @[0, 1, 4]; @[0, 2, 3]; @[0, 2, 4]; @[0, 3, 4]; @[1, 2, 3]; @[1, 2, 4]; @[1, 3, 4]; @[2, 3, 4]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">combinations</span>(<span class="ide">numbers</span>, <span class="num">2</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># @[1, 3]; @[1, 7]; @[1, 8]; @[1, 4]; @[3, 7]; @[3, 8]; @[3, 4]; @[7, 8]; @[7, 4]; @[8, 4]</span></div></div>  </code></pre>
+<h3>Iterutils iterators</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">itertools</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="com"># you can use: sequences, arrays, strings</span></div></div><div class="line"><div class="line-content">  <span class="ide">numbers</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">3</span>, <span class="num">7</span>, <span class="num">8</span>, <span class="num">4</span>, <span class="num">2</span>, <span class="num">6</span>, <span class="num">5</span>, <span class="num">9</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">constants</span> <span class="op">=</span> [<span class="num">2.7183</span>, <span class="num">3.1416</span>, <span class="num">1.4142</span>, <span class="num">1.7321</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">word</span> <span class="op">=</span> <span class="str">&quot;abracadabra&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">chunked</span>(<span class="ide">numbers</span>, <span class="num">3</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># @[1, 3, 7]; @[8, 4, 2]; @[6, 5, 9]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">windowed</span>(<span class="ide">numbers</span>, <span class="num">4</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># @[1, 3, 7, 8]; @[3, 7, 8, 4]; @[7, 8, 4, 2]; @[8, 4, 2, 6]; @[4, 2, 6, 5]; @[2, 6, 5, 9]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">pairwise</span>(<span class="ide">constants</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># @[2.7183, 3.1416]; @[3.1416, 1.4142]; @[1.4142, 1.7321]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="ide">unique</span>(<span class="ide">word</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content"><span class="com"># a; b; r; c; d</span></div></div>  </code></pre>
+<p> </p>
+<h2>Contributing</h2>
+<p>There is probably a lot of room for improvement.
+Feel free to fork the repo and submit your PRs.</p>
+<p>Before submitting, run <code>nim doc -o:./docs/index.html ./src/itertools.nim</code> to make sure that all the asserts in <code>runnableExamples</code> are passing.</p>
+<p> </p>
+<h2>License</h2>
+<p>  <a href="LICENSE.txt">MIT license</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://narimiran.github.io/itertools/">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

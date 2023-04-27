@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">unpack</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">unpack</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">seq</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">array</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">object</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">destructuring</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">destructure</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">unpacking</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Array/Sequence/Object destructuring/unpacking macro")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install unpack" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Unpack</h1>
+<p>Array/Sequence/Object destructuring/unpacking macros attempt to quench the thirst of (Python, ES6, et al.)-spoiled people.</p>
+<h2>Installation</h2>
+<pre>  <code class="language-cli">nimble install unpack
+</code></pre>
+<h2>Example Usage</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">unpack</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">someSeq</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">5</span>]</div></div><div class="line"><div class="line-content"><span class="ide">someSeq</span><span class="op">.</span><span class="ide">unpackSeq</span>(<span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>) <span class="com"># creates a, b, c with &apos;let&apos;</span></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   a = someSeq[0]</span></div></div><div class="line"><div class="line-content"><span class="com">#   b = someSeq[1]</span></div></div><div class="line"><div class="line-content"><span class="com">#   c = someSeq[2]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or equivalently:</span></div></div><div class="line"><div class="line-content">[<span class="ide">a2</span>, <span class="ide">b2</span>, <span class="ide">c2</span>] <span class="op">&lt;-</span> <span class="ide">someSeq</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">someSeq</span><span class="op">.</span><span class="ide">unpackSeq</span>(<span class="ide">a3</span>, <span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">b3</span>) <span class="com"># use `_` to skip index</span></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   a3 = someSeq[0]</span></div></div><div class="line"><div class="line-content"><span class="com">#   b3 = someSeq[3]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>                  <span class="com"># 112</span></div></div><div class="line"><div class="line-content"><span class="ide">someSeq</span><span class="op">.</span><span class="ide">unpackSeq</span>(<span class="kwd">var</span> <span class="ide">d</span>, <span class="ide">e</span>) <span class="com"># creates d,e with &apos;var&apos;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or equivalently:</span></div></div><div class="line"><div class="line-content">[<span class="kwd">var</span> <span class="ide">d2</span>, <span class="ide">e2</span>] <span class="op">&lt;-</span> <span class="ide">someSeq</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">someSeq</span><span class="op">.</span><span class="ide">aUnpackSeq</span>(<span class="ide">d2</span>, <span class="ide">e2</span>) <span class="com"># assigns someSeq[0] to d2, someSeq[1] to e2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or equivalently:</span></div></div><div class="line"><div class="line-content">[<span class="ide">d2</span>, <span class="ide">e2</span>] <span class="op">&lt;--</span> <span class="ide">someSeq</span></div></div><div class="line"><div class="line-content"><span class="com"># yes, &lt;-- for assignment; &lt;- for definitions.</span></div></div><div class="line"><div class="line-content"><span class="com"># This is not a typo.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Person</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span>, <span class="ide">job</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tim</span> <span class="op">=</span> <span class="ide">Person</span>(<span class="ide">name</span>: <span class="str">&quot;Tim&quot;</span>, <span class="ide">job</span>: <span class="str">&quot;Fluffer&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># create name, job with let and assign respective member values to them</span></div></div><div class="line"><div class="line-content"><span class="ide">tim</span><span class="op">.</span><span class="ide">unpackObject</span>(<span class="ide">name</span>, <span class="ide">job</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or equivalently:</span></div></div><div class="line"><div class="line-content"><span class="com"># {name, job} &lt;- tim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   name = tim.name</span></div></div><div class="line"><div class="line-content"><span class="com">#   job = tim.job</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># you can also unpack into custom names using &apos;as&apos;</span></div></div><div class="line"><div class="line-content">{<span class="ide">job</span> <span class="kwd">as</span> <span class="ide">someJob</span>, <span class="ide">name</span> <span class="kwd">as</span> <span class="ide">otherName</span>} <span class="op">&lt;-</span> <span class="ide">tim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or equivalently:</span></div></div><div class="line"><div class="line-content"><span class="ide">tim</span><span class="op">.</span><span class="ide">unpackObject</span>(<span class="ide">job</span> <span class="kwd">as</span> <span class="ide">someOtherJob</span>, <span class="ide">name</span> <span class="kwd">as</span> <span class="ide">someOtherName</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   someOtherName = tim.name</span></div></div><div class="line"><div class="line-content"><span class="com">#   someOtherJob = tim.job</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">secreteState</span>, <span class="ide">arg</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">someProcWithSideEffects</span>(<span class="ide">person</span>: <span class="ide">Person</span>, <span class="ide">input</span>: <span class="ide">int</span>): <span class="ide">Person</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">secreteState</span> <span class="op">+=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">  {<span class="kwd">var</span> <span class="ide">job</span>, <span class="ide">name</span> <span class="kwd">as</span> <span class="ide">newName</span>} <span class="op">&lt;-</span> <span class="ide">person</span></div></div><div class="line"><div class="line-content">  <span class="ide">newName</span> <span class="op">&amp;=</span> <span class="op">$</span><span class="ide">input</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">Person</span>(<span class="ide">name</span>: <span class="ide">newName</span>, <span class="ide">job</span>: <span class="ide">job</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># using this at the end of proc chain will not invoke proc chain multiple times</span></div></div><div class="line"><div class="line-content"><span class="ide">tim</span><span class="op">.</span><span class="ide">someProcWithSideEffects</span>(<span class="ide">arg</span>)<span class="op">.</span><span class="ide">unpackObject</span>(<span class="ide">name</span> <span class="kwd">as</span> <span class="ide">tim0</span>, <span class="ide">job</span> <span class="kwd">as</span> <span class="ide">job0</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or equivalently:</span></div></div><div class="line"><div class="line-content"><span class="com"># {name as tim0, job as job0} &lt;- tim.someProcWithSideEffects(arg)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let someUniqueSym1_212_498 = tim.someProcWithSideEffects(arg)</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   tim0 = someUniqueSym1_212_498.name</span></div></div><div class="line"><div class="line-content"><span class="com">#   job0 = someUniqueSym1_212_498.job</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># if you haven&apos;t noticed,</span></div></div><div class="line"><div class="line-content"><span class="com"># this means we can unpack named tuples like objects</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">SomeTuple</span> <span class="op">=</span> <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">z</span>, <span class="ide">i</span>, <span class="ide">j</span>, <span class="ide">k</span>: <span class="ide">int</span>; <span class="ide">l</span>, <span class="ide">m</span>: <span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">someTuple</span> <span class="op">=</span> (<span class="num">1</span>, <span class="num">3</span>, <span class="num">7</span>, <span class="num">0</span>, <span class="num">3</span>, <span class="num">6</span>, <span class="str">&quot;so&quot;</span>, <span class="str">&quot;lengthy&quot;</span>)<span class="op">.</span><span class="ide">SomeTuple</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># with vanilla nim, to get arbitrary fields</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">_</span>, <span class="ide">diz</span>, <span class="ide">_</span>, <span class="ide">iz</span>, <span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">it</span>) <span class="op">=</span> <span class="ide">someTuple</span></div></div><div class="line"><div class="line-content"><span class="com"># it gets lengthy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># with this package</span></div></div><div class="line"><div class="line-content">{<span class="ide">y</span> <span class="kwd">as</span> <span class="ide">diz2</span>, <span class="ide">i</span> <span class="kwd">as</span> <span class="ide">iz2</span>, <span class="ide">m</span> <span class="kwd">as</span> <span class="ide">it2</span>} <span class="op">&lt;-</span> <span class="ide">someTuple</span></div></div><div class="line"><div class="line-content"><span class="com"># Mind. Blown.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># also, if you only care about the first three items</span></div></div><div class="line"><div class="line-content">[<span class="ide">nice</span>, <span class="ide">n</span>, <span class="ide">sweet</span>] <span class="op">&lt;-</span> <span class="ide">someTuple</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># with vanilla nim</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">youNeedTo</span>, <span class="ide">writeSoMany</span>, <span class="ide">underscoresMan</span>, <span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">_</span>) <span class="op">=</span> <span class="ide">someTuple</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># also supports nested unpacking</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">nestedTuple</span> <span class="op">=</span> ((<span class="num">123</span>, <span class="num">321</span>), (<span class="op">-</span><span class="num">3</span>, (<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>)))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This nesting is unnecessarily deep, but it&apos;s supported.</span></div></div><div class="line"><div class="line-content">[ [<span class="ide">run</span>, <span class="ide">outOf</span>], [<span class="ide">names</span>, [<span class="ide">_</span>, <span class="ide">_</span>, <span class="ide">toUse</span>, <span class="ide">now</span>]]] <span class="op">&lt;-</span> <span class="ide">nestedTuple</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># to be continued...</span></div></div>  </code></pre>
+<p>See <a href="tests/theTest.nim">tests/theTest.nim</a> for more usages.</p>
+<h2>Provisional Features</h2>
+<p>Following features are implemented but the syntax or their actual effects are still in question.</p>
+<h3>Rest operator for unpacking sequences</h3>
+<p>Like in Python (<code>*a,b = range(5)</code>) and modern JavaScript <code>let [a,...b] = someArray</code>, you can put the rest of the sequence into a new sequence. I haven&apos;t decided on the actual prefix to use yet, but I am settling on <code>*</code> as used in Python for now. If you have better ideas, please start an issue to discuss other options.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">unpack</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">mamaHen</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>, <span class="num">7</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">[<span class="ide">a</span>, <span class="ide">b</span>, <span class="op">*</span><span class="ide">sneakyFox</span>] <span class="op">&lt;-</span> <span class="ide">mamaHen</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   a = mamaHen[0]</span></div></div><div class="line"><div class="line-content"><span class="com">#   b = mamaHen[1]</span></div></div><div class="line"><div class="line-content"><span class="com">#   sneakyFox = mamaHen[2..^1]</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">sneakyFox</span> <span class="op">==</span> <span class="op">@</span>[<span class="num">5</span>, <span class="num">6</span>, <span class="num">7</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">[<span class="op">*</span><span class="ide">sloppySavior</span>, <span class="ide">e</span>] <span class="op">&lt;-</span> <span class="ide">sneakyFox</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">sloppySavior</span> <span class="op">==</span> <span class="op">@</span>[<span class="num">5</span>, <span class="num">6</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Perhaps the variable naming may be a bit mis-leading,</span></div></div><div class="line"><div class="line-content"><span class="com"># since mamaHen[x..y] creates a new sequence and copy the slice into it,</span></div></div><div class="line"><div class="line-content"><span class="com"># so rather than stealing, the sneakyFox actually cloned(?) whatever mamaHen had with her</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># You can use *_ to skip the beginning</span></div></div><div class="line"><div class="line-content">[<span class="op">*</span><span class="ide">_</span>, <span class="ide">pickyFox</span>] <span class="op">&lt;-</span> <span class="ide">mamaHen</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">pickyFox</span> <span class="op">==</span> <span class="num">7</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># It&apos;s okay to take the middle chunk too.</span></div></div><div class="line"><div class="line-content">[<span class="ide">f</span>, <span class="ide">g</span>, <span class="op">*</span><span class="ide">randomFox</span>, <span class="ide">_</span>, <span class="ide">h</span>] <span class="op">&lt;-</span> <span class="ide">mamaHen</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span>([<span class="ide">f</span>, <span class="ide">g</span>, <span class="ide">h</span>] <span class="op">==</span> [<span class="num">3</span>, <span class="num">4</span>, <span class="num">7</span>])</div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">randomFox</span> <span class="op">==</span> <span class="op">@</span>[<span class="num">5</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Due to restriction from nim&apos;s grammar, `*` following `var`</span></div></div><div class="line"><div class="line-content"><span class="com"># is not allowed. Adding `_ as` before it is the current hack I chose to bypass this.</span></div></div><div class="line"><div class="line-content">[<span class="kwd">var</span> <span class="ide">_</span> <span class="kwd">as</span> <span class="op">*</span><span class="ide">boldFox</span>, <span class="ide">i</span>, <span class="ide">j</span>] <span class="op">&lt;-</span> <span class="ide">mamaHen</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span>([<span class="ide">i</span>, <span class="ide">j</span>] <span class="op">==</span> [<span class="num">6</span>, <span class="num">7</span>])</div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">boldFox</span> <span class="op">==</span> <span class="op">@</span>[<span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># They are indeed created with var.</span></div></div><div class="line"><div class="line-content"><span class="ide">i</span> <span class="op">=</span> <span class="num">12</span></div></div><div class="line"><div class="line-content"><span class="ide">boldFox</span>[<span class="num">2</span>] <span class="op">=</span> <span class="num">123</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">i</span> <span class="op">==</span> <span class="num">12</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span>(<span class="ide">boldFox</span> <span class="op">==</span> <span class="op">@</span>[<span class="num">3</span>, <span class="num">123</span>, <span class="num">5</span>])</div></div>  </code></pre>
+<p>Under the hood, <code>unpack</code> just attaches <code>[countFromStart..^countFromEnd]</code> to whatever you throw at it, so anything that has slice operator implemented should work. Which also brings us to our first caveat.</p>
+<h4>Caveat</h4>
+<h5>Doesn&apos;t Work on tuples</h5>
+<p>Unless you implement the <code>..</code> operator (and its friends) yourself though.</p>
+<h5>Only one rest operator per unpacked sequence</h5>
+<p><code>[*a, *b, c] &lt;- someSeq</code> is not allowed. It might be possible, but I think it will be really messy (plus I am lazy). Same restriction applies to both Python and JavaScript, so I think it&apos;s okay to skip this part for now.</p>
+<p>However, using rest operator in different parts of the nested sequence is fine, since they have different index counters, so this will work:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">[[<span class="op">*</span><span class="ide">a</span>, <span class="ide">b</span>], [<span class="ide">c</span>, <span class="ide">d</span>, <span class="op">*</span><span class="ide">e</span>], <span class="op">*</span><span class="ide">f</span>, <span class="ide">g</span>, <span class="ide">h</span>] <span class="op">&lt;-</span> <span class="ide">someNestedSeq</span></div></div><div class="line"><div class="line-content"><span class="com"># is expanded into:</span></div></div><div class="line"><div class="line-content"><span class="com"># let</span></div></div><div class="line"><div class="line-content"><span class="com">#   b = someNestedSeq[0][^1]</span></div></div><div class="line"><div class="line-content"><span class="com">#   a = someNestedSeq[0][0..^2]</span></div></div><div class="line"><div class="line-content"><span class="com">#   c = someNestedSeq[1][0]</span></div></div><div class="line"><div class="line-content"><span class="com">#   d = someNestedSeq[1][1]</span></div></div><div class="line"><div class="line-content"><span class="com">#   e = someNestedSeq[1][2..^1]</span></div></div><div class="line"><div class="line-content"><span class="com">#   h = someNestedSeq[^1]</span></div></div><div class="line"><div class="line-content"><span class="com">#   g = someNestedSeq[^2]</span></div></div><div class="line"><div class="line-content"><span class="com">#   f = someNestedSeq[2..^3]</span></div></div>  </code></pre>
+<h5>Can&apos;t guard against incorrect index access at compile time</h5>
+<p>Since we have no way to know the sequence length at compile time, (well, at least I don&apos;t know a way). We can&apos;t know if you are trying to do something goofy like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">[<span class="ide">a</span>, <span class="ide">b</span>, <span class="op">*</span><span class="ide">c</span>, <span class="ide">d</span>, <span class="ide">e</span>] <span class="op">&lt;-</span> <span class="op">@</span>[<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>]</div></div>  </code></pre>
+<h2>Notes</h2>
+<h3>About the syntax</h3>
+<h4>Using <code>let</code> in [] and {} is not allowed</h4>
+<p>Yes, I also wanted to have the natural <code>[let x, y] &lt;- someSeq</code> syntax for defining new symbol with let, <code>[x, y] &lt;- someSeq</code> for assignment, but the compiler deems it illegal. I ended up settle with more verbose assignment syntax since I anticipate it being used less often.</p>
+<h2>TODO</h2>
+<ul>
+<li>Docs</li>
+<li>Maybe we can also support tables?</li>
+<li>More informative error message for out of bound sequence access during unpacking.</li>
+</ul>
+<h2>Maybe TODO</h2>
+<ul>
+<li>rest operator for objects/tables.</li>
+</ul>
+<h2>Suggestions and PR&apos;s are welcome</h2>
+<p>Especially if you know how to make this macro easier to use. Also, if you know any other existing package that does this kind of stuff better, please let me know, thank you.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/technicallyagd/unpack">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

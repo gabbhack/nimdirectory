@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">imstyle</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">style</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">imgui</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">toml</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">dear-imgui</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A nice way to manage your ImGui application\'s style")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install imstyle" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>ImStyle</h1>
+<p>A nice way to manage your ImGui application&apos;s style.</p>
+<h2>Installation</h2>
+<pre>  <code>nimble install imstyle
+</code></pre>
+<h2>Usage</h2>
+<p>Normally you would do this to change your application&apos;s style:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimgl</span><span class="op">/</span><span class="ide">imgui</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">style</span> <span class="op">=</span> <span class="ide">igGetStyle</span>()</div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">alpha</span> <span class="op">=</span> <span class="num">1</span><span class="ide">f</span></div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">windowPadding</span> <span class="op">=</span> <span class="ide">ImVec2</span>(<span class="ide">x</span>: <span class="num">4</span><span class="ide">f</span>, <span class="ide">y</span>: <span class="num">4</span><span class="ide">f</span>)</div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">windowMenuButtonPosition</span> <span class="op">=</span> <span class="ide">ImGuiDir</span><span class="op">.</span><span class="ide">Left</span></div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">colors</span>[<span class="ide">ord</span> <span class="ide">ImGuiCol</span><span class="op">.</span><span class="ide">Text</span>] <span class="op">=</span> <span class="ide">ImVec4</span>(<span class="ide">x</span>: <span class="num">0</span><span class="ide">f</span>, <span class="ide">y</span>: <span class="num">0</span><span class="ide">f</span>, <span class="ide">z</span>: <span class="num">0</span><span class="ide">f</span>, <span class="ide">w</span>: <span class="num">1</span><span class="ide">f</span>) <span class="com"># RGBA</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
+<p>But with <em>ImStyle</em> you wil just create a <code>style.toml</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># ImStyle</span></div></div><div class="line"><div class="line-content"><span class="ide">alpha</span> <span class="op">=</span> <span class="num">1</span> <span class="com"># -&gt; 1.0</span></div></div><div class="line"><div class="line-content"><span class="ide">windowPadding</span> <span class="op">=</span> [<span class="num">4</span>, <span class="num">4</span>] <span class="com"># -&gt; ImVec2(x: 4.0, y: 4.0) </span></div></div><div class="line"><div class="line-content"><span class="ide">windowMenuButtonPosition</span> <span class="op">=</span> <span class="str">&quot;Left&quot;</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content">[<span class="ide">colors</span>]</div></div><div class="line"><div class="line-content"><span class="ide">Text</span> <span class="op">=</span> <span class="str">&quot;#000000&quot;</span> <span class="com"># or &quot;rgb(0, 0, 0)&quot; or or &quot;rgba(0, 0, 0, 1)&quot; or [0, 0, 0, 1]</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
+<p>Then read and set the style like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">imstyle</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="ide">igGetCurrentContext</span>()<span class="op">.</span><span class="ide">style</span> <span class="op">=</span> <span class="ide">styleFromToml</span>(<span class="str">&quot;style.toml&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
+<p>With <em>ImStyle</em> it&apos;s way more clear and <strong>you don&apos;t need to compile your application again each time you change its style</strong>.</p>
+<p>Read more at the <a href="https://patitotective.github.io/ImStyle">docs</a>.</p>
+<h2>Styles</h2>
+<p>For style examples look at <a href="https://github.com/Patitotective/ImStyle/tree/main/styles">styles/</a>.<br />
+Or at <a href="https://github.com/Patitotective/ImThemes">ImThemes</a>, a theme manager and editor that supports ImStyle!
+(Make a PR if you want to add your own).</p>
+<h2>Fields Description</h2>
+<p>Fields of <a href="https://nimgl.dev/docs/imgui.html#ImGuiStyle">  <code>ImGuiStyle</code></a>:</p>
+<ul>
+<li><code>Alpha</code>: Global alpha applies to everything in Dear ImGui.</li>
+<li><code>DisabledAlpha</code>: Additional alpha multiplier applied by BeginDisabled(). Multiply over current value of Alpha.</li>
+<li><code>WindowPadding</code>: Padding within a window.</li>
+<li><code>WindowRounding</code>: Radius of window corners rounding. Set to 0.0f to have rectangular windows. Large values tend to lead to variety of artifacts and are not recommended.</li>
+<li><code>WindowBorderSize</code>: Thickness of border around windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly).</li>
+<li><code>WindowMinSize</code>: Minimum window size. This is a global setting. If you want to constraint individual windows, use SetNextWindowSizeConstraints().</li>
+<li><code>WindowTitleAlign</code>: Alignment for title bar text. Defaults to (0.0f,0.5f) for left-aligned,vertically centered.</li>
+<li><code>WindowMenuButtonPosition</code>: Side of the collapsing/docking button in the title bar (None/Left/Right). Defaults to ImGuiDir_Left.</li>
+<li><code>ChildRounding</code>: Radius of child window corners rounding. Set to 0.0f to have rectangular windows.</li>
+<li><code>ChildBorderSize</code>: Thickness of border around child windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly).</li>
+<li><code>PopupRounding</code>: Radius of popup window corners rounding. (Note that tooltip windows use WindowRounding)</li>
+<li><code>PopupBorderSize</code>: Thickness of border around popup/tooltip windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly).</li>
+<li><code>FramePadding</code>: Padding within a framed rectangle (used by most widgets).</li>
+<li><code>FrameRounding</code>: Radius of frame corners rounding. Set to 0.0f to have rectangular frame (used by most widgets).</li>
+<li><code>FrameBorderSize</code>: Thickness of border around frames. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly).</li>
+<li><code>ItemSpacing</code>: Horizontal and vertical spacing between widgets/lines.</li>
+<li><code>ItemInnerSpacing</code>: Horizontal and vertical spacing between within elements of a composed widget (e.g. a slider and its label).</li>
+<li><code>CellPadding</code>: Padding within a table cell</li>
+<li><code>TouchExtraPadding</code>: Expand reactive bounding box for touch-based system where touch position is not accurate enough. Unfortunately we don&apos;t sort widgets so priority on overlap will always be given to the first widget. So don&apos;t grow this too much!</li>
+<li><code>IndentSpacing</code>: Horizontal indentation when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2).</li>
+<li><code>ColumnsMinSpacing</code>: Minimum horizontal spacing between two columns. Preferably &gt; (FramePadding.x + 1).</li>
+<li><code>ScrollbarSize</code>: Width of the vertical scrollbar, Height of the horizontal scrollbar.</li>
+<li><code>ScrollbarRounding</code>: Radius of grab corners for scrollbar.</li>
+<li><code>GrabMinSize</code>: Minimum width/height of a grab box for slider/scrollbar.</li>
+<li><code>GrabRounding</code>: Radius of grabs corners rounding. Set to 0.0f to have rectangular slider grabs.</li>
+<li><code>LogSliderDeadzone</code>: The size in pixels of the dead-zone around zero on logarithmic sliders that cross zero.</li>
+<li><code>TabRounding</code>: Radius of upper corners of a tab. Set to 0.0f to have rectangular tabs.</li>
+<li><code>TabBorderSize</code>: Thickness of border around tabs.</li>
+<li><code>TabMinWidthForCloseButton</code>: Minimum width for close button to appears on an unselected tab when hovered. Set to 0.0f to always show when hovering, set to FLT_MAX to never show close button unless selected.</li>
+<li><code>ColorButtonPosition</code>: Side of the color button in the ColorEdit4 widget (left/right). Defaults to ImGuiDir_Right.</li>
+<li><code>ButtonTextAlign</code>: Alignment of button text when button is larger than text. Defaults to (0.5f, 0.5f) (centered).</li>
+<li><code>SelectableTextAlign</code>: Alignment of selectable text. Defaults to (0.0f, 0.0f) (top-left aligned). It&apos;s generally important to keep this left-aligned if you want to lay multiple items on a same line.</li>
+<li><code>DisplayWindowPadding</code>: Window position are clamped to be visible within the display area or monitors by at least this amount. Only applies to regular windows.</li>
+<li><code>DisplaySafeAreaPadding</code>: If you cannot see the edges of your screen (e.g. on a TV) increase the safe area padding. Apply to popups/tooltips as well regular windows. NB: Prefer configuring your TV sets correctly!</li>
+<li><code>MouseCursorScale</code>: Scale software rendered mouse cursor (when io.MouseDrawCursor is enabled). May be removed later.</li>
+<li><code>AntiAliasedLines</code>: Enable anti-aliased lines/borders. Disable if you are really tight on CPU/GPU. Latched at the beginning of the frame (copied to ImDrawList).</li>
+<li><code>AntiAliasedLinesUseTex</code>: Enable anti-aliased lines/borders using textures where possible. Require backend to render with bilinear filtering. Latched at the beginning of the frame (copied to ImDrawList).</li>
+<li><code>AntiAliasedFill</code>: Enable anti-aliased edges around filled shapes (rounded rectangles, circles, etc.). Disable if you are really tight on CPU/GPU. Latched at the beginning of the frame (copied to ImDrawList).</li>
+<li><code>CurveTessellationTol</code>: Tessellation tolerance when using PathBezierCurveTo() without a specific number of segments. Decrease for highly tessellated curves (higher quality, more polygons), increase to reduce quality.</li>
+<li><code>CircleTessellationMaxError</code>: error (in pixels) allowed when using AddCircle()/AddCircleFilled() or drawing rounded corner rectangles with no explicit segment count specified. Decrease for higher quality but more geometry.</li>
+<li><code>Colors</code>: See <a href="https://nimgl.dev/docs/imgui.html#ImGuiCol">ImGuiCol</a>.</li>
+</ul>
+<p>(Taken from <a href="https://github.com/ocornut/imgui/blob/master/imgui.h#L1837">ocornut/imgui</a>).</p>
+<h2>About</h2>
+<ul>
+<li>Docs: https://patitotective.github.io/ImStyle.</li>
+<li>GitHub: https://github.com/Patitotective/ImStyle.</li>
+<li>Discord: https://discord.gg/gdcPVjazCG.</li>
+</ul>
+<p>Contact me:</p>
+<ul>
+<li>Discord: <strong>Patitotective#0127</strong>.</li>
+<li>Tiwtter: <a href="https://twitter.com/patitotective">@patitotective</a>.</li>
+<li>Email: <strong>cristobalriaga@gmail.com</strong>.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/Patitotective/ImStyle">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

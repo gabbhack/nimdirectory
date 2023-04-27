@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">bu</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bu</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">unix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">posix</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">linux</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sysadmin</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sys admin</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">system administration</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">shell utilities</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pipeline</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">benchmarking</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">colorization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">measurement</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">benchmarking</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">extreme value statistics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">file types</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">file times</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">terminal</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">random</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sampling</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">space management</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">miscellany</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("B)asic|But-For U)tility Code/Programs (Usually Nim & With Unix/POSIX/Linux Context)")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install bu" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h2>Overview</h2>
+<p>This is a collection of miscellaneous utilities I&apos;ve written over the years.
+Their motivation/scope spans from nearly trivial access checking of <code>okpaths</code> to
+nascent attempts or atoms of Big Things like map-reduce in shell or extreme
+value estimation for benchmark time cleaning.  All are tools I use in one way or
+another with some regularity which I thought others might find useful.  There is
+a general vibe similar to <a href="https://en.wikipedia.org/wiki/Util-linux">util-linux</a>
+or <a href="https://www.putorius.net/moreutils.html">moreutils</a>.  A great many are Unix
+only tools, but some may be more cross-platform.</p>
+<h2>File Typology (What/Whether)</h2>
+<p>  <a href="doc/ft.md">ft - file typer {i-node type, not file(1)/libmagic(3) type}</a></p>
+<p>  <a href="doc/only.md">only - file(1)/libmagic tool to emit files whose types match</a></p>
+<p>  <a href="doc/fkindc.md">fkindc - file(1)/libmagic tool to histogram file types</a></p>
+<p>  <a href="doc/notIn.md">notIn - Helper to manage semi-mirrored file trees</a></p>
+<h2>Space Management (How Much)</h2>
+<p>  <a href="doc/dfr.md">dfr - d)isk fr)ee;   <code>df</code> with color coding &amp; modern units</a></p>
+<p>  <a href="doc/lncs.md">lncs - analyze a file tree for hard link structure</a></p>
+<p>  <a href="doc/du.md">du - Slight improvement on GNU du</a></p>
+<p>  <a href="doc/rr.md">rr - Mostly a short alias for rm -rf but also faster</a></p>
+<p>  <a href="doc/dups.md">dups - Fast finder of exact duplicate files</a></p>
+<p>  <a href="doc/fpr.md">fpr - File Pages Resident reporting utility like fincore</a></p>
+<h2>File Time Related (When)</h2>
+<p>  <a href="doc/cbtm.md">cbtm - Back up &amp; restore new Linux b-time stamps (creation/birth)</a></p>
+<p>  <a href="doc/dirt.md">dirt - Recursively set dir time stamp to oldest of members</a></p>
+<p>  <a href="doc/fage.md">fage - file age according to various timestamps/rules</a></p>
+<p>  <a href="doc/newest.md">newest - b-time supporting `find -printf|sort|tail`</a></p>
+<p>  <a href="doc/since.md">since - b-time supporting `find -Xnewer`</a></p>
+<p>  <a href="doc/saft.md">saft - SAve&amp;restore File Times across a command operating on them</a></p>
+<p>  <a href="doc/tmath.md">tmath - Convert/do arithmetic directly upon date &amp; time formats</a></p>
+<h2>Benchmarking Related Utilities (How Long)</h2>
+<p>  <a href="doc/memlat.md">memlat - measure memory latency at various size scales</a></p>
+<p>  <a href="doc/fread.md">fread - Like   <code>cat</code> but just read data (no writes)</a></p>
+<p>  <a href="doc/ru.md">ru - Resource Usage measurement { high-res/nicer time(1) }</a></p>
+<p>  <a href="doc/etr.md">etr - e)stimate t)ime r)emaining using subcommands for %done</a></p>
+<p>  <a href="doc/tim.md">tim - Sanity checking benchmark timer using only basic statistics</a></p>
+<p>  <a href="doc/eve.md">eve - Extreme Value Estimator (e.g.   <em>true</em> min time of an infinite sample)</a></p>
+<h2>Row/Column/Text Table Things</h2>
+<p>  <a href="doc/align.md">align - align text with better ergonomics than BSD   <code>column</code></a></p>
+<p>  <a href="doc/tails.md">tails - Generalizes head &amp; tail into one with all-but compliments</a></p>
+<p>  <a href="doc/cols.md">cols - extract just some columns from a text file/stream</a></p>
+<p>  <a href="doc/rp.md">rp - A row processor program-generator maybe replacement for AWK</a></p>
+<p>  <a href="doc/crp.md">crp - C row processor program-generator port of   <code>rp</code></a></p>
+<p>  <a href="doc/colSort.md">colSort - Sort   <em>within</em> the columns of rows</a></p>
+<p>  <a href="doc/cstats.md">cstats - preserve Context/Compute Column stats filter</a></p>
+<h2>Freeform Text Things</h2>
+<p>  <a href="doc/cfold.md">cfold - Context folding (like csplit but to wrap lines)</a></p>
+<p>  <a href="doc/unfold.md">unfold - Oft neglected inverse-to-wrapping/folding process</a></p>
+<p>  <a href="doc/ww.md">ww - Dynamic programming based word wrapper</a></p>
+<p>  <a href="doc/widths.md">widths - Compute &amp; emit line widths/lengths | distro</a></p>
+<p>  <a href="doc/jointr.md">jointr - join strace &quot;unfinished ...&quot; with conclusion</a></p>
+<p>  <a href="doc/ndelta.md">ndelta - Numerical difference between two reports utility</a></p>
+<h2>Pipeline Calculation Tools</h2>
+<p>  <a href="doc/topn.md">topn - heap-based fast 1-pass top-N over m columns</a></p>
+<p>  <a href="doc/oft.md">oft - Approximately most often items via a low-memory algorithm</a></p>
+<p>  <a href="doc/uce.md">uce - Unique/distinct Count Estimate via a low-memory algorithm</a></p>
+<h2>System Administration on Unix/POSIX/Linux</h2>
+<p>  <a href="doc/fsids.md">fsids - file system user &amp; group id histogram</a></p>
+<p>  <a href="doc/chom.md">chom - Enforce group owner &amp; segregated perms in file trees</a></p>
+<p>  <a href="doc/thermctl.md">thermctl - Thermal Control for before CPU makers thermally throttled</a></p>
+<p>  <a href="doc/pid2.md">pid2 - Wrap Linux process PID table to first past target</a></p>
+<p>  <a href="doc/sr.md">sr - System Request Key - rapidly act on Linux systems</a></p>
+<h2>Tty Handling</h2>
+<p>  <a href="doc/tattr.md">tattr - Terminal attribute access (like cligen/humanUt)</a></p>
+<p>  <a href="doc/wsz.md">wsz - Report terminal size in cells, pixels, and cell size</a></p>
+<h2>Miscellaneous/Islands Unto Themselves</h2>
+<p>  <a href="doc/okpaths.md">okpaths - Validate/trim PATH-like vars by probing the system</a></p>
+<p>  <a href="doc/nrel.md">nrel - Edit .nimble version, commit, tag, push &amp; maybe release</a></p>
+<p>  <a href="doc/dirq.md">dirq - Kind of its own system-building atom thing</a></p>
+<p>  <a href="doc/funnel.md">funnel - A reliable, record boundary respecting &quot;FIFO funnel</a></p>
+<p>  <a href="doc/stripe.md">stripe - Run jobs in parallel w/slot key vars/seqNos/shell elision</a></p>
+<p>  <a href="doc/wsample.md">wsample - Weighted random sampler with fancy weighting</a></p>
+<p>  <a href="doc/zipf.md">zipf - Random samples according to Zipf distribution</a></p>
+<p>  <a href="doc/niom.md">niom - nio moments w/hard dep on adix efficient histogram/quantiles</a></p>
+<h2>Meta-Commentary</h2>
+<p>Every tool has a help message hopefully useful enough to be mostly autonomous or
+at least a good reminder of its own README in doc/TOOLNAME.md.  I should write
+some man pages starting with help2man, but AFAICT, nimble, will not install them
+anyway (there&apos;s no mention of the whole word &quot;man&quot; on any issue, PR, or anywhere
+in the VC history of nimble, nor any default target one could add to <code>MANPATH</code> |
+<code>/etc/man*.conf</code>).  Many doc/TOOLNAME.md&apos;s should grow more complete/better
+example usages.  I tried to keep the source code scrutable, but also to the
+point and doc PRs are always very welcome.  Though we all try, there is no real
+substitute for initial confusion.  Some packaging meta-commentary is
+<a href="doc/METAPKG.md">here</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT/ISC
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/bu">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

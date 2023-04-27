@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">finals</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">types</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Transparently declare single-set attributes on types.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install finals" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>finals</h1>
+<p>(Mostly) Transparent single-set attributes for Nim types</p>
+<h2>Example</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">finals</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span> <span class="ide">Point</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">y</span><span class="op">*</span> {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># In another file...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">p</span>: <span class="ide">Point</span></div></div><div class="line"><div class="line-content"><span class="ide">p</span><span class="op">.</span><span class="ide">x</span> <span class="op">=</span> <span class="num">3</span>  <span class="com"># fine</span></div></div><div class="line"><div class="line-content"><span class="ide">p</span><span class="op">.</span><span class="ide">y</span> <span class="op">=</span> <span class="num">4</span>  <span class="com"># fine</span></div></div><div class="line"><div class="line-content"><span class="ide">p</span><span class="op">.</span><span class="ide">x</span> <span class="op">=</span> <span class="num">0</span>  <span class="com"># fine</span></div></div><div class="line"><div class="line-content"><span class="ide">p</span><span class="op">.</span><span class="ide">y</span> <span class="op">=</span> <span class="num">1</span>  <span class="com"># Error! `y` can only be set once!</span></div></div>  </code></pre>
+<h2>Usage</h2>
+<p>Like in the example. Generalizes to variant types as well. In a <code>finals:</code> block, multiple typedefs may be present, as well as
+non-typdefs, which will be ignored.</p>
+<h4>For debugging</h4>
+<p><code>finalsd</code> may be used instead of <code>finals</code> to only have an effect with <code>-d:debug</code>, and otherwise be a 0-cost noop.</p>
+<p>If Nim is run with <code>-d:finalsOn</code>, both <code>finals</code> and <code>finalsd</code> blocks will run. If Nim is run with <code>-d:finalsOff</code>,
+neither <code>finals</code> nor <code>finalsd</code> blocks will run. If Nim is run with both <code>-d:finalsOn</code> and <code>-d:finalsOff</code>,
+the entire world will explode.</p>
+<h2>Gotchas</h2>
+<h4>Name conflicts</h4>
+<p>The <code>finals</code> macro works by generating, for an attribute <code>a: A</code> on type <code>T</code>, a getter <code>proc a(o: T): A</code> and setter
+<code>proc `a=`(o: T; v: A)</code>. If you define your own custom setters and getters, there will be a name conflict.</p>
+<h4>Module scoping</h4>
+<p>Unfortunately, the <code>finals</code> macro only has an effect <em>outside</em> of the module containing the typedef.
+This is because getters and setters are ignored within the same module. It&apos;s due to a Nim feature and
+is unavoidable.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># a.nim</span></div></div><div class="line"><div class="line-content"><span class="ide">finals</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span> <span class="ide">X</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">x</span><span class="op">*</span> {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>}: <span class="ide">int</span></div></div>  </code></pre>
+<p><code>X.x</code> will only be protected for <code>.x=</code> calls from <em>outside</em> <code>a.nim</code>. This means that the following will
+not result in an error:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># a.nim (continued)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">o</span><span class="op">*</span> <span class="op">=</span> <span class="ide">X</span>()</div></div><div class="line"><div class="line-content"><span class="ide">o</span><span class="op">.</span><span class="ide">x</span> <span class="op">=</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># b.nim</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">a</span></div></div><div class="line"><div class="line-content"><span class="ide">o</span><span class="op">.</span><span class="ide">x</span> <span class="op">=</span> <span class="num">4</span></div></div>  </code></pre>
+<p>In order to circumvent this issue, an user may manually finalize an attribute <code>X</code> by calling <code>ffinalizeX(o)</code>
+(the extra &quot;f&quot; stands for &quot;finals&quot; is added to avoid name conflicts). The previous example would be fixed
+like so:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># a.nim (continued)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">o</span><span class="op">*</span> <span class="op">=</span> <span class="ide">X</span>()</div></div><div class="line"><div class="line-content"><span class="ide">o</span><span class="op">.</span><span class="ide">x</span> <span class="op">=</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"><span class="ide">o</span><span class="op">.</span><span class="ide">finalizeX</span>();</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># b.nim</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">a</span></div></div><div class="line"><div class="line-content"><span class="ide">o</span><span class="op">.</span><span class="ide">x</span> <span class="op">=</span> <span class="num">4</span>  <span class="com"># error!</span></div></div>  </code></pre>
+<h4>Contructors and Object Hierarchies</h4>
+<p>In order for the <code>finals</code> macro to work, attributes marked with <code>{.final.}</code> are explicitely NOT exported.
+Due to this, there is an issue with constructors and object hierarchies:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">finals</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span> <span class="ide">Parent</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">p</span><span class="op">*</span> {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="kwd">type</span> <span class="ide">Child</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">c</span><span class="op">*</span> {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">Child</span>(<span class="ide">c</span>: <span class="num">2</span>, <span class="ide">p</span>: <span class="num">3</span>)  <span class="com"># error! `p` is not accessible</span></div></div>  </code></pre>
+<h4>Function Attributes</h4>
+<p>Because <code>finals</code> generates accessors for attriubutes, <code>obj.finalAttr()</code> will call the acceessor rather than
+invoking the attribute.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">finals</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span> <span class="ide">T</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">f</span><span class="op">*</span> {<span class="op">.</span><span class="ide">final</span><span class="op">.</span>}: <span class="kwd">proc</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initT</span>():</div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">T</span>(<span class="ide">f</span>: <span class="kwd">proc</span>() <span class="op">=</span> <span class="ide">echo</span> <span class="str">&quot;test&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># in another file...</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">t</span> <span class="op">=</span> <span class="ide">initT</span>()</div></div><div class="line"><div class="line-content"><span class="ide">t</span><span class="op">.</span><span class="ide">f</span>()  <span class="com"># calls the `f` accessor instead of the proc</span></div></div><div class="line"><div class="line-content"><span class="ide">t</span><span class="op">.</span><span class="ide">f</span>()()  <span class="com"># need two ()&apos;s to work</span></div></div>  </code></pre>
+<h2>Known bugs</h2>
+<h4>Intolerant of other pragmas</h4>
+<p>If an attribute is marked with any pragmas besides <code>{.final.}</code>, those pragmas will be removed.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/Quelklef/nim-finals">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

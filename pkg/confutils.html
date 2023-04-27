@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">confutils</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">configuration</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Simplified handling of command line options and config files")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install confutils" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nim-confutils</h1>
+<p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<img src="https://github.com/status-im/nim-confutils/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
+<h2>Introduction</h2>
+<p>Confutils is a library that aims to solve the configuration problem
+with a holistic approach. The run-time configuration of a program
+is described as a plain Nim object type from which the library
+automatically derives the code for handling command-line options,
+configuration files and other platform-specific sources such as the
+Windows registry.</p>
+<p>The library focuses on providing a lot of compile-time configurability
+and extensibility with a strong adherence to the DRY principle.</p>
+<p>Let&apos;s illustrate the API with a highly annotated example. Our configuration
+might be described in a separate module looking like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># config.nim</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">confutils</span><span class="op">/</span><span class="ide">defs</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">NimbusConf</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="com"># This is our configuration type.</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="com"># Each field will be considered a configuration option that may appear</span></div></div><div class="line"><div class="line-content">    <span class="com"># on the command-line, whitin an environment variable or a configuration</span></div></div><div class="line"><div class="line-content">    <span class="com"># file, or elsewhere. Custom pragmas are used to annotate the fields with</span></div></div><div class="line"><div class="line-content">    <span class="com"># additional metadata that is used to augment the behavior of the library.</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="ide">logLevel</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">      <span class="ide">defaultValue</span>: <span class="ide">LogLevel</span><span class="op">.</span><span class="ide">INFO</span></div></div><div class="line"><div class="line-content">      <span class="ide">desc</span>: <span class="str">&quot;Sets the log level&quot;</span> }: <span class="ide">LogLevel</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="com"># This program uses a CLI interface with sub-commands (similar to git).</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="com"># The `StartUpCommand` enum provides the list of available sub-commands,</span></div></div><div class="line"><div class="line-content">    <span class="com"># but since we are specifying a default value of `noCommand`, the user</span></div></div><div class="line"><div class="line-content">    <span class="com"># can also launch the program without entering any particular command.</span></div></div><div class="line"><div class="line-content">    <span class="com"># The default command will also be omitted from help messages.</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="com"># Please note that the `logLevel` option above will be shared by all</span></div></div><div class="line"><div class="line-content">    <span class="com"># sub-commands. The rest of the nested options will be relevant only</span></div></div><div class="line"><div class="line-content">    <span class="com"># when the designated sub-command is being invoked.</span></div></div><div class="line"><div class="line-content">    <span class="com">#</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">cmd</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">      <span class="ide">command</span></div></div><div class="line"><div class="line-content">      <span class="ide">defaultValue</span>: <span class="ide">noCommand</span> }: <span class="ide">StartUpCommand</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">noCommand</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">dataDir</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">defaultValue</span>: <span class="ide">getConfigDir</span>() <span class="op">/</span> <span class="str">&quot;nimbus&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;The directory where nimbus will store all blockchain data.&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;d&quot;</span> }: <span class="ide">DirPath</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">bootstrapNodes</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;Specifies one or more bootstrap nodes to use when connecting to the network.&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;b&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">name</span>: <span class="str">&quot;bootstrap-node&quot;</span> }: <span class="ide">seq</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">bootstrapNodesFile</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">defaultValue</span>: <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;Specifies a line-delimited file of bootsrap Ethereum network addresses&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;f&quot;</span> }: <span class="ide">InputFile</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">tcpPort</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;TCP listening port&quot;</span> }: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">udpPort</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;UDP listening port&quot;</span> }: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">validators</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">required</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;A path to a pair of public and private keys for a validator. &quot;</span> <span class="op">&amp;</span></div></div><div class="line"><div class="line-content">              <span class="str">&quot;Nimbus will automatically add the extensions .privkey and .pubkey.&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;v&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">name</span>: <span class="str">&quot;validator&quot;</span> }: <span class="ide">seq</span>[<span class="ide">PrivateValidatorData</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">stateSnapshot</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;Json file specifying a recent state snapshot&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;s&quot;</span> }: <span class="ide">Option</span>[<span class="ide">BeaconState</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">createChain</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">chainStartupData</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;c&quot;</span> }: <span class="ide">ChainStartupData</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">outputStateFile</span><span class="op">*</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">        <span class="ide">desc</span>: <span class="str">&quot;Output file where to write the initial state snapshot&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">name</span>: <span class="str">&quot;out&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">abbr</span>: <span class="str">&quot;o&quot;</span> }: <span class="ide">OutFilePath</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">StartUpCommand</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">noCommand</span></div></div><div class="line"><div class="line-content">    <span class="ide">createChain</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com">#</span></div></div><div class="line"><div class="line-content">  <span class="com"># The configuration can use user-defined types that feature custom</span></div></div><div class="line"><div class="line-content">  <span class="com"># command-line parsing and serialization routines.</span></div></div><div class="line"><div class="line-content">  <span class="com">#</span></div></div><div class="line"><div class="line-content">  <span class="ide">PrivateValidatorData</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">privKey</span><span class="op">*:</span> <span class="ide">ValidatorPrivKey</span></div></div><div class="line"><div class="line-content">    <span class="ide">randao</span><span class="op">*:</span> <span class="ide">Randao</span></div></div>  </code></pre>
+<p>Then from our main module, we just need to call <code>confutils.load</code> which must be
+given our configuration type as a parameter:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># main.nim</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">confutils</span>, <span class="ide">config</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">conf</span> <span class="op">=</span> <span class="ide">NimbusConf</span><span class="op">.</span><span class="ide">load</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">initDatabase</span> <span class="ide">conf</span><span class="op">.</span><span class="ide">dataDir</span></div></div>  </code></pre>
+<p>And that&apos;s it - calling <code>load</code> with default parameters will first process any
+<a href="#handling-of-command-line-options">command-line options</a> and then it will
+try to load any missing options from the most appropriate
+<a href="#handling-of-environment-variables-and-config-files">configuration location</a>
+for the platform. Diagnostic messages will be provided for many simple
+configuration errors and the following help message will be produced
+automatically when calling the program with <code>program --help</code>:</p>
+<pre>  <code>Usage: beacon_node [OPTIONS] &lt;command&gt;
+
+The following options are supported:
+
+  --logLevel=LogLevel                        : Sets the log level
+  --dataDir=DirPath                          : The directory where nimbus will store all blockchain data.
+  --bootstrapNode=seq[string]                : Specifies one or more bootstrap nodes to use when connecting to the network.
+  --bootstrapNodesFile=FilePath              : Specifies a line-delimited file of bootsrap Ethereum network addresses
+  --tcpPort=int                              : TCP listening port
+  --udpPort=int                              : UDP listening port
+  --validator=seq[PrivateValidatorData]      : A path to a pair of public and private keys for a validator. Nimbus will automatically add the extensions .privkey and .pubkey.
+  --stateSnapshot=Option[BeaconState]        : Json file specifying a recent state snapshot
+
+Available sub-commands:
+
+  beacon_node createChain
+
+  --out=OutFilePath                          : Output file where to write the initial state snapshot
+
+</code></pre>
+<p>For simpler CLI utilities, Confutils also provides the following convenience APIs:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">confutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">cli</span> <span class="kwd">do</span> (<span class="ide">validators</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">          <span class="ide">desc</span>: <span class="str">&quot;number of validators&quot;</span></div></div><div class="line"><div class="line-content">          <span class="ide">abbr</span>: <span class="str">&quot;v&quot;</span> }: <span class="ide">int</span>,</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="ide">outputDir</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">          <span class="ide">desc</span>: <span class="str">&quot;output dir to store the generated files&quot;</span></div></div><div class="line"><div class="line-content">          <span class="ide">abbr</span>: <span class="str">&quot;o&quot;</span> }: <span class="ide">OutPath</span>,</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="ide">startupDelay</span> {<span class="op">.</span></div></div><div class="line"><div class="line-content">          <span class="ide">desc</span>: <span class="str">&quot;delay in seconds before starting the simulation&quot;</span> } <span class="op">=</span> <span class="num">0</span>):</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">validators</span> <span class="op">&lt;</span> <span class="num">64</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;The number of validators must be greater than EPOCH_LENGTH (64)&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">quit</span>(<span class="num">1</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">confutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>(<span class="ide">foo</span>: <span class="ide">string</span>, <span class="ide">bar</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">dispatch</span>(<span class="ide">main</span>)</div></div>  </code></pre>
+<p>Under the hood, using these APIs will result in calling <code>load</code> on an anonymous
+configuration type having the same fields as the supplied proc params.
+Any additional arguments given as <code>cli(args) do ...</code> and <code>dispatch(fn, args)</code>
+will be passed to <code>load</code> without modification. Please note that this requires
+all parameters types to be concrete (non-generic).</p>
+<p>This covers the basic usage of the library and the rest of the documentation
+will describe the various ways the default behavior can be tweaked or extended.</p>
+<h2>Configuration field pragmas</h2>
+<p>A number of pragmas defined in <code>confutils/defs</code> can be attached to the
+configuration fields to control the behavior of the library.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">desc</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>A description of the configuration option that will appear in the produced
+help messages.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">longDesc</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>A long description text that will appear below regular desc. You can use
+one of {&apos;\n&apos;, &apos;\r&apos;} to break it into multiple lines. But you can&apos;t use
+&apos;\p&apos; as line break.</p>
+<pre>  <code class="language-text"> -x, --name   regular description [=defVal].
+              longdesc line one.
+              longdesc line two.
+              longdesc line three.
+</code></pre>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">name</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>A long name of the option.
+Typically, it will have to be be specified as <code>--longOptionName value</code>.
+See <a href="#handling-of-command-line-options">Handling of command-line options</a>
+for more details.</p>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">abbr</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>A short name of the option.
+Typically, it will be required to be specified as <code>-x value</code>.
+See <a href="#handling-of-command-line-options">Handling of command-line options</a>
+for more details.</p>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">defaultValue</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">untyped</span>) {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>The default value of the option if no value was supplied by the user.</p>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">required</span><span class="op">*</span> {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>By default, all options without default values are considered required.
+An exception to this rule are all <code>seq[T]</code> or <code>Option[T]</code> options for
+which the &quot;empty&quot; value can be considered a reasonable default. You can
+also extend this behavior to other user-defined types by providing the
+following overloads:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">hasDefault</span><span class="op">*</span>(<span class="ide">T</span>: <span class="kwd">type</span> <span class="ide">Foo</span>): <span class="ide">bool</span> <span class="op">=</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">default</span><span class="op">*</span>(<span class="ide">T</span>: <span class="kwd">type</span> <span class="ide">Foo</span>): <span class="ide">Foo</span> <span class="op">=</span> <span class="ide">Foo</span>(<span class="op">...</span>)</div></div>  </code></pre>
+<p>The <code>required</code> pragma can be applied to fields having such defaultable
+types to make them required.</p>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">command</span><span class="op">*</span> {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>This must be applied to an enum field that represents a possible sub-command.
+See the section on <a href="#Using-sub-commands">sub-commands</a> for more details.</p>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">argument</span><span class="op">*</span> {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>This field represents an argument to the program. If the program expects
+multiple arguments, this pragma can be applied to multiple fields or to
+a single <code>seq[T]</code> field depending on the desired behavior.</p>
+<hr />
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">separator</span>(<span class="ide">v</span>: <span class="ide">string</span>)<span class="op">*</span> {<span class="op">.</span><span class="ide">pragma</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>Using this pragma, a customizable separator text will be displayed just before
+this field. E.g.:</p>
+<pre>  <code class="language-text">Network Options:     # this is a separator
+  -a, --opt1 desc
+  -b, --opt2 desc
+
+----------------     # this is a separator too
+  -c, --opt3 desc
+</code></pre>
+<h2>Configuration field types</h2>
+<p>The <code>confutils/defs</code> module provides a number of types frequently used
+for configuration purposes:</p>
+<h4><code>InputFile</code>, <code>InputDir</code></h4>
+<p>Confutils will validate that the file/directory exists and that it can
+be read by the current user.</p>
+<h4>  <code>ConfigFilePath[Format]</code></h4>
+<p>A file system path pointing to a configuration file in the specific format.
+The actual configuration can be loaded by calling <code>load(path, ConfigType)</code>.
+When the format is <code>WindowsRegistry</code> the path should indicate a registry key.</p>
+<h4>  <code>OutPath</code></h4>
+<p>A valid path must be given.</p>
+<hr />
+<p>Furthermore, you can extend the behavior of the library by providing
+overloads such as:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">parseCmdArg</span><span class="op">*</span>(<span class="ide">T</span>: <span class="kwd">type</span> <span class="ide">Foo</span>, <span class="ide">p</span>: <span class="ide">string</span>): <span class="ide">T</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## This provides parsing and validation for fields having the `Foo` type.</span></div></div><div class="line"><div class="line-content">  <span class="com">## You should raise `ConfigurationError` in case of detected problems.</span></div></div><div class="line"><div class="line-content">  <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">humaneTypeName</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">_</span>: <span class="kwd">type</span> <span class="ide">MyList</span>[<span class="ide">T</span>]): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## The returned string will be used in the help messages produced by the</span></div></div><div class="line"><div class="line-content">  <span class="com">## library to describe the expected type of the configuration option.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">mixin</span> <span class="ide">humaneTypeName</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="str">&quot;list of &quot;</span> <span class="op">&amp;</span> <span class="ide">humaneTypeName</span>(<span class="ide">T</span>)</div></div>  </code></pre>
+<p>For config files, Confutils can work with any format supported by the
+<a href="https://github.com/status-im/nim-serialization/">nim-serialization</a> library
+and it will use the standard serialization routines defined for the field
+types in this format. Fields marked with the <code>command</code> or <code>argument</code> pragmas
+will be ignored.</p>
+<h2>Handling of command-line options</h2>
+<p>Confutils includes parsers that can mimic several traditional styles of
+command line interfaces. You can select the parser being used by specifying
+the <code>CmdParser</code> option when calling the configuration loading APIs.</p>
+<p>The default parser of Confutils is called <code>MixedCmdParser</code>. It tries to follow
+the <a href="https://en.wikipedia.org/wiki/Robustness_principle">robustness principle</a>
+by recognizing as many styles of passing command-line switches as possible.
+A prefix of <code>--</code> is used to indicate a long option name, while the <code>-</code> prefix
+uses the short option name. Multiple short options such as <code>-a</code>, <code>-b</code> and
+<code>-c</code> can be combined into a single <code>-abc</code> string. Both the long and the short
+forms can also be prefixed with <code>/</code> in the style of Windows utilities. The
+option names are matched in case-insensitive fashion and certain characters
+such as <code>_</code> and <code>-</code> will be ignored. The values can be separated from the
+option names with a space, colon or an equal sign. <code>bool</code> flags default to
+<code>false</code> and merely including them in the command line sets them to <code>true</code>.</p>
+<p>Other provided choices are <code>UnixCmdParser</code>, <code>WindowsCmdParser</code> and <code>NimCmdParser</code>
+which are based on more strict grammars following the most established
+tradition of the respective platforms. All of the discussed parsers are
+defined in terms of the lower-level parametric type <code>CustomCmdParser</code> that
+can be tweaked further for a more custom behavior.</p>
+<p>Please note that the choice of <code>CmdParser</code> will also affect the formatting
+of the help messages. Please see the definition of the standard <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key">Windows</a>
+or <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html">Posix</a> command-line help syntax for mode details.</p>
+<h3>Using sub-commands</h3>
+<p>As seen in the <a href="#introduction">introduction example</a>, Confutils makes it
+easy to create command-line interfaces featuring sub-commands in the style
+of <code>git</code> or <code>nimble</code>. The structure of the sub-command tree is encoded as
+a Nim case object where the sub-command name is represented by an <code>enum</code>
+field having the <code>command</code> pragma. Any nested fields will be considered
+options of the particular sub-command. The top-level fields will be shared
+between all sub-commands.</p>
+<p>For each available choice of command and options, Confutils will automatically
+provide a <code>help</code> command and the following additional switches:</p>
+<ul>
+<li><code>-h</code> will print a short syntax reminder for the command</li>
+<li><code>--help</code> will print a full help message (just like the <code>help</code> command)</li>
+</ul>
+<h2>Handling of environment variables and config files</h2>
+<p>After parsing the command line options, the default behavior of Confutils is
+to try to fill any missing options by examining the contents of the environment
+variables plus two per-user and system-wide configuration locations derived from
+the program name. If you want to use Confutils only as a command-line processor
+or a config file parser for example, you can supply an empty/nil value to the
+<code>cmdLine</code>, <code>envTable</code> or <code>configFileEnumerator</code> parameters of the <code>load</code> call.</p>
+<p>More specifically, the <code>load</code> call supports the following parameters:</p>
+<h4><code>cmdLine</code>, <code>envTable</code></h4>
+<p>The command-line parameters and the environment table of the program.
+By default, these will be obtained through Nim&apos;s <code>os</code> module.</p>
+<h4><code>EnvValuesFormat</code>, <code>envVarsPrefix</code></h4>
+<p>A nim-serialization format used to deserialize the values of environment
+variables. The default format is called <code>CmdLineFormat</code> and it uses the
+same <code>parseCmdArg</code> calls responsible for parsing the command-line.</p>
+<p>The names of the environment variables are prefixed by the name of the
+program by default and joined with the name of command line option, which is
+uppercased and characters <code>-</code> and spaces are replaced with underscore:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">env_variable_name</span> <span class="op">=</span> <span class="op">&amp;</span><span class="str">&quot;{prefix}_{key}&quot;</span><span class="op">.</span><span class="ide">toUpperAscii</span><span class="op">.</span><span class="ide">multiReplace</span>((<span class="str">&quot;-&quot;</span>, <span class="str">&quot;_&quot;</span>), (<span class="str">&quot; &quot;</span>, <span class="str">&quot;_&quot;</span>))</div></div>  </code></pre>
+<h4>  <code>configFileEnumerator</code></h4>
+<p>A function responsible for returning a sequence of <code>ConfigFilePath</code> objects.
+To support heterogenous config file types, you can also return a tuple of
+sequences. The default behavior of Windows is to obtain the configuration
+from the Windows registry by looking at the following keys:</p>
+<pre>  <code>HKEY_CURRENT_USER/SOFTWARE/{appVendor}/{appName}/
+HKEY_LOCAL_MACHINE/SOFTWARE/{appVendor}/{appName}/
+</code></pre>
+<p>On Posix systems, the default behavior is attempt to load the configuration
+from the following files:</p>
+<pre>  <code>/$HOME/.config/{appName}.{ConfigFileFormat.extension}
+/etc/{appName}.{ConfigFileForamt.extension}
+</code></pre>
+<h4>  <code>ConfigFileFormat</code></h4>
+<p>A <a href="https://github.com/status-im/nim-serialization">nim-serialization</a> format
+that will be used by default by Confutils.</p>
+<h2>Customization of the help messages</h2>
+<p>The <code>load</code> call offers few more optional parameters for modifying the
+produced help messages:</p>
+<h4>  <code>bannerBeforeHelp</code></h4>
+<p>A copyright banner or a similar message that will appear before the
+automatically generated help messages.</p>
+<h4>  <code>bannerAfterHelp</code></h4>
+<p>A copyright banner or a similar message that will appear after the
+automatically generated help messages.</p>
+<h4>  <code>version</code></h4>
+<p>If you provide this parameter, Confutils will automatically respond
+to the standard <code>--version</code> switch. If sub-commands are used, an
+additional <code>version</code> top-level command will be inserted as well.</p>
+<h2>Compile-time options</h2>
+<h4>  <code>confutils_colors</code></h4>
+<p>This option controls the use of colors appearing in the help messages
+produced by Confutils. Possible values are:</p>
+<ul>
+<li>
+<p><code>NativeColors</code> (used by default)</p>
+<p>In this mode, Windows builds will produce output suitable for the console
+application in older versions of Windows. On Unix-like systems, this is
+equivalent to specifying <code>AnsiColors</code>.</p>
+</li>
+<li>
+<p>  <code>AnsiColors</code></p>
+<p>Output suitable for terminals supporting the standard ANSI escape codes:
+https://en.wikipedia.org/wiki/ANSI_escape_code</p>
+<p>This includes most terminal emulators on modern Unix-like systems,
+Windows console replacements such as ConEmu, and the native Console
+and PowerShell applications on Windows 10.</p>
+</li>
+<li>
+<p><code>None</code> or <code>NoColors</code></p>
+<p>All output will be colorless.</p>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>The development of Confutils is sponsored by <a href="https://status.im/">Status.im</a>
+through the use of <a href="https://gitcoin.co/">GitCoin</a>. Please take a look at our
+tracker for any issues having the <a href="https://github.com/status-im/nim-confutils/issues?q=is%3Aissue+is%3Aopen+label%3Abounty">bounty</a> tag.</p>
+<p>When submitting pull requests, please add test cases for any new features
+or fixes and make sure <code>nimble test</code> is still able to execute the entire
+test suite successfully.</p>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. This file may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-confutils">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

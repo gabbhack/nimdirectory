@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">bamboo_websocket</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">websocket</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("This is a simple implementation of a WebSocket server with 100% Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install bamboo_websocket" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h4>🐼Bamboo-WebSocket🌿</h4>
+<p>  <img src="https://user-images.githubusercontent.com/88951380/158893548-13a50cea-92ff-4506-acb8-202e5e5e317e.png" style="max-width: 100%;" alt="FLgp3pCakAAG1JU" /></p>
+<ul>
+<li>100%Nim による WebSocket サーバーのシンプルな実装です。</li>
+<li>竹を割ったようにさっぱりとした実装を目指しています。</li>
+<li>チャットサーバー、ゲーム用のサーバーを簡単に作成できることを目指しています。</li>
+<li>Bamboo の詳細な説明と利用方法については wiki に記載予定です。</li>
+<li>最新バージョンは<strong>0.3.1</strong>になります。</li>
+<li>  <a href="https://github.com/obemaru4012/bamboo_websocket/blob/master/README_en.md">README in English.</a></li>
+</ul>
+<h4>🖥Dependency</h4>
+<p>  <code>requires &quot;nim &gt;= 1.4.8&quot;</code></p>
+<h4>👩‍💻Setup</h4>
+<pre>  <code class="language-bash">$ nimble install bamboowebsocket@0.3.1
+</code></pre>
+<h4>🤔Description</h4>
+<ul>
+<li>Nim 標準で提供されている<a href="https://nim-lang.org/docs/asynchttpserver.html">asynchttpserver</a>での利用を想定しています。</li>
+</ul>
+<h4>🤙Usage</h4>
+<h5>🐥Echo Server</h5>
+<ul>
+<li>以下は、クライアントから受信したメッセージをエコーするサーバーです。</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># echo_server.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">asynchttpserver</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">asyncnet</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">httpcore</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">nativesockets</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">net</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">strutils</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">uri</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">bamboo_websocket</span><span class="op">/</span><span class="ide">websocket</span> <span class="kwd">import</span> <span class="ide">WebSocket</span>, <span class="ide">ConnectionStatus</span>, <span class="ide">OpCode</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">bamboo_websocket</span><span class="op">/</span><span class="ide">bamboo_websocket</span> <span class="kwd">import</span></div></div><div class="line"><div class="line-content">  <span class="ide">handshake</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">loadServerSetting</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">openWebSocket</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">receiveMessage</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">sendMessage</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">setting</span> <span class="op">=</span> <span class="ide">loadServerSetting</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">callBack</span>(<span class="ide">request</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span>, <span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">ws</span>: <span class="ide">WebSocket</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">request</span><span class="op">.</span><span class="ide">url</span><span class="op">.</span><span class="ide">path</span> <span class="op">==</span> <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">headers</span> <span class="op">=</span> {<span class="str">&quot;Content-type&quot;</span>: <span class="str">&quot;text/html; charset=utf-8&quot;</span>}</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">content</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;./echo_client.html&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">request</span><span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="ide">content</span>, <span class="ide">headers</span><span class="op">.</span><span class="ide">newHttpHeaders</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">request</span><span class="op">.</span><span class="ide">url</span><span class="op">.</span><span class="ide">path</span> <span class="op">==</span> <span class="str">&quot;/chat&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">ws</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">openWebSocket</span>(<span class="ide">request</span>, <span class="ide">setting</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">except</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">while</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="ide">ConnectionStatus</span><span class="op">.</span><span class="ide">OPEN</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">let</span> <span class="ide">receive</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">receiveMessage</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="kwd">if</span> <span class="ide">receive</span>[<span class="num">0</span>] <span class="op">==</span> <span class="ide">OpCode</span><span class="op">.</span><span class="ide">TEXT</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">echo</span>(<span class="str">&quot;ID: &quot;</span>, <span class="ide">ws</span><span class="op">.</span><span class="ide">id</span>, <span class="str">&quot; echo back.&quot;</span>)</div></div><div class="line"><div class="line-content">          <span class="ide">await</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">sendMessage</span>(<span class="ide">receive</span>[<span class="num">1</span>], <span class="num">0x1</span>, <span class="num">3000</span>, <span class="ide">true</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="kwd">if</span> <span class="ide">receive</span>[<span class="num">0</span>] <span class="op">==</span> <span class="ide">OpCode</span><span class="op">.</span><span class="ide">CLOSE</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">echo</span>(<span class="str">&quot;ID: &quot;</span>, <span class="ide">ws</span><span class="op">.</span><span class="ide">id</span>, <span class="str">&quot; has Closed.&quot;</span>)</div></div><div class="line"><div class="line-content">          <span class="kwd">break</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="kwd">except</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">ws</span><span class="op">.</span><span class="ide">status</span> <span class="op">=</span> <span class="ide">ConnectionStatus</span><span class="op">.</span><span class="ide">CLOSED</span></div></div><div class="line"><div class="line-content">        <span class="ide">ws</span><span class="op">.</span><span class="ide">socket</span><span class="op">.</span><span class="ide">close</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">ws</span><span class="op">.</span><span class="ide">socket</span><span class="op">.</span><span class="ide">close</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newAsyncHttpServer</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">9001</span>), <span class="ide">callBack</span>)</div></div>  </code></pre>
+<ul>
+<li>サーバー用の設定ファイルを記述する json ファイルをサーバーファイル（ehco_server.nim 等）と同じ場所に配置する必要があります。</li>
+</ul>
+<pre>  <code class="language-json">{
+  &quot;websocket_version&quot;: &quot;13&quot;,
+  &quot;upgrade&quot;: &quot;websocket&quot;,
+  &quot;connection&quot;: &quot;upgrade&quot;,
+  &quot;websocket_key&quot;: &quot;dGhlIHNhbXBsZSBub25jZQ==&quot;,
+  &quot;magic_strings&quot;: &quot;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&quot;,
+  &quot;mask_key_seeder&quot;: &quot;514902776&quot;
+}
+</code></pre>
+<ul>
+<li>
+<p>ディレクトリ配置は以下の画像のようになります。
+<img src="https://user-images.githubusercontent.com/88951380/165452751-9cb833f9-2214-4ea6-bde0-1818e1127d57.png" style="max-width: 100%;" alt="001" /></p>
+</li>
+<li>
+<p>echo_server.nim をコンパイル後に実行します。</p>
+</li>
+</ul>
+<pre>  <code class="language-bash">$ nim c -r echo_server.nim
+</code></pre>
+<p>  <img src="https://user-images.githubusercontent.com/88951380/165452764-32cb29a6-a2e3-42f9-a5a5-5926d57a462a.gif" style="max-width: 100%;" alt="002" /></p>
+<h4>😏Advanced Usage</h4>
+<h5>🐄Chat Server</h5>
+<ul>
+<li>以下は、各クライアント間でのチャットを実現するサーバーです。</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># chat_server.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">asynchttpserver</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">asyncnet</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">base64</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">httpcore</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">json</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">nativesockets</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">net</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">strutils</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">tables</span>,</div></div><div class="line"><div class="line-content">       <span class="ide">uri</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="op">../../</span><span class="ide">bamboo_websocket</span><span class="op">/</span><span class="ide">websocket</span> <span class="kwd">import</span> <span class="ide">WebSocket</span>, <span class="ide">ConnectionStatus</span>, <span class="ide">OpCode</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="op">../../</span><span class="ide">bamboo_websocket</span><span class="op">/</span><span class="ide">bamboo_websocket</span> <span class="kwd">import</span> <span class="ide">loadServerSetting</span>, <span class="ide">openWebSocket</span>, <span class="ide">receiveMessage</span>, <span class="ide">sendMessage</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">setting</span> <span class="op">=</span> <span class="ide">loadServerSetting</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">WebSockets</span>: <span class="ide">seq</span>[<span class="ide">WebSocket</span>] <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">WebSocket</span>]()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">callBack</span>(<span class="ide">request</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span>, <span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">subProtocolProcess</span>(<span class="ide">ws</span>: <span class="ide">WebSocket</span>, <span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">gcsafe</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">table</span>: <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">string</span>]</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">sub_protocol</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">headers</span>[<span class="str">&quot;sec-websocket-protocol&quot;</span>, <span class="num">0</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="com"># Client側は「https://developer.mozilla.org/ja/docs/Web/API/btoa」でベー6エンコード実施。</span></div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">protocols</span> <span class="op">=</span> <span class="ide">json</span><span class="op">.</span><span class="ide">parseJson</span>(<span class="ide">base64</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">sub_protocol</span>)) <span class="com"># JsonNode</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="com"># sub protocolをTable[string, string]に変換</span></div></div><div class="line"><div class="line-content">      <span class="kwd">for</span> <span class="ide">key</span> <span class="kwd">in</span> <span class="ide">protocols</span><span class="op">.</span><span class="ide">keys</span>():</div></div><div class="line"><div class="line-content">        <span class="kwd">var</span> <span class="ide">tmp</span> <span class="op">=</span> <span class="op">$</span>(<span class="ide">protocols</span>[<span class="ide">key</span>])</div></div><div class="line"><div class="line-content">        <span class="ide">table</span>[<span class="ide">key</span>] <span class="op">=</span> <span class="ide">tmp</span><span class="op">.</span><span class="ide">strip</span>(<span class="ide">chars</span><span class="op">=</span>{'"', ' '})</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">ws</span><span class="op">.</span><span class="ide">optional_data</span>[<span class="str">&quot;name&quot;</span>] <span class="op">=</span> <span class="op">$</span>(<span class="ide">table</span>[<span class="str">&quot;tag&quot;</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">except</span> <span class="ide">IndexDefect</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">ws</span> <span class="op">=</span> <span class="ide">WebSocket</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">request</span><span class="op">.</span><span class="ide">url</span><span class="op">.</span><span class="ide">path</span> <span class="op">==</span> <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">headers</span> <span class="op">=</span> {<span class="str">&quot;Content-type&quot;</span>: <span class="str">&quot;text/html; charset=utf-8&quot;</span>}</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">content</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;./chat_client.html&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">request</span><span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="ide">content</span>, <span class="ide">headers</span><span class="op">.</span><span class="ide">newHttpHeaders</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">request</span><span class="op">.</span><span class="ide">url</span><span class="op">.</span><span class="ide">path</span> <span class="op">==</span> <span class="str">&quot;/chat&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">ws</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">openWebSocket</span>(<span class="ide">request</span>, <span class="ide">setting</span>, <span class="ide">subProtocolProcess</span><span class="op">=</span><span class="ide">subProtocolProcess</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">WebSockets</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">ws</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span>(<span class="str">&quot;ID: &quot;</span>, <span class="ide">ws</span><span class="op">.</span><span class="ide">id</span>, <span class="str">&quot;, Tag: &quot;</span>, <span class="ide">ws</span><span class="op">.</span><span class="ide">optional_data</span>[<span class="str">&quot;name&quot;</span>], <span class="str">&quot; has Opened.&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">except</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">e</span> <span class="op">=</span> <span class="ide">getCurrentException</span>()</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">msg</span> <span class="op">=</span> <span class="ide">getCurrentExceptionMsg</span>()</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="ide">msg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">ws</span><span class="op">.</span><span class="ide">status</span> <span class="op">=</span> <span class="ide">ConnectionStatus</span><span class="op">.</span><span class="ide">INITIAl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">while</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="ide">ConnectionStatus</span><span class="op">.</span><span class="ide">OPEN</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">let</span> <span class="ide">receive</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">receiveMessage</span>()</div></div><div class="line"><div class="line-content">        <span class="kwd">if</span> <span class="ide">receive</span>[<span class="num">0</span>] <span class="op">==</span> <span class="ide">OpCode</span><span class="op">.</span><span class="ide">TEXT</span>:</div></div><div class="line"><div class="line-content">          <span class="kwd">var</span> <span class="ide">message</span>: <span class="ide">string</span> <span class="op">=</span> <span class="op">$</span>(<span class="op">%*</span> [{<span class="str">&quot;name&quot;</span>: <span class="ide">ws</span><span class="op">.</span><span class="ide">optional_data</span>[<span class="str">&quot;name&quot;</span>], <span class="str">&quot;message&quot;</span>: <span class="ide">receive</span>[<span class="num">1</span>]}])</div></div><div class="line"><div class="line-content">          <span class="kwd">for</span> <span class="ide">websocket</span> <span class="kwd">in</span> <span class="ide">WebSockets</span>:</div></div><div class="line"><div class="line-content">            <span class="kwd">if</span> <span class="ide">websocket</span><span class="op">.</span><span class="ide">id</span> <span class="op">!=</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">id</span>:</div></div><div class="line"><div class="line-content">              <span class="ide">echo</span>(<span class="str">&quot;$# =&gt; $#&quot;</span> <span class="op">%</span> [<span class="op">$</span>(<span class="ide">ws</span><span class="op">.</span><span class="ide">id</span>), <span class="op">$</span>(<span class="ide">websocket</span><span class="op">.</span><span class="ide">id</span>)])</div></div><div class="line"><div class="line-content">              <span class="ide">await</span> <span class="ide">websocket</span><span class="op">.</span><span class="ide">sendMessage</span>(<span class="ide">message</span>, <span class="num">0x1</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="kwd">if</span> <span class="ide">receive</span>[<span class="num">0</span>] <span class="op">==</span> <span class="ide">OpCode</span><span class="op">.</span><span class="ide">CLOSE</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">echo</span>(<span class="str">&quot;ID: &quot;</span>, <span class="ide">ws</span><span class="op">.</span><span class="ide">id</span>, <span class="str">&quot; has Closed.&quot;</span>)</div></div><div class="line"><div class="line-content">          <span class="kwd">break</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="kwd">except</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">ws</span><span class="op">.</span><span class="ide">status</span> <span class="op">=</span> <span class="ide">ConnectionStatus</span><span class="op">.</span><span class="ide">CLOSED</span></div></div><div class="line"><div class="line-content">        <span class="ide">ws</span><span class="op">.</span><span class="ide">socket</span><span class="op">.</span><span class="ide">close</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">WebSockets</span><span class="op">.</span><span class="ide">find</span>(<span class="ide">ws</span>) <span class="op">!=</span> <span class="op">-</span><span class="num">1</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">WebSockets</span><span class="op">.</span><span class="ide">delete</span>(<span class="ide">WebSockets</span><span class="op">.</span><span class="ide">find</span>(<span class="ide">ws</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">ws</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="ide">ConnectionStatus</span><span class="op">.</span><span class="ide">OPEN</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">ws</span><span class="op">.</span><span class="ide">socket</span><span class="op">.</span><span class="ide">close</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newAsyncHttpServer</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">9001</span>), <span class="ide">callBack</span>)</div></div>  </code></pre>
+<ul>
+<li>サーバー用の設定ファイルを記述する json ファイル（setting.json）をサーバーファイル（chat_server.nim 等）と同じ場所に配置する必要があります。</li>
+</ul>
+<pre>  <code class="language-json">{
+  &quot;websocket_version&quot;: &quot;13&quot;,
+  &quot;upgrade&quot;: &quot;websocket&quot;,
+  &quot;connection&quot;: &quot;upgrade&quot;,
+  &quot;websocket_key&quot;: &quot;dGhlIHNhbXBsZSBub25jZQ==&quot;,
+  &quot;magic_strings&quot;: &quot;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&quot;,
+  &quot;mask_key_seeder&quot;: &quot;514902776&quot;
+}
+</code></pre>
+<ul>
+<li>chat_server.nim をコンパイル後に実行します。</li>
+</ul>
+<pre>  <code class="language-bash">$ nim c -r chat_server.nim
+</code></pre>
+<p>  <img src="https://user-images.githubusercontent.com/88951380/173271545-15a22b29-7825-4b16-944e-ba1bc92b92ee.gif" style="max-width: 100%;" alt="004" /></p>
+<h5>🐭Game Server</h5>
+<p>[TODO]</p>
+<h4>📝Author</h4>
+<ul>
+<li>  <a href="https://github.com/omachi-satoshi">omachi-satoshi</a></li>
+<li>  <a href="https://github.com/obemaru4012">obemaru4012</a></li>
+</ul>
+<h4>📖References</h4>
+<ul>
+<li>  <a href="https://triple-underscore.github.io/RFC6455-ja.html">RFC 6455 - The WebSocket Protocol （日本語訳）</a></li>
+<li>  <a href="https://developer.mozilla.org/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">WebSocket サーバーの記述 - Web API | MDN</a></li>
+<li>  <a href="https://developer.mozilla.org/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">WebSocket クライアントアプリケーションの記述 - Web API | MDN</a></li>
+<li>  <a href="https://nimble.directory/pkg/bamboowebsocket">Nim Package Directory</a></li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/obemaru4012/bamboo_websocket">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

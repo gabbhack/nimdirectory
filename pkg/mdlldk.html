@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">mdlldk</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">dll</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mirc</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Dynamic-link libraries (DLLs) Development Kit for mIRC.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install mdlldk" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>This package is a Dynamic-link libraries (DLLs) Development Kit for mIRC made in Nim.</p>
+<h3>But why use the Nim programming language to create dlls for mIRC?</h3>
+<p>Well, if you don&apos;t know the Nim programming language, I invite you to visit the site (https://nim-lang.org/) that has a description and possible reasons for you to venture into it.</p>
+<p>However, I will give my view here. Nim is an easy language to start and evolve, but there are also advanced features that need more effort. Provides C-like performance. It has several backends (C, C++, Objective C and Javascript) making it possible to work in both backend and frontend development. It offers a bidirectional interface with the target backend, making it possible to call code from the backend to Nim or call the Nim code from the backend. In theory it compiles for any architecture and operating system that supports C (may need minor tweaks). There are several methods for managing memory (garbage collectors), but the preferred one for mIRC dlls is ORC <a href="https://forum.nim-lang.org/t/8897#58114">[1]</a>. Finally, I could not fail to mention the package manager Nimble, which facilitates the installation of new packages that extend the language.</p>
+<h3>Why use this package?</h3>
+<p>The mdlldk package brings templates that add the standard procedures of an mIRC dll, such as: LoadDll() and UnloadDll(); as well as facilitating the export of procedures, as it automatically creates the .def file with the symbols.</p>
+<p>When exporting the LoadDll() procedure with the <code>addLoadProc()</code> template, procedures will be added that help in the development of your dll. The list of added procedures can be seen <a href="https://rockcavera.github.io/nim-mdlldk/mdlldk/onlydocumentation.html#12">here</a>.</p>
+<p>The <code>newProcToExport()</code> template, which adds a procedure exported to dll and creates an entire abstraction to enable it to work in both unicode and non-unicode mIRC, that is, from version 5.6 (5.60), when support for dlls was added, up to the latest known version of mIRC. If you choose to use <code>newProcToExport()</code>, it will not be necessary to manually fill in the <code>data</code> or <code>parms</code> parameters, as this is done automatically, safely and without exceeding the size allocated by mIRC in the pointers and if it exceeds, it will be truncated to the limit and avoids mIRC crashes. This &quot;magic&quot; is done at runtime and according to each mIRC version, as the memory size allocated to the <code>data</code> and <code>parms</code> pointers has changed with the mIRC versions.</p>
+<p>There are also the <code>newProcToExportW()</code> and <code>newProcToExportA()</code> templates, which also add an exported procedure to dll, but at a lower level than <code>newProcToExport()</code>. In the first template the parameters <code>data</code> and <code>parms</code> will be of type <code>WideCString</code>, while in the second they will be <code>cstring</code>. Even if you use one of these two templates you can also take advantage of safe copying for <code>data</code> and <code>parms</code> using <code>mToWideCStringAndCopy()</code> or <code>mToCStringAndCopy()</code>. Remembering that these last two procedures are only available if the <code>addLoadProc()</code> template is called in your code.</p>
+<p>Finally, the <code>exportAllProcs()</code> template facilitates the process of exporting procedures to dll, as it generates the .def file with all the symbols that must be exported and links to the dll during the linking process.</p>
+<p>For more information see the documentation <a href="https://rockcavera.github.io/nim-mdlldk/mdlldk.html">here</a>.</p>
+<h3>Current support</h3>
+<p>Currently supported with the gcc, clang and vcc compilers, and the C and C++ backends. It is advised to use the last version of Nim or the devel version.</p>
+<h3>Documentation used as a reference</h3>
+<ul>
+<li>https://www.mirc.com/help/html/dll.html</li>
+<li>https://www.mirc.com/versions.txt</li>
+<li>https://forum.nim-lang.org/t/8897</li>
+</ul>
+<h1>Install</h1>
+<p>  <code>nimble install mdlldk</code></p>
+<p>or</p>
+<p>  <code>nimble install https://github.com/rockcavera/nim-mdlldk.git</code></p>
+<h1>Basic Use</h1>
+<p>This is a basic commented example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># test.nim</span></div></div><div class="line"><div class="line-content"><span class="com"># Import the mdlldk package.</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pkg</span><span class="op">/</span><span class="ide">mdlldk</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Adds procedure LoadDll() and defines that the dll must not continue loaded</span></div></div><div class="line"><div class="line-content"><span class="com"># after use and the communication between the dll and mIRC must be by unicode</span></div></div><div class="line"><div class="line-content"><span class="com"># (WideCString).</span></div></div><div class="line"><div class="line-content"><span class="ide">addLoadProc</span>(<span class="ide">false</span>, <span class="ide">true</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Adds procedure UnloadDll() and defines that mIRC can unload the dll when it is</span></div></div><div class="line"><div class="line-content"><span class="com"># unused for ten minutes.</span></div></div><div class="line"><div class="line-content"><span class="ide">addUnloadProc</span>(<span class="ide">RAllowUnload</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Adds the `test` procedure which can be called from mIRC like this:</span></div></div><div class="line"><div class="line-content"><span class="com"># `/dll test.dll test`</span></div></div><div class="line"><div class="line-content"><span class="ide">newProcToExport</span>(<span class="ide">test</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">outData</span> <span class="op">=</span> <span class="str">&quot;echo -a Dll test made in Nim &quot;</span> <span class="op">&amp;</span> <span class="ide">NimVersion</span> <span class="op">&amp;</span> <span class="str">&quot; for mIRC&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">ret</span> <span class="op">=</span> <span class="ide">RCommand</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># It must be added to the last line of your Nim code to correctly export all</span></div></div><div class="line"><div class="line-content"><span class="com"># symbols to the dll.</span></div></div><div class="line"><div class="line-content"><span class="ide">exportAllProcs</span>()</div></div>  </code></pre>
+<p>The above code should be compiled as follows:</p>
+<p>  <code>nim c --app:lib --cpu:i386 --gc:orc -d:useMalloc -d:release test.nim</code></p>
+<p>To learn more about compiler options, visit https://nim-lang.org/docs/nimc.html.</p>
+<p>In case you want to produce a smaller dll, you can add such switches:</p>
+<p>  <code>nim c --app:lib --cpu:i386 --gc:orc -d:useMalloc -d:danger -d:strip --opt:size test.nim</code></p>
+<p>With this last line my generated dll had only 18.5KB against 139KB of the other one, using the Nim 1.6.4 and tdm64-gcc-10.3.0-2 compilers.</p>
+<h1>Documentation</h1>
+<p>https://rockcavera.github.io/nim-mdlldk/mdlldk.html</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/rockcavera/nim-mdlldk">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">isocodes</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">iso</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">countries</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">country</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">language</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">languages</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">currency</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">currencies</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ISO-3166</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ISO-3166-1</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ISO-3166-2</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ISO-3166-3</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ISO-15924</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ISO-4217</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("ISO codes for Nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install isocodes" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><!-- 
+ Copyright (c) 2021 kraptor
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+ -->
+<p><a href="https://nim-lang.org/">  <img src="https://img.shields.io/badge/Made%20with-Nim-ffc200.svg" style="max-width: 100%;" alt="made-with-nim" /></a> <img src="https://github.com/kraptor/isocodes/workflows/Build/badge.svg" style="max-width: 100%;" alt="Build" /></p>
+<h1>  <code>isocodes</code></h1>
+<p>ISO codes for Nim.</p>
+<p>Supports loading the data at runtime or embedding it within the executable</p>
+<p>Provides the utility <code>isocodes_download</code> to download latest JSON packages when
+you don&apos;t want to use the provided ones (or if they become obsolete).</p>
+<p>By default all data is embedded within the executable. See section <a href="#compilation-flags">Compilation flags</a> on how to specify the files to load/embed and  how to
+load the data at runtime if you need to.</p>
+<h2>Supported ISO standards</h2>
+<table>
+<thead>
+<tr>
+<th>ISO</th>
+<th>Description</th>
+<th>Library type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO 3166-1</td>
+<td>Name of countries</td>
+<td>  <code>Country</code></td>
+</tr>
+<tr>
+<td>ISO 3166-2</td>
+<td>Country subdivisions</td>
+<td>  <code>CountrySubdivision</code></td>
+</tr>
+<tr>
+<td>ISO 3166-3</td>
+<td>Countries removed from the standard.</td>
+<td>  <code>RemovedCountry</code></td>
+</tr>
+<tr>
+<td>ISO 15924</td>
+<td>Language scripts</td>
+<td>  <code>Script</code></td>
+</tr>
+<tr>
+<td>ISO 4217</td>
+<td>Currencies</td>
+<td>  <code>Currency</code></td>
+</tr>
+<tr>
+<td>ISO 639-2</td>
+<td>Languages</td>
+<td>  <code>Language</code></td>
+</tr>
+<tr>
+<td>ISO 639-5</td>
+<td>Language Families</td>
+<td>  <code>LanguageFamily</code></td>
+</tr></tbody></table>
+<h2>Example</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">isocodes</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">for</span> <span class="ide">c</span> <span class="kwd">in</span> <span class="ide">Country</span><span class="op">.</span><span class="ide">allIt</span>():</div></div><div class="line"><div class="line-content">            <span class="ide">echo</span> <span class="ide">c</span><span class="op">.</span><span class="ide">name</span></div></div>  </code></pre>
+<h2>API</h2>
+<p>All procedures/iterators can be accessed by using the corresponding type.
+For example: <code>Country</code>.</p>
+<p>Procedures either return an <code>Option[T]</code> object or a <code>seq[T]</code> (when multiple
+values can be requested).</p>
+<blockquote>
+<p><strong>IMPORTANT</strong>: Procedures ending in <code>It</code> return an iterator, instead of a
+<code>seq[T]</code>, if you don&apos;t want to store/build a copy of the data requested.</p>
+</blockquote>
+<h3>Country API</h3>
+<h4>Country Attributes</h4>
+<p>The following attributes are available for each <code>Country</code> instance:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>name</code></td>
+<td>Country name.</td>
+</tr>
+<tr>
+<td>  <code>official_name</code></td>
+<td>Official name of the country.</td>
+</tr>
+<tr>
+<td>  <code>common_name</code></td>
+<td>Common name for the country.</td>
+</tr>
+<tr>
+<td>  <code>alpha_2</code></td>
+<td>Country ISO code (2 characters).</td>
+</tr>
+<tr>
+<td>  <code>alpha_3</code></td>
+<td>Country ISO code (3 characters).</td>
+</tr>
+<tr>
+<td>  <code>numeric</code></td>
+<td>Numeric code for the country. <strong>NOTE</strong>: this is a string.</td>
+</tr>
+<tr>
+<td>  <code>flag</code></td>
+<td>Flag emoji for the country.</td>
+</tr></tbody></table>
+<h4>Country Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of countries</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all countries.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all countries.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>Option[Country]</code> with the specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha2(str)</code></td>
+<td><code>Option[Country]</code> with the specified alpha2 code.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha3(str)</code></td>
+<td><code>Option[Country]</code> with the specified alpha3 code.</td>
+</tr>
+<tr>
+<td>  <code>.byNumeric(str)</code></td>
+<td><code>Option[Country]</code> with the specified numeric code.</td>
+</tr>
+<tr>
+<td>  <code>.byOfficialName(str)</code></td>
+<td><code>Option[Country]</code> with the specified official name.</td>
+</tr>
+<tr>
+<td>  <code>.byCommonName(str)</code></td>
+<td><code>Option[Country]</code> with the specified common name.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all countries that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all countries that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[Country]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h3>CountrySubdivision API</h3>
+<h4>CountrySubdivision Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>code</code></td>
+<td>Subdivision code.</td>
+</tr>
+<tr>
+<td>  <code>name</code></td>
+<td>Name of the subdivision.</td>
+</tr>
+<tr>
+<td>  <code>type</code></td>
+<td>Type of the subdivision.<br /><strong>NOTE</strong>: use <a href="https://en.wikipedia.org/wiki/Nim_%28programming_language%29#Stropping">stropping</a> to access this field because type is a reserved word.<br />Example: <code>echo subdivision.`type` </code>.</td>
+</tr>
+<tr>
+<td>  <code>parent</code></td>
+<td>Parent code.</td>
+</tr></tbody></table>
+<h4>CountrySubdivision Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of subdivisions</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all subdivisions.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all subdivisions.</td>
+</tr>
+<tr>
+<td>  <code>.byCountryCode(str)</code></td>
+<td><code>seq</code> for subdivisions for an specific country code.</td>
+</tr>
+<tr>
+<td>  <code>.byCountryCodeIt(str)</code></td>
+<td>Iterator for subdivisions for an specific country code.</td>
+</tr>
+<tr>
+<td>  <code>.byCode(str)</code></td>
+<td><code>seq</code> for subdivisions by specified code.</td>
+</tr>
+<tr>
+<td>  <code>.byCodeIt(str)</code></td>
+<td>Iterator for subdivisions specified by code.</td>
+</tr>
+<tr>
+<td>  <code>.byCodeStart(str)</code></td>
+<td><code>seq</code> for subdivisions where code starts by a value.</td>
+</tr>
+<tr>
+<td>  <code>.byCodeStartIt(str)</code></td>
+<td>Iterator subdivisions where code starts by a value.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>seq</code> for subdivisions with specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byNameIt(str)</code></td>
+<td>Iterator for subdivisions with specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byType(str)</code></td>
+<td><code>seq</code> for subdivisions with the specified type.</td>
+</tr>
+<tr>
+<td>  <code>.byTypeIt(str)</code></td>
+<td>Iterator for subdivisions with the specified type.</td>
+</tr>
+<tr>
+<td>  <code>.byParent(str)</code></td>
+<td><code>seq</code> for subdivisions with the specified parent value.</td>
+</tr>
+<tr>
+<td>  <code>.byParentIt(str)</code></td>
+<td>Iterator for subdivisions with the specified parent value.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all subdivisions that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all subdivisions that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[CountrySubdivision]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h3>RemovedCountry API</h3>
+<h4>RemovedCountry Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>name</code></td>
+<td>Country name.</td>
+</tr>
+<tr>
+<td>  <code>official_name</code></td>
+<td>Official name of the country.</td>
+</tr>
+<tr>
+<td>  <code>alpha_2</code></td>
+<td>Country ISO code (2 characters).</td>
+</tr>
+<tr>
+<td>  <code>alpha_3</code></td>
+<td>Country ISO code (3 characters).</td>
+</tr>
+<tr>
+<td>  <code>alpha_4</code></td>
+<td>Country ISO code (4 characters).</td>
+</tr>
+<tr>
+<td>  <code>numeric</code></td>
+<td>Numeric code for the country. <br /> <strong>NOTE</strong>: this is a string.</td>
+</tr>
+<tr>
+<td>  <code>comment</code></td>
+<td>Comment about the country.</td>
+</tr>
+<tr>
+<td>  <code>withdrawal_date</code></td>
+<td>Date of withdrawal (format: YYYY or YYYY-MM-DD) <br /> <strong>NOTE</strong>: this is a string.</td>
+</tr></tbody></table>
+<h4>RemovedCountry Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of countries</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all countries.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all countries.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>Option[Country]</code> with the specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha2(str)</code></td>
+<td><code>Option[Country]</code> with the specified alpha2 code.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha3(str)</code></td>
+<td><code>Option[Country]</code> with the specified alpha3 code.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha4(str)</code></td>
+<td><code>Option[Country]</code> with the specified alpha4 code.</td>
+</tr>
+<tr>
+<td>  <code>.byNumeric(str)</code></td>
+<td><code>Option[Country]</code> with the specified numeric code.</td>
+</tr>
+<tr>
+<td>  <code>.byWithdrawalDate(str)</code></td>
+<td><code>seq</code> for all countries with specified date.</td>
+</tr>
+<tr>
+<td>  <code>.byWithdrawalDateIt(str)</code></td>
+<td>Iterator all countries with specified date.</td>
+</tr>
+<tr>
+<td>  <code>.byWithdrawalYear(str)</code></td>
+<td><code>seq</code> for all countries with specified year.</td>
+</tr>
+<tr>
+<td>  <code>.byWithdrawalYearIt(str)</code></td>
+<td>Iterator all countries with specified year.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all countries that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all countries that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[Country]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h3>Script API</h3>
+<h4>Script Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>name</code></td>
+<td>Script name.</td>
+</tr>
+<tr>
+<td>  <code>alpha_4</code></td>
+<td>Script ISO code (4 characters).</td>
+</tr>
+<tr>
+<td>  <code>numeric</code></td>
+<td>Numeric code for the script. <br /> <strong>NOTE</strong>: this is a string.</td>
+</tr></tbody></table>
+<h4>Script Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of scripts</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all scripts.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all scripts.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>Option[Script]</code> with the specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha4(str)</code></td>
+<td><code>Option[Script]</code> with the specified alpha4 code.</td>
+</tr>
+<tr>
+<td>  <code>.byNumeric(str)</code></td>
+<td><code>Option[Script]</code> with the specified numeric code.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all scripts that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all scripts that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[Script]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h3>Currency API</h3>
+<h4>Currency Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>name</code></td>
+<td>Currency name.</td>
+</tr>
+<tr>
+<td>  <code>alpha_3</code></td>
+<td>Currency ISO code (3 characters).</td>
+</tr>
+<tr>
+<td>  <code>numeric</code></td>
+<td>Numeric code for the currency. <br /> <strong>NOTE</strong>: this is a string.</td>
+</tr></tbody></table>
+<h4>Currency Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of currencies.</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all currencies.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all currencies.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>Option[Currency]</code> with the specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha3(str)</code></td>
+<td><code>Option[Currency]</code> with the specified alpha3 code.</td>
+</tr>
+<tr>
+<td>  <code>.byNumeric(str)</code></td>
+<td><code>Option[Currency]</code> with the specified numeric code.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all currencies that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all currencies that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[Currency]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h3>Language API</h3>
+<h4>Language Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>name</code></td>
+<td>Language name.</td>
+</tr>
+<tr>
+<td>  <code>alpha_2</code></td>
+<td>Language ISO code (2 characters).</td>
+</tr>
+<tr>
+<td>  <code>alpha_3</code></td>
+<td>Language ISO code (3 characters).</td>
+</tr>
+<tr>
+<td>  <code>common_name</code></td>
+<td>Language common name.</td>
+</tr>
+<tr>
+<td>  <code>bibliographic</code></td>
+<td>Language bibliographic code.</td>
+</tr></tbody></table>
+<h4>Language Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of languages.</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all languages.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all languages.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>Option[Language]</code> with the specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byCommonName(str)</code></td>
+<td><code>Option[Language]</code> with the specified common name.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha2(str)</code></td>
+<td><code>Option[Language]</code> with the specified alpha2 code.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha3(str)</code></td>
+<td><code>Option[Language]</code> with the specified alpha3 code.</td>
+</tr>
+<tr>
+<td>  <code>.byBibliographic(str)</code></td>
+<td><code>Option[Language]</code> with the specified bibliographic code.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all languages that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all languages that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[Language]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h3>LanguageFamily API</h3>
+<h4>LanguageFamily Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>name</code></td>
+<td>Language family name.</td>
+</tr>
+<tr>
+<td>  <code>alpha_3</code></td>
+<td>Language family ISO code (3 characters).</td>
+</tr></tbody></table>
+<h4>LanguageFamily Procedures</h4>
+<table>
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>.count()</code></td>
+<td>Number of language families.</td>
+</tr>
+<tr>
+<td>  <code>.all()</code></td>
+<td><code>seq</code> for all language families.</td>
+</tr>
+<tr>
+<td>  <code>.allIt()</code></td>
+<td>Iterator for all language families.</td>
+</tr>
+<tr>
+<td>  <code>.byName(str)</code></td>
+<td><code>Option[LanguageFamily]</code> with the specified name.</td>
+</tr>
+<tr>
+<td>  <code>.byAlpha3(str)</code></td>
+<td><code>Option[LanguageFamily]</code> with the specified alpha3 code.</td>
+</tr>
+<tr>
+<td>  <code>.find(proc)</code></td>
+<td><code>seq</code> for all language families that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findIt(proc)</code></td>
+<td>Iterator for all language families that proc evaluates to <code>true</code>.</td>
+</tr>
+<tr>
+<td>  <code>.findFirst(proc)</code></td>
+<td><code>Option[LanguageFamily]</code> were proc evaluates to <code>true</code>.</td>
+</tr></tbody></table>
+<h2>Compilation flags</h2>
+<p>With the following flags it&apos;s possible to embed the data (or not) and specify the JSON
+file to embed/load. This could be useful if the provided files are outdated and you want
+to provide your own files, or if you want to load the data at runtime.</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <strong>Countries</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedCountries=true</code></td>
+<td>Embed countries data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedCountries=false</code></td>
+<td>Load countries data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useCountriesFile=PATH</code></td>
+<td>Use a specific countries JSON file.</td>
+</tr>
+<tr>
+<td>  <strong>Country Subdivisions</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedSubdivisions=true</code></td>
+<td>Embed subdivisions data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedSubdivisions=false</code></td>
+<td>Load subdivisions data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useSubdivisionsFile=PATH</code></td>
+<td>Use a specific subdivisions JSON file.</td>
+</tr>
+<tr>
+<td>  <strong>Removed Countries</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedRemovedCountries=true</code></td>
+<td>Embed removed countries data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedRemovedCountries=false</code></td>
+<td>Load removed countries data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useRemovedCountriesFile=PATH</code></td>
+<td>Use a specific removed countries JSON file.</td>
+</tr>
+<tr>
+<td>  <strong>Scripts</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedScripts=true</code></td>
+<td>Embed scripts data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedScripts=false</code></td>
+<td>Load scripts data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useScriptsFile=PATH</code></td>
+<td>Use a specific scripts JSON file.</td>
+</tr>
+<tr>
+<td>  <strong>Currencies</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedCurrencies=true</code></td>
+<td>Embed currencies data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedCurrencies=false</code></td>
+<td>Load currencies data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useCurrenciesFile=PATH</code></td>
+<td>Use a specific currencies JSON file.</td>
+</tr>
+<tr>
+<td>  <strong>Language</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedLanguages=true</code></td>
+<td>Embed languages data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedLanguages=false</code></td>
+<td>Load languages data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useLanguagesFile=PATH</code></td>
+<td>Use a specific languages JSON file.</td>
+</tr>
+<tr>
+<td>  <strong>Language Families</strong></td>
+<td />
+</tr>
+<tr>
+<td>  <code>-d:embedLanguageFamilies=true</code></td>
+<td>Embed language families data within the executable.</td>
+</tr>
+<tr>
+<td>  <code>-d:embedLanguageFamilies=false</code></td>
+<td>Load language families data at runtime.</td>
+</tr>
+<tr>
+<td>  <code>-d:useLanguageFamiliesFile=PATH</code></td>
+<td>Use a specific language families JSON file.</td>
+</tr></tbody></table>
+<h2>Source</h2>
+<p>The ISO codes JSON files are synced verbatim from Debian&apos;s <code>iso-codes</code>
+repository here:</p>
+<ul>
+<li>  <a href="https://salsa.debian.org/iso-codes-team/iso-codes/">https://salsa.debian.org/iso-codes-team/iso-codes/</a></li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/kraptor/isocodes">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

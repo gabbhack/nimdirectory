@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">tinyre</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">re</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">regex</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Tiny Regex Engine for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install tinyre" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <a href="https://paypal.me/khchen0915?country.x=TW&amp;locale.x=zh_TW">    <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" style="max-width: 100%;" alt="Donate" />  </a></p>
+<h1>TinyRE</h1>
+<p>TinyRE is a Nim wrap for a tiny regex engine based on Rob Pike&apos;s VM
+implementation. Compare to other small regex engines, this engine supports
+unicode and most of common regex syntax, in less than 10K code size (LOC &lt; 1K),
+and guarantees that input regex will scale O(n) with the size of the string.</p>
+<h2>Features</h2>
+<ul>
+<li>Support unicode.</li>
+<li>Support case-insensitive matching.</li>
+<li>Support global matching.</li>
+<li>Support most common regex syntax, including:
+<ul>
+<li>Greedy and non-greedy expressions: <code>*</code>, <code>+</code>, <code>?</code>, <code>*?</code>, <code>+?</code>, <code>??</code>.</li>
+<li>Characters sets: <code>[xyz]</code>, <code>[a-z]</code>, <code>[^xyz]</code>, <code>[^m-z]</code>.</li>
+<li>Meta characters: <code>\s</code>, <code>\S</code> ,<code>\w</code>, <code>\W</code>, <code>\d</code>, <code>\D</code>, <code>\n</code>, <code>\r</code>, <code>\t</code> etc.</li>
+<li>Ascii or unicode characters: <code>\x00</code>, <code>\u0000</code>, <code>\U00000000</code></li>
+<li>Alternation operator: <code>|</code>.</li>
+<li>Beginning and end assertions: <code>^</code>, <code>$</code>.</li>
+<li>Repetition operators: <code>{n}</code>, <code>{n,m}</code>, <code>{n,}</code>.</li>
+<li>Non-greedy repetition operators: <code>{n,m}?</code>, <code>{n,}?</code>.</li>
+<li>Group and non-capture group: <code>(...)</code>, <code>(?:...)</code>.</li>
+<li>Start-of-word, end-of-word, and nonword boundary assertions: <code>\&lt;</code>, <code>\&gt;</code>, <code>\B</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">tinyre</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">match</span>(<span class="str">&quot;abc123&quot;</span>, re"\d+") <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;123&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">bounds</span>(<span class="str">&quot;abc123&quot;</span>, re"\d+") <span class="op">==</span> <span class="op">@</span>[<span class="num">3.</span><span class="op">.</span><span class="num">5</span>]</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">contains</span>(<span class="str">&quot;abc123&quot;</span>, re"\d+") <span class="op">==</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">startsWith</span>(<span class="str">&quot;abc123&quot;</span>, re"[a-z]+") <span class="op">==</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">endsWith</span>(<span class="str">&quot;abc123&quot;</span>, re"\d+") <span class="op">==</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">split</span>(<span class="str">&quot;abc123&quot;</span>, re"\d+") <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;abc&quot;</span>, <span class="str">&quot;&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">replacef</span>(<span class="str">&quot;abc123&quot;</span>, re"([a-z]+)(\d+)", <span class="str">&quot;$2$1&quot;</span>) <span class="op">==</span> <span class="str">&quot;123abc&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># reG for global matching</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">match</span>(<span class="str">&quot;abc123&quot;</span>, reG".") <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;a&quot;</span>, <span class="str">&quot;b&quot;</span>, <span class="str">&quot;c&quot;</span>, <span class="str">&quot;1&quot;</span>, <span class="str">&quot;2&quot;</span>, <span class="str">&quot;3&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># reI for case insensitive matching</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">match</span>(<span class="str">&quot;abc123&quot;</span>, reI"ABC") <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;abc&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># reU for utf8 matching</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">match</span>(<span class="str">&quot;中文&quot;</span>, reU"..") <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;中文&quot;</span>]</div></div>  </code></pre>
+<h2>Code Size</h2>
+<p>Comparing the code size of different regex library.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># gcc: version 11.1.0 MinGW-W64</span></div></div><div class="line"><div class="line-content"><span class="com"># compile options: -d:release -d:danger --opt:size -d:lto -d:strip</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># test codes</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">contains</span>(<span class="str">&quot;abc123def&quot;</span>, <span class="str">&quot;123&quot;</span>) <span class="com"># for strutils</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">contains</span>(<span class="str">&quot;abc123def&quot;</span>, re"\d+") <span class="com"># for regex library</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Results</span></div></div><div class="line"><div class="line-content"><span class="ide">strutils</span>:       <span class="num">65</span>,<span class="num">536</span> <span class="ide">bytes</span> (<span class="ide">no</span> <span class="ide">dependence</span>)</div></div><div class="line"><div class="line-content"><span class="ide">std</span><span class="op">/</span><span class="ide">re</span>:         <span class="num">68</span>,<span class="num">608</span> <span class="ide">bytes</span> (<span class="ide">dependence</span>: <span class="ide">pcre64</span><span class="op">.</span><span class="ide">dll</span>: <span class="num">526</span>,<span class="num">336</span> <span class="ide">bytes</span>)</div></div><div class="line"><div class="line-content"><span class="ide">tinyre</span>:         <span class="num">75</span>,<span class="num">264</span> <span class="ide">bytes</span> (<span class="ide">no</span> <span class="ide">dependence</span>)</div></div><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">regex</span>:     <span class="num">296</span>,<span class="num">448</span> <span class="ide">bytes</span> (<span class="ide">no</span> <span class="ide">dependence</span>)</div></div>  </code></pre>
+<h2>Performance</h2>
+<p>In summary, faster than <code>std/re</code> in small string, but slower than <code>std/re</code>
+in large string. Here is the benchmark result on my computer. The test file
+and pattern is from https://github.com/mariomka/regex-benchmark.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># small string: &quot;abc123def&quot;.contains(&quot;\d+&quot;)</span></div></div><div class="line"><div class="line-content"><span class="com"># large string: 6.71 MB text file</span></div></div><div class="line"><div class="line-content"><span class="com">#   email: [\w\.+-]+@[\w\.-]+\.[\w\.-]+</span></div></div><div class="line"><div class="line-content"><span class="com">#   uri: [\w]+://[^/\s?#]+[^\s?#]+(?:\?[^\s#]*)?(?:#[^\s]*)?</span></div></div><div class="line"><div class="line-content"><span class="com">#   ipv4: (?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])</span></div></div><div class="line"><div class="line-content"><span class="com"># compile options: -d:release -d:danger --opt:speed -d:lto</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">name</span> <span class="op">...............................</span> <span class="ide">min</span> <span class="ide">time</span>      <span class="ide">avg</span> <span class="ide">time</span>    <span class="ide">std</span> <span class="ide">dv</span>   <span class="ide">runs</span></div></div><div class="line"><div class="line-content"><span class="ide">tinyre</span> (<span class="ide">small</span> <span class="ide">string</span>) <span class="op">..............</span> <span class="num">0.366</span> <span class="ide">ms</span>      <span class="num">0.379</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">018</span>  <span class="ide">x1000</span></div></div><div class="line"><div class="line-content"><span class="ide">std</span><span class="op">/</span><span class="ide">re</span> (<span class="ide">small</span> <span class="ide">string</span>) <span class="op">..............</span> <span class="num">5.862</span> <span class="ide">ms</span>      <span class="num">6.218</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">171</span>   <span class="ide">x797</span></div></div><div class="line"><div class="line-content"><span class="ide">nim</span><span class="op">-</span><span class="ide">regex</span> (<span class="ide">small</span> <span class="ide">string</span>) <span class="op">..........</span> <span class="num">16.132</span> <span class="ide">ms</span>     <span class="num">17.067</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">580</span>   <span class="ide">x288</span></div></div><div class="line"><div class="line-content"><span class="ide">tinyre</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">email</span>) <span class="op">.....</span> <span class="num">140.684</span> <span class="ide">ms</span>    <span class="num">151.663</span> <span class="ide">ms</span>    <span class="ide">±8</span><span class="op">.</span><span class="num">625</span>    <span class="ide">x33</span></div></div><div class="line"><div class="line-content"><span class="ide">std</span><span class="op">/</span><span class="ide">re</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">email</span>) <span class="op">......</span> <span class="num">44.793</span> <span class="ide">ms</span>     <span class="num">48.884</span> <span class="ide">ms</span>    <span class="ide">±2</span><span class="op">.</span><span class="num">716</span>   <span class="ide">x102</span></div></div><div class="line"><div class="line-content"><span class="ide">nim</span><span class="op">-</span><span class="ide">regex</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">email</span>) <span class="op">....</span> <span class="num">3.680</span> <span class="ide">ms</span>      <span class="num">3.921</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">132</span>  <span class="ide">x1000</span></div></div><div class="line"><div class="line-content"><span class="ide">tinyre</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">uri</span>) <span class="op">.......</span> <span class="num">127.465</span> <span class="ide">ms</span>    <span class="num">131.721</span> <span class="ide">ms</span>    <span class="ide">±2</span><span class="op">.</span><span class="num">110</span>    <span class="ide">x38</span></div></div><div class="line"><div class="line-content"><span class="ide">std</span><span class="op">/</span><span class="ide">re</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">uri</span>) <span class="op">........</span> <span class="num">40.380</span> <span class="ide">ms</span>     <span class="num">42.812</span> <span class="ide">ms</span>    <span class="ide">±1</span><span class="op">.</span><span class="num">175</span>   <span class="ide">x117</span></div></div><div class="line"><div class="line-content"><span class="ide">nim</span><span class="op">-</span><span class="ide">regex</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">uri</span>) <span class="op">.....</span> <span class="num">21.400</span> <span class="ide">ms</span>     <span class="num">22.205</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">344</span>   <span class="ide">x225</span></div></div><div class="line"><div class="line-content"><span class="ide">tinyre</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">ipv4</span>) <span class="op">......</span> <span class="num">182.995</span> <span class="ide">ms</span>    <span class="num">186.441</span> <span class="ide">ms</span>    <span class="ide">±1</span><span class="op">.</span><span class="num">057</span>    <span class="ide">x27</span></div></div><div class="line"><div class="line-content"><span class="ide">std</span><span class="op">/</span><span class="ide">re</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">ipv4</span>) <span class="op">........</span> <span class="num">4.854</span> <span class="ide">ms</span>      <span class="num">5.965</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">903</span>   <span class="ide">x838</span></div></div><div class="line"><div class="line-content"><span class="ide">nim</span><span class="op">-</span><span class="ide">regex</span> (<span class="ide">large</span> <span class="ide">string</span>, <span class="ide">ipv4</span>) <span class="op">.....</span> <span class="num">7.569</span> <span class="ide">ms</span>      <span class="num">7.849</span> <span class="ide">ms</span>    <span class="ide">±0</span><span class="op">.</span><span class="num">159</span>   <span class="ide">x635</span></div></div>  </code></pre>
+<h2>Docs</h2>
+<ul>
+<li>https://khchen.github.io/tinyre</li>
+</ul>
+<h2>Reference</h2>
+<ul>
+<li><a href="https://github.com/kyx0r/pikevm" title="pikevm">pikevm</a> by Kyryl Melekhin</li>
+<li><a href="https://github.com/pfalcon/re1.5" title="re1.5">re1.5</a> by Paul Sokolovsky</li>
+<li><a href="https://code.google.com/archive/p/re1/" title="re1.0">re1.0</a> by Russel Cox</li>
+<li><a href="https://swtch.com/~rsc/regexp/regexp2.html" title="Regular Expression Matching: the Virtual Machine Approach">Regular Expression Matching: the Virtual Machine Approach</a> by Russel Cox</li>
+</ul>
+<h2>License</h2>
+<p>Copyright (c) 2022 Kai-Hung Chen, Ward. All rights reserved.</p>
+<h2>Donate</h2>
+<p>If this project help you reduce time to develop, you can give me a cup of coffee :)</p>
+<p>  <a href="https://paypal.me/khchen0915?country.x=TW&amp;locale.x=zh_TW">    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="max-width: 100%;" alt="paypal" />  </a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/khchen/tinyre">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

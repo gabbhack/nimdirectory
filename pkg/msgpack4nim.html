@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">msgpack4nim</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">msgpack</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">serialization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">deserialization</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Another MessagePack implementation written in pure nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install msgpack4nim" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>msgpack4nim</h1>
+<p><a href="http://msgpack.org/">MessagePack</a> implementation written in pure nim</p>
+<h3>why another implementation?</h3>
+<p>I am fully aware of <a href="https://github.com/akiradeveloper/msgpack-nim">another</a> msgpack implementation written in nim.
+But I want something easier to use. Another motivation come from the nim language itself.
+The current version of nim compiler offer many improvements, including &apos;generics &apos; specialization.
+I found out nim compiler is smart enough to make serialization/deserialization to/from msgpack easy and convenient.</p>
+<p><strong>requirement:</strong> nim ver 0.18.1 or later</p>
+<p><a href="https://travis-ci.org/jangko/msgpack4nim">  <img src="https://img.shields.io/travis/jangko/msgpack4nim/master.svg?label=Linux%20/%20macOS" style="max-width: 100%;" alt="Build Status (Travis)" title="Linux/macOS build status (Travis)" /></a>
+<a href="https://ci.appveyor.com/project/jangko/msgpack4nim">  <img src="https://img.shields.io/appveyor/ci/jangko/msgpack4nim/master.svg?label=Windows" style="max-width: 100%;" alt="Windows build status (Appveyor)" title="Windows build status (Appveyor)" /></a>
+<img src="https://img.shields.io/badge/available%20on-nimble-yellow.svg?style=flat-square" style="max-width: 100%;" alt="nimble" /><img src="https://img.shields.io/github/license/citycide/cascade.svg?style=flat-square" style="max-width: 100%;" alt="license" /><img src="https://github.com/jangko/msgpack4nim/workflows/msgpack4nim%20CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
+<h2>Example</h2>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">msgpack4nim</span>, <span class="ide">streams</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="com">#lets try with a rather complex object</span></div></div><div class="line"><div class="line-content">  <span class="ide">CustomType</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">count</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">content</span>: <span class="ide">seq</span>[<span class="ide">int</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">ratio</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">    <span class="ide">attr</span>: <span class="ide">array</span>[<span class="num">0.</span><span class="op">.</span><span class="num">5</span>, <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">ok</span>: <span class="ide">bool</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initCustomType</span>(): <span class="ide">CustomType</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">count</span> <span class="op">=</span> <span class="op">-</span><span class="num">1</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">content</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">name</span> <span class="op">=</span> <span class="str">&quot;custom&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">ratio</span> <span class="op">=</span> <span class="num">1.0</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0.</span><span class="op">.</span><span class="num">5</span>: <span class="ide">result</span><span class="op">.</span><span class="ide">attr</span>[<span class="ide">i</span>] <span class="op">=</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">ok</span> <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">initCustomType</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">MsgStream</span><span class="op">.</span><span class="ide">init</span>() <span class="com"># besides MsgStream, you can also use Nim StringStream or FileStream</span></div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">pack</span>(<span class="ide">x</span>) <span class="com">#here the magic happened</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ss</span> <span class="op">=</span> <span class="ide">MsgStream</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">s</span><span class="op">.</span><span class="ide">data</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">xx</span>: <span class="ide">CustomType</span></div></div><div class="line"><div class="line-content"><span class="ide">ss</span><span class="op">.</span><span class="ide">unpack</span>(<span class="ide">xx</span>) <span class="com">#and here too</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">xx</span> <span class="op">==</span> <span class="ide">x</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;OK &quot;</span>, <span class="ide">xx</span><span class="op">.</span><span class="ide">name</span></div></div>  </code></pre>
+<p>see? you only need to call &apos;pack&apos; and &apos;unpack&apos;, and the compiler do the hard work for you. Very easy, convenient, and works well</p>
+<p>if you think setting up a MsgStream too much for you, you can simply call pack(yourobject) and it will return a string containing msgpack data.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">a</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>,<span class="num">7</span>,<span class="num">8</span>,<span class="num">9</span>,<span class="num">0</span>]</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">buf</span> <span class="op">=</span> <span class="ide">pack</span>(<span class="ide">a</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">aa</span>: <span class="ide">seq</span>[<span class="ide">int</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">unpack</span>(<span class="ide">buf</span>, <span class="ide">aa</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">a</span> <span class="op">==</span> <span class="ide">aa</span></div></div>  </code></pre>
+<p>in case the compiler cannot decide how to serialize or deserialize your very very complex object, you can help it in easy way
+by defining your own handler pack_type/unpack_type</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="com">#not really complex, just for example</span></div></div><div class="line"><div class="line-content">  <span class="ide">mycomplexobject</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">a</span>: <span class="ide">someSimpleType</span></div></div><div class="line"><div class="line-content">    <span class="ide">b</span>: <span class="ide">someSimpleType</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># help the compiler to decide</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">pack_type</span><span class="op">*</span>(<span class="ide">s</span>: <span class="ide">Stream</span>, <span class="ide">x</span>: <span class="ide">mycomplexobject</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">pack</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">a</span>) <span class="com"># let the compiler decide</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">pack</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">b</span>) <span class="com"># let the compiler decide</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># help the compiler to decide</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">unpack_type</span><span class="op">*</span>(<span class="ide">s</span>: <span class="ide">Stream</span>, <span class="ide">x</span>: <span class="kwd">var</span> <span class="ide">mycomplexobject</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">unpack</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">a</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">unpack</span>(<span class="ide">x</span><span class="op">.</span><span class="ide">b</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">MsgStream</span><span class="op">.</span><span class="ide">init</span>() <span class="com"># besides MsgStream, you can also use Nim StringStream or FileStream</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span>: <span class="ide">mycomplexobject</span></div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">pack</span>(<span class="ide">x</span>) <span class="com">#pack as usual</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ss</span> <span class="op">=</span> <span class="ide">MsgStream</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">s</span><span class="op">.</span><span class="ide">data</span>)</div></div><div class="line"><div class="line-content"><span class="ide">ss</span><span class="op">.</span><span class="ide">unpack</span>(<span class="ide">x</span>) <span class="com">#unpack as usual</span></div></div>  </code></pre>
+<h2>Data Conversion</h2>
+<table>
+<thead>
+<tr>
+<th>  <strong>nim</strong></th>
+<th>  <strong>msgpack</strong></th>
+<th>  <strong>JsonNode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int8/16/32/64</td>
+<td>int8/16/32/64</td>
+<td>JInt</td>
+</tr>
+<tr>
+<td>uint8/16/32/64</td>
+<td>uint8/16/32/64</td>
+<td>JInt</td>
+</tr>
+<tr>
+<td>true/false</td>
+<td>true/false</td>
+<td>JBool</td>
+</tr>
+<tr>
+<td>nil</td>
+<td>nil</td>
+<td>JNull</td>
+</tr>
+<tr>
+<td>procedural type</td>
+<td>ignored</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>cstring</td>
+<td>ignored</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>pointer</td>
+<td>ignored</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>ptr</td>
+<td>  <a href="#ref-types">see ref-types</a></td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>ref</td>
+<td>  <a href="#ref-types">see ref-types</a></td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>circular ref</td>
+<td>  <a href="#ref-types">see ref-types</a></td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>distinct types**</td>
+<td>converted to base type</td>
+<td>applicable base type</td>
+</tr>
+<tr>
+<td>float32/64</td>
+<td>float32/64</td>
+<td>JFloat</td>
+</tr>
+<tr>
+<td>string</td>
+<td>string8/16/32</td>
+<td>JString</td>
+</tr>
+<tr>
+<td>array/seq</td>
+<td>array</td>
+<td>JArray</td>
+</tr>
+<tr>
+<td>set</td>
+<td>array</td>
+<td>JArray</td>
+</tr>
+<tr>
+<td>range/subrange</td>
+<td>int8/16/32/64</td>
+<td>JInt</td>
+</tr>
+<tr>
+<td>enum</td>
+<td>int8/16/32/64</td>
+<td>JInt</td>
+</tr>
+<tr>
+<td>IntSet,Doubly/SinglyLinkedList*</td>
+<td>array</td>
+<td>JArray</td>
+</tr>
+<tr>
+<td>Doubly/SinglyLinkedRing*</td>
+<td>array</td>
+<td>JArray</td>
+</tr>
+<tr>
+<td>Queue,HashSet,OrderedSet*</td>
+<td>array</td>
+<td>JArray</td>
+</tr>
+<tr>
+<td>Table,TableRef*</td>
+<td>map</td>
+<td>JObject</td>
+</tr>
+<tr>
+<td>OrderedTable,OrderedTableRef*</td>
+<td>map</td>
+<td>JObject</td>
+</tr>
+<tr>
+<td>StringTableRef*</td>
+<td>map</td>
+<td>JObject</td>
+</tr>
+<tr>
+<td>CritBitTree[T]*</td>
+<td>map</td>
+<td>JObject</td>
+</tr>
+<tr>
+<td>CritBitTree[void]*</td>
+<td>array</td>
+<td>JArray</td>
+</tr>
+<tr>
+<td>object/tuple</td>
+<td>array/map</td>
+<td>JObject</td>
+</tr></tbody></table>
+<ul>
+<li>(*) please import msgpakc4collection for Nim standard library collections, they are no longer part of codec core</li>
+<li>(**) provide your own implementation if you want to override default behavior</li>
+</ul>
+<h2>distinct types</h2>
+<p>If distinct types encountered, it will be converted back to it&apos;s base type.
+If you don&apos;t like this behavior, since version 0.2.9 msgpack4nim allow you
+to override this default behavior by supplying your own implementation of
+<code>pack_type</code> and <code>unpack_type</code>.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">msgpack4nim</span>, <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Guid</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">pack_type</span><span class="op">*</span>(<span class="ide">s</span>: <span class="ide">Stream</span>, <span class="ide">v</span>: <span class="ide">Guid</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">pack_bin</span>(<span class="ide">len</span>(<span class="ide">v</span><span class="op">.</span><span class="ide">string</span>))</div></div><div class="line"><div class="line-content">  <span class="ide">s</span><span class="op">.</span><span class="ide">write</span>(<span class="ide">v</span><span class="op">.</span><span class="ide">string</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">unpack_type</span><span class="op">*</span>(<span class="ide">s</span>: <span class="ide">Stream</span>, <span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">Guid</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">L</span> <span class="op">=</span> <span class="ide">s</span><span class="op">.</span><span class="ide">unpack_bin</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">=</span> <span class="ide">Guid</span>(<span class="ide">s</span><span class="op">.</span><span class="ide">readStr</span>(<span class="ide">L</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">b</span> <span class="op">=</span> <span class="ide">Guid</span>(<span class="str">&quot;AA&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">b</span><span class="op">.</span><span class="ide">pack</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">s</span><span class="op">.</span><span class="ide">tohex</span> <span class="op">==</span> <span class="str">&quot;C4024141&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">s</span><span class="op">.</span><span class="ide">stringify</span> <span class="op">==</span> <span class="str">&quot;BIN: 4141 &quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">bb</span>: <span class="ide">Guid</span></div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">unpack</span>(<span class="ide">bb</span>)</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">bb</span><span class="op">.</span><span class="ide">string</span> <span class="op">==</span> <span class="ide">b</span><span class="op">.</span><span class="ide">string</span></div></div>  </code></pre>
+<h2>object and tuple</h2>
+<p>object and tuple by default converted to msgpack array, however
+you can tell the compiler to convert it to map by supplying --define:msgpack_obj_to_map</p>
+<pre>  <code class="language-shell">nim c --define:msgpack_obj_to_map yourfile.nim
+</code></pre>
+<p>or --define:msgpack_obj_to_stream to convert object/tuple fields <em>value</em> into stream of msgpack objects</p>
+<pre>  <code class="language-shell">nim c --define:msgpack_obj_to_stream yourfile.nim
+</code></pre>
+<p>What this means? It means by default, each object/tuple will be converted to one <code>msgpack array</code> contains
+field(s) value only without their field(s) name.</p>
+<p>If you specify that the object/tuple will be converted to <code>msgpack map</code>, then each object/tuple will be
+converted to one <code>msgpack map</code> contains key-value pairs. The key will be field name, and the value will be field value.</p>
+<p>If you specify that the object/tuple will be converted to msgpack stream, then each object/tuple will be converted
+into one or more msgpack&apos;s type for each object&apos;s field and then the resulted stream will be concatenated
+to the msgpack stream buffer.</p>
+<p>Which one should I use?</p>
+<p>Usually, other msgpack libraries out there convert object/tuple/record/struct or whatever structured data supported by
+the language into <code>msgpack array</code>, but always make sure to consult the documentation first.
+If both of the serializer and deserializer agreed to one convention, then usually there will be no problem.
+No matter which library/language you use, you can exchange msgpack data among them.</p>
+<p>since version 0.2.4, you can set encoding mode at runtime to choose which encoding you would like to perform</p>
+<p>note: the runtime encoding mode only available if you use MsgStream, otherwise only compile time flag available</p>
+<table>
+<thead>
+<tr>
+<th>mode</th>
+<th>msgpack_obj_to_map</th>
+<th>msgpack_obj_to_array</th>
+<th>msgpack_obj_to_stream</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSGPACK_OBJ_TO_DEFAULT</td>
+<td>map</td>
+<td>array</td>
+<td>stream</td>
+<td>array</td>
+</tr>
+<tr>
+<td>MSGPACK_OBJ_TO_ARRAY</td>
+<td>array</td>
+<td>array</td>
+<td>array</td>
+<td>array</td>
+</tr>
+<tr>
+<td>MSGPACK_OBJ_TO_MAP</td>
+<td>map</td>
+<td>map</td>
+<td>map</td>
+<td>map</td>
+</tr>
+<tr>
+<td>MSGPACK_OBJ_TO_STREAM</td>
+<td>stream</td>
+<td>stream</td>
+<td>stream</td>
+<td>stream</td>
+</tr></tbody></table>
+<h4>  <strong>ref-types:</strong></h4>
+<p><em>ref something</em> :</p>
+<ul>
+<li>if ref value is nil, it will be packed into msgpack nil, and when unpacked, you will get nil too</li>
+<li>if ref value not nil, it will be dereferenced e.g. pack(val[]) or unpack(val[])</li>
+<li>ref subject to some restriction. see <strong>restriction</strong> below</li>
+<li>ptr will be treated like ref during pack</li>
+<li>unpacking ptr will invoke alloc, so you must dealloc it</li>
+</ul>
+<p><em>circular reference</em>:
+altough detecting circular reference is not too difficult(using set of pointers),
+the current implementation does not provide circular reference detection.
+If you pack something contains circular reference, you know something bad will happened</p>
+<p><strong>Restriction</strong>:
+For objects their type is <strong>not</strong> serialized.
+This means essentially that it does not work if the object has some other runtime type than its compiletime type:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">streams</span>, <span class="ide">msgpack4nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">TA</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">RootObj</span></div></div><div class="line"><div class="line-content">  <span class="ide">TB</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">TA</span></div></div><div class="line"><div class="line-content">    <span class="ide">f</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span>: <span class="kwd">ref</span> <span class="ide">TA</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span>: <span class="kwd">ref</span> <span class="ide">TB</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">new</span>(<span class="ide">b</span>)</div></div><div class="line"><div class="line-content"><span class="ide">a</span> <span class="op">=</span> <span class="ide">b</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">stringify</span>(<span class="ide">pack</span>(<span class="ide">a</span>))</div></div><div class="line"><div class="line-content"><span class="com">#produces &quot;[ ]&quot; or &quot;{ }&quot;</span></div></div><div class="line"><div class="line-content"><span class="com">#not &quot;[ 0 ]&quot; or &apos;{ &quot;f&quot; : 0 }&apos;</span></div></div>  </code></pre>
+<h4>  <strong>limitation:</strong></h4>
+<p>these types will be ignored:</p>
+<ul>
+<li>procedural type</li>
+<li>cstring(it is not safe to assume it always terminated by null)</li>
+<li>pointer</li>
+</ul>
+<p>these types cannot be automatically pack/unpacked:</p>
+<ul>
+<li><em>void</em> (will cause compile time error)</li>
+</ul>
+<p>however, you can provide your own handler for cstring and pointer</p>
+<p><strong>Gotchas:</strong>
+because data conversion did not preserve original data types(only partial preservation),
+the following code is perfectly valid and will raise no exception</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">msgpack4nim</span>, <span class="ide">streams</span>, <span class="ide">tables</span>, <span class="ide">sets</span>, <span class="ide">strtabs</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Horse</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">legs</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">foals</span>: <span class="ide">seq</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">attr</span>: <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">string</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">Cat</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">legs</span>: <span class="ide">uint8</span></div></div><div class="line"><div class="line-content">    <span class="ide">kittens</span>: <span class="ide">HashSet</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">traits</span>: <span class="ide">StringTableRef</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initHorse</span>(): <span class="ide">Horse</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">legs</span> <span class="op">=</span> <span class="num">4</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">foals</span> <span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;jilly&quot;</span>, <span class="str">&quot;colt&quot;</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">attr</span> <span class="op">=</span> <span class="ide">initTable</span>[<span class="ide">string</span>, <span class="ide">string</span>]()</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">attr</span>[<span class="str">&quot;color&quot;</span>] <span class="op">=</span> <span class="str">&quot;black&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">attr</span>[<span class="str">&quot;speed&quot;</span>] <span class="op">=</span> <span class="str">&quot;120mph&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">stallion</span> <span class="op">=</span> <span class="ide">initHorse</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">tom</span>: <span class="ide">Cat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">buf</span> <span class="op">=</span> <span class="ide">pack</span>(<span class="ide">stallion</span>) <span class="com">#pack a Horse here</span></div></div><div class="line"><div class="line-content"><span class="ide">unpack</span>(<span class="ide">buf</span>, <span class="ide">tom</span>)</div></div><div class="line"><div class="line-content"><span class="com">#abracadabra, it will unpack into a Cat</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;legs: &quot;</span>, <span class="op">$</span><span class="ide">tom</span><span class="op">.</span><span class="ide">legs</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;kittens: &quot;</span>, <span class="op">$</span><span class="ide">tom</span><span class="op">.</span><span class="ide">kittens</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;traits: &quot;</span>, <span class="op">$</span><span class="ide">tom</span><span class="op">.</span><span class="ide">traits</span></div></div>  </code></pre>
+<p>another gotcha:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">KAB</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">RootObj</span></div></div><div class="line"><div class="line-content">      <span class="ide">aaa</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">bbb</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">KCD</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">KAB</span></div></div><div class="line"><div class="line-content">      <span class="ide">ccc</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">ddd</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">KEF</span> <span class="op">=</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">KCD</span></div></div><div class="line"><div class="line-content">      <span class="ide">eee</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">fff</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">kk</span> <span class="op">=</span> <span class="ide">KEF</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">stringify</span>(<span class="ide">pack</span>(<span class="ide">kk</span>))</div></div><div class="line"><div class="line-content">  <span class="com"># will produce &quot;{ &quot;eee&quot; : 0, &quot;fff&quot; : 0, &quot;ccc&quot; : 0, &quot;ddd&quot; : 0, &quot;aaa&quot; : 0, &quot;bbb&quot; : 0 }&quot;</span></div></div><div class="line"><div class="line-content">  <span class="com"># not &quot;{ &quot;aaa&quot; : 0, &quot;bbb&quot; : 0, &quot;ccc&quot; : 0, &quot;ddd&quot; : 0, &quot;eee&quot; : 0, &quot;fff&quot; : 0 }&quot;</span></div></div>  </code></pre>
+<h2>bin and ext format</h2>
+<p>this implementation provide function to encode/decode msgpack bin/ext format header,
+but for the body, you must write it yourself or read it yourself to/from the Stream</p>
+<ul>
+<li>proc pack_bin*(s: Stream, len: int)</li>
+<li>proc pack_ext*(s: Stream, len: int, exttype: int8)</li>
+<li>proc unpack_bin*(s: Stream): int</li>
+<li>proc unpack_ext*(s: Stream): tuple[exttype:uint8, len: int]</li>
+</ul>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">streams</span>, <span class="ide">msgpack4nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">exttype0</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">MsgStream</span><span class="op">.</span><span class="ide">init</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">body</span> <span class="op">=</span> <span class="str">&quot;this is the body&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">pack_ext</span>(<span class="ide">body</span><span class="op">.</span><span class="ide">len</span>, <span class="ide">exttype0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">write</span>(<span class="ide">body</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">#the same goes to bin format</span></div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">pack_bin</span>(<span class="ide">body</span><span class="op">.</span><span class="ide">len</span>)</div></div><div class="line"><div class="line-content"><span class="ide">s</span><span class="op">.</span><span class="ide">write</span>(<span class="ide">body</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ss</span> <span class="op">=</span> <span class="ide">MsgStream</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">s</span><span class="op">.</span><span class="ide">data</span>)</div></div><div class="line"><div class="line-content"><span class="com">#unpack_ext return tuple[exttype:uint8, len: int]</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">extype</span>, <span class="ide">extlen</span>) <span class="op">=</span> <span class="ide">ss</span><span class="op">.</span><span class="ide">unpack_ext</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">extbody</span> <span class="op">=</span> <span class="ide">ss</span><span class="op">.</span><span class="ide">readStr</span>(<span class="ide">extlen</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">extbody</span> <span class="op">==</span> <span class="ide">body</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">binlen</span> <span class="op">=</span> <span class="ide">ss</span><span class="op">.</span><span class="ide">unpack_bin</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">binbody</span> <span class="op">=</span> <span class="ide">ss</span><span class="op">.</span><span class="ide">readStr</span>(<span class="ide">binlen</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">binbody</span> <span class="op">==</span> <span class="ide">body</span></div></div>  </code></pre>
+<h2>stringify</h2>
+<p>you can convert msgpack data to readable string using stringify function</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">Horse</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">legs</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">speed</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">      <span class="ide">color</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">      <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">cc</span> <span class="op">=</span> <span class="ide">Horse</span>(<span class="ide">legs</span>:<span class="num">4</span>, <span class="ide">speed</span>:<span class="num">150</span>, <span class="ide">color</span>:<span class="str">&quot;black&quot;</span>, <span class="ide">name</span>:<span class="str">&quot;stallion&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">zz</span> <span class="op">=</span> <span class="ide">pack</span>(<span class="ide">cc</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">stringify</span>(<span class="ide">zz</span>)</div></div>  </code></pre>
+<p>the result will be:</p>
+<pre>  <code class="language-json">default:
+[ 4, 150, &quot;black&quot;, &quot;stallion&quot; ]
+
+msgpack_obj_to_map defined:
+{ &quot;legs&quot; : 4, &quot;speed&quot; : 150, &quot;color&quot; : &quot;black&quot;, &quot;name&quot; : &quot;stallion&quot; }
+
+msgpack_obj_to_stream defined:
+4 150 &quot;black&quot; &quot;stallion&quot;
+</code></pre>
+<h2>toAny</h2>
+<p><strong>toAny</strong> takes a string of msgpack data or a stream, then it will produce <strong>msgAny</strong>
+which you can interrogate of it&apos;s  type and value during runtime by accessing it&apos;s member <strong>kind</strong></p>
+<p><strong>toAny</strong> recognize all valid msgpack message and translate it into a group of types:</p>
+<pre>  <code>msgMap, msgArray, msgString, msgBool,
+msgBin, msgExt, msgFloat32, msgFloat64,
+msgInt, msgUint, msgNull
+</code></pre>
+<p>for example, <strong>msg</strong> is a <em>msgpack</em> data with content [1, &quot;hello&quot;, {&quot;a&quot;: &quot;b&quot;}], you can interrogate it like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">msg</span><span class="op">.</span><span class="ide">toAny</span>()</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">msgArray</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">arrayVal</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">msgInt</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">arrayVal</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">intVal</span> <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">arrayVal</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">msgString</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">arrayVal</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">stringVal</span> <span class="op">==</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">arrayVal</span>[<span class="num">2</span>]<span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">msgMap</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">a</span>[<span class="num">2</span>]</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">c</span>[<span class="ide">anyString</span>(<span class="str">&quot;a&quot;</span>)] <span class="op">==</span> <span class="ide">anyString</span>(<span class="str">&quot;b&quot;</span>)</div></div>  </code></pre>
+<p>since version 0.2.1, toAny was put into separate module <code>msgpack2any</code>,
+it has functionality similar with json, with support of msgpack bin and ext natively</p>
+<p>msgpack2any also support pretty printing similar with json pretty printing.</p>
+<p>Primary usage for msgpack2any is to provide higher level API while dynamically querying underlying msgpack data at runtime.
+Currently, msgpack2any decode all msgpack stream at once. There are room for improvements such as progressive decoding at
+runtime, or selective decoding at runtime. Both of this improvements are not implemented, yet they are important for applications
+that need for finer control over decoding step.</p>
+<h2>JSON</h2>
+<p>Start version 0.2.0, msgpack4nim receive additional family member, <code>msgpack2json</code> module.
+It consists of <code>toJsonNode</code> and <code>fromJsonNode</code> to interact with stdlib&apos;s json module.</p>
+<h2>Installation via nimble</h2>
+<blockquote>
+<p>nimble install msgpack4nim</p>
+</blockquote>
+<h2>Implementation specific</h2>
+<blockquote>
+<p>If an object can be represented in multiple possible output formats,
+serializers SHOULD use the format which represents the data in the smallest number of bytes.</p>
+</blockquote>
+<p>According to the spec, the serializer should use smallest number of bytes, and this behavior
+is implemented in msgpack4nim. Therefore, some valid encoding would never produced by msgpack4nim.</p>
+<p>For example: although 0xcdff00 and 0xceff000000 encoding is valid according to the spec which is decoded into positive integer 255,
+msgpack4nim never produce it, because the internal algorithm will select the smallest number of bytes needed, which is 0xccff.</p>
+<p>However, if msgpack4nim received encoded streams from other msgpack library contains those longer than needed sequence, as long as
+it conforms to the spec, msgpack4nim will happily decoded it and convert it to the destination storage(variable) type.</p>
+<p>Other msgpack library who consume msgpack4nim stream, will also decode it properly, although they might not produce smallest number
+of bytes required.</p>
+<p>enjoy it, happy nim-ing</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/jangko/msgpack4nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

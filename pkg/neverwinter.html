@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">neverwinter</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nwn</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">neverwinternights</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">neverwinter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">game</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">bioware</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">fileformats</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">reader</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">writer</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Neverwinter Nights 1 data accessor library")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install neverwinter" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>neverwinter.nim</h1>
+<p>This is a nim-lang library and utility collection to read and write data files used
+by Neverwinter Nights 1.  It&apos;s for you if you don&apos;t have the patience for C, are
+unreasonably scared of modern C++, don&apos;t like Java, and Ruby is too slow!</p>
+<p>This README has two parts. First the utilties are explained, then the data library.</p>
+<h1>Utilities</h1>
+<p>nim tools for nwn development.  Build it, and they will come, they said.
+On the other hand:  Good things are built with tools, but great things are built
+with great tools.</p>
+<p>Thus, If you are in need of a specific utility to solve a problem you are facing,
+please open a ticket or contact me directly, and we will try to find a solution for
+you.</p>
+<p>This suite is meant to eventually grow into a complete NWN toolkit that anyone,
+be it dev or community member, can use.  They must be available on ALL supported
+platforms and work on all of them equally well.</p>
+<h2>Tools provided</h2>
+<ul>
+<li><code>nwn_gff</code>: Transforms gff data to/from various formats, extract/embed SQLite.</li>
+<li><code>nwn_erf</code>: Un/pack erf files.</li>
+<li><code>nwn_tlk</code>: Transforms tlk tables from/to various formats.</li>
+<li><code>nwn_twoda</code>: Transforms 2da files from/to various formats.</li>
+<li><code>nwn_key_pack, nwn_key_unpack</code>: Un/packs a keyfile into/from a directory structure.</li>
+<li><code>nwn_key_shadows</code>: Get data on file shadowing in a list of key files.</li>
+<li><code>nwn_key_transparent</code>: Get data on file duplication in a list of key files.</li>
+<li><code>nwn_resman_stats</code>: Get data on what is in a resman view.</li>
+<li><code>nwn_resman_grep</code>: Grep a resman view for data.</li>
+<li><code>nwn_resman_extract</code>: Pull files from resman into directory.</li>
+<li><code>nwn_resman_cat</code>: Pull file(s) from resman and pipe them to stdout.</li>
+<li><code>nwn_resman_diff</code>: Diffs two resman views (for language support).</li>
+<li><code>nwn_resman_pkgsrv</code>: Repackage a resman view suitable for docker deployment.</li>
+<li><code>nwn_net</code>: A utility providing some network-related helpers, like querying servers.</li>
+<li><code>nwn_erf_tlkify</code>: Refactor strings in a erf into a exisiting or new tlk.</li>
+<li><code>nwn_sff</code>: Convert SSF files to/from csv.</li>
+<li><code>nwn_compressedbuf</code>: De/compress NWCompressedBuf payloads.</li>
+<li><code>nwn_asm</code>: Utility to deal with nwscript assembly.</li>
+</ul>
+<p>All utilities write their working output to stdout, and any library- or tool-
+related logging goes to stderr.  You can turn on debug logging with <code>--verbose</code>,
+and turn off all logging except errors with <code>--quiet</code>.</p>
+<p>For detailed documentation, please see their source files in <code>src/</code>: They have
+a documentation header right at the top.</p>
+<h3>Philosophy</h3>
+<p>Most of these utilities embed a complete resman.  The general idea is NOT to
+operate on single file formats.  Instead, they all utilise the underlying resman
+implementation from the neverwinter library included in this repository.</p>
+<p>For example, if you want to get statistics about a key file, you do not unpack it:
+Instead, you use <code>nwn_resman_stats</code> and tell it to only load the key file you are
+interested in.</p>
+<h2>Just static binaries please</h2>
+<p>Binary releases are available on the Github Releases page of this project. You do
+not need to install anything else.</p>
+<h2>Install for library use</h2>
+<ul>
+<li>
+<p>Install nim 0.20.0 or greater, have it on PATH and working. The best way to do this
+as of this writing is https://github.com/dom96/choosenim, which will install it
+for your user on Linux/OSX, and on Windows will even pull in the required compiler
+and package manager.</p>
+</li>
+<li>
+<p>Run <code>nimble install neverwinter</code>.</p>
+</li>
+<li>
+<p>This will also compile the binaries into your nimble PATH.</p>
+</li>
+</ul>
+<h2>Build from scratch</h2>
+<ul>
+<li>
+<p>Clone this repository: <code>git clone https://github.com/niv/neverwinter.nim</code></p>
+</li>
+<li>
+<p>Switch to it and run <code>nimble build  -d:release</code>.
+This will build release binaries into <code>bin</code>.</p>
+</li>
+<li>
+<p>To update the whole package, run <code>git pull --tags</code> and build again.</p>
+</li>
+<li>
+<p>Optional: Add <code>bin</code> to your PATH, so you can call them
+from everywhere.  All utilities are prefixed with <code>nwn_</code> so you can just tab-
+complete your way to happiness.</p>
+</li>
+<li>
+<p>All utilities have a help page. Just pass <code>-h</code> as the only argument.</p>
+</li>
+</ul>
+<h2>Debugging</h2>
+<p>If there&apos;s issues, build the binaries in debug mode (nim build builds release
+binaries) to help find issues.  If you have trouble, email me.</p>
+<p>If debug mode is too slow, add <code>--lineTrace:on --stackTrace:on</code> to at least
+get good backtraces.</p>
+<h1>Library</h1>
+<h2>import neverwinter.gff</h2>
+<p>A fully-featured gff reader and writer, that can work both in gobble-all mode or in streaming mode.  It supports all known data types and has been battle-tested through fuzzing, so it should be perfectly safe to pass user input to it.</p>
+<p>It has a nice, fluid API to it that transparently maps native data types to GFF fields.  Please see the generated docs for details.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">gff</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># GffRoot is like a GffStruct</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">root</span>: <span class="ide">GffRoot</span> <span class="op">=</span> <span class="ide">openFileStream</span>(<span class="ide">paramStr</span>(<span class="num">1</span>))<span class="op">.</span><span class="ide">readGffRoot</span>(<span class="ide">true</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">root</span>[<span class="str">&quot;Str&quot;</span>, <span class="ide">byte</span>]</div></div><div class="line"><div class="line-content"><span class="ide">root</span>[<span class="str">&quot;Str&quot;</span>, <span class="ide">byte</span>] <span class="op">=</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"><span class="ide">openFileStream</span>(<span class="str">&quot;out.gff&quot;</span>)<span class="op">.</span><span class="ide">write</span>(<span class="ide">root</span>)</div></div>  </code></pre>
+<h2>import neverwinter.gffjson</h2>
+<p>gff&lt;-&gt;json transformation helpers.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">gff</span>, <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">gffjson</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">root</span>: <span class="ide">GffRoot</span> <span class="op">=</span> <span class="ide">openFileStream</span>(<span class="ide">paramStr</span>(<span class="num">1</span>))<span class="op">.</span><span class="ide">readGffRoot</span>(<span class="ide">false</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">json</span>: <span class="ide">JSONNode</span> <span class="op">=</span> <span class="ide">someRoot</span><span class="op">.</span><span class="ide">toJson</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">root2</span> <span class="op">=</span> <span class="ide">s</span><span class="op">.</span><span class="ide">gffRootFromJson</span>()</div></div>  </code></pre>
+<h2>import neverwinter.resman</h2>
+<p>A eventually-fully-featured resman implementation that works just like the one in the game.  You can stack compatible containers into it (key, erf, directories, ..) or just write your own.</p>
+<p>Also includes helpers to identify resources (ResRef) and a streaming API to read data out of those containers (Res).</p>
+<p>Also also includes a rather experimental, builtin weighted LRU cache that will feather off multiple reads to the same resource.</p>
+<h2>import neverwinter.key, neverwinter.erf, neverwinter.resdir, neverwinter.resfile, neverwinter.resmemfile</h2>
+<p>.key/.bif/.erf/override-style readonly support, to be used together with resman.  Fuzz-tested to catch the biggest snafus.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">resman</span>, <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">key</span>, <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">resref</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">resman</span><span class="op">.</span><span class="ide">newResMan</span>(<span class="num">100</span>) <span class="com">#100MB of in-memory cache for requests</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">f</span> <span class="kwd">in</span> [<span class="str">&quot;chitin&quot;</span>, <span class="str">&quot;xp1&quot;</span>, <span class="str">&quot;xp1patch&quot;</span>, <span class="str">&quot;xp2&quot;</span>, <span class="str">&quot;xp2patch&quot;</span>, <span class="str">&quot;xp3&quot;</span>]:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">keyTable</span> <span class="op">=</span> <span class="ide">openFileStream</span>(<span class="ide">f</span> <span class="op">&amp;</span> <span class="str">&quot;.key&quot;</span>)<span class="op">.</span><span class="ide">readKeyTable</span>(<span class="ide">f</span>) <span class="kwd">do</span> (<span class="ide">bifFn</span>: <span class="ide">string</span>) <span class="op">-&gt;</span> <span class="ide">Stream</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">doAssert</span>(<span class="ide">fileExists</span>(<span class="ide">bifFn</span>), <span class="str">&quot;key file asks for &quot;</span> <span class="op">&amp;</span> <span class="ide">bifFn</span> <span class="op">&amp;</span> <span class="str">&quot;, but not found&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">openFileStream</span>(<span class="ide">bifFn</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">r</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">keyTable</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">openFileStream</span>(<span class="str">&quot;my.erf&quot;</span>)<span class="op">.</span><span class="ide">readErf</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">resdir</span><span class="op">.</span><span class="ide">newResDir</span>(<span class="str">&quot;./override/&quot;</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">resdir</span><span class="op">.</span><span class="ide">newResFile</span>(<span class="str">&quot;./dialog.tlk&quot;</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">resdir</span><span class="op">.</span><span class="ide">newResMemFile</span>(<span class="ide">newStringStream</span>(<span class="str">&quot;khaaaaaaan&quot;</span>), <span class="str">&quot;test.txt&quot;</span><span class="str">&quot;))</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">r</span>[<span class="str">&quot;nwscript.nss&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">r</span><span class="op">.</span><span class="ide">isSome</span>: <span class="ide">echo</span> <span class="ide">r</span><span class="op">.</span><span class="ide">get</span>()<span class="op">.</span><span class="ide">readAll</span>()</div></div>  </code></pre>
+<h2>import neverwinter.twoda</h2>
+<p>A simple twoda parser/writer.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">twoda</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">openFileStream</span>(<span class="str">&quot;appearance.2da&quot;</span>)<span class="op">.</span><span class="ide">readTwoDA</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">app</span>[<span class="num">5</span>][<span class="str">&quot;Race&quot;</span>] <span class="com"># lookups are case-insensitive</span></div></div><div class="line"><div class="line-content"><span class="ide">openFileStream</span>(<span class="ide">stdout</span>)<span class="op">.</span><span class="ide">write</span>(<span class="ide">app</span>)</div></div>  </code></pre>
+<h2>import neverwinter.tlk</h2>
+<p>A tlk file reader. It&apos;s using a LRU cache to theoretically speed up access.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">resman</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neverwinter</span><span class="op">.</span><span class="ide">tlk</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rs</span> <span class="op">=</span> <span class="ide">newResMan</span>()</div></div><div class="line"><div class="line-content"><span class="ide">rs</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">newResFile</span>(<span class="str">&quot;dialog.tlk&quot;</span>))</div></div><div class="line"><div class="line-content"><span class="ide">rs</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">newResFile</span>(<span class="str">&quot;dialogf.tlk&quot;</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">dlg</span> <span class="op">=</span> <span class="ide">newTlk</span>(<span class="op">@</span>[</div></div><div class="line"><div class="line-content">  (<span class="ide">rs</span>[<span class="str">&quot;dialog.tlk&quot;</span>]<span class="op">.</span><span class="ide">get</span>(), <span class="ide">rs</span>[<span class="str">&quot;dialogf.tlk&quot;</span>]<span class="op">.</span><span class="ide">get</span>())</div></div><div class="line"><div class="line-content">])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">dlg</span>[<span class="num">5</span>, <span class="ide">gender</span> <span class="op">=</span> <span class="ide">Gender</span><span class="op">.</span><span class="ide">Female</span>]</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/niv/neverwinter.nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

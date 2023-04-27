@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimp</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">app</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">binary</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">package</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">manager</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cli</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimble</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A package manager that delegates to package authors")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimp" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Why <code>nimp</code> { pronounced like &quot;chimp&quot; and about as smart ;) }</h1>
+<p><code>nimp</code> arose from frustrations trying to get <code>nimble</code> maintainers to let package
+authors decide -- on just about everything (combined w/a resolution I have made
+to be a &quot;less abstract&quot; complainer).  Instead of trusting package authors to
+write a task that installs a binary executable, <code>nimble</code> tries to guess all it
+needs to do that.  This ends with second-guessing package authors too much &amp;
+making the whole problem harder.</p>
+<p>As one example, nimble wants both specific and suspect &quot;package structure&quot; and
+noisily complains when it does not get it.  It is suspect since 85% of <code>nimble</code>
+packages are pure source code libraries more akin to C++ template header libs or
+Pure Python <code>.py</code> files than to <code>.dll/.so</code> shared libs.  A natural layout of
+such compile-time import packages (single or multi-module) is <code>pkg/[modA.nim, modB.nim]</code>.  (This notation converts to Nim <code>import</code> notation via deleting the
+&quot;.nim&quot;.)  With this layout, usage by clients is <code>git clone</code> with an optional
+<code>--path</code> augmentation by <code>nim.cfg/config.nims</code>.  Without augmentation, one
+<code>--path</code> entry covers a whole hierarchy of deps via <code>import foo/bar</code>.  With
+augmentation, client code can simply <code>import bar</code> - unless it&apos;s likely to be
+ambiguous in which case they <code>import foo/bar</code>.</p>
+<p>Rather than support this simple mode of authorship/operation, <code>nimble</code> actively
+discourages it and makes various rules/abstractions about &quot;hybrid&quot; or not layout
+and so on.  Over 91% of packages (700/768) with <code>src/</code> have only one <code>.nim</code> file
+there.  Besides being none of <code>nimble</code>&apos;s business in the first place, it seems
+tilted toward rare executable and multi-module cases not common library cases.
+As seen in the final section, <code>src/</code> makes search path-based compatibility have
+occasional collisions.  Pushing <code>src/</code> and then &quot;reversing it&quot; at install time
+is thus worse than having no package manager at all for the vast majority of
+current packages.</p>
+<p>&quot;Guessing&quot; can also fail/be limited in many other ways.  There may be media file
+assets or any number of do-this-at-install time needs.  Package authors, not
+package managers, know the most about any number of other aspects of completing
+an install.  There is simply no guessing everything.  Any package manager should
+at least allow override of almost everything by the package.</p>
+<h1>So, how does <code>nimp</code> work?</h1>
+<p><code>nimp</code> needs nothing but the stdlib and the code is like 300 lines and is a real
+reference to how it works.  It is all very YAGNI.  The 20 second usage summary
+is to <code>nimp get lc nim c -d:release</code> and <code>nimp up</code> to <code>git pull</code> in all repos.
+Slightly more detail is available by running <code>nimp</code> with no arguments.</p>
+<p>As per &quot;Why&quot;, <code>nimp</code> assists but noes not constrain package authors &amp; installers
+in an &quot;open architecture&quot; way.  The present design is generated-if-missing
+NimScripts a package author can tune or replace outright as desired.  <code>nimp</code>
+doesn&apos;t over-write pre-existing scripts, giving package authors total control.
+{<code>nim.cfg --path</code> generation &amp; nimble-compatibility <code>src/</code> symlink garbage are
+arguably guesswork that could be profitably delegated to package authors with
+generated defaults..}</p>
+<p>Scripts are in <code>&lt;myPackage&gt;/&quot;pkg/&quot;</code> or <code>%/myPackage</code>.  There are &quot;hooks&quot; for the
+various package life cycle events.  <code>pkg/install.nims</code> compiles&amp;installs binary
+executables a package may contain.  The default generated <code>pkg/install.nims</code>
+allows adjusting the entire Nim compile line (e.g. <code>nim e pkg/install.nims nim-1.2.x cpp -d:danger ...</code>).  This is also propagated from the command
+parameters after <code>nimp get pkg [nim cpp ...]</code>.  So, users can say <code>nimp get lc nim-1.3.7 c -d:danger --gc:arc</code>, for example.</p>
+<p>These hook scripts could be &quot;tasks&quot;, but having separate files simplifies life.
+Every tool to list/diff/patch/manage versions of/etc. for files carries over.
+Rather than &quot;custom tasks&quot; you just add a new script.  Rather than a new package
+manager command to list tasks, users can just list files in <code>pkg/</code>.  A simple
+<code>pkg/test.nim</code> convention, like that generated by <code>nimp init</code>, fills the hole of
+the <code>nimble</code> &quot;test&quot; task.  The only &quot;standardization&quot; needed is a name and how
+to invoke it.  <code>nim e</code> or <code>nim r</code> on real files are as good as nimble tasks.</p>
+<p><code>nimp</code> tries for no mandates.  If you like <code>nake</code>, <code>cmake</code>, <code>scons</code>, etc., call
+it from the installer script.  <code>pkg/install.nims</code> need have just one line to
+<code>exec &quot;make -f ../Makefile&quot;</code> or some such.  You don&apos;t <em>have</em> to propagate such
+full-nim-compile-line parameters (although users may complain if you do not).</p>
+<p>There are other hook scripts.  Right now I use them to fix dependency packages:
+<code>pkg/post_checkout.nims</code>, <code>pkg/pre_pull.nims</code>, <code>pkg/post_pull.nims</code>.  These let
+non-package-maintainers &quot;massage&quot; imperfect packages to be more compliant with
+an installed package set.  For example, I have had a tiny patch I keep against
+@alaviss &apos;s <code>nim.nvim</code> package.  With a patch file, and simple NimScripts, I
+allow <code>nimp up</code> to reverse my patch, <code>git pull</code>, &amp; re-apply my patch, allowing
+me to stay up-to-date-but-for-my-patch.  One can also use these to make
+otherwise <code>nimp</code>-uninstallable packages work fine as per the next section.</p>
+<p>As evident from <code>nim.nvim</code> above, <code>nimp get|up</code> also work on <em>non-Nim repos</em> &amp;
+URIs not in <code>packages.json</code>.  <code>nimp u</code>  runs in parallel and is usually very
+fast (10 seconds to git pull <em>the whole Nimbleverse</em> on a fast network) and only
+emits output for things not up-to-date/failing.</p>
+<h1>How well does <code>nimp</code> work?</h1>
+<p><code>nimp</code> is still at a proof of concept stage. It may have numerous bugs/failings,
+but it works ok for me.  To test it, I cloned all clonable nimble packages in
+<code>packages.json</code> on 2020/10/04.  Then I tried to build (with a devel compiler)
+the 220 packages that with non-empty <code>nimble</code> <code>bin</code> directives.  With scripts
+under <code>&apos;%&apos;</code> in this repo, I could build all the same packages that <code>nimble</code>
+could also successfully install.  (But for <code>nimwc</code> which needs a fix to use the
+VC head of one if its deps.)  I also tried it against the <code>nimx</code> library
+package which has complex &amp; non-nimble deps and <code>nimterop</code>, depended upon for
+code generation instead of depended upon for <code>import</code>.  No real problems.</p>
+<p>The <code>%</code> patches I had to do are basically all derived from needing deep <code>--path</code>
+settings to be backward compatible with awkward <code>src/</code> layouts nimble has long
+encouraged.  Were package qualification commonplace, they would likely not have
+been needed.  Only 6 packages of 159 have unqualified name collisions relevant
+for producing all the executables and require only minor tweaks.  Now, over 60
+packages of the 220 that have a <code>bin=</code> outright fail (likely due to Nim language
+evolution).  This ~6 package fix-up is actually 10x less the troubles one has
+with the ecosystem from staleness.  This is one way to quantify &quot;works ok&quot;.  I
+think about half of the 60 failures are just nim-devel vs. nim-1.2.0 things.</p>
+<p>I also realize this is a very partial test (only 15%!).  Compiling to a binary
+and searching for Error: was a simple, easy thing for me to run/test.  Note that
+the automated fix up style here means <code>nimp</code> users need not rely on any real
+approval from <em>anyone</em>..neither <code>nimble</code> nor dependency maintainers.  If you are
+a package-user who cannot persuade a package-maintainer to fix up an origin repo
+then I am happy to take PRs for <code>%</code> fix-up scripts.  Also, for the 85% that do
+not install binary executables, the install action is really just git clone.
+I did test <code>nimp dump req</code> on the entire Nimbleverse and it also worked fine
+and produced a nice dependency graph for me.  Oh, and I tested <code>nimp init</code>
+converting the single file script to a nimble package and <code>nimp publish</code> when
+publishing <code>nimp</code> itself, both of which worked fine. :)</p>
+<p>At present there seems little need for <code>==</code> or <code>&lt;</code> version requirements -- the
+only time multiple installed versions become needed.  Earlier versions of Nim
+itself seem far more valuable (and are already supported by <code>nimp</code>).  <code>nimp</code> has
+some commented out code sketching how to provide a private hierarchy with
+whatever versions.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT/ISC
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/c-blake/nimp">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

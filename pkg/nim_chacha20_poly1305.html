@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nim_chacha20_poly1305</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">encryption</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">decryption</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">chacha20</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">poly1305</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">chacha20_poly1305</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">xchacha20_poly1305</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">aead</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("xchacha20_poly1305, chacha20, poly1305")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nim_chacha20_poly1305" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nim_chacha20_poly1305</h1>
+<p>A pure nim library implementing:</p>
+<ul>
+<li>Chacha20</li>
+<li>poly1305</li>
+<li>chacha20_poly1305</li>
+<li>xchacha20_poly1305</li>
+</ul>
+<h2>⚠️ This is WIP and needs review ⚠️</h2>
+<ul>
+<li>This project was created for learning.</li>
+<li>It needs to be reviewed and users should think &amp; review before using.</li>
+<li>Vunrable to side channel attacks on the POLY function</li>
+</ul>
+<h3>TODO</h3>
+<ul>
+<li>[x] chacha20
+<ul>
+<li>[x] quarter round</li>
+<li>[x] quarter rounds</li>
+<li>[x] inner block</li>
+<li>[x] add block</li>
+<li>[x] serialize block</li>
+<li>[x] chacha20_init</li>
+<li>[x] chacha_xor</li>
+</ul>
+</li>
+<li>[x] poly1305
+<ul>
+<li>[x] poly_pad</li>
+<li>[x] poly_init</li>
+<li>[x] poly_update</li>
+<li>[ ] poly_finalize -  don&apos;t need at the moment</li>
+</ul>
+</li>
+<li>[x] chacha20_poly1305
+<ul>
+<li>[x] chacha20_poly1305_encrypt</li>
+<li>[x] chacha20_poly1305_decrypt</li>
+<li>[ ] chacha20_poly1305_verify -  dont need atm</li>
+</ul>
+</li>
+<li>[x] xchacha20_poly1305
+<ul>
+<li>[x] hchacha20_init</li>
+<li>[x] hchacha20</li>
+</ul>
+</li>
+<li>[ ] streams</li>
+<li>[ ] factory that gives chacha(n) rounds</li>
+<li>[ ] add more test vectors</li>
+<li>[ ] make style more uniform</li>
+<li>[ ] add helpers byte[] &lt;-&gt; string &lt;-&gt; hex[]</li>
+<li>[ ] add runable examples?</li>
+</ul>
+<h3>Resources &amp; References</h3>
+<p>chacha20</p>
+<ul>
+<li>https://datatracker.ietf.org/doc/html/rfc7539</li>
+</ul>
+<p>note xchacha, as of 2022 still in draft</p>
+<ul>
+<li>https://datatracker.ietf.org/doc/html/draft-arciszewski-xchacha-03</li>
+<li>https://www.ietf.org/archive/id/draft-irtf-cfrg-xchacha-03.txt</li>
+</ul>
+<p>another chacha20 implementation:</p>
+<ul>
+<li>https://git.sr.ht/~ehmry/chacha20</li>
+</ul>
+<h2>Usage</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span>  <span class="ide">nim_chacha20_poly1305</span><span class="op">/</span>[<span class="ide">common</span>, <span class="ide">chacha20</span>, <span class="ide">poly1305</span>, <span class="ide">xchacha20_poly1305</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">export</span> <span class="ide">common</span></div></div><div class="line"><div class="line-content"><span class="kwd">export</span> <span class="ide">chacha20</span></div></div><div class="line"><div class="line-content"><span class="kwd">export</span> <span class="ide">poly1305</span></div></div><div class="line"><div class="line-content"><span class="kwd">export</span> <span class="ide">xchacha20_poly1305</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">sysrand</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span></div></div><div class="line"><div class="line-content">        <span class="ide">key_in</span>: <span class="ide">Key</span> <span class="op">=</span> [</div></div><div class="line"><div class="line-content">            <span class="num">0x80&apos;</span><span class="ide">u8</span>, <span class="num">0x81&apos;</span><span class="ide">u8</span>, <span class="num">0x82&apos;</span><span class="ide">u8</span>, <span class="num">0x83&apos;</span><span class="ide">u8</span>, <span class="num">0x84&apos;</span><span class="ide">u8</span>, <span class="num">0x85&apos;</span><span class="ide">u8</span>, <span class="num">0x86&apos;</span><span class="ide">u8</span>, <span class="num">0x87&apos;</span><span class="ide">u8</span>, <span class="num">0x88&apos;</span><span class="ide">u8</span>, <span class="num">0x89&apos;</span><span class="ide">u8</span>, <span class="num">0x8a&apos;</span><span class="ide">u8</span>, <span class="num">0x8b&apos;</span><span class="ide">u8</span>, <span class="num">0x8c&apos;</span><span class="ide">u8</span>, <span class="num">0x8d&apos;</span><span class="ide">u8</span>, <span class="num">0x8e&apos;</span><span class="ide">u8</span>, <span class="num">0x8f&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x90&apos;</span><span class="ide">u8</span>, <span class="num">0x91&apos;</span><span class="ide">u8</span>, <span class="num">0x92&apos;</span><span class="ide">u8</span>, <span class="num">0x93&apos;</span><span class="ide">u8</span>, <span class="num">0x94&apos;</span><span class="ide">u8</span>, <span class="num">0x95&apos;</span><span class="ide">u8</span>, <span class="num">0x96&apos;</span><span class="ide">u8</span>, <span class="num">0x97&apos;</span><span class="ide">u8</span>, <span class="num">0x98&apos;</span><span class="ide">u8</span>, <span class="num">0x99&apos;</span><span class="ide">u8</span>, <span class="num">0x9a&apos;</span><span class="ide">u8</span>, <span class="num">0x9b&apos;</span><span class="ide">u8</span>, <span class="num">0x9c&apos;</span><span class="ide">u8</span>, <span class="num">0x9d&apos;</span><span class="ide">u8</span>, <span class="num">0x9e&apos;</span><span class="ide">u8</span>, <span class="num">0x9f&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">        ]</div></div><div class="line"><div class="line-content">        <span class="ide">nonce_in</span>: <span class="ide">XNonce</span></div></div><div class="line"><div class="line-content">        <span class="ide">encrypt_counter</span>: <span class="ide">Counter</span></div></div><div class="line"><div class="line-content">        <span class="ide">decrypt_counter</span>: <span class="ide">Counter</span></div></div><div class="line"><div class="line-content">        <span class="com"># Ladies and Gentlemen of the class of &apos;99: If I could offer you only one tip for the future, sunscreen would be it.</span></div></div><div class="line"><div class="line-content">        <span class="ide">plain_data</span>: <span class="ide">array</span>[<span class="num">114</span>, <span class="ide">byte</span>] <span class="op">=</span> [</div></div><div class="line"><div class="line-content">            <span class="num">0x4c&apos;</span><span class="ide">u8</span>, <span class="num">0x61&apos;</span><span class="ide">u8</span>, <span class="num">0x64&apos;</span><span class="ide">u8</span>, <span class="num">0x69&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x73&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x61&apos;</span><span class="ide">u8</span>, <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x64&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x47&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x74&apos;</span><span class="ide">u8</span>, <span class="num">0x6c&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x6d&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x74&apos;</span><span class="ide">u8</span>, <span class="num">0x68&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x63&apos;</span><span class="ide">u8</span>, <span class="num">0x6c&apos;</span><span class="ide">u8</span>, <span class="num">0x61&apos;</span><span class="ide">u8</span>, <span class="num">0x73&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x73&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x27&apos;</span><span class="ide">u8</span>, <span class="num">0x39&apos;</span><span class="ide">u8</span>, <span class="num">0x39&apos;</span><span class="ide">u8</span>, <span class="num">0x3a&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x49&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x49&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x63&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x75&apos;</span><span class="ide">u8</span>, <span class="num">0x6c&apos;</span><span class="ide">u8</span>, <span class="num">0x64&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x72&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x79&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x75&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x6c&apos;</span><span class="ide">u8</span>, <span class="num">0x79&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x74&apos;</span><span class="ide">u8</span>, <span class="num">0x69&apos;</span><span class="ide">u8</span>, <span class="num">0x70&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x72&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x74&apos;</span><span class="ide">u8</span>, <span class="num">0x68&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x66&apos;</span><span class="ide">u8</span>, <span class="num">0x75&apos;</span><span class="ide">u8</span>, <span class="num">0x74&apos;</span><span class="ide">u8</span>, <span class="num">0x75&apos;</span><span class="ide">u8</span>, <span class="num">0x72&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x2c&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x73&apos;</span><span class="ide">u8</span>, <span class="num">0x75&apos;</span><span class="ide">u8</span>, <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x73&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x63&apos;</span><span class="ide">u8</span>, <span class="num">0x72&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x6e&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x77&apos;</span><span class="ide">u8</span>, <span class="num">0x6f&apos;</span><span class="ide">u8</span>, <span class="num">0x75&apos;</span><span class="ide">u8</span>, <span class="num">0x6c&apos;</span><span class="ide">u8</span>, <span class="num">0x64&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x62&apos;</span><span class="ide">u8</span>, <span class="num">0x65&apos;</span><span class="ide">u8</span>, <span class="num">0x20&apos;</span><span class="ide">u8</span>, <span class="num">0x69&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">            <span class="num">0x74&apos;</span><span class="ide">u8</span>, <span class="num">0x2e&apos;</span><span class="ide">u8</span></div></div><div class="line"><div class="line-content">        ]   </div></div><div class="line"><div class="line-content">        <span class="ide">auth_data_in</span> <span class="op">=</span> [</div></div><div class="line"><div class="line-content">            <span class="num">0x50&apos;</span><span class="ide">u8</span>, <span class="num">0x51&apos;</span><span class="ide">u8</span>, <span class="num">0x52&apos;</span><span class="ide">u8</span>, <span class="num">0x53&apos;</span><span class="ide">u8</span>, <span class="num">0xc0&apos;</span><span class="ide">u8</span>, <span class="num">0xc1&apos;</span><span class="ide">u8</span>, <span class="num">0xc2&apos;</span><span class="ide">u8</span>, <span class="num">0xc3&apos;</span><span class="ide">u8</span>, <span class="num">0xc4&apos;</span><span class="ide">u8</span>, <span class="num">0xc5&apos;</span><span class="ide">u8</span>, <span class="num">0xc6&apos;</span><span class="ide">u8</span>, <span class="num">0xc7&apos;</span><span class="ide">u8</span>,</div></div><div class="line"><div class="line-content">        ]</div></div><div class="line"><div class="line-content">        <span class="ide">cipher_data_decrypted</span>: <span class="ide">array</span>[<span class="num">114</span>, <span class="ide">byte</span>]</div></div><div class="line"><div class="line-content">        <span class="ide">tag_out</span>: <span class="ide">Tag</span></div></div><div class="line"><div class="line-content">        <span class="ide">tag_expected</span>: <span class="ide">Tag</span> </div></div><div class="line"><div class="line-content">        <span class="ide">cipher_data_expected</span>: <span class="ide">array</span>[<span class="num">114</span>, <span class="ide">byte</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">encrypt_counter</span> <span class="op">=</span> <span class="ide">decrypt_counter</span></div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">urandom</span>(<span class="ide">nonce_in</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">xchacha20_aead_poly1305_encrypt</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">key_in</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">nonce_in</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">encrypt_counter</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">auth_data_in</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">plain_data</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">cipher_data_expected</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">tag_expected</span></div></div><div class="line"><div class="line-content">    )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">xchacha20_aead_poly1305_decrypt</span>(</div></div><div class="line"><div class="line-content">        <span class="ide">key_in</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">nonce_in</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">decrypt_counter</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">auth_data_in</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">cipher_data_decrypted</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">cipher_data_expected</span>,</div></div><div class="line"><div class="line-content">        <span class="ide">tag_out</span></div></div><div class="line"><div class="line-content">    )</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">tag_out</span> <span class="op">!=</span> <span class="ide">tag_expected</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;MESSAGE IS POISONED&quot;</span></div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="op">$$$</span><span class="ide">cipher_data_decrypted</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">main</span>()</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/lantos-lgtm/nim_chacha20_poly1305">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

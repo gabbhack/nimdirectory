@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">mummy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">web</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">http</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">server</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">websockets</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Multithreaded HTTP + WebSocket server")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install mummy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Mummy</h1>
+<p>  <code>nimble install mummy</code></p>
+<p>  <img src="https://github.com/guzba/mummy/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/guzba/mummy">API reference</a></p>
+<p>Mummy is a multi-threaded HTTP 1.1 and WebSocket server written entirely in Nim.</p>
+<p>  <em>A return to the ancient ways of threads.</em></p>
+<p>Mummy has been written specifically to maximize the performance of your server hardware without compromising on programmer happiness.</p>
+<ul>
+<li>Supports HTTP keep-alive and gzip response compression automatically.</li>
+<li>Built-in first-class WebSocket support.</li>
+<li>Multiplexed socket IO without the <code>{.async.}</code> price.</li>
+</ul>
+<p>Mummy requires <code>--threads:on</code> and <code>--mm:orc</code> or <code>--mm:arc</code>.</p>
+<p>The Mummy name refers to <a href="docs/mummy.jpg">historical Egypt stuff</a>.</p>
+<h2>Sites using Mummy</h2>
+<ul>
+<li>
+<p><a href="https://nimdocs.com">NimDocs.com</a> - view the <a href="https://github.com/treeform/nimdocs/blob/master/src/nimdocs.nim">source code here</a></p>
+</li>
+<li>
+<p><a href="https://forum.nim-lang.org/t/9902">Mummy in Production #1</a> - 500+ HTTP requests per second on a small VM, very light use of CPU+RAM</p>
+</li>
+<li>
+<p><a href="https://forum.nim-lang.org/t/10066">Mummy in Production #2</a> - 100k concurrent WebSocket connections, room for 1M+</p>
+</li>
+</ul>
+<h2>How is Mummy different?</h2>
+<p>Mummy operates with this basic model: handle all socket IO on one thread and dispatch incoming HTTP requests and WebSocket events to a pool of worker threads. Your HTTP handlers probably won&apos;t even need to think about threads at all.</p>
+<p>This model has many great benefits and is ready to take advantage of continued server core count increases (AMD just announced a 96 core 192 thread server CPU!).</p>
+<h2>Why use Mummy instead of async?</h2>
+<ul>
+<li>
+<p>No more needing to use <code>{.async.}</code>, <code>Future[]</code>, <code>await</code> etc and deal with <a href="https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/">functions having colors</a>.</p>
+</li>
+<li>
+<p>Maintain the same excellent throughput of multiplexed nonblocking socket IO.</p>
+</li>
+<li>
+<p>No concern that one blocking or expensive call will stall your entire server.</p>
+</li>
+<li>
+<p>Async blocks on surprising things like DNS resolution and file reads which will stall all request handling.</p>
+</li>
+<li>
+<p>Simpler to write request handlers. Blocking the thread is totally fine! Need to make a Postgres query? No problem, just wait for the results.</p>
+</li>
+<li>
+<p>There is substantial advantage to writing simpler code vs theoretically fast but possibly convoluted and buggy code.</p>
+</li>
+<li>
+<p>Much simpler debugging. Async stack traces are huge and confusing.</p>
+</li>
+<li>
+<p>Easier error handling, just <code>try except</code> like you normally do. Uncaught exceptions in Mummy handlers also do not bring down your entire server.</p>
+</li>
+<li>
+<p>Mummy handles the threading and dispatch so your handlers may not need to think about threads at all.</p>
+</li>
+<li>
+<p>Takes advantage of multiple cores and the amazing work of the Nim team on ARC / ORC and Nim 2.0.</p>
+</li>
+</ul>
+<h2>Why prioritize WebSockets?</h2>
+<p>WebSockets are wonderful and can have substantial advantages over more traditional API paradigms like REST and various flavors of RPC.</p>
+<p>Unfortunately, most HTTP servers pretend WebSockets don&apos;t exist.</p>
+<p>This means developers need to hack support in through additional dependencies, hijacking connections etc and it all rarely adds up into something really great.</p>
+<p>I see no reason why Websockets should not work exceptionally well right out of the box, saving developers a lot of uncertainty and time researching which of the possible ways to wedge WebSocket support in to an HTTP server is &quot;best&quot;.</p>
+<h2>What is Mummy not great for?</h2>
+<p>Everything comes with trade-offs. Mummy is focused on being an exceptional API server. Think REST, JSON, RPC, WebSockets, HTML from templates etc.</p>
+<p>The property these share in common is they are all relatively memory-light. Most things are, which is great, but if you&apos;re specifically going to be serving a lot of very large files or expect large file uploads, Mummy is probably not the best choice unless your server has the RAM to handle the large files.</p>
+<p>Why is Mummy not great for large files? This is because Mummy dispatches fully received in-memory requests to worker threads and sends in-memory responses. This is great for everything except very large files.</p>
+<h2>Example HTTP server</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mummy</span>, <span class="ide">mummy</span><span class="op">/</span><span class="ide">routers</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexHandler</span>(<span class="ide">request</span>: <span class="ide">Request</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content">  <span class="ide">headers</span>[<span class="str">&quot;Content-Type&quot;</span>] <span class="op">=</span> <span class="str">&quot;text/plain&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">request</span><span class="op">.</span><span class="ide">respond</span>(<span class="num">200</span>, <span class="ide">headers</span>, <span class="str">&quot;Hello, World!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span>: <span class="ide">Router</span></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/&quot;</span>, <span class="ide">indexHandler</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newServer</span>(<span class="ide">router</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Serving on http://localhost:8080&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">8080</span>))</div></div>  </code></pre>
+<p>  <code>nim c --threads:on --mm:orc -r examples/basic_router.nim</code></p>
+<h2>Example WebSocket server</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mummy</span>, <span class="ide">mummy</span><span class="op">/</span><span class="ide">routers</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexHandler</span>(<span class="ide">request</span>: <span class="ide">Request</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content">  <span class="ide">headers</span>[<span class="str">&quot;Content-Type&quot;</span>] <span class="op">=</span> <span class="str">&quot;text/html&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">request</span><span class="op">.</span><span class="ide">respond</span>(<span class="num">200</span>, <span class="ide">headers</span>, """
+  <script>
+    var ws = new WebSocket("ws://localhost:8080/ws");
+    ws.onmessage = function (event) {
+      document.body.innerHTML = event.data;
+    };
+  </script>
+  """)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">upgradeHandler</span>(<span class="ide">request</span>: <span class="ide">Request</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">websocket</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">upgradeToWebSocket</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">websocket</span><span class="op">.</span><span class="ide">send</span>(<span class="str">&quot;Hello world from WebSocket!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">websocketHandler</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">websocket</span>: <span class="ide">WebSocket</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">event</span>: <span class="ide">WebSocketEvent</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">message</span>: <span class="ide">Message</span></div></div><div class="line"><div class="line-content">) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">event</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">OpenEvent</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">MessageEvent</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">message</span><span class="op">.</span><span class="ide">kind</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">message</span><span class="op">.</span><span class="ide">data</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">ErrorEvent</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">CloseEvent</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span>: <span class="ide">Router</span></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/&quot;</span>, <span class="ide">indexHandler</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;/ws&quot;</span>, <span class="ide">upgradeHandler</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newServer</span>(<span class="ide">router</span>, <span class="ide">websocketHandler</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Serving on http://localhost:8080&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">8080</span>))</div></div>  </code></pre>
+<p>See the examples/ folder for more sample code, including an example WebSocket chat server.</p>
+<p>  <code>nim c --threads:on --mm:orc -r examples/basic_websockets.nim</code></p>
+<h2>Performance</h2>
+<p>Benchmarking HTTP servers is a bit like benchmarking running shoes.</p>
+<p>Certainly, there are some terrible shoes to run in (heels, clogs, etc), but once you&apos;re in a reasonable pair of shoes it is the runner that&apos;s going to matter, not the shoes.</p>
+<p>In this analogy, the runner is what your handlers are actually doing and the shoes are the HTTP server choice.</p>
+<p>With that in mind, I suggest three priorities:</p>
+<ol>
+<li>
+<p>Ensure your HTTP server choice does not unnecessarily hamper performance.</p>
+</li>
+<li>
+<p>Avoid HTTP servers that have easy performance vulnerabilities.</p>
+</li>
+<li>
+<p>Prioritize what will enable you to write and maintain performant and reliable handlers.</p>
+</li>
+</ol>
+<p>I believe Mummy clears all three priorities:</p>
+<ol>
+<li>
+<p>Mummy prioritizes efficiency in receiving and dispatching incoming requests and sending outgoing responses. This means things like avoiding unnecessary memory copying, ensuring the CPU spends all of its time in your handlers.</p>
+</li>
+<li>
+<p>Because Mummy uses multiplexed IO just like async, Mummy is not vulnerable to attacks like low-and-slow which traditionally multi-threaded servers are vulnerable to. Additionally, while a single blocking or CPU heavy operation can stall an entire async server, this is not a problem for Mummy.</p>
+</li>
+<li>
+<p>Request handlers with Mummy are just plain-old inline Nim code. They have a straightforward request-in-response-out API. Keeping things simple is great for maintenance, reliability and performance.</p>
+</li>
+</ol>
+<h2>Benchmarks</h2>
+<p>Benchmarking was done on an Ubuntu 22.04 server with a 4 core / 8 thread CPU.</p>
+<p>The tests/wrk_ servers that are being benchmarked attempt to simulate requests that take ~10ms to complete.</p>
+<p>All benchmarks were tested by:</p>
+<p>  <code>wrk -t10 -c100 -d10s http://localhost:8080</code></p>
+<p>The exact commands for each server are:</p>
+<h3>Mummy</h3>
+<p>  <code>nim c --mm:orc --threads:on -d:release -r tests/wrk_mummy.nim</code></p>
+<p>Requests/sec: 9,547.56</p>
+<h3>AsyncHttpServer</h3>
+<p>  <code>nim c --mm:orc --threads:off -d:release -r tests/wrk_asynchttpserver.nim</code></p>
+<p>Requests/sec: 7,979.67</p>
+<h3>HttpBeast</h3>
+<p>  <code>nim c --mm:orc --threads:on -d:release -r tests/wrk_httpbeast.nim</code></p>
+<p>Requests/sec: 9,862.00</p>
+<h3>Jester</h3>
+<p>  <code>nim c --mm:orc --threads:off -d:release -r tests/wrk_jester.nim</code></p>
+<p>Requests/sec: 9,692.81</p>
+<h3>Prologue</h3>
+<p>  <code>nim c --mm:orc --threads:off -d:release -r tests/wrk_prologue.nim</code></p>
+<p>Requests/sec: 9,749.22</p>
+<h3>NodeJS</h3>
+<p>  <code>node tests/wrk_node.js</code></p>
+<p>Requests/sec:   8,544.60</p>
+<h3>Go</h3>
+<p>  <code>go run tests/wrk_go.go</code></p>
+<p>Requests/sec:   9,171.55</p>
+<h2>Testing</h2>
+<p>A fuzzer has been run against Mummy&apos;s socket reading and parsing code to ensure Mummy does not crash or otherwise misbehave on bad data from sockets. You can run the fuzzer any time by running <code>nim c -r tests/fuzz_recv.nim</code>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/guzba/mummy">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

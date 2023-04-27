@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimongo</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mongo</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mongodb</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">database</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">server</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">driver</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">storage</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("MongoDB driver in pure Nim language with synchronous and asynchronous I/O support")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimongo" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nimongo - Pure Nim MongoDB Driver <a href="https://travis-ci.org/SSPkrolik/nimongo">  <img src="https://travis-ci.org/SSPkrolik/nimongo.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a> <a href="https://github.com/yglukhov/nimble-tag">  <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" /></a></h1>
+<p><code>nimongo</code> has a main intention to provide developer-friendly way to interact
+with MongoDB using Nim programming language without any other dependencies.</p>
+<p>You can find a table of supported features at the bottom of the document.</p>
+<p><code>nimongo</code> is tested on MongoDB <code>3.x.x</code> and <code>4.0.x</code> versions with GCC and MSVS2017 compiler backends and the latest stable version of Nim (0.19.0).</p>
+<h2>Installation</h2>
+<p>You can use <code>nimble</code> package manager to install <code>nimongo</code>. The most recent
+version of the library can be installed like this:</p>
+<pre>  <code class="language-bash">$ nimble install nimongo
+</code></pre>
+<p>or directly from Git repo:</p>
+<pre>  <code class="language-bash">$ nimble install https://github.com/SSPkrolik/nimongo.git
+</code></pre>
+<h2>Current status (briefly)</h2>
+<p>Currently <code>nimongo.mongo</code> implements connection to single MongoDB server, and
+support for most widely used queries (whole CRUD with some exceptions),</p>
+<p><code>nimongo.bson</code> gives full support of current BSON specification. As for
+performance, it is comparable with <code>pymongo</code> Python driver on rough timeit-style
+tests.</p>
+<h2>Usage of synchronous client</h2>
+<p><code>nimongo.mongo.Mongo</code> synchronous client perform interaction with MongoDB
+over network using sockets and <strong>blocking</strong> I/O which stops the thread it is
+used on from executing while MongoDB operation is not finished: either data
+is sent over network (<em>insert</em>, <em>update</em>, <em>remove</em>), or query (<em>find</em>) is done,
+and answer (or portion of it) is waited for.</p>
+<p>Mongo synchronous client is <strong>thread-safe</strong>. It uses simple <code>Lock</code> when
+executing commands and queries.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">oids</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimongo</span><span class="op">.</span><span class="ide">bson</span>  <span class="com">## MongoDB BSON serialization/deserialization</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimongo</span><span class="op">.</span><span class="ide">mongo</span> <span class="com">## MongoDB client</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Create new Mongo client</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">m</span> <span class="op">=</span> <span class="ide">newMongo</span>()<span class="op">.</span><span class="ide">slaveOk</span>(<span class="ide">true</span>)<span class="op">.</span><span class="ide">allowPartial</span>(<span class="ide">false</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Connect to Mongo server</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">connectResult</span> <span class="op">=</span> <span class="ide">m</span><span class="op">.</span><span class="ide">connect</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Specify collection</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">collection</span> <span class="op">=</span> <span class="ide">m</span>[<span class="str">&quot;db&quot;</span>][<span class="str">&quot;collectionName&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Create new bson document</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">doc</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span></div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Insert document into DB</span></div></div><div class="line"><div class="line-content"><span class="ide">collection</span><span class="op">.</span><span class="ide">insert</span>(<span class="ide">doc</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Update [single] document</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">reply</span> <span class="op">=</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">update</span>(<span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span></div></div><div class="line"><div class="line-content">}, <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="str">&quot;$set&quot;</span>: {</div></div><div class="line"><div class="line-content">    <span class="str">&quot;surname&quot;</span>: <span class="str">&quot;Smith&quot;</span></div></div><div class="line"><div class="line-content">  }</div></div><div class="line"><div class="line-content">})</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Check command execution status</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">reply</span><span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Modified a document.&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Delete multiple documents</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">removeResult</span> <span class="op">=</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">remove</span>(<span class="op">%*</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>})</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Check how many documents were removed</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">removeResult</span><span class="op">.</span><span class="ide">ok</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Removed &quot;</span>, <span class="ide">removeResult</span><span class="op">.</span><span class="ide">n</span>, <span class="str">&quot; documents.&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Delete single document</span></div></div><div class="line"><div class="line-content"><span class="ide">collection</span><span class="op">.</span><span class="ide">remove</span>(<span class="op">%</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>}, <span class="ide">limit</span><span class="op">=</span><span class="num">1</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Delete collection</span></div></div><div class="line"><div class="line-content"><span class="ide">collection</span><span class="op">.</span><span class="ide">drop</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Delete single document</span></div></div><div class="line"><div class="line-content"><span class="ide">collection</span><span class="op">.</span><span class="ide">remove</span>(<span class="op">%</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>}, <span class="ide">limit</span><span class="op">=</span><span class="num">1</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Fetch number of documents in collection</span></div></div><div class="line"><div class="line-content"><span class="ide">collection</span><span class="op">.</span><span class="ide">count</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Fetch number of documents in query</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tally</span> <span class="op">=</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">find</span>(<span class="op">%*</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>})<span class="op">.</span><span class="ide">count</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Fetch one document from DB returning only one field: &quot;name&quot;.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">fetched</span> <span class="op">=</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">find</span>(<span class="op">%*</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>}, <span class="op">@</span>[<span class="str">&quot;name&quot;</span>])<span class="op">.</span><span class="ide">one</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Fetch all matching documents from DB receiving seq[Bson]</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">documents</span> <span class="op">=</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">find</span>(<span class="op">%*</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>})<span class="op">.</span><span class="ide">all</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Fetch all matching documents as a iterator</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">document</span> <span class="kwd">in</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">find</span>(<span class="op">%*</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>})<span class="op">.</span><span class="ide">items</span>():</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">document</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Force cursor to return only distinct documents by specified field.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">documents</span> <span class="op">=</span> <span class="ide">collection</span><span class="op">.</span><span class="ide">find</span>(<span class="op">%*</span>{<span class="str">&quot;name&quot;</span>: <span class="str">&quot;John&quot;</span>})<span class="op">.</span><span class="ide">unique</span>(<span class="str">&quot;name&quot;</span>)<span class="op">.</span><span class="ide">all</span>()</div></div>  </code></pre>
+<h2>Usage of async client</h2>
+<p><code>nimongo.mongo.Mongo</code> can also work in an asynchronous mode based on
+<code>ayncdispatch</code> standard async mechanisms, and <code>asyncnet.AsyncSocket</code> sockets. It
+performs non-blocking I/O via <code>{.async.}</code> procedures.</p>
+<p>Mongo async client is <strong>thread-safe</strong>. It uses simple <code>Lock</code> when
+executing commands and queries.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asyncdispatch</span>  <span class="com">## Nim async-supportive functions here</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">oids</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimongo</span><span class="op">.</span><span class="ide">bson</span>   <span class="com">## MongoDB BSON serialization/deserialization</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimongo</span><span class="op">.</span><span class="ide">mongo</span>  <span class="com">## MongoDB client</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Create new Mongo client</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">m</span>: <span class="ide">AsyncMongo</span> <span class="op">=</span> <span class="ide">newAsyncMongo</span>()<span class="op">.</span><span class="ide">slaveOk</span>(<span class="ide">false</span>)  <span class="com">## Still Mongo type</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Connect to Mongo server with asynchronous socket</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">connected</span> <span class="op">=</span> <span class="ide">waitFor</span>(<span class="ide">m</span><span class="op">.</span><span class="ide">connect</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Testing connection establishing result</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Async connection established: &quot;</span>, <span class="ide">connected</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Inserting single document into MongoDB</span></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span>(<span class="ide">m</span><span class="op">.</span><span class="ide">insert</span>(<span class="ide">B</span>(<span class="str">&quot;hello-async&quot;</span>, <span class="str">&quot;victory&quot;</span>)))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Inserting multiple documents into MongoDB</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">doc1</span> <span class="op">=</span> <span class="op">%*</span>{<span class="str">&quot;doc1&quot;</span>: <span class="num">15</span>}</div></div><div class="line"><div class="line-content">  <span class="ide">doc2</span> <span class="op">=</span> <span class="op">%*</span>{<span class="str">&quot;doc2&quot;</span>: <span class="str">&quot;string&quot;</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span>(<span class="ide">m</span><span class="op">.</span><span class="ide">insert</span>(<span class="op">@</span>[<span class="ide">doc1</span>, <span class="ide">doc2</span>]))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Removing single document from MongoDB</span></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span>(<span class="ide">m</span><span class="op">.</span><span class="ide">remove</span>(<span class="ide">B</span>(<span class="str">&quot;doc1&quot;</span>, <span class="num">15</span>), <span class="ide">limit</span><span class="op">=</span><span class="num">1</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">## Removing multiple documents from MongoDB</span></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span>(<span class="ide">m</span><span class="op">.</span><span class="ide">remove</span>(<span class="ide">B</span>(<span class="str">&quot;doc1&quot;</span>, <span class="num">15</span>)))</div></div>  </code></pre>
+<h1>Currently Supported Features</h1>
+<p>Here&apos;s a list of supported features with appropriate status icons:</p>
+<ul>
+<li>:white_check_mark: - implemented feature</li>
+<li>:red_circle: - <strong>not</strong> implemented feature</li>
+<li>:warning: - <strong>partly</strong> supported or <strong>unstable</strong></li>
+</ul>
+<h2>BSON</h2>
+<p><code>nimongo.bson</code> module implements full BSON specification, and includes means
+for developer-friendly BSON creation, modification, serialization and
+deserialization.</p>
+<p>You can user either <strong>B(...)</strong> template or <strong>  <code>%*</code></strong> for documents creation
+depending on what is more convenient for you.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">doc</span> <span class="op">=</span> <span class="ide">B</span>(<span class="str">&quot;name&quot;</span>, <span class="str">&quot;John&quot;</span>)(<span class="str">&quot;surname&quot;</span>, <span class="str">&quot;Smith&quot;</span>)(<span class="str">&quot;salary&quot;</span>, <span class="num">100</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">doc2</span> <span class="op">=</span> <span class="ide">B</span>(</div></div><div class="line"><div class="line-content">    <span class="str">&quot;name&quot;</span>, <span class="str">&quot;Sam&quot;</span>)(</div></div><div class="line"><div class="line-content">    <span class="str">&quot;surname&quot;</span>, <span class="str">&quot;Uncle&quot;</span>)(</div></div><div class="line"><div class="line-content">    <span class="str">&quot;salary&quot;</span>, <span class="num">1000</span>)(</div></div><div class="line"><div class="line-content">    <span class="str">&quot;skills&quot;</span>, <span class="op">@</span>[<span class="str">&quot;power&quot;</span>, <span class="str">&quot;government&quot;</span>, <span class="str">&quot;army&quot;</span>]</div></div><div class="line"><div class="line-content">    )</div></div>  </code></pre>
+<h2>Authentication</h2>
+<p><code>nimongo</code> supports the new SCRAM-SHA-1 challenge-response user authentication mechanism</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">db</span>: <span class="ide">Database</span>[<span class="ide">Mongo</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">db</span> <span class="op">=</span> <span class="ide">newMongoDatabase</span>(<span class="str">&quot;mongodb://$1:$2@localhost:27017/db&quot;</span> <span class="op">%</span> [<span class="ide">db_user</span>,<span class="ide">db_pass</span>])</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">db</span><span class="op">.</span><span class="ide">client</span><span class="op">.</span><span class="ide">authenticated</span>: <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">AUTHError</span>, <span class="str">&quot;Unable to authenticate to db&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">except</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">logging</span><span class="op">.</span><span class="ide">error</span>(<span class="ide">getCurrentExceptionMsg</span>())</div></div><div class="line"><div class="line-content">    <span class="kwd">raise</span></div></div>  </code></pre>
+<h2>MongoDB Features</h2>
+<p>This table represents MongoDB features and their implementation status within
+<code>nimongo.mongo</code> Nim module.</p>
+<table>
+<thead>
+<tr>
+<th align="right">Block</th>
+<th align="left">Feature</th>
+<th align="center">Status (sync)</th>
+<th align="center">Status (async)</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Connection</td>
+<td align="left" />
+<td align="center"><strong>2</strong> / <strong>7</strong></td>
+<td align="center"><strong>2</strong> / <strong>7</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Single server</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Replica set</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Socket Timeout</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">SSL</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Connect Timeout</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Write Concern</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Read Preference</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Operations</td>
+<td align="left">Insert (Single/Multiple), Remove (Single/Multiple), Update (Single/Multiple/Upsert)</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Querying</td>
+<td align="left" />
+<td align="center"><strong>6</strong> / <strong>10</strong></td>
+<td align="center"><strong>5</strong> / <strong>9</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Find one</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Find all</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Find iterator</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Skip</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Limit</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Count</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Tailable</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Partial</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">FindAndModify</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">parallelCollectionScan</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">getLastError</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Authentication</td>
+<td align="left" />
+<td align="center"><strong>1</strong> / <strong>7</strong></td>
+<td align="center"><strong>1</strong> / <strong>7</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">authenticate</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">SCRAM-SHA-1</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">MONGODB-CR</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">MONGODB-X509</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">GSSAPI (Kerberos)</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">PLAIN (LDAP SASL)</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">logout</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">User Management</td>
+<td align="left" />
+<td align="center"><strong>2</strong> / <strong>7</strong></td>
+<td align="center"><strong>2</strong> / <strong>7</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Create User</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Update User</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Drop User</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Drop all users</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Grant roles</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Revoke roles</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Users info</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Role Management</td>
+<td align="left" />
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Replication</td>
+<td align="left" />
+<td align="center"><strong>1</strong> / <strong>1</strong></td>
+<td align="center"><strong>1</strong> / <strong>1</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Is Master</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Sharding</td>
+<td align="left" />
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Instance Administration Commands</td>
+<td align="left" />
+<td align="center"><strong>6</strong> / <strong>7</strong></td>
+<td align="center"><strong>6</strong> / <strong>7</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Copy DB</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">List databases</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Drop database</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">List collections</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Rename collection</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Drop collection</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Create collection</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Diagnostic</td>
+<td align="left" />
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">GridFS</td>
+<td align="left" />
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="center"><strong>0</strong> / <strong>0</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Indices</td>
+<td align="left" />
+<td align="center"><strong>0</strong> / <strong>4</strong></td>
+<td align="center"><strong>0</strong> / <strong>4</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Create Index</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Drop Index</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Drop Indices</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">Ensure Index</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Aggregation</td>
+<td align="left" />
+<td align="center"><strong>3</strong> / <strong>6</strong></td>
+<td align="center"><strong>3</strong> / <strong>6</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">aggregate</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">count</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">distinct</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left"><strong>Cursor.unique</strong> proc</td>
+</tr>
+<tr>
+<td align="right" />
+<td align="left">group</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">mapReduce</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">orderBy</td>
+<td align="center">:white_check_mark:</td>
+<td align="center">:white_check_mark:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Geospatial</td>
+<td align="left" />
+<td align="center"><strong>0</strong> /<strong>3</strong></td>
+<td align="center"><strong>0</strong> / <strong>3</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">geoNear</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">geoSearch</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">geoWalk</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right">Auditing</td>
+<td align="left" />
+<td align="center"><strong>0</strong> / <strong>1</strong></td>
+<td align="center"><strong>0</strong> / <strong>1</strong></td>
+<td align="left" />
+</tr>
+<tr>
+<td align="right" />
+<td align="left">logApplicationMessage</td>
+<td align="center">:red_circle:</td>
+<td align="center">:red_circle:</td>
+<td align="left" />
+</tr></tbody></table>
+<p><strong>P.S.</strong> Contribution is welcomed :)</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/SSPkrolik/nimongo">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

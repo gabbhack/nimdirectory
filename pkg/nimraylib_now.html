@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimraylib_now</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wrapper</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">raylib</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">gaming</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("The Ultimate Raylib gaming library wrapper")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimraylib_now" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>End of life</h1>
+<p>The project will no longer be maintained. Reasons:</p>
+<ul>
+<li>
+<p>I personally don&apos;t do any game development for some time now.</p>
+</li>
+<li>
+<p>The approach of automatic bindings generation was very new and easy to
+maintain. Unfortunately as the Nim language progresses, it adds a lot of
+features that help with automatic memory management, boundary detection and
+other quality of life things. It is not feasible to automatically generate
+these things, so the whole approach doesn&apos;t look very lucrative to continue
+with. Proper Nim bindings will require lots of manual code to accomodate all
+the fascinating language features.</p>
+</li>
+</ul>
+<p>The successor bindings can be considered <a href="https://github.com/planetis-m/naylib">https://github.com/planetis-m/naylib</a>,
+feel free to take a look at them! Other projects can also emerge but as of
+2023-04-15 these bindings look like the most promising ones.</p>
+<p>Feel free to fork this repository and do anything with the code, happy hacking!</p>
+<h1>NimraylibNow! - The Ultimate Raylib wrapper for Nim</h1>
+<p>The most idiomatic and up-to-date wrapper for <a href="https://github.com/raysan5/raylib">Raylib</a> gaming C library.
+Use this library if you want to write games using <a href="https://github.com/raysan5/raylib">Raylib</a> in <a href="https://nim-lang.org/">Nim</a>.</p>
+<p>This library is an effort to create an automatically generated wrapper which can
+be easily upgraded to any future version of <a href="https://github.com/raysan5/raylib">Raylib</a>. Anyone should be able to
+upgrade it with some effort and <a href="HACKING.md">HACKING</a> should be a guide on how
+to do it. Please file a bug report if any of that is too far from the reality.</p>
+<h2>Features</h2>
+<ul>
+<li>
+<p>Automated generation of the wrapper using the power of (((Nim)))</p>
+</li>
+<li>
+<p>Idiomatic Nim naming and conventions so you write <strong>Nim</strong> code, not C</p>
+</li>
+<li>
+<p>60+ <a href="examples/">examples</a> converted from C to Nim</p>
+</li>
+<li>
+<p>Includes modules: <a href="https://github.com/raysan5/raylib">raylib</a>, <a href="https://github.com/raysan5/raylib/blob/master/src/raymath.h">raymath</a>, <a href="https://github.com/raysan5/raylib/blob/master/src/rlgl.h">rlgl</a>, <a href="https://github.com/raysan5/raygui">raygui</a>, <a href="https://github.com/raysan5/raylib/blob/master/src/physac.h">physac</a></p>
+</li>
+<li>
+<p>Supports Windows, Linux, MacOS, Emscripten (see <a href="examples/emscripten/">Emscripten example</a>)</p>
+</li>
+<li>
+<p>Supports static compilation, dynamic linking - you choose</p>
+</li>
+</ul>
+<h2>Quickstart</h2>
+<ol>
+<li>Install NimraylibNow!</li>
+</ol>
+<pre>  <code class="language-shell">$ nimble install nimraylib_now  # wait 10 minutes for download, sorry
+</code></pre>
+<ol start="2">
+<li>Copy any example to your file, for instance <a href="examples/original/crown.nim">crown.nim</a></li>
+<li>Compile and run it:</li>
+</ol>
+<pre>  <code class="language-shell">$ nim c -r -d:release --gc:orc crown.nim
+</code></pre>
+<p>Explanation of flags:</p>
+<ul>
+<li><code>-r</code> - run after compiling</li>
+<li><code>-d:release</code> - for speed, but also cuts away debugging information</li>
+<li><code>--gc:orc</code> - memory management without garbage collection and
+with better C interoperability</li>
+</ul>
+<h2>Current version and upgrading from previous versions</h2>
+<p>NimraylibNow! v0.15 is a wrapper for <a href="https://github.com/raysan5/raylib/releases/tag/4.2.0">Raylib v4.2.0</a> and <a href="https://github.com/raysan5/raygui/releases/tag/3.2">Raygui v3.2</a> and works
+for Nim v1.4.2+.</p>
+<p>See <a href="CHANGELOG.md">CHANGELOG</a> for any tips on how to upgrade your code
+from previous versions.</p>
+<h2>Install NimraylibNow!</h2>
+<p>Install this library with nimble (takes <strong>6-10(!) minutes</strong> because of huge
+original raylib repository):</p>
+<pre>  <code class="language-shell">$ nimble install nimraylib_now
+</code></pre>
+<p>Or put it into your <code>.nimble</code> file:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;nimraylib_now&quot;</span></div></div>  </code></pre>
+<h2>How to use NimraylibNow!</h2>
+<p>Import any necessary modules and use it:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Import everything but rlgl, should be enough for most cases!</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimraylib_now</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Import only necessary modules for more granularity</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimraylib_now</span><span class="op">/</span><span class="ide">raylib</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimraylib_now</span><span class="op">/</span>[<span class="ide">raylib</span>, <span class="ide">raymath</span>, <span class="ide">raygui</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">nimraylib_now</span><span class="op">/</span><span class="ide">rlgl</span> <span class="kwd">as</span> <span class="ide">rl</span> <span class="kwd">import</span> <span class="kwd">nil</span>  <span class="com"># import rlgl with a mandatory prefix rl</span></div></div>  </code></pre>
+<p>See <a href="examples/">examples</a> for how to use it.
+You should generally be able to follow any tutorials for official C bindings,
+just mind the <a href="#naming-differences-with-c">naming</a>. Also see official
+<a href="https://www.raylib.com/cheatsheet/cheatsheet.html">cheatsheet</a> and
+directly inspect the binding sources, e.g. for
+<a href="src/nimraylib_now/not_mangled/raylib.nim">raylib</a>.</p>
+<p>Here is a long example to showcase most features
+(<a href="examples/original/crown.nim">crown.nim</a>).</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">math</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimraylib_now</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">nimFg</span>: <span class="ide">Color</span> <span class="op">=</span> (<span class="num">0xff</span>, <span class="num">0xc2</span>, <span class="num">0x00</span>)          <span class="com"># Use this shortcut with alpha = 255!</span></div></div><div class="line"><div class="line-content">  <span class="ide">nimBg</span>: <span class="ide">Color</span> <span class="op">=</span> (<span class="num">0x17</span>, <span class="num">0x18</span>, <span class="num">0x1f</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Let&apos;s draw a Nim crown!</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span></div></div><div class="line"><div class="line-content">  <span class="ide">crownSides</span> <span class="op">=</span> <span class="num">8</span>                             <span class="com"># Low-polygon version</span></div></div><div class="line"><div class="line-content">  <span class="ide">centerAngle</span> <span class="op">=</span> <span class="num">2.0</span> <span class="op">*</span> <span class="ide">PI</span> <span class="op">/</span> <span class="ide">crownSides</span><span class="op">.</span><span class="ide">float</span>  <span class="com"># Angle from the center of a circle</span></div></div><div class="line"><div class="line-content">  <span class="ide">lowerRadius</span> <span class="op">=</span> <span class="num">2.0</span>                          <span class="com"># Lower crown circle</span></div></div><div class="line"><div class="line-content">  <span class="ide">upperRadius</span> <span class="op">=</span> <span class="ide">lowerRadius</span> <span class="op">*</span> <span class="num">1.4</span>            <span class="com"># Upper crown circle</span></div></div><div class="line"><div class="line-content">  <span class="ide">mainHeight</span> <span class="op">=</span> <span class="ide">lowerRadius</span> <span class="op">*</span> <span class="num">0.8</span>             <span class="com"># Height without teeth</span></div></div><div class="line"><div class="line-content">  <span class="ide">toothHeight</span> <span class="op">=</span> <span class="ide">mainHeight</span> <span class="op">*</span> <span class="num">1.3</span>             <span class="com"># Height with teeth</span></div></div><div class="line"><div class="line-content">  <span class="ide">toothSkew</span> <span class="op">=</span> <span class="num">1.2</span>                            <span class="com"># Little angle for teeth</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">lowerPoints</span>, <span class="ide">upperPoints</span>: <span class="ide">array</span>[<span class="ide">crownSides</span>, <span class="kwd">tuple</span>[<span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">float</span>]]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Get evenly spaced points on the lower and upper circles,</span></div></div><div class="line"><div class="line-content"><span class="com"># use Nim&apos;s math module for that</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0.</span><span class="op">.&lt;</span><span class="ide">crownSides</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">multiplier</span> <span class="op">=</span> <span class="ide">i</span><span class="op">.</span><span class="ide">float</span></div></div><div class="line"><div class="line-content">  <span class="com"># Formulas are for 2D space, good enough for 3D since height is always same</span></div></div><div class="line"><div class="line-content">  <span class="ide">lowerPoints</span>[<span class="ide">i</span>] <span class="op">=</span> (</div></div><div class="line"><div class="line-content">    <span class="ide">x</span>: <span class="ide">lowerRadius</span> <span class="op">*</span> <span class="ide">cos</span>(<span class="ide">centerAngle</span> <span class="op">*</span> <span class="ide">multiplier</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">y</span>: <span class="ide">lowerRadius</span> <span class="op">*</span> <span class="ide">sin</span>(<span class="ide">centerAngle</span> <span class="op">*</span> <span class="ide">multiplier</span>),</div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content">  <span class="ide">upperPoints</span>[<span class="ide">i</span>] <span class="op">=</span> (</div></div><div class="line"><div class="line-content">    <span class="ide">x</span>: <span class="ide">upperRadius</span> <span class="op">*</span> <span class="ide">cos</span>(<span class="ide">centerAngle</span> <span class="op">*</span> <span class="ide">multiplier</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">y</span>: <span class="ide">upperRadius</span> <span class="op">*</span> <span class="ide">sin</span>(<span class="ide">centerAngle</span> <span class="op">*</span> <span class="ide">multiplier</span>),</div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">initWindow</span>(<span class="num">800</span>, <span class="num">600</span>, <span class="str">&quot;[nim]RaylibNow!&quot;</span>)  <span class="com"># Open window</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">camera</span> <span class="op">=</span> <span class="ide">Camera</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">position</span>: (<span class="num">5.0</span>, <span class="num">8.0</span>, <span class="num">10.0</span>),  <span class="com"># Camera position</span></div></div><div class="line"><div class="line-content">  <span class="ide">target</span>: (<span class="num">0.0</span>, <span class="num">0.0</span>, <span class="num">0.0</span>),     <span class="com"># Camera target it looks-at</span></div></div><div class="line"><div class="line-content">  <span class="ide">up</span>: (<span class="num">0.0</span>, <span class="num">1.0</span>, <span class="num">0.0</span>),         <span class="com"># Camera up vector (rotation over its axis)</span></div></div><div class="line"><div class="line-content">  <span class="ide">fovy</span>: <span class="num">45.0</span>,                  <span class="com"># Camera field-of-view apperture in Y (degrees)</span></div></div><div class="line"><div class="line-content">  <span class="ide">projection</span>: <span class="ide">Perspective</span>      <span class="com"># Defines projection type, see CameraProjection</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"><span class="ide">camera</span><span class="op">.</span><span class="ide">setCameraMode</span>(<span class="ide">Orbital</span>)  <span class="com"># Several modes available, see CameraMode</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">pause</span> <span class="op">=</span> <span class="ide">false</span>              <span class="com"># Pausing the game will stop animation</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">setTargetFPS</span>(<span class="num">60</span>)               <span class="com"># Set the game to run at 60 frames per second</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Wait for Esc key press or when the window is closed</span></div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="kwd">not</span> <span class="ide">windowShouldClose</span>():</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">pause</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">camera</span><span class="op">.</span><span class="kwd">addr</span><span class="op">.</span><span class="ide">updateCamera</span>   <span class="com"># Rotate camera</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">isKeyPressed</span>(<span class="ide">Space</span>):      <span class="com"># Pressing Space will stop/resume animation</span></div></div><div class="line"><div class="line-content">    <span class="ide">pause</span> <span class="op">=</span> <span class="kwd">not</span> <span class="ide">pause</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">beginDrawing</span>:                <span class="com"># Use drawing functions inside this block</span></div></div><div class="line"><div class="line-content">    <span class="ide">clearBackground</span>(<span class="ide">RayWhite</span>)  <span class="com"># Set background color</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">beginMode3D</span>(<span class="ide">camera</span>):       <span class="com"># Use 3D drawing functions inside this block</span></div></div><div class="line"><div class="line-content">      <span class="ide">drawGrid</span>(<span class="num">10</span>, <span class="num">1.0</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0.</span><span class="op">.&lt;</span><span class="ide">crownSides</span>:</div></div><div class="line"><div class="line-content">        <span class="com"># Define 5 points:</span></div></div><div class="line"><div class="line-content">        <span class="com"># - Current lower circle point</span></div></div><div class="line"><div class="line-content">        <span class="com"># - Current upper circle point</span></div></div><div class="line"><div class="line-content">        <span class="com"># - Next lower circle point</span></div></div><div class="line"><div class="line-content">        <span class="com"># - Next upper circle point</span></div></div><div class="line"><div class="line-content">        <span class="com"># - Point for peak of crown tooth</span></div></div><div class="line"><div class="line-content">        <span class="kwd">let</span></div></div><div class="line"><div class="line-content">          <span class="ide">nexti</span> <span class="op">=</span> <span class="kwd">if</span> <span class="ide">i</span> <span class="op">==</span> <span class="ide">crownSides</span> <span class="op">-</span> <span class="num">1</span>: <span class="num">0</span> <span class="kwd">else</span>: <span class="ide">i</span> <span class="op">+</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">          <span class="ide">lowerCur</span>: <span class="ide">Vector3</span> <span class="op">=</span> (<span class="ide">lowerPoints</span>[<span class="ide">i</span>]<span class="op">.</span><span class="ide">x</span>, <span class="num">0.0</span>, <span class="ide">lowerPoints</span>[<span class="ide">i</span>]<span class="op">.</span><span class="ide">y</span>)</div></div><div class="line"><div class="line-content">          <span class="ide">upperCur</span>: <span class="ide">Vector3</span> <span class="op">=</span> (<span class="ide">upperPoints</span>[<span class="ide">i</span>]<span class="op">.</span><span class="ide">x</span>, <span class="ide">mainHeight</span>, <span class="ide">upperPoints</span>[<span class="ide">i</span>]<span class="op">.</span><span class="ide">y</span>)</div></div><div class="line"><div class="line-content">          <span class="ide">lowerNext</span>: <span class="ide">Vector3</span> <span class="op">=</span> (<span class="ide">lowerPoints</span>[<span class="ide">nexti</span>]<span class="op">.</span><span class="ide">x</span>, <span class="num">0.0</span>, <span class="ide">lowerPoints</span>[<span class="ide">nexti</span>]<span class="op">.</span><span class="ide">y</span>)</div></div><div class="line"><div class="line-content">          <span class="ide">upperNext</span>: <span class="ide">Vector3</span> <span class="op">=</span> (<span class="ide">upperPoints</span>[<span class="ide">nexti</span>]<span class="op">.</span><span class="ide">x</span>, <span class="ide">mainHeight</span>, <span class="ide">upperPoints</span>[<span class="ide">nexti</span>]<span class="op">.</span><span class="ide">y</span>)</div></div><div class="line"><div class="line-content">          <span class="ide">tooth</span>: <span class="ide">Vector3</span> <span class="op">=</span> (</div></div><div class="line"><div class="line-content">            (<span class="ide">upperCur</span><span class="op">.</span><span class="ide">x</span> <span class="op">+</span> <span class="ide">upperNext</span><span class="op">.</span><span class="ide">x</span>) <span class="op">/</span> <span class="num">2.0</span> <span class="op">*</span> <span class="ide">toothSkew</span>,</div></div><div class="line"><div class="line-content">            <span class="ide">toothHeight</span>,</div></div><div class="line"><div class="line-content">            (<span class="ide">upperCur</span><span class="op">.</span><span class="ide">z</span> <span class="op">+</span> <span class="ide">upperNext</span><span class="op">.</span><span class="ide">z</span>) <span class="op">/</span> <span class="num">2.0</span> <span class="op">*</span> <span class="ide">toothSkew</span></div></div><div class="line"><div class="line-content">          )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="com"># Front polygon (clockwise order)</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawTriangle3D</span>(<span class="ide">lowerCur</span>, <span class="ide">upperCur</span>, <span class="ide">upperNext</span>, <span class="ide">nimFg</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">drawTriangle3D</span>(<span class="ide">lowerCur</span>, <span class="ide">upperNext</span>, <span class="ide">lowerNext</span>, <span class="ide">nimFg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="com"># Back polygon (counter-clockwise order)</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawTriangle3D</span>(<span class="ide">lowerCur</span>, <span class="ide">upperNext</span>, <span class="ide">upperCur</span>, <span class="ide">nimBg</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">drawTriangle3D</span>(<span class="ide">lowerCur</span>, <span class="ide">lowerNext</span>, <span class="ide">upperNext</span>, <span class="ide">nimBg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="com"># Wire line for polygons</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawLine3D</span>(<span class="ide">lowerCur</span>, <span class="ide">upperCur</span>, <span class="ide">Gray</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="com"># Crown tooth front triangle (clockwise order)</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawTriangle3D</span>(<span class="ide">upperCur</span>, <span class="ide">tooth</span>, <span class="ide">upperNext</span>, <span class="ide">nimFg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="com"># Crown tooth back triangle (counter-clockwise order)</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawTriangle3D</span>(<span class="ide">upperNext</span>, <span class="ide">tooth</span>, <span class="ide">upperCur</span>, <span class="ide">nimBg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">block</span> <span class="ide">text</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">block</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">let</span></div></div><div class="line"><div class="line-content">          <span class="ide">text</span> <span class="op">=</span> <span class="str">&quot;I AM NIM&quot;</span></div></div><div class="line"><div class="line-content">          <span class="ide">fontSize</span> <span class="op">=</span> <span class="num">60</span></div></div><div class="line"><div class="line-content">          <span class="ide">textWidth</span> <span class="op">=</span> <span class="ide">measureText</span>(<span class="ide">cstring</span>(<span class="ide">text</span>), <span class="ide">fontSize</span>)</div></div><div class="line"><div class="line-content">          <span class="ide">verticalPos</span> <span class="op">=</span> (<span class="ide">getScreenHeight</span>()<span class="op">.</span><span class="ide">float</span> <span class="op">*</span> <span class="num">0.4</span>)<span class="op">.</span><span class="ide">int</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawText</span>(</div></div><div class="line"><div class="line-content">          <span class="ide">cstring</span>(<span class="ide">text</span>),</div></div><div class="line"><div class="line-content">          (<span class="ide">getScreenWidth</span>() <span class="op">-</span> <span class="ide">textWidth</span>) <span class="kwd">div</span> <span class="num">2</span>,  <span class="com"># center</span></div></div><div class="line"><div class="line-content">          (<span class="ide">getScreenHeight</span>() <span class="op">+</span> <span class="ide">verticalPos</span>) <span class="kwd">div</span> <span class="num">2</span>,</div></div><div class="line"><div class="line-content">          <span class="ide">fontSize</span>,</div></div><div class="line"><div class="line-content">          <span class="ide">Black</span></div></div><div class="line"><div class="line-content">        )</div></div><div class="line"><div class="line-content">      <span class="kwd">block</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">let</span> <span class="ide">text</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">          <span class="kwd">if</span> <span class="ide">pause</span>: <span class="str">&quot;Press Space to continue&quot;</span></div></div><div class="line"><div class="line-content">          <span class="kwd">else</span>: <span class="str">&quot;Press Space to pause&quot;</span></div></div><div class="line"><div class="line-content">        <span class="ide">drawText</span>(<span class="ide">cstring</span>(<span class="ide">text</span>), <span class="num">10</span>, <span class="num">10</span>, <span class="num">20</span>, <span class="ide">Black</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">closeWindow</span>()</div></div>  </code></pre>
+<p>  <img src="crown.png?raw=true" style="max-width: 100%;" alt="Nim crown drawn with polygons" /></p>
+<h2>Naming differences with C</h2>
+<p>Naming is converted to more Nim conventional style but in a predictable manner.
+Generally just omit any prefixes you see in official docs and use camelCase for
+procs, everything else stays the same:</p>
+<pre>  <code class="language-c"><div class="line"><div class="line-content"><span class="kwd">void</span> <span class="ide">InitWindow</span>(<span class="kwd">int</span> <span class="ide">width</span>, <span class="kwd">int</span> <span class="ide">height</span>, <span class="kwd">const</span> <span class="kwd">char</span> <span class="op">*</span><span class="ide">title</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">void</span> <span class="ide">GuiSetState</span>(<span class="kwd">int</span> <span class="ide">state</span>);</div></div><div class="line"><div class="line-content"><span class="kwd">void</span> <span class="ide">rlBegin</span>(<span class="kwd">int</span> <span class="ide">mode</span>);</div></div>  </code></pre>
+<p>to</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initWindow</span><span class="op">*</span>(<span class="ide">width</span>: <span class="ide">cint</span>; <span class="ide">height</span>: <span class="ide">cint</span>; <span class="ide">title</span>: <span class="ide">cstring</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">setState</span><span class="op">*</span>(<span class="ide">state</span>: <span class="ide">cint</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">begin</span><span class="op">*</span>(<span class="ide">mode</span>: <span class="ide">cint</span>)</div></div>  </code></pre>
+<p>Although some definitions may have names like <code>FULLSCREEN_MODE</code>, you can still
+use them (and encouraged to) as <code>FullscreenMode</code> in code.</p>
+<h3>Raymath</h3>
+<p>All prefixes specific to types were omitted where possible:</p>
+<pre>  <code class="language-c"><div class="line"><div class="line-content"><span class="ide">Vector2</span> <span class="ide">Vector2Zero</span>(<span class="kwd">void</span>);</div></div><div class="line"><div class="line-content"><span class="ide">Vector3</span> <span class="ide">Vector3Zero</span>(<span class="kwd">void</span>);</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Vector2</span> <span class="ide">Vector2Add</span>(<span class="ide">Vector2</span> <span class="ide">v1</span>, <span class="ide">Vector2</span> <span class="ide">v2</span>);</div></div><div class="line"><div class="line-content"><span class="ide">Vector3</span> <span class="ide">Vector3Add</span>(<span class="ide">Vector3</span> <span class="ide">v1</span>, <span class="ide">Vector3</span> <span class="ide">v2</span>);</div></div>  </code></pre>
+<p>to</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">vector2Zero</span><span class="op">*</span>(): <span class="ide">Vector2</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">vector3Zero</span><span class="op">*</span>(): <span class="ide">Vector3</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">add</span><span class="op">*</span>(<span class="ide">v1</span>: <span class="ide">Vector2</span>; <span class="ide">v2</span>: <span class="ide">Vector2</span>): <span class="ide">Vector2</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">add</span><span class="op">*</span>(<span class="ide">v1</span>: <span class="ide">Vector3</span>; <span class="ide">v2</span>: <span class="ide">Vector3</span>): <span class="ide">Vector3</span></div></div>  </code></pre>
+<h2>Passing values by addresses</h2>
+<p><strong>BE VERY CAREFUL</strong> with values which are passed as addresses, <strong>always</strong> convert
+them to approapriate C-compatible types:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Will do incorrect things!</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">xPos</span> <span class="op">=</span> <span class="num">0.0</span>  <span class="com"># this is `float` type, will not be converted to `cfloat` automatically</span></div></div><div class="line"><div class="line-content">  <span class="ide">cameraPos</span> <span class="op">=</span> [<span class="ide">xPos</span>, <span class="ide">camera</span><span class="op">.</span><span class="ide">position</span><span class="op">.</span><span class="ide">y</span>, <span class="ide">camera</span><span class="op">.</span><span class="ide">position</span><span class="op">.</span><span class="ide">z</span>]</div></div><div class="line"><div class="line-content"><span class="ide">setShaderValue</span>(<span class="ide">shader</span>, <span class="ide">viewEyeLoc</span>, <span class="ide">cameraPos</span><span class="op">.</span><span class="kwd">addr</span>, <span class="ide">Vec3</span>)  <span class="com"># cameraPos.addr is a pointer</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Convert values instead</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">xPos</span>: <span class="ide">cfloat</span> <span class="op">=</span> <span class="num">0.0</span></div></div><div class="line"><div class="line-content"><span class="com"># or</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cameraPos</span> <span class="op">=</span> [<span class="ide">xPos</span><span class="op">.</span><span class="ide">cfloat</span>, <span class="ide">camera</span><span class="op">.</span><span class="ide">position</span><span class="op">.</span><span class="ide">y</span>, <span class="ide">camera</span><span class="op">.</span><span class="ide">position</span><span class="op">.</span><span class="ide">z</span>]</div></div><div class="line"><div class="line-content"><span class="com"># So this finally works as intended:</span></div></div><div class="line"><div class="line-content"><span class="ide">setShaderValue</span>(<span class="ide">shader</span>, <span class="ide">viewEyeLoc</span>, <span class="ide">cameraPos</span><span class="op">.</span><span class="kwd">addr</span>, <span class="ide">Vec3</span>)</div></div>  </code></pre>
+<h2>Tips and tricks</h2>
+<h3>Tuple to object converters for geometry</h3>
+<p>Vector2, Vector3, Vector4 (Quaternion), Matrix, Rectangle, Color can be written
+as a tuple to save on typing as they have pretty much standard parameter
+sequence:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># All are valid:</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span>: <span class="ide">Vector2</span> <span class="op">=</span> (<span class="ide">x</span>: <span class="num">3.0</span>, <span class="ide">y</span>: <span class="num">5.0</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span> <span class="op">=</span> <span class="ide">Vector2</span>(<span class="ide">x</span>: <span class="num">3.0</span>, <span class="ide">y</span>: <span class="num">5.0</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v3</span> <span class="op">=</span> (<span class="num">3.0</span>, <span class="num">5.0</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">c</span>: <span class="ide">Color</span> <span class="op">=</span> (<span class="num">0xc9</span>, <span class="num">0xc9</span>, <span class="num">0xc9</span>)  <span class="com"># color can be written as a tuple even without the alpha value!</span></div></div>  </code></pre>
+<h3>Require fully qualified procs</h3>
+<p>For functions operating on global scope it could be convenient to use
+fully qualified proc name:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">rlgl</span><span class="op">.</span><span class="ide">begin</span>(<span class="ide">rlgl</span><span class="op">.</span><span class="ide">Triangles</span>)</div></div><div class="line"><div class="line-content"><span class="com"># draw something</span></div></div><div class="line"><div class="line-content"><span class="ide">rlgl</span><span class="op">.</span><span class="kwd">end</span>()</div></div>  </code></pre>
+<p>which can be enforced by the compiler by importing <code>rlgl</code> module like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">nimraylib_now</span><span class="op">/</span><span class="ide">rlgl</span> <span class="kwd">import</span> <span class="kwd">nil</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or to use a shorter `rl`</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">nimraylib_now</span><span class="op">/</span><span class="ide">rlgl</span> <span class="kwd">as</span> <span class="ide">rl</span> <span class="kwd">import</span> <span class="kwd">nil</span></div></div>  </code></pre>
+<h3>Begin-End pairs sugar</h3>
+<p>There are pairs like <code>beginDrawing()</code> - <code>endDrawing()</code>, each have helping
+templates to automatically insert <code>end</code>-proc at the end:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">beginDrawing</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">drawLine</span>(<span class="op">...</span>)</div></div>  </code></pre>
+<p>is same as</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">beginDrawing</span>()</div></div><div class="line"><div class="line-content"><span class="ide">drawLine</span>(<span class="op">...</span>)</div></div><div class="line"><div class="line-content"><span class="ide">endDrawing</span>()</div></div>  </code></pre>
+<h3>Reserved words</h3>
+<p>Be careful and use &quot;stropping&quot; when using fields or functions which are also
+reserved words in Nim:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">`<span class="kwd">end</span>`()</div></div>  </code></pre>
+<h3>Enums</h3>
+<p>All enums are marked as <code>{.pure.}</code> which means they should be fully qualified
+when compiler can&apos;t guess their type:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">camera</span><span class="op">.</span><span class="ide">projection</span> <span class="op">=</span> <span class="ide">Perspective</span>  <span class="com"># can be guessed, no need for CameraProjection.Perspective</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">isKeyDown</span>(<span class="ide">Right</span>):             <span class="com"># can be guessed, no need for KeyboardKey.Right</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">KeyboardKey</span><span class="op">.</span><span class="ide">Right</span><span class="op">.</span><span class="ide">isKeyDown</span>:  <span class="com"># cannot be guessed</span></div></div>  </code></pre>
+<h3>Raymath infix operators</h3>
+<p>You can use infix operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> for operations on vectors,
+matrices and quaternions:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">v1</span> <span class="op">=</span> <span class="ide">Vector3</span>(<span class="ide">x</span>: <span class="num">5</span>, <span class="ide">y</span>: <span class="num">2</span>, <span class="ide">z</span>: <span class="num">1</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">v2</span> <span class="op">=</span> <span class="ide">Vector3</span>(<span class="ide">x</span>: <span class="num">3</span>, <span class="ide">y</span>: <span class="num">0</span>, <span class="ide">z</span>: <span class="num">0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v1</span> <span class="op">-</span> <span class="ide">v2</span> <span class="op">==</span> <span class="ide">Vector3</span>(<span class="ide">x</span>: <span class="num">2.0</span>, <span class="ide">y</span>: <span class="num">2.0</span>, <span class="ide">z</span>: <span class="num">1.0</span>)</div></div>  </code></pre>
+<h2>Raylib, the original C library</h2>
+<p>If you would like to know more about how this wrapper uses <a href="https://github.com/raysan5/raylib">Raylib</a> library
+and see all the different options, check <a href="/USING_RAYLIB.md">USING_RAYLIB</a>,
+it should help.</p>
+<h2>Contributing</h2>
+<p>Do you want to contribute but don&apos;t know how? Check out
+<a href="CONTRIBUTING.md">CONTRIBUTING</a>!</p>
+<h2>How does wrapper work?</h2>
+<p>If you would like to know how this wrapper works or how to update it, check
+out <a href="HACKING.md">HACKING</a>.</p>
+<h2>Troubleshooting</h2>
+<h3>Freezes on Wayland</h3>
+<p>Random freezes when everything stops being responsive can be caused by glfw
+compiled against Wayland library. Try X11 version of glfw.</p>
+<p><a href="https://www.glfw.org/">GLFW</a> is a raylib dependency that was installed by your package manager, you
+can uninstall raylib with clearing all of its dependencies and install it again
+choosing X11 version of glfw.</p>
+<h3>Windows error: The application was unable to start correctly (0x00000007b)</h3>
+<p>Or similar errors which point to missing <code>libwinpthread-1.dll</code> file mean that
+windows can&apos;t find correct library files.</p>
+<p>This is because, by default, nim creates binaries that are dynamically linked.
+Normally, this is fine since windows already has the libraries required for most
+basic nim applications. It does not however have libwinpthread-1.dll, which causes an error here.
+We can solve this by instructing nim to create binaries with the libraries
+linked statically.</p>
+<p>To do this just pass in the <code>--passL:-static</code> to nim when compiling your file.</p>
+<p>If you still want dynamic linking:</p>
+<ul>
+<li>If MinGW is not in PATH</li>
+<li>Add Nim&apos;s minGW toolchain to your PATH (You have to add the bin directory with .dll files not the one where nim.exe is located)</li>
+</ul>
+<p>If you already have a version of MinGW (that is already on PATH and seperate from Nim)</p>
+<ul>
+<li>Copy over <code>libwinpthread-1.dll</code> from nim&apos;s version of MinGW into the bin directory of your version of MinGW</li>
+</ul>
+<h3>NixOS: GLX: Failed to load GLX</h3>
+<p>There are two options:</p>
+<ul>
+<li>Install Raylib shared library via the package manager, use <code>nim build -d:nimraylib_now_shared</code> to use a shared library.</li>
+<li>Use <code>steam-run</code> to execute the final binary.</li>
+<li>See <a href="/USING_RAYLIB.md">USING_RAYLIB</a> for manual Raylib installation option.</li>
+</ul>
+<h2>Community</h2>
+<p>Find us at <code>#raylib-nim</code> channel
+in the official <a href="https://discord.gg/raylib">Raylib discord server</a>.</p>
+<h2>Thanks</h2>
+<p>Many thanks to V.A. Guevara for the efforts on <a href="https://github.com/Guevara-chan/Raylib-Forever">Raylib-Forever</a> library which
+was the initial inspiration for this library.</p>
+<p>Thanks to everyone who contributed to this project!</p>
+<h2>License</h2>
+<p>MIT licensed, see LICENSE.md.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/greenfork/nimraylib_now">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

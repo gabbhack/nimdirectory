@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">docopt</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">command-line</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">arguments</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parsing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Command-line args parser based on Usage message")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install docopt" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1><a href="http://docopt.org/">docopt</a> creates <em>beautiful</em> command-line interfaces</h1>
+<p>  <strong>This is a port of   <a href="https://github.com/docopt/docopt">docopt</a> to   <a href="http://nim-lang.org/">Nim</a>. Visit   <a href="http://docopt.org/">docopt.org</a> for more information.</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">doc</span> <span class="op">=</span> """
+Naval Fate.
+
+Usage:
+  naval_fate ship new <name>...
+  naval_fate ship <name> move <x> <y> [--speed=<kn>]
+  naval_fate ship shoot <x> <y>
+  naval_fate mine (set|remove) <x> <y> [--moored | --drifting]
+  naval_fate (-h | --help)
+  naval_fate --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+  --speed=<kn>  Speed in knots [default: 10].
+  --moored      Moored (anchored) mine.
+  --drifting    Drifting mine.
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">docopt</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">args</span> <span class="op">=</span> <span class="ide">docopt</span>(<span class="ide">doc</span>, <span class="ide">version</span> <span class="op">=</span> <span class="str">&quot;Naval Fate 2.0&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">args</span>[<span class="str">&quot;move&quot;</span>]:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Moving ship $# to ($#, $#) at $# kn&quot;</span><span class="op">.</span><span class="ide">format</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">args</span>[<span class="str">&quot;&lt;name&gt;&quot;</span>], <span class="ide">args</span>[<span class="str">&quot;&lt;x&gt;&quot;</span>], <span class="ide">args</span>[<span class="str">&quot;&lt;y&gt;&quot;</span>], <span class="ide">args</span>[<span class="str">&quot;--speed&quot;</span>])</div></div><div class="line"><div class="line-content">  <span class="ide">ships</span>[<span class="op">$</span><span class="ide">args</span>[<span class="str">&quot;&lt;name&gt;&quot;</span>]]<span class="op">.</span><span class="ide">move</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">parseFloat</span>(<span class="op">$</span><span class="ide">args</span>[<span class="str">&quot;&lt;x&gt;&quot;</span>]), <span class="ide">parseFloat</span>(<span class="op">$</span><span class="ide">args</span>[<span class="str">&quot;&lt;y&gt;&quot;</span>]),</div></div><div class="line"><div class="line-content">    <span class="ide">speed</span> <span class="op">=</span> <span class="ide">parseFloat</span>(<span class="op">$</span><span class="ide">args</span>[<span class="str">&quot;--speed&quot;</span>]))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">args</span>[<span class="str">&quot;new&quot;</span>]: </div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">name</span> <span class="kwd">in</span> <span class="op">@</span>(<span class="ide">args</span>[<span class="str">&quot;&lt;name&gt;&quot;</span>]): </div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Creating ship $#&quot;</span> <span class="op">%</span> <span class="ide">name</span></div></div>  </code></pre>
+<p>The option parser is generated based on the docstring above that is passed to <code>docopt</code> function. <code>docopt</code> parses the usage pattern (<code>&quot;Usage: ...&quot;</code>) and option descriptions (lines starting with dash &quot;<code>-</code>&quot;) and ensures that the program invocation matches the usage pattern; it parses options, arguments and commands based on that. The basic idea is that <em>a good help message has all necessary information in it to make a parser</em>.</p>
+<h2>Documentation</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">docopt</span>(<span class="ide">doc</span>: <span class="ide">string</span>, <span class="ide">argv</span>: <span class="ide">seq</span>[<span class="ide">string</span>] <span class="op">=</span> <span class="kwd">nil</span>,</div></div><div class="line"><div class="line-content">            <span class="ide">help</span> <span class="op">=</span> <span class="ide">true</span>, <span class="ide">version</span>: <span class="ide">string</span> <span class="op">=</span> <span class="kwd">nil</span>,</div></div><div class="line"><div class="line-content">            <span class="ide">optionsFirst</span> <span class="op">=</span> <span class="ide">false</span>, <span class="ide">quit</span> <span class="op">=</span> <span class="ide">true</span>): <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">Value</span>]</div></div>  </code></pre>
+<p><code>docopt</code> takes 1 required and 5 optional arguments:</p>
+<ul>
+<li>
+<p><code>doc</code> is a string that contains a <strong>help message</strong> that will be parsed to create the option parser. The simple rules of how to write such a help message are described at <a href="http://docopt.org/">docopt.org</a>. Here is a quick example of such a string:</p>
+<pre>  <code>  Usage: my_program [-hso FILE] [--quiet | --verbose] [INPUT ...]
+
+  -h --help    show this
+  -s --sorted  sorted output
+  -o FILE      specify output file [default: ./test.txt]
+  --quiet      print less text
+  --verbose    print more text
+</code></pre>
+</li>
+<li>
+<p><code>argv</code> is an optional argument vector; by default <code>docopt</code> uses the argument vector passed to your program (<code>commandLineParams()</code>). Alternatively you can supply a list of strings like <code>@[&quot;--verbose&quot;, &quot;-o&quot;, &quot;hai.txt&quot;]</code>.</p>
+</li>
+<li>
+<p><code>help</code>, by default <code>true</code>, specifies whether the parser should automatically print the help message (supplied as <code>doc</code>) and terminate, in case <code>-h</code> or <code>--help</code> option is encountered (options should exist in usage pattern). If you want to handle <code>-h</code> or <code>--help</code> options manually (as other options), set <code>help = false</code>.</p>
+</li>
+<li>
+<p><code>version</code>, by default <code>nil</code>, is an optional argument that specifies the version of your program. If supplied, then, (assuming <code>--version</code> option is mentioned in usage pattern) when parser encounters the <code>--version</code> option, it will print the supplied version and terminate. <code>version</code> can be any string, e.g. <code>&quot;2.1.0rc1&quot;</code>.</p>
+<blockquote>
+<p>Note, when <code>docopt</code> is set to automatically handle <code>-h</code>, <code>--help</code> and <code>--version</code> options, you still need to mention them in usage pattern for this to work. Also, for your users to know about them.</p>
+</blockquote>
+</li>
+<li>
+<p><code>optionsFirst</code>, by default <code>false</code>. If set to <code>true</code> will disallow mixing options and positional arguments. I.e. after first positional argument, all arguments will be interpreted as positional even if the look like options. This can be used for strict compatibility with POSIX, or if you want to dispatch your arguments to other programs.</p>
+</li>
+<li>
+<p><code>quit</code>, by default <code>true</code>, specifies whether <a href="https://nim-lang.org/docs/system.html#quit%2Cint">  <code>quit()</code></a> should be called after encountering invalid arguments or printing the help message (see <code>help</code>). Setting this to <code>false</code> will allow <code>docopt</code> to raise a <code>DocoptExit</code> exception (with the <code>usage</code> member set) instead.</p>
+</li>
+</ul>
+<p>If the <code>doc</code> string is invalid, <code>DocoptLanguageError</code> will be raised.</p>
+<p>The <strong>return</strong> value is a <a href="https://nim-lang.org/docs/tables.html">  <code>Table</code></a> with options, arguments and commands as keys, spelled exactly like in your help message. Long versions of options are given priority. For example, if you invoke the top example as:</p>
+<pre>  <code>naval_fate ship Guardian move 100 150 --speed=15
+</code></pre>
+<p>the result will be:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">{<span class="str">&quot;--drifting&quot;</span>: <span class="ide">false</span>,     <span class="str">&quot;mine&quot;</span>: <span class="ide">false</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;--help&quot;</span>: <span class="ide">false</span>,         <span class="str">&quot;move&quot;</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;--moored&quot;</span>: <span class="ide">false</span>,       <span class="str">&quot;new&quot;</span>: <span class="ide">false</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;--speed&quot;</span>: <span class="str">&quot;15&quot;</span>,         <span class="str">&quot;remove&quot;</span>: <span class="ide">false</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;--version&quot;</span>: <span class="ide">false</span>,      <span class="str">&quot;set&quot;</span>: <span class="ide">false</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;&lt;name&gt;&quot;</span>: <span class="op">@</span>[<span class="str">&quot;Guardian&quot;</span>], <span class="str">&quot;ship&quot;</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;&lt;x&gt;&quot;</span>: <span class="str">&quot;100&quot;</span>,            <span class="str">&quot;shoot&quot;</span>: <span class="ide">false</span>,</div></div><div class="line"><div class="line-content"> <span class="str">&quot;&lt;y&gt;&quot;</span>: <span class="str">&quot;150&quot;</span>}</div></div>  </code></pre>
+<p>Note that this is not how the values are actually stored, because a <code>Table</code> can hold values of only one type. For that reason, a variant <code>Value</code> type is needed. <code>Value</code>&apos;s only accessible member is <code>kind: ValueKind</code> (which shouldn&apos;t be needed anyway, because it is known beforehand). <code>ValueKind</code> is one of:</p>
+<ul>
+<li>
+<p><code>vkNone</code> (No value)</p>
+<p>This kind of <code>Value</code> appears when there is an option which hasn&apos;t been set and has no default. It is <code>false</code> when converted <code>toBool</code>.</p>
+</li>
+<li>
+<p><code>vkBool</code> (A boolean)</p>
+<p>This represents whether a boolean flag has been set or not. Just use it in a boolean context (conversion <code>toBool</code> is present).</p>
+</li>
+<li>
+<p><code>vkInt</code> (An integer)</p>
+<p>An integer represents how many times a flag has been repeated (if it is possible to supply it multiple times). Use <code>value.len</code> to obtain this <code>int</code>, or just use the value in a boolean context to find out whether this flag is present at least once.</p>
+</li>
+<li>
+<p><code>vkStr</code> (A string)</p>
+<p>Any option that has a user-supplied value will be represented as a <code>string</code> (conversion to integers, etc, does not happen). To obtain this string, use <code>$value</code>.</p>
+</li>
+<li>
+<p><code>vkList</code> (A list of strings)</p>
+<p>Any value that can be supplied multiple times will be represented by a <code>seq[string]</code>, even if the user provides just one. To obtain this <code>seq</code>, use <code>@value</code>. To obtain its length, use <code>value.len</code> or <code>@value.len</code>. To obtain the n-th value (0-indexed), both <code>value[i]</code> and <code>@value[i]</code> will work. If you are sure there is exactly one value, <code>$value</code> is the same as <code>value[0]</code>.</p>
+</li>
+</ul>
+<p>Note that you can use any kind of value in a boolean context and convert any value to <code>string</code>.</p>
+<p>Look <a href="src/docopt/value.nim">in the source code</a> to find out more about these conversions.</p>
+<p>As of version 0.7.0 docopt also includes a dispatch mechanism for automatically
+running procedures and converting arguments. This works by a simple macro that
+inspects the signature of the given procedure. The macro then returns code that
+will inspect the parsed arguments and if a list of supplied conditions are
+true the matched arguments from the signature will be extracted from the
+arguments and converted to the correct type before the procedure is called. A
+simple example would be something like this (a longer example can be found in
+the examples folder):</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">doc</span> <span class="op">=</span> """
+Naval Fate Lite
+
+Usage:
+  naval_fate ship new <name>...
+  naval_fate ship <name> move <x> <y> [--speed=<kn>]
+  naval_fate (-h | --help)
+  naval_fate --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+  --speed=<kn>  Speed in knots [default: 10].
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">docopt</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">docopt</span><span class="op">/</span><span class="ide">dispatch</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sequtils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">args</span> <span class="op">=</span> <span class="ide">docopt</span>(<span class="ide">doc</span>, <span class="ide">version</span> <span class="op">=</span> <span class="str">&quot;Naval Fate Lite&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Define procedures with parameters named the same as the arguments</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newShip</span>(<span class="ide">name</span>: <span class="ide">seq</span>[<span class="ide">string</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">ship</span> <span class="kwd">in</span> <span class="ide">name</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Creating ship $#&quot;</span> <span class="op">%</span> <span class="ide">ship</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">moveShip</span>(<span class="ide">name</span>: <span class="ide">string</span>, <span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>, <span class="ide">speed</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Moving ship $# to ($#, $#) at $# kn&quot;</span><span class="op">.</span><span class="ide">format</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">name</span>, <span class="ide">x</span>, <span class="ide">y</span>, <span class="ide">speed</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">args</span><span class="op">.</span><span class="ide">dispatchProc</span>(<span class="ide">newShip</span>, <span class="str">&quot;ship&quot;</span>, <span class="str">&quot;new&quot;</span>) <span class="kwd">or</span> <span class="com"># Runs newShip if &quot;ship&quot; and &quot;new&quot; is set</span></div></div><div class="line"><div class="line-content">  <span class="ide">args</span><span class="op">.</span><span class="ide">dispatchProc</span>(<span class="ide">moveShip</span>, <span class="str">&quot;ship&quot;</span>, <span class="str">&quot;move&quot;</span>): <span class="com"># Runs newShip if &quot;ship&quot; and &quot;move&quot; is set</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Ran something&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">doc</span></div></div>  </code></pre>
+<h2>Examples</h2>
+<p>See <a href="examples">examples</a> folder.</p>
+<p>For more examples of docopt language see <a href="https://github.com/docopt/docopt/tree/master/examples">docopt.py examples</a>.</p>
+<h2>Installation</h2>
+<pre>  <code>nimble install docopt
+</code></pre>
+<p>This library has no dependencies outside the standard library. An impure <a href="https://nim-lang.org/docs/re.html">  <code>re</code></a> library is used.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/docopt/docopt.nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

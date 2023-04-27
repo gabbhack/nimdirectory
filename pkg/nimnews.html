@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimnews</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nntp</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">newsgroups</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Immature Newsgroup NNTP server using SQLite as backend")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimnews" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>NimNews</h1>
+<p>Immature Newsgroup NNTP server using Nim and SQLite</p>
+<p>The goal of this server is to provide a flexible NNTP interface to whatever you
+want. Articles are stored in SQLite and the server itself is simple enough to be
+flexible if you need it to be. It is not designed to peer with Usenet although
+it could be considered for a future improvement. No policy is implemented and
+all commands are accepted even to logged-out users</p>
+<h2>Implementation status and RFCs</h2>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc977">RFC-977</a> should be implemented in full except distributions in NEWNEWS and
+NEWGROUPS</li>
+<li><a href="https://tools.ietf.org/html/rfc2980">RFC-2980</a> to be implemented (defining XOVER)</li>
+<li><a href="https://tools.ietf.org/html/rfc3977">RFC-3977</a> in implemented in part (missing XOVER kind of requests and many
+others)</li>
+<li>
+extension is drafted (not tested, might not be secure)</li>
+<li>
+extension is drafted with USER/PASS, SASL PLAIN (<a href="https://tools.ietf.org/html/rfc4616">RFC-4616</a>)
+and SASL <a href="https://nimble.directory/pkg/scram">SCRAM</a> <a href="https://tools.ietf.org/html/rfc5802">RFC-5802</a> (missing user database yet!)</li>
+<li>
+structure, control messages, not implemented at all except
+very basic parsing of headers and body following mostly <a href="https://tools.ietf.org/html/rfc822">RFC-822</a> <a href="https://tools.ietf.org/html/rfc2822">RFC-2822</a>
+and <a href="https://tools.ietf.org/html/rfc5322">RFC-5322</a></li>
+<li><a href="https://tools.ietf.org/html/rfc2919">RFC-2919</a> and <a href="https://tools.ietf.org/html/rfc2369">RFC-2369</a>: List-Id and other List headers on feed email list</li>
+<li><a href="https://tools.ietf.org/html/rfc2033">RFC-2033</a> (LMTP), <a href="https://tools.ietf.org/html/rfc821">RFC-821</a>, <a href="https://tools.ietf.org/html/rfc1869">RFC-1869</a> (SMTP and ESMTP)</li>
+<li><a href="https://tools.ietf.org/html/rfc2047">RFC-2047</a> encoded words</li>
+</ul>
+<h2>Goals</h2>
+<ul>
+<li>
+<p>Newsgroup server which can serve as a backend to Web UI as well as public
+server for classic clients</p>
+</li>
+<li>
+<p>Open federation with other servers using SMTP as transfer protocol between
+instances using e-mail subscriptions</p>
+</li>
+<li>
+<p>Handles authentication so only verified accounts and verified e-mail address
+can POST messages, ensuring that there is no abuse</p>
+</li>
+</ul>
+<h2>Architecture</h2>
+<p>NimNews works with a SMTP server to handle:</p>
+<ul>
+<li>outgoing e-mail feed subscriptions</li>
+<li>outgoing e-mail password notification (to mail password to users)</li>
+<li>incoming e-mail feed (to post to group <code>alt.xyz</code> from e-mail
+<code>group-alt.xyz@fqdn.example.net</code>)</li>
+</ul>
+<p>Connection is performed using standard LMTP.</p>
+<pre>  <code>     ,---(feed)---------&gt; [Remote nimnews]
+     |
+     |
+     v
+[SMTP server] &lt;-----&gt; [SMTP] &lt;--------&gt; [Mail User Agent]
+  ^      |
+  |      |
+  |      v
+,--+---[LMTP]---.
+|               |
+|    nimnews    | &lt;-------------------&gt; [NNTP User Agent]
+|               |
+`---------------&apos;
+       ^
+       |
+       v
+    [SQLite]
+</code></pre>
+<h2>TODO</h2>
+<ul>
+<li>
+<p>[ ] Do not mangle Form header if DMARC is not enabled on the author domain</p>
+</li>
+<li>
+<p>[ ] Handle user permission, only allow posting if the From header matches the user
+name</p>
+</li>
+<li>
+<p>[ ] Handle authentication when feeding messages (the sending server should tell
+the receiving one that the newsgroup came from itself and not some random
+party, could be via specific DKIM)</p>
+</li>
+<li>
+<p>[ ] Handle NimNews issuing <code>FEED EMAIL</code> commands to servers it wants to receive
+feeds from (currently, the newsmaster has to do this manually)</p>
+</li>
+<li>
+<p>[ ] Add <code>console</code> command to CLI where NNTP prompt is provided in admin mode.
+useful to manage subscriptions and accounts.</p>
+</li>
+<li>
+<p>[ ] Include the SMTP server, probably as a process spawned from NimNews.</p>
+</li>
+<li>
+<p>[ ] Be binary safe, end line markers are probably to blame here.</p>
+</li>
+</ul>
+<h3>More ideas</h3>
+<ul>
+<li>
+<p>HTTP interface to handle the registering and log-in process by e-mail. It
+might just be NimNews getting the NewsWeb domain name and integrating it with
+e-mails that are sent for login. Do not reuse the password sent by e-mail and
+invalidate them.</p>
+</li>
+<li>
+<p>Handle private groups</p>
+<ul>
+<li>Initial message with specific control header creates the group</li>
+<li>To belong to the group, a message must have a specific header with the
+initial group message-id. LMTP can receive mail for a group and generate
+this header.</li>
+<li>Private groups are only accessible to their members</li>
+<li>Groups are not encrypted (for now)</li>
+<li>Control messages can add new members or remove members</li>
+</ul>
+</li>
+<li>
+<p>Secure messages</p>
+<ul>
+<li>Each user is associated with keypairs</li>
+<li>Private groups have a keypair</li>
+<li>Members of the private groups have the group private key</li>
+<li>Messages are encrypted with the group key, except some headers (the group
+idenifying header, the Path header, the message-id, group public key)</li>
+<li>Group messages are signed by the sending member key</li>
+<li>Servers do not have access to group membership and clients must advertise
+to the server the public group keys they wish to have access to</li>
+<li>Banning a user works by changing the private key of a group but not
+notifying the banned user of the new key. The new key is encrypted for all
+non-banned users.</li>
+</ul>
+</li>
+<li>
+<p>Summarizing NNTP server</p>
+<ul>
+<li>A separate server that gets feed from a classic NimNews server</li>
+<li>Can have the private keys to some groups it needs to access</li>
+<li>Takes all messages in groups and present them better
+<ul>
+<li>Provides summary of current members in private groups by collecting
+all control messages</li>
+<li>Adds headers to existing messages to mark reactions (votes, emotes)</li>
+</ul>
+</li>
+<li>Can be configured to follow a specific moderator, and removes moderated
+content</li>
+</ul>
+</li>
+</ul>
+<h2>Build</h2>
+<pre>  <code>nimble install -d
+nimble c src/nimnews
+</code></pre>
+<p>This will compile with <code>-d:ssl</code>, compiling without it might work but is not well
+tested.</p>
+<h2>Run</h2>
+<p>Try it out:</p>
+<pre>  <code>./gen-cert.sh
+./run-exim.sh
+./run-nimnews.sh
+</code></pre>
+<p>Options are:</p>
+<pre>  <code>Nimnews is a simple newsgroup NNTP server
+
+Usage: nimnews [options]
+
+Options:
+  -h, --help            Print help
+  -p, --port &lt;port&gt;     Specify a different port [default: 119]
+  -d, --db &lt;file&gt;       Database file [default: ./nimnews.sqlite]
+  -f, --fqdn &lt;fqdn&gt;     Fully qualified domain name
+  -s, --secure          Indicates that the connection is already encrypted
+  --admin               Indicates that every anonymous user is admin
+  --log                 Log traffic
+  --smtp &lt;server&gt;       Address of SMTP server to send e-mails
+  --smtp-port &lt;port&gt;    Port to connect to the SMTP server [default: 25]
+  --smtp-login &lt;login&gt;  Login for SMTP server
+  --smtp-pass &lt;pass&gt;    Password for SMTP server
+  --smtp-sender &lt;email&gt; Email address to send e-mails as
+  --smtp-debug          Debug SMTP
+  --lmtp-port &lt;port&gt;    Specify port for LMTP [default: 24]
+  --lmtp-addr &lt;addr&gt;    Specify listen address for LMTP [default: 127.0.0.1]
+  --lmtp-socket &lt;file&gt;  Socket file for LMTP
+  --tls-port &lt;port&gt;     Port number for NNTPS [default: 563]
+  --cert &lt;pemfile&gt;      PEM certificate for STARTTLS
+  --skey &lt;pemfile&gt;      PEM secret key for STARTTLS
+</code></pre>
+<h1>NewsWeb web interface</h1>
+<p>This package also contains the newsweb web interface that is a forum interface
+for the Web designed to work with nimnews.</p>
+<h2>Build</h2>
+<pre>  <code>nim c -d:ssl src/web/newsweb
+</code></pre>
+<h2>Run</h2>
+<pre>  <code>./run-newsweb.sh
+</code></pre>
+<h1>X-NIMNEWS Extension</h1>
+<p>Nimnews advertise <code>X-NIMNEWS</code> extension with the following commands:</p>
+<h2>FEED EMAIL</h2>
+<p>Syntax: <code>FEED EMAIL [LIST] &lt;hello@example.net&gt; [WILDMAT [&lt;site-id&gt;]]</code></p>
+<p>The feed command registers a new feed using e-mail. A feed is a link with
+another system happening over e-mail using the provided e-mail address. If the
+<code>LIST</code> keyword is present, then mailing-list style distribution is assumed with
+list headers. mailing-list distribution might mangle the <code>From</code> header to pass
+DMARC.</p>
+<p>A site-id may be specified, instructing not to feed articles that contains this
+id in the <code>Path</code> header.</p>
+<p>An optional <code>WILDMAT</code> parameter can be specified. The wildmat pattern would
+match groups that need feeding. if not specified, only the current group will be
+fed.</p>
+<p>Feeds may be cancelled by the system any time, but should not do so without
+notification, unless there is delivery errors.</p>
+<p>To be accepted, the user must be logged-in and the provided e-mail address must
+be accepted for the given user. If the user is administrator, all addresses are
+accepted. If the user e-mail matches <a href="https://tools.ietf.org/html/rfc2142">RFC-2142</a> <code>postmaster@*</code>, <code>usenet@*</code>,
+<code>news@*</code>, every e-mail within that domain is allowed in the <code>FEED EMAIL</code>
+command. Else, only the user e-mail is allowed.</p>
+<p>Responses:</p>
+<ul>
+<li><code>290 &lt;num&gt;</code> Feed registered</li>
+<li><code>412</code> No selected group if wildmat is not defined and no group is selected</li>
+<li><code>480</code> Disallowed (user not matching address, not registered or not admin)</li>
+</ul>
+<h2>LIST FEEDS</h2>
+<p>Return a list of feeds registered by the current user. The list is formatted as
+follows:</p>
+<pre>  <code>&lt;num&gt; EMAIL &lt;email@example.net&gt; &lt;wildmat-or-group&gt; &lt;site-id&gt;
+</code></pre>
+<p>Responses:</p>
+<ul>
+<li><code>295</code> List follows</li>
+<li><code>480</code> User not registered</li>
+</ul>
+<h2>STOP FEED</h2>
+<p>Syntax: <code>FEED STOP &lt;num&gt;</code></p>
+<p>Stop a given feed (removing it)</p>
+<p>Responses:</p>
+<ul>
+<li><code>290</code> Feed stopped</li>
+<li><code>490</code> No such feed</li>
+<li><code>480</code> User not registered</li>
+</ul>
+<h2>LIST USERS</h2>
+<p>Return a list of users registered on the system. This is intended for
+interactive use and the list format is not defined.</p>
+<p>Responses:</p>
+<ul>
+<li><code>295</code> List follows</li>
+<li><code>480</code> Disallowed unless the user is administrator</li>
+</ul>
+<h2>AUTHINFO X-LOGIN</h2>
+<p>Syntax: <code>AUTHINFO X-LOGIN</code></p>
+<p>Tells the server that this is a login attempt with valid credentials.
+Credentials should not be reset upon authentication failure. This should be
+followed by another <code>AUTHINFO</code> command.</p>
+<p>Responses:</p>
+<ul>
+<li><code>381</code> Continue with login attempt</li>
+</ul>
+<h2>AUTHINFO X-REGISTER</h2>
+<p>Syntax: <code>AUTHINFO X-REGISTER &lt;email&gt;</code></p>
+<p>Tells the server that this is a register/recovery attempt for the given e-mail
+address. Credentials should be sent to this address for future login.</p>
+<p>Responses:</p>
+<ul>
+<li><code>381</code> Registration in progress</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        GPL-3.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/mildred/nimnews">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">scorper</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">web</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">micro</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">framework</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("micro and elegant web framework")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install scorper" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>SCORPER  <img src="https://github.com/bung87/scorper/workflows/Test/badge.svg" style="max-width: 100%;" alt="Build Status" /></h1>
+<p>  <img src="artwork/scorper.png" style="max-width: 100%;" alt="scorper" /></p>
+<p>  <strong>Elegant, performant, asynchronous micro web framework written in Nim</strong></p>
+<p>Built using <a href="https://github.com/status-im/nim-chronos.git">chronos</a> and other powerful libraries.</p>
+<p><strong>Note</strong>: <code>scorper</code> is built using <code>chronos</code> which implements an <code>async</code>/<code>await</code> paradigm that is, at its core, different and therefore incompatible with the nim std library <code>asyncdispatch</code>&apos;s <code>async</code>; this conflict is irresolvable and you will have to ensure your project dependencies support chronos async/await (note: many libraries do offer this, often using a compiler switch).</p>
+<blockquote>
+<p><code>scorper</code> will self contain manageable dependency source code for accelerated development.</p>
+</blockquote>
+<h2>Compiler flags</h2>
+<h3>-ssl</h3>
+<p>Compile with: <code>-d:ssl</code></p>
+<p>Then, using the proc <code>newScorper</code>, you will need to pass <code>isSecurity = true</code>,<code>privateKey</code>, <code>certificate</code></p>
+<h3>Other</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">GzipEnable</span> {<span class="op">.</span><span class="ide">booldefine</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">true</span> </div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">HttpRequestBufferSize</span><span class="op">*</span> {<span class="op">.</span><span class="ide">intdefine</span><span class="op">.</span>} <span class="op">=</span> <span class="num">2.</span><span class="ide">Kb</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">HttpServer</span> {<span class="op">.</span><span class="ide">strdefine</span><span class="op">.</span>} <span class="op">=</span> <span class="str">&quot;scorper&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">TimeOut</span> {<span class="op">.</span><span class="ide">intdefine</span><span class="op">.</span>} <span class="op">=</span> <span class="num">300</span> <span class="com"># in seconds  </span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">HttpHeadersLength</span><span class="op">*</span> {<span class="op">.</span><span class="ide">intdefine</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">int</span>(<span class="ide">HttpRequestBufferSize</span> <span class="op">/</span> <span class="num">32</span>) </div></div><div class="line"><div class="line-content"><span class="com"># 32 is sizeof MofuHeader</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">gzipMinLength</span><span class="op">*</span> {<span class="op">.</span><span class="ide">intdefine</span><span class="op">.</span>} <span class="op">=</span> <span class="num">20</span></div></div>  </code></pre>
+<h2>Usage</h2>
+<p>details see here <a href="./USAGE.md">usage</a></p>
+<h3>hello world</h3>
+<h3><code>serve</code> with callback</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">scorper</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">port</span>{<span class="op">.</span><span class="ide">intdefine</span><span class="op">.</span>} <span class="op">=</span> <span class="num">8888</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cb</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## See Request type to see fields accessible by callbacks</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">headers</span> <span class="op">=</span> {<span class="str">&quot;Content-type&quot;</span>: <span class="str">&quot;text/plain&quot;</span>}</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">resp</span>(<span class="str">&quot;Hello, World!&quot;</span>, <span class="ide">headers</span><span class="op">.</span><span class="ide">newHttpHeaders</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">address</span> <span class="op">=</span> <span class="str">&quot;127.0.0.1:&quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">port</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">serve</span>(<span class="ide">address</span>, <span class="ide">cb</span>)</div></div><div class="line"><div class="line-content">  <span class="com">## waitFor is a chronos implementation</span></div></div><div class="line"><div class="line-content">  <span class="com">## See chronos for options around executing async procs</span></div></div>  </code></pre>
+<h3><code>newScorper</code> with router or callback</h3>
+<!-- -
+Requires a more specific example aimed specifically at introducing router;
+simultaneous introduction of the serve static and flags {ReuseAddr} require
+documentation/explanation
+- -->
+<!-- -
+neatify example
+- -->
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">newRouter</span>[<span class="ide">ScorperCallback</span>]()</div></div><div class="line"><div class="line-content">  <span class="com"># Relys on `StaticDir` environment variable</span></div></div><div class="line"><div class="line-content">  <span class="ide">r</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="ide">serveStatic</span>, <span class="str">&quot;get&quot;</span>, <span class="str">&quot;/static/*$&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">address</span> <span class="op">=</span> <span class="str">&quot;127.0.0.1:8888&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">flags</span> <span class="op">=</span> {<span class="ide">ReuseAddr</span>}</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newScorper</span>(<span class="ide">address</span>, <span class="ide">r</span>, <span class="ide">flags</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">server</span><span class="op">.</span><span class="ide">start</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">server</span><span class="op">.</span><span class="ide">join</span>()</div></div>  </code></pre>
+<h3>use <code>route</code> pragma</h3>
+<!-- -
+Chore: requires better documentation and explanation
+- -->
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handler</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">route</span>(<span class="str">&quot;get&quot;</span>,<span class="str">&quot;/one&quot;</span>),<span class="ide">async</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handler2</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">route</span>([<span class="str">&quot;get&quot;</span>,<span class="str">&quot;post&quot;</span>],<span class="str">&quot;/multi&quot;</span>),<span class="ide">async</span><span class="op">.</span>} <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">newRouter</span>[<span class="ide">ScorperCallback</span>]()</div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="ide">handler</span>)</div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">addRoute</span>(<span class="ide">handler2</span>)</div></div>  </code></pre>
+<h4>use <code>route</code> with <code>mount</code> macro</h4>
+<!-- -
+Chore: requires better documentation and explanation
+- -->
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="op">./</span><span class="ide">my_controler</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">r</span> <span class="op">=</span> <span class="ide">newRouter</span>[<span class="ide">ScorperCallback</span>]()</div></div><div class="line"><div class="line-content"><span class="ide">r</span><span class="op">.</span><span class="ide">mount</span>(<span class="ide">my_controler</span>)</div></div>  </code></pre>
+<h3>responds depends on request mime</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">scorper</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cb</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">headers</span> <span class="op">=</span> <span class="ide">newHttpHeaders</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">acceptMime</span>(<span class="ide">req</span>, <span class="ide">ext</span>, <span class="ide">headers</span>):</div></div><div class="line"><div class="line-content">    <span class="com">## The template will automatically define the second parameter</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">ext</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;html&quot;</span>: <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">resp</span>(<span class="str">&quot;Hello World&quot;</span>, <span class="ide">headers</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;txt&quot;</span>: <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">resp</span>(<span class="str">&quot;Hello World&quot;</span>, <span class="ide">headers</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">headers</span>[<span class="str">&quot;Content-Type&quot;</span>] <span class="op">=</span> <span class="str">&quot;text/html&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">resp</span>(<span class="str">&quot;Hello World&quot;</span>, <span class="ide">headers</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">address</span> <span class="op">=</span> <span class="str">&quot;127.0.0.1:8888&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">waitFor</span> <span class="ide">serve</span>(<span class="ide">address</span>, <span class="ide">cb</span>)</div></div>  </code></pre>
+<h3>Middleware</h3>
+<!-- -
+Chore: include a bit more 
+- -->
+<p>Middleware can be implemented by importing <code>scorper/scorpermacros</code> (the import and definition of your middleware procedures <strong>MUST</strong> occur before importing scorper; see the note labeled <em>IMPORTANT</em> below)</p>
+<blockquote>
+<h4>preMiddleware</h4>
+<p>Procedure that is injected after the Request object fields are filled but BEFORE your callback.</p>
+<h4>postMiddleware</h4>
+<p>Procedure that is injected AFTER your callback (and therefore after your <em>response</em>).</p>
+</blockquote>
+<h4>Declaring middleware:</h4>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">scorper</span><span class="op">/</span><span class="ide">scorpermacros</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">middleWare</span>(<span class="ide">req</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">bool</span>] {<span class="op">.</span><span class="ide">async</span>, <span class="ide">postMiddleware</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## Do things here</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">  <span class="com">## return false to prevent calling the next middleware</span></div></div>  </code></pre>
+<p>Middleware procedures return <code>bool</code> to indicate whether to continue the call-chain to the next middleware.</p>
+<p>see <a href="tests/tmiddleware.nim">tmiddleware.nim</a> for more</p>
+<h2>Types</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Request</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">meth</span><span class="op">*:</span> <span class="ide">HttpMethod</span></div></div><div class="line"><div class="line-content">    <span class="ide">headers</span><span class="op">*:</span> <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content">    <span class="ide">protocol</span><span class="op">*:</span> <span class="kwd">tuple</span>[<span class="ide">major</span>, <span class="ide">minor</span>: <span class="ide">int</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">url</span><span class="op">*:</span> <span class="ide">Url</span></div></div><div class="line"><div class="line-content">    <span class="ide">path</span><span class="op">*:</span> <span class="ide">string</span>              <span class="com"># http req path</span></div></div><div class="line"><div class="line-content">    <span class="ide">hostname</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">ip</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">params</span><span class="op">*:</span> <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">string</span>]</div></div><div class="line"><div class="line-content">    <span class="ide">query</span><span class="op">*:</span> <span class="ide">seq</span>[(<span class="ide">string</span>, <span class="ide">string</span>)]</div></div><div class="line"><div class="line-content">  <span class="ide">ScorperCallback</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">closure</span>, <span class="ide">gcsafe</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">  <span class="ide">Scorper</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span> <span class="kwd">of</span> <span class="ide">StreamServer</span></div></div><div class="line"><div class="line-content">    <span class="com"># inherited (partial)</span></div></div><div class="line"><div class="line-content">    <span class="ide">sock</span><span class="op">*:</span> <span class="ide">AsyncFD</span>                <span class="com"># Socket</span></div></div><div class="line"><div class="line-content">    <span class="ide">local</span><span class="op">*:</span> <span class="ide">TransportAddress</span>      <span class="com"># Address</span></div></div><div class="line"><div class="line-content">    <span class="ide">status</span><span class="op">*:</span> <span class="ide">ServerStatus</span>         <span class="com"># Current server status</span></div></div><div class="line"><div class="line-content">    <span class="ide">flags</span><span class="op">*:</span> <span class="ide">set</span>[<span class="ide">ServerFlags</span>]      <span class="com"># Flags</span></div></div><div class="line"><div class="line-content">    <span class="ide">errorCode</span><span class="op">*:</span> <span class="ide">OSErrorCode</span></div></div><div class="line"><div class="line-content">  <span class="ide">MiddlewareProc</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">proc</span> (<span class="ide">req</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">bool</span>]</div></div>  </code></pre>
+<h2>Error handling &amp; Exception effects</h2>
+<p>As <a href="https://github.com/bung87/scorper">  <code>scorper</code></a> make use of <a href="https://github.com/status-im/nim-chronos">  <code>chronos</code></a> for asynchronous procedures, the handling of errors and exceptions within this paradigm are of relevance.</p>
+<blockquote>
+<p><code>chronos</code> currently offers minimal support for exception effects and <code>raises</code>
+annotations. In general, during the <code>async</code> transformation, a generic
+<code>except CatchableError</code> handler is added around the entire function being
+transformed, in order to catch any exceptions and transfer them to the <code>Future</code>.</p>
+<p>Effectively, this means that while code can be compiled with
+<code>{.push raises: [Defect]}</code>, the intended effect propagation and checking is
+<strong>disabled</strong> for <code>async</code> functions.</p>
+<p>To enable checking exception effects in <code>async</code> code, enable strict mode with
+<strong>  <code>-d:chronosStrictException</code></strong>.</p>
+<p>In the strict mode, <code>async</code> functions are checked such that they only raise
+<code>CatchableError</code> and thus must make sure to explicitly specify exception
+effects on forward declarations, callbacks and methods using
+<code>{.raises: [CatchableError].}</code> (or more strict) annotations.</p>
+</blockquote>
+<p>See <code>chronos</code> <a href="https://github.com/status-im/nim-chronos#error-handling">#Error handling</a> for more details.</p>
+<p>Use <code>-d:chronosStrictException</code> to enable strict mode as explained above.</p>
+<h2>Todos</h2>
+<ul>
+<li>[ ] Parse JSON streamingly.</li>
+<li>[ ] CLI tool generate object oriented controller and routes.</li>
+<li>[x] Parse http request streamingly.</li>
+<li>[x] Parse form streamingly and lazyly.</li>
+<li>[x] Send file and attachement streamingly.</li>
+<li>[x] Http Basic auth, Bearer auth , Digest auth(planed).</li>
+<li>[x] Serve static files (env:StaticDir)</li>
+<li>[x] Parse JSON lazyly.</li>
+<li>[x] cookies module.</li>
+<li>[x] Better error control flow.</li>
+<li>[x] Auto render response respect client accepted content (acceptMime macro)type.</li>
+<li>[x] Chuncked file upload handle for large file.</li>
+<li>[x] https support</li>
+<li>[x] handle Resumable upload</li>
+</ul>
+<h2>Contribution</h2>
+<p>check Todo list upon and <a href="https://github.com/bung87/scorper/issues">issues</a></p>
+<p>clone this repository, run <code>nimble install stage</code> , if you already have <code>stage</code> installed, run <code>stage init</code><br />
+<code>stage</code> is used for integrating with git commit hook, doing checking and code formatting.</p>
+<h2>Benchmark</h2>
+<p>requires <code>wrk</code></p>
+<p><code>nimble benchmark</code><br />
+<code>nimble benchmarkserver</code></p>
+<h3>Report</h3>
+<p>runs on my MBP Dual-Core Intel Core i5 2.7 GHz ,8 GB memory.<br />
+scorper: <code>1.0.2</code><br />
+chronos: <code>3.0.1</code><br />
+nim version: <code>1.5.1</code>, <code>1.4.4</code></p>
+<pre>  <code>Running 30s test @ http://127.0.0.1:8888/
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.51ms    1.00ms  66.66ms   92.16%
+    Req/Sec     7.15k   518.66    10.94k    85.67%
+  854619 requests in 30.05s, 93.73MB read
+Requests/sec:  28441.14
+Transfer/sec:      3.12MB
+</code></pre>
+<h3>Conclusion</h3>
+<p><em>Scorper</em> is almost ten thousands faster than <code>jester</code> with stdlib.  It is even a thousand times faster than <code>asynchttpserver</code></p>
+<h2>Misc features/limitations</h2>
+<p>The <code>mofuparser</code> use <code>SIMD</code> which relys on cpu support <code>SSE</code> or <code>AVX</code> instructions</p>
+<h2>Related projects</h2>
+<p><a href="https://github.com/bung87/amysql">amysql</a>  Async MySQL Connector write in pure Nim. (support chronos with compile flag <code>-d:ChronosAsync</code>)</p>
+<h2>License</h2>
+<p>Apache License 2.0</p>
+<p>The Scorper logo was created and released to the Scorper project under the CC BY-SA 4.0 by <a href="https://ITwrx.org">https://ITwrx.org</a> and <a href="https://LuciusRafi.com">https://LuciusRafi.com</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/bung87/scorper">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

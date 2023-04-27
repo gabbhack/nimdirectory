@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">shimsham</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">crypto</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hash</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hashing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">digest</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Hashing/Digest collection in pure Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install shimsham" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>ShimSham</h1>
+<p>ShimSham is a <a href="http://www.nim-lang.org">Nim</a> module to encompass several different digest/hashing algorithms. So far included are</p>
+<ul>
+<li>  <a href="https://en.wikipedia.org/wiki/JH_%28hash_function%29">JH</a></li>
+<li>  <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-2</a></li>
+<li>  <a href="https://en.wikipedia.org/wiki/SHA-3">SHA-3</a></li>
+<li>  <a href="http://en.wikipedia.org/wiki/SipHash">SipHash</a></li>
+<li>  <a href="https://en.wikipedia.org/wiki/Tiger_%28cryptography%29">Tiger</a></li>
+<li>  <a href="https://en.wikipedia.org/wiki/Whirlpool_%28cryptography%29">Whirlpool</a></li>
+</ul>
+<p>There will be more soon, as well as a common hashing interface.</p>
+<p>Using the Tiger hash as an example, here&apos;s how you get hashes:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">shimsham</span><span class="op">/</span><span class="ide">tiger</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">tiger</span>(<span class="str">&quot;&quot;</span>) <span class="com"># gives &quot;24f0130c63ac933216166e76b1bb925ff373de2d49584e7a&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">tiger</span>(<span class="str">&quot;abc&quot;</span>) <span class="com"># gives &quot;f258c1e88414ab2a527ab541ffc5b8bf935f7b951c132951&quot;</span></div></div>  </code></pre>
+<p>The other hashes work in the same way. The <em>whirlpool</em> module provides the <code>whirlpool</code> function. The <em>sha512</em> module provides <code>sha512</code> and <code>sha384</code>. The <em>sha256</em> module provides <code>sha256</code> and <code>sha224</code>.</p>
+<p>You can get more fine-tuned control with the following type of code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">shimsham</span><span class="op">/</span><span class="ide">sha256</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">message</span> <span class="op">=</span> <span class="str">&quot;My message to hash&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">m</span> <span class="op">=</span> <span class="ide">initSha256</span>(<span class="ide">message</span>) <span class="com"># initializes a `Sha256` object with `message`</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">m</span> <span class="com"># gives &quot;aefd1872a4eb24a79a1e727aa8c41ebde794451c0ca89a0e3abe82e45a477afc&quot;</span></div></div>  </code></pre>
+<p>You can also use <code>initSha224</code> if that&apos;s what you want.</p>
+<p><code>initSha384</code> and <code>initSha512</code> are available in the sha512 module.</p>
+<p><code>initWhirlpool</code> works in the same way.</p>
+<p>Unfortunately, the Tiger module doesn&apos;t support this yet (it also has some various weird problems, which you&apos;ll see if you walk through the code).</p>
+<h2>SipHash</h2>
+<p>SipHash works a little differently. It always outputs a hash that Nim treats as a <code>uint64</code>. It uses two <code>uint64</code> keys for input. You can do this directly using <code>initSipState(k0,k1)</code> where <code>k0</code> and <code>k1</code> are your <code>uint64</code>s, or you can input a long hex string directly (like <code>initSipState(&quot;A8FC63780FB3BA3CA39580EEC5CB43B1&quot;)</code>). After you have your state, you can update your message in various ways using <code>input()</code>. If you want to use a hex string for your message, too, you can do that.</p>
+<p>Really, though, for SipHash, the easiest thing to do is to use the convenience functions <code>siphash*</code> where the <code>*</code> represents <code>24</code> or <code>48</code> for SipHash-2-4 and SipHash-4-8 (slower but more secure). Or you can specify your own SipHash-c-d values with <code>siphash</code>.</p>
+<p>All you need to do then is something like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">siphash24</span>(<span class="str">&quot;A8FC63780FB3BA3CA39580EEC5CB43B1&quot;</span>,<span class="str">&quot;6018B63E6DBF9B&quot;</span>) <span class="com"># gives &quot;701bdf2ea1c82585&quot;</span></div></div>  </code></pre>
+<h2>JH</h2>
+<p>JH is the first SHA-3 finalist to be included here. It is usable by <code>import</code>-ing <code>shimsham/jh_simple</code>. (&quot;Simple&quot; is a reference to the fact that there could be some assembly support added in the future.)</p>
+<h2>Skein</h2>
+<p>Skein is the second SHA-3 finalist to be added to ShimSham. It is also much more complex than most other modules. I haven&apos;t yet had time to document all parameters, but this is based off the wonderful <a href="https://github.com/wernerd/Skein3Fish">Skein3Fish</a>, so you can learn more there. The simple function is <code>skein()</code>, which takes in different options. For example, to compute a Skein-256, with a hash length of 256, of an empty message, you can do:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">shimsham</span><span class="op">/</span><span class="ide">skein</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">skein</span>(<span class="num">256</span>, <span class="num">256</span>, []) <span class="com"># @[0xc8,0x87,0x70,0x87,0xda,0x56,0xe0,0x72,</span></div></div><div class="line"><div class="line-content">                         <span class="com">#   0x87,0x0d,0xaa,0x84,0x3f,0x17,0x6e,0x94,</span></div></div><div class="line"><div class="line-content">                         <span class="com">#   0x53,0x11,0x59,0x29,0x09,0x4c,0x3a,0x40,</span></div></div><div class="line"><div class="line-content">                         <span class="com">#   0xc4,0x63,0xa1,0x96,0xc2,0x9b,0xf7,0xba]</span></div></div>  </code></pre>
+<p>Since Skein is based off ThreeFish, you get Threefish as a bonus. It&apos;s located inside the <code>skein</code> directory, but it&apos;s not really intended to be part of ShimSham. Nevertheless, if you want, it&apos;s there.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/apense/shimsham">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

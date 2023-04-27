@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">weave</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multithreading</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parallelism</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">task-scheduler</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">scheduler</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">runtime</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">task-parallelism</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data-parallelism</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">threadpool</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("a state-of-the-art multithreading runtime")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install weave" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Weave, a state-of-the-art multithreading runtime</h1>
+<p><a href="https://github.com/mratsim/weave/actions?query=workflow%3A%22Weave+CI%22+branch%3Amaster">  <img src="https://github.com/mratsim/weave/workflows/Weave%20CI/badge.svg" style="max-width: 100%;" alt="Github Actions CI" /></a><br />
+<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /></p>
+<p><em>&quot;Good artists borrow, great artists steal.&quot;</em> -- Pablo Picasso</p>
+<p>Weave (codenamed &quot;Project Picasso&quot;) is a multithreading runtime for the <a href="https://nim-lang.org/">Nim programming language</a>.</p>
+<p>It is continuously tested on Linux, MacOS and Windows for the following CPU architectures: x86, x86_64 and ARM64 with the C and C++ backends.</p>
+<p>Weave aims to provide a composable, high-performance, ultra-low overhead and fine-grained parallel runtime that frees developers from the common worries of
+&quot;are my tasks big enough to be parallelized?&quot;, &quot;what should be my grain size?&quot;, &quot;what if the time they take is completely unknown or different?&quot; or &quot;is parallel-for worth it if it&apos;s just a matrix addition? On what CPUs? What if it&apos;s exponentiation?&quot;.</p>
+<p>Thorough benchmarks track Weave performance against industry standard runtimes in C/C++/Cilk language on both Task parallelism and Data parallelism with a variety of workloads:</p>
+<ul>
+<li>Compute-bound</li>
+<li>Memory-bound</li>
+<li>Load Balancing</li>
+<li>Runtime-overhead bound (i.e. trillions of tasks in a couple milliseconds)</li>
+<li>Nested parallelism</li>
+</ul>
+<p>Benchmarks are issued from recursive tree algorithms, finance, linear algebra and High Performance Computing, game simulations.
+In particular Weave displays as low as 3x to 10x less overhead than Intel TBB and GCC OpenMP
+on overhead-bound benchmarks.</p>
+<p>At implementation level, Weave unique feature is being-based on Message-Passing
+instead of being based on traditional work-stealing with shared-memory deques.</p>
+<blockquote>
+<p>⚠️ Disclaimer:</p>
+<p>Only 1 out of 2 complex synchronization primitives was formally verified
+to be deadlock-free. They were not submitted to an additional data race
+detection tool to ensure proper implementation.</p>
+<p>Furthermore worker threads are state-machines and
+were not formally verified either.</p>
+<p>Weave does limit synchronization to only simple SPSC and MPSC channels which greatly reduces
+the potential bug surface.</p>
+</blockquote>
+<h2>Installation</h2>
+<p>Weave can be simply installed with</p>
+<pre>  <code class="language-bash">nimble install weave
+</code></pre>
+<p>or for the devel version</p>
+<pre>  <code class="language-bash">nimble install weave@#master
+</code></pre>
+<p>Weave requires at least Nim v1.2.0</p>
+<h2>Changelog</h2>
+<p>The latest changes are available in the <img src="changelog.md" style="max-width: 100%;" alt="changelog.md" />file.</p>
+<h2>Demos</h2>
+<p>A raytracing demo is available, head over to <a href="demos/raytracing">demos/raytracing</a>.</p>
+<p>  <img src="demos/raytracing/ray_trace_300samples_nim_threaded.png" style="max-width: 100%;" alt="ray_trace_300samples_nim_threaded.png" /></p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#weave-a-state-of-the-art-multithreading-runtime">Weave, a state-of-the-art multithreading runtime</a>
+<ul>
+<li>  <a href="#installation">Installation</a></li>
+<li>  <a href="#changelog">Changelog</a></li>
+<li>  <a href="#demos">Demos</a></li>
+<li>  <a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#api">API</a>
+<ul>
+<li>  <a href="#task-parallelism">Task parallelism</a></li>
+<li><a href="#data-parallelism">Data parallelism</a>
+<ul>
+<li>  <a href="#strided-loops">Strided loops</a></li>
+</ul>
+</li>
+<li><a href="#complete-list">Complete list</a>
+<ul>
+<li>  <a href="#root-thread">Root thread</a></li>
+<li>  <a href="#weave-worker-thread">Weave worker thread</a></li>
+<li>  <a href="#foreign-thread--background-service-experimental">Foreign thread &amp; Background service (experimental)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#platforms-supported">Platforms supported</a>
+<ul>
+<li>  <a href="#c-compilation">C++ compilation</a></li>
+<li>  <a href="#windows-32-bit">Windows 32-bit</a></li>
+<li>  <a href="#resource-restricted-devices">Resource-restricted devices</a></li>
+</ul>
+</li>
+<li><a href="#backoff-mechanism">Backoff mechanism</a>
+<ul>
+<li>  <a href="#weave-using-all-cpus">Weave using all CPUs</a></li>
+</ul>
+</li>
+<li><a href="#experimental-features">Experimental features</a>
+<ul>
+<li><a href="#data-parallelism-experimental-features">Data parallelism (experimental features)</a>
+<ul>
+<li>  <a href="#awaitable-loop">Awaitable loop</a></li>
+<li>  <a href="#parallel-for-staged">Parallel For Staged</a></li>
+<li>  <a href="#parallel-reduction">Parallel Reduction</a></li>
+</ul>
+</li>
+<li><a href="#dataflow-parallelism">Dataflow parallelism</a>
+<ul>
+<li>  <a href="#delayed-computation-with-single-dependencies">Delayed computation with single dependencies</a></li>
+<li>  <a href="#delayed-computation-with-multiple-dependencies">Delayed computation with multiple dependencies</a></li>
+<li>  <a href="#delayed-loop-computation">Delayed loop computation</a></li>
+</ul>
+</li>
+<li>  <a href="#lazy-allocation-of-flowvars">Lazy Allocation of Flowvars</a></li>
+</ul>
+</li>
+<li>  <a href="#limitations">Limitations</a></li>
+<li>  <a href="#statistics">Statistics</a></li>
+<li>  <a href="#tuning">Tuning</a></li>
+<li>  <a href="#unique-features">Unique features</a></li>
+<li>  <a href="#research">Research</a></li>
+<li>  <a href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+<h2>API</h2>
+<h3>Task parallelism</h3>
+<p>Weave provides a simple API based on spawn/sync which works like async/await for IO-based futures.</p>
+<p>The traditional parallel recursive Fibonacci would be written like this:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fib</span>(<span class="ide">n</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># int64 on x86-64</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">n</span> <span class="op">&lt;</span> <span class="num">2</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">n</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">spawn</span> <span class="ide">fib</span>(<span class="ide">n</span><span class="op">-</span><span class="num">1</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">y</span> <span class="op">=</span> <span class="ide">fib</span>(<span class="ide">n</span><span class="op">-</span><span class="num">2</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">sync</span>(<span class="ide">x</span>) <span class="op">+</span> <span class="ide">y</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">n</span> <span class="op">=</span> <span class="num">20</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">f</span> <span class="op">=</span> <span class="ide">fib</span>(<span class="ide">n</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">f</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h3>Data parallelism</h3>
+<p>Weave provides nestable parallel for loop.</p>
+<p>A nested matrix transposition would be written like this:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">initialize</span>(<span class="ide">buffer</span>: <span class="kwd">ptr</span> <span class="ide">UncheckedArray</span>[<span class="ide">float32</span>], <span class="ide">len</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="ide">len</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">buffer</span>[<span class="ide">i</span>] <span class="op">=</span> <span class="ide">i</span><span class="op">.</span><span class="ide">float32</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">transpose</span>(<span class="ide">M</span>, <span class="ide">N</span>: <span class="ide">int</span>, <span class="ide">bufIn</span>, <span class="ide">bufOut</span>: <span class="kwd">ptr</span> <span class="ide">UncheckedArray</span>[<span class="ide">float32</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## Transpose a MxN matrix into a NxM matrix with nested for loops</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">parallelFor</span> <span class="ide">j</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="ide">N</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">captures</span>: {<span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">bufIn</span>, <span class="ide">bufOut</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">parallelFor</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="ide">M</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">captures</span>: {<span class="ide">j</span>, <span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">bufIn</span>, <span class="ide">bufOut</span>}</div></div><div class="line"><div class="line-content">      <span class="ide">bufOut</span>[<span class="ide">j</span><span class="op">*</span><span class="ide">M</span><span class="op">+</span><span class="ide">i</span>] <span class="op">=</span> <span class="ide">bufIn</span>[<span class="ide">i</span><span class="op">*</span><span class="ide">N</span><span class="op">+</span><span class="ide">j</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">M</span> <span class="op">=</span> <span class="num">200</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">N</span> <span class="op">=</span> <span class="num">2000</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">input</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">float32</span>](<span class="ide">M</span><span class="op">*</span><span class="ide">N</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># We can&apos;t work with seq directly as it&apos;s managed by GC, take a ptr to the buffer.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">bufIn</span> <span class="op">=</span> <span class="kwd">cast</span>[<span class="kwd">ptr</span> <span class="ide">UncheckedArray</span>[<span class="ide">float32</span>]](<span class="ide">input</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">unsafeAddr</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">bufIn</span><span class="op">.</span><span class="ide">initialize</span>(<span class="ide">M</span><span class="op">*</span><span class="ide">N</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">output</span> <span class="op">=</span> <span class="ide">newSeq</span>[<span class="ide">float32</span>](<span class="ide">N</span><span class="op">*</span><span class="ide">M</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">bufOut</span> <span class="op">=</span> <span class="kwd">cast</span>[<span class="kwd">ptr</span> <span class="ide">UncheckedArray</span>[<span class="ide">float32</span>]](<span class="ide">output</span>[<span class="num">0</span>]<span class="op">.</span><span class="kwd">addr</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">transpose</span>(<span class="ide">M</span>, <span class="ide">N</span>, <span class="ide">bufIn</span>, <span class="ide">bufOut</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h4>Strided loops</h4>
+<p>You might want to use loops with a non unit-stride, this can be done with the following syntax.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># expandMacros:</span></div></div><div class="line"><div class="line-content"><span class="ide">parallelForStrided</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">100</span>, <span class="ide">stride</span> <span class="op">=</span> <span class="num">30</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">parallelForStrided</span> <span class="ide">j</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">200</span>, <span class="ide">stride</span> <span class="op">=</span> <span class="num">60</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">captures</span>: {<span class="ide">i</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">log</span>(<span class="str">&quot;Matrix[%d, %d] (thread %d)</span>\n<span class="str">&quot;</span>, <span class="ide">i</span>, <span class="ide">j</span>, <span class="ide">myID</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div>  </code></pre>
+<h3>Complete list</h3>
+<p>We separate the list depending on the threading context</p>
+<h4>Root thread</h4>
+<p>The root thread is the thread that started the Weave runtime. It has special privileges.</p>
+<ul>
+<li><code>init(Weave)</code>, <code>exit(Weave)</code> to start and stop the runtime. Forgetting this will give you nil pointer exceptions on spawn.<br />
+The thread that calls <code>init</code> will become the root thread.</li>
+<li><code>syncRoot(Weave)</code> is a global barrier. The root thread will not continue beyond
+until all tasks in the runtime are finished.</li>
+</ul>
+<h4>Weave worker thread</h4>
+<p>A worker thread is automatically created per (logical) core on the machine.
+The root thread is also a worker thread.
+Worker threads are tuned to maximize throughput of computational <strong>tasks</strong>.</p>
+<ul>
+<li>
+<p><code>spawn fnCall(args)</code> which spawns a function that may run on another thread and gives you an awaitable <code>Flowvar</code> handle.</p>
+</li>
+<li>
+<p><code>newFlowEvent</code>, <code>trigger</code>, <code>spawnOnEvent</code> and <code>spawnOnEvents</code> (experimental) to delay a task until some dependencies are met. This allows expressing precise data dependencies and producer-consumer relationships.</p>
+</li>
+<li>
+<p><code>sync(Flowvar)</code> will await a Flowvar and block until you receive a result.</p>
+</li>
+<li>
+<p><code>isReady(Flowvar)</code> will check if <code>sync</code> will actually block or return the result immediately.</p>
+</li>
+<li>
+<p><code>syncScope</code> is a scope barrier. The thread will not move beyond the scope until
+all tasks and parallel loops spawned and their descendants are finished.
+<code>syncScope</code> is composable, it can be called by any thread, it can be nested.
+It has the syntax of a block statement:</p>
+<pre>  <code class="language-Nim">syncScope():
+  parallelFor i in 0 ..&lt; N:
+    captures: {a, b}
+    parallelFor j in 0 ..&lt; N:
+      captures: {i, a, b}
+  spawn foo()
+</code></pre>
+<p>In this example, the thread encountering syncScope will create all the tasks for parallel loop i, will spawn foo() and then will be waiting at the end of the scope.
+A thread blocked at the end of its scope is not idle, it still helps processing all the work existing and that
+may be created by the current tasks.</p>
+</li>
+<li>
+<p><code>parallelFor</code>, <code>parallelForStrided</code>, <code>parallelForStaged</code>, <code>parallelForStagedStrided</code> are described above and in the experimental section.</p>
+</li>
+<li>
+<p><code>loadBalance(Weave)</code> gives the runtime the opportunity to distribute work. Insert this within long computation as due to Weave design, it&apos;s the busy workers that are also in charge of load balancing. This is done automatically when using <code>parallelFor</code>.</p>
+</li>
+<li>
+<p><code>isSpawned(Flowvar)</code> allows you to build speculative algorithm where a thread is spawned only if certain conditions are valid. See the <code>nqueens</code> benchmark for an example.</p>
+</li>
+<li>
+<p><code>getThreadId(Weave)</code> returns a unique thread ID. The thread ID is in the range 0 ..&lt; number of threads.</p>
+</li>
+</ul>
+<p>The max number of worker threads can be configured by the environment variable WEAVE_NUM_THREADS
+and default to your number of logical cores (including HyperThreading).
+Weave uses Nim&apos;s <code>countProcessors()</code> in <code>std/cpuinfo</code></p>
+<h4>Foreign thread &amp; Background service (experimental)</h4>
+<p>Weave can also be run as a background service and process <code>jobs</code> similar to the <code>Executor</code> concept in C++.
+Jobs will be processed in FIFO order.</p>
+<blockquote>
+<p><strong>Experimental</strong>:
+The distinction between spawn/sync on a Weave thread
+and submit/waitFor on a foreign thread may be removed in the future.</p>
+</blockquote>
+<p>A background service can be started with either:</p>
+<ul>
+<li>  <code>thr.runInBackground(Weave)</code></li>
+<li>or <code>thr.runInBackground(Weave, signalShutdown: ptr Atomic[bool])</code></li>
+</ul>
+<p>with <code>thr</code> an uninitialized <code>Thread[void]</code> or <code>Thread[ptr Atomic[bool]]</code></p>
+<p>Then the foreign thread should call:</p>
+<ul>
+<li>
+<p><code>setupSubmitterThread(Weave)</code>: Configure a thread so that it can send jobs to a background Weave service
+and on shutdown</p>
+</li>
+<li>
+<p><code>waitUntilReady(Weave)</code>: Block the foreign thread until the Weave runtime is ready to accept jobs.</p>
+</li>
+</ul>
+<p>and for shutdown</p>
+<ul>
+<li><code>teardownSubmitterThread(Weave)</code>: Cleanup Weave resources allocated on the thread.</li>
+</ul>
+<p>Once setup, a foreign thread can submit jobs via:</p>
+<ul>
+<li><code>submit fnCall(args)</code> which submits a function to the Weave runtime and gives you an awaitable <code>Pending</code> handle.</li>
+<li><code>newFlowEvent</code>, <code>trigger</code>, <code>submitOnEvent</code> and <code>submitOnEvents</code> (experimental) to delay a task until some dependencies are met. This allows expressing precise data dependencies and producer-consumer relationships.</li>
+<li><code>waitFor(Pending)</code> which await a Pending job result and blocks the current thread</li>
+<li><code>isReady(Pending)</code> will check if <code>waitFor</code> will actually block or return the result immediately.</li>
+<li><code>isSubmitted(job)</code> allows you to build speculative algorithm where a job is submitted only if certain conditions are valid.</li>
+</ul>
+<p>Within a job, tasks can be spawned and parallel for constructs can be used.</p>
+<p>If <code>runInBackground()</code> does not provide fine enough control, a Weave background event loop
+can be customized using the following primitive:</p>
+<ul>
+<li>at a very low-level:
+<ul>
+<li>The root thread primitives: <code>init(Weave)</code> and <code>exit(Weave)</code></li>
+<li><code>processAllandTryPark(Weave)</code>: Process all pending jobs and try sleeping. The sleep may fail to avoid deadlocks
+if a job is submitted concurrently. This should be used in a <code>while true</code> event loop.</li>
+</ul>
+</li>
+<li>at a medium level:
+<ul>
+<li><code>runForever(Weave)</code>: Start a never-ending event loop that processes all pending jobs and sleep until new work arrives.</li>
+<li><code>runUntil(Weave, signalShutdown: ptr Atomic[bool])</code>: Start an event-loop that quits on signal.</li>
+</ul>
+</li>
+</ul>
+<p>For example:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">runUntil</span><span class="op">*</span>(<span class="ide">_</span>: <span class="ide">typedesc</span>[<span class="ide">Weave</span>], <span class="ide">signal</span>: <span class="kwd">ptr</span> <span class="ide">Atomic</span>[<span class="ide">bool</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## Start a Weave event loop until signal is true on the current thread.</span></div></div><div class="line"><div class="line-content">  <span class="com">## It wakes-up on job submission, handles multithreaded load balancing,</span></div></div><div class="line"><div class="line-content">  <span class="com">## help process tasks</span></div></div><div class="line"><div class="line-content">  <span class="com">## and spin down when there is no work anymore.</span></div></div><div class="line"><div class="line-content">  <span class="ide">preCondition</span>: <span class="kwd">not</span> <span class="ide">signal</span><span class="op">.</span><span class="ide">isNil</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="kwd">not</span> <span class="ide">signal</span>[]<span class="op">.</span><span class="ide">load</span>(<span class="ide">moRelaxed</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">processAllandTryPark</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">syncRoot</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">runInBackground</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">       <span class="ide">_</span>: <span class="ide">typedesc</span>[<span class="ide">Weave</span>],</div></div><div class="line"><div class="line-content">       <span class="ide">signalShutdown</span>: <span class="kwd">ptr</span> <span class="ide">Atomic</span>[<span class="ide">bool</span>]</div></div><div class="line"><div class="line-content">     ): <span class="ide">Thread</span>[<span class="kwd">ptr</span> <span class="ide">Atomic</span>[<span class="ide">bool</span>]] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## Start the Weave runtime on a background thread.</span></div></div><div class="line"><div class="line-content">  <span class="com">## It wakes-up on job submissions, handles multithreaded load balancing,</span></div></div><div class="line"><div class="line-content">  <span class="com">## help process tasks</span></div></div><div class="line"><div class="line-content">  <span class="com">## and spin down when there is no work anymore.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">eventLoop</span>(<span class="ide">shutdown</span>: <span class="kwd">ptr</span> <span class="ide">Atomic</span>[<span class="ide">bool</span>]) {<span class="op">.</span><span class="ide">thread</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">Weave</span><span class="op">.</span><span class="ide">runUntil</span>(<span class="ide">shutdown</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">result</span><span class="op">.</span><span class="ide">createThread</span>(<span class="ide">eventLoop</span>, <span class="ide">signalShutdown</span>)</div></div>  </code></pre>
+<h2>Platforms supported</h2>
+<p>Weave supports all platforms with <code>pthread</code> and Windows.
+Missing pthread functionality may be emulated or unused.
+For example on MacOS, the <code>pthread</code> implementation does not expose barrier functionality or affinity settings.</p>
+<h3>C++ compilation</h3>
+<p>The <code>syncScope</code> feature will not compile correctly in C++ mode if it is used in a for loop.
+Upstream: https://github.com/nim-lang/Nim/issues/14118</p>
+<h3>Windows 32-bit</h3>
+<p>Windows 32-bit targets cannot use the MinGW compiler as it is missing support
+for <code>EnterSynchronizationBarrier</code>. MSVC should work instead.</p>
+<h3>Resource-restricted devices</h3>
+<p>Weave uses a flexible and efficient memory subsystem that has been optimized for a wide range of hardware: low power Raspberry Pi, phones, laptops, desktops and 30+ cores workstations.
+It currently assumes by default that 16KB at least are available on your hardware for a memory pool and that this memory pool can grow as needed.
+This can be tuned with <code>-d:WV_MemArenaSize=2048</code> to have the base pool use 2KB for example.
+The pool size should be a multiple of 256 bytes.
+PRs to improve support of very restricted devices are welcome.</p>
+<h2>Backoff mechanism</h2>
+<p>A Backoff mechanism is enabled by default. It allows workers with no tasks to sleep instead of spinning aimlessly and burning CPU cycles.</p>
+<p>It can be disabled with <code>-d:WV_Backoff=off</code>.</p>
+<h3>Weave using all CPUs</h3>
+<p>Weave multithreading is cooperative, idle threads send steal requests instead of actively stealing in other workers queue. This is called &quot;work-requesting&quot; in the literature as opposed to &quot;work-stealing&quot;.</p>
+<p>This means that a thread sleeping or stuck in a long computation may starve other threads and they will spin burning CPU cycles.</p>
+<ul>
+<li>Don&apos;t sleep or block a thread as this blocks Weave scheduler. This is a similar to <code>async</code>/<code>await</code> libraries.</li>
+<li>If you really need to sleep or block the root thread, make sure to empty all the tasks beforehand with <code>syncRoot(Weave)</code> in the root thread. The child threads will be put to sleep until new tasks are spawned.</li>
+<li>The <code>loadBalance(Weave)</code> call can be used in the middle of heavy computations to force the worker to answer steal requests. This is automatically done in <code>parallelFor</code> loops.
+<code>loadBalance(Weave)</code> is a very fast call that makes a worker thread checks its queue
+and dispatch its pending tasks to others. It does not block.</li>
+</ul>
+<p>We call the root thread the thread that called <code>init(Weave)</code></p>
+<h2>Experimental features</h2>
+<p>Experimental features might see API and/or implementation changes.</p>
+<p>For example both parallelForStaged and parallelReduce allow reductions but
+parallelForStaged is more flexible, it however requires explicit use of locks and/or atomics.</p>
+<p>LazyFlowvars may be enabled by default for certain sizes or if escape analysis become possible
+or if we prevent Flowvar from escaping their scope.</p>
+<h3>Data parallelism (experimental features)</h3>
+<h4>Awaitable loop</h4>
+<p>Loops can be awaited. Awaitable loops return a normal Flowvar.</p>
+<p>This blocks the thread that spawned the parallel loop from continuing until the loop is resolved. The thread does not stay idle and will steal and run other tasks while being blocked.</p>
+<p>Calling <code>sync</code> on the awaitable loop Flowvar will return <code>true</code> for the last thread to exit the loop and <code>false</code> for the others.</p>
+<ul>
+<li>Due to dynamic load-balancing, an unknown amount of threads will execute the loop.</li>
+<li>It&apos;s the thread that spawned the loop task that will always be the last thread to exit.
+The <code>false</code> value is only internal to <code>Weave</code>.</li>
+</ul>
+<blockquote>
+<p>⚠️ This is not a barrier: if that loop spawns tasks (including via a nested loop) and exits, the thread will continue, it will not wait for the grandchildren tasks to be finished. Use a <code>syncScope</code> section to wait on all tasks and descendants including grandchildren.</p>
+</blockquote>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># expandMacros:</span></div></div><div class="line"><div class="line-content"><span class="ide">parallelFor</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">10</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">awaitable</span>: <span class="ide">iLoop</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;iteration: &quot;</span>, <span class="ide">i</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">wasLastThread</span> <span class="op">=</span> <span class="ide">sync</span>(<span class="ide">iLoop</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">wasLastThread</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div>  </code></pre>
+<h4>Parallel For Staged</h4>
+<p>Weave provides a <code>parallelForStaged</code> construct with supports for thread-local prologue and epilogue.</p>
+<p>A parallel sum would look like this:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sumReduce</span>(<span class="ide">n</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">result</span><span class="op">.</span><span class="kwd">addr</span> <span class="com"># For mutation we need to capture the address.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">parallelForStaged</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..</span> <span class="ide">n</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">captures</span>: {<span class="ide">res</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">awaitable</span>: <span class="ide">iLoop</span></div></div><div class="line"><div class="line-content">    <span class="ide">prologue</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">localSum</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content">    <span class="ide">loop</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">localSum</span> <span class="op">+=</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content">    <span class="ide">epilogue</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="str">&quot;Thread &quot;</span>, <span class="ide">getThreadID</span>(<span class="ide">Weave</span>), <span class="str">&quot;: localsum = &quot;</span>, <span class="ide">localSum</span></div></div><div class="line"><div class="line-content">      <span class="ide">res</span>[]<span class="op">.</span><span class="ide">atomicInc</span>(<span class="ide">localSum</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">wasLastThread</span> <span class="op">=</span> <span class="ide">sync</span>(<span class="ide">iLoop</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">sum1M</span> <span class="op">=</span> <span class="ide">sumReduce</span>(<span class="num">1000000</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Sum reduce(0..1000000): &quot;</span>, <span class="ide">sum1M</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">sum1M</span> <span class="op">==</span> <span class="num">500_000_500_000</span></div></div><div class="line"><div class="line-content"><span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div>  </code></pre>
+<p><code>parallelForStagedStrided</code> is also provided.</p>
+<h4>Parallel Reduction</h4>
+<p>Weave provides a parallel reduction construct that avoids having to use explicit synchronization like atomics or locks
+but instead uses Weave <code>sync(Flowvar)</code> under-the-hood.</p>
+<p>Syntax is the following:</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sumReduce</span>(<span class="ide">n</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">waitableSum</span>: <span class="ide">Flowvar</span>[<span class="ide">int</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># expandMacros:</span></div></div><div class="line"><div class="line-content">  <span class="ide">parallelReduceImpl</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..</span> <span class="ide">n</span>, <span class="ide">stride</span> <span class="op">=</span> <span class="num">1</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">reduce</span>(<span class="ide">waitableSum</span>):</div></div><div class="line"><div class="line-content">      <span class="ide">prologue</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">var</span> <span class="ide">localSum</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content">      <span class="ide">fold</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">localSum</span> <span class="op">+=</span> <span class="ide">i</span></div></div><div class="line"><div class="line-content">      <span class="ide">merge</span>(<span class="ide">remoteSum</span>):</div></div><div class="line"><div class="line-content">        <span class="ide">localSum</span> <span class="op">+=</span> <span class="ide">sync</span>(<span class="ide">remoteSum</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span> <span class="ide">localSum</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">sync</span>(<span class="ide">waitableSum</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">sum1M</span> <span class="op">=</span> <span class="ide">sumReduce</span>(<span class="num">1000000</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Sum reduce(0..1000000): &quot;</span>, <span class="ide">sum1M</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">sum1M</span> <span class="op">==</span> <span class="num">500_000_500_000</span></div></div><div class="line"><div class="line-content"><span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div>  </code></pre>
+<p>In the future the <code>waitableSum</code> will probably be not required to be declared beforehand.
+Or parallel reduce might be removed to only keep parallelForStaged.</p>
+<h3>Dataflow parallelism</h3>
+<p>Dataflow parallelism allows expressing fine-grained data dependencies between tasks.
+Concretely a task is delayed until all its dependencies are met and once met,
+it is triggered immediately.</p>
+<p>This allows precise specification of data producer-consumer relationships.</p>
+<p>In contrast, classic task parallelism can only express control-flow dependencies (i.e. parent-child function calls relationships) and classic tasks are eagerly scheduled.</p>
+<p>In the literature, it is also called:</p>
+<ul>
+<li>Stream parallelism</li>
+<li>Pipeline parallelism</li>
+<li>Graph parallelism</li>
+<li>Data-driven task parallelism</li>
+</ul>
+<p>Tagged experimental as the API and its implementation are unique
+compared to other libraries/language-extensions. Feedback welcome.</p>
+<p>No specific ordering is required between calling the event producer and its consumer(s).</p>
+<p>Dependencies are expressed by a handle called <code>FlowEvent</code>.
+An flow event can express either a single dependency, initialized with <code>newFlowEvent()</code>
+or a dependencies on parallel for loop iterations, initialized with <code>newFlowEvent(start, exclusiveStop, stride)</code></p>
+<p>To await on a single event pass it to <code>spawnOnEvent</code> or the <code>parallelFor</code> invocation.
+To await on an iteration, pass a tuple:</p>
+<ul>
+<li><code>(FlowEvent, 0)</code> to await precisely and only for iteration 0. This works with both <code>spawnOnEvent</code> or <code>parallelFor</code> (via a dependsOnEvent statement)</li>
+<li><code>(FlowEvent, loop_index_variable)</code> to await on a whole iteration range.
+For example
+<pre>  <code class="language-Nim">parallelFor i in 0 ..&lt; n:
+  dependsOnEvent: (e, i) # Each &quot;i&quot; will independently depends on their matching event
+  body
+</code></pre>
+This only works with <code>parallelFor</code>. The <code>FlowEvent</code> iteration domain and the <code>parallelFor</code> domain must be the same. As soon as a subset of the pledge is ready, the corresponding <code>parallelFor</code> tasks will be scheduled.</li>
+</ul>
+<h4>Delayed computation with single dependencies</h4>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoA</span>(<span class="ide">eA</span>: <span class="ide">FlowEvent</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display A, sleep 1s, create parallel streams 1 and 2&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">1000</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">eA</span><span class="op">.</span><span class="ide">trigger</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoB1</span>(<span class="ide">eB1</span>: <span class="ide">FlowEvent</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display B1, sleep 1s&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">1000</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">eB1</span><span class="op">.</span><span class="ide">trigger</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoB2</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display B2, exit stream&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoC1</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display C1, exit stream&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Dataflow parallelism with single dependency&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">eA</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">eB1</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">spawnOnEvent</span> <span class="ide">eB1</span>, <span class="ide">echoC1</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">spawnOnEvent</span> <span class="ide">eA</span>, <span class="ide">echoB2</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">spawnOnEvent</span> <span class="ide">eA</span>, <span class="ide">echoB1</span>(<span class="ide">eB1</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">spawn</span> <span class="ide">echoA</span>(<span class="ide">eA</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h4>Delayed computation with multiple dependencies</h4>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoA</span>(<span class="ide">eA</span>: <span class="ide">FlowEvent</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display A, sleep 1s, create parallel streams 1 and 2&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">1000</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">eA</span><span class="op">.</span><span class="ide">trigger</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoB1</span>(<span class="ide">eB1</span>: <span class="ide">FlowEvent</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display B1, sleep 1s&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">1000</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">eB1</span><span class="op">.</span><span class="ide">trigger</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoB2</span>(<span class="ide">eB2</span>: <span class="ide">FlowEvent</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display B2, no sleep&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">eB2</span><span class="op">.</span><span class="ide">trigger</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">echoC12</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Display C12, exit stream&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Dataflow parallelism with multiple dependencies&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">eA</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">eB1</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">eB2</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">spawnOnEvents</span> <span class="ide">eB1</span>, <span class="ide">eB2</span>, <span class="ide">echoC12</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">spawnOnEvent</span> <span class="ide">eA</span>, <span class="ide">echoB2</span>(<span class="ide">eB2</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">spawnOnEvent</span> <span class="ide">eA</span>, <span class="ide">echoB1</span>(<span class="ide">eB1</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">spawn</span> <span class="ide">echoA</span>(<span class="ide">eA</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h4>Delayed loop computation</h4>
+<p>You can combine data parallelism and dataflow parallelism.</p>
+<p>Currently parallel loops only support one dependency (single, fixed iteration or range iteration).</p>
+<p>Here is an example with a range iteration dependency. <em>Note: when sleeping threads are unresponsive, meaning a sleeping thread cannot schedule other ready tasks.</em></p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">weave</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">init</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">eA</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>(<span class="num">0</span>, <span class="num">10</span>, <span class="num">1</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">pB</span> <span class="op">=</span> <span class="ide">newFlowEvent</span>(<span class="num">0</span>, <span class="num">10</span>, <span class="num">1</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">parallelFor</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">10</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">captures</span>: {<span class="ide">eA</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">sleep</span>(<span class="ide">i</span> <span class="op">*</span> <span class="num">10</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">eA</span><span class="op">.</span><span class="ide">trigger</span>(<span class="ide">i</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Step A - stream &quot;</span>, <span class="ide">i</span>, <span class="str">&quot; at &quot;</span>, <span class="ide">i</span> <span class="op">*</span> <span class="num">10</span>, <span class="str">&quot; ms&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">parallelFor</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">10</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">dependsOn</span>: (<span class="ide">eA</span>, <span class="ide">i</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">captures</span>: {<span class="ide">pB</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">sleep</span>(<span class="ide">i</span> <span class="op">*</span> <span class="num">10</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">pB</span><span class="op">.</span><span class="ide">trigger</span>(<span class="ide">i</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Step B - stream &quot;</span>, <span class="ide">i</span>, <span class="str">&quot; at &quot;</span>, <span class="num">2</span> <span class="op">*</span> <span class="ide">i</span> <span class="op">*</span> <span class="num">10</span>, <span class="str">&quot; ms&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">parallelFor</span> <span class="ide">i</span> <span class="kwd">in</span> <span class="num">0</span> <span class="op">..&lt;</span> <span class="num">10</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">dependsOn</span>: (<span class="ide">pB</span>, <span class="ide">i</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">sleep</span>(<span class="ide">i</span> <span class="op">*</span> <span class="num">10</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Step C - stream &quot;</span>, <span class="ide">i</span>, <span class="str">&quot; at &quot;</span>, <span class="num">3</span> <span class="op">*</span> <span class="ide">i</span> <span class="op">*</span> <span class="num">10</span>, <span class="str">&quot; ms&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">exit</span>(<span class="ide">Weave</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<h3>Lazy Allocation of Flowvars</h3>
+<p>Flowvars can be lazily allocated, this reduces overhead by at least 2x on very fine-grained tasks like Fibonacci or Depth-First-Search that may spawn trillions of tasks in less than
+a couple hundreds of milliseconds. This can be enabled with <code>-d:WV_LazyFlowvar</code>.</p>
+<p>⚠️ This only works for Flowvar of a size up to your machine word size (int64, float64, pointer on 64-bit machines)
+⚠️ Flowvars cannot be returned in that mode, you will at best trigger stack smashing protection or crash</p>
+<h2>Limitations</h2>
+<p>Weave has not been tested with GC-ed types. Pass a pointer around or use Nim channels which are GC-aware.
+If it works, a heads-up would be valuable.</p>
+<p>This might improve with Nim ARC/newruntime.</p>
+<h2>Statistics</h2>
+<p>Curious minds can access the low-level runtime statistic with the flag <code>-d:WV_metrics</code>
+which will give you the information on number of tasks executed, steal requests sent, etc.</p>
+<p>Very curious minds can also enable high resolution timers with <code>-d:WV_metrics -d:WV_profile -d:CpuFreqMhz=3000</code> assuming you have a 3GHz CPU.</p>
+<p>The timers will give you in this order:</p>
+<pre>  <code>Time spent running tasks, Time spent recv/send steal requests, Time spent recv/send tasks, Time spent caching tasks, Time spent idle, Total
+</code></pre>
+<h2>Tuning</h2>
+<p>A number of configuration options are available in <a href="weave/config.nim">weave/config.nim</a>.</p>
+<p>In particular:</p>
+<ul>
+<li><code>-d:WV_StealAdaptativeInterval=25</code> defines the number of steal requests after which thieves reevaluate their steal strategy (steal one task or steal half the victim&apos;s tasks). Default: 25</li>
+<li><code>-d:WV_StealEarly=0</code> allows worker to steal early, when only `WV_StealEraly tasks are leftin their queue. Default: don&apos;t steal early</li>
+</ul>
+<h2>Unique features</h2>
+<p>Weave provides an unique scheduler with the following properties:</p>
+<ul>
+<li>Message-Passing based:
+unlike alternative work-stealing schedulers, this means that Weave is usable
+on any architecture where message queues, channels or locks are available and not only atomics.
+Architectures without atomics include distributed clusters or non-cache coherent processors
+like the Cell Broadband Engine (for the PS3) that favors Direct memory Access (DMA),
+the many-core mesh Tile CPU from Mellanox (EzChip/Tilera) with 64 to 100 ARM cores,
+or the network-on-chip (NOC) CPU Epiphany V from Adapteva with 1024 cores,
+or the research CPU Intel SCC.</li>
+<li>Scalable:
+As the number of cores in computer is growing steadily, developers need to find new avenues of parallelism
+to exploit them.
+Unfortunately existing framework requires computation to take 10000 cycles at minimum (Intel TBB)
+which corresponds to 3.33 µs on a 3 GHz CPU to amortize the cost of scheduling.
+This burden the developers with questions of grain size, heuristics on distributing parallel loop
+for the common case and mischeduling on recursive tree algorithms with potentially very low compute-intensive leaves.
+<ul>
+<li>Weave uses an adaptative work-stealing scheduler that adapts its stealing strategy depending
+on each core load and the intensity of tasks.
+Small tasks will be packaged into chunks to amortize scheduling overhead.</li>
+<li>Weave also uses an adaptative lazy loop splitting strategy.
+Loops will only be split when needed. There is no partitioning issue or grain size issue,
+or estimating if the workload is memory-bound or compute-bound, see <a href="https://github.com/zy97140/omp-benchmark-for-pytorch">PyTorch OpenMP woes on parallel map</a>.</li>
+<li>Weave aims efficient multicore scaling for very fine-grained tasks starting from the 2000 cycles range upward (0.67 µs on 3GHz).</li>
+</ul>
+</li>
+<li>Fast and low-overhead:
+While the number of cores have been growing steadily, many programs
+are now hitting the limit of memory bandwidth and require tuning allocators,
+cache lines, CPU caches.
+Enormous care has been given to optimize Weave to keep it very low-overhead.
+Weave uses efficient memory allocation and caches to avoid stressing
+the system allocator and prevent memory fragmentation.
+Soon, a thread-safe caching system that can release memory to the OS will be added
+to prevent reserving memory for a long-time.</li>
+<li>Ergonomic and composable:
+Weave API is based on futures similar to async/await for concurrency.
+The task dependency graph is implicitly built when awaiting a result
+An OpenMP-syntax is planned.</li>
+</ul>
+<p>The &quot;Project Picasso&quot; RFC is available for discussion in <a href="https://github.com/nim-lang/RFCs/issues/160">Nim RFC #160</a>
+or in the (potentially outdated) <a href="Weave_RFC.md">picasso_RFC.md</a> file</p>
+<h2>Research</h2>
+<p>Weave is based on the research by <a href="https://github.com/aprell/">Andreas Prell</a>.
+You can read his <a href="https://epub.uni-bayreuth.de/2990">PhD Thesis</a> or access his <a href="https://github.com/aprell/tasking-2.0">C implementation</a>.</p>
+<p>Several enhancements were built into Weave, in particular:</p>
+<ul>
+<li>Memory management was carefully studied to allow releasing memory to the OS
+while still providing very high performance and solving the decades old cactus stack problem.
+The solution, coupling a threadsafe memory pool with a lookaside buffer, is
+inspired by Microsoft&apos;s Mimalloc and Snmalloc, a message-passing based allocator (also by Microsoft). Details are provided in the multiple Markdown file in the <a href="weave/memory">memory folder</a>.</li>
+<li>The channels were reworked to not use locks. In particular the MPSC channel (Multi-Producer Single-Consumer) supports batching for both producers and consumers without any lock.</li>
+</ul>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. These files may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT or Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/mratsim/weave">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

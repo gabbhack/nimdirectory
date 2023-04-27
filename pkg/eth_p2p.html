@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">eth_p2p</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">deprecated</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ethereum</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">p2p</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">devp2p</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rplx</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">networking</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">whisper</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">swarm</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Deprecated implementation of the Ethereum suite of P2P protocols (now part of the \'eth\' package)")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install eth_p2p" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>eth_p2p</h1>
+<h1>MOVED TO https://github.com/status-im/nim-eth</h1>
+<p><a href="https://travis-ci.org/status-im/nim-eth-p2p">  <img src="https://img.shields.io/travis/status-im/nim-eth-p2p/master.svg?label=Linux%20/%20macOS" style="max-width: 100%;" alt="Build Status (Travis)" title="Linux/macOS build status (Travis)" /></a>
+<a href="https://ci.appveyor.com/project/nimbus/nim-eth-p2p">  <img src="https://img.shields.io/appveyor/ci/nimbus/nim-eth-p2p/master.svg?label=Windows" style="max-width: 100%;" alt="Windows build status (Appveyor)" title="Windows build status (Appveyor)" /></a>
+<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /></p>
+<h2>Introduction</h2>
+<p>This library implements the DevP2P family of networking protocols used
+in the Ethereum world.</p>
+<h2>Installation</h2>
+<pre>  <code class="language-bash">nimble install eth_p2p
+</code></pre>
+<h2>Connecting to the Ethereum network</h2>
+<p>A connection to the Ethereum network can be created by instantiating
+the <code>EthereumNode</code> type:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newEthereumNode</span><span class="op">*</span>(<span class="ide">keys</span>: <span class="ide">KeyPair</span>,</div></div><div class="line"><div class="line-content">                      <span class="ide">listeningAddress</span>: <span class="ide">Address</span>,</div></div><div class="line"><div class="line-content">                      <span class="ide">networkId</span>: <span class="ide">uint</span>,</div></div><div class="line"><div class="line-content">                      <span class="ide">chain</span>: <span class="ide">AbstractChainDB</span>,</div></div><div class="line"><div class="line-content">                      <span class="ide">clientId</span> <span class="op">=</span> <span class="str">&quot;nim-eth-p2p&quot;</span>,</div></div><div class="line"><div class="line-content">                      <span class="ide">addAllCapabilities</span> <span class="op">=</span> <span class="ide">true</span>): <span class="ide">EthereumNode</span> <span class="op">=</span></div></div>  </code></pre>
+<h4>Parameters:</h4>
+<p><code>keys</code>:
+A pair of public and private keys used to authenticate the node
+on the network and to determine its node ID.
+See the <a href="https://github.com/status-im/nim-eth-keys">eth_keys</a>
+library for utilities that will help you generate and manage
+such keys.</p>
+<p><code>listeningAddress</code>:
+The network interface and port where your client will be
+accepting incoming connections.</p>
+<p><code>networkId</code>:
+The Ethereum network ID. The client will disconnect immediately
+from any peers who don&apos;t use the same network.</p>
+<p><code>chain</code>:
+An abstract instance of the Ethereum blockchain associated
+with the node. This library allows you to plug any instance
+conforming to the abstract interface defined in the
+<a href="https://github.com/status-im/nim-eth-common">eth_common</a>
+package.</p>
+<p><code>clientId</code>:
+A name used to identify the software package connecting
+to the network (i.e. similar to the <code>User-Agent</code> string
+in a browser).</p>
+<p><code>addAllCapabilities</code>:
+By default, the node will support all RPLx protocols imported in
+your project. You can specify <code>false</code> if you prefer to create a
+node with a more limited set of protocols. Use one or more calls
+to <code>node.addCapability</code> to specify the desired set:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">node</span><span class="op">.</span><span class="ide">addCapability</span>(<span class="ide">eth</span>)</div></div><div class="line"><div class="line-content"><span class="ide">node</span><span class="op">.</span><span class="ide">addCapability</span>(<span class="ide">ssh</span>)</div></div>  </code></pre>
+<p>Each supplied protocol identifier is a name of a protocol introduced
+by the <code>p2pProtocol</code> macro discussed later in this document.</p>
+<p>Instantiating an <code>EthereumNode</code> does not immediately connect you to
+the network. To start the connection process, call <code>node.connectToNetwork</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">connectToNetwork</span><span class="op">*</span>(<span class="ide">node</span>: <span class="kwd">var</span> <span class="ide">EthereumNode</span>,</div></div><div class="line"><div class="line-content">                       <span class="ide">bootstrapNodes</span>: <span class="ide">openarray</span>[<span class="ide">ENode</span>],</div></div><div class="line"><div class="line-content">                       <span class="ide">startListening</span> <span class="op">=</span> <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">                       <span class="ide">enableDiscovery</span> <span class="op">=</span> <span class="ide">true</span>)</div></div>  </code></pre>
+<p>The <code>EthereumNode</code> will automatically find and maintan a pool of peers
+using the Ethereum node discovery protocol. You can access the pool as
+<code>node.peers</code>.</p>
+<h2>Communicating with Peers using RLPx</h2>
+<p><a href="https://github.com/ethereum/devp2p/blob/master/rlpx.md">RLPx</a> is the
+high-level protocol for exchanging messages between peers in the Ethereum
+network. Most of the client code of this library should not be concerned
+with the implementation details of the underlying protocols and should use
+the high-level APIs described in this section.</p>
+<p>The RLPx protocols are defined as a collection of strongly-typed messages,
+which are grouped into sub-protocols multiplexed over the same TCP connection.</p>
+<p>This library represents each such message as a regular Nim function call
+over the <code>Peer</code> object. Certain messages act only as notifications, while
+others fit the request/response pattern.</p>
+<p>To understand more about how messages are defined and used, let&apos;s look at
+the definition of a RLPx protocol:</p>
+<h3>RLPx sub-protocols</h3>
+<p>The sub-protocols are defined with the <code>p2pProtocol</code> macro. It will accept
+a 3-letter identifier for the protocol and the current protocol version:</p>
+<p>Here is how the <a href="https://github.com/ethereum/wiki/wiki/%C3%90%CE%9EVp2p-Wire-Protocol">DevP2P wire protocol</a> might look like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">p2pProtocol</span> <span class="ide">p2p</span>(<span class="ide">version</span> <span class="op">=</span> <span class="num">0</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">hello</span>(<span class="ide">peer</span>: <span class="ide">Peer</span>,</div></div><div class="line"><div class="line-content">             <span class="ide">version</span>: <span class="ide">uint</span>,</div></div><div class="line"><div class="line-content">             <span class="ide">clientId</span>: <span class="ide">string</span>,</div></div><div class="line"><div class="line-content">             <span class="ide">capabilities</span>: <span class="ide">openarray</span>[<span class="ide">Capability</span>],</div></div><div class="line"><div class="line-content">             <span class="ide">listenPort</span>: <span class="ide">uint</span>,</div></div><div class="line"><div class="line-content">             <span class="ide">nodeId</span>: <span class="ide">P2PNodeId</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">peer</span><span class="op">.</span><span class="ide">id</span> <span class="op">=</span> <span class="ide">nodeId</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">disconnect</span>(<span class="ide">peer</span>: <span class="ide">Peer</span>, <span class="ide">reason</span>: <span class="ide">DisconnectionReason</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">ping</span>(<span class="ide">peer</span>: <span class="ide">Peer</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">peer</span><span class="op">.</span><span class="ide">pong</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">pong</span>(<span class="ide">peer</span>: <span class="ide">Peer</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;received pong from &quot;</span>, <span class="ide">peer</span><span class="op">.</span><span class="ide">id</span></div></div>  </code></pre>
+<p>As seen in the example above, a protocol definition determines both the
+available messages that can be sent to another peer (e.g. as in <code>peer.pong()</code>)
+and the asynchronous code responsible for handling the incoming messages.</p>
+<h3>Protocol state</h3>
+<p>The protocol implementations are expected to maintain a state and to act
+like a state machine handling the incoming messages. You are allowed to
+define an arbitrary state type that can be specified in the <code>peerState</code>
+protocol option. Later, instances of the state object can be obtained
+though the <code>state</code> pseudo-field of the <code>Peer</code> object:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">AbcPeerState</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">receivedMsgsCount</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">p2pProtocol</span> <span class="ide">abc</span>(<span class="ide">version</span> <span class="op">=</span> <span class="num">1</span>,</div></div><div class="line"><div class="line-content">                <span class="ide">peerState</span> <span class="op">=</span> <span class="ide">AbcPeerState</span>):</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">incomingMessage</span>(<span class="ide">p</span>: <span class="ide">Peer</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">p</span><span class="op">.</span><span class="ide">state</span><span class="op">.</span><span class="ide">receivedMsgsCount</span> <span class="op">+=</span> <span class="num">1</span></div></div>  </code></pre>
+<p>Besides the per-peer state demonstrated above, there is also support
+for maintaining a network-wide state. It&apos;s enabled by specifying the
+<code>networkState</code> option of the protocol and the state object can be obtained
+through accessor of the same name.</p>
+<p>The state objects are initialized to zero by default, but you can modify
+this behaviour by overriding the following procs for your state types:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initProtocolState</span><span class="op">*</span>(<span class="ide">state</span>: <span class="ide">MyPeerState</span>, <span class="ide">p</span>: <span class="ide">Peer</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">initProtocolState</span><span class="op">*</span>(<span class="ide">state</span>: <span class="ide">MyNetworkState</span>, <span class="ide">n</span>: <span class="ide">EthereumNode</span>)</div></div>  </code></pre>
+<p>Sometimes, you&apos;ll need to access the state of another protocol.
+To do this, specify the protocol identifier to the <code>state</code> accessors:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;ABC protocol messages: &quot;</span>, <span class="ide">peer</span><span class="op">.</span><span class="ide">state</span>(<span class="ide">abc</span>)<span class="op">.</span><span class="ide">receivedMsgCount</span></div></div>  </code></pre>
+<p>While the state machine approach may be a particularly robust way of
+implementing sub-protocols (it is more amenable to proving the correctness
+of the implementation through formal verification methods), sometimes it may
+be more convenient to use more imperative style of communication where the
+code is able to wait for a particular response after sending a particular
+request. The library provides two mechanisms for achieving this:</p>
+<h3>Waiting particular messages with <code>nextMsg</code></h3>
+<p>The <code>nextMsg</code> helper proc can be used to pause the execution of an async
+proc until a particular incoming message from a peer arrives:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handshakeExample</span>(<span class="ide">peer</span>: <span class="ide">Peer</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="op">...</span></div></div><div class="line"><div class="line-content">  <span class="com"># send a hello message</span></div></div><div class="line"><div class="line-content">  <span class="ide">peer</span><span class="op">.</span><span class="ide">hello</span>(<span class="op">...</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># wait for a matching hello response</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">response</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">peer</span><span class="op">.</span><span class="ide">nextMsg</span>(<span class="ide">p2p</span><span class="op">.</span><span class="ide">hello</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">clientId</span> <span class="com"># print the name of the Ethereum client</span></div></div><div class="line"><div class="line-content">                         <span class="com"># used by the other peer (Geth, Parity, Nimbus, etc)</span></div></div>  </code></pre>
+<p>There are few things to note in the above example:</p>
+<ol>
+<li>
+<p>The <code>p2pProtocol</code> definition created a pseudo-variable named after the
+protocol holding various properties of the protocol.</p>
+</li>
+<li>
+<p>Each message defined in the protocol received a corresponding type name,
+matching the message name (e.g. <code>p2p.hello</code>). This type will have fields
+matching the parameter names of the message. If the messages has <code>openarray</code>
+params, these will be remapped to <code>seq</code> types.</p>
+</li>
+</ol>
+<p>If the designated messages also has an attached handler, the future returned
+by <code>nextMsg</code> will be resolved only after the handler has been fully executed
+(so you can count on any side effects produced by the handler to have taken
+place). If there are multiple outstanding calls to <code>nextMsg</code>, they will
+complete together. Any other messages received in the meantime will still
+be dispatched to their respective handlers.</p>
+<h3><code>requestResponse</code> pairs</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">p2pProtocol</span> <span class="ide">les</span>(<span class="ide">version</span> <span class="op">=</span> <span class="num">2</span>):</div></div><div class="line"><div class="line-content">  <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">requestResponse</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">getProofs</span>(<span class="ide">p</span>: <span class="ide">Peer</span>, <span class="ide">proofs</span>: <span class="ide">openarray</span>[<span class="ide">ProofRequest</span>])</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">proofs</span>(<span class="ide">p</span>: <span class="ide">Peer</span>, <span class="ide">BV</span>: <span class="ide">uint</span>, <span class="ide">proofs</span>: <span class="ide">openarray</span>[<span class="ide">Blob</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="op">...</span></div></div>  </code></pre>
+<p>Two or more messages within the protocol may be grouped into a
+<code>requestResponse</code> block. The last message in the group is assumed
+to be the response while all other messages are considered requests.</p>
+<p>When a request message is sent, the return type will be a <code>Future</code>
+that will be completed once the response is received. Please note
+that there is a mandatory timeout parameter, so the actual return
+type is <code>Future[Option[MessageType]]</code>. The <code>timeout</code> parameter can
+be specified for each individual call and the default value can be
+overridden on the level of individual message, or the entire protocol:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">p2pProtocol</span> <span class="ide">abc</span>(<span class="ide">version</span> <span class="op">=</span> <span class="num">1</span>,</div></div><div class="line"><div class="line-content">                <span class="ide">useRequestIds</span> <span class="op">=</span> <span class="ide">false</span>,</div></div><div class="line"><div class="line-content">                <span class="ide">timeout</span> <span class="op">=</span> <span class="num">5000</span>): <span class="com"># value in milliseconds</span></div></div><div class="line"><div class="line-content">  <span class="ide">requestResponse</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">myReq</span>(<span class="ide">dataId</span>: <span class="ide">int</span>, <span class="ide">timeout</span> <span class="op">=</span> <span class="num">3000</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">myRes</span>(<span class="ide">data</span>: <span class="ide">string</span>)</div></div>  </code></pre>
+<p>By default, the library will take care of inserting a hidden <code>reqId</code>
+parameter as used in the <a href="https://github.com/zsfelfoldi/go-ethereum/wiki/Light-Ethereum-Subprotocol-%28LES%29">LES protocol</a>,
+but you can disable this behavior by overriding the protocol setting
+<code>useRequestIds</code>.</p>
+<h3>Implementing handshakes and reacting to other events</h3>
+<p>Besides message definitions and implementations, a protocol specification may
+also include handlers for certain important events such as newly connected
+peers or misbehaving or disconnecting peers:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">p2pProtocol</span> <span class="ide">les</span>(<span class="ide">version</span> <span class="op">=</span> <span class="num">2</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">onPeerConnected</span> <span class="kwd">do</span> (<span class="ide">peer</span>: <span class="ide">Peer</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">asyncCheck</span> <span class="ide">peer</span><span class="op">.</span><span class="ide">status</span> [</div></div><div class="line"><div class="line-content">      <span class="str">&quot;networkId&quot;</span>: <span class="ide">rlp</span><span class="op">.</span><span class="ide">encode</span>(<span class="num">1</span>),</div></div><div class="line"><div class="line-content">      <span class="str">&quot;keyGenesisHash&quot;</span>: <span class="ide">rlp</span><span class="op">.</span><span class="ide">encode</span>(<span class="ide">peer</span><span class="op">.</span><span class="ide">network</span><span class="op">.</span><span class="ide">chain</span><span class="op">.</span><span class="ide">genesisHash</span>)</div></div><div class="line"><div class="line-content">      <span class="op">...</span></div></div><div class="line"><div class="line-content">    ]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">otherPeerStatus</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">peer</span><span class="op">.</span><span class="ide">nextMsg</span>(<span class="ide">les</span><span class="op">.</span><span class="ide">status</span>)</div></div><div class="line"><div class="line-content">    <span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">onPeerDisconnected</span> <span class="kwd">do</span> (<span class="ide">peer</span>: <span class="ide">Peer</span>, <span class="ide">reason</span>: <span class="ide">DisconnectionReason</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">debug</span> <span class="str">&quot;peer disconnected&quot;</span>, <span class="ide">peer</span></div></div>  </code></pre>
+<h3>Checking the other peer&apos;s supported sub-protocols</h3>
+<p>Upon establishing a connection, RLPx will automatically negotiate the list of
+mutually supported protocols by the peers. To check whether a particular peer
+supports a particular sub-protocol, use the following code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">peer</span><span class="op">.</span><span class="ide">supports</span>(<span class="ide">les</span>): <span class="com"># `les` is the identifier of the light clients sub-protocol</span></div></div><div class="line"><div class="line-content">  <span class="ide">peer</span><span class="op">.</span><span class="ide">getReceipts</span>(<span class="ide">nextReqId</span>(), <span class="ide">neededReceipts</span>())</div></div>  </code></pre>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. This file may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-eth-p2p">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

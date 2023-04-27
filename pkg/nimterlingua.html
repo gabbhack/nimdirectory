@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimterlingua</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">internationalization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">i18n</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">localization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">translation</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Internationalization at Compile Time for Nim. Macro to translate unmodified code from 1 INI file. NimScript compatible.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimterlingua" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nimterlingua</h1>
+<ul>
+<li>Internationalization and localization at Compile Time for Nim.</li>
+<li>1 Macro to replace strings in-place at compile time with 0 cost at runtime.</li>
+<li>Translate unmodified code from 1 INI file. Replace Emojis and Unicode in-place.</li>
+<li>High performance with low resources, everything is done compile-time only!.</li>
+</ul>
+<h1>Use</h1>
+<p>  <strong>translations.cfg:</strong></p>
+<pre>  <code class="language-ini"># This is a comment.
+[cat]
+ES_AR = gato
+PT_BR = minino
+
+
+
+[dog]
+ES_AR = perro
+PT_BR = cão
+
+; You can replace Emojis. This is a comment.
+[:crown:]
+ES_AR = 👑
+PT_BR = 👑
+
+
+</code></pre>
+<p>  <strong>Nim:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimterlingua</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nimterlingua</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;cat&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;dog&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;:crown:&quot;</span></div></div>  </code></pre>
+<p>  <strong>Compile:</strong></p>
+<pre>  <code>nim c -r -d:ES_AR -d:iniFile=&quot;translations.cfg&quot; yourfile.nim
+</code></pre>
+<p>or</p>
+<pre>  <code>nim c -r -d:PT_BR -d:iniFile=&quot;translations.cfg&quot; yourfile.nim
+</code></pre>
+<p>  <strong>NimScript:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimterlingua</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nimterlingua</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;cat&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;dog&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;:crown:&quot;</span></div></div>  </code></pre>
+<p>  <strong>Run:</strong></p>
+<pre>  <code>nim e -d:ES_AR -d:iniFile=&quot;translations.cfg&quot; yourfile.nims
+</code></pre>
+<p>or</p>
+<pre>  <code>nim e -d:PT_BR -d:iniFile=&quot;translations.cfg&quot; yourfile.nims
+</code></pre>
+<p>  <strong>NodeJS:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimterlingua</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nimterlingua</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;cat&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;dog&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;:crown:&quot;</span></div></div>  </code></pre>
+<p>  <strong>Compile:</strong></p>
+<pre>  <code>nim js -d:nodejs -d:ES_AR -d:iniFile=&quot;translations.cfg&quot; yourfile.nim
+</code></pre>
+<p>or</p>
+<pre>  <code>nim js -d:nodejs -d:PT_BR -d:iniFile=&quot;translations.cfg&quot; yourfile.nim
+</code></pre>
+<h1>Example</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">$</span> <span class="ide">cd</span> <span class="ide">example</span></div></div><div class="line"><div class="line-content"><span class="op">$</span> <span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">ES_AR</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">iniFile</span><span class="op">=</span><span class="str">&quot;translations.cfg&quot;</span> <span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">5</span>, <span class="num">11</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR0</span>(<span class="str">&quot;Is this the real life?&quot;</span>) <span class="op">--&gt;</span> '"Es la vida real?"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">6</span>, <span class="num">11</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR1</span>(<span class="str">&quot;Is this just fantasy?&quot;</span>) <span class="op">--&gt;</span> '"Es sólo fantasía?"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">7</span>, <span class="num">11</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR2</span>(<span class="str">&quot;Caught in a landslide&quot;</span>) <span class="op">--&gt;</span> '"Atrapado en un derrumbe"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">13</span>, <span class="num">9</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR3</span>(<span class="str">&quot;No escape from reality&quot;</span>) <span class="op">--&gt;</span> '"Sin escape de la realidad"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">14</span>, <span class="num">9</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR4</span>(<span class="str">&quot;Open your eyes&quot;</span>) <span class="op">--&gt;</span> '"Abre tus ojos"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">15</span>, <span class="num">11</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR5</span>(<span class="str">&quot;Look up to the skies and see&quot;</span>) <span class="op">--&gt;</span> '"Mira a los cielos y observa"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">21</span>, <span class="num">7</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR6</span>(<span class="str">&quot;I</span>\'<span class="str">m just a poor boy, I need no sympathy&quot;</span>) <span class="op">--&gt;</span> '"Sólo soy un chico pobre, no necesito simpatía"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">22</span>, <span class="num">7</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR7</span>(<span class="str">&quot;Because I</span>\'<span class="str">m easy come, easy go&quot;</span>) <span class="op">--&gt;</span> '"Porque fácil vengo, fácil me voy"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">23</span>, <span class="num">7</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR8</span>(<span class="str">&quot;A little high, little low&quot;</span>) <span class="op">--&gt;</span> '"Un poco alto, un poco bajo"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">28</span>, <span class="num">6</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR9</span>(<span class="str">&quot;Anyway the wind blows, doesn</span>\'<span class="str">t really matter to me, to me&quot;</span>) <span class="op">--&gt;</span> '"De todos modos el viento sopla, realmente no me importa, a mi"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">29</span>, <span class="num">11</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR10</span>(<span class="str">&quot;Mama, just killed a man&quot;</span>) <span class="op">--&gt;</span> '"Mamá, maté a un hombre"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">32</span>, <span class="num">3</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR11</span>(<span class="str">&quot;Put a gun against his head&quot;</span>) <span class="op">--&gt;</span> '"Puse una pistola en su cabeza"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">36</span>, <span class="num">3</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR12</span>(<span class="str">&quot;Pulled my trigger, now he</span>\'<span class="str">s dead&quot;</span>) <span class="op">--&gt;</span> '"Jalé el gatillo, ya está muerto"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">42</span>, <span class="num">9</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR15</span>(<span class="str">&quot;Mama, ooo, Didn</span>\'<span class="str">t mean to make you cry&quot;</span>) <span class="op">--&gt;</span> '"Mamá, ooo, No quise hacerte llorar"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">44</span>, <span class="num">6</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR16</span>(<span class="str">&quot;If I</span>\'<span class="str">m not back again this time tomorrow&quot;</span>) <span class="op">--&gt;</span> '"Si no regreso mañana a esta hora"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"><span class="ide">bohemian_rhapsody</span><span class="op">.</span><span class="ide">nim</span>(<span class="num">45</span>, <span class="num">6</span>) <span class="ide">Hint</span>: <span class="ide">ES_AR17</span>(<span class="str">&quot;Carry on, carry on, as if nothing really matters&quot;</span>) <span class="op">--&gt;</span> '"Continúa, continúa, como si nada realmente importara"' [<span class="ide">Pattern</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Es</span> <span class="ide">la</span> <span class="ide">vida</span> <span class="ide">real</span><span class="op">?</span></div></div><div class="line"><div class="line-content"><span class="ide">Es</span> <span class="ide">sólo</span> <span class="ide">fantasía</span><span class="op">?</span></div></div><div class="line"><div class="line-content"><span class="ide">Atrapado</span> <span class="ide">en</span> <span class="ide">un</span> <span class="ide">derrumbe</span></div></div><div class="line"><div class="line-content"><span class="ide">Sin</span> <span class="ide">escape</span> <span class="ide">de</span> <span class="ide">la</span> <span class="ide">realidad</span></div></div><div class="line"><div class="line-content"><span class="ide">Abre</span> <span class="ide">tus</span> <span class="ide">ojos</span></div></div><div class="line"><div class="line-content"><span class="ide">Mira</span> <span class="ide">a</span> <span class="ide">los</span> <span class="ide">cielos</span> <span class="ide">y</span> <span class="ide">observa</span></div></div><div class="line"><div class="line-content"><span class="ide">Sólo</span> <span class="ide">soy</span> <span class="ide">un</span> <span class="ide">chico</span> <span class="ide">pobre</span>, <span class="ide">no</span> <span class="ide">necesito</span> <span class="ide">simpatía</span></div></div><div class="line"><div class="line-content"><span class="ide">Porque</span> <span class="ide">fácil</span> <span class="ide">vengo</span>, <span class="ide">fácil</span> <span class="ide">me</span> <span class="ide">voy</span></div></div><div class="line"><div class="line-content"><span class="ide">Un</span> <span class="ide">poco</span> <span class="ide">alto</span>, <span class="ide">un</span> <span class="ide">poco</span> <span class="ide">bajo</span></div></div><div class="line"><div class="line-content"><span class="ide">De</span> <span class="ide">todos</span> <span class="ide">modos</span> <span class="ide">el</span> <span class="ide">viento</span> <span class="ide">sopla</span>, <span class="ide">realmente</span> <span class="ide">no</span> <span class="ide">me</span> <span class="ide">importa</span>, <span class="ide">a</span> <span class="ide">mi</span></div></div><div class="line"><div class="line-content"><span class="ide">Mamá</span>, <span class="ide">maté</span> <span class="ide">a</span> <span class="ide">un</span> <span class="ide">hombre</span></div></div><div class="line"><div class="line-content"><span class="ide">Puse</span> <span class="ide">una</span> <span class="ide">pistola</span> <span class="ide">en</span> <span class="ide">su</span> <span class="ide">cabeza</span></div></div><div class="line"><div class="line-content"><span class="ide">Jalé</span> <span class="ide">el</span> <span class="ide">gatillo</span>, <span class="ide">ya</span> <span class="ide">está</span> <span class="ide">muerto</span></div></div><div class="line"><div class="line-content"><span class="ide">Si</span> <span class="ide">no</span> <span class="ide">regreso</span> <span class="ide">mañana</span> <span class="ide">a</span> <span class="ide">esta</span> <span class="ide">hora</span></div></div><div class="line"><div class="line-content"><span class="ide">Continúa</span>, <span class="ide">continúa</span>, <span class="ide">como</span> <span class="ide">si</span> <span class="ide">nada</span> <span class="ide">realmente</span> <span class="ide">importara</span></div></div>  </code></pre>
+<h3>under the hood</h3>
+<details>
+  <summary>How does it works internally?.</summary>
+<pre>  <code class="language-nim"># expandMacros:
+
+when defined(ES_AR):
+  template ES_AR0{(&quot;cat&quot;){texts}}(texts: string{lit, noalias}): string =
+    ## Compile with -d:ES_AR to auto translate at compile time to ES_AR Lang ISO code.
+    when texts == &quot;cat&quot;: &quot;gato&quot; else: &quot;cat&quot;
+
+when defined(PT_BR):
+  template PT_BR1{(&quot;cat&quot;){texts}}(texts: string{lit, noalias}): string =
+    ## Compile with -d:PT_BR to auto translate at compile time to PT_BR Lang ISO code.
+    when texts == &quot;cat&quot;: &quot;minino&quot; else: &quot;cat&quot;
+
+</code></pre>
+</details>
+<h1>Nimterlingua Vs GetText</h1>
+<table>
+<thead>
+<tr>
+<th>Nimterlingua</th>
+<th>GetText</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No <code>*.po</code> files</td>
+<td>You need to write   <code>*.po</code> files</td>
+</tr>
+<tr>
+<td>No <code>*.pot</code> files</td>
+<td>You need to extract <code>*.pot</code> files</td>
+</tr>
+<tr>
+<td>No <code>*.mo</code> files</td>
+<td>You need to compile <code>*.mo</code> files</td>
+</tr>
+<tr>
+<td>No <code>*.gmo</code> files</td>
+<td>You need to compile <code>*.gmo</code> files</td>
+</tr>
+<tr>
+<td>Only <code>nim</code></td>
+<td><code>xgettext</code>, <code>msginit</code>, <code>msgfmt</code>, etc</td>
+</tr>
+<tr>
+<td>Any editor, <code>*.INI</code> format</td>
+<td>Requires <code>poedit</code> for fluent workflow</td>
+</tr>
+<tr>
+<td>Unmodified code can be translated</td>
+<td>Requires refactor adding gettext functions</td>
+</tr>
+<tr>
+<td>  <code>&quot;cat&quot;</code></td>
+<td><code>gettext(&quot;cat&quot;)</code> or <code>_(&quot;cat&quot;)</code></td>
+</tr>
+<tr>
+<td>No GetText dependency</td>
+<td>GetText libs as dependency</td>
+</tr>
+<tr>
+<td>0 cost at runtime performance</td>
+<td>  <a href="https://stackoverflow.com/questions/18268608/performance-overhead-of-the-gettext-internationalization-system-in-c-c">Slows runtime performance (even on C)</a></td>
+</tr>
+<tr>
+<td><code>*.INI</code> is easy to delegate to people</td>
+<td><code>*.po</code> format complex for non-tech people</td>
+</tr>
+<tr>
+<td>Chill Lazy Dev</td>
+<td>Time consuming beyond translation itself</td>
+</tr></tbody></table>
+<p>  <strong>GetText</strong></p>
+<pre>  <code class="language-pot">#. TRANSLATORS: Thank you for contributing to this project.
+#: src/name.c:36
+msgid &quot;cat&quot;
+msgstr &quot;gato&quot;
+
+</code></pre>
+<p>  <strong>Nimterlingua</strong></p>
+<pre>  <code class="language-ini">[cat]
+ES_AR = gato
+</code></pre>
+<h1>Beyond Translation</h1>
+<p>Its designed for translation, but it does not force anything on you,
+you can be creative and explore other possible uses.</p>
+<p>It replaces in-place any arbitrary <code>string</code> with any arbitrary <code>string</code> you want at compile time with 0 cost at runtime without touching the code.</p>
+<p>  <em>Let us know if you built something cool with it!.</em></p>
+<h1>FAQ</h1>
+<ul>
+<li>Its not possible to have different languages in 1 Nim program?.</li>
+</ul>
+<p>Use a period (dot), exclamation, space, emoji or something, the string will not match anymore.</p>
+<pre>  <code class="language-ini">[cat]
+ES_AR = gato
+</code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">useSpanish</span>: <span class="str">&quot;cat&quot;</span> <span class="kwd">else</span>: <span class="str">&quot;cat.&quot;</span></div></div>  </code></pre>
+<p><code>&quot;cat&quot;</code> get translated to Spanish, <code>&quot;cat.&quot;</code> remains English, because of period.</p>
+<p>You choose languages with <code>if</code> or <code>case</code> or similar on your code.</p>
+<p>Or use NimScript or NodeJS to get a JSON or CSV or similar format and get the data from there.</p>
+<ul>
+<li>I get <code>nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg</code> ?</li>
+</ul>
+<p>compile with <code>-d:iniFile=&quot;path to your translations.cfg&quot;</code></p>
+<ul>
+<li>Is there a Minimal Basic example?.</li>
+</ul>
+<p>https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.nims</p>
+<ul>
+<li>How do you use this with Python or NodeJS or JavaScript?.</li>
+</ul>
+<p>https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.nims</p>
+<ul>
+<li>This works with NodeJS and JavaScript?.</li>
+</ul>
+<p>Yes.</p>
+<ul>
+<li>My Translated text contains <code>=</code> will make it fail?.</li>
+</ul>
+<p>Use <code>splitter=&quot;:&quot;</code>, then use it as splitter separator.</p>
+<pre>  <code class="language-ini">[cat]
+ES_AR : gato
+</code></pre>
+<ul>
+<li>How to make an INI for a lot of languages?.</li>
+</ul>
+<pre>  <code class="language-ini">[cat]
+ES_AR = gato
+PT_BR = minino
+RU    = kot
+FR    = chat
+# A lot of languages here...
+</code></pre>
+<ul>
+<li>This is not the same as Search&amp;Replace of any Editor?.</li>
+</ul>
+<p>No.
+Because it actually fully understands the code,
+typical Search&amp;Replace of Editor can break comments, names, variables, etc.</p>
+<h1>Stars</h1>
+<p>  <img src="https://starchart.cc/juancarlospaco/nim-nimterlingua.svg" style="max-width: 100%;" alt="" /></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/nim-internimgua">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">chroma</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">colors</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cmyk</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hsl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hsv</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Everything you want to do with colors.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install chroma" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><img src="docs/chromaBanner.png" style="max-width: 100%;" />
+<h1>Chroma - Everything you want to do with colors.</h1>
+<p>  <code>nimble install chroma</code></p>
+<p>  <img src="https://github.com/treeform/chroma/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/treeform/chroma">API reference</a></p>
+<p>This library has no dependencies other than the Nim standard library.</p>
+<h2>About</h2>
+<p>This library works with colors and color spaces. Easly parse and transform colors. Many different color spaces. Optimized, fast and consistant.</p>
+<h2>Parse/Format</h2>
+<p>Common color parsers and formatters:</p>
+<ul>
+<li><code>hex</code> - <code>FFFFFF</code></li>
+<li><code>HtmlHexTiny</code> - <code>#FFF</code></li>
+<li><code>HtmlHex</code> - <code>#FFFFFF</code></li>
+<li><code>HtmlRgb</code> - <code>rgb(255, 255, 255)</code></li>
+<li><code>HtmlRgba</code> - <code>rgba(255, 255, 255, 1.0)</code></li>
+<li><code>HtmlName</code> - <code>white</code></li>
+<li><code>HexAlpha</code> - <code>FFFFFFFF</code></li>
+<li><code>parseHtmlColor</code> - Any of the HTML formats.</li>
+</ul>
+<h2>Color Spaces</h2>
+<p>Conversion from and to these colors spaces:</p>
+<ul>
+<li>8-bit RGB</li>
+<li>8-bit RGBA</li>
+<li>CMY colors are reverse of rgb</li>
+<li>CMYK colors are used in printing</li>
+<li>HSL attempts to resemble more perceptual color models</li>
+<li>HSV models the way paints of different colors mix together</li>
+<li>YUV origially a television color format, still used in digital
+movies</li>
+<li>XYZ (CIE <code>XYZ</code>; CIE 1931 color space)</li>
+<li>LAB (CIE <code>L*a*b*</code>, CIELAB), derived from XYZ (Note: a fixed white
+point is assumed)</li>
+<li>CIELCh, LAB in polar coordinates (type: <code>ColorPolarLAB</code>)</li>
+<li>LUV (CIE <code>L*u*v*</code>, CIELUV), derived from XYZ (Note: a fixed white
+point is assumed)</li>
+<li>CIELCH, LUV in polar coordinates (type: <code>ColorPolarLUV</code>), often
+called HCL</li>
+<li>Oklab (https://bottosson.github.io/posts/oklab/)</li>
+</ul>
+<p>The default type is an RGB based type using <code>float32</code> as its base type
+(with values ranging from 0 to 1) and is called <code>Color</code>. All the above
+color spaces have corresponding type names of <code>Color&lt;ColorSpaceName&gt;</code>,
+where <code>ColorSpaceName</code> is the name in the bullet points above (unless
+specified by &quot;type:&quot; in parenthesis).</p>
+<p>Convenience procs to convert from and to the default type <code>Color</code> are
+provided in the form of</p>
+<ul>
+<li>  <code>proc color(c: Color&lt;ColorSpaceName&gt;): Color</code></li>
+</ul>
+<p>and the inverse:</p>
+<ul>
+<li><code>proc &lt;colorSpaceName&gt;(c: Color): Color&lt;ColorSpaceName&gt;</code>.</li>
+</ul>
+<p>and using the field names:</p>
+<ul>
+<li>  <code>proc &lt;colorSpaceName&gt;(&lt;fieldName1&gt;, &lt;fieldName2&gt;, &lt;fieldName3&gt;: &lt;fieldType&gt;): Color&lt;ColorSpaceName&gt;</code></li>
+</ul>
+<h2>Color Functions</h2>
+<p>You can use these to change colors you already have</p>
+<ul>
+<li><code>lighten(color, amout)</code> Lightens the color by amount 0-1</li>
+<li><code>darken(color, amout)</code> Darkens the color by amount 0-1</li>
+<li><code>saturate(color, amout)</code> Saturates (makes brighter) the color by amount 0-1</li>
+<li><code>desaturate(color, amout)</code> Desaturate (makes grayer) the color by amount 0-1</li>
+<li><code>spin(color, degrees)</code> Rotates the hue of the color by degrees (0-360)</li>
+<li><code>mix(colorA, colorB)</code> Mixes two colors together using CMYK</li>
+</ul>
+<p>A distance function is provided that implements
+<a href="https://en.wikipedia.org/wiki/Color_difference#CIEDE2000">CIEDE2000 color difference formula</a></p>
+<ul>
+<li><code>distance(colorA, colorB)</code> Distance between two colors</li>
+</ul>
+<p>This distance is designed to be perceptually uniform and it can be used to answer the question:
+&quot;What is a set of colors that are imperceptibly/acceptably close to a given reference?&quot;.
+A value of 5.0 is used as reference in <a href="https://github.com/github/linguist/">github linguist library</a>:
+any color with distance less than 5.0 from one of the existing colors is not allowed.</p>
+<h2>Example</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">chroma</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">a</span> <span class="op">=</span> <span class="ide">color</span>(<span class="num">0.7</span>,<span class="num">0.8</span>,<span class="num">0.9</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">b</span> <span class="op">=</span> <span class="ide">color</span>(<span class="num">0.2</span>,<span class="num">0.3</span>,<span class="num">0.4</span>,<span class="num">0.5</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">a</span><span class="op">.</span><span class="ide">toHex</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">parseHex</span>(<span class="str">&quot;BADA55&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">parseHtmlName</span>(<span class="str">&quot;red&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">hsv</span>(<span class="ide">b</span>)<span class="op">.</span><span class="ide">color</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">a</span><span class="op">.</span><span class="ide">darken</span>(<span class="num">0.2</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">mix</span>(<span class="ide">a</span>, <span class="ide">b</span>)</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/chroma">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

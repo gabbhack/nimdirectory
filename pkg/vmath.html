@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">vmath</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">math</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graphics</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">2d</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">3d</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Collection of math routines for 2d and 3d graphics.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install vmath" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><img src="docs/banner.png" style="max-width: 100%;" />
+<h1>VMath - 2d and 3d vector math.</h1>
+<p>  <code>nimble install vmath</code></p>
+<p>  <img src="https://github.com/treeform/vmath/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/treeform/vmath">API reference</a></p>
+<p>This library has no dependencies other than the Nim standard library.</p>
+<h2>About</h2>
+<p>Your one stop shop for vector math routines for 2d and 3d graphics.</p>
+<ul>
+<li>Pure Nim with no dependencies.</li>
+<li>Very similar to GLSL Shader Language with extra stuff.</li>
+<li>Extensively <a href="tests/bench_raytracer.nim">benchmarked</a>.</li>
+</ul>
+<h2>Has vector functions for GLSL types:</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Constructor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BVec#</td>
+<td>bvec#</td>
+<td>a vector of booleans</td>
+</tr>
+<tr>
+<td>IVec#</td>
+<td>ivec#</td>
+<td>a vector of signed integers</td>
+</tr>
+<tr>
+<td>UVec#</td>
+<td>uvec#</td>
+<td>a vector of unsigned integers</td>
+</tr>
+<tr>
+<td>Vec#</td>
+<td>vec#</td>
+<td>a vector of single-precision floating-point numbers</td>
+</tr>
+<tr>
+<td>DVec#</td>
+<td>dvec#</td>
+<td>a vector of double-precision floating-point numbers</td>
+</tr></tbody></table>
+<p>You can use these constructors to make them:</p>
+<table>
+<thead>
+<tr>
+<th>NIM</th>
+<th>GLSL</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>9</th>
+<th>16</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>bool</td>
+<td>BVec2</td>
+<td>BVec3</td>
+<td>BVec4</td>
+<td />
+<td />
+<td />
+</tr>
+<tr>
+<td>int32</td>
+<td>int</td>
+<td>IVec2</td>
+<td>IVec3</td>
+<td>IVec4</td>
+<td />
+<td />
+<td />
+</tr>
+<tr>
+<td>uint32</td>
+<td>uint</td>
+<td>UVec2</td>
+<td>UVec3</td>
+<td>UVec4</td>
+<td />
+<td />
+<td />
+</tr>
+<tr>
+<td>float32</td>
+<td>float</td>
+<td>Vec2</td>
+<td>Vec3</td>
+<td>Vec4</td>
+<td>Mat3</td>
+<td>Mat4</td>
+<td>Quat</td>
+</tr>
+<tr>
+<td>float64</td>
+<td>double</td>
+<td>DVec2</td>
+<td>DVec3</td>
+<td>DVec4</td>
+<td>DMat3</td>
+<td>DMat4</td>
+<td>DQuat</td>
+</tr></tbody></table>
+<h2>2D &amp; 3D matrix math</h2>
+<p>You can combine and create 2d and 3d matrices by passing 2d or 3d vectors to matrix functions:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">mat2d</span> <span class="op">=</span> <span class="ide">translate</span>(<span class="ide">vec2</span>(<span class="num">10</span>, <span class="num">20</span>)) <span class="op">*</span> <span class="ide">rotate</span>(<span class="num">45.</span><span class="ide">toRadians</span>) <span class="op">*</span> <span class="ide">scale</span>(<span class="ide">vec2</span>(<span class="num">2</span>))</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">mat3d</span> <span class="op">=</span> <span class="ide">translate</span>(<span class="ide">vec3</span>(<span class="num">10</span>, <span class="num">20</span>, <span class="num">0</span>)) <span class="op">*</span> <span class="ide">rotateZ</span>(<span class="num">45.</span><span class="ide">toRadians</span>) <span class="op">*</span> <span class="ide">scale</span>(<span class="ide">vec3</span>(<span class="num">2</span>))</div></div>  </code></pre>
+<h2>Almost equal operator</h2>
+<p>Easily check if floating point numbers are close, very useful for tests:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="num">1.0</span> <span class="op">~=</span> <span class="num">1.0</span></div></div><div class="line"><div class="line-content"><span class="ide">vec2</span>(<span class="num">1.0</span>, <span class="num">2.0</span>) <span class="op">~=</span> <span class="ide">vec2</span>(<span class="num">1.0</span>, <span class="num">2.0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">dvec2</span>(<span class="num">1</span>) <span class="op">~=</span> <span class="ide">dvec2</span>(<span class="num">1</span>)</div></div><div class="line"><div class="line-content"><span class="ide">quat</span>(<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>) <span class="op">~=</span> <span class="ide">quat</span>(<span class="num">1.0</span>, <span class="num">2.0</span>, <span class="num">3.0</span>, <span class="num">4.0</span>)</div></div>  </code></pre>
+<h2>Number functions</h2>
+<ul>
+<li><code>between</code> - Returns true if value is between min and max or equal to them.</li>
+<li><code>sign</code> - Returns the sign of a number, -1 or 1.</li>
+<li><code>quantize</code> - Makes v be a multiple of n. Rounding to integer quantize by 1.0.</li>
+<li><code>fractional</code> - Returns fractional part of a number. 3.14 -&gt; 0.14</li>
+<li><code>lerp</code> - Interpolates value between a and b.</li>
+</ul>
+<h2>Angle functions</h2>
+<ul>
+<li><code>fixAngle</code> - Make angle be from -PI to PI radians.</li>
+<li><code>angleBetween</code> - Find the angle between angle a and angle b.</li>
+<li><code>turnAngle</code> - Move from angle a to angle b with step of v.</li>
+</ul>
+<h2>Vector and matrix representation and benchmarks.</h2>
+<p>C compilers seem to optimize different representations differently. This is very surprising for us and vmath has 3 different implementations:</p>
+<ul>
+<li><code>-d:vmathObjBased</code> - A vector is an object of 3 floats.</li>
+<li><code>-d:vmathArrayBased</code> - A vector is an array of 3 floats.</li>
+<li><code>-d:vmathObjArrayBased</code> (default) - A vector is an object that has an array of 3 floats.</li>
+</ul>
+<pre>  <code>name ............................... min time      avg time    std dv   runs
+vmathObjBased ..................... 74.061 ms     74.297 ms    ±0.347   x100
+vmathArrayBased ................... 89.498 ms     89.911 ms    ±1.019   x100
+vmathObjArrayBased ................ 73.968 ms     74.292 ms    ±0.631   x100
+</code></pre>
+<ul>
+<li>  <a href="tests/bench_raytracer.nim">3d Ray Trace Benchmark</a></li>
+<li>  <a href="https://github.com/treeform/pixie/blob/master/tests/bench_svg.nim">2d SVG Render Benchmark</a></li>
+</ul>
+<h1>0.x.x to 1.0.0 vmath breaking changes:</h1>
+<ul>
+<li><code>vec3(v)</code> no longer works please use <code>vec3(v.x, v.y, 0)</code> instead.</li>
+<li><code>vec3(v, 0)</code> no longer works please use <code>vec3(v.x, v.y, 0)</code> instead.</li>
+<li><code>2 * v</code> no longer works due to more vec types please use <code>v * 2</code> instead.</li>
+<li><code>m[15]</code> no longer works because matrices are now m[x, y].</li>
+<li>Concept of 3x3 rotation 3d matrix was removed.</li>
+<li><code>angleBetween</code> got renamed to <code>angle(a, b)</code></li>
+<li><code>scaleMat</code> got renamed to <code>scale(v)</code></li>
+<li><code>rotationMat3</code> got renamed to <code>rotate(x)</code></li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/vmath">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">rx_nim</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rx</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">observables</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">reactive</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">extensions</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">functional</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("An implementation of rx observables in nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install rx_nim" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Reactive programming in nim</h1>
+<p>  <a href="https://github.com/yglukhov/nimble-tag">    <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble_js.png" style="max-width: 100%;" alt="nimble" />  </a></p>
+<p>An implementation of <a href="http://reactivex.io/">ReactiveX</a> in Nim. It is stilly very much in an alpha stage.</p>
+<h1>Observable</h1>
+<h2>Subjects</h2>
+<p>Are observables that also stores values and can be used as observable containers.</p>
+<p>If you need to pass a subject to a proc that expects an Observable, the <code>subject</code> can be treated as an observable by accessing its <code>source</code> field.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">foo</span> <span class="op">=</span> <span class="ide">behaviorSubject</span>(<span class="num">123</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">bar</span> <span class="op">=</span> <span class="ide">foo</span><span class="op">.</span><span class="ide">source</span><span class="op">.</span><span class="ide">map</span>(</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span>(<span class="ide">f</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="ide">f</span> <span class="op">*</span> <span class="ide">f</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>New values can be pushed to a subject by using the <code>.next(T)</code> function, or the <code>&lt;-</code> operator:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">foo</span> <span class="op">=</span> <span class="ide">behaviorSubject</span>(<span class="num">123</span>)</div></div><div class="line"><div class="line-content"><span class="ide">foo</span><span class="op">.</span><span class="ide">next</span>(<span class="num">321</span>)</div></div><div class="line"><div class="line-content"><span class="ide">foo</span> <span class="op">&lt;-</span> <span class="num">222</span></div></div>  </code></pre>
+<h3>BehaviorSubject</h3>
+<p>Create by</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">val</span>: <span class="ide">Subject</span>[<span class="ide">T</span>] <span class="op">=</span> <span class="ide">behaviorSubject</span>(<span class="ide">defaultValue</span>)</div></div>  </code></pre>
+<p>A BehaviorSubject pushes its current value as soon as it is subscribed to.</p>
+<h3>Subject</h3>
+<p>Only pushes when it receives new value, meaning it won&apos;t push its current value when subscribed to.</p>
+<h2>Operators</h2>
+<h3>Then</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">then</span>[<span class="ide">T</span>](<span class="ide">first</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">second</span>: <span class="ide">Observable</span>[<span class="ide">T</span>]): <span class="ide">Observable</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<p>Consumes items from <code>first</code> until it completes, and then consumes all items from <code>second</code>.</p>
+<h3>Map</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">map</span>[<span class="ide">T</span>,<span class="ide">R</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">mapper</span>: <span class="ide">T</span> <span class="op">-&gt;</span> <span class="ide">R</span>): <span class="ide">Observable</span>[<span class="ide">R</span>]</div></div>  </code></pre>
+<p>Maps all items pushed by <code>self</code> using the supplied <code>mapper</code> function, returning a new <code>Observable</code> that pushes the mapped values.</p>
+<h3>Extract</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">extract</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">prop</span>: <span class="ide">untyped</span>): <span class="ide">untyped</span></div></div>  </code></pre>
+<p>Short hand for mapping and extracting a field from an observable.</p>
+<p>Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">   <span class="ide">Foo</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">     <span class="ide">bar</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">items</span> <span class="op">=</span> <span class="ide">behaviorSubject</span>(<span class="ide">Foo</span>(<span class="ide">bar</span>: <span class="str">&quot;baz&quot;</span>))</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">bars</span> <span class="op">=</span> <span class="ide">items</span><span class="op">.</span><span class="ide">extract</span>(<span class="ide">bar</span>)</div></div>  </code></pre>
+<h3>Filter</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">filter</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">predicate</span>: (<span class="ide">T</span>) <span class="op">-&gt;</span> <span class="ide">bool</span>): <span class="ide">Observable</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<p>Returns a new observable that only pushes the items for which <code>predicate</code> returns true.</p>
+<h3>CombineLatest</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">combineLatest</span>[<span class="ide">A</span>,<span class="ide">B</span>,<span class="ide">R</span>](<span class="ide">a</span>: <span class="ide">Observable</span>[<span class="ide">A</span>], <span class="ide">b</span>: <span class="ide">Observable</span>[<span class="ide">B</span>], <span class="ide">mapper</span>: (<span class="ide">A</span>,<span class="ide">B</span>) <span class="op">-&gt;</span> <span class="ide">R</span>): <span class="ide">Observable</span>[<span class="ide">R</span>]</div></div>  </code></pre>
+<p>Combines the output of two observables using a mapper function. The resulting observable only pushes a value when both <code>a</code> and <code>b</code> has pushed, and then whenever any of <code>a</code> or <code>b</code> pushes.</p>
+<p><code>combineLatest</code> is also implemented for 3, 4 and 5 arguments.</p>
+<h3>Merge</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">merge</span>[<span class="ide">A</span>](<span class="ide">a</span>: <span class="ide">Observable</span>[<span class="ide">A</span>], <span class="ide">b</span>: <span class="ide">Observable</span>[<span class="ide">A</span>]): <span class="ide">Observable</span>[<span class="ide">A</span>]</div></div>  </code></pre>
+<p>Combines two observables of the same type by merging their streams into one.</p>
+<p><code>merge</code> is also implemented for <code>Observable[Observable[A]]</code></p>
+<h3>Switch</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">switch</span>[<span class="ide">A</span>](<span class="ide">observables</span>: <span class="ide">Observable</span>[<span class="ide">Observable</span>[<span class="ide">A</span>]]): <span class="ide">Observable</span>[<span class="ide">A</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>Subscribes to each inner observable after first unsubscribing from the previous, effectively merging their outputs by pushing their content one after the other.</p>
+<h3>DistinctUntilChanged</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">distinctUntilChanged</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>]): <span class="ide">Observable</span>[<span class="ide">T</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>Only pushes if the new value is different from the previous value.</p>
+<h3>Take</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">take</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">num</span>: <span class="ide">int</span>): <span class="ide">Observable</span>[<span class="ide">T</span>] <span class="op">=</span></div></div>  </code></pre>
+<p>Pushes <code>num</code> values from <code>self</code> and then completes.</p>
+<h3>Utils</h3>
+<h4>Once</h4>
+<p>Calls handler once the next time the observable fires</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">once</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">handler</span>: (<span class="ide">T</span>) <span class="op">-&gt;</span> <span class="ide">void</span>): <span class="ide">void</span> <span class="op">=</span></div></div>  </code></pre>
+<h4>Debounce</h4>
+<p>Pushes values only after values has stopped arriving for <code>waitMs</code> milliseconds.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">debounce</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">waitMs</span>: <span class="ide">int</span>, <span class="ide">setTimeout</span>: (() <span class="op">-&gt;</span> <span class="ide">void</span>, <span class="ide">int</span>) <span class="op">-&gt;</span> (() <span class="op">-&gt;</span> <span class="ide">void</span>)): <span class="ide">Observable</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<p>When targeting JavaScript, there is an implementation that uses setTimeout from the <code>dom</code> module:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">debounce</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">waitMs</span>: <span class="ide">int</span>): <span class="ide">Observable</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<h4>Throttle</h4>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">throttle</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">waitMs</span>: <span class="ide">int</span>, <span class="ide">setTimeout</span>: (() <span class="op">-&gt;</span> <span class="ide">void</span>, <span class="ide">int</span>) <span class="op">-&gt;</span> (() <span class="op">-&gt;</span> <span class="ide">void</span>)): <span class="ide">Observable</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<p>When targeting JavaScript, there is an implementation that uses setTimeout from the <code>dom</code> module:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">throttle</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">T</span>], <span class="ide">waitMs</span>: <span class="ide">int</span>): <span class="ide">Observable</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<p>Pushes values only one every <code>waitMs</code> milliseconds.</p>
+<h1>ObservableCollection</h1>
+<p>Observable collections observables that contains a list of items, and pushes information about when items are added, removed, or changed.</p>
+<h2>CollectionSubject</h2>
+<p>Just like with Subject, a CollectionSubject contains a list of data that can be observed. Create a new CollectionSubject using:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">collection</span> <span class="op">=</span> <span class="ide">observableCollection</span>(<span class="op">@</span>['a', 'b', 'c']) <span class="com"># optional default items</span></div></div>  </code></pre>
+<h3>Add</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">add</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">CollectionSubject</span>[<span class="ide">T</span>], <span class="ide">item</span>: <span class="ide">T</span>): <span class="ide">void</span></div></div>  </code></pre>
+<h3>Remove</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">remove</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">CollectionSubject</span>[<span class="ide">T</span>], <span class="ide">item</span>: <span class="ide">T</span>): <span class="ide">void</span></div></div>  </code></pre>
+<h3>RemoveWhere</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">removeWhere</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">CollectionSubject</span>[<span class="ide">T</span>], <span class="ide">pred</span>: (<span class="ide">T</span>,<span class="ide">int</span>) <span class="op">-&gt;</span> <span class="ide">bool</span>): <span class="ide">bool</span></div></div>  </code></pre>
+<h3>Set</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">set</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">CollectionSubject</span>[<span class="ide">T</span>], <span class="ide">index</span>: <span class="ide">int</span>, <span class="ide">newVal</span>: <span class="ide">T</span>): <span class="ide">void</span></div></div>  </code></pre>
+<h3>Len</h3>
+<h3>Cache</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">cache</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>]): <span class="ide">CollectionSubject</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<h3>AsObservableCollection</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">asObservableCollection</span>[<span class="ide">T</span>](<span class="ide">values</span>: <span class="ide">seq</span>[<span class="ide">Observable</span>[<span class="ide">T</span>]]): <span class="ide">CollectionSubject</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<h3>Map</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">map</span>[<span class="ide">T</span>,<span class="ide">R</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>], <span class="ide">mapper</span>: <span class="ide">T</span> <span class="op">-&gt;</span> <span class="ide">R</span>): <span class="ide">ObservableCollection</span>[<span class="ide">R</span>]</div></div>  </code></pre>
+<p>and with index</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">map</span>[<span class="ide">T</span>,<span class="ide">R</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>], <span class="ide">mapper</span>: (<span class="ide">T</span>, <span class="ide">int</span>) <span class="op">-&gt;</span> <span class="ide">R</span>): <span class="ide">ObservableCollection</span>[<span class="ide">R</span>]</div></div>  </code></pre>
+<h3>Filter</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">filter</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>], <span class="ide">predicate</span>: <span class="ide">T</span> <span class="op">-&gt;</span> <span class="ide">bool</span>): <span class="ide">ObservableCollection</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<h3>ToObservable</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">toObservable</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">CollectionSubject</span>[<span class="ide">T</span>]): <span class="ide">Observable</span>[<span class="ide">seq</span>[<span class="ide">T</span>]]</div></div>  </code></pre>
+<h3>CombineLatest</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">combineLatest</span>[<span class="ide">A</span>,<span class="ide">B</span>,<span class="ide">R</span>](<span class="ide">a</span>: <span class="ide">ObservableCollection</span>[<span class="ide">A</span>], <span class="ide">b</span>: <span class="ide">ObservableCollection</span>[<span class="ide">B</span>], <span class="ide">mapper</span>: (<span class="ide">A</span>,<span class="ide">B</span>) <span class="op">-&gt;</span> <span class="ide">R</span>): <span class="ide">ObservableCollection</span>[<span class="ide">R</span>]</div></div>  </code></pre>
+<h3>First</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">first</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>]): <span class="ide">Observable</span>[<span class="ide">Option</span>[<span class="ide">T</span>]]</div></div>  </code></pre>
+<h3>FirstWhere</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">firstWhere</span>[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>], <span class="ide">predicate</span>: <span class="ide">T</span> <span class="op">-&gt;</span> <span class="ide">bool</span>): <span class="ide">Observable</span>[<span class="ide">Option</span>[<span class="ide">T</span>]]</div></div>  </code></pre>
+<h3>&amp; (concat)</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content">`<span class="op">&amp;</span>`[<span class="ide">T</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>], <span class="ide">other</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>]): <span class="ide">ObservableCollection</span>[<span class="ide">T</span>]</div></div>  </code></pre>
+<h3>switch(ObservableCollection[Observable[A]]) -&gt; ObservableCollection[A])</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">switch</span>[<span class="ide">A</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">Observable</span>[<span class="ide">A</span>]]): <span class="ide">ObservableCollection</span>[<span class="ide">A</span>]</div></div>  </code></pre>
+<h1>ObservableTable</h1>
+<h2>Set</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">set</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">TableSubject</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>], <span class="ide">key</span>: <span class="ide">TKey</span>, <span class="ide">value</span>: <span class="ide">TValue</span>): <span class="ide">void</span></div></div>  </code></pre>
+<h2>Delete</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">delete</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">TableSubject</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>], <span class="ide">key</span>: <span class="ide">TKey</span>): <span class="ide">Option</span>[<span class="ide">TValue</span>]</div></div>  </code></pre>
+<h2>Get</h2>
+<p>Since the table might change, getting a value returns an observable of an optional value. The value for a key will for example become none if someone deletes it from the table using <code>delete</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">get</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>], <span class="ide">key</span>: <span class="ide">TKey</span>): <span class="ide">Observable</span>[<span class="ide">Option</span>[<span class="ide">TValue</span>]]</div></div>  </code></pre>
+<p>The key can also itself be an observable</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">get</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>,<span class="ide">TValue</span>], <span class="ide">key</span>: <span class="ide">Observable</span>[<span class="ide">TKey</span>]): <span class="ide">Observable</span>[<span class="ide">Option</span>[<span class="ide">TValue</span>]]</div></div>  </code></pre>
+<h2>Keys</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">keys</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>]): <span class="ide">ObservableCollection</span>[<span class="ide">TKey</span>]</div></div>  </code></pre>
+<h3>Values</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">values</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>]): <span class="ide">ObservableCollection</span>[<span class="ide">TValue</span>]</div></div>  </code></pre>
+<h2>Operators</h2>
+<h3>Map</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">map</span>[<span class="ide">K</span>,<span class="ide">V</span>,<span class="ide">KR</span>,<span class="ide">VR</span>](<span class="ide">self</span>: <span class="ide">ObservableTable</span>[<span class="ide">K</span>,<span class="ide">V</span>], <span class="ide">mapper</span>: (<span class="ide">K</span>,<span class="ide">V</span>) <span class="op">-&gt;</span> (<span class="ide">KR</span>,<span class="ide">VR</span>)): <span class="ide">ObservableTable</span>[<span class="ide">KR</span>,<span class="ide">VR</span>]</div></div>  </code></pre>
+<h3>Filter</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">filter</span>[<span class="ide">K</span>,<span class="ide">V</span>](<span class="ide">self</span>: <span class="ide">ObservableTable</span>[<span class="ide">K</span>,<span class="ide">V</span>], <span class="ide">predicate</span>: (<span class="ide">K</span>,<span class="ide">V</span>) <span class="op">-&gt;</span> <span class="ide">bool</span>): <span class="ide">ObservableTable</span>[<span class="ide">K</span>,<span class="ide">V</span>]</div></div>  </code></pre>
+<h2>Helpers</h2>
+<h3>ToObservableTable</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">toObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">Observable</span>[<span class="ide">seq</span>[<span class="ide">TKey</span>]], <span class="ide">mapper</span>: <span class="ide">TKey</span> <span class="op">-&gt;</span> <span class="ide">TValue</span>): <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>]</div></div>  </code></pre>
+<p>or</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">toObservableTable</span>[<span class="ide">T</span>, <span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">T</span>], <span class="ide">mapper</span>: <span class="ide">T</span> <span class="op">-&gt;</span> (<span class="ide">TKey</span>, <span class="ide">TValue</span>)): <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>]</div></div>  </code></pre>
+<h3>MapToTable</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">mapToTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">ObservableCollection</span>[<span class="ide">TKey</span>], <span class="ide">mapper</span>: <span class="ide">TKey</span> <span class="op">-&gt;</span> <span class="ide">TValue</span>): <span class="ide">ObservableTable</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>]</div></div>  </code></pre>
+<h3>GetCurrenctValue</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">getCurrentValue</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">TableSubject</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>], <span class="ide">key</span>: <span class="ide">TKey</span>): <span class="ide">Option</span>[<span class="ide">TValue</span>]</div></div>  </code></pre>
+<h3>GetFirstKeyForValue</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">getFirstKeyForValue</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>](<span class="ide">self</span>: <span class="ide">TableSubject</span>[<span class="ide">TKey</span>, <span class="ide">TValue</span>], <span class="ide">value</span>: <span class="ide">TValue</span>): <span class="ide">Option</span>[<span class="ide">TKey</span>]</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/nortero-code/rx-nim">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nap</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">arguments</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">opts</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Argument parser")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nap" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h2>Example Usage</h2>
+<p>Register arguments:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">add_arg</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;foo&quot;</span>, <span class="ide">kind</span><span class="op">=</span><span class="str">&quot;flag&quot;</span>, <span class="ide">help</span><span class="op">=</span><span class="str">&quot;Foo it&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">add_arg</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;path&quot;</span>, <span class="ide">kind</span><span class="op">=</span><span class="str">&quot;argument&quot;</span>, <span class="ide">required</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">help</span><span class="op">=</span><span class="str">&quot;Pathfinder Dir&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Adding a `-b` alt to the `--bar` value flag</span></div></div><div class="line"><div class="line-content"><span class="com"># This will work with `--bar=x` and `-b=x`</span></div></div><div class="line"><div class="line-content"><span class="ide">add_arg</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;bar&quot;</span>, <span class="ide">kind</span><span class="op">=</span><span class="str">&quot;value&quot;</span>, <span class="ide">required</span><span class="op">=</span><span class="ide">false</span>, <span class="ide">help</span><span class="op">=</span><span class="str">&quot;Heaps Alloy&quot;</span>, <span class="ide">alt</span><span class="op">=</span><span class="str">&quot;b&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">add_arg</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;catnip&quot;</span> <span class="ide">kind</span><span class="op">=</span><span class="str">&quot;value&quot;</span> <span class="ide">value</span><span class="op">=</span><span class="str">&quot;cosmic&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Make a value flag that accepts multiple values</span></div></div><div class="line"><div class="line-content"><span class="com"># For instance myprogram --name=Joe --name=Bill</span></div></div><div class="line"><div class="line-content"><span class="com"># Default values can be sent as a list</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">name</span> <span class="op">=</span> <span class="ide">add_arg</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;name&quot;</span>, <span class="ide">kind</span><span class="op">=</span><span class="str">&quot;value&quot;</span>, <span class="ide">multiple</span><span class="op">=</span><span class="ide">true</span>, <span class="ide">values</span><span class="op">=</span>[<span class="str">&quot;jaja&quot;</span>, <span class="str">&quot;jojo&quot;</span>], <span class="ide">alt</span><span class="op">=</span><span class="str">&quot;n&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Examples are shown at the top of --help. </span></div></div><div class="line"><div class="line-content"><span class="com"># Content is a string that can have multiple lines</span></div></div><div class="line"><div class="line-content"><span class="com"># If a line starts with # it is treated as a comment</span></div></div><div class="line"><div class="line-content"><span class="ide">add_example</span>(<span class="ide">title</span><span class="op">=</span><span class="str">&quot;Cook the food&quot;</span>, <span class="ide">content</span><span class="op">=</span><span class="str">&quot;cook -mbv pizza</span>\n<span class="str">#This makes the pizza</span>\n<span class="str">#Very cool&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Information at the top</span></div></div><div class="line"><div class="line-content"><span class="ide">add_header</span>(<span class="str">&quot;MyProgram&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">add_header</span>(<span class="str">&quot;Version 1.2.3&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Notes at the bottom</span></div></div><div class="line"><div class="line-content"><span class="ide">add_note</span>(<span class="str">&quot;Licensed under the FreeBeer public license&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">add_note</span>(<span class="str">&quot;Made with industrial boots&quot;</span>)</div></div>  </code></pre>
+<p>When ready start the argument parser.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">parse_args</span>()</div></div>  </code></pre>
+<p>Now it&apos;s ready to use:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">foo</span> <span class="op">=</span> <span class="ide">get_arg</span>(<span class="str">&quot;foo&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">foo</span><span class="op">.</span><span class="ide">used</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">bar</span> <span class="op">=</span> <span class="ide">get_arg</span>(<span class="str">&quot;bar&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">bar</span><span class="op">.</span><span class="ide">used</span>:</div></div><div class="line"><div class="line-content">   <span class="ide">echo</span> <span class="ide">bar</span><span class="op">.</span><span class="ide">value</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Parsing</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Parse the arg into the proper type</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">some_int_value</span><span class="op">.</span><span class="ide">get_int</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">some_float_value</span><span class="op">.</span><span class="ide">get_float</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">some_bool_value</span><span class="op">.</span><span class="ide">get_bool</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Rest of the arguments</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">tail</span> <span class="op">=</span> <span class="ide">get_argtail</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">argument</span> <span class="kwd">in</span> <span class="ide">tail</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">argument</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This will either print &quot;cosmic&quot; </span></div></div><div class="line"><div class="line-content"><span class="com"># or a user submitted value</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">c</span><span class="op">.</span><span class="ide">value</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Iterate through the multiple --name values</span></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">n</span> <span class="kwd">in</span> <span class="ide">name</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">n</span></div></div>  </code></pre>
+<h2>Properties</h2>
+<p><code>name (string):</code> The name of the argument. If the name is &quot;bar&quot; then it will be used as &quot;--bar&quot;, if the name is &quot;b&quot; then it will be used as &quot;-b&quot;. This means there&apos;s no need to specify if it&apos;s a short or long flag, as this is deduced automatically. In the case of arguments the name will be used in order. For instance if you register two arguments: &quot;path&quot; and &quot;file&quot;, the first two arguments provided will fill those.</p>
+<p><code>kind (string):</code> Available kinds are &quot;flag&quot;, &quot;value&quot;, and &quot;argument&quot;. Flags are &quot;-a&quot; and &quot;--abc&quot;. Values are &quot;-a=x&quot; and &quot;--abc=x&quot;. Arguments are any unflagged input &quot;myprogram /some/path&quot;</p>
+<p><code>required (bool):</code> Whether the value is required. This only affects &quot;value&quot; and &quot;argument&quot; since there&apos;s no point in making a flag that doesn&apos;t take value required.</p>
+<p><code>help (string):</code> The message shown for the argument when using --help</p>
+<p><code>value (string):</code> A default value that is set initially on the object. Defaults to an empty string.</p>
+<p><code>alt (string):</code> This is used to make alts in flag and values. For instance -a and --acorn.</p>
+<p><code>multiple (bool):</code> Whether a value flag should add provided values to the values list instead of the value property.</p>
+<p><code>values (seq[string]):</code> When multiple is true add values to this list. When adding an arg it is received as an openarray[string] so it&apos;s easy to send values like [&quot;aa&quot;, &quot;bb&quot;].</p>
+<h3>Automatic Properties</h3>
+<p>These are properties that are handled internally, but will still be available to the user.</p>
+<p><code>used (bool):</code> If the argument was used at all. For instance if &quot;-b&quot; was provided, used will be true.</p>
+<p><code>value (string):</code> The value it has when parsed. For instance in &quot;--foo=200&quot; foo.value = &quot;200&quot;. The value will always be a string.</p>
+<p><code>ikind (string):</code> This is used internally to differentiate between different kinds of flag and value kinds.</p>
+<p><code>aikind (string):</code> This is used internally to differentiate between different kinds of flag and value kinds in alts.</p>
+<p><code>count (int):</code> How many times a flag was repeated. For instance, count of &apos;c&apos; in <code>-ccc</code> would be 3.</p>
+<h2>Methods</h2>
+<p><code>add_arg:</code> Register an argument to be considered.</p>
+<p><code>parse_args:</code> Do the processing. Optional parameters list can be sent, else it uses the default one.</p>
+<p><code>get_arg:</code> Get an argument object.</p>
+<p><code>get_args:</code> Get all argument objects.</p>
+<p><code>get_argtail:</code> Get the rest of the arguments.</p>
+<p><code>add_header:</code> Include a line that will appear at the top.</p>
+<p><code>add_note:</code> Include a line that will appear in the notes at the bottom.</p>
+<p><code>add_example:</code> Add an example to show in the help. Receives title and content. Content can have multiple lines.
+If a line starts with # it is treated as a comment.</p>
+<p><code>print_help:</code> Prints the help.</p>
+<p><code>print_version:</code> Prints the version.</p>
+<h1>Parsing</h1>
+<p>These will try to parse a provided value to a specific type.</p>
+<p>If no value was manually provided it uses the &quot;value&quot; property that was used when creating the argument.</p>
+<p>  <code>obj.get_int(): int</code></p>
+<p>  <code>obj.get_float(): float</code></p>
+<p>  <code>obj.get_bool(): bool</code></p>
+<h2>Help</h2>
+<p>Using --help will show a summary of all available arguments, headers, examples, and notes.</p>
+<h2>Version</h2>
+<p>Using --version will show all the headers.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/madprops/nap">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

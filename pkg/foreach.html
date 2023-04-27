@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">foreach</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">macro</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">syntax</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sugar</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A sugary for loop with syntax for typechecking loop variables")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install foreach" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>foreach</h1>
+<p>A sugary <code>for</code> loop macro with syntax for typechecking loop variables.  I&apos;ve found that this syntax is as helpful for documentation as it is for eliminating errors.</p>
+<h2>Example</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">foreach</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">foreach</span> <span class="ide">n</span> <span class="kwd">in</span> <span class="ide">a</span><span class="op">.</span><span class="ide">items</span> <span class="kwd">of</span> <span class="ide">int</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">n</span>, <span class="str">&quot; is an int&quot;</span></div></div>  </code></pre>
+<p>or</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">foreach</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">j</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;one&quot;</span>: <span class="num">1</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;two&quot;</span>: <span class="str">&quot;2&quot;</span>,</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">foreach</span> <span class="ide">k</span>, <span class="ide">v</span> <span class="kwd">in</span> <span class="ide">j</span><span class="op">.</span><span class="ide">pairs</span> <span class="kwd">of</span> <span class="ide">string</span> <span class="kwd">and</span> <span class="ide">JsonNode</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">k</span>, <span class="str">&quot; is a string&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">v</span>, <span class="str">&quot; is a JsonNode&quot;</span></div></div>  </code></pre>
+<p>but this will now fail at compile-time:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">foreach</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">j</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;one&quot;</span>: <span class="num">1</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;two&quot;</span>: <span class="str">&quot;2&quot;</span>,</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Error: loop variable `v` isn&apos;t a `string`</span></div></div><div class="line"><div class="line-content"><span class="ide">foreach</span> <span class="ide">k</span>, <span class="ide">v</span> <span class="kwd">in</span> <span class="ide">j</span><span class="op">.</span><span class="ide">pairs</span> <span class="kwd">of</span> <span class="ide">string</span> <span class="kwd">and</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">k</span>, <span class="str">&quot; is a string&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">v</span>, <span class="str">&quot; is a string&quot;</span></div></div>  </code></pre>
+<p>and you can use this to validate tuple field order/names:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">foreach</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">JsonKeyValue</span> <span class="op">=</span> <span class="kwd">tuple</span>[<span class="ide">key</span>: <span class="ide">string</span>; <span class="ide">value</span>: <span class="ide">JsonNode</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">j</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;one&quot;</span>: <span class="num">1</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;two&quot;</span>: <span class="str">&quot;2&quot;</span>,</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Error: loop variable `pair` isn&apos;t a `JsonKeyValue`</span></div></div><div class="line"><div class="line-content"><span class="ide">foreach</span> <span class="ide">pair</span> <span class="kwd">in</span> <span class="ide">j</span><span class="op">.</span><span class="ide">pairs</span> <span class="kwd">of</span> <span class="ide">JsonKeyValue</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">pair</span><span class="op">.</span><span class="ide">key</span> <span class="kwd">is</span> <span class="ide">string</span></div></div>  </code></pre>
+<p>and for convenience, these compile to &quot;normal&quot; <code>for</code> loops:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">foreach</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">j</span> <span class="op">=</span> <span class="op">%*</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;one&quot;</span>: <span class="num">1</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;two&quot;</span>: <span class="str">&quot;2&quot;</span>,</div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">foreach</span> <span class="ide">k</span> <span class="kwd">in</span> <span class="num">1</span> <span class="op">..</span> <span class="num">5</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">k</span> <span class="op">&gt;</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">foreach</span> <span class="ide">k</span>, <span class="ide">v</span> <span class="kwd">in</span> <span class="ide">j</span><span class="op">.</span><span class="ide">pairs</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">k</span>, <span class="str">&quot; is a string&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">v</span>, <span class="str">&quot; isn&apos;t really a string&quot;</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/disruptek/foreach">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

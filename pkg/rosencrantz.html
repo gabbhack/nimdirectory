@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">rosencrantz</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">web</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">server</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">DSL</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">combinators</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A web DSL for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install rosencrantz" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>1. Rosencrantz</h1>
+<p>  <img src="https://raw.githubusercontent.com/andreaferretti/rosencrantz/master/shakespeare.jpg" style="max-width: 100%;" alt="shakespeare" /></p>
+<p>Rosencrantz is a DSL to write web servers, inspired by <a href="http://spray.io/">Spray</a>
+and its successor <a href="http://doc.akka.io/docs/akka/2.4.2/scala/http/introduction.html">Akka HTTP</a>.</p>
+<p>It sits on top of <a href="http://nim-lang.org/docs/asynchttpserver.html">asynchttpserver</a>
+and provides a composable way to write HTTP handlers.</p>
+<p>Version 0.4 of Rosencrantz is tested with Nim 1.0.0, but is compatible with
+versions of Nim from 0.19.0 on.</p>
+<h2>Table of contents</h2>
+<!--  TOC depthfrom:1 depthto:6 withlinks:false updateonsave:false orderedlist:false  -->
+<ul>
+<li>Rosencrantz
+<ul>
+<li>Introduction
+<ul>
+<li>Composing handlers</li>
+<li>Starting a server</li>
+</ul>
+</li>
+<li>Structure of the package</li>
+<li>An example</li>
+<li>Basic handlers
+<ul>
+<li>Path handling</li>
+<li>HTTP methods</li>
+<li>Failure containment</li>
+<li>Logging</li>
+</ul>
+</li>
+<li>Working with headers</li>
+<li>Writing custom handlers</li>
+<li>JSON support</li>
+<li>Form and querystring support</li>
+<li>Static file support</li>
+<li>CORS support</li>
+<li>API stability</li>
+</ul>
+</li>
+</ul>
+<!--  /TOC  -->
+<h2>1.1. Introduction</h2>
+<p>The core abstraction in Rosencrantz is the <code>Handler</code>, which is just an alias
+for a <code>proc(req: ref Request, ctx: Context): Future[Context]</code>. Here <code>Request</code>
+is the HTTP request from <code>asynchttpserver</code>, while <code>Context</code> is a place where
+we accumulate information such as:</p>
+<ul>
+<li>what part of the path has been matched so far;</li>
+<li>what headers to emit with the response;</li>
+<li>whether the request has matched a route so far.</li>
+</ul>
+<p>A handler usually does one or more of the following:</p>
+<ul>
+<li>filter the request, by returning <code>ctx.reject()</code> if some condition is not
+satisfied;</li>
+<li>accumulate some headers;</li>
+<li>actually respond to the request, by calling the <code>complete</code> function or one
+derived from it.</li>
+</ul>
+<p>Rosencrantz provides many of those handlers, which are described below. For the
+complete API, check <a href="http://andreaferretti.github.io/rosencrantz/rosencrantz.html">here</a>.</p>
+<h3>1.1.1. Composing handlers</h3>
+<p>The nice thing about handlers is that they are composable. There are two ways
+to compose two headers <code>h1</code> and <code>h2</code>:</p>
+<ul>
+<li><code>h1 -&gt; h2</code> (read <code>h1</code> <strong>and</strong> <code>h2</code>) returns a handler that passes the request
+through <code>h1</code> to update the context; then, if <code>h1</code> does not reject the request,
+it passes it, together with the new context, to <code>h2</code>. Think filtering first
+by HTTP method, then by path.</li>
+<li><code>h1 ~ h2</code> (read <code>h1</code> <strong>or</strong> <code>h2</code>) returns a handler that passes the request
+through <code>h1</code>; if it rejects the request, it tries again with <code>h2</code>. Think
+matching on two alternative paths.</li>
+</ul>
+<p>The combination <code>h1 -&gt; h2</code> can also be written <code>h1[h2]</code>, which makes it nicer
+when composing many handlers one inside each other. Also remember that,
+according to Nim rules, <code>~</code> has higher precedence than <code>-&gt;</code> - use parentheses
+if necessary to compose your handlers.</p>
+<h3>1.1.2. Starting a server</h3>
+<p>Once you have a handler, you can serve it using a server from <code>asynchttpserver</code>,
+like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newAsyncHttpServer</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">8080</span>), <span class="ide">handler</span>)</div></div>  </code></pre>
+<h2>1.2. Structure of the package</h2>
+<p>Rosencrantz can be fully imported with just</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">rosencrantz</span></div></div>  </code></pre>
+<p>The <code>rosencrantz</code> module just re-exports functionality from the submodules
+<code>rosencrantz/core</code>, <code>rosencrantz/handlers</code>, <code>rosencrantz/jsonsupport</code> and so
+on. These modules can be imported separately. The API is available
+<a href="http://andreaferretti.github.io/rosencrantz/rosencrantz.html">here</a>.</p>
+<h2>1.3. An example</h2>
+<p>The following uses some of the predefined handlers and composes them together.
+We write a small piece of a fictionary API to save and retrieve messages, and
+we assume we have functions such as <code>getMessageById</code> that perform the actual
+business logic. This should give a feel of how the DSL looks like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">handler</span> <span class="op">=</span> <span class="ide">get</span>[</div></div><div class="line"><div class="line-content">  <span class="ide">path</span>(<span class="str">&quot;/api/status&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">ok</span>(<span class="ide">getStatus</span>())</div></div><div class="line"><div class="line-content">  ] <span class="op">~</span></div></div><div class="line"><div class="line-content">  <span class="ide">pathChunk</span>(<span class="str">&quot;/api/message&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">accept</span>(<span class="str">&quot;application/json&quot;</span>)[</div></div><div class="line"><div class="line-content">      <span class="ide">intSegment</span>(<span class="kwd">proc</span>(<span class="ide">id</span>: <span class="ide">int</span>): <span class="ide">auto</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="kwd">let</span> <span class="ide">message</span> <span class="op">=</span> <span class="ide">getMessageById</span>(<span class="ide">id</span>)</div></div><div class="line"><div class="line-content">        <span class="ide">ok</span>(<span class="ide">message</span>)</div></div><div class="line"><div class="line-content">      )</div></div><div class="line"><div class="line-content">    ]</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">] <span class="op">~</span> <span class="ide">post</span>[</div></div><div class="line"><div class="line-content">  <span class="ide">path</span>(<span class="str">&quot;/api/new-message&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">jsonBody</span>(<span class="kwd">proc</span>(<span class="ide">msg</span>: <span class="ide">Message</span>): <span class="ide">auto</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="kwd">let</span></div></div><div class="line"><div class="line-content">        <span class="ide">id</span> <span class="op">=</span> <span class="ide">generateId</span>()</div></div><div class="line"><div class="line-content">        <span class="ide">saved</span> <span class="op">=</span> <span class="ide">saveMessage</span>(<span class="ide">id</span>, <span class="ide">msg</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">saved</span>: <span class="ide">ok</span>(<span class="ide">id</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">else</span>: <span class="ide">complete</span>(<span class="ide">Http500</span>, <span class="str">&quot;save failed&quot;</span>)</div></div><div class="line"><div class="line-content">    )</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>For more (actually working) examples, check the <code>tests</code> directory. In particular,
+<a href="https://github.com/andreaferretti/rosencrantz/blob/master/tests/server.nim">the server example</a>
+tests every handler defined in Rosencrantz, while
+<a href="https://github.com/andreaferretti/rosencrantz/blob/master/tests/todo.nim">the todo example</a>
+implements a server compliant with the <a href="http://www.todobackend.com/">TODO backend project</a>
+specs.</p>
+<h2>1.4. Basic handlers</h2>
+<p>In order to work with Rosencrantz, you can <code>import rosencrantz</code>. If you prefer
+a more fine-grained control, there are packages <code>rosencrantz/core</code> (which
+contains the definitions common to all handlers), <code>rosencrantz/handlers</code> (for
+the handlers we are about to show), and then more specialized handlers under
+<code>rosencrantz/jsonsupport</code>, <code>rosencrantz/formsupport</code> and so on.</p>
+<p>The simplest handlers are:</p>
+<ul>
+<li><code>complete(code, body, headers)</code> that actually responds to the request. Here
+<code>code</code> is an instance of <code>HttpCode</code> from <code>asynchttpserver</code>, <code>body</code> is a
+<code>string</code> and <code>headers</code> are an instance of <code>StringTableRef</code>.</li>
+<li><code>ok(body)</code>, which is a specialization of <code>complete</code> for a response of <code>200 Ok</code>
+with a content type of <code>text/plain</code>.</li>
+<li><code>notFound(body)</code>, which is a specialization of <code>complete</code> for a response of
+<code>404 Not Found</code> with a content type of <code>text/plain</code>.</li>
+<li><code>body(p)</code> extracts the body of the request. Here <code>p</code> is a
+<code>proc(s: string): Handler</code> which takes the extracted body as input and
+returns a handler.</li>
+</ul>
+<p>For instance, a simple handler that echoes back the body of the request would
+look like</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">body</span>(<span class="kwd">proc</span>(<span class="ide">s</span>: <span class="ide">string</span>): <span class="ide">auto</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">ok</span>(<span class="ide">s</span>)</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h3>1.4.1. Path handling</h3>
+<p>There are a few handlers to filter by path and extract path parameters:</p>
+<ul>
+<li><code>path(s)</code> filters the requests where the path is equal to <code>s</code>.</li>
+<li><code>pathChunk(s)</code> does the same but only for a prefix of the path. This means
+that one can nest more path handlers after it, unlike <code>path</code>, that matches
+and consumes the whole path.</li>
+<li><code>pathEnd(p)</code> extracts whatever is not matched yet of the path and passes it
+to <code>p</code>. Here <code>p</code> is a <code>proc(s: string): Handler</code> that takes the final part of
+the path and returns a handler.</li>
+<li><code>pathEnd(s)</code> filters the requests where the remaining path is equal
+to <code>s</code>. Defaults to case sensitive matching, but you can use
+<code>pathEnd(s, caseSensitive=false)</code> to do a case insensitive match.</li>
+<li><code>segment(p)</code>, that extracts a segment of path among two <code>/</code> signs. Here <code>p</code>
+is a <code>proc(s: string): Handler</code> that takes the matched segment and return a
+handler. This fails if the position is not just before a <code>/</code> sign.</li>
+<li><code>segment(s)</code> filters the requests where the current path segment is equal
+to <code>s</code>. Defaults to case sensitive matching, but you can use
+<code>segment(s, caseSensitive=false)</code> to do a case insensitive match.
+This fails if the position is not just before a <code>/</code> sign.</li>
+<li><code>intSegment(p)</code>, works the same as <code>segment</code>, but extracts and parses an
+integer number. It fails if the segment does not represent an integer. Here
+<code>p</code> is a <code>proc(s: int): Handler</code>.</li>
+</ul>
+<p>For instance, to match and extract parameters out of a route like
+<code>repeat/$msg/$n</code>, one would nest the above to get</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">pathChunk</span>(<span class="str">&quot;/repeat&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">segment</span>(<span class="kwd">proc</span>(<span class="ide">msg</span>: <span class="ide">string</span>): <span class="ide">auto</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">intSegment</span>(<span class="kwd">proc</span>(<span class="ide">n</span>: <span class="ide">int</span>): <span class="ide">auto</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">someHandler</span></div></div><div class="line"><div class="line-content">    )</div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<h3>1.4.2. HTTP methods</h3>
+<p>To filter by HTTP method, one can use</p>
+<ul>
+<li><code>verb(m)</code>, where <code>m</code> is a member of the <code>HttpMethod</code> enum defined in
+the standard library <code>httpcore</code>. There are corresponding specializations</li>
+<li><code>get</code>, <code>post</code>, <code>put</code>, <code>delete</code>, <code>head</code>, <code>patch</code>, <code>options</code>, <code>trace</code> and
+<code>connect</code></li>
+</ul>
+<h3>1.4.3. Failure containment</h3>
+<p>When a requests falls through all routes without matching, Rosencrantz will
+return a standard response of <code>404 Not Found</code>. Similarly, whenever an
+exception arises, Rosencrantz will respond with <code>500 Server Error</code>.</p>
+<p>Sometimes, it can be useful to have more control over failure cases. For
+instance, you are able only to generate responses with type <code>application/json</code>:
+if the <code>Accept</code> header does not match it, you may want to return a status code
+of <code>406 Not Accepted</code>.</p>
+<p>One way to do this is to put the 406 response as an alternative, like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">accept</span>(<span class="str">&quot;application/json&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">someResponse</span></div></div><div class="line"><div class="line-content">] <span class="op">~</span> <span class="ide">complete</span>(<span class="ide">Http406</span>, <span class="str">&quot;JSON endpoint&quot;</span>)</div></div>  </code></pre>
+<p>However, it can be more clear to use an equivalent combinators that wraps
+an existing handler and it returns a given failure message in case the inner
+handler fails to match. For this, there is</p>
+<ul>
+<li><code>failWith(code, s)</code>, to be used like this:</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">failWith</span>(<span class="ide">Http406</span>, <span class="str">&quot;JSON endpoint&quot;</span>)(</div></div><div class="line"><div class="line-content">  <span class="ide">accept</span>(<span class="str">&quot;application/json&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">someResponse</span></div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>Similarly, you may want to customize the behaviour of Rosencrantz when the
+application crashes.</p>
+<ul>
+<li><code>crashWith(code, s, logError)</code> can be used to wrap your handler:</li>
+</ul>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">crashWith</span>(<span class="ide">Http500</span>, <span class="str">&quot;Sorry :-(&quot;</span>)(</div></div><div class="line"><div class="line-content">  <span class="ide">accept</span>(<span class="str">&quot;application/json&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">someResponse</span></div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h3>1.4.4. Logging</h3>
+<p>Rosencrantz supports logging in two different moments: when a request arrives,
+or when a response is produced (of course you can also manually log at any other
+moment). In the first case, you will only have available the information about
+the current request, while in the latter both the request and the response
+will be available.</p>
+<p>The two basic handlers for logging are:</p>
+<ul>
+<li><code>logRequest(s)</code>, where <code>s</code> is a format string. The string is used inside
+the system <code>format</code> function, and it is passed the following arguments in
+order:
+<ul>
+<li>the HTTP method of the request</li>
+<li>the path of the resource</li>
+<li>the headers, as a table</li>
+<li>the body of the request, if any.</li>
+</ul>
+</li>
+<li><code>logResponse(s)</code>, where <code>s</code> is a format string. The first four arguments
+are the same as in <code>logRequest</code>; then there are
+<ul>
+<li>the HTTP code of the response</li>
+<li>the headers of the response, as a table</li>
+<li>the body of the response, if any.</li>
+</ul>
+</li>
+</ul>
+<p>So for instance, in order to log the incoming method and path, as well as the
+HTTP code of the response, you can use the following handler:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">logResponse</span>(<span class="str">&quot;$1 $2 - $5&quot;</span>)</div></div>  </code></pre>
+<p>which will produce log strings such as</p>
+<pre>  <code>GET /api/users/181 - 200 OK
+</code></pre>
+<h2>1.5. Working with headers</h2>
+<p>Under <code>rosencrantz/headersupport</code>, there are various handlers to read HTTP
+headers, filter requests by their values, or accumulate HTTP headers for the
+response.</p>
+<ul>
+<li><code>headers(h1, h2, ...)</code> adds headers for the response. Here each argument is
+a tuple of two strings, which are a key/value pair.</li>
+<li><code>contentType(s)</code> is a specialization to emit the <code>Content-Type</code> header, so
+is is equivalent to <code>headers((&quot;Content-Type&quot;, s))</code>.</li>
+<li><code>readAllHeaders(p)</code> extract the headers as a string table. Here <code>p</code> is a
+<code>proc(hs: HttpHeaders): Handler</code>.</li>
+<li><code>readHeaders(s1, p)</code> extracts the value of the header with key <code>s1</code> and
+passes it to <code>p</code>, which is of type <code>proc(h1: string): Handler</code>. It rejects
+the request if the header <code>s1</code> is not defined. There are overloads
+<code>readHeaders(s1, s2, p)</code> and <code>readHeaders(s1, s2, s3, p)</code>, where <code>p</code> is a
+function of two arguments (resp. three arguments). To extract more than
+three headers, one can use <code>readAllHeaders</code> or nest <code>readHeaders</code> calls.</li>
+<li><code>tryReadHeaders(s1, p)</code> works the same as <code>readHeaders</code>, but it does not
+reject the request if header <code>s</code> is missing; instead, <code>p</code> receives an empty
+string as default. Again, there are overloads for two and three arguments.</li>
+<li><code>checkHeaders(h1, h2, ...)</code> filters the request for the header value. Here
+<code>h1</code> and the other are pairs of strings, representing a key and a value. If
+the request does not have the corresponding headers with these values, it
+will be rejected.</li>
+<li><code>accept(mimetype)</code> is equivalent to <code>checkHeaders((&quot;Accept&quot;, mimetype))</code>.</li>
+<li><code>addDate()</code> returns a handler that adds the <code>Date</code> header, formatted as
+a GMT date in the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html">HTTP date format</a>.</li>
+</ul>
+<p>For example, if you can return a result both as JSON or XML, according to the
+request, you can do</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">accept</span>(<span class="str">&quot;application/json&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">contentType</span>(<span class="str">&quot;application/json&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">ok</span>(<span class="ide">someJsonValue</span>)</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">] <span class="op">~</span> <span class="ide">accept</span>(<span class="str">&quot;text/xml&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">contentType</span>(<span class="str">&quot;text/xml&quot;</span>)[</div></div><div class="line"><div class="line-content">    <span class="ide">ok</span>(<span class="ide">someXmlValue</span>)</div></div><div class="line"><div class="line-content">  ]</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<h2>1.6. Writing custom handlers</h2>
+<p>Sometimes, the need arises to write handlers that perform a little more custom
+logic than those shown above. For those cases, Rosencrantz provides a few
+procedures and templates (under <code>rosencrantz/custom</code>) that help creating
+your handlers.</p>
+<ul>
+<li><code>getRequest(p)</code>, where <code>p</code> is a <code>proc(req: ref Request): Handler</code>. This
+allows you to access the whole <code>Request</code> object, and as such allows more
+flexibility.</li>
+<li><code>scope</code> is a template that creates a local scope. It us useful when one needs
+to define a few variables to write a little logic inline before returning an
+actual handler.</li>
+<li><code>scopeAsync</code> is like scope, but allows asyncronous logic (for instance waiting
+on futures) in it.</li>
+<li><code>makeHandler</code> is a macro that removes some boilerplate in writing a custom
+handler. It accepts the body of a handler, and surrounds it with the proper
+function declaration, etc.</li>
+</ul>
+<p>An example of usage of <code>scope</code> is the following:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;/using-scope&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">scope</span> <span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;We are returning: &quot;</span>, <span class="ide">x</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">ok</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>An example of usage of <code>scopeAsync</code> is the following:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;/using-scope&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">scopeAsync</span> <span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;We are returning: &quot;</span>, <span class="ide">x</span></div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">100</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">ok</span>(<span class="ide">x</span>)</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>An example of usage of <code>makeHandler</code> is the following:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;/custom-handler&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">makeHandler</span> <span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">req</span>[]<span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="ide">x</span>, {<span class="str">&quot;Content-Type&quot;</span>: <span class="str">&quot;text/plain;charset=utf-8&quot;</span>}<span class="op">.</span><span class="ide">newStringTable</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">ctx</span></div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>That is expanded into something like:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;/custom-handler&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">innerProc</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">h</span>(<span class="ide">req</span>: <span class="kwd">ref</span> <span class="ide">Request</span>, <span class="ide">ctx</span>: <span class="ide">Context</span>): <span class="ide">Future</span>[<span class="ide">Context</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> <span class="ide">x</span> <span class="op">=</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">await</span> <span class="ide">req</span>[]<span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="ide">x</span>, {<span class="str">&quot;Content-Type&quot;</span>: <span class="str">&quot;text/plain;charset=utf-8&quot;</span>}<span class="op">.</span><span class="ide">newStringTable</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span> <span class="ide">ctx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">h</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">innerProc</span>()</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>Notice that <code>makeHandler</code> is a little lower-level than other parts of
+Rosencrantz, and requires you to know how to write a custom handler.</p>
+<h2>1.7. JSON support</h2>
+<p>Rosencrantz has support to parse and respond with JSON, under the
+<code>rosencrantz/jsonsupport</code> module. It defines two typeclasses:</p>
+<ul>
+<li>a type <code>T</code> is <code>JsonReadable</code> if there is function <code>readFromJson(json, T): T</code>
+where <code>json</code> is of type <code>JsonNode</code>;</li>
+<li>a type <code>T</code> is <code>JsonWritable</code> if there is a function
+<code>renderToJson(t: T): JsonNode</code>.</li>
+</ul>
+<p>The module <code>rosencrantz/core</code> contains the following handlers:</p>
+<ul>
+<li><code>ok(j)</code>, where <code>j</code> is of type <code>JsonNode</code>, that will respond with a content
+type of <code>application/json</code>.</li>
+<li><code>ok(t)</code>, where <code>t</code> has a type <code>T</code> that is <code>JsonWritable</code>, that will respond
+with the JSON representation of <code>t</code> and a content type of <code>application/json</code>.</li>
+<li><code>jsonBody(p)</code>, where <code>p</code> is a <code>proc(j: JsonNode): Handler</code>, that extracts the
+body as a <code>JsonNode</code> and passes it to <code>p</code>, failing if the body is not valid
+JSON.</li>
+<li><code>jsonBody(p)</code>, where <code>p</code> is a <code>proc(t: T): Handler</code>, where <code>T</code> is a type that
+is <code>JsonReadable</code>; it extracts the body as a <code>T</code> and passes it to <code>p</code>, failing
+if the body is not valid JSON or cannot be converted to <code>T</code>.</li>
+</ul>
+<h2>1.8. Form and querystring support</h2>
+<p>Rosencrantz has support to read the body of a form, either of type
+<code>application/x-www-form-urlencoded</code> or multipart. It also supports
+parsing the querystring as <code>application/x-www-form-urlencoded</code>.</p>
+<p>The <code>rosencrantz/formsupport</code> module defines two typeclasses:</p>
+<ul>
+<li>a type <code>T</code> is <code>UrlDecodable</code> if there is function <code>parseFromUrl(s, T): T</code>
+where <code>s</code> is of type <code>StringTableRef</code>;</li>
+<li>a type <code>T</code> is <code>UrlMultiDecodable</code> if there is a function
+<code>parseFromUrl(s, T): T</code> where <code>s</code> is of type <code>TableRef[string, seq[string]]</code>.</li>
+</ul>
+<p>The module <code>rosencrantz/formsupport</code> defines the following handlers:</p>
+<ul>
+<li><code>formBody(p)</code> where <code>p</code> is a <code>proc(s: StringTableRef): Handler</code>. It will
+parse the body as an URL-encoded form and pass the corresponding string
+table to <code>p</code>, rejecting the request if the body is not parseable.</li>
+<li><code>formBody(t)</code> where <code>t</code> has a type <code>T</code> that is <code>UrlDecodable</code>. It will
+parse the body as an URL-encoded form, convert it to <code>T</code>, and pass the
+resulting object to <code>p</code>. It will reject a request if the body is not parseable
+or if the conversion to <code>T</code> fails.</li>
+<li><code>formBody(p)</code> where <code>p</code> is a
+<code>proc(s: TableRef[string, seq[string]]): Handler</code>. It will parse the body as
+an URL-encoded form, accumulating repeated parameters into sequences, and pass
+table to <code>p</code>, rejecting the request if the body is not parseable.</li>
+<li><code>formBody(t)</code> where <code>t</code> has a type <code>T</code> that is <code>UrlMultiDecodable</code>. It will
+parse the body as an URL-encoded with repeated parameters form, convert it
+to <code>T</code>, and pass the resulting object to <code>p</code>. It will reject a request if the
+body is not parseable or if the conversion to <code>T</code> fails.</li>
+</ul>
+<p>There are similar handlers to extract the querystring from a request:</p>
+<ul>
+<li><code>queryString(p)</code>, where <code>p</code> is a <code>proc(s: string): Handler</code> allows to generate
+a handler from the raw querystring (not parsed into parameters yet)</li>
+<li><code>queryString(p)</code>, where <code>p</code> is a <code>proc(s: StringTableRef): Handler</code> allows to
+generate a handler from the querystring parameters, parsed as a string table.</li>
+<li><code>queryString(t)</code> where <code>t</code> has a type <code>T</code> that is <code>UrlDecodable</code>; works the
+same as <code>formBody</code>.</li>
+<li><code>queryString(p)</code>, where <code>p</code> is a
+<code>proc(s: TableRef[string, seq[string]]): Handler</code> allows to generate a handler
+from the querystring with repeated parameters, parsed as a table.</li>
+<li><code>queryString(t)</code> where <code>t</code> has a type <code>T</code> that is <code>UrlMultiDecodable</code>; works
+the same as <code>formBody</code>.</li>
+</ul>
+<p>Finally, there is a handler to parse multipart forms. The results are
+accumulated inside a <code>MultiPart</code> object, which is defined by</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">MultiPartFile</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">filename</span><span class="op">*</span>, <span class="ide">contentType</span><span class="op">*</span>, <span class="ide">content</span><span class="op">*:</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">MultiPart</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">fields</span><span class="op">*:</span> <span class="ide">StringTableRef</span></div></div><div class="line"><div class="line-content">    <span class="ide">files</span><span class="op">*:</span> <span class="ide">TableRef</span>[<span class="ide">string</span>, <span class="ide">MultiPartFile</span>]</div></div>  </code></pre>
+<p>The handler for multipart forms is:</p>
+<ul>
+<li><code>multipart(p)</code>, where <code>p</code> is a <code>proc(m: MultiPart): Handler</code> is handed
+the result of parsing the form as multipart. In case of parsing error, an
+exception is raised - you can choose whether to let it propagate it and
+return a 500 error, or contain it using <code>failWith</code>.</li>
+</ul>
+<h2>1.9. Static file support</h2>
+<p>Rosencrantz has support to serve static files or directories. For now, it is
+limited to small files, because it does not support streaming yet.</p>
+<p>The module <code>rosencrantz/staticsupport</code> defines the following handlers:</p>
+<ul>
+<li><code>file(path)</code>, where <code>path</code> is either absolute or relative to the current
+working directory. It will respond by serving the content of the file, if
+it exists and is a simple file, or reject the request if it does not exist
+or is a directory.</li>
+<li><code>dir(path)</code>, where <code>path</code> is either absolute or relative to the current
+working directory. It will respond by taking the part of the URL
+requested that is not matched yet, concatenate it to <code>path</code>, and serve the
+corresponding file. Again, if the file does not exist or is a directory, the
+handler will reject the request.</li>
+</ul>
+<p>To make things concrete, consider the following handler:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;/main&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">file</span>(<span class="str">&quot;index.html&quot;</span>)</div></div><div class="line"><div class="line-content">] <span class="op">~</span></div></div><div class="line"><div class="line-content"><span class="ide">pathChunk</span>(<span class="str">&quot;/static&quot;</span>)[</div></div><div class="line"><div class="line-content">  <span class="ide">dir</span>(<span class="str">&quot;public&quot;</span>)</div></div><div class="line"><div class="line-content">]</div></div>  </code></pre>
+<p>This will server the file <code>index.html</code> when the request is for the path <code>/main</code>,
+and it will serve the contents of the directory <code>public</code> under the URL <code>static</code>.
+So, for instance, a request for <code>/static/css/boostrap.css</code> will return the
+contents of the file <code>./public/css/boostrap.css</code>.</p>
+<p>All static handlers use the <a href="http://nim-lang.org/docs/mimetypes.html">mimetypes module</a>
+to try to guess the correct content type depending on the file extension. This
+should be usually enough; if you need more control, you can wrap a <code>file</code>
+handler inside a <code>contentType</code> handler to override the content type.</p>
+<p><strong>Note</strong> Due to a bug in Nim 0.14.2, the static handlers will not work on this
+version. They work just fine on Nim 0.14.0 or on devel.</p>
+<h2>1.10. CORS support</h2>
+<p>Rosencrantz has support for <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross-Origin requests</a>
+under the module <code>rosencrantz/corssupport</code>.</p>
+<p>The following are essentially helper functions to produce headers related to
+handling cross-origin HTTP requests, as well as reading common headers in
+preflight requests. These handlers are available:</p>
+<ul>
+<li><code>accessControlAllowOrigin(origin)</code> produces the header <code>Access-Control-Allow-Origin</code>
+with the provided <code>origin</code> value.</li>
+<li><code>accessControlAllowAllOrigins</code> produces the header <code>Access-Control-Allow-Origin</code>
+with the value <code>*</code>, which amounts to accepting all origins.</li>
+<li><code>accessControlExposeHeaders(headers)</code> produces the header <code>Access-Control-Expose-Headers</code>,
+which is used to control which headers are exposed to the client.</li>
+<li><code>accessControlMaxAge(seconds)</code> produces the header <code>Access-Control-Max-Age</code>,
+which controls the time validity for the preflight request.</li>
+<li><code>accessControlAllowCredentials(b)</code>, where <code>b</code> is a boolean value, produces
+the header <code>Access-Control-Allow-Credentials</code>, which is used to allow the
+client to pass cookies and headers related to HTTP authentication.</li>
+<li><code>accessControlAllowMethods(methods)</code>, where <code>methods</code> is an openarray of
+<code>HttpMethod</code>, produces the header <code>Access-Control-Allow-Methods</code>, which is
+used in preflight requests to communicate which methods are allowed on the
+resource.</li>
+<li><code>accessControlAllowHeaders(headers)</code> produces the header <code>Access-Control-Allow-Headers</code>,
+which is used in the preflight request to control which headers can be added
+by the client.</li>
+<li><code>accessControlAllow(origin, methods, headers)</code> is used in preflight requests
+for the common combination of specifying the origin as well as methods and
+headers accepted.</li>
+<li><code>readAccessControl(p)</code> is used to extract information in the preflight request
+from the CORS related headers at once.
+Here <code>p</code> is a <code>proc(origin: string, m: HttpMethod, headers: seq[string]</code>
+that will receive the origin of the request, the desired method and the
+additional headers to be provided, and will return a suitable response.</li>
+</ul>
+<h2>1.11. API stability</h2>
+<p>While the basic design is not going to change, the API is not completely
+stable yet. It is possible that the <code>Context</code> will change to accomodate some
+more information, or that it will be passed as a <code>ref</code> to handlers.</p>
+<p>As long as you compose the handlers defined above, everything will continue to
+work, but if you write your own handlers by hand, this is something to be
+aware of.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/andreaferretti/rosencrantz">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

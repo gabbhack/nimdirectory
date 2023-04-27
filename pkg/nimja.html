@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimja</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">template</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">web</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">compiled</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">typed</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">jinja2</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">twig</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("typed and compiled template engine inspired by jinja2, twig and onionhammer/nim-templates for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimja" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nimja Template Engine</h1>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/13794470/133277541-01de699e-9699-4d8f-b65c-595bc309a1ee.png" style="max-width: 100%;" />
+</p>
+<p>typed and compiled template engine inspired by <a href="https://jinja.palletsprojects.com/">jinja2</a>, <a href="https://twig.symfony.com/">twig</a> and <a href="https://github.com/onionhammer/nim-templates">onionhammer/nim-templates</a> for Nim.</p>
+<h1>FEATURES</h1>
+<p>  <a href="https://github.com/enthus1ast/nimja/actions/workflows/test.yml">    <img src="https://github.com/enthus1ast/nimja/actions/workflows/test.yml/badge.svg" style="max-width: 100%;" alt="test" />  </a></p>
+<ul>
+<li>compiled</li>
+<li>statically typed</li>
+<li>extends (a master template)</li>
+<li>control structures (if elif else / case / for / while)</li>
+<li>import other templates</li>
+<li>most nim code is valid in the templates</li>
+<li>very fast:</li>
+</ul>
+<pre>  <code># https://github.com/enthus1ast/dekao/blob/master/bench.nim
+# nim c --gc:arc -d:release -d:danger -d:lto --opt:speed -r bench.nim
+name ................. min time  avg time  std dv   runs
+dekao ................ 0.105 ms  0.117 ms  ±0.013  x1000
+karax ................ 0.126 ms  0.132 ms  ±0.008  x1000
+htmlgen .............. 0.021 ms  0.023 ms  ±0.004  x1000
+nimja ................ 0.016 ms  0.017 ms  ±0.001  x1000 &lt;--
+nimja iterator ....... 0.008 ms  0.009 ms  ±0.001  x1000 &lt;--
+scf .................. 0.023 ms  0.024 ms  ±0.003  x1000
+nim-mustache ......... 0.745 ms  0.790 ms  ±0.056  x1000
+</code></pre>
+<h1>DOCUMENTATION</h1>
+<ul>
+<li>this readme</li>
+<li>  <a href="https://enthus1ast.github.io/nimja/nimja.html">generated nim docs</a></li>
+</ul>
+<h1>MOTIVATING EXAMPLE</h1>
+<ul>
+<li>  <a href="https://github.com/enthus1ast/nimja/tree/master/examples/fromReadme">this example is in the example folder</a></li>
+<li>  <a href="https://github.com/enthus1ast/nimja/tree/master/examples/prologue">and a more complete prologue and jester example</a></li>
+<li>  <a href="https://github.com/enthus1ast/nimja/tree/master/examples/dynlib">an example howto load templates from a shared library (dll, so)</a></li>
+</ul>
+<p>server.nim</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">asynchttpserver</span>, <span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimja</span><span class="op">/</span><span class="ide">parser</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span>, <span class="ide">random</span> <span class="com"># os and random are later used in the templates, so imported here</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">User</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">lastname</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">age</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">renderIndex</span>(<span class="ide">title</span>: <span class="ide">string</span>, <span class="ide">users</span>: <span class="ide">seq</span>[<span class="ide">User</span>]): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com">## the `index.nimja` template is transformed to nim code.</span></div></div><div class="line"><div class="line-content">  <span class="com">## so it can access all variables like `title` and `users`</span></div></div><div class="line"><div class="line-content">  <span class="com">## the return variable could be `string` or `Rope` or</span></div></div><div class="line"><div class="line-content">  <span class="com">## anything which has a `&amp;=`(obj: YourObj, str: string) proc.</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateFile</span>(<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;index.nimja&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newAsyncHttpServer</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">cb</span>(<span class="ide">req</span>: <span class="ide">Request</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="com"># in the templates we can later loop trough this sequence</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">users</span>: <span class="ide">seq</span>[<span class="ide">User</span>] <span class="op">=</span> <span class="op">@</span>[</div></div><div class="line"><div class="line-content">      <span class="ide">User</span>(<span class="ide">name</span>: <span class="str">&quot;Katja&quot;</span>, <span class="ide">lastname</span>: <span class="str">&quot;Kopylevych&quot;</span>, <span class="ide">age</span>: <span class="num">32</span>),</div></div><div class="line"><div class="line-content">      <span class="ide">User</span>(<span class="ide">name</span>: <span class="str">&quot;David&quot;</span>, <span class="ide">lastname</span>: <span class="str">&quot;Krause&quot;</span>, <span class="ide">age</span>: <span class="num">32</span>),</div></div><div class="line"><div class="line-content">    ]</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">req</span><span class="op">.</span><span class="ide">respond</span>(<span class="ide">Http200</span>, <span class="ide">renderIndex</span>(<span class="str">&quot;index&quot;</span>, <span class="ide">users</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">server</span><span class="op">.</span><span class="ide">listen</span> <span class="ide">Port</span>(<span class="num">8080</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">true</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">server</span><span class="op">.</span><span class="ide">shouldAcceptRequest</span>():</div></div><div class="line"><div class="line-content">      <span class="ide">await</span> <span class="ide">server</span><span class="op">.</span><span class="ide">acceptRequest</span>(<span class="ide">cb</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">asyncCheck</span> <span class="ide">main</span>()</div></div><div class="line"><div class="line-content"><span class="ide">runForever</span>()</div></div>  </code></pre>
+<p>index.nimja:</p>
+<pre>  <code class="language-twig">{% extends partials/_master.nimja%}
+{#
+  extends uses the master.nimja template as the &quot;base&quot;.
+  All the `block`s that are defined in the master.nimja are filled
+  with blocks from this template.
+
+  If the templates extends another, all content HAVE TO be in a block.
+
+  blocks can have arbitrary names
+
+  extend must be the first token in the template,
+  only comments `{# Some foo #}` and strings are permitted to come before it.
+#}
+
+
+{% block content %}
+  {# A random loop to show off. #}
+  {# Data is defined here for demo purpose, but could come frome database etc.. #}
+  &lt;h1&gt;Random links&lt;/h1&gt;
+  {% const links = [
+    (title: &quot;google&quot;, target: &quot;https://google.de&quot;),
+    (title: &quot;fefe&quot;, target: &quot;https://blog.fefe.de&quot;)]
+  %}
+  {% for (ii, item) in links.pairs() %}
+    {{ii}} &lt;a href=&quot;{{item.target}}&quot;&gt;This is a link to: {{item.title}}&lt;/a&gt;&lt;br&gt;
+  {% endfor %}
+
+  &lt;h1&gt;Members&lt;/h1&gt;
+    {# `users` was a param to the `renderIndex` proc #}
+    {% for (idx, user) in users.pairs %}
+        &lt;a href=&quot;/users/{{idx}}&quot;&gt;{% importnimja &quot;./partials/_user.nimja&quot; %}&lt;/a&gt;&lt;br&gt;
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+  {#
+    we can call arbitraty nim code in the templates.
+    Here we pick a random user from users.
+  #}
+  {% var user = users.sample() %}
+
+  {#
+    imported templates have access to all variables declared in the parent.
+    So `user` is usable in &quot;./partials/user.nimja&quot;
+  #}
+  This INDEX was presented by.... {% importnimja &quot;./partials/_user.nimja&quot; %}
+{% endblock footer %} {# the &apos;footer&apos; in endblock is completely optional #}
+</code></pre>
+<p>master.nimja</p>
+<pre>  <code class="language-twig">{#
+
+  This template is later expanded from the index.nimja template.
+  All blocks are filled by the blocks from index.nimja
+
+  Variables are also useable.
+ #}
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;style&gt;
+body {
+  background-color: aqua;
+  color: red;
+}
+&lt;/style&gt;
+
+{# The master can declare a variable that is later visible in the child template #}
+{% var aVarFromMaster = &quot;aVarFromMaster&quot; %}
+
+{# We import templates to keep the master small #}
+{% importnimja &quot;partials/_menu.nimja&quot; %}
+
+&lt;h1&gt;{{title}}&lt;/h1&gt;
+
+{# This block is filled from the child templates #}
+{%block content%}{%endblock%}
+
+
+{#
+  If the block contains content and is NOT overwritten later.
+  The content from the master is rendered
+#}
+{% block onlyMasterBlock %}Only Master Block{% endblock %}
+
+&lt;footer&gt;
+  {% block footer %}{% endblock %}
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>partials/_menu.nimja:</p>
+<pre>  <code class="language-twig">&lt;a href=&quot;/&quot;&gt;index&lt;/a&gt;
+</code></pre>
+<p>partials/_user.nimja:</p>
+<pre>  <code class="language-twig">User: {{user.name}} {{user.lastname}} age: {{user.age}}
+</code></pre>
+<h1>Basic Syntax</h1>
+<ul>
+<li><code>{{ myObj.myVar }}</code> --transformed-to---&gt;  <code>$(myObj.myVar)</code></li>
+<li>{% myExpression.inc() %} --transformed-to---&gt; <code>myExpression.inc()</code></li>
+<li>{# a comment #}</li>
+</ul>
+<h1>How?</h1>
+<p>nimja transforms templates to nim code on compilation,
+so you can write arbitrary nim code.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">ss</span>: <span class="ide">string</span>, <span class="ide">ii</span>: <span class="ide">int</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>(</div></div><div class="line"><div class="line-content">    """example{% if ii == 1%}{{ss}}{%endif%}{% var myvar = 1 %}{% myvar.inc %}"""</div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>is transformed to:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">ss</span>: <span class="ide">string</span>; <span class="ide">ii</span>: <span class="ide">int</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">&amp;=</span> <span class="str">&quot;example&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">ii</span> <span class="op">==</span> <span class="num">1</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">&amp;=</span> <span class="ide">ss</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">myvar</span> <span class="op">=</span> <span class="num">1</span></div></div><div class="line"><div class="line-content">  <span class="ide">inc</span>(<span class="ide">myvar</span>, <span class="num">1</span>)</div></div>  </code></pre>
+<p>this means you have the full power of nim in your templates.</p>
+<h1>USAGE</h1>
+<p>there are only three relevant procedures:</p>
+<ul>
+<li><code>compileTemplateStr(str: string)</code>
+compiles a template string to nim ast</li>
+<li><code>compileTemplateFile(path: string)</code>
+compiles the content of a file to nim ast</li>
+<li><code>getScriptDir()</code>
+returns the path to your current project, on compiletime.</li>
+</ul>
+<h2>compileTemplateFile</h2>
+<p><code>compileTemplateFile</code> transforms the given file into the nim code.
+you should use it like so:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span> <span class="com"># for `/`</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myRenderProc</span>(<span class="ide">someParam</span>: <span class="ide">string</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateFile</span>(<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;myFile.html&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myRenderProc</span>(<span class="str">&quot;test123&quot;</span>)</div></div>  </code></pre>
+<p><code>compileTemplateFile</code> can also generate an iterator body, for details look at the
+iteratior section.</p>
+<p><code>compileTemplateFile</code> (also <code>compileTemplateString</code>) generates the body of a proc/iterator so it generates
+assign calls to a variable. The default is <code>result</code>.
+If you want it to use another variable set it in <code>varname</code></p>
+<p>also look at:</p>
+<ul>
+<li><a href="#tmpls--tmplf">tmplf</a> (inline version of this)</li>
+<li>  <a href="#tmpls--tmplf">tmpls</a></li>
+<li>  <a href="#compiletemplatestr">compileTemplateStr</a></li>
+</ul>
+<h2>compileTemplateStr</h2>
+<p><code>compileTemplateStr</code> compiles the given string into nim code.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myRenderProc</span>(<span class="ide">someParam</span>: <span class="ide">string</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>(<span class="str">&quot;some nimja code {{someParam}}&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myRenderProc</span>(<span class="str">&quot;test123&quot;</span>)</div></div>  </code></pre>
+<p><code>compileTemplateStr</code> can also generate an iterator body, for details look at the
+iteratior section.</p>
+<p><code>compileTemplateString</code> (also <code>compileTemplateFile</code>) generates the body of a proc/iterator so it generates
+assign calls to a variable. The default is <code>result</code>.
+If you want it to use another variable set it in <code>varname</code></p>
+<p>A context can be supplied to the <code>compileTemplateString</code> (also <code>compileTemplateFile</code>), to override variable names:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">block</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">Rax</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">aa</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">      <span class="ide">bb</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">rax</span> <span class="op">=</span> <span class="ide">Rax</span>(<span class="ide">aa</span>: <span class="str">&quot;aaaa&quot;</span>, <span class="ide">bb</span>: <span class="num">13.37</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">foo</span> <span class="op">=</span> <span class="num">123</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">render</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">compileTemplateString</span>(<span class="str">&quot;{{node.bb}}{{baa}}&quot;</span>, {<span class="ide">node</span>: <span class="ide">rax</span>, <span class="ide">baa</span>: <span class="ide">foo</span>})</div></div>  </code></pre>
+<p>Please note, currently the context <strong>cannot be</strong> procs/funcs etc.</p>
+<p>also look at:</p>
+<ul>
+<li><a href="#tmpls--tmplf">tmpls</a> (inline version of this)</li>
+<li>  <a href="#tmpls--tmplf">tmplf</a></li>
+<li>  <a href="#compiletemplatefile">compileTemplateFile</a></li>
+</ul>
+<h2>if / elif / else</h2>
+<pre>  <code class="language-twig">{% if aa == 1 %}
+  aa is: one
+{% elif aa == 2 %}
+  aa is: two
+{% else %}
+  aa is something else
+{% endif %}
+</code></pre>
+<h2>when / elif / else</h2>
+<p><code>when</code> is the compile time if statement.
+It has the same semantic than if</p>
+<pre>  <code class="language-twig">{% when declared(isDeclared) %}
+  isDeclared
+{% elif true == true %}
+  true
+{% else %}
+  something else
+{% endwhen %}
+</code></pre>
+<h2>case / of / else</h2>
+<p>(Since Nimja 0.8.1)</p>
+<p><code>case</code> has the same semantic as the <a href="https://nim-lang.org/docs/tut1.html#control-flow-statements-case-statement">nim case statement</a>.
+Use <code>case</code> for example if you want to make sure that all cases are handled.
+If not all cases are covered, an error is generated.</p>
+<pre>  <code class="language-twig">{%- case str -%}
+{%- of &quot;foo&quot; -%}
+  foo
+{%- of &quot;baa&quot; -%}
+  baa
+{%- of &quot;baz&quot; -%}
+  baz
+{%- else -%}
+  nothing
+{%- endcase -%}
+</code></pre>
+<h2>tmpls / tmplf</h2>
+<p><code>compileTemplateStr</code> and <code>compileTemplateFile</code> both need a surrounding proc.
+<code>tmpls</code> (template str) and <code>tmplf</code> (template file) are a shorthand for these
+situations where you want to inline a render call.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">leet</span> <span class="op">=</span> <span class="num">1337</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">tmpls</span>(<span class="str">&quot;foo {{leet}}&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">tmplf</span>(<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;templates&quot;</span> <span class="op">/</span> <span class="str">&quot;myfile.nimja&quot;</span>)</div></div>  </code></pre>
+<p>A context can be supplied to the template, to override variable names:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">block</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">Rax</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">aa</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">      <span class="ide">bb</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">rax</span> <span class="op">=</span> <span class="ide">Rax</span>(<span class="ide">aa</span>: <span class="str">&quot;aaaa&quot;</span>, <span class="ide">bb</span>: <span class="num">13.37</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">foo</span> <span class="op">=</span> <span class="num">123</span></div></div><div class="line"><div class="line-content">  <span class="ide">tmpls</span>(<span class="str">&quot;{{node.bb}}{{baa}}&quot;</span>, {<span class="ide">node</span>: <span class="ide">rax</span>, <span class="ide">baa</span>: <span class="ide">foo</span>})</div></div>  </code></pre>
+<p>Please note, currently the context <strong>cannot be</strong> procs/funcs etc.</p>
+<h2>for</h2>
+<pre>  <code class="language-twig">{% for (cnt, elem) in @[&quot;foo&quot;, &quot;baa&quot;, &quot;baz&quot;].pairs() %}
+  {{cnt}} -&gt; {{elem}}
+{% endfor %}
+</code></pre>
+<pre>  <code class="language-twig">{% for elem in someObj.someIter() %}
+  {# `elem` is accessible from the &quot;some/template.nimja&quot; #}
+  {# see importnimja section for more info #}
+  {% importnimja &quot;some/template.nimja&quot; %}
+{% endfor %}
+</code></pre>
+<h2>while</h2>
+<pre>  <code class="language-twig">{% while isTrue() %}
+  still true
+{% endwhile %}
+</code></pre>
+<pre>  <code class="language-twig">{% var idx = 0 %}
+{% while idx &lt; 10 %}
+  still true
+  {% idx.inc %}
+{% endwhile %}
+</code></pre>
+<h2>comments</h2>
+<pre>  <code class="language-twig">{# single line comment #}
+{#
+  multi
+  line
+  comment
+#}
+{# {% var idx = 0 %} #}
+</code></pre>
+<h2>&quot;to string&quot; / output</h2>
+<p>declare your own <code>$</code> before you call
+<code>compileTemplateStr()</code> or <code>compileTemplateFile()</code>
+for your custom objects.
+For complex types it is recommend to use the method described in the <code>importnimja</code> section.</p>
+<pre>  <code class="language-twig">{{myVar}}
+{{someProc()}}
+</code></pre>
+<h2>importnimja</h2>
+<p>import the content of another template.
+The imported template has access to the parents variables.
+So it&apos;s a valid strategy to have a &quot;partial&quot; template that for example
+can render an object or a defined type.
+Then include the template wherever you need it:</p>
+<p>best practice is to have a <code>partials</code> folder,
+and every partial template begins with an underscore &quot;_&quot;
+all templates are partial that do not extend another
+template and therefore can be included.</p>
+<p>This way you create reusable template blocks to use all over your webpage.</p>
+<p>partials/_user.nimja:</p>
+<pre>  <code class="language-twig">&lt;div class=&quot;col-3&quot;&gt;
+  &lt;h2&gt;{{user.name}}&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Age: {{user.age}}&lt;/li&gt;
+    &lt;li&gt;Lastname: {{user.lastname}}&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>partials/_users.nimja:</p>
+<pre>  <code class="language-twig">&lt;div class=&quot;row&quot;&gt;
+  {% for user in users: %}
+    {% importnimja &quot;partials/_user.nimja&quot; %}
+  {% endfor %}
+&lt;/div&gt;
+</code></pre>
+<h2>extends</h2>
+<p>a child template can extend a master template.
+So that placeholder blocks in the master are filled
+with content from the child.</p>
+<p>partials/_master.nimja</p>
+<pre>  <code class="language-twig">&lt;html&gt;
+&lt;body&gt;
+A lot of boilerplate
+{% block content %}{% endblock %}
+&lt;hr&gt;
+{% block footer %}{% endblock %}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>child.nimja</p>
+<pre>  <code>{% extends &quot;partials/_master.nimja&quot; %}
+{% block content %}I AM CONTENT{% endblock %}
+{% block footer %}...The footer..{% endblock %}
+</code></pre>
+<p>if the child.nimja is compiled then rendered like so:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">renderChild</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateFile</span>(<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;child.nimja&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">renderChild</span>()</div></div>  </code></pre>
+<p>output:</p>
+<pre>  <code class="language-html">&lt;html&gt;
+&lt;body&gt;
+A lot of boilerplate
+I AM CONTENT
+&lt;hr&gt;
+...The footer..
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>scope</h2>
+<p>A <code>scope</code> has the same semantic as a nim block.
+Variables declared inside a scope are not visible
+on the outside. You can use this for code hygiene.</p>
+<pre>  <code class="language-twig">{% scope %}
+  {% let httpMethod = &quot;POST&quot; %}
+  {{ httpMethod }}
+{% endscope %}
+{# httpMethod is not accesible any more, you can define it again. #}
+{% let httpMethod = &quot;FOO&quot; %}
+{{ httpMethod }}
+</code></pre>
+<p>You can break out of a named scope prematurely</p>
+<pre>  <code>{%- scope foo -%}
+  foo
+  {%- break foo -%}
+  baa
+{%- endscope -%}
+</code></pre>
+<p>in this case only &quot;foo&quot; is printed.</p>
+<h1><code>self</code> variable</h1>
+<p>Jinja describes them like so, we can do the same:</p>
+<p>You can&apos;t define multiple {% block %} tags with the same name in the same template.
+This limitation exists because a block tag works in &quot;both&quot; directions.
+That is, a block tag doesn&apos;t just provide a placeholder to fill - it also defines the content that fills the placeholder in the parent.
+If there were two similarly-named {% block %} tags in a template, that template&apos;s parent wouldn&apos;t know which one of the blocks content to use.</p>
+<p>If you want to print a block multiple times, you can, however, use the special self variable and call the block with that name:</p>
+<pre>  <code class="language-twig">&lt;title&gt;{% block title %}{% endblock %}&lt;/title&gt;
+&lt;h1&gt;{{ self.title }}&lt;/h1&gt;
+{% block body %}{% endblock %}
+</code></pre>
+<p>To change the <code>specialSelf</code> variable name compile with eg.:</p>
+<pre>  <code>nim c -d:specialSelf=&quot;blocks.&quot; file.nim
+</code></pre>
+<h1>procedures (macro)</h1>
+<p>Procedures can be defined like so:</p>
+<pre>  <code class="language-twig">{% proc foo(): string = %}
+  baa
+{% endproc %}
+{{ foo() }}
+</code></pre>
+<pre>  <code class="language-twig">{% proc input(name: string, value=&quot;&quot;, ttype=&quot;text&quot;): string = %}
+    &lt;input type=&quot;{{ ttype }}&quot; value=&quot;{{ value }}&quot; name=&quot;{{ name }}&quot;&gt;
+{% endproc %}
+{{ input(&quot;name&quot;, &quot;value&quot;, ttype=&quot;text&quot;) }}
+</code></pre>
+<p>Func&apos;s have the same semantic as nim funcs, they are not allowed to have a side effect.</p>
+<pre>  <code class="language-twig">{% func foo(): string = %}
+  baa
+{% endfunc %}
+{{ foo() }}
+</code></pre>
+<p><code>macro</code> is an alias for <code>proc</code></p>
+<pre>  <code class="language-twig">{% macro textarea(name, value=&quot;&quot;, rows=10, cols=40): string = %}
+    &lt;textarea name=&quot;{{ name }}&quot; rows=&quot;{{ rows }}&quot; cols=&quot;{{ cols
+        }}&quot;&gt;{{ value }}&lt;/textarea&gt;
+{% endmacro %}
+{{ textarea(&quot;name&quot;, &quot;value&quot;) }}
+</code></pre>
+<p>for <code>{{func}}</code> <code>{{proc}}</code> and <code>{{macro}}</code> either the <code>{{end}}</code> tag or
+the <code>{{endfunc}}</code> <code>{{endproc}}</code> <code>{{endmacro}}</code> are valid closing tags.</p>
+<h2>Importing func/proc/macro from a file</h2>
+<p>Importing works like any other ordinary Nimja templates with <code>ìmportnimja</code>.
+Good practice is to define procs with the &quot;whitespacecontrol&quot;:</p>
+<p>myMacros.nimja</p>
+<pre>  <code>{%- proc foo(): string = %}foo{% end -%}
+{%- proc baa(): string = %}baa{% end -%}
+</code></pre>
+<p>myTemplate.nimja</p>
+<pre>  <code>{% importnimja &quot;myMacros.nimja&quot; %}
+</code></pre>
+<p>When a template <code>extends</code> another template, <code>importnimja</code> statements must be
+in a <code>block</code> they cannot stand on their own.
+It might be a good idea to import these &quot;library templates&quot; in
+the extended template (eg.: master.nimja).</p>
+<h1>Iterator</h1>
+<p>Expanded template bodies can also be created as an iterator,
+therefore the generated strings are not concatenated to the result
+<code>result &amp;= &quot;my string&quot;</code> but are yielded.</p>
+<p>This could be used for streaming templates, or to save memory when a big template is rendered and the http server can send data in chunks:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">iterator</span> <span class="ide">yourIter</span>(<span class="ide">yourParams</span>: <span class="ide">bool</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateString</span>(<span class="str">&quot;{%for idx in 0 .. 100%}{{idx}}{%endfor%}&quot;</span>, <span class="ide">iter</span> <span class="op">=</span> <span class="ide">true</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">elem</span> <span class="kwd">in</span> <span class="ide">yourIter</span>(<span class="ide">true</span>):</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">elem</span></div></div>  </code></pre>
+<h1>Whitespace Control</h1>
+<pre>  <code class="language-twig">###############
+{% if true %}
+  &lt;li&gt;   {{foo}}   &lt;/li&gt;
+{% endif %}
+###############
+</code></pre>
+<p>is expanded to:</p>
+<pre>  <code class="language-html">###############
+
+  &lt;li&gt;   FOO   &lt;/li&gt;
+
+###############
+</code></pre>
+<p>the nimja template control statements leave their newline and whitespace when rendered.
+To fix this you can annotate them with &quot;-&quot;:</p>
+<pre>  <code class="language-twig">###############
+{% if true -%}
+  &lt;li&gt;   {{-foo-}}   &lt;/li&gt;
+{%- endif %}
+###############
+</code></pre>
+<pre>  <code class="language-html">###############
+&lt;li&gt;FOO&lt;/li&gt;
+###############
+</code></pre>
+<h1>Nimjautils</h1>
+<p>The optional <code>nimjautils</code> module, implements some convenient procedures.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimja</span><span class="op">/</span><span class="ide">nimjautils</span></div></div>  </code></pre>
+<p>Mainly:</p>
+<h2>Loop variable/iterator</h2>
+<p>yields a <code>Loop</code> object with every item.
+Inside the loop body you have access to the following fields.
+Unlike jinja2 or twig where the loop variable is implicitly bound and available, we must use the <code>loop()</code> iterator explicity.</p>
+<pre>  <code class="language-twig">{% for (loop, row) in rows.loop() %}
+    {{ loop.index0 }} {# which elemen (start from 0) #}
+    {{ loop.index }} {# which element (start from 1) #}
+    {{ loop.revindex0 }} {# which element, counted from the end (last one is 0) #}
+    {{ loop.revindex }} {# which element, counted from the end (last one is 1) #}
+    {{ loop.length }} {# the length of the seq, (same as mySeq.len()) #}
+    {% if loop.first %}The first item{% endif %} {# if this is the first loop iteration #}
+    {% if loop.last %}The last item{% endif %} {# if this is the last loop iteration #}
+    {% if loop.previtem.isSome() %}{{ loop.previtem.get() }}{% endif %} {# get the item from the last loop iteration #}
+    {% if loop.nextitem.isSome() %}{{ loop.nextitem.get() }}{% endif %} {# get the item from the next loop iteration #}
+    &lt;li class=&quot;{{ loop.cycle(@[&quot;odd&quot;, &quot;even&quot;]) }}&quot;&gt;{{row}}&lt;/li&gt;
+{% endfor %}
+</code></pre>
+<p><del>however, the element you iterate over must match the Concept `Loopable`.</del> https://github.com/enthus1ast/nimja/issues/23
+This means you can propably not use <code>loop()</code> with an iterator, since they do not have a <code>len()</code> and <code>[]</code></p>
+<h2>Cycle</h2>
+<p>within a loop you can cycle through elements:</p>
+<pre>  <code class="language-twig">{% for (loop, row) in rows.loop() %}
+    &lt;li class=&quot;{{ loop.cycle(@[&quot;odd&quot;, &quot;even&quot;]) }}&quot;&gt;{{ row }}&lt;/li&gt;
+{% endfor %}
+</code></pre>
+<h2>&apos;~&apos; (tilde)</h2>
+<p>Converts all operands into strings and concatenates them.
+like: <code>$aa &amp; $bb</code></p>
+<pre>  <code class="language-twig">{{ &quot;Hello &quot; ~ name ~ &quot;!&quot; }}
+</code></pre>
+<p>would return (assuming name is set to &apos;Nim&apos;) Hello Nim!.</p>
+<h2>includeRaw</h2>
+<p>Includes the content of a file literally without any parsing
+Good for documentation etc..</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">test</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">path</span> <span class="op">=</span> (<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;tests/basic&quot;</span> <span class="op">/</span> <span class="str">&quot;includeRawT.txt&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>("""pre{{ includeRaw(path) }}suf""")</div></div>  </code></pre>
+<h2>raw strings</h2>
+<p>to include raw strings, or nimja code itself to a template (for documentation purpose),
+you could use this construct <code>{{&quot;raw code&quot;}}</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>("""
+    foo {{"{%if true%}baa{%endif%}"}}
+  """)</div></div>  </code></pre>
+<p>this would then be rendered like so:</p>
+<pre>  <code>foo {%if true%}baa{%endif%}
+</code></pre>
+<h2>includeRawStatic</h2>
+<p>Includes the content of a file literally without any parsing, on compiletime.
+This means it is included into the executable.</p>
+<h2>includeStaticAsDataurl</h2>
+<p>Includes the content of a file on compile time, it is converted to a data url.
+Eg:</p>
+<pre>  <code class="language-html">  &lt;img src=&quot;{{includeStaticAsDataurl(getScriptDir() / &quot;logo.jpg&quot;)}}&quot;&gt;
+</code></pre>
+<p>is transformed to:</p>
+<pre>  <code class="language-html">  &lt;img src=&quot;data:image/jpeg;charset=utf-8;base64,/9j/4AAQSkZJRg...&quot;/&gt;
+</code></pre>
+<h2>truncate</h2>
+<p>truncates a string to &quot;num&quot; characters.
+when the string was truncated it appends the <code>suf</code> to the text.
+if <code>preserveWords</code> is true it will not cut words in half but
+the output string could be shorter than <code>num</code> characters.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">truncate</span><span class="op">*</span>(<span class="ide">str</span>: <span class="ide">string</span>, <span class="ide">num</span>: <span class="ide">Natural</span>, <span class="ide">preserveWords</span> <span class="op">=</span> <span class="ide">true</span>, <span class="ide">suf</span> <span class="op">=</span> <span class="str">&quot;...&quot;</span>): <span class="ide">string</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">lorem</span> <span class="op">=</span> <span class="str">&quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptates odio tempore voluptas beatae eum consequatur laudantium totam. Delectus fuga eveniet ab cum nulla aperiam iste ducimus odio fugit voluptas.&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">test</span>(<span class="ide">lorem</span>: <span class="ide">string</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>(<span class="str">&quot;{{lorem.truncate(65)}}&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">test</span>(<span class="ide">lorem</span>) <span class="op">==</span> <span class="str">&quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem...&quot;</span></div></div>  </code></pre>
+<h2>nl2br</h2>
+<p>Converts newline to <code>&lt;br&gt;</code>.
+If keepNL == true, the one <code>\n</code> is replaced by <code>&lt;br&gt;\n</code> thus keeping the newlines.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">nl2br</span><span class="op">*</span>(<span class="ide">str</span>: <span class="ide">string</span>, <span class="ide">keepNl</span> <span class="op">=</span> <span class="ide">true</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="str">&quot;foo</span>\n<span class="str">baa&quot;</span><span class="op">.</span><span class="ide">nl2br</span> <span class="op">==</span> <span class="str">&quot;foo&lt;br&gt;</span>\n<span class="str">baa&quot;</span></div></div>  </code></pre>
+<h2>spaceless</h2>
+<p>Removes unneeded whitespaces between html tags,
+warning, this is NOT smart. So it will destroy <code>&lt;textarea&gt;</code> and <code>&lt;pre&gt;</code> content!</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">check</span> <span class="str">&quot;&lt;foo&gt;</span>\n\n<span class="str">baa  &lt;/foo&gt;&quot;</span><span class="op">.</span><span class="ide">spaceless</span> <span class="op">==</span> <span class="str">&quot;&lt;foo&gt; baa &lt;/foo&gt;&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">check</span> <span class="str">&quot;&lt;foo tag=&apos;tag tag&apos;&gt;</span>\n\n<span class="str">baa  &lt;/foo&gt;&quot;</span><span class="op">.</span><span class="ide">spaceless</span> <span class="op">==</span> <span class="str">&quot;&lt;foo tag=&apos;tag tag&apos;&gt; baa &lt;/foo&gt;&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">check</span> <span class="str">&quot;&lt;foo&gt;baa  baz&lt;/foo&gt;&quot;</span><span class="op">.</span><span class="ide">spaceless</span> <span class="op">==</span> <span class="str">&quot;&lt;foo&gt;baa baz&lt;/foo&gt;&quot;</span></div></div>  </code></pre>
+<h2>slugify</h2>
+<p>converts any string to an url friendly one.
+Removes any special chars and replaces non ASCII runes to their ASCII representation.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">slugify</span>(<span class="str">&quot;Lession learned german umlauts: öüä&quot;</span>)</div></div>  </code></pre>
+<p>will output:</p>
+<p>  <code>lession-learned-german-umlauts-oua</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">allowedCharsInSlug</span> <span class="op">=</span> <span class="ide">Letters</span> <span class="op">+</span> <span class="ide">Digits</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">slugify</span><span class="op">*</span>(<span class="ide">str</span>: <span class="ide">string</span>, <span class="ide">sperator</span> <span class="op">=</span> <span class="str">&quot;-&quot;</span>, <span class="ide">allowedChars</span> <span class="op">=</span> <span class="ide">allowedCharsInSlug</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<h2>shorthand if <code>?</code></h2>
+<p>a shorthand for a condition, this could be used for example
+to toggle html classes:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">isDisabled</span>: <span class="ide">bool</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>("""{% ?isDisabled: "disabled" %}""")</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="str">&quot;disabled&quot;</span> <span class="op">==</span> <span class="ide">foo</span>(<span class="ide">true</span>)</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="str">&quot;&quot;</span> <span class="op">==</span> <span class="ide">foo</span>(<span class="ide">false</span>)</div></div>  </code></pre>
+<table>
+<thead>
+<tr>
+<th>filter <code>|</code></th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>filter <code>|</code></th>
+</tr>
+</thead></table>
+<p><code>a | b</code> is an alias to <code>a.b</code> this is often used in other template engines.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateStr</span>("""{{"foo baa baz" | slugify}}""")</div></div><div class="line"><div class="line-content"><span class="ide">check</span> <span class="ide">foo</span>() <span class="op">==</span> <span class="str">&quot;foo-baa-baz&quot;</span></div></div>  </code></pre>
+<h2>Want to hack?</h2>
+<blockquote>
+<p>if you need more utils in nimjautils, please PR!
+they should all be quite easy to implement,
+so they make up a good first issue/pull request!</p>
+<p>a good inspiration WHAT to hack is jinja and twig filters.</p>
+</blockquote>
+<h1>Compile / Use</h1>
+<p>This is a COMPILED template engine.
+This means you must <em>recompile</em> your application
+for every change you do in the templates!</p>
+<p><del>_Automatic recompilation / hot code reloading / dynamic execution is a [planned feature](https://github.com/enthus1ast/nimja/issues/6)._</del> see the
+<code>Automatic Recompilation / Hot Code Reloading (hcr)</code> section</p>
+<pre>  <code class="language-bash">nim c -r yourfile.nim
+</code></pre>
+<p>sometimes, nim does not catch changes to template files.
+Then compile with &quot;-f&quot; (force)</p>
+<pre>  <code class="language-bash">nim c -f -r  yourfile.nim
+</code></pre>
+<h1>Automatic Recompilation / Hot Code Reloading (hcr)</h1>
+<p>(Still an experimental feature, help wanted.)
+Automatic Recompilation enables you to change your templates and without
+recompiling your application, see the changes lives.</p>
+<p>How it works:</p>
+<p>Nimja compiles your templates (and template render functions)
+to a shared library (.so/.dll/.dynlib), then your host application loads
+this library, then on source code change, the shared library is unloaded from
+your host, recompiled, and loaded again.</p>
+<p>This is normally way faster, than recompiling your whole application.</p>
+<p>For this to work, Nimja now contains a small file watcher, you must utilize this
+tool in your own application.</p>
+<p>You also must restructure you application a little bit,
+all you render functions must be in a separate file,
+this file is then compiled to a shared lib and loaded by your host.</p>
+<p>When you go live later, you can just disable the recompilation,
+and compile the shared library for release, it should be very fast as well.</p>
+<p>Below is a minimal example, <a href="https://github.com/enthus1ast/nimja/tree/master/examples/hcr">a more complete example is in the example folder</a></p>
+<p>Minimal example:</p>
+<p>  <code>host.nim</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># this is the file that eg. implements your webserver and loads</span></div></div><div class="line"><div class="line-content"><span class="com"># the templates as a shared lib.</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimja</span><span class="op">/</span><span class="ide">hcrutils</span> <span class="com"># Nimja&apos;s hot code reloading utilities</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">jester</span>, <span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># We watch the templates folder for change (and also tmpls.nim implicitly)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cw</span> <span class="op">=</span> <span class="ide">newChangeWatcher</span>(<span class="op">@</span>[<span class="ide">getAppDir</span>() <span class="op">/</span> <span class="str">&quot;templates/&quot;</span>])</div></div><div class="line"><div class="line-content"><span class="ide">asyncCheck</span> <span class="ide">cw</span><span class="op">.</span><span class="ide">recompile</span>() <span class="com"># if a change is detected we recompile tmpls.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="com"># You must declare the proc definition from your tmpls.nim here as well.</span></div></div><div class="line"><div class="line-content">    <span class="ide">ProcNoParam</span> <span class="op">=</span> <span class="kwd">proc</span> (): <span class="ide">string</span> {<span class="op">.</span><span class="ide">gcsafe</span>, <span class="ide">stdcall</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">ProcId</span> <span class="op">=</span> <span class="kwd">proc</span> (<span class="ide">id</span>: <span class="ide">string</span>): <span class="ide">string</span> {<span class="op">.</span><span class="ide">gcsafe</span>, <span class="ide">stdcall</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">routes</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">get</span> <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="ide">dyn</span>(<span class="ide">ProcNoParam</span>, <span class="str">&quot;index&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">get</span> <span class="str">&quot;/id/@id&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="ide">dyn</span>(<span class="ide">ProcId</span>, <span class="str">&quot;detail&quot;</span>, <span class="op">@</span><span class="str">&quot;id&quot;</span>)</div></div>  </code></pre>
+<p>  <code>tmpls.nim</code></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># this file contains you render functions</span></div></div><div class="line"><div class="line-content"><span class="com"># is compiled to a shared lib and loaded by your host application</span></div></div><div class="line"><div class="line-content"><span class="com"># to keep compilation fast, use this file only for templates.</span></div></div><div class="line"><div class="line-content"><span class="com"># this file is also watched by the filewatcher.</span></div></div><div class="line"><div class="line-content"><span class="com"># It can also be changed dynamically!</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimja</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span> <span class="com"># for `/`</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">index</span><span class="op">*</span>(): <span class="ide">string</span> {<span class="op">.</span><span class="ide">exportc</span>, <span class="ide">dynlib</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">foos</span> <span class="op">=</span>  <span class="num">1351</span> <span class="com"># change me i&apos;m dynamic :)</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateFile</span>(<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;templates/index.nimja&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">detail</span><span class="op">*</span>(<span class="ide">id</span>: <span class="ide">string</span>): <span class="ide">string</span> {<span class="op">.</span><span class="ide">exportc</span>, <span class="ide">dynlib</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">compileTemplateFile</span>(<span class="ide">getScriptDir</span>() <span class="op">/</span> <span class="str">&quot;templates/detail.nimja&quot;</span>)</div></div>  </code></pre>
+<p>  <code>templates/</code></p>
+<p>  <code>templates/partials/_master.nimja</code></p>
+<pre>  <code class="language-html">&lt;head&gt;
+  &lt;title&gt;Hello, world!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;&lt;a href=&quot;/&quot;&gt;Nimja dynamic test&lt;/a&gt;&lt;/h1&gt;
+  &lt;div&gt;
+    {% block content %}{% endblock %}
+  &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>  <code>templates/index.nimja</code></p>
+<pre>  <code class="language-html">{% extends &quot;templates/partials/_master.nimja&quot; %}
+{% block content %}
+
+&lt;h1&gt;Hello, world! {{foos}}&lt;/h1&gt;
+
+index
+
+{% for idx in 0..100 %}
+  &lt;a href=&quot;/id/{{idx}}&quot;&gt;{{idx}}&lt;/a&gt;
+{%- endfor %}
+
+{% endblock %}
+
+</code></pre>
+<p>  <code>templates/detail.nimja</code></p>
+<pre>  <code class="language-html">{% extends &quot;templates/partials/_master.nimja&quot; %}
+{% block content %}
+detail
+&lt;a href=&quot;/id/{{id}}&quot;&gt;{{id}}&lt;/a&gt;
+{% endblock %}
+
+</code></pre>
+<p>you can now change any of the templates or the <code>tmpls.nim</code>
+files.
+Later if you wanna go live, comment out the</p>
+<pre>  <code>asyncCheck cw.recompile() # if a change is detected we recompile tmpls.nim
+</code></pre>
+<p>line.</p>
+<h1>Nimja Template VSCode Syntax Color Formatting</h1>
+<p>If you are using VSCode to develop your nim app,
+you can still associate nimja template files for color syntax and formating with vscode as an html file.
+Add this segment to your settings.json in vscode:</p>
+<pre>  <code class="language-json">  &quot;files.associations&quot;: {
+    &quot;*.nwt&quot;: &quot;html&quot;, // Nimja deprecated templates
+    &quot;*.nimja&quot;: &quot;html&quot;, // Nimja new templates
+  },
+</code></pre>
+<h1>Debugging</h1>
+<pre>  <code class="language-bash">nim c -d:dumpNwtAst -r yourfile.nim # &lt;-- dump NwtAst
+nim c -d:dumpNwtAstPretty -r yourfile.nim # &lt;-- dump NwtAst as pretty json
+nim c -d:nwtCacheOff -r yourfile.nim   # &lt;-- disables the NwtNode cache
+nim c -d:noPreallocatedString -r yourfile # &lt;-- do not preallocate the output string
+nim c -d:noCondenseStrings -r yourfile.nim # &lt;-- disables string condense see #12
+nim c -d:dumpNwtMacro -r yourfile.nim # &lt;-- dump generated Nim macros
+</code></pre>
+<h1>Changelog</h1>
+<h2>TODO</h2>
+<ul>
+<li>0.8.?
+<ul>
+<li>Added context to <code>importnimja</code></li>
+</ul>
+</li>
+</ul>
+<h2>DONE</h2>
+<ul>
+<li>0.8.7
+<ul>
+<li>Removed unused <code>NImport</code>.</li>
+<li>Error on uneven <code>when</code> blocks.</li>
+</ul>
+</li>
+<li>0.8.6</li>
+<li>0.8.5 Nimja exports os, for <code>/</code></li>
+<li>0.8.4 Fixed string escaping.</li>
+<li>0.8.3 Added <code>scope</code> and <code>endscope</code></li>
+<li>0.8.2 Readme fixes and tests for <code>break</code> and <code>continue</code> for the for loop</li>
+<li>0.8.1 Added <code>case</code> <code>of</code> and <code>endcase</code></li>
+<li>0.8.0
+<ul>
+<li>Breaking change!</li>
+<li>Changed context to template syntax context = {foo: baa}</li>
+<li>Added context to <code>compileTemplateStr</code> and <code>compileTemplateFile</code></li>
+</ul>
+</li>
+<li>0.7.0 Added context to <code>tmpls</code> and <code>tmplf</code></li>
+<li>0.6.9 Added <code>when</code> compile time if</li>
+<li>0.6.8 Added <code>importnimja</code> deprecated <code>importnwt</code> (importnwt is still valid for now)</li>
+<li>0.6.7 Removed the &quot;.nwt&quot; extention everywhere, we go with &quot;.nimja&quot; now.</li>
+<li>0.6.6 Preallocate the minimal known output length if <code>result</code> is string.</li>
+<li>0.6.5 Condense strings of extended templates (less assigns -&gt; better runtime performance).</li>
+<li>0.6.1 No codegen for empty string nodes after whitespaceControl.</li>
+<li>0.5.6 Added <code>{{endfunc}}</code> <code>{{endproc}}</code> <code>{{endmacro}}</code> for consistency.</li>
+<li>0.5.5 Added <code>tmpls</code> and <code>tmplf</code> procs to use inline.</li>
+<li>0.5.1 Added self variable, to print blocks multiple times</li>
+<li>0.5.0 Added hot code reloading.</li>
+<li>0.4.2 Added <code>includeRawStatic</code> and <code>includeStaticAsDataurl</code></li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/enthus1ast/nimja">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

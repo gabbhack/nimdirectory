@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">openal</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sound</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">OpenAL</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wrapper</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("An OpenAL wrapper.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install openal" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nim OpenAL wrapper</h1>
+<p>  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/OpenAL_logo.png/200px-OpenAL_logo.png" style="max-width: 100%;" alt="OpenAL Logo" /></p>
+<p>  <code>nimble install openal</code></p>
+<p>  <img src="https://github.com/treeform/openal/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://nimdocs.com/treeform/openal">API reference</a></p>
+<p>This library has no dependencies other than the Nim standard libarary.</p>
+<h2>About</h2>
+<p>An OpenAL wrapper for nim. OpenAL is a cross platform way to play sounds.</p>
+<p>OpenAL works on:</p>
+<ul>
+<li>Windows</li>
+<li>macOS</li>
+<li>Linux</li>
+</ul>
+<p>Its great for games because it can play sounds in 3d and apply effects to them.</p>
+<p>Great reference on how to use openAL:</p>
+<p>https://github.com/kcat/openal-soft/wiki/Programmer&apos;s-Guide</p>
+<p>Small example on how to use this nim library:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">openal</span>, <span class="ide">os</span>, <span class="ide">readwav</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="com"># sound by DANMITCH3LL: https://freesound.org/people/DANMITCH3LL/sounds/232009/</span></div></div><div class="line"><div class="line-content">  <span class="ide">wav</span> <span class="op">=</span> <span class="ide">readWav</span>(<span class="str">&quot;xylophone-sweep.wav&quot;</span>) <span class="com"># read wav file using simple helper utility</span></div></div><div class="line"><div class="line-content">  <span class="ide">buffer</span> <span class="op">=</span> <span class="ide">ALuint</span>(<span class="num">0</span>) <span class="com"># buffer is like a record of a sound</span></div></div><div class="line"><div class="line-content">  <span class="ide">source</span> <span class="op">=</span> <span class="ide">ALuint</span>(<span class="num">0</span>) <span class="com"># source is like a record player, it can play 1 buffer at a time</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># open setup and error handling</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">device</span> <span class="op">=</span> <span class="ide">alcOpenDevice</span>(<span class="kwd">nil</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">device</span> <span class="op">==</span> <span class="kwd">nil</span>: <span class="ide">quit</span> <span class="str">&quot;OpenAL: failed to get default device&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ctx</span> <span class="op">=</span> <span class="ide">device</span><span class="op">.</span><span class="ide">alcCreateContext</span>(<span class="kwd">nil</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">ctx</span> <span class="op">==</span> <span class="kwd">nil</span>: <span class="ide">quit</span> <span class="str">&quot;OpenAL: failed to create context&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">alcMakeContextCurrent</span>(<span class="ide">ctx</span>): <span class="ide">quit</span> <span class="str">&quot;OpenAL: failed to make context current&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># setup buffer</span></div></div><div class="line"><div class="line-content"><span class="ide">alGenBuffers</span>(<span class="ide">ALsizei</span> <span class="num">1</span>, <span class="kwd">addr</span> <span class="ide">buffer</span>)</div></div><div class="line"><div class="line-content"><span class="ide">alBufferData</span>(<span class="ide">buffer</span>, <span class="ide">AL_FORMAT_MONO16</span>, <span class="ide">wav</span><span class="op">.</span><span class="ide">data</span>, <span class="ide">ALsizei</span> <span class="ide">wav</span><span class="op">.</span><span class="ide">size</span>, <span class="ide">ALsizei</span> <span class="ide">wav</span><span class="op">.</span><span class="ide">freq</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># setup source</span></div></div><div class="line"><div class="line-content"><span class="ide">alGenSources</span>(<span class="ide">ALsizei</span> <span class="num">1</span>, <span class="kwd">addr</span> <span class="ide">source</span>)</div></div><div class="line"><div class="line-content"><span class="ide">alSourcei</span>(<span class="ide">source</span>, <span class="ide">AL_BUFFER</span>, <span class="ide">Alint</span> <span class="ide">buffer</span>)</div></div><div class="line"><div class="line-content"><span class="ide">alSourcePlay</span>(<span class="ide">source</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># wait for sound to finish playing</span></div></div><div class="line"><div class="line-content"><span class="ide">sleep</span>(<span class="num">2500</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># taredown and error handling</span></div></div><div class="line"><div class="line-content"><span class="ide">alDeleteSources</span>(<span class="num">1</span>, <span class="kwd">addr</span> <span class="ide">source</span>)</div></div><div class="line"><div class="line-content"><span class="ide">alDeleteBuffers</span>(<span class="num">1</span>, <span class="kwd">addr</span> <span class="ide">buffer</span>)</div></div><div class="line"><div class="line-content"><span class="ide">alcDestroyContext</span>(<span class="ide">ctx</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">alcCloseDevice</span>(<span class="ide">device</span>): <span class="ide">quit</span> <span class="str">&quot;OpenAL: failed to close device&quot;</span></div></div>  </code></pre>
+<h1>API: openal</h1>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">openal</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALuint</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALuint</span> <span class="op">=</span> <span class="ide">cuint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALint</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALint</span> <span class="op">=</span> <span class="ide">cint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALsizei</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALsizei</span> <span class="op">=</span> <span class="ide">cint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALenum</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALenum</span> <span class="op">=</span> <span class="ide">cint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALfloat</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALfloat</span> <span class="op">=</span> <span class="ide">float32</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALdouble</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALdouble</span> <span class="op">=</span> <span class="ide">float64</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SOURCE_RELATIVE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SOURCE_RELATIVE</span> <span class="op">=</span> <span class="num">0x00000202</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_CONE_INNER_ANGLE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_CONE_INNER_ANGLE</span> <span class="op">=</span> <span class="num">0x00001001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_CONE_OUTER_ANGLE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_CONE_OUTER_ANGLE</span> <span class="op">=</span> <span class="num">0x00001002</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PITCH</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PITCH</span> <span class="op">=</span> <span class="num">0x00001003</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_POSITION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_POSITION</span> <span class="op">=</span> <span class="num">0x00001004</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_DIRECTION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_DIRECTION</span> <span class="op">=</span> <span class="num">0x00001005</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_VELOCITY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_VELOCITY</span> <span class="op">=</span> <span class="num">0x00001006</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_LOOPING</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_LOOPING</span> <span class="op">=</span> <span class="num">0x00001007</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_BUFFER</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_BUFFER</span> <span class="op">=</span> <span class="num">0x00001009</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_GAIN</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_GAIN</span> <span class="op">=</span> <span class="num">0x0000100A</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_MIN_GAIN</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_MIN_GAIN</span> <span class="op">=</span> <span class="num">0x0000100D</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_MAX_GAIN</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_MAX_GAIN</span> <span class="op">=</span> <span class="num">0x0000100E</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_ORIENTATION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_ORIENTATION</span> <span class="op">=</span> <span class="num">0x0000100F</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SOURCE_STATE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SOURCE_STATE</span> <span class="op">=</span> <span class="num">0x00001010</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INITIAL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INITIAL</span> <span class="op">=</span> <span class="num">0x00001011</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PLAYING</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PLAYING</span> <span class="op">=</span> <span class="num">0x00001012</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PAUSED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PAUSED</span> <span class="op">=</span> <span class="num">0x00001013</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_STOPPED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_STOPPED</span> <span class="op">=</span> <span class="num">0x00001014</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_BUFFERS_QUEUED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_BUFFERS_QUEUED</span> <span class="op">=</span> <span class="num">0x00001015</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_BUFFERS_PROCESSED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_BUFFERS_PROCESSED</span> <span class="op">=</span> <span class="num">0x00001016</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SEC_OFFSET</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SEC_OFFSET</span> <span class="op">=</span> <span class="num">0x00001024</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SAMPLE_OFFSET</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SAMPLE_OFFSET</span> <span class="op">=</span> <span class="num">0x00001025</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_BYTE_OFFSET</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_BYTE_OFFSET</span> <span class="op">=</span> <span class="num">0x00001026</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SOURCE_TYPE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SOURCE_TYPE</span> <span class="op">=</span> <span class="num">0x00001027</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_STATIC</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_STATIC</span> <span class="op">=</span> <span class="num">0x00001028</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_STREAMING</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_STREAMING</span> <span class="op">=</span> <span class="num">0x00001029</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_UNDETERMINED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_UNDETERMINED</span> <span class="op">=</span> <span class="num">0x00001030</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_FORMAT_MONO8</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_FORMAT_MONO8</span> <span class="op">=</span> <span class="num">0x00001100</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_FORMAT_MONO16</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_FORMAT_MONO16</span> <span class="op">=</span> <span class="num">0x00001101</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_FORMAT_STEREO8</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_FORMAT_STEREO8</span> <span class="op">=</span> <span class="num">0x00001102</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_FORMAT_STEREO16</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_FORMAT_STEREO16</span> <span class="op">=</span> <span class="num">0x00001103</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_REFERENCE_DISTANCE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_REFERENCE_DISTANCE</span> <span class="op">=</span> <span class="num">0x00001020</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_ROLLOFF_FACTOR</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_ROLLOFF_FACTOR</span> <span class="op">=</span> <span class="num">0x00001021</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_CONE_OUTER_GAIN</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_CONE_OUTER_GAIN</span> <span class="op">=</span> <span class="num">0x00001022</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_MAX_DISTANCE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_MAX_DISTANCE</span> <span class="op">=</span> <span class="num">0x00001023</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_FREQUENCY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_FREQUENCY</span> <span class="op">=</span> <span class="num">0x00002001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_BITS</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_BITS</span> <span class="op">=</span> <span class="num">0x00002002</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_CHANNELS</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_CHANNELS</span> <span class="op">=</span> <span class="num">0x00002003</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SIZE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SIZE</span> <span class="op">=</span> <span class="num">0x00002004</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_UNUSED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_UNUSED</span> <span class="op">=</span> <span class="num">0x00002010</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PENDING</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PENDING</span> <span class="op">=</span> <span class="num">0x00002011</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PROCESSED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PROCESSED</span> <span class="op">=</span> <span class="num">0x00002012</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_NO_ERROR</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_NO_ERROR</span> <span class="op">=</span> <span class="ide">false</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INVALID_NAME</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INVALID_NAME</span> <span class="op">=</span> <span class="num">0x0000A001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INVALID_ENUM</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INVALID_ENUM</span> <span class="op">=</span> <span class="num">0x0000A002</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INVALID_VALUE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INVALID_VALUE</span> <span class="op">=</span> <span class="num">0x0000A003</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INVALID_OPERATION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INVALID_OPERATION</span> <span class="op">=</span> <span class="num">0x0000A004</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_OUT_OF_MEMORY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_OUT_OF_MEMORY</span> <span class="op">=</span> <span class="num">0x0000A005</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_VENDOR</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_VENDOR</span> <span class="op">=</span> <span class="num">0x0000B001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_VERSION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_VERSION</span> <span class="op">=</span> <span class="num">0x0000B002</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_RENDERER</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_RENDERER</span> <span class="op">=</span> <span class="num">0x0000B003</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_EXTENSIONS</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_EXTENSIONS</span> <span class="op">=</span> <span class="num">0x0000B004</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_DOPPLER_FACTOR</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_DOPPLER_FACTOR</span> <span class="op">=</span> <span class="num">0x0000C000</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_DOPPLER_VELOCITY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_DOPPLER_VELOCITY</span> <span class="op">=</span> <span class="num">0x0000C001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_SPEED_OF_SOUND</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_SPEED_OF_SOUND</span> <span class="op">=</span> <span class="num">0x0000C003</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_DISTANCE_MODEL</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_DISTANCE_MODEL</span> <span class="op">=</span> <span class="num">0x0000D000</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INVERSE_DISTANCE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INVERSE_DISTANCE</span> <span class="op">=</span> <span class="num">0x0000D001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_INVERSE_DISTANCE_CLAMPED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_INVERSE_DISTANCE_CLAMPED</span> <span class="op">=</span> <span class="num">0x0000D002</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_LINEAR_DISTANCE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_LINEAR_DISTANCE</span> <span class="op">=</span> <span class="num">0x0000D003</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_LINEAR_DISTANCE_CLAMPED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_LINEAR_DISTANCE_CLAMPED</span> <span class="op">=</span> <span class="num">0x0000D004</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_EXPONENT_DISTANCE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_EXPONENT_DISTANCE</span> <span class="op">=</span> <span class="num">0x0000D005</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_EXPONENT_DISTANCE_CLAMPED</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_EXPONENT_DISTANCE_CLAMPED</span> <span class="op">=</span> <span class="num">0x0000D006</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PRIORITY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PRIORITY</span> <span class="op">=</span> <span class="num">0x0000E001</span></div></div>  </code></pre>
+<h2><strong>const</strong> AL_PRIORITY_SLOTS</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">AL_PRIORITY_SLOTS</span> <span class="op">=</span> <span class="num">0x0000E002</span></div></div>  </code></pre>
+<h2><strong>proc</strong> alEnable</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alEnable</span>(<span class="ide">capability</span>: <span class="ide">ALenum</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alDisable</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alDisable</span>(<span class="ide">capability</span>: <span class="ide">ALenum</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alIsEnabled</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alIsEnabled</span>(<span class="ide">capability</span>: <span class="ide">ALenum</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetString</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetString</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>): <span class="kwd">ptr</span> <span class="ide">char</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBooleanv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBooleanv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">data</span>: <span class="kwd">ptr</span> <span class="ide">bool</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetIntegerv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetIntegerv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">data</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetFloatv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetFloatv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">data</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetDoublev</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetDoublev</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">data</span>: <span class="kwd">ptr</span> <span class="ide">ALdouble</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBoolean</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBoolean</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetInteger</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetInteger</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>): <span class="ide">ALint</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetFloat</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetFloat</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>): <span class="ide">ALfloat</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetDouble</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetDouble</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>): <span class="ide">ALdouble</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetError</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetError</span>(): <span class="ide">ALenum</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alIsExtensionPresent</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alIsExtensionPresent</span>(<span class="ide">extname</span>: <span class="kwd">ptr</span> <span class="ide">char</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetProcAddress</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetProcAddress</span>(<span class="ide">fname</span>: <span class="kwd">ptr</span> <span class="ide">char</span>): <span class="ide">pointer</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetEnumValue</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetEnumValue</span>(<span class="ide">ename</span>: <span class="kwd">ptr</span> <span class="ide">char</span>): <span class="ide">ALenum</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alListenerf</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alListenerf</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alListener3f</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alListener3f</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="ide">ALfloat</span>; <span class="ide">value2</span>: <span class="ide">ALfloat</span>; <span class="ide">value3</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alListenerfv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alListenerfv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alListeneri</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alListeneri</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alListener3i</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alListener3i</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="ide">ALint</span>; <span class="ide">value2</span>: <span class="ide">ALint</span>; <span class="ide">value3</span>: <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alListeneriv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alListeneriv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetListenerf</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetListenerf</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetListener3f</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetListener3f</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>; <span class="ide">value2</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>;</div></div><div class="line"><div class="line-content">                    <span class="ide">value3</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetListenerfv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetListenerfv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetListeneri</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetListeneri</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetListener3i</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetListener3i</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>; <span class="ide">value2</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>;</div></div><div class="line"><div class="line-content">                    <span class="ide">value3</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetListeneriv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetListeneriv</span>(<span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGenSources</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGenSources</span>(<span class="ide">n</span>: <span class="ide">ALsizei</span>; <span class="ide">sources</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alDeleteSources</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alDeleteSources</span>(<span class="ide">n</span>: <span class="ide">ALsizei</span>; <span class="ide">sources</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alIsSource</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alIsSource</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcef</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcef</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSource3f</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSource3f</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="ide">ALfloat</span>; <span class="ide">value2</span>: <span class="ide">ALfloat</span>;</div></div><div class="line"><div class="line-content">               <span class="ide">value3</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcefv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcefv</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcei</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcei</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSource3i</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSource3i</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="ide">ALint</span>; <span class="ide">value2</span>: <span class="ide">ALint</span>; <span class="ide">value3</span>: <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceiv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceiv</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetSourcef</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetSourcef</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetSource3f</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetSource3f</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>; <span class="ide">value2</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>;</div></div><div class="line"><div class="line-content">                  <span class="ide">value3</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetSourcefv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetSourcefv</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetSourcei</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetSourcei</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetSource3i</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetSource3i</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>; <span class="ide">value2</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>;</div></div><div class="line"><div class="line-content">                  <span class="ide">value3</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetSourceiv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetSourceiv</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcePlayv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcePlayv</span>(<span class="ide">ns</span>: <span class="ide">ALsizei</span>; <span class="ide">sids</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceStopv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceStopv</span>(<span class="ide">ns</span>: <span class="ide">ALsizei</span>; <span class="ide">sids</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceRewindv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceRewindv</span>(<span class="ide">ns</span>: <span class="ide">ALsizei</span>; <span class="ide">sids</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcePausev</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcePausev</span>(<span class="ide">ns</span>: <span class="ide">ALsizei</span>; <span class="ide">sids</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcePlay</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcePlay</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceStop</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceStop</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceRewind</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceRewind</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourcePause</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourcePause</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceQueueBuffers</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceQueueBuffers</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">numEntries</span>: <span class="ide">ALsizei</span>; <span class="ide">bids</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSourceUnqueueBuffers</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSourceUnqueueBuffers</span>(<span class="ide">sid</span>: <span class="ide">ALuint</span>; <span class="ide">numEntries</span>: <span class="ide">ALsizei</span>; <span class="ide">bids</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGenBuffers</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGenBuffers</span>(<span class="ide">n</span>: <span class="ide">ALsizei</span>; <span class="ide">buffers</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alDeleteBuffers</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alDeleteBuffers</span>(<span class="ide">n</span>: <span class="ide">ALsizei</span>; <span class="ide">buffers</span>: <span class="kwd">ptr</span> <span class="ide">ALuint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alIsBuffer</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alIsBuffer</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBufferData</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBufferData</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">format</span>: <span class="ide">ALenum</span>; <span class="ide">data</span>: <span class="ide">pointer</span>; <span class="ide">size</span>: <span class="ide">ALsizei</span>;</div></div><div class="line"><div class="line-content">                 <span class="ide">freq</span>: <span class="ide">ALsizei</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBufferf</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBufferf</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBuffer3f</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBuffer3f</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="ide">ALfloat</span>; <span class="ide">value2</span>: <span class="ide">ALfloat</span>;</div></div><div class="line"><div class="line-content">               <span class="ide">value3</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBufferfv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBufferfv</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBufferi</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBufferi</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBuffer3i</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBuffer3i</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="ide">ALint</span>; <span class="ide">value2</span>: <span class="ide">ALint</span>; <span class="ide">value3</span>: <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alBufferiv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alBufferiv</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBufferf</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBufferf</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBuffer3f</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBuffer3f</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>; <span class="ide">value2</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>;</div></div><div class="line"><div class="line-content">                  <span class="ide">value3</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBufferfv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBufferfv</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBufferi</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBufferi</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBuffer3i</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBuffer3i</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">value1</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>; <span class="ide">value2</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>;</div></div><div class="line"><div class="line-content">                  <span class="ide">value3</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alGetBufferiv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alGetBufferiv</span>(<span class="ide">bid</span>: <span class="ide">ALuint</span>; <span class="ide">param</span>: <span class="ide">ALenum</span>; <span class="ide">values</span>: <span class="kwd">ptr</span> <span class="ide">ALint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alDopplerFactor</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alDopplerFactor</span>(<span class="ide">value</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alDopplerVelocity</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alDopplerVelocity</span>(<span class="ide">value</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alSpeedOfSound</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alSpeedOfSound</span>(<span class="ide">value</span>: <span class="ide">ALfloat</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alDistanceModel</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alDistanceModel</span>(<span class="ide">distanceModel</span>: <span class="ide">ALenum</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>const</strong> ALCAPI</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCAPI</span> <span class="op">=</span> <span class="ide">true</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALCAPIENTRY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCAPIENTRY</span> <span class="op">=</span> <span class="ide">true</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_INVALID</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_INVALID</span> <span class="op">=</span> <span class="num">0</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_VERSION_0_1</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_VERSION_0_1</span> <span class="op">=</span> <span class="num">1</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCchar</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCchar</span> <span class="op">=</span> <span class="ide">char</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCbyte</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCbyte</span> <span class="op">=</span> <span class="ide">cchar</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCubyte</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCubyte</span> <span class="op">=</span> <span class="ide">cuchar</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCshort</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCshort</span> <span class="op">=</span> <span class="ide">cshort</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCushort</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCushort</span> <span class="op">=</span> <span class="ide">cushort</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCint</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCint</span> <span class="op">=</span> <span class="ide">cint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCuint</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCuint</span> <span class="op">=</span> <span class="ide">cuint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCsizei</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCsizei</span> <span class="op">=</span> <span class="ide">cint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCenum</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCenum</span> <span class="op">=</span> <span class="ide">cint</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCfloat</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCfloat</span> <span class="op">=</span> <span class="ide">cfloat</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCdouble</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCdouble</span> <span class="op">=</span> <span class="ide">cdouble</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCdevice</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCdevice</span> <span class="op">=</span> <span class="ide">pointer</span></div></div>  </code></pre>
+<h2><strong>type</strong> ALCcontext</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALCcontext</span> <span class="op">=</span> <span class="ide">pointer</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_FALSE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_FALSE</span> <span class="op">=</span> <span class="num">0</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_TRUE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_TRUE</span> <span class="op">=</span> <span class="num">1</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_FREQUENCY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_FREQUENCY</span> <span class="op">=</span> <span class="num">0x00001007</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_REFRESH</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_REFRESH</span> <span class="op">=</span> <span class="num">0x00001008</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_SYNC</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_SYNC</span> <span class="op">=</span> <span class="num">0x00001009</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_MONO_SOURCES</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_MONO_SOURCES</span> <span class="op">=</span> <span class="num">0x00001010</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_STEREO_SOURCES</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_STEREO_SOURCES</span> <span class="op">=</span> <span class="num">0x00001011</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_NO_ERROR</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_NO_ERROR</span> <span class="op">=</span> <span class="num">0</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_INVALID_DEVICE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_INVALID_DEVICE</span> <span class="op">=</span> <span class="num">0x0000A001</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_INVALID_CONTEXT</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_INVALID_CONTEXT</span> <span class="op">=</span> <span class="num">0x0000A002</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_INVALID_ENUM</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_INVALID_ENUM</span> <span class="op">=</span> <span class="num">0x0000A003</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_INVALID_VALUE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_INVALID_VALUE</span> <span class="op">=</span> <span class="num">0x0000A004</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_OUT_OF_MEMORY</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_OUT_OF_MEMORY</span> <span class="op">=</span> <span class="num">0x0000A005</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_DEFAULT_DEVICE_SPECIFIER</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_DEFAULT_DEVICE_SPECIFIER</span> <span class="op">=</span> <span class="num">0x00001004</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_DEVICE_SPECIFIER</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_DEVICE_SPECIFIER</span> <span class="op">=</span> <span class="num">0x00001005</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_EXTENSIONS</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_EXTENSIONS</span> <span class="op">=</span> <span class="num">0x00001006</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_MAJOR_VERSION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_MAJOR_VERSION</span> <span class="op">=</span> <span class="num">0x00001000</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_MINOR_VERSION</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_MINOR_VERSION</span> <span class="op">=</span> <span class="num">0x00001001</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_ATTRIBUTES_SIZE</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_ATTRIBUTES_SIZE</span> <span class="op">=</span> <span class="num">0x00001002</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_ALL_ATTRIBUTES</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_ALL_ATTRIBUTES</span> <span class="op">=</span> <span class="num">0x00001003</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_CAPTURE_DEVICE_SPECIFIER</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_CAPTURE_DEVICE_SPECIFIER</span> <span class="op">=</span> <span class="num">0x00000310</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_CAPTURE_DEFAULT_DEVICE_SPECIFIER</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_CAPTURE_DEFAULT_DEVICE_SPECIFIER</span> <span class="op">=</span> <span class="num">0x00000311</span></div></div>  </code></pre>
+<h2><strong>const</strong> ALC_CAPTURE_SAMPLES</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ALC_CAPTURE_SAMPLES</span> <span class="op">=</span> <span class="num">0x00000312</span></div></div>  </code></pre>
+<h2><strong>proc</strong> alcCreateContext</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCreateContext</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">attrlist</span>: <span class="kwd">ptr</span> <span class="ide">ALCint</span>): <span class="ide">ALCcontext</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcMakeContextCurrent</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcMakeContextCurrent</span>(<span class="ide">context</span>: <span class="ide">ALCcontext</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcProcessContext</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcProcessContext</span>(<span class="ide">context</span>: <span class="ide">ALCcontext</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcSuspendContext</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcSuspendContext</span>(<span class="ide">context</span>: <span class="ide">ALCcontext</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcDestroyContext</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcDestroyContext</span>(<span class="ide">context</span>: <span class="ide">ALCcontext</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetCurrentContext</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetCurrentContext</span>(): <span class="ide">ALCcontext</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetContextsDevice</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetContextsDevice</span>(<span class="ide">context</span>: <span class="ide">ALCcontext</span>): <span class="ide">ALCdevice</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcOpenDevice</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcOpenDevice</span>(<span class="ide">devicename</span>: <span class="kwd">ptr</span> <span class="ide">ALCchar</span>): <span class="ide">ALCdevice</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcCloseDevice</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCloseDevice</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetError</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetError</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>): <span class="ide">ALCenum</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcIsExtensionPresent</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcIsExtensionPresent</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">extname</span>: <span class="kwd">ptr</span> <span class="ide">ALCchar</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetProcAddress</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetProcAddress</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">funcname</span>: <span class="kwd">ptr</span> <span class="ide">ALCchar</span>): <span class="ide">pointer</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetEnumValue</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetEnumValue</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">enumname</span>: <span class="kwd">ptr</span> <span class="ide">ALCchar</span>): <span class="ide">ALCenum</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetString</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetString</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">param</span>: <span class="ide">ALCenum</span>): <span class="kwd">ptr</span> <span class="ide">ALCchar</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcGetIntegerv</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcGetIntegerv</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">param</span>: <span class="ide">ALCenum</span>; <span class="ide">size</span>: <span class="ide">ALCsizei</span>; <span class="ide">data</span>: <span class="kwd">ptr</span> <span class="ide">ALCint</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcCaptureOpenDevice</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCaptureOpenDevice</span>(<span class="ide">devicename</span>: <span class="kwd">ptr</span> <span class="ide">ALCchar</span>; <span class="ide">frequency</span>: <span class="ide">ALCuint</span>;</div></div><div class="line"><div class="line-content">                         <span class="ide">format</span>: <span class="ide">ALCenum</span>; <span class="ide">buffersize</span>: <span class="ide">ALCsizei</span>): <span class="ide">ALCdevice</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcCaptureCloseDevice</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCaptureCloseDevice</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcCaptureStart</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCaptureStart</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcCaptureStop</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCaptureStop</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+<h2><strong>proc</strong> alcCaptureSamples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">alcCaptureSamples</span>(<span class="ide">device</span>: <span class="ide">ALCdevice</span>; <span class="ide">buffer</span>: <span class="ide">pointer</span>; <span class="ide">samples</span>: <span class="ide">ALCsizei</span>) {<span class="op">.</span><span class="ide">cdecl</span>, <span class="ide">importc</span><span class="op">.</span>}</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

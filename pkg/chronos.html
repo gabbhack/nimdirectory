@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">chronos</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">networking</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">async</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">asynchronous</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">eventloop</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">timers</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sendfile</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">tcp</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">udp</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("An efficient library for asynchronous programming")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install chronos" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Chronos - An efficient library for asynchronous programming</h1>
+<p><a href="https://github.com/status-im/nim-chronos/actions/workflows/ci.yml">  <img src="https://github.com/status-im/nim-chronos/workflows/nim-chronos%20CI/badge.svg" style="max-width: 100%;" alt="Github action" /></a>
+<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /></p>
+<h2>Introduction</h2>
+<p>Chronos is an efficient <a href="https://en.wikipedia.org/wiki/Async/await">async/await</a> framework for Nim. Features include:</p>
+<ul>
+<li>Efficient dispatch pipeline for asynchronous execution</li>
+<li>HTTP server with SSL/TLS support out of the box (no OpenSSL needed)</li>
+<li>Cancellation support</li>
+<li>Synchronization primitivies like queues, events and locks</li>
+<li>FIFO processing order of dispatch queue</li>
+<li>Minimal exception effect support (see <a href="#exception-effects">exception effects</a>)</li>
+</ul>
+<h2>Installation</h2>
+<p>You can use Nim&apos;s official package manager Nimble to install Chronos:</p>
+<pre>  <code class="language-text">nimble install chronos
+</code></pre>
+<p>or add a dependency to your <code>.nimble</code> file:</p>
+<pre>  <code class="language-text">requires &quot;chronos&quot;
+</code></pre>
+<h2>Projects using <code>chronos</code></h2>
+<ul>
+<li><a href="https://github.com/status-im/nim-libp2p">libp2p</a> - Peer-to-Peer networking stack implemented in many languages</li>
+<li><a href="https://github.com/status-im/nim-presto">presto</a> - REST API framework</li>
+<li><a href="https://github.com/bung87/scorper">Scorper</a> - Web framework</li>
+<li><a href="https://github.com/gogolxdong/2DeFi">2DeFi</a> - Decentralised file system</li>
+<li><a href="https://github.com/status-im/nim-websock/">websock</a> - WebSocket library with lots of features</li>
+</ul>
+<p><code>chronos</code> is available in the <a href="https://play.nim-lang.org/#ix=2TpS">Nim Playground</a></p>
+<p>Submit a PR to add yours!</p>
+<h2>Documentation</h2>
+<h3>Concepts</h3>
+<p>Chronos implements the async/await paradigm in a self-contained library, using
+macros, with no specific helpers from the compiler.</p>
+<p>Our event loop is called a &quot;dispatcher&quot; and a single instance per thread is
+created, as soon as one is needed.</p>
+<p>To trigger a dispatcher&apos;s processing step, we need to call <code>poll()</code> - either
+directly or through a wrapper like <code>runForever()</code> or <code>waitFor()</code>. This step
+handles any file descriptors, timers and callbacks that are ready to be
+processed.</p>
+<p><code>Future</code> objects encapsulate the result of an async procedure, upon successful
+completion, and a list of callbacks to be scheduled after any type of
+completion - be that success, failure or cancellation.</p>
+<p>(These explicit callbacks are rarely used outside Chronos, being replaced by
+implicit ones generated by async procedure execution and <code>await</code> chaining.)</p>
+<p>Async procedures (those using the <code>{.async.}</code> pragma) return <code>Future</code> objects.</p>
+<p>Inside an async procedure, you can <code>await</code> the future returned by another async
+procedure. At this point, control will be handled to the event loop until that
+future is completed.</p>
+<p>Future completion is tested with <code>Future.finished()</code> and is defined as success,
+failure or cancellation. This means that a future is either pending or completed.</p>
+<p>To differentiate between completion states, we have <code>Future.failed()</code> and
+<code>Future.cancelled()</code>.</p>
+<h3>Dispatcher</h3>
+<p>You can run the &quot;dispatcher&quot; event loop forever, with <code>runForever()</code> which is defined as:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">runForever</span><span class="op">*</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="ide">true</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">poll</span>()</div></div>  </code></pre>
+<p>You can also run it until a certain future is completed, with <code>waitFor()</code> which
+will also call <code>Future.read()</code> on it:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p</span>(): <span class="ide">Future</span>[<span class="ide">int</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">100.</span><span class="ide">milliseconds</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">waitFor</span> <span class="ide">p</span>() <span class="com"># prints &quot;1&quot;</span></div></div>  </code></pre>
+<p><code>waitFor()</code> is defined like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">waitFor</span><span class="op">*</span>[<span class="ide">T</span>](<span class="ide">fut</span>: <span class="ide">Future</span>[<span class="ide">T</span>]): <span class="ide">T</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">while</span> <span class="kwd">not</span>(<span class="ide">fut</span><span class="op">.</span><span class="ide">finished</span>()):</div></div><div class="line"><div class="line-content">    <span class="ide">poll</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">fut</span><span class="op">.</span><span class="ide">read</span>()</div></div>  </code></pre>
+<h3>Async procedures and methods</h3>
+<p>The <code>{.async.}</code> pragma will transform a procedure (or a method) returning a
+specialised <code>Future</code> type into a closure iterator. If there is no return type
+specified, a <code>Future[void]</code> is returned.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">100.</span><span class="ide">milliseconds</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">p</span>()<span class="op">.</span><span class="kwd">type</span> <span class="com"># prints &quot;Future[system.void]&quot;</span></div></div>  </code></pre>
+<p>Whenever <code>await</code> is encountered inside an async procedure, control is passed
+back to the dispatcher for as many steps as it&apos;s necessary for the awaited
+future to complete successfully, fail or be cancelled. <code>await</code> calls the
+equivalent of <code>Future.read()</code> on the completed future and returns the
+encapsulated value.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p1</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">1.</span><span class="ide">seconds</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p2</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">1.</span><span class="ide">seconds</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p3</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">fut1</span> <span class="op">=</span> <span class="ide">p1</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">fut2</span> <span class="op">=</span> <span class="ide">p2</span>()</div></div><div class="line"><div class="line-content">  <span class="com"># Just by executing the async procs, both resulting futures entered the</span></div></div><div class="line"><div class="line-content">  <span class="com"># dispatcher&apos;s queue and their &quot;clocks&quot; started ticking.</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut1</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut2</span></div></div><div class="line"><div class="line-content">  <span class="com"># Only one second passed while awaiting them both, not two.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">p3</span>()</div></div>  </code></pre>
+<p>Don&apos;t let <code>await</code>&apos;s behaviour of giving back control to the dispatcher surprise
+you. If an async procedure modifies global state, and you can&apos;t predict when it
+will start executing, the only way to avoid that state changing underneath your
+feet, in a certain section, is to not use <code>await</code> in it.</p>
+<h3>Error handling</h3>
+<p>Exceptions inheriting from <code>CatchableError</code> are caught by hidden <code>try</code> blocks
+and placed in the <code>Future.error</code> field, changing the future&apos;s status to
+<code>Failed</code>.</p>
+<p>When a future is awaited, that exception is re-raised, only to be caught again
+by a hidden <code>try</code> block in the calling async procedure. That&apos;s how these
+exceptions move up the async chain.</p>
+<p>A failed future&apos;s callbacks will still be scheduled, but it&apos;s not possible to
+resume execution from the point an exception was raised.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p1</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">1.</span><span class="ide">seconds</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">ValueError</span>, <span class="str">&quot;ValueError inherits from CatchableError&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p2</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">1.</span><span class="ide">seconds</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p3</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">fut1</span> <span class="op">=</span> <span class="ide">p1</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">fut2</span> <span class="op">=</span> <span class="ide">p2</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut1</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;unreachable code here&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># `waitFor()` would call `Future.read()` unconditionally, which would raise the</span></div></div><div class="line"><div class="line-content"><span class="com"># exception in `Future.error`.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">fut3</span> <span class="op">=</span> <span class="ide">p3</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="kwd">not</span>(<span class="ide">fut3</span><span class="op">.</span><span class="ide">finished</span>()):</div></div><div class="line"><div class="line-content">  <span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;fut3.state = &quot;</span>, <span class="ide">fut3</span><span class="op">.</span><span class="ide">state</span> <span class="com"># &quot;Failed&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">fut3</span><span class="op">.</span><span class="ide">failed</span>():</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;p3() failed: &quot;</span>, <span class="ide">fut3</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">name</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">fut3</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">msg</span></div></div><div class="line"><div class="line-content">  <span class="com"># prints &quot;p3() failed: ValueError: ValueError inherits from CatchableError&quot;</span></div></div>  </code></pre>
+<p>You can put the <code>await</code> in a <code>try</code> block, to deal with that exception sooner:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p3</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">fut1</span> <span class="op">=</span> <span class="ide">p1</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">fut2</span> <span class="op">=</span> <span class="ide">p2</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">fut1</span></div></div><div class="line"><div class="line-content">  <span class="kwd">except</span> <span class="ide">CachableError</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;p1() failed: &quot;</span>, <span class="ide">fut1</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">name</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">fut1</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">msg</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;reachable code here&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut2</span></div></div>  </code></pre>
+<p>Chronos does not allow that future continuations and other callbacks raise
+<code>CatchableError</code> - as such, calls to <code>poll</code> will never raise exceptions caused
+originating from tasks on the dispatcher queue. It is however possible that
+<code>Defect</code> that happen in tasks bubble up through <code>poll</code> as these are not caught
+by the transformation.</p>
+<h3>Platform independence</h3>
+<p>Several functions in <code>chronos</code> are backed by the operating system, such as
+waiting for network events, creating files and sockets etc. The specific
+exceptions that are raised by the OS is platform-dependent, thus such functions
+are declared as raising <code>CatchableError</code> but will in general raise something
+more specific. In particular, it&apos;s possible that some functions that are
+annotated as raising <code>CatchableError</code> only raise on <em>some</em> platforms - in order
+to work on all platforms, calling code must assume that they will raise even
+when they don&apos;t seem to do so on one platform.</p>
+<h3>Exception effects</h3>
+<p><code>chronos</code> currently offers minimal support for exception effects and <code>raises</code>
+annotations. In general, during the <code>async</code> transformation, a generic
+<code>except CatchableError</code> handler is added around the entire function being
+transformed, in order to catch any exceptions and transfer them to the <code>Future</code>.
+Because of this, the effect system thinks no exceptions are &quot;leaking&quot; because in
+fact, exception <em>handling</em> is deferred to when the future is being read.</p>
+<p>Effectively, this means that while code can be compiled with
+<code>{.push raises: [Defect]}</code>, the intended effect propagation and checking is
+<strong>disabled</strong> for <code>async</code> functions.</p>
+<p>To enable checking exception effects in <code>async</code> code, enable strict mode with
+<code>-d:chronosStrictException</code>.</p>
+<p>In the strict mode, <code>async</code> functions are checked such that they only raise
+<code>CatchableError</code> and thus must make sure to explicitly specify exception
+effects on forward declarations, callbacks and methods using
+<code>{.raises: [CatchableError].}</code> (or more strict) annotations.</p>
+<h3>Cancellation support</h3>
+<p>Any running <code>Future</code> can be cancelled. This can be used to launch multiple
+futures, and wait for one of them to finish, and cancel the rest of them,
+to add timeout, or to let the user cancel a running task.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Simple cancellation</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">future</span> <span class="op">=</span> <span class="ide">sleepAsync</span>(<span class="num">10.</span><span class="ide">minutes</span>)</div></div><div class="line"><div class="line-content"><span class="ide">future</span><span class="op">.</span><span class="ide">cancel</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Wait for cancellation</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">future2</span> <span class="op">=</span> <span class="ide">sleepAsync</span>(<span class="num">10.</span><span class="ide">minutes</span>)</div></div><div class="line"><div class="line-content"><span class="ide">await</span> <span class="ide">future2</span><span class="op">.</span><span class="ide">cancelAndWait</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Race between futures</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">retrievePage</span>(<span class="ide">uri</span>: <span class="ide">string</span>): <span class="ide">Future</span>[<span class="ide">string</span>] {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># requires to import uri, chronos/apps/http/httpclient, stew/byteutils</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">httpSession</span> <span class="op">=</span> <span class="ide">HttpSessionRef</span><span class="op">.</span><span class="ide">new</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">httpSession</span><span class="op">.</span><span class="ide">fetch</span>(<span class="ide">parseUri</span>(<span class="ide">uri</span>))</div></div><div class="line"><div class="line-content">    <span class="ide">result</span> <span class="op">=</span> <span class="ide">string</span><span class="op">.</span><span class="ide">fromBytes</span>(<span class="ide">resp</span><span class="op">.</span><span class="ide">data</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">finally</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># be sure to always close the session</span></div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">httpSession</span><span class="op">.</span><span class="ide">closeWait</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">futs</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="op">@</span>[</div></div><div class="line"><div class="line-content">      <span class="ide">retrievePage</span>(<span class="str">&quot;https://duckduckgo.com/?q=chronos&quot;</span>),</div></div><div class="line"><div class="line-content">      <span class="ide">retrievePage</span>(<span class="str">&quot;https://www.google.fr/search?q=chronos&quot;</span>)</div></div><div class="line"><div class="line-content">    ]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">finishedFut</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">one</span>(<span class="ide">futs</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">fut</span> <span class="kwd">in</span> <span class="ide">futs</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">fut</span><span class="op">.</span><span class="ide">finished</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">fut</span><span class="op">.</span><span class="ide">cancel</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Result: &quot;</span>, <span class="ide">await</span> <span class="ide">finishedFut</span></div></div>  </code></pre>
+<p>When an <code>await</code> is cancelled, it will raise a <code>CancelledError</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">c1</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Before sleep&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">10.</span><span class="ide">minutes</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;After sleep&quot;</span> <span class="com"># not reach due to cancellation</span></div></div><div class="line"><div class="line-content">  <span class="kwd">except</span> <span class="ide">CancelledError</span> <span class="kwd">as</span> <span class="ide">exc</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;We got cancelled!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">raise</span> <span class="ide">exc</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">c2</span> {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">c1</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Never reached, since the CancelledError got re-raised&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">work</span> <span class="op">=</span> <span class="ide">c2</span>()</div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span>(<span class="ide">work</span><span class="op">.</span><span class="ide">cancelAndWait</span>())</div></div>  </code></pre>
+<p>The <code>CancelledError</code> will now travel up the stack like any other exception.
+It can be caught and handled (for instance, freeing some resources)</p>
+<h3>Multiple async backend support</h3>
+<p>Thanks to its powerful macro support, Nim allows <code>async</code>/<code>await</code> to be
+implemented in libraries with only minimal support from the language - as such,
+multiple <code>async</code> libraries exist, including <code>chronos</code> and <code>asyncdispatch</code>, and
+more may come to be developed in the futures.</p>
+<p>Libraries built on top of <code>async</code>/<code>await</code> may wish to support multiple async
+backends - the best way to do so is to create separate modules for each backend
+that may be imported side-by-side - see <a href="https://github.com/status-im/nim-metrics/blob/master/metrics/">nim-metrics</a>
+for an example.</p>
+<p>An alternative way is to select backend using a global compile flag - this
+method makes it diffucult to compose applications that use both backends as may
+happen with transitive dependencies, but may be appropriate in some cases -
+libraries choosing this path should call the flag <code>asyncBackend</code>, allowing
+applications to choose the backend with <code>-d:asyncBackend=&lt;backend_name&gt;</code>.</p>
+<p>Known <code>async</code> backends include:</p>
+<ul>
+<li><code>chronos</code> - this library (<code>-d:asyncBackend=chronos</code>)</li>
+<li><code>asyncdispatch</code> the standard library <code>asyncdispatch</code> <a href="https://nim-lang.org/docs/asyncdispatch.html">module</a> (<code>-d:asyncBackend=asyncdispatch</code>)</li>
+<li><code>none</code> - <code>-d:asyncBackend=none</code> - disable <code>async</code> support completely</li>
+</ul>
+<p><code>none</code> can be used when a library supports both a synchronous and
+asynchronous API, to disable the latter.</p>
+<h3>Compile-time configuration</h3>
+<p><code>chronos</code> contains several compile-time <a href="./chronos/config.nim">configuration options</a> enabling stricter compile-time checks and debugging helpers whose runtime cost may be significant.</p>
+<p>Strictness options generally will become default in future chronos releases and allow adapting existing code without changing the new version - see the <a href="./chronos/config.nim">  <code>config.nim</code></a> module for more information.</p>
+<h2>TODO</h2>
+<ul>
+<li>Pipe/Subprocess Transports.</li>
+<li>Multithreading Stream/Datagram servers</li>
+</ul>
+<h2>Contributing</h2>
+<p>When submitting pull requests, please add test cases for any new features or fixes and make sure <code>nimble test</code> is still able to execute the entire test suite successfully.</p>
+<p><code>chronos</code> follows the <a href="https://status-im.github.io/nim-style-guide/">Status Nim Style Guide</a>.</p>
+<h2>Other resources</h2>
+<ul>
+<li>  <a href="https://github.com/status-im/nim-chronos/wiki/AsyncDispatch-comparison">Historical differences with asyncdispatch</a></li>
+</ul>
+<h2>License</h2>
+<p>Licensed and distributed under either of</p>
+<ul>
+<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
+</ul>
+<p>at your option. These files may not be copied, modified, or distributed except according to those terms.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        Apache License 2.0
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/status-im/nim-chronos">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

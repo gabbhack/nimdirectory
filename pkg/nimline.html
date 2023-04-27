@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimline</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">c</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">c++</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">interop</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ffi</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wrappers</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Wrapper-less C/C++ interop for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimline" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Nimline</h1>
+<p>previously known as <a href="https://github.com/fragcolor-xyz/fragments/blob/master/fragments/ffi/cpp.nim">  <code>fragments/ffi/cpp</code></a></p>
+<p>please star and support <a href="https://github.com/fragcolor-xyz/fragments">  <em>fragments</em></a> as well!</p>
+<p>  <a href="https://travis-ci.com/fragcolor-xyz/nimline">    <img src="https://travis-ci.com/fragcolor-xyz/nimline.svg?branch=master" style="max-width: 100%;" alt="Build Status" />  </a></p>
+<p>Write C/C++ straight from Nim, without the need to generate wrappers. Inspired by <code>std/jsffi</code> and using the magic of <code>importcpp</code>, <code>macros</code> and many other awesome Nim features.</p>
+<blockquote>
+<p>Note: Since imported C++ methods and types are not known to the Nim-compiler, errors will be reported by the C++ compiler instead. They will also not be caught by the linter.</p>
+</blockquote>
+<h2>Code-generation example</h2>
+<p>Nim:</p>
+<pre>  <code class="language-nimrod">var obj = cppinit(MyClass, 1)
+obj.someField = 42
+let res = obj.someMethod(1, 2.0).to(cint)
+
+# or for an internal pointer, which is more flexible due to lack of constructors in nim
+var
+  myx = MyClass.new()
+  myxref = MyClass.newref()
+myx.test3().to(void)
+myx.number = 99
+myxref.test3().to(void)
+myxref.number = 100
+</code></pre>
+<p>Generated C++:</p>
+<pre>  <code class="language-cpp"><div class="line"><div class="line-content"><span class="ide">MyClass</span> <span class="ide">obj</span>(((<span class="ide">NI</span>) <span class="num">1</span>));</div></div><div class="line"><div class="line-content"><span class="ide">obj</span>.<span class="ide">someField</span> <span class="op">=</span> (((<span class="ide">NI</span>) <span class="num">42</span>));</div></div><div class="line"><div class="line-content"><span class="kwd">int</span> <span class="ide">res</span> <span class="op">=</span> (<span class="kwd">int</span>)(<span class="ide">obj</span>.<span class="ide">someMethod</span>((((<span class="ide">NI</span>) <span class="num">1</span>)), (<span class="num">2.0000000000000000e+00</span>)));</div></div>  </code></pre>
+<h2>Usage</h2>
+<h3>Importing C++ types</h3>
+<p>If a C++ type needs to be used as a variable, it first has to be declared using <code>defineCppType</code>. This will import the type and enable interop on it.</p>
+<pre>  <code class="language-nimrod">defineCppType(MyNimType, &quot;MyCppClass&quot;, &quot;MyHeader.h&quot;)
+var obj: MyNimType
+obj.someField = 42
+</code></pre>
+<h3>Accessing members</h3>
+<p>Nimline allows you to access C++ members and functions of Nim objects using the dot-operators <code>.</code>, <code>.=</code> and <code>.()</code>, and other operations that mimic C++.</p>
+<pre>  <code class="language-nimrod">obj.someField = 42 # Translates to `obj.someField = 42`
+discard obj.someField.to(cint) # Translates to `obj.someField`
+obj.someMethod(1).to(void) # Translates to `obj.someMethod(1)`
+</code></pre>
+<p>Return types have to be explicitly specified using <code>to</code>, if they need to be stored in variables, or passed to Nim-procs, even for <code>void</code> retruns.
+This is because the Nim-compiler is not aware of these function signatures. They can however be used in further C++ calls.
+Function arguments are automatically reinterpreted as C++ types.</p>
+<p>If a member name collides with a Nim-keyword, the more explicit notation <code>invoke</code> can be used:</p>
+<pre>  <code>obj.invoke(&quot;someMethod&quot;, 1).to(void)
+</code></pre>
+<p>Even types that were not declared with <code>defineCppType</code> can be used in this way, by first reinterpreting them using <code>toCpp</code>.</p>
+<pre>  <code class="language-nimrod">type MyClass {.importcpp.} = object
+var obj: MyClass
+obj.toCpp.someField = 42
+</code></pre>
+<blockquote>
+<p>Note: <code>toCpp()</code>, <code>invoke()</code> and member-function calls return a <code>CppProxy</code>. This is a non-concrete type only enables member access, and does not appear in the generated C++.</p>
+</blockquote>
+<h3>Globals</h3>
+<p>Global variables and free function can be used from the special <code>global</code> object, just like data members and member functions.</p>
+<pre>  <code class="language-nimrod">global.globalNumber = 42
+echo global.globalNumber.to(cint)
+global.printf(&quot;Hello World\n&quot;.cstring).to(void)
+</code></pre>
+<p>Free functions can alternatively be called with <code>invokeFunction</code>.</p>
+<pre>  <code class="language-nimrod">invokeFunction(&quot;printf&quot;, &quot;Hello World\n&quot;.cstring).to(void)
+</code></pre>
+<h3>Constructors and destructors</h3>
+<p>To initialize an object on the stack, use <code>cppinit()</code>:</p>
+<pre>  <code class="language-nimrod"># Translates to `MyType obj(1)`
+let obj = cppinit(MyType, 1)
+</code></pre>
+<p>Objects can also be constructed on the heap, either through a <code>ptr</code> or <code>ref</code> using <code>cppctor()</code>.
+This translates to a placement-new in C++ and needs to be followed by <code>cppdtor</code> for cleanup.</p>
+<pre>  <code class="language-nimrod"># Allocate storage
+let
+  tracked: ref MyClass = new MyClass
+  untracked: ptr MyClass = cast[ptr MyClass](alloc0(sizeof(MyClass)))
+
+# Call placement-new, e.g. `new (tracked) MyClass(1)`
+cppctor(tracked, 1)
+cppctor(untracked, 2)
+
+# Call destructor, e.g. `tracked-&gt;~MyClass()`
+cppdtor(tracked)
+cppdtor(untracked)
+</code></pre>
+<p>For convenience, <code>cppnewref()</code> creates a new reference, constructs the object and calls it&apos;s destructor on finalization.</p>
+<pre>  <code class="language-nimrod">cppnewref(tracked, 1)
+</code></pre>
+<h3>Adding C++ compiler options</h3>
+<p>The folloing helpers are available to set C++ compiler/linker options in a platform independent way.</p>
+<pre>  <code class="language-nimrod">cppdefines(&quot;MYDEFINE&quot;, &quot;MYDEFINE2=10&quot;) # e.g. -DMYDEFINE -DMYDEFINE2=10
+cppincludes(&quot;.&quot;) # e.g. -I.
+cppfiles(&quot;MyClass.cpp&quot;)
+cpplibpaths(&quot;.&quot;) # e.g. -L.
+cpplibs(&quot;libMyModule.so&quot;) # e.g. -llibMyModule.so
+</code></pre>
+<h3>Standard library helpers</h3>
+<p>For convenience, the following standard library types are supported out of the box.</p>
+<ul>
+<li>
+<p><code>StdString</code> (<code>std::string</code>)</p>
+<pre>  <code class="language-nimrod">let str: StdString = &quot;HelloWorld&quot;
+</code></pre>
+</li>
+<li>
+<p><code>StdArray</code> (<code>std::array</code>)</p>
+<pre>  <code class="language-nimrod">var cppArray: StdArray[cint, 4]
+cppArray[0] = 42
+echo cppArray[0]
+</code></pre>
+</li>
+<li>
+<p><code>StdTuple</code> (<code>std::tuple</code>)</p>
+<pre>  <code class="language-nimrod">var cppTyple = makeCppTuple(1, 1.0, obj)
+cppTupleSet(0, cppTuple.toCpp, 42.toCpp)
+echo cppTupleGet[int](0, cppTuple.toCpp)
+let nimTuple = cppTuple.toNimTyple()
+</code></pre>
+</li>
+<li>
+<p><code>StdException</code> (<code>std::exception</code>)</p>
+<pre>  <code class="language-nimrod">try: someNativeFunction()
+except StdException as e: raiseAssert($e.what())
+</code></pre>
+</li>
+</ul>
+<h2>Known issues</h2>
+<ul>
+<li><code>cppinit</code> does not work in the global scope. This is a Nim issue (https://github.com/nim-lang/Nim/issues/6198).</li>
+<li>Nim always memsets to 0 value types, this might have serious bad effects on most cpp classes. Workaround with refs and pointers.</li>
+</ul>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/sinkingsugar/nimline">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

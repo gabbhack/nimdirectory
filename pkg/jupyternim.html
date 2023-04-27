@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">jupyternim</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">jupyter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nteract</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ipython</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">jupyter-kernel</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A Jupyter kernel for nim.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install jupyternim" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1><img src="logo.svg" style="max-width: 100%;" alt="logo.svg" />Jupyter Nim</h1>
+<p>This is a beta  <a href="http://jupyter.org/">jupyter</a> kernel for nim written in nim.<br />
+Works with <code>notebook</code>, <code>lab</code>, <code>nteract</code>, should even work in <code>vscode-python</code>.<br />
+If you use <code>nteract</code> or <code>vscode-python</code>, there are still some problems, please report them.<br />
+For <code>jupyter lab</code>, you can also install the companion extension by <code>jupyter labextension install jupyternim-labextension</code><br />
+that provides syntax highlighting.</p>
+<p>Look at <a href="examples/example-notebook.ipynb">example-notebook</a> for some examples,<br />
+and at <a href="examples/example-display.ipynb">example-display</a> for examples of displaying latex, md, etc.</p>
+<p>NOTE: running a notebook with this creates a directory <code>~/.jupyternim</code> in which it stores blocks of code, pngs, compiled outputs, etc.
+Compilation output should be automatically cleaned up starting from version 0.6.0.</p>
+<p>NOTE2: <code>nteract</code> support is very wip, also <code>nteract</code> doesn&apos;t add a cellId to notebook cells so changing types is buggy, I&apos;ll work on it and maybe also provide a patch for nteract, but it&apos;s low priority, help appreciated.</p>
+<h2>Installation</h2>
+<p>TL,DR:</p>
+<pre>  <code>nimble install jupyternim -y
+</code></pre>
+<p>Done!</p>
+<p><code>jupyternim -v</code> has some details about how it was compiled.</p>
+<h3>Prereqs</h3>
+<ul>
+<li>a working <code>nim</code> installation ( <a href="http://nim-lang.org/download.html">download</a> )</li>
+<li>a <code>zeromq</code> installation. Currently tested only with <a href="http://zeromq.org/intro:get-the-software">ZeroMQ</a> 4.2. <strong>It must be in PATH or the kernel won&apos;t run</strong>.
+<ul>
+<li>you may already have this installed, it will be checked when you install <code>jupyternim</code> to see if you need to install it yourself</li>
+</ul>
+</li>
+<li>some kind of jupyter environment, some examples:
+<ul>
+<li><code>jupyter</code>  ( I recomend <a href="http://conda.pydata.org/miniconda.html">miniconda3</a> and adding jupyter with <code>conda install jupyter</code> )</li>
+<li><code>nteract</code> (get it <a href="https://nteract.io/">here</a>)</li>
+<li><code>vscode</code>+<code>vscode-python</code> extension ( poor naming, but <code>vscode-python</code> also provides <code>jupyter</code> support )</li>
+</ul>
+</li>
+</ul>
+<h3>Long version:</h3>
+<p>The kernel should be automatically compiled and registered by doing <code>nimble install jupyternim</code> ( or <code>nimble install https://github.com/stisa/jupyternim</code> if it&apos;s not in nimble yet).</p>
+<p>Alternatively, try the following:</p>
+<ul>
+<li>clone this repo: <code>git clone https://github.com/stisa/jupyternim</code></li>
+<li>then go into the cloned dir <code>cd jupyternim</code></li>
+<li>register to nimble with <code>nimble install</code></li>
+<li>compile with <code>nimble dev</code>, this will give you a debug version</li>
+<li>run <code>jupyternim</code>to register the kernel</li>
+<li>run <code>jupyter notebook</code></li>
+</ul>
+<p>Note that <a href="http://zeromq.org/intro:get-the-software">ZeroMQ</a> is dinamically linked, so it needs to be installed <strong>and added to path</strong></p>
+<h3>HotCodeReloading</h3>
+<p>To enable the <strong>very</strong> experimental hotcodereloading support, you&apos;ll need to recompile <code>jupyternim</code> with <code>-d:useHcr</code> and then overwrite the one in <code>~/.nimble/pkgs/jupyternim-&lt;version&gt;</code> with it.<br />
+The hotcodereloading mostly works, but there are various bugs that prevent its use. For examples, printing a float crashes it.</p>
+<h2>Editing</h2>
+<p><code>TAB</code> : completion request, for example <code>p&lt;TAB</code> -&gt; a pop up with possible completions<br />
+<img src="examples/jlabcompletion.gif" style="max-width: 100%;" alt="completion" /></p>
+<p>TODO:</p>
+<ul>
+<li>[ ] <code>shift+TAB</code> : inspection request, for example <code>echo&lt;shift+TAB&gt;</code> -&gt; a pop with a description of echo</li>
+<li>[ ] support the debugger protocol, support variable value inspection</li>
+</ul>
+<h2>Magics:</h2>
+<p>  <strong>passing flags</strong></p>
+<p><code>#&gt;flags &lt; --some &gt; &lt; --d:flag &gt;</code>
+Pass flags to nim compiler, default is <code>--verbosity:0 -d:release</code>.<br />
+Passing new flags overwrites all other previous flags, even default ones.
+Example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com">#&gt;flags -d:test</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;hi&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span> <span class="ide">test</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;test defined&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;test not defined&quot;</span></div></div>  </code></pre>
+<p>Outputs:</p>
+<pre>  <code>hi
+test defined
+</code></pre>
+<p>TODO: provide a way to override default compilation output file</p>
+<h3>Delete old temp files</h3>
+<p>  <code>#&gt;clear all</code></p>
+<h3>Displaying data</h3>
+<p>To send back data to display, you can use the module <a href="src/jupyternimpkg/display.nim">jupyternimpkg/display</a>, example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimPNG</span>, <span class="ide">jupyternimpkg</span><span class="op">/</span><span class="ide">display</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">file</span> <span class="op">=</span> r"..\\src\\jupyternimspec\\logo-64x64.png"</div></div><div class="line"><div class="line-content"><span class="ide">show</span> <span class="ide">dkPngFile</span>, [<span class="num">64</span>, <span class="num">64</span>]: <span class="com"># [width, height]</span></div></div><div class="line"><div class="line-content">    <span class="ide">file</span></div></div>  </code></pre>
+<p>If your file type is not supported by the <code>display</code> module yet, you need to implement the proc yourself.
+Just write to stdout a string containing a json object defined as</p>
+<pre>  <code class="language-json">{   //&lt;data&gt; is base64 encoded for binary formats, eg png
+    &quot;data&quot;: {&quot;&lt;mimetype&gt;&quot;: &lt;data&gt;}, 
+    &quot;metadata&quot;: {&quot;&lt;mimetype&gt;&quot;: {&lt;mimespecific&gt;}},
+    &quot;transient&quot;: {}
+}
+</code></pre>
+<p>enclosed in <code>#&lt;jndd&gt;#</code> and <code>#&lt;outjndd&gt;#</code> markers.
+For example, to display a PNG image, simply:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json</span>, <span class="ide">base64</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> </div></div><div class="line"><div class="line-content">  <span class="ide">img</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="ide">path</span>)<span class="op">.</span><span class="ide">encode</span> <span class="com"># encode the png file with base64</span></div></div><div class="line"><div class="line-content">  <span class="ide">w</span> <span class="op">=</span> <span class="num">320</span> <span class="com"># displayed width</span></div></div><div class="line"><div class="line-content">  <span class="ide">h</span> <span class="op">=</span> <span class="num">240</span> <span class="com"># displayed height</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">content</span>: <span class="ide">JsonNode</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">    <span class="str">&quot;data&quot;</span>: {<span class="str">&quot;image/png&quot;</span>: <span class="ide">img</span> }, </div></div><div class="line"><div class="line-content">    <span class="str">&quot;metadata&quot;</span>: <span class="op">%*</span>{<span class="str">&quot;image/png&quot;</span>: {<span class="str">&quot;width&quot;</span>: <span class="ide">w</span>, <span class="str">&quot;height&quot;</span>:<span class="ide">h</span>}},</div></div><div class="line"><div class="line-content">    <span class="str">&quot;transient&quot;</span>: <span class="op">%*</span>{}</div></div><div class="line"><div class="line-content">  }</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;#&lt;jndd&gt;#&quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">content</span> <span class="op">$</span> <span class="str">&quot;#&lt;outjndd&gt;#&quot;</span></div></div>  </code></pre>
+<p>Consider sending a pr for the display module if you end up having to do this.</p>
+<h2>TODO</h2>
+<ul>
+<li>[ ] Finish implementing messaging ( completion, introspection, history, update_display_data... )</li>
+<li>[ ] Connect to nimsuggest via socket, parse its output for introspection requests</li>
+<li>[ ] Documentation lookup magic?
+<ul>
+<li>eg. put docs in a subfolder, then <code>#&gt;doc sequtils</code> opens a browser to the correct <code>.html</code> page ( possibly local )</li>
+</ul>
+</li>
+<li>[ ] improve hotcodereloading (probably needs work on the compiler side)</li>
+<li>[ ] convince jupyter notebook maintainers to provide cellId, so I can stop patching the javascript</li>
+<li>[ ] find a better way to fake a repl than re running prior code and discarding output (we have HCR! Buggy though)</li>
+<li>[ ] use <code>JNsession</code> as name for temp files (allows multiple open kernels)</li>
+<li>[ ] a better way to handle <code>display_data</code> than string delimiters</li>
+</ul>
+<h2>General structure</h2>
+<h3>  <a href="src/jupyternim.nim">jupyternim</a></h3>
+<p>Handles init, start, stop of the various loops, as well as initial installation of the kernelspec.</p>
+<h3>  <a href="src/jupyternimpkg/messages.nim">jupyternimpkg/messages</a></h3>
+<p>Handles message specifications exposing low level procs to decode, encode messages</p>
+<h3>  <a href="src/jupyternimpkg/sockets.nim">jupyternimpkg/sockets</a></h3>
+<p>Defines sockets types, how they are created, how their loops work, how they send and receive messages</p>
+<h3>  <a href="src/jupyternimpkg/display">jupyternimpkg/display</a></h3>
+<p>Handle preparing and sending back data to display</p>
+<h3>  <a href="src/jupyternimspec/">jupyternimspec</a></h3>
+<p>Logos for jupyter, a <code>kernel.js</code> file to load syntax highlight and patch jupyter notebook to send
+a cellId.</p>
+<h2>Internal Notes</h2>
+<p>Messages must be multipart<br />
+signature-must-be-lowercase</p>
+<p>http://nim-lang.org/docs/tinyc.html</p>
+<p><a href="https://jupyter-client.readthedocs.io/en/latest/kernels.html#kernels">Jupyter Kernel Docs</a><br />
+<a href="http://andrew.gibiansky.com/blog/ipython/ipython-kernels">IHaskell</a><br />
+<a href="https://jupyter-client.readthedocs.io/en/latest/messaging.html">Messaging Docs</a><br />
+<a href="https://hookrace.net/blog/writing-an-async-logger-in-nim/">Async logger in nim</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/stisa/jupyternim/blob/master/README.md">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

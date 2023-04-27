@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">cpython</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">python</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Alternative StdLib for Nim for Python targets")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install cpython" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Alternative StdLib for Nim for Python targets</h1>
+<p>  <img src="nim-python-hybrid0.png" style="max-width: 100%;" alt="" /></p>
+<p>  <img src="https://img.shields.io/github/languages/top/juancarlospaco/cpython?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/stars/juancarlospaco/cpython?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/languages/code-size/juancarlospaco/cpython?style=for-the-badge" style="max-width: 100%;" alt="" />  <img src="https://img.shields.io/github/issues-raw/juancarlospaco/cpython?style=for-the-badge" style="max-width: 100%;" alt="" title="Bugs" />  <img src="https://img.shields.io/github/issues-pr-raw/juancarlospaco/cpython?style=for-the-badge" style="max-width: 100%;" alt="" title="PRs" />  <img src="https://img.shields.io/github/last-commit/juancarlospaco/cpython?style=for-the-badge" style="max-width: 100%;" alt="" title="Commits" />  <img src="https://github.com/juancarlospaco/cpython/workflows/Build/badge.svg?branch=nim" style="max-width: 100%;" alt="" /></p>
+<h1>Documentation</h1>
+<ul>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/atexit">atexit</a> :arrow_right: https://juancarlospaco.github.io/cpython/atexit</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/base64">base64</a> :arrow_right: https://juancarlospaco.github.io/cpython/base64</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/binascii">binascii</a> :arrow_right: https://juancarlospaco.github.io/cpython/binascii</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/binhex">binhex</a> :arrow_right: https://juancarlospaco.github.io/cpython/binhex</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/builtins">builtins</a> :arrow_right: https://juancarlospaco.github.io/cpython/builtins</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/bz2">bz2</a> :arrow_right: https://juancarlospaco.github.io/cpython/bz2</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/cmath">cmath</a> :arrow_right: https://juancarlospaco.github.io/cpython/cmath</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/codecs">codecs</a> :arrow_right: https://juancarlospaco.github.io/cpython/codecs</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/codeop">codeop</a> :arrow_right: https://juancarlospaco.github.io/cpython/codeop</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/colorsys">colorsys</a> :arrow_right: https://juancarlospaco.github.io/cpython/colorsys</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/compileall">compileall</a> :arrow_right: https://juancarlospaco.github.io/cpython/compileall</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/copy">copy</a> :arrow_right: https://juancarlospaco.github.io/cpython/copy</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/crypt">crypt</a> :arrow_right: https://juancarlospaco.github.io/cpython/crypt</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/curses">curses</a> :arrow_right: https://juancarlospaco.github.io/cpython/curses</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/decimal">decimal</a> :arrow_right: https://juancarlospaco.github.io/cpython/decimal</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/dbd">dbd</a> :arrow_right: https://juancarlospaco.github.io/cpython/dbd</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/dis">dis</a> :arrow_right: https://juancarlospaco.github.io/cpython/dis</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/doctest">doctest</a> :arrow_right: https://juancarlospaco.github.io/cpython/doctest</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/ensurepip">ensurepip</a> :arrow_right: https://juancarlospaco.github.io/cpython/ensurepip</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/errno">errno</a> :arrow_right: https://juancarlospaco.github.io/cpython/errno</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/faulthandler">faulthandler</a> :arrow_right: https://juancarlospaco.github.io/cpython/faulthandler</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/fcntl">fcntl</a> :arrow_right: https://juancarlospaco.github.io/cpython/fcntl</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/filecmp">filecmp</a> :arrow_right: https://juancarlospaco.github.io/cpython/filecmp</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/fnmatch">fnmatch</a> :arrow_right: https://juancarlospaco.github.io/cpython/fnmatch</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/gc">gc</a> :arrow_right: https://juancarlospaco.github.io/cpython/gc</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/getopt">getopt</a> :arrow_right: https://juancarlospaco.github.io/cpython/getopt</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/getpass">getpass</a> :arrow_right: https://juancarlospaco.github.io/cpython/getpass</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/gettext">gettext</a> :arrow_right: https://juancarlospaco.github.io/cpython/gettext</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/glob">glob</a> :arrow_right: https://juancarlospaco.github.io/cpython/glob</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/grp">grp</a> :arrow_right: https://juancarlospaco.github.io/cpython/grp</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/gzip">gzip</a> :arrow_right: https://juancarlospaco.github.io/cpython/gzip</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/hashlib">hashlib</a> :arrow_right: https://juancarlospaco.github.io/cpython/hashlib</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/hmac">hmac</a> :arrow_right: https://juancarlospaco.github.io/cpython/hmac</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/html.entities">html.entities</a> :arrow_right: https://juancarlospaco.github.io/cpython/html_entities</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/imghdr">imghdr</a> :arrow_right: https://juancarlospaco.github.io/cpython/imghdr</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/imp">imp</a> :arrow_right: https://juancarlospaco.github.io/cpython/imp</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/importlib">importlib</a> :arrow_right: https://juancarlospaco.github.io/cpython/importlib</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/keyword">keyword</a> :arrow_right: https://juancarlospaco.github.io/cpython/keyword</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/linecache">linecache</a> :arrow_right: https://juancarlospaco.github.io/cpython/linecache</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/logging">logging</a> :arrow_right: https://juancarlospaco.github.io/cpython/logging</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/lzma">lzma</a> :arrow_right: https://juancarlospaco.github.io/cpython/lzma</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/marshal">marshal</a> :arrow_right: https://juancarlospaco.github.io/cpython/marshal</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/math">math</a> :arrow_right: https://juancarlospaco.github.io/cpython/math</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/mimetypes">mimetypes</a> :arrow_right: https://juancarlospaco.github.io/cpython/mimetypes</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/ntpath">ntpath</a> :arrow_right: https://juancarlospaco.github.io/cpython/ntpath</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/nis">nis</a> :arrow_right: https://juancarlospaco.github.io/cpython/nis</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/operator">operator</a> :arrow_right: https://juancarlospaco.github.io/cpython/operator</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/os">os</a> :arrow_right: https://juancarlospaco.github.io/cpython/os</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/pickle">pickle</a> :arrow_right: https://juancarlospaco.github.io/cpython/pickle</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/pickletools">pickletools</a> :arrow_right: https://juancarlospaco.github.io/cpython/pickletools</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/pkgutil">pkgutil</a> :arrow_right: https://juancarlospaco.github.io/cpython/pkgutil</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/posixpath">posixpath</a> :arrow_right: https://juancarlospaco.github.io/cpython/posixpath</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/pprint">pprint</a> :arrow_right: https://juancarlospaco.github.io/cpython/pprint</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/pwd">pwd</a> :arrow_right: https://juancarlospaco.github.io/cpython/pwd</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/py_compile">py_compile</a> :arrow_right: https://juancarlospaco.github.io/cpython/py_compile</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/quopri">quopri</a> :arrow_right: https://juancarlospaco.github.io/cpython/quopri</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/random">random</a> :arrow_right: https://juancarlospaco.github.io/cpython/random</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/re">re</a> :arrow_right: https://juancarlospaco.github.io/cpython/re</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/readline">readline</a> :arrow_right: https://juancarlospaco.github.io/cpython/readline</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/reprlib">reprlib</a> :arrow_right: https://juancarlospaco.github.io/cpython/reprlib</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/resource">resource</a> :arrow_right: https://juancarlospaco.github.io/cpython/resource</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/runpy">runpy</a> :arrow_right: https://juancarlospaco.github.io/cpython/runpy</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/secrets">secrets</a> :arrow_right: https://juancarlospaco.github.io/cpython/secrets</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/shutil">shutil</a> :arrow_right: https://juancarlospaco.github.io/cpython/shutil</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/signal">signal</a> :arrow_right: https://juancarlospaco.github.io/cpython/signal</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/site">site</a> :arrow_right: https://juancarlospaco.github.io/cpython/site</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/sndhdr">sndhdr</a> :arrow_right: https://juancarlospaco.github.io/cpython/sndhdr</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/spwd">spwd</a> :arrow_right: https://juancarlospaco.github.io/cpython/spwd</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/statistics">statistics</a> :arrow_right: https://juancarlospaco.github.io/cpython/statistics</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/struct">struct</a> :arrow_right: https://juancarlospaco.github.io/cpython/struct</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/ssl">ssl</a> :arrow_right: https://juancarlospaco.github.io/cpython/ssl</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/subprocess">subprocess</a> :arrow_right: https://juancarlospaco.github.io/cpython/subprocess</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/sys">sys</a> :arrow_right: https://juancarlospaco.github.io/cpython/sys</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/sysconfig">sysconfig</a> :arrow_right: https://juancarlospaco.github.io/cpython/sysconfig</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/syslog">syslog</a> :arrow_right: https://juancarlospaco.github.io/cpython/syslog</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/tabnanny">tabnanny</a> :arrow_right: https://juancarlospaco.github.io/cpython/tabnanny</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/tempfile">tempfile</a> :arrow_right: https://juancarlospaco.github.io/cpython/tempfile</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/termios">termios</a> :arrow_right: https://juancarlospaco.github.io/cpython/termios</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/textwrap">textwrap</a> :arrow_right: https://juancarlospaco.github.io/cpython/textwrap</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/timeit">timeit</a> :arrow_right: https://juancarlospaco.github.io/cpython/timeit</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/token">token</a> :arrow_right: https://juancarlospaco.github.io/cpython/token</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/tty">tty</a> :arrow_right: https://juancarlospaco.github.io/cpython/tty</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/turtle">turtle</a> :arrow_right: https://juancarlospaco.github.io/cpython/turtle</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/typing">typing</a> :arrow_right: https://juancarlospaco.github.io/cpython/typing</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/unicodedata">unicodedata</a> :arrow_right: https://juancarlospaco.github.io/cpython/unicodedata</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/uu">uu</a> :arrow_right: https://juancarlospaco.github.io/cpython/uu</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/uuid">uuid</a> :arrow_right: https://juancarlospaco.github.io/cpython/uuid</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/venv">venv</a> :arrow_right: https://juancarlospaco.github.io/cpython/venv</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/warnings">warnings</a> :arrow_right: https://juancarlospaco.github.io/cpython/warnings</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/webbrowser">webbrowser</a> :arrow_right: https://juancarlospaco.github.io/cpython/webbrowser</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/winsound">winsound</a> :arrow_right: https://juancarlospaco.github.io/cpython/winsound</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/zipapp">zipapp</a> :arrow_right: https://juancarlospaco.github.io/cpython/zipapp</li>
+<li>:heavy_check_mark: <a href="https://docs.python.org/3.10/library/zlib">zlib</a> :arrow_right: https://juancarlospaco.github.io/cpython/zlib</li>
+<li>:trollface: More supported modules soon...</li>
+<li>  <a href="https://docs.python.org/3.10/py-modindex">For more documentation, use Python official documentation, works too.</a></li>
+</ul>
+<h1>UPBGE</h1>
+<p><a href="https://upbge.org">UPBGE</a> API is supported out of the box, new <a href="https://upbge.org">UPBGE</a> features will be integrated.</p>
+<p>3D Games, GUI with OpenGL and shaders, audio, video, and more...</p>
+<p>  <img src="upbge.gif" style="max-width: 100%;" alt="" /></p>
+<p>  <em>Are you Gamedev?, Pull Requests welcome!.</em></p>
+<h1>Design</h1>
+<ul>
+<li>1 Dependency only.</li>
+<li>1 Nim module per 1 Python module.</li>
+<li>Module files are &lt;200 lines each of pure Nim code.</li>
+<li>  <a href="https://juancarlospaco.github.io/cpython/decimal">Arbitrary precision big Decimals with all the operators for Nim.</a></li>
+<li>Compatible with ARC and ORC deterministic memory nanagement.</li>
+<li>Enforces real strong inferred static typing with UFCS for Python.</li>
+<li>Same API as Python StdLib, same function names, same argument names
+(Names starting and ending with double underscore are not legal in Nim).</li>
+<li>Use the vanilla official Python StdLib that you already know by memory.</li>
+<li>Same module filenames as Python StdLib, same imports as Python StdLib.</li>
+<li>Documentation online, but also any Python documentation should work too.</li>
+<li>Simple code using template, easy to hack for new users, <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> &amp; <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>.</li>
+<li>Stuff deprecated/removed in Python before year 2020 will not be supported.</li>
+<li>We do not deprecate stuff, even if Python deprecate/remove it, it will keep working for Nim.</li>
+<li>Each file is completely self-contained standalone, you can copy just 1 file on your project and use it.</li>
+<li>If Python removes a module from StdLib you must obtain the <code>.py</code> file somehow, but the <code>.nim</code> remains.</li>
+<li>It does not use anything from Nim standard library, very future-proof
+(uses <a href="https://github.com/yglukhov/nimpy">Nimpy</a> for Python-Nim interop,
+but other than that they are thin wrappers, with minimal dependency on StdLib).</li>
+<li>Package version == Python version.</li>
+<li>  <a href="https://juancarlospaco.github.io/cpython/turtle">Pet the turtle.</a></li>
+</ul>
+<h1>Requisites</h1>
+<ul>
+<li>Python ( &gt;<code>2.7</code> works but unsupported, &gt;<code>3.5</code> minimal, &gt;=<code>3.10</code> recommended ).</li>
+</ul>
+<h1>Install</h1>
+<pre>  <code>nimble install cpython
+</code></pre>
+<p>OR</p>
+<pre>  <code>nimble install https://github.com/juancarlospaco/cpython.git
+</code></pre>
+<h1>Doing JavaScript or Web Dev ?</h1>
+<ul>
+<li>  <a href="https://github.com/juancarlospaco/nodejs#alternative-stdlib-for-nim-for-nodejsjavascript-targets">Alternative StdLib for Nim for NodeJS/JavaScript targets, hijacks NodeJS StdLib for Nim.</a></li>
+</ul>
+<h2>Why?</h2>
+<p>The idea comes from <a href="https://t.me/NimArgentina">the community of &quot;Nim en Espanol&quot; Telegram group (Spanish).</a></p>
+<p>  <a href="https://t.me/NimArgentina">    <img src="poll.png" style="max-width: 100%;" alt="" />  </a></p>
+<p>Also...</p>
+<ul>
+<li>Whole new StdLib becomes usable for Nim, without Nim having to spend resources.</li>
+<li>Showcase easy interoperability of Nim (CTypes is harder, Python is verbose, etc).</li>
+<li>  <a href="https://juancarlospaco.github.io/cpython/decimal">Arbitrary precision big Decimals for Nim.</a></li>
+<li>Others do it too (Scala/Kotlin uses Java StbLib, Swift uses Objective-C StdLib, etc).</li>
+<li>Python does it too, Python is written in C therefore using C StdLib.</li>
+<li>Make others work improving libs that you can use in Nim.</li>
+<li>A place to pile up &quot;Nim-ified&quot; Python stuff.</li>
+</ul>
+<h1>See also</h1>
+<ul>
+<li>  <a href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers#table-of-contents">    <strong>For Python Programmers</strong>  </a></li>
+<li>  <a href="https://github.com/juancarlospaco/choosenim_install#nim-integration-for-python-pip">Nim integration for Python PIP</a></li>
+<li><a href="https://github.com/tiran/legacylib">Python modules Deprecated from Python StdLib for download</a> (<a href="https://www.python.org/dev/peps/pep-0594">PEP594</a>)</li>
+</ul>
+<h1>💰➡️🍕</h1>
+<details>
+<summary title="Send Bitcoin">  <kbd> Bitcoin BTC </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>BTC Bitcoin Network</strong></p>
+<pre>  <code>1Pnf45MgGgY32X4KDNJbutnpx96E4FxqVi
+</code></pre>
+<p>  <strong>Lightning Network</strong></p>
+<pre>  <code>juancarlospaco@bitrefill.me
+</code></pre>
+</details>
+<details>
+<summary title="Send Ethereum and DAI"><kbd> Ethereum ETH </kbd> <kbd> Dai DAI </kbd> <kbd> Uniswap UNI </kbd> <kbd> Axie Infinity AXS </kbd> <kbd> Smooth Love Potion SLP </kbd> <kbd> Uniswap UNI </kbd> <kbd> USDC </kbd> </summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>ERC20 Ethereum Network</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+</details>
+<details>
+<summary title="Send Tether">  <kbd> Tether USDT </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>ERC20 Ethereum Network</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>TRC20 Tron Network</strong></p>
+<pre>  <code>TWGft53WgWvH2mnqR8ZUXq1GD8M4gZ4Yfu
+</code></pre>
+</details>
+<details>
+<summary title="Send Solana">  <kbd> Solana SOL </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>SOL Solana Network</strong></p>
+<pre>  <code>FKaPSd8kTUpH7Q76d77toy1jjPGpZSxR4xbhQHyCMSGq
+</code></pre>
+</details>
+<details>
+<summary title="Send Cardano">  <kbd> Cardano ADA </kbd></summary>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+<p>  <strong>ADA Cardano Network</strong></p>
+<pre>  <code>DdzFFzCqrht9Y1r4Yx7ouqG9yJNWeXFt69xavLdaeXdu4cQi2yXgNWagzh52o9k9YRh3ussHnBnDrg7v7W2hSXWXfBhbo2ooUKRFMieM
+</code></pre>
+</details>
+<details>
+<summary title="Send Sandbox"><kbd> Sandbox SAND </kbd> <kbd> Decentraland MANA </kbd></summary>
+<p>  <strong>ERC20 Ethereum Network</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+</details>
+<details>
+<summary title="Send Algorand">  <kbd> Algorand ALGO </kbd></summary>
+<p>  <strong>ALGO Algorand Network</strong></p>
+<pre>  <code>WM54DHVZQIQDVTHMPOH6FEZ4U2AU3OBPGAFTHSCYWMFE7ETKCUUOYAW24Q
+</code></pre>
+</details>
+<details>
+<summary title="Send Polkadot">  <kbd> Polkadot DOT </kbd></summary>
+<p>  <strong>DOT Network</strong></p>
+<pre>  <code>13GdxHQbQA1K6i7Ctf781nQkhQhoVhGgUnrjn9EvcJnYWCEd
+</code></pre>
+<p>  <strong>BEP20 Binance Smart Chain Network BSC</strong></p>
+<pre>  <code>0xb78c4cf63274bb22f83481986157d234105ac17e
+</code></pre>
+</details>
+<details>
+<summary title="Send via Binance Pay"> Binance </summary>
+<p>  <a href="https://pay.binance.com/en/checkout/e92e536210fd4f62b426ea7ee65b49c3" title="Send via Binance Pay">https://pay.binance.com/en/checkout/e92e536210fd4f62b426ea7ee65b49c3</a></p>
+</details>
+<h1>Stars</h1>
+<p><img src="https://starchart.cc/juancarlospaco/cpython.svg" style="max-width: 100%;" alt="" />:star: <a href="https://github.com/juancarlospaco" title="2022-02-15">@juancarlospaco</a>
+:star: <a href="https://github.com/aguspiza" title="2022-02-20">@aguspiza</a>
+:star: <a href="https://github.com/AndrielFR" title="2022-02-27">@AndrielFR</a>
+:star: <a href="https://github.com/S0Sbrigade8" title="2022-03-15">@S0Sbrigade8</a>
+:star: <a href="https://github.com/aphkyle" title="2022-03-15">@aphkyle</a>
+:star: <a href="https://github.com/jhgalino" title="2022-04-02">@jhgalino</a>
+:star: <a href="https://github.com/YanMu2020" title="2022-04-04">@YanMu2020</a>
+:star: <a href="https://github.com/matkuki" title="2022-04-14">@matkuki</a>
+:star: <a href="https://github.com/Traumatism" title="2022-04-21">@Traumatism</a>
+:star: <a href="https://github.com/foxoman" title="2022-05-19">@foxoman</a>	
+:star: <a href="https://github.com/whee" title="2022-05-21">@whee</a>	
+:star: <a href="https://github.com/bakarilevy" title="2022-06-23">@bakarilevy</a>	
+:star: <a href="https://github.com/Ryu1845" title="2022-06-24">@Ryu1845</a>	
+:star: <a href="https://github.com/babaloveyou" title="2022-07-16">@babaloveyou</a>	
+:star: <a href="https://github.com/jdbernard" title="2022-08-15">@jdbernard</a>	
+:star: <a href="https://github.com/cyraxjoe" title="2022-09-04">@cyraxjoe</a>	
+:star: <a href="https://github.com/zendbit" title="2022-09-05">@zendbit</a>	
+:star: <a href="https://github.com/vovavili" title="2022-09-09">@vovavili</a>	
+:star: <a href="https://github.com/xujin8" title="2022-09-18">@xujin8</a>	
+:star: <a href="https://github.com/Geksan" title="2022-09-24">@Geksan</a>	
+:star: <a href="https://github.com/shxdow" title="2022-10-05">@shxdow</a>	
+:star: <a href="https://github.com/singularperturbation" title="2022-10-06">@singularperturbation</a>	
+:star: <a href="https://github.com/adokitkat" title="2022-10-09">@adokitkat</a>	
+:star: <a href="https://github.com/luisacosta828" title="2022-10-15">@luisacosta828</a>	
+:star: <a href="https://github.com/ByK95" title="2022-11-04">@ByK95</a>	
+:star: <a href="https://github.com/daweedkob" title="2022-11-04">@daweedkob</a>	
+:star: <a href="https://github.com/Quantum-Codes" title="2022-11-05">@Quantum-Codes</a>	
+:star: <a href="https://github.com/qununc" title="2022-11-06">@qununc</a>	
+:star: <a href="https://github.com/AriesFoxgirl" title="2022-11-06">@AriesFoxgirl</a>	
+:star: <a href="https://github.com/Braden-Preston" title="2022-11-07">@Braden-Preston</a>	
+:star: <a href="https://github.com/AriesFoxgirl" title="2022-11-13">@AriesFoxgirl</a>	
+:star: <a href="https://github.com/mahmoudimus" title="2022-11-13">@mahmoudimus</a>	
+:star: <a href="https://github.com/terretta" title="2022-11-26">@terretta</a>	
+:star: <a href="https://github.com/AndrewGPU" title="2022-12-04">@AndrewGPU</a>	
+:star: <a href="https://github.com/themorya" title="2022-12-04">@themorya</a>	
+:star: <a href="https://github.com/zimitz" title="2022-12-13">@zimitz</a>	
+:star: <a href="https://github.com/tommo" title="2022-12-14">@tommo</a>	
+:star: <a href="https://github.com/rlipsc" title="2022-12-22">@rlipsc</a>	
+:star: <a href="https://github.com/jyapayne" title="2022-12-22">@jyapayne</a>	
+:star: <a href="https://github.com/barseghyanartur" title="2022-12-25">@barseghyanartur</a>	
+:star: <a href="https://github.com/tiberiuichim" title="2022-12-25">@tiberiuichim</a>	
+:star: <a href="https://github.com/yuchunzhou" title="2022-12-27">@yuchunzhou</a>	
+:star: <a href="https://github.com/lf-araujo" title="2023-01-01">@lf-araujo</a>	
+:star: <a href="https://github.com/pietroppeter" title="2023-01-11">@pietroppeter</a>	
+:star: <a href="https://github.com/arkanoid87" title="2023-01-18">@arkanoid87</a>	
+:star: <a href="https://github.com/jgdevop" title="2023-01-18">@jgdevop</a>	
+:star: <a href="https://github.com/onoe-serika" title="2023-01-22">@onoe-serika</a>	
+:star: <a href="https://github.com/shizhaojingszj" title="2023-01-22">@shizhaojingszj</a>	
+:star: <a href="https://github.com/W1M0R" title="2023-02-14">@W1M0R</a>	
+:star: <a href="https://github.com/genbtc" title="2023-02-14">@genbtc</a>	
+:star: <a href="https://github.com/buster-blue" title="2023-02-17">@buster-blue</a>	
+:star: <a href="https://github.com/Megamegamium" title="2023-02-26">@Megamegamium</a>	
+:star: <a href="https://github.com/1MarcosDev" title="2023-02-26">@1MarcosDev</a>	
+:star: <a href="https://github.com/lightcax" title="2023-02-28">@lightcax</a>	
+:star: <a href="https://github.com/termermc" title="2023-04-27">@termermc</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/juancarlospaco/cpython">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">elvis</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">operator</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">elvis</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ternary</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">template</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">truthy</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">falsy</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">exception</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">none</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">null</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nil</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">0</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">NaN</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">coalesce</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("The elvis package implements a \'truthy\', \'ternary\' and a \'coalesce\' operator to Nim as syntactic sugar for working with conditional expressions")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install elvis" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Elvis</h1>
+<p>The <strong>Elvis</strong> package implements a <strong>truthy</strong> (<code>?</code>), <strong>ternary</strong> (<code>?!</code>), <strong>coalesce</strong> (<code>?:</code>) and a <strong>conditional assignment</strong> (<code>?=</code>) operator,  <strong>conditional access operator</strong> (<code>.?</code>) and <strong>default coalesce</strong> (<code>?.</code>) as syntactic sugar for Nim to work with conditional expressions using more than just boolean types.</p>
+<h3>Truthy operator  <code>?</code></h3>
+<p>The <code>?</code> operator will try to convert any expression to a boolean. In general a value is considered false if it has not yet been initialised or isNil, none or throws an excpetion.</p>
+<p>These rules are currently implmented..</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>false</th>
+<th>falsy example</th>
+<th>truthy example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>0</td>
+<td>  <code>assert(not(?0))</code></td>
+<td>  <code>assert ?1</code></td>
+</tr>
+<tr>
+<td>float</td>
+<td>0.0 or NaN</td>
+<td>  <code>assert(not(?NaN))</code></td>
+<td>  <code>assert ?1.1</code></td>
+</tr>
+<tr>
+<td>char</td>
+<td>\0</td>
+<td>  <code>assert(not(?&apos;\0&apos;))</code></td>
+<td>  <code>assert ?&apos;0&apos;</code></td>
+</tr>
+<tr>
+<td>string</td>
+<td>&quot;&quot;</td>
+<td>  <code>assert(not(?&quot;&quot;))</code></td>
+<td>  <code>assert ?&quot;0&quot;</code></td>
+</tr>
+<tr>
+<td>seq[T]</td>
+<td>@[]</td>
+<td>  <code>var s:seq[int]; assert(not(?s))</code></td>
+<td>  <code>assert ?(@[0])</code></td>
+</tr>
+<tr>
+<td>option[T]</td>
+<td>none</td>
+<td>  <code>assert(not(none(string)))</code></td>
+<td>  <code>assert ?some(&quot;&quot;)</code></td>
+</tr>
+<tr>
+<td>Any</td>
+<td>exception</td>
+<td>  <code>assert(not(?{&quot;one&quot;:1}.newTable[&quot;two&quot;]))</code></td>
+<td>  <code>assert ?{&quot;one&quot;:1}.newTable[&quot;one&quot;]</code></td>
+</tr>
+<tr>
+<td>nilable</td>
+<td>isNil()</td>
+<td>``</td>
+<td>``</td>
+</tr></tbody></table>
+<h3>Elvis Operator <code>?:</code></h3>
+<p>The elvis operator will return the left operand if it is &apos;truthy&apos; otherwise it will return the right operand.</p>
+<p>See <a href="https://en.wikipedia.org/wiki/Null_coalescing_operator">null coalescing operator</a> <code>?:</code></p>
+<p>Examples, Test and Implmentation ideas have been in part derived from the Coalesce module (&apos;https://github.com/piedar/coalesce&apos;). That module should be prefered by those looking for a stricter implmentation of a Null coalescing operator, but the implmentation here may be more usefull especially now that stings are not nilable (from Nim 0.19)</p>
+<p>  <strong>Examples:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="str">&quot;&quot;</span> <span class="op">?:</span> <span class="str">&quot;b&quot;</span>) <span class="op">==</span> <span class="str">&quot;b&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="num">0</span> <span class="op">?:</span> <span class="num">1</span>) <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">none</span>(<span class="ide">int</span>) <span class="op">?:</span> <span class="num">1</span>) <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="num">1</span> <span class="op">?:</span> <span class="num">2</span>) <span class="op">==</span> <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="str">&quot;1&quot;</span> <span class="op">?:</span> <span class="str">&quot;2&quot;</span>) <span class="op">==</span> <span class="str">&quot;1&quot;</span></div></div>  </code></pre>
+<p>Longer chains work too, and the expression short-circuits if possible.</p>
+<p>eg.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">result</span> <span class="op">=</span> <span class="ide">tryComputeFast</span>(<span class="ide">input</span>) <span class="op">?:</span> <span class="ide">tryComputeSlow</span>(<span class="ide">input</span>) <span class="op">?:</span> <span class="ide">myDefault</span></div></div>  </code></pre>
+<h3>Ternary Operator <code>? !</code></h3>
+<p>The Ternary operator will return the  middle operand if the left operand evaluates as truthy otherwise it will return the right operand.</p>
+<p>This implementation was taken from Araq&apos;s suggestion on from https://forum.nim-lang.org/t/3342</p>
+<p>Note: Due to compiler limitations the &apos;!&apos; operation is implemented as a proc and is evaluated eagerly.</p>
+<p>  <strong>Examples:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">true</span> <span class="op">?</span> <span class="str">&quot;a&quot;</span> <span class="op">!</span> <span class="str">&quot;b&quot;</span>) <span class="op">==</span> <span class="str">&quot;a&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">false</span> <span class="op">?</span> <span class="str">&quot;a&quot;</span> <span class="op">!</span> <span class="str">&quot;b&quot;</span>) <span class="op">==</span> <span class="str">&quot;b&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="str">&quot;c&quot;</span> <span class="op">?</span> <span class="str">&quot;a&quot;</span> <span class="op">!</span> <span class="str">&quot;b&quot;</span>) <span class="op">==</span> <span class="str">&quot;a&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="str">&quot;&quot;</span> <span class="op">?</span> <span class="str">&quot;a&quot;</span> <span class="op">!</span> <span class="str">&quot;b&quot;</span>) <span class="op">==</span> <span class="str">&quot;b&quot;</span></div></div>  </code></pre>
+<h3>Conditional Assignment Operator <code>?=</code></h3>
+<p>The Conditional assignment operator will assign the right operand to the left operand only when the left operand evaluates as falsey</p>
+<p>  <strong>Examples:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span>:<span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="ide">s</span> <span class="op">?=</span> <span class="str">&quot;a&quot;</span> </div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">s</span> <span class="op">==</span> <span class="str">&quot;a&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">s</span> <span class="op">?=</span> <span class="str">&quot;b&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">s</span> <span class="op">==</span> <span class="str">&quot;a&quot;</span>)</div></div>  </code></pre>
+<h3>Conditional Assignment Operator (Reverse) <code>=?</code></h3>
+<p>The Reverse Conditional assignment operator will assign the right operand to the left operand only when the right operand evaluates as truthy</p>
+<p>  <strong>Examples:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">s</span>:<span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="ide">s</span> <span class="op">=?</span> <span class="str">&quot;a&quot;</span> </div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">s</span> <span class="op">==</span> <span class="str">&quot;a&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">s</span> <span class="op">=?</span> <span class="str">&quot;&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> (<span class="ide">s</span> <span class="op">==</span> <span class="str">&quot;a&quot;</span>)</div></div>  </code></pre>
+<h3>Conditional Access Operator <code>.?</code></h3>
+<p>The Conditional access operator will call the right operand with the left operand as thefirst argument when the left operand evaluates as truthy. Otherwise it will return a new unintiated instance (falsy) whatever type the right operand proc would have returned. Chained conditional access is also supported for pertties and simple functions, however conditional access to chained function calls with additonal arguments will currnetly not compile due to current limitations with the AST  for dot operators in templates (see https://github.com/mattaylor/elvis/issues/7). For these cases the default coalesce operator <code>?.</code> should be used instead.</p>
+<p>  <strong>Examples:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">opt0</span> <span class="op">=</span> <span class="ide">none</span>(<span class="ide">string</span>)</div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">opt1</span> <span class="op">=</span> <span class="ide">some</span>(<span class="str">&quot;one&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">assert</span>(<span class="ide">opt0</span><span class="op">.?</span><span class="ide">get</span><span class="op">.?</span><span class="ide">len</span> <span class="op">==</span> <span class="num">0</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">assert</span>(<span class="ide">opt1</span><span class="op">.?</span><span class="ide">get</span><span class="op">.?</span><span class="ide">len</span> <span class="op">==</span> <span class="num">3</span>)</div></div><div class="line"><div class="line-content"> <span class="com">#assert(opt0.?get(&quot;none&quot;) == &quot;none&quot; # compile error</span></div></div>  </code></pre>
+<h3>Default Coalesce Operator <code>?.</code></h3>
+<p>The  Default coaelsce operator will return the default value of the type of the right operand when this operand evaluates as falsey. This can be a useful work around when dealing with long chains which might throw exceptions.</p>
+<p>  <strong>Examples:</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">opt0</span> <span class="op">=</span> <span class="ide">none</span>(<span class="ide">string</span>)</div></div><div class="line"><div class="line-content"> <span class="kwd">let</span> <span class="ide">opt1</span> <span class="op">=</span> <span class="ide">some</span>(<span class="str">&quot;one&quot;</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">assert</span>(<span class="op">?.</span><span class="ide">opt0</span><span class="op">.</span><span class="ide">get</span><span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">0</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">assert</span>(<span class="op">?.</span><span class="ide">opt1</span><span class="op">.</span><span class="ide">get</span><span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">3</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">assert</span>(<span class="op">?.</span><span class="ide">opt0</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;none&quot;</span>)<span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">4</span>)</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/mattaylor/elvis">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-04-27T19:33:19Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
