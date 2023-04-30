@@ -29985,6 +29985,21 @@ const packages = [
     "description": "Nim powered RISC-V virtual machine and emulator.",
     "license": "GPL3",
     "web": "https://gitlab.com/OFThomas/niscv"
+  },
+  {
+    "name": "catppuccin",
+    "url": "https://github.com/catppuccin/nim",
+    "method": "git",
+    "tags": [
+      "colors",
+      "cmyk",
+      "hsl",
+      "hsv"
+    ],
+    "description": "Catppuccin colors for nim.",
+    "license": "MIT",
+    "web": "https://github.com/catppuccin/nim",
+    "doc": "https://catppuccin.github.io/nim"
   }
 ]
 const options = {
