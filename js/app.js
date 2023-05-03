@@ -30000,6 +30000,23 @@ const packages = [
     "license": "MIT",
     "web": "https://github.com/catppuccin/nim",
     "doc": "https://catppuccin.github.io/nim"
+  },
+  {
+    "name": "cozytaskpool",
+    "url": "https://github.com/indiscipline/cozytaskpool",
+    "method": "git",
+    "tags": [
+      "threads",
+      "tasks",
+      "multithreading",
+      "library",
+      "parallelism",
+      "threadpool",
+      "pool"
+    ],
+    "description": "Cozy Task Pool for threaded concurrency based on tasks and channels.",
+    "license": "GPL-2.0-or-later",
+    "web": "https://github.com/indiscipline/cozytaskpool"
   }
 ]
 const options = {
