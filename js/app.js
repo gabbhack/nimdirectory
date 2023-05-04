@@ -30017,6 +30017,45 @@ const packages = [
     "description": "Cozy Task Pool for threaded concurrency based on tasks and channels.",
     "license": "GPL-2.0-or-later",
     "web": "https://github.com/indiscipline/cozytaskpool"
+  },
+  {
+    "name": "grammarian",
+    "url": "https://github.com/olmeca/grammarian",
+    "method": "git",
+    "tags": [
+      "peg",
+      "parsing"
+    ],
+    "description": "Wrapper around PEG library, enhancing PEG reusability.",
+    "license": "MIT"
+  },
+  {
+    "name": "checksums",
+    "url": "https://github.com/nim-lang/checksums",
+    "method": "git",
+    "tags": [
+      "checksums",
+      "official",
+      "hash",
+      "crypto"
+    ],
+    "description": "Hash algorithms in Nim.",
+    "license": "MIT",
+    "web": "https://github.com/nim-lang/checksums"
+  },
+  {
+    "name": "promexplorer",
+    "url": "https://github.com/marcusramberg/promexplorer",
+    "method": "git",
+    "tags": [
+      "prometheus",
+      "tui",
+      "illwill",
+      "monitoring"
+    ],
+    "description": "A simple tool to explore Prometheus exporter metrics",
+    "license": "mit",
+    "web": "https://github.com/marcusramberg/promexplorer"
   }
 ]
 const options = {

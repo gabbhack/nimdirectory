@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">grammarian</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">peg</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parsing</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Wrapper around PEG library, enhancing PEG reusability.")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install grammarian" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>grammarian</h1>
+<p>A wrapper for Nim&apos;s PEG library, that supports extensions to Nim&apos;s PEG DSL,
+that simplify handling of complex PEG&apos;s.</p>
+<h3>Rationale</h3>
+<p>As an avid user of the PEG library I have attempted matching / parsing ever more complex textual structures.
+I have learned that Nim&apos;s PEG can handle the complexity without ever breaking a sweat. Yet I noted that some
+characteristics of the implementation do in effect impose some limitation on my proficiency developing and
+using patterns. Furthermore, as a software developer I am accustomed to avoiding repeating myself, supported
+by the language I use. Given a PEG describing a complex textual structure, e.g. a computer language or DSL,
+if you want to use the PEG to extract specific substructures you have to adapt it. You have to extract from it
+only the parts that describe the substructure of interest and the mark the parts to be extracted. This has to be
+repeated for every substructure you want to address. In the end you have multiple PEG rulesets that only differ
+in small parts. If you then discover a bug in your original PEG then you may have to fix it in all the
+substructure PEG&apos;s.</p>
+<h3>PEG (Parsing Expression Grammar) 101</h3>
+<p>At the very low level, PEG&apos;s built-in matchers are quite similar to those offered by <em>Regex</em>. But whilst Regex
+requires you to express the pattern only in terms of the built-in matchers, PEG also allows higher level
+abstract patterns, which <em>describe the structure</em> and <em>identify the parts</em>, but do <strong>not</strong>
+<em>describe the details of the parts</em>. It&apos;s like stating that an email address consists of in sequence a user name, an &apos;@&apos;
+and a domain name. The structure (a sequence) is specified, one of the parts (the &apos;@&apos;) is specified and two parts
+have been identified, but not specified (user name and domain name). In PEG you identify a part by giving it a
+unique name (of your choice). Parts identified in one PEG pattern can be specified in another pattern.
+Here is where pattern names come into play. In a PEG every pattern is named. I use the term <em>Rule</em>.
+A rule has a name and a pattern. For every subpart name mentioned in a pattern the PEG should also include
+a rule with that name, of which the pattern describes the details of the subpart. Example:</p>
+<pre>  <code>EmailAddress &lt;- UserName &apos;@&apos; DomainName
+UserName &lt;- [a-z]+
+DomainName &lt;- [a-z]+ (&apos;.&apos; [a-z]+)*
+</code></pre>
+<p>A rule starts with a name followed by a left arrow (&lt;-) and a <em>pattern</em>.
+In a PEG there is one <em>root</em> rule which may refer to other rules, forming a DAG. In this example the
+first rule <em>EmailAddress</em> is the root rule.</p>
+<h3>PEG Inconveniences</h3>
+<ol>
+<li>
+<p>Nim&apos;s PEG implementation requires all the rules in a PEG to form one DAG. It throws an error if any rule is not referred to
+by other rules (this may be a characteristic of every PEG implementation, I only know Nim&apos;s).</p>
+</li>
+<li>
+<p>A PEG can only be used to match the pattern described by the whole DAG (i.e. the pattern described by root rule)
+The above example PEG contains sufficient information for matching only domain names (not as part of an email address),
+but there is no way use only a part of a PEG for matching.</p>
+</li>
+</ol>
+<h3>Grammarian</h3>
+<p>Grammarian offers a couple of features that help eliminate the duplication and mitigate the rigidity of the
+plain PEG library. Some of these features are based on extensions to the PEG DSL. Grammarian will interpret
+these extensions and will produce standard PEG DSL pattern rules.</p>
+<h3>Feature 1: more flexible PEG composition / decomposition</h3>
+<p>Grammarian offers a store for PEG rules, called a <em>Grammar</em>, from where you can easily retrieve a consistent PEG
+ruleset for use. The intended use is for storing the grammar of some complex textual structure (a grammar), or
+even storage of multiple grammars. When retrieving a rule set from the store you <em>specify a root rule name</em>. This
+results in a rule set containing this root rule and all the rules referred directly or indirectly (a DAG).
+For example, the following set of rules describe two textual data types: email addresses and URL&apos;s. These types
+have some similarity in their composition. E.g. both contain a domain name.</p>
+<pre>  <code>Url &lt;- Protocol &apos;://&apos; Host &apos;.&apos; Domain &apos;/&apos; Path
+EmailAddress &lt;- AccountName &apos;@&apos; DomainName
+AccountName &lt;- Chars
+DomainName &lt;- Chars &apos;.&apos; Chars
+Protocol &lt;- &apos;https&apos; / &apos;http&apos;
+Host &lt;- Chars &apos;.&apos; Host / Chars
+Path &lt;- PathItem &apos;/&apos; Path / PathItem
+Chars &lt;- [a-z]+
+PathItem &lt;- [a-z-]+
+</code></pre>
+<p>The ability to define both types in one rule set would help eliminate duplication, in this example, of the
+domain description. Using Grammarian you can use the above combined definition and create PEG objects
+for any contained rule, by name:</p>
+<pre>  <code># Assuming the string myRuleSet is the above rule set string
+let grammar = newGrammar(myRuleSet)
+let emailAddressPeg = grammar.matcher(&quot;EmailAddress&quot;)
+# emailAddressPeg would be a PEG object based on this subset of rules:
+EmailAddress &lt;- AccountName &apos;@&apos; DomainName
+AccountName &lt;- Chars
+DomainName &lt;- Chars &apos;.&apos; Chars
+Chars &lt;- [a-z]+
+</code></pre>
+<p>Though called a <em>store</em> here, a <em>Grammar</em> is just an in memory object.</p>
+<h3>Feature 2: Rule (set) variants</h3>
+<p>Imagine a PEG rule set describing SQL statements. Most of the rules would apply to all mainstream DBMS&apos;s. But
+there are always some minor differences in syntax between the DBMS&apos;s. With the plain PEG library you would have
+to use multiple rulesets, even though the content of the rulesets would be for 95% identical. Grammarian
+addresses this by introducing <em>rule variants</em>. A rule variant is a rule that is tagged with a variant name.
+There may be multiple rules with the same name, but different variant tags. For example the ANSI SQL datatype
+<em>FLOAT4</em> is called <em>FLOAT</em> in MySQL and <em>REAL</em> in PostgreSQL. This can be captured using Grammarian, with the
+following PEG rules:</p>
+<pre>  <code>Float4 &lt;- &apos;FLOAT&apos; / &apos;float4&apos;
+Float4:MySql &lt;- &apos;FLOAT&apos; / &apos;float&apos;
+Float4:Postres &lt;- &apos;REAL&apos; / &apos;real&apos;
+</code></pre>
+<p>The tag is appended to the rule name, with a colon as separator.
+When requesting a rule set from the store you can specify a variant. When looking up a rule, Grammarian will
+first search for a rule with the given name and the given variant tag. If not found then it will search for
+a rule only by name. This means you only need to create rule variants for the corner cases.</p>
+<h3>Feature 3: Capture targets</h3>
+<p>Most of the time I use PEGs for extracting information from textual data. For Nim&apos;s PEG I need to mark the
+items to be extracted by tagging their names in the rule set. This means that for every use case I need to
+revise the tags in the rule set, or create multiple copies of the same rule set to support both use cases.
+Grammarian addresses this issue by letting you store the rule set(s) untagged in the store. When requesting
+a ruleset from the store you can specify a list of rule names. All rule names except the root rule&apos;s are
+also none-terminals in some other rule. All non-terminals whose names were specified in the list will be
+marked for extraction in the rule set retrieved from the store.
+As an example, imagine a (somwhat simplified) PEG describing web page URL&apos;s:</p>
+<pre>  <code>Url &lt;- Protocol &apos;://&apos; Host &apos;/&apos; Path &apos;?&apos; Parameters
+Protocol &lt;- &apos;https&apos; / &apos;http&apos;
+Host &lt;- Chars &apos;.&apos; Host / Chars
+Path &lt;- PathItem &apos;/&apos; Path / PathItem
+Parameters &lt;- KeyValue &apos;&amp;&apos; Parameters / KeyValue
+KeyValue &lt;- Key &apos;=&apos; Value
+Chars &lt;- [a-z]+
+PathItem &lt;- [a-z-]+
+Key &lt;- [a-zA-Z0-9_]+
+Value &lt;- [a-zA-Z0-9_+-]+ / &apos;&apos;
+</code></pre>
+<p>This can be used for multiple extraction use case: extracting host names, paths, parameters, to name a few.
+But for every case you would have to use an adapted version of this PEG. For example, to extract host names
+you would have to adapt the first rule like so:</p>
+<pre>  <code>Url &lt;- Protocol &apos;://&apos; {Host} &apos;/&apos; Path &apos;?&apos; Parameters
+</code></pre>
+<p>But to extract the individual parameters, you would instead have to adapt this rule:</p>
+<pre>  <code>Parameters &lt;- {KeyValue} &apos;&amp;&apos; Parameters / {KeyValue}
+</code></pre>
+<p>Using Grammarian you would create a Grammar object using the above URL description PEG and then ask it for
+a PEG, passing as parameters the desired capture items:</p>
+<pre>  <code>let grammar = newGrammar(pegString)
+let paramsPeg = grammar.extractorPeg([&quot;KeyValue&quot;])
+let hostPeg = grammar.extractorPeg([&quot;Host&quot;])
+# Marking multiple items for capture:
+let protocolAndHostPeg = grammar.extractorPeg([&quot;Protocol&quot;, &quot;Host&quot;])
+
+</code></pre>
+<p>This mechanism only works for non-terminals! Keep this in mind when defining your PEG rules. Any terminal
+expression can be put into a separate rule and then you can specify the rule name for capture.</p>
+<h3>Feature 4: Parameterized rules</h3>
+<p>PEG is all about structures and substructures. I have encountered a number of cases where the same higher
+level structure is used but with different substructures. In pure PEG you have to repeat yourself with
+respect to the high level structure if you need to cover both substructure cases. This may sound quite
+abstract, so here&apos;s a stupidly simple example structure: a list. A textual representation of a list of
+items always consists of the items themselves, plus some textual separator, like a linebreak or a comma.
+The list item could be a telephone number, an amount, a bank account number, a name, etc. So the PEG
+describing the item and the separator are specific to the case, but the PEG for the list structure is
+invariant. A parameterized rule describes the high level structure (here: the list) in terms of
+pseudo-non-terminals that represent the substructures. The pseudo-non-terminals are however not
+references to other rules. They are parameters to the rule. When another rule references a parameterized
+rule, the reference must include the real values to be used instead of the parameters. The values in the
+reference are called <em>arguments</em>.
+A parameterized rule is specified as follows:</p>
+<pre>  <code>List&lt;Item, Separator&gt; &lt;- Item Separator List&lt;Item, Separator&gt; / Item
+</code></pre>
+<p>Then you could reference this rule in another rule, to describe a comma separated list of numbers:</p>
+<pre>  <code>InClause &lt;- &apos;IN&apos; \s* &apos;(&apos; List&lt;Number, Comma&gt; &apos;)&apos; \s*
+</code></pre>
+<p>When you retrieve a rule set from the store that would involve these rules, what you get would be:</p>
+<pre>  <code>List_Number_Comma &lt;- Number Comma List_Number_Comma / Number
+InClause &lt;- &apos;IN&apos; \s* &apos;(&apos; List_Number_Comma &apos;)&apos; \s*
+</code></pre>
+<p>Here the rule is <em>applied</em> to the arguments which yields a <em>resolved</em> rule. The name of the resolved rule
+is derived from the original rule&apos;s name and the arguments. As in this case the arguments &apos;Number&apos; and
+&apos;Comma&apos; are non-terminals, i.e. pure names, they can be directly incorporated into the resolved rule&apos;s name.
+This gives a resolved rule name that is unique for the combination of rule and arguments and is also
+meaningful.
+Another variation is with arguments that are not themselves non-terminal. Imagine instead using terminals:</p>
+<pre>  <code>InClause &lt;- &apos;IN&apos; \s* &apos;(&apos; List&lt;\d+, &apos;,&apos;&gt; &apos;)&apos; \s*
+</code></pre>
+<p>Combined with the same List rule, this expression would result in the following:</p>
+<pre>  <code>List_p2258791698_p3582574359 &lt;- Number Comma List_p2258791698_p3582574359 / Number
+InClause &lt;- &apos;IN&apos; \s* &apos;(&apos; List_p2258791698_p3582574359 &apos;)&apos; \s*
+</code></pre>
+<p>Now the resolved rule&apos;s name contains meaningless numbers instead of meaningful names. The reason is that
+terminal expressions like the above &quot;\d+&quot; cannot be part of a rule name. A rule name must consist of
+letters, digits and underscores. But we must resolve to a rule name that is unique to the combination
+of the original rule&apos;s name and the arguments. This is solved by using hashes of the argument values.
+The numbers in the resolved rule name are these hashes. Note that you never need to deal directly with
+these generated names. The exist only in an intermediate step towards creating the PEG you retrieve from
+the Grammar object.</p>
+<h3>Feature 5: Named values extractor</h3>
+<p>The above explained that a Grammar will provide you a standard PEG, which you can then use for matching
+like you would do with any non-grammar generated PEG. Nim&apos;s matching mechanism will return a fixed array containing
+the matched values.
+For convenience, the Grammar can also provide you an Extractor object. An Extractor consists of a PEG and a list
+of non-terminals to be captured. An <em>extract</em> function, when passed an Extractor and an input string,
+will return a hash table, containing the captured items as entries. The keys are the non-terminal names and
+the values are the captured strings from the input provided. An example:</p>
+<pre>  <code>let grammar = newGrammar(myPegString)
+let extractor = grammar.newPatternExtractor(myRootNonTerminal, myNonTerminalsToCapture)
+let foundItems = extractor.extract(myInputString)
+</code></pre>
+<p>I have found this to often be more convenient than retrieving the PEG from the Grammar, performing the match
+and then extracting the items one by one from the match results array.</p>
+<h3>How to use Grammarian</h3>
+<p>1- Just add Grammarian as a dependency to your project&apos;s <em>.nimble</em> file:</p>
+<pre>  <code>requires &quot;grammarian &gt;= 0.2.0&quot;
+</code></pre>
+<p>2- Add an import statement to your source file:</p>
+<pre>  <code>import grammarian
+</code></pre>
+<p>3- Call grammarian functions:</p>
+<ol>
+<li>
+<p>Create a Grammar object, providing a string that represents a PEG rule set. This
+rule set may also contain the extension expressions described under the Feature sections.</p>
+</li>
+<li>
+<p>Retrieve a standard PEG from the Grammar, by calling either the function <em>matcher()</em>
+(for a PEG without any captures) or <em>extractorPeg()</em> for a PEG with captures.</p>
+</li>
+<li>
+<p>Use the obtained PEG for your matching purposes.</p>
+</li>
+</ol>
+<pre>  <code>let grammar = newGrammar(myPegRuleSet)
+let myRootNonTerminal = &quot;EmailAddress&quot;
+
+# Using a PEG to determine whether a string matches or not
+let matcherPeg = grammar.matcher(myRootNonTerminal)
+let success = &quot;admin@example.com&quot;.match(matcherPeg)
+
+# Create a PEG to extract user name and domain name
+let myCaptureTargets = @[&quot;UserName&quot;, &quot;DomainName&quot;]
+let capturingPeg = newExtractorPeg(grammar, myRootNonTerminal, myCaptureTargets)
+# Use this PEG to match and capture
+if &quot;admin@example.com&quot; =~ capturingPeg:
+   let userName = matches[0]
+   let domainName = matches[1]
+else: discard
+</code></pre>
+<p>Alternatively you can use the convenience Extractor:</p>
+<pre>  <code># Using an Extractor object
+let extractor = newPatternExtractor(grammar, myRootNonTerminal, myCaptureTargets)
+let foundItems = extractor.extract(&quot;admin@example.com&quot;)
+let userName = foundItems[&quot;UserName&quot;]
+let domainName = foundItems[&quot;DomainName&quot;]
+</code></pre>
+<p>Examples with variants will be added soon.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-05-04T01:18:18Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
