@@ -30056,6 +30056,24 @@ const packages = [
     "description": "A simple tool to explore Prometheus exporter metrics",
     "license": "mit",
     "web": "https://github.com/marcusramberg/promexplorer"
+  },
+  {
+    "name": "dirtydeeds",
+    "url": "https://github.com/metagn/dirtydeeds",
+    "method": "git",
+    "tags": [
+      "macro",
+      "curry",
+      "partial",
+      "application",
+      "lambda",
+      "functional",
+      "sugar",
+      "syntax"
+    ],
+    "description": "macro for partially applied calls",
+    "license": "MIT",
+    "web": "https://github.com/metagn/dirtydeeds"
   }
 ]
 const options = {
