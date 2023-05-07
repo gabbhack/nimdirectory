@@ -30074,6 +30074,18 @@ const packages = [
     "description": "macro for partially applied calls",
     "license": "MIT",
     "web": "https://github.com/metagn/dirtydeeds"
+  },
+  {
+    "name": "sunk",
+    "url": "https://github.com/archnim/sunk",
+    "method": "git",
+    "tags": [
+      "async",
+      "futures"
+    ],
+    "description": "Few async tools for nim (then, catch, finally, and more)",
+    "license": "MIT",
+    "web": "https://github.com/archnim/sunk"
   }
 ]
 const options = {
