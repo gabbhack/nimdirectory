@@ -30101,6 +30101,20 @@ const packages = [
     "description": "Openai API client For Nim",
     "license": "MIT",
     "web": "https://github.com/Uzo2005/openai"
+  },
+  {
+    "name": "gamepad",
+    "url": "https://github.com/konsumer/nim-gamepad",
+    "method": "git",
+    "tags": [
+      "gamepad",
+      "native",
+      "game",
+      "joystick"
+    ],
+    "description": "Cross-platform gamepad driver",
+    "license": "MIT",
+    "web": "https://github.com/konsumer/nim-gamepad"
   }
 ]
 const options = {
