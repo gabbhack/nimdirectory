@@ -1,5 +1,36 @@
 const packages = [
   {
+    "name": "lorem",
+    "url": "https://github.com/neroist/lorem",
+    "method": "git",
+    "tags": [
+      "lorem-ipsum",
+      "lorem",
+      "ipsum",
+      "text-generator",
+      "text-generation",
+      "random"
+    ],
+    "description": "Nim library that generates \"Lorem ipsum\" text.",
+    "license": "MIT",
+    "web": "https://github.com/neroist/lorem",
+    "doc": "https://neroist.github.io/lorem/lorem.html"
+  },
+  {
+    "name": "nimipdf",
+    "url": "https://github.com/neroist/nimipdf",
+    "method": "git",
+    "tags": [
+      "nimib",
+      "pdf",
+      "wkhtmltopdf",
+      "nimibex"
+    ],
+    "description": "Nim library that adds a PDF backend for nimib",
+    "license": "MIT",
+    "web": "https://neroist.github.io/nimipdf/index.pdf"
+  },
+  {
     "name": "nimwkhtmltox",
     "url": "https://github.com/neroist/nim-wkhtmltox",
     "method": "git",
@@ -105,7 +136,7 @@ const packages = [
       "library"
     ],
     "description": "Nim wrapper for WebUI",
-    "license": "GPL2",
+    "license": "MIT",
     "web": "https://github.com/neroist/webui#readme",
     "docs": "https://neroist.github.io/webui"
   },

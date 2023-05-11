@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimipdf</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimib</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pdf</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">wkhtmltopdf</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimibex</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Nim library that adds a PDF backend for nimib")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimipdf" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>📄 Nimipdf</h1>
+<p>Nimipdf is a nimibex extension that adds a PDF backend for
+<a href="https://github.com/pietroppeter/nimib">nimib</a>. This allows you to generate
+PDFs with nimib (in fact, you may be reading one right now!).</p>
+<h2>⬇️ Installation</h2>
+<p>Install nimipdf with Nimble:</p>
+<pre>  <code class="language-sh">nimble install nimipdf
+</code></pre>
+<h2>🦵 Limitations</h2>
+<p>Emoji&apos;s don&apos;t work properly, so Twemoji is used instead of your OS&apos;s native
+emoji set.</p>
+<p>In addition, images <em>might</em> require the absolute path to the image.</p>
+<h2>📝 How Nimipdf Works!</h2>
+<p>PDFs are generated through the use of libwkhtmltox
+<a href="https://github.com/neroist/nim-wkhtmltox">Nim bindings</a>. This allows for
+quick and simple PDF generation while also providing easy customizaton.</p>
+<p>Nimipdf provides two main templates, so lets talk about those.</p>
+<ul>
+<li>
+<p><code>nbInitPdf</code>:</p>
+<ul>
+<li>When calling <code>nbInitPdf</code>, libwkhtmltox (and nimib) are initalized, and
+the converter, global settings, and object settings are created and
+attached onto the injected <code>nbPdf</code> variable.</li>
+</ul>
+</li>
+<li>
+<p><code>nbSavePdf</code>:</p>
+<ul>
+<li>
+<p>When saving via <code>nbSavePdf</code>, nimipdf takes the rendered html
+output of your nimib document and converts it into a PDF using
+libwkhtmltox.</p>
+<p>Before this, however, the <code>out</code> and <code>documentTitle</code> global settings are
+set to the nimib document&apos;s filename (<code>nb.filename</code>) and title
+(<code>doc.context[&quot;title&quot;]</code>) respectively.</p>
+<p>Libwkhtmltopdf is also de-initialized when calling <code>nbSavePdf</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>🐝 API</h2>
+<ul>
+<li><code>nbInitPdf</code> injects a <code>nbPdf</code> variable
+<ul>
+<li><code>nbPdf.converter</code> contains the wkhtmltopdf converter used to generate the PDF.</li>
+<li><code>nbPdf.globalSettings</code> contains the wkhtmltopdf global settings. A list
+of available settings to set can be found
+<a href="https://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pagePdfGlobal">here</a>,
+and can be set via <code>nbPdf.setGlobalSetting(name, value)</code></li>
+<li><code>nbPdf.objectSettings</code> contains the wkhtmltopdf object settings. A list
+of available settings to set can be also found
+<a href="https://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pagePdfObject">here</a>,
+and can be set via a similar way to global settings
+(<code>setObjectSetting</code>)</li>
+</ul>
+</li>
+<li>use <code>nbSavePdf</code> to save document</li>
+</ul>
+<p>The <code>pdf</code> submodule from
+<a href="https://github.com/neroist/nim-wkhtmltox">nimwkhtmltox</a> is exported, so
+you can also use functions and methods from wkhtmltox aswell to further
+modify nimipdf&apos;s behavior (for example, adding callback functions to
+<code>nbPdf.converter</code>).</p>
+<h2>⁉️ How to Use</h2>
+<ul>
+<li>Initialize nimipdf (and wkhtmltopdf) with <code>nbInitPdf</code></li>
+<li>Write your usual nimib code (nbText, nbCode, etc.)</li>
+<li>Save the PDF using <code>nbSavePdf</code>. This also de-inits wkhtmltopdf</li>
+</ul>
+<p>There is a more &quot;hands-on&quot; example in the following section.</p>
+<h2>👋 Get Started/Example</h2>
+<p>To start, firstly import the library and nimib (of course...)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimipdf</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimib</span></div></div>  </code></pre>
+<p>Initialize nimipdf (and nimib) using <code>nbInitPdf</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nbInitPdf</span></div></div>  </code></pre>
+<p>Next, add your usual nimib code (nbCode, nbText, etc.)</p>
+<p>Here, we&apos;ll use
+<a href="https://github.com/pietroppeter/nimib/blob/main/docsrc/hello.nim">hello.nim</a>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">strformat</span>, <span class="ide">strutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbText</span>: """
+  ## Secret talk with a computer
+  Let me show you how to talk with the computer like a [real hacker](https://mango.pdf.zone/)
+  and incidentally you might learn the basics of [nimib](https://github.com/pietroppeter/nimib).
+  ### A secret message
+  Inside this document is hidden a secret message. I will ask the computer to spit it out:
+  """</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">secret</span> <span class="op">=</span> [<span class="num">104</span>, <span class="num">101</span>, <span class="num">108</span>, <span class="num">108</span>, <span class="num">111</span>, <span class="num">44</span>, <span class="num">32</span>, <span class="num">119</span>, <span class="num">111</span>, <span class="num">114</span>, <span class="num">108</span>, <span class="num">100</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbCode</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">secret</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbText</span>: fmt"""
+  what does this integer sequence mean?
+  Am I supposed to [recognize it](https://oeis.org/search?q={secret.join("%2C+")}&language=english&go=Search)?
+
+  ### A cryptoanalytic weapon
+  Luckily I happen to have a [nim](https://nim-lang.org/) implementation of
+  a recently declassified top-secret cryptoanalytic weapon:"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbCode</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">func</span> <span class="ide">decode</span>(<span class="ide">secret</span>: <span class="ide">openArray</span>[<span class="ide">int</span>]): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="com">## classified by NSA as &lt;strong&gt;TOP SECRET&lt;/strong&gt;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">c</span> <span class="kwd">in</span> <span class="ide">secret</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">result</span><span class="op">.</span><span class="ide">add</span> <span class="ide">char</span>(<span class="ide">c</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbText</span>: """
+    ### The great revelation
+    Now I can just apply it to my secret message and
+    finally decrypt what the computer wants to tell me:"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbCode</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">msg</span> <span class="op">=</span> <span class="ide">decode</span> <span class="ide">secret</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">msg</span>  <span class="com"># what will it say?</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nbText</span>:</div></div><div class="line"><div class="line-content">  fmt"_Hey_, there must be a bug somewhere, the message (`{msg}`) is not even addressed to me!"</div></div>  </code></pre>
+<p>Finally, save the PDF using <code>nbSavePdf</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nbSavePdf</span></div></div>  </code></pre>
+<p>The generated pdf file can be found <a href="https://neroist.github.io/nimipdf/hello.pdf">here</a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://neroist.github.io/nimipdf/index.pdf">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-05-11T01:19:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

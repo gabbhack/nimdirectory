@@ -140,14 +140,11 @@ large SDK or library for development/production, all you need is a web browser!<
 <p>:warning: <strong>Notice</strong>:</p>
 <ul>
 <li>
-<p>WebUI is not a web-server solution or a framework, but it&apos;s an easy-embeddable
-tool to use any installed web browser as a user interface.</p>
+<p>WebUI is not a web-server solution or a framework, but it&apos;s an lightweight portable lib
+to use any installed web browser as a user interface.</p>
 </li>
 <li>
 <p>WebUI&apos;s documentation is <strong>not</strong> finished.</p>
-</li>
-<li>
-<p>WebUI is not ready yet for production release.</p>
 </li>
 </ul>
 </blockquote>
@@ -155,10 +152,13 @@ tool to use any installed web browser as a user interface.</p>
 <ul>
 <li>Fully Independent (<em>No need for any third-party library</em>)</li>
 <li>Lightweight (<em>~600 Kb</em> (<em>300 Kb when compiling with DLL</em>)) &amp; Small memory footprint</li>
-<li>Fast WS binary communication (<em>App--WebUI--Browser</em>)</li>
+<li>Fast binary communication protocol between WebUI and the browser (<em>Instead of JSON</em>)</li>
 <li>Multi-platform &amp; Multi-Browser</li>
-<li>Uses private profile for safety</li>
+<li>Using private profile for safety</li>
 </ul>
+<h2>Screenshot</h2>
+<p>This <a href="https://github.com/neroist/webui/tree/main/examples/text_editor">text editor example</a> is written in Nim using WebUI as the GUI library.</p>
+<p>  <img src="nim_example.png" style="max-width: 100%;" alt="ScreenShot" /></p>
 <h2>Installation</h2>
 <p>Install via Nimble:</p>
 <pre>  <code class="language-shell">nimble install webui
@@ -270,7 +270,7 @@ only works for static compilation.</p>
 <tr>
 <td>Linux</td>
 <td>Microsoft Edge</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>Linux</td>
@@ -280,22 +280,22 @@ only works for static compilation.</p>
 <tr>
 <td>Linux</td>
 <td>Yandex</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>Brave</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>Vivaldi</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>Epic</td>
-<td>  <em>coming soon</em></td>
+<td>  <em>Does Not Exist</em></td>
 </tr>
 <tr>
 <td>Linux</td>
@@ -310,7 +310,7 @@ only works for static compilation.</p>
 <tr>
 <td>macOS</td>
 <td>Mozilla Firefox</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
@@ -320,32 +320,32 @@ only works for static compilation.</p>
 <tr>
 <td>macOS</td>
 <td>Microsoft Edge</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>Chromium</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>Yandex</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>Brave</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>Vivaldi</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
 <td>Epic</td>
-<td>  <em>coming soon</em></td>
+<td>✔️</td>
 </tr>
 <tr>
 <td>macOS</td>
@@ -369,7 +369,7 @@ only works for static compilation.</p>
                 
                     <p>
                         <strong>Licence:</strong>
-                        GPL2
+                        MIT
                     </p>
                 
 
@@ -431,7 +431,7 @@ only works for static compilation.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-10T01:17:56Z
+        Builded at 2023-05-11T01:19:11Z
         </p>
       </div>
     </div>

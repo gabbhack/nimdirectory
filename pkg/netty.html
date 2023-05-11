@@ -85,11 +85,11 @@
 <h1>Netty - reliable UDP connection for Nim.</h1>
 <p>  <code>nimble install netty</code></p>
 <p>  <img src="https://github.com/treeform/netty/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
-<p>  <a href="https://nimdocs.com/treeform/netty">API reference</a></p>
+<p>  <a href="https://treeform.github.io/netty">API reference</a></p>
 <h2>About</h2>
 <p>Netty is a reliable connection over UDP aimed at games. Normally UDP packets can get duplicated, dropped, or come out of order. Netty makes sure packets are not duplicated, re-sends them if they get dropped, and all packets come in order. UDP packets might also get split if they are above 512 bytes and also can fail to be sent if they are bigger than 1-2k. Netty breaks up big packets and sends them in pieces making sure each piece comes reliably in order. Finally sometimes it&apos;s impossible for two clients to communicate direclty with TCP because of NATs, but Netty provides hole punching which allows them to connect.</p>
 <h3>Documentation</h3>
-<p>API reference: https://nimdocs.com/treeform/netty</p>
+<p>API reference: https://treeform.github.io/netty</p>
 <h2>Is Netty a implementation of TCP?</h2>
 <p>TCP is really bad for short latency sensitive messages. TCP was designed for throughput (downloading files) not latency (games). Netty will resend stuff faster than TCP, Netty will not buffer and you also get nat punch-through (which TCP does not have). Netty is basically &quot;like TCP but for games&quot;. You should not be using Netty if you are will be sending large mount of data. By default Netty is capped at 250K of data in flight.</p>
 <h2>Features:</h2>
@@ -241,7 +241,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-10T01:17:56Z
+        Builded at 2023-05-11T01:19:11Z
         </p>
       </div>
     </div>
