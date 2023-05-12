@@ -89,7 +89,41 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>rpgsheet</h1>
+<p><code>rpgsheet</code> is a CLI/TUI character sheet application for tabletop RPGs.</p>
+<p>  <img src="rpgsheet.png" style="max-width: 100%;" alt="rpgsheet screenshot" /></p>
+<h2>Dependencies:</h2>
+<ul>
+<li><code>rolldice</code> for, uh, rolling dice</li>
+<li><code>bc</code> for calculations</li>
+</ul>
+<h2>Features</h2>
+<ul>
+<li><strong>System-agnostic:</strong> Character sheets are stored as YAML files, and the data structure is not designed with a particular TTRPG system (ie dnd5e). You can make a template for your favorite system! This is also a bit of a downside; <code>rpgsheet</code> is quite usable, but you might miss some niceties that it could provide if it knew more about your specific system.</li>
+<li><strong>Flexible:</strong> You can define whatever tabs or windows you want for your character sheet! The template is just a starting point.</li>
+<li><strong>Auto-rolling:</strong> As long as your system uses dice rolls that can be represented with the standard <code>NUMdFACES+MOD</code> notation, you can easily define actions which will automatically be rolled.</li>
+<li><strong>Auto-calculation:</strong> You can define values in your character sheet which are dependent on other values. For instance, you can define a hard-coded <code>proficiency</code> value, and then define your shortsword attack modifier as <code>3+proficiency</code>. (For DnD, you probably actually want a hard-coded <code>strength</code> ability score, then a <code>STR</code> value defined as <code>(strength-10)/2</code>, then define your shortsword attack as <code>STR+proficiency</code>.)</li>
+</ul>
+<h2>Unimplemented planned features</h2>
+<ul>
+<li>Configurable controls</li>
+<li>Be able to have a tab with multiple rows of windows</li>
+</ul>
+<h2>Planned related projects</h2>
+<ul>
+<li><code>dndsheet</code> -- <code>rpgsheet</code> but with a streamlined dnd5e-specific interface which, given a sheet following a particular standard, can provide an experience tailored to the system.</li>
+</ul>
+<h2>Installation</h2>
+<p>Install Nim and run:</p>
+<p>  <code>nimble install rpgsheet</code></p>
+<p>You can also clone this repo and then run this in the directory:</p>
+<p>  <code>nimble install</code></p>
+<h1>The sheet format</h1>
+<p>Sheets are stored as YAML files. Keys are limited to alphanumeric characters, plus <code>_</code>, <code>~</code>, and <code>&apos;</code>. When displayed &quot;nicely&quot; in the interface, <code>_</code> is converted to a space, and <code>~</code> to a hyphen.</p>
+<p>All window names and expressions (items that go in windows) must have unique names.</p>
+<p>Here is an extremely pared-down design so you can see the structure:</p>
+<pre>  <code class="language-yaml"><div class="line"><div class="line-content"><span class="str">name</span>: <span class="str">Character Name</span></div></div><div class="line"><div class="line-content"><span class="str">class</span>: <span class="str">Character Class</span></div></div><div class="line"><div class="line-content"><span class="str">level</span>: <span class="num">1</span></div></div><div class="line"><div class="line-content"><span class="str">tabs</span>:</div></div><div class="line"><div class="line-content">  - <span class="str">main</span>:</div></div><div class="line"><div class="line-content">    - <span class="str">stats</span></div></div><div class="line"><div class="line-content">    - <span class="str">inventory</span></div></div><div class="line"><div class="line-content">  - <span class="str">attacks</span>:</div></div><div class="line"><div class="line-content">    - <span class="str">weapons</span></div></div><div class="line"><div class="line-content">    - <span class="str">spells</span></div></div><div class="line"><div class="line-content"><span class="str">expressions</span>: <span class="com"># items that appear in the windows</span></div></div><div class="line"><div class="line-content">  <span class="str">strength</span>:</div></div><div class="line"><div class="line-content">    <span class="str">modifier</span>: <span class="str">15 # use `modifier` for flat values</span></div></div><div class="line"><div class="line-content">    <span class="str">window</span>: <span class="str">stats</span></div></div><div class="line"><div class="line-content">  <span class="str">STR</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Modifiers can be defined in terms of</span></div></div><div class="line"><div class="line-content">    <span class="com"># other diceless expressions</span></div></div><div class="line"><div class="line-content">    <span class="str">modifier</span>: <span class="str">(strength-10)/2 </span></div></div><div class="line"><div class="line-content">    <span class="str">window</span>: <span class="str">stats</span></div></div><div class="line"><div class="line-content">  <span class="str">sword_attack</span>: <span class="com"># we cannot have two expressions named `sword`</span></div></div><div class="line"><div class="line-content">    <span class="str">dice</span>: <span class="str">d20 # must be in NUMdSIDES format; no modifiers</span></div></div><div class="line"><div class="line-content">    <span class="str">modifier</span>: <span class="str">STR # here is where your modifier goes</span></div></div><div class="line"><div class="line-content">    <span class="str">window</span>: <span class="str">weapons</span></div></div><div class="line"><div class="line-content">    <span class="com"># Extra information, shown at the bottom of the screen</span></div></div><div class="line"><div class="line-content">    <span class="str">desc</span>: <span class="str">Swing your really cool sword</span></div></div><div class="line"><div class="line-content">  <span class="str">sword</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Note that you don&apos;t need to supply dice or modifiers</span></div></div><div class="line"><div class="line-content">    <span class="str">desc</span>: <span class="str">Your really cool sword</span></div></div><div class="line"><div class="line-content">    <span class="str">window</span>: <span class="str">inventory</span></div></div><div class="line"><div class="line-content">  <span class="com"># will be displayed as &quot;Carl&apos;s Terrifyingly-hideous Face&quot;</span></div></div><div class="line"><div class="line-content">  <span class="str">carl&apos;s_terrifyingly~hideous_face</span>: </div></div><div class="line"><div class="line-content">    <span class="str">dice</span>: <span class="str">8d12</span></div></div><div class="line"><div class="line-content">    <span class="str">desc</span>: <span class="str">9th level. Oh god</span>, <span class="str">oh no</span>, <span class="str">look away if you want to live.</span></div></div><div class="line"><div class="line-content">    <span class="str">window</span>: <span class="str">spells</span></div></div>  </code></pre>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -157,7 +191,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-11T01:19:11Z
+        Builded at 2023-05-12T01:19:08Z
         </p>
       </div>
     </div>

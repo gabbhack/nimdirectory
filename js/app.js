@@ -1,5 +1,18 @@
 const packages = [
   {
+    "name": "gitman",
+    "url": "https://github.com/nirokay/gitman",
+    "method": "git",
+    "tags": [
+      "git",
+      "manager",
+      "repository-manager"
+    ],
+    "description": "Cross-platform git repository manager.",
+    "license": "GPL-3.0-only",
+    "web": "https://github.com/nirokay/gitman"
+  },
+  {
     "name": "lorem",
     "url": "https://github.com/neroist/lorem",
     "method": "git",
@@ -30146,6 +30159,19 @@ const packages = [
     "description": "Cross-platform gamepad driver",
     "license": "MIT",
     "web": "https://github.com/konsumer/nim-gamepad"
+  },
+  {
+    "name": "safeseq",
+    "url": "https://github.com/avahe-kellenberger/safeseq",
+    "method": "git",
+    "tags": [
+      "seq",
+      "iteration",
+      "remove"
+    ],
+    "description": "Seq that can safely add and remove elements while iterating.",
+    "license": "GPL-2.0-only",
+    "web": "https://github.com/avahe-kellenberger/safeseq"
   }
 ]
 const options = {
