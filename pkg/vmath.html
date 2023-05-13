@@ -90,11 +90,12 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><img src="docs/banner.png" style="max-width: 100%;" />
-<h1>VMath - 2d and 3d vector math.</h1>
+<h1>VMath - 2D and 3D vector math.</h1>
 <p>  <code>nimble install vmath</code></p>
 <p>  <img src="https://github.com/treeform/vmath/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
 <p>  <a href="https://treeform.github.io/vmath">API reference</a></p>
 <p>This library has no dependencies other than the Nim standard library.</p>
+<p>Supports c, cpp and js backend.</p>
 <h2>About</h2>
 <p>Your one stop shop for vector math routines for 2d and 3d graphics.</p>
 <ul>
@@ -238,6 +239,43 @@ vmathObjArrayBased ................ 73.968 ms     74.292 ms    ±0.631   x100
 <li>  <a href="tests/bench_raytracer.nim">3d Ray Trace Benchmark</a></li>
 <li>  <a href="https://github.com/treeform/pixie/blob/master/tests/bench_svg.nim">2d SVG Render Benchmark</a></li>
 </ul>
+<h2>Zmod - GLSL mod</h2>
+<p>GLSL uses a different type of float point mod. Because mod is a Nim keyword please use <code>zmod</code> when you need GLSL <code>mod</code> behavior.</p>
+<h2>Coordinate System</h2>
+<p>Right-hand z-forward coordinate system</p>
+<p>This is the same system used in the GLTF file format.</p>
+<blockquote>
+<p>glTF uses a right-handed coordinate system.
+glTF defines +Y as up, +Z as forward, and -X as right;
+the front of a glTF asset faces +Z.</p>
+</blockquote>
+<p>  <a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#coordinate-system-and-units">glTF Spec 2.0</a></p>
+<h2>OpenGL matrix column-major notation.</h2>
+<blockquote>
+<p><a href="https://www.opengl.org/archives/resources/faq/technical/transformations.htm">9.005</a> For programming purposes, OpenGL matrices are 16-value arrays with base vectors laid out contiguously in memory. The translation components occupy the 13th, 14th, and 15th elements of the 16-element matrix, where indices are numbered from 1 to 16 as described in section 2.11.2 of the <a href="https://registry.khronos.org/OpenGL/specs/gl/glspec21.pdf">OpenGL 2.1 Specification</a>.</p>
+<p>Sadly, the use of column-major format in the spec and blue book has resulted in endless confusion in the OpenGL programming community. Column-major notation suggests that matrices are not laid out in memory as a programmer would expect.</p>
+</blockquote>
+<p>OpenGL/GLSL/vmath vs Math/Specification notation:</p>
+<pre>  <code>        mat4([
+          a, b, c, 0,              | a d g x |
+          d, e, f, 0,              | b e h y |
+          g, h, i, 0,              | c f i z |
+          x, y, z, 1               | 0 0 0 1 |
+        ])
+</code></pre>
+<h1>1.x.x to 2.0.0 vmath breaking changes:</h1>
+<ul>
+<li>
+<p>New right-hand-z-forward cordate system and functions that care about
+coordinate system where moved there.</p>
+</li>
+<li>
+<p>deprecated <code>lookAt()</code> please use <code>toAngles()</code>/<code>fromAngles()</code> instead.</p>
+</li>
+<li>
+<p>deprecated <code>fractional()</code> use <code>frac()</code> instead.</p>
+</li>
+</ul>
 <h1>0.x.x to 1.0.0 vmath breaking changes:</h1>
 <ul>
 <li><code>vec3(v)</code> no longer works please use <code>vec3(v.x, v.y, 0)</code> instead.</li>
@@ -317,7 +355,7 @@ vmathObjArrayBased ................ 73.968 ms     74.292 ms    ±0.631   x100
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-12T01:19:08Z
+        Builded at 2023-05-13T01:17:11Z
         </p>
       </div>
     </div>

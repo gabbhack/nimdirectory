@@ -103,12 +103,12 @@
 <h2>Features ⚡</h2>
 <ul>
 <li>Support <code>asynchttpserver</code> as default http server.</li>
-<li>Support <code>httpx</code> via <code>-d:httpx</code> as alternative HTTP server.</li>
+<li>Support <code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers.</li>
 <li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSG</code> on other backends.</li>
 <li>Building HTML with <code>buildHtml</code> macro.</li>
 <li>Routing <code>SPA</code>/<code>SSG</code> with <code>routes</code> marco.</li>
 <li>Logging with <code>-d:debug</code>.</li>
-<li>CLI tool for <code>creating</code> and <code>serving</code> your projects.</li>
+<li>CLI tool for <code>creating</code>, <code>serving</code> and <code>building</code> your projects.</li>
 </ul>
 <h1>Get Started 👨‍🔬</h1>
 <h2>Installing 📥</h2>
@@ -120,7 +120,7 @@
 </code></pre>
 <h2>Usage ▶</h2>
 <h3>SSG</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">happyx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">serve</span>(<span class="str">&quot;127.0.0.1&quot;</span>, <span class="num">5000</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># By default routing takes any request method</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;Hello, world!&quot;</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="com"># You can use let variables in the routes!</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;/user{id:int}&quot;</span>:</div></div><div class="line"><div class="line-content">    fmt"Hello, user with ID {id}!"</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">happyx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">serve</span>(<span class="str">&quot;127.0.0.1&quot;</span>, <span class="num">5000</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># By default routing takes any request method</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;Hello, world!&quot;</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="com"># You can use let variables in the routes!</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;/user{id:int}&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;Hello, user with ID {id}!&quot;</span></div></div>  </code></pre>
 <h4>Run 💻</h4>
 <h5>Default</h5>
 <pre>  <code class="language-bash">nim c -r -d:debug main
@@ -215,7 +215,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-12T01:19:08Z
+        Builded at 2023-05-13T01:17:11Z
         </p>
       </div>
     </div>

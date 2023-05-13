@@ -112,6 +112,7 @@ or concurrently by different threads or processes.</p>
 <p>Now if you comment out the write, you can run the program again and read the value off disk</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">limdb</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">db</span> <span class="op">=</span> <span class="ide">initDatabase</span>(<span class="str">&quot;myDirectory&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># db[&quot;foo&quot;] = &quot;bar&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">db</span>[<span class="str">&quot;foo&quot;</span>]  <span class="com"># also prints &quot;bar&quot;</span></div></div>  </code></pre>
 <p>That&apos;s it. If you just need to quickly save some data, you can stop reading here and start programming.</p>
+<p>You can go much deeper though- convenient transactions, read/write derived from code, all Nim data types except <code>ref</code>, a convenient initialization syntaxes to initialize multiple databases and transactions that span them.</p>
 <p>  <a href="https://capocasa.github.io/limdb/limdb.html">API Documentation</a></p>
 </document>
             
@@ -181,7 +182,7 @@ or concurrently by different threads or processes.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-12T01:19:08Z
+        Builded at 2023-05-13T01:17:11Z
         </p>
       </div>
     </div>
