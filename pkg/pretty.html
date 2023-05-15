@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">pretty</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pretty</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">print</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A pretty printer for Nim types")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install pretty" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Pretty - a pretty printer for Nim types.</h1>
+<p>  <code>nimble install pretty</code></p>
+<p>  <img src="https://github.com/treeform/pretty/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://treeform.github.io/pretty">API reference</a></p>
+<p>This library has no dependencies other than the Nim standard library.</p>
+<p>This is a rewrite of the now deprecated <a href="https://github.com/treeform/print">print</a>.</p>
+<h2>About</h2>
+<p>Pretty is a powerful and versatile pretty printer library for Nim that allows you to print and display Nim types in a visually appealing and easy-to-read format. With Pretty, you can print your data structures with syntax highlighting, smart indentation, and support for various data types such as tables, sets, JSON, and even procs. It is designed to help you debug and understand your code more efficiently.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pretty</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">a</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">a</span>: <span class="num">3</span></div></div>  </code></pre>
+<h2>Features</h2>
+<ul>
+<li><strong>Syntax Highlighting</strong>: Pretty prints your data structures with syntax highlighting, making it visually pleasing and easier to read.</li>
+<li><strong>Smart Indentation</strong>: If the output exceeds the maximum width of the current terminal, Pretty creates indentation levels for improved readability.</li>
+<li><strong>Nim-Friendly Output</strong>: The library outputs the data in the exact same format you would use to create it in your Nim source code. You can copy and paste the output back into your code, and it will compile seamlessly in most cases.</li>
+<li><strong>Handles Complex Types</strong>: Pretty can handle complex types such as references, pointers, cycles, and nils effortlessly.</li>
+<li><strong>No External Dependencies</strong>: Pretty has no dependencies other than the Nim standard library, ensuring easy integration into your projects.</li>
+<li><strong>Support for Various Data Types</strong>: Pretty supports common data types like HashTable, HashSet, and JsonNode, printing them neatly without exposing their internal details.</li>
+<li><strong>Table Printing</strong>: Pretty offers the ability to print data as tables, providing a more natural and intuitive way to display information compared to nested data structures.</li>
+</ul>
+<h2>The &quot;Nim way&quot;</h2>
+<p>Pretty doesn&apos;t just print your data structures; it reproduces them in the exact same format you would use to create them in your Nim source code. It&apos;s like magic! You can simply copy and paste the output back into your code, and it will compile seamlessly in most cases. This is incredibly cool because as it allows you to retrieve and reproduce the original data effortlessly.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span> <span class="op">=</span> <span class="num">3</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span> <span class="op">=</span> <span class="str">&quot;hi there&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">c</span> <span class="op">=</span> <span class="str">&quot;oh</span>\n<span class="str">this</span>\0<span class="str">isit!&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">d</span> <span class="op">=</span> <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">d2</span> <span class="op">=</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">f</span> <span class="op">=</span> <span class="ide">Foo</span>(<span class="ide">a</span>:<span class="str">&quot;hi&quot;</span>, <span class="ide">b</span>:<span class="op">@</span>[<span class="str">&quot;a&quot;</span>, <span class="str">&quot;abc&quot;</span>], <span class="ide">c</span>:<span class="num">1234</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">a</span>, <span class="ide">b</span>, <span class="ide">c</span>, <span class="ide">d</span>, <span class="ide">d2</span>, <span class="ide">f</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">a</span>: <span class="num">3</span> <span class="ide">b</span>: <span class="str">&quot;hi there&quot;</span> <span class="ide">c</span>: <span class="str">&quot;oh</span>\n<span class="str">this</span>\0<span class="str">isit!&quot;</span> <span class="ide">d</span>: <span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>] <span class="ide">d2</span>: [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>] <span class="ide">f</span>: <span class="ide">Foo</span>(<span class="ide">a</span>: <span class="str">&quot;hi&quot;</span>, <span class="ide">b</span>: <span class="op">@</span>[<span class="str">&quot;a&quot;</span>, <span class="str">&quot;abc&quot;</span>], <span class="ide">c</span>: <span class="num">1234</span>)</div></div>  </code></pre>
+<h2>Syntax highlighting</h2>
+<p>Screenshot from VS Code:</p>
+<p>  <img src="docs/highlight.png" style="max-width: 100%;" alt="Highlight" /></p>
+<p>Pretty only applies fancy colors when it detects a terminal. If you pipe the output of your program to a file or another command, it will output plain text.</p>
+<h2>Smart indention</h2>
+<p>Pretty attempts to print everything in a single line, but if the output exceeds the maximum width of the current terminal, it will create indentation levels for improved readability. The maximum width is determined based on the maximum width of the current terminal.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">g2</span> <span class="op">=</span> <span class="ide">Bar</span>(<span class="ide">a</span>: <span class="str">&quot;hi a really really long string&quot;</span>, <span class="ide">b</span>: <span class="op">@</span>[<span class="str">&quot;a&quot;</span>, <span class="str">&quot;abc&quot;</span>], <span class="ide">c</span>: <span class="num">1234</span>)</div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">g2</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">g2</span>: <span class="ide">Bar</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">a</span>: <span class="str">&quot;hi a really really long string&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">b</span>: <span class="op">@</span>[<span class="str">&quot;a&quot;</span>, <span class="str">&quot;abc&quot;</span>],</div></div><div class="line"><div class="line-content">  <span class="ide">c</span>: <span class="num">1234</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h2>Stuff <code>echo</code> does not do well</h2>
+<p>If you&apos;ve used Nim before, you know that printing <code>ref object</code>s is a real pain. Nim will complain that there&apos;s no <code>$</code> operator, even though it already knows how to print them. And even if you do create a <code>$</code> operator for your <code>ref object</code>, you still have to handle nils and cycles yourself!</p>
+<p>That&apos;s where pretty comes in. It can print <code>nil</code>s, <code>ref</code>s, and <code>pointer</code>s.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">g2</span><span class="op">=</span><span class="ide">Bar</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">a</span>: <span class="str">&quot;hi a really really long string&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">b</span>: <span class="op">@</span>[<span class="str">&quot;a&quot;</span>, <span class="str">&quot;abc&quot;</span>],</div></div><div class="line"><div class="line-content">  <span class="ide">c</span>: <span class="num">1234</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">p1</span>: <span class="kwd">ptr</span> <span class="ide">int</span> <span class="op">=</span> <span class="kwd">nil</span></div></div><div class="line"><div class="line-content">  <span class="ide">p2</span>: <span class="kwd">ref</span> <span class="ide">Foo</span> <span class="op">=</span> <span class="kwd">nil</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">p1</span>, <span class="ide">p2</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">p1</span>: <span class="kwd">nil</span> <span class="ide">p2</span>: <span class="kwd">nil</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">three</span> <span class="op">=</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">pointerToThree</span> <span class="op">=</span> <span class="kwd">cast</span>[<span class="ide">pointer</span>](<span class="kwd">addr</span> <span class="ide">three</span>)</div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">pointerToThree</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">pointerToThree</span>: <span class="num">0x00000000004360A0</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Node</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">data</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">next</span>: <span class="ide">Node</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">n</span> <span class="op">=</span> <span class="ide">Node</span>(<span class="ide">data</span>:<span class="str">&quot;hi&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">n</span><span class="op">.</span><span class="ide">next</span> <span class="op">=</span> <span class="ide">n</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">n</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">n</span>: <span class="ide">Node</span>(<span class="ide">data</span>: <span class="str">&quot;hi&quot;</span>, <span class="ide">next</span>: <span class="op">...</span>)</div></div>  </code></pre>
+<h2>Pretty also does Tables, Sets and even Json!</h2>
+<p>You got that straight! Pretty is fully aware of common data types like <code>HashTable</code>, <code>HashSet</code>, and <code>JsonNode</code>, which often print out in a messy manner, exposing their internal details. . No ugly internals to be found here!</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">json</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="str">&quot;a&quot;</span>: <span class="num">123</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;b&quot;</span>: <span class="str">&quot;hi&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;c&quot;</span>: <span class="ide">true</span></div></div><div class="line"><div class="line-content">}</div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">json</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">json</span>: {<span class="ide">a</span>: <span class="num">123</span>, <span class="ide">b</span>: <span class="str">&quot;hi&quot;</span>, <span class="ide">c</span>: <span class="ide">true</span>}</div></div>  </code></pre>
+<h2>It also does <code>procs</code></h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">adder</span>(<span class="ide">a</span>, <span class="ide">b</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span> <span class="ide">a</span> <span class="op">+</span> <span class="ide">b</span></div></div><div class="line"><div class="line-content"><span class="ide">print</span> <span class="ide">adder</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">adder</span>: <span class="kwd">proc</span> (<span class="ide">a</span>: <span class="ide">int</span>, <span class="ide">b</span>: <span class="ide">int</span>): <span class="ide">int</span></div></div>  </code></pre>
+<h2>Pretty tables</h2>
+<p>Pretty also has the ability to print data as tables, which can often be a more natural and intuitive way to display information compared to nested data structures. Pretty cool!</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Mob</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">hp</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">x</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">    <span class="ide">y</span>: <span class="ide">float</span></div></div><div class="line"><div class="line-content">    <span class="ide">mode</span>: <span class="ide">char</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">mobs</span> <span class="op">=</span> <span class="op">@</span>[</div></div><div class="line"><div class="line-content">  <span class="ide">Mob</span>(<span class="ide">name</span>:<span class="str">&quot;Boyar Dens&quot;</span>, <span class="ide">hp</span>: <span class="num">120</span>, <span class="ide">x</span>:<span class="num">1.2</span>, <span class="ide">y</span>:<span class="num">2.33333</span>, <span class="ide">mode</span>:'a'),</div></div><div class="line"><div class="line-content">  <span class="ide">Mob</span>(<span class="ide">name</span>:<span class="str">&quot;Kozar</span>\0<span class="str">&quot;</span>, <span class="ide">hp</span>: <span class="num">20</span>, <span class="ide">x</span>:<span class="num">21.23</span>, <span class="ide">y</span>:<span class="num">2.3</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">Mob</span>(<span class="ide">name</span>:<span class="str">&quot;Goffer&quot;</span>, <span class="ide">hp</span>: <span class="num">25</span>, <span class="ide">x</span>:<span class="num">31.2</span>, <span class="ide">y</span>:<span class="num">2.3</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">Mob</span>(<span class="ide">name</span>:<span class="str">&quot;Hexer the Great&quot;</span>, <span class="ide">hp</span>: <span class="num">0</span>, <span class="ide">x</span>:<span class="num">41.2</span>, <span class="ide">y</span>:<span class="num">122.3</span>, <span class="ide">mode</span>:'b'),</div></div><div class="line"><div class="line-content">]</div></div><div class="line"><div class="line-content"><span class="ide">printTable</span> <span class="ide">mobs</span></div></div>  </code></pre>
+<p>  <img src="docs/table.png" style="max-width: 100%;" alt="Table" /></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/pretty">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-05-15T01:21:43Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
