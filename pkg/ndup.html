@@ -152,14 +152,13 @@ positive-negative trade-offs.</p>
 <p>Unlike a fully automated context, near duplicate systems may be able to have
 &quot;iterated by a human in the loop&quot; deployment.  One thing I came up with myself
 (but may have prior work somewhere) is <em>multiple statistically independent
-framings</em>.  This can mitigate &quot;unlucky&quot; framing.  Concretely, you can pick
-different matching values or different seeds for the BuzHash Sbox to get
+framings</em>.  This can mitigate &quot;unlucky framing&quot;.  Concretely, you can pick
+different matching values (or different seeds for BuzHash Sboxes) to get
 entirely independent framings.  Then you can consider two or more files (with
-<em>the same</em> framing rules) according to N samples (5..12 work ok).  Only files
-deemed &quot;related&quot; according to some &quot;vote&quot; among the samples are made actually
-related.  This idea is more salient to the near duplicate use-case where an
-end-user may want to tune false positive rates.</p>
-<p>Of course, one can also have <em>un</em>lucky framing and also automate multiple trials
+<em>the same</em> framing rules) according to N samples (5..12 work ok).  This idea is
+more salient to the near duplicate use-case where an end-user may want to tune
+false positive rates.</p>
+<p>Of course, one can also get &quot;lucky framing&quot; &amp; want to automate multiple trials
 with voting, say a threshold of 4/5 or something.  Depending upon thresholds,
 this seems to boost sensitivity (fewer false negatives) without much adverse
 false positive creation. {TODO: I automated this in a C version, and almost all
@@ -173,14 +172,14 @@ distribute.  It is just small enough to perhaps be humanly manageable.  Spanning
 a half century, it exhibits fairly organic chaos.  On the other hand, textual
 patterns like &apos;^Obsoletes: NUMBERS&apos;, cross-refs, some standards showing up as
 drafts earlier all afford defining results which &quot;should&quot; be found by &quot;sensitive
-enough&quot; near duplicate detectors (false negative rates).  Meanwhile, in a weak
-sense, the entire set notionally relates &quot;somehow&quot; (being about the same &quot;super
-topic&quot;).  This topical similarity affords studying false discovery rate controls
-from &quot;tight similarity&quot; all the way to &quot;very loose&quot;.  The 9200 document set size
-is small enough to enable rapid idea iteration yet also large enough to be
-relevant for performance on larger data sets.  E.g. 9200^2/2=43e6 naive file
-comparisons which show off the power of the inverted index optimization which is
-over 500X less work with default parameters.</p>
+enough&quot; near duplicate detectors (false negative rates).</p>
+<p>Meanwhile, in a weak sense, the entire document set notionally relates &quot;somehow&quot;
+(being about the same &quot;super topic&quot;).  This topical similarity affords studying
+false discovery rate controls from &quot;tight similarity&quot; all the way to &quot;very
+loose&quot;.  The 9200 document size is small enough to enable rapid idea iteration
+yet also large enough to be relevant for performance on larger data sets.  E.g.
+9200^2/2=43e6 naive file comparisons which show off the power of the inverted
+index optimization (over 500X less work with default parameters).</p>
 <p>As mentioned in &quot;Choices&quot; and &quot;Core Idea&quot; above, evaluation is hard since there
 is neither a fully objective answer and there may be several axes of degrees of
 similarity.</p>
@@ -252,7 +251,7 @@ similarity.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-15T01:21:43Z
+        Builded at 2023-05-16T01:20:30Z
         </p>
       </div>
     </div>

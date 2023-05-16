@@ -91,25 +91,32 @@
             
                 <document><div align="center">
 <p>  <img src="https://user-images.githubusercontent.com/49402667/228402522-6dd72d4b-c21c-4acf-b1e2-8318b6e809da.png" style="max-width: 100%;" alt="Happyx" /></p>
-<h3>Asynchronous web-framework written in Nim with ♥</h3>
+<h3>Macro-oriented asynchronous web-framework written in Nim with ♥</h3>
 <p>  <img src="https://img.shields.io/badge/%3E=1.6.12-1b1e2b?style=for-the-badge&amp;logo=nim&amp;logoColor=f1fa8c&amp;label=Nim&amp;labelColor=2b2e3b" style="max-width: 100%;" alt="Nim language" /></p>
 <p>  <a href="https://wakatime.com/badge/user/eaf11f95-5e2a-4b60-ae6a-38cd01ed317b/project/bbd13748-36e6-4383-ac40-9c4e72c060d1">    <img src="https://wakatime.com/badge/user/eaf11f95-5e2a-4b60-ae6a-38cd01ed317b/project/bbd13748-36e6-4383-ac40-9c4e72c060d1.svg?style=for-the-badge" style="max-width: 100%;" alt="wakatime" />  </a></p>
 <p>  <a href="https://github.com/HapticX/happyx/actions/workflows/tests.yml">    <img src="https://github.com/HapticX/happyx/actions/workflows/tests.yml/badge.svg?style=for-the-badge" style="max-width: 100%;" alt="Testing" />  </a></p>
 </div>
 <h1>Why HappyX? 💁‍♀️</h1>
-<p>Because it&apos;s simple to use 🙂</p>
-<h2>Why not Jester? 🤔</h2>
-<p>Jester doesn&apos;t provides some features that provides Happyx.</p>
+<blockquote>
+<p>HappyX is macro-oriented asynchronous web framework.</p>
+</blockquote>
+<p>In HappyX you can write <code>single page</code>, <code>static site generation</code> and <code>server side rendering</code> applications 💡</p>
+<p>You can writing Rest API with HappyX also 🔌</p>
+<p>HappyX is very simple to use. Keep it mind 🙂</p>
 <h2>Features ⚡</h2>
 <ul>
-<li>Support <code>asynchttpserver</code> as default http server.</li>
+<li>Support <code>asynchttpserver</code> as default HTTP server.</li>
 <li>Support <code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers.</li>
 <li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSG</code> on other backends.</li>
 <li>Building HTML with <code>buildHtml</code> macro.</li>
 <li>Routing <code>SPA</code>/<code>SSG</code> with <code>routes</code> marco.</li>
+<li>Powerful path params for routing.</li>
 <li>Logging with <code>-d:debug</code>.</li>
 <li>CLI tool for <code>creating</code>, <code>serving</code> and <code>building</code> your projects.</li>
+<li>Hot code reloading (now only for <code>SPA</code> projects).</li>
 </ul>
+<h2>Why not Jester? 🤔</h2>
+<p>Jester doesn&apos;t provides some features that provides Happyx.</p>
 <h1>Get Started 👨‍🔬</h1>
 <h2>Installing 📥</h2>
 <h3>Via Nimble</h3>
@@ -120,30 +127,33 @@
 </code></pre>
 <h2>Usage ▶</h2>
 <h3>SSG</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">happyx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">serve</span>(<span class="str">&quot;127.0.0.1&quot;</span>, <span class="num">5000</span>):</div></div><div class="line"><div class="line-content">  <span class="com"># By default routing takes any request method</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;Hello, world!&quot;</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content">  <span class="com"># You can use let variables in the routes!</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;/user{id:int}&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;Hello, user with ID {id}!&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-bash">hpx create --name ssg_project --kind SSG
+cd ssg_project
+</code></pre>
+<p>Main script will be able in <code>/ssg_project/src/main.nim</code></p>
 <h4>Run 💻</h4>
-<h5>Default</h5>
-<pre>  <code class="language-bash">nim c -r -d:debug main
-</code></pre>
-<h5>Httpx</h5>
-<pre>  <code class="language-bash">nim c -r -d:debug -d:httpx main
-</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Default</th>
+<th align="center">Httpx</th>
+<th align="center">microasynchttpserver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">  <code>nim c -r -d:debug main</code></td>
+<td align="center">  <code>nim c -r -d:debug -d:httpx main</code></td>
+<td align="center">  <code>nim c -r -d:debug -d:micro main</code></td>
+</tr></tbody></table>
 <h3>SPA</h3>
-<p>  <code>index.html</code></p>
-<pre>  <code class="language-html">&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
-    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<pre>  <code class="language-bash">hpx create --name spa_project --kind SPA --path-params
+cd spa_project
 </code></pre>
-<p>  <code>main.nim</code></p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">happyx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">appRoutes</span>(<span class="str">&quot;app&quot;</span>):</div></div><div class="line"><div class="line-content">  <span class="str">&quot;/user{userId:int}&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="str">&quot;User ID is {userId}&quot;</span></div></div>  </code></pre>
+<p>Main script will be able in <code>/spa_project/src/main.nim</code></p>
 <h4>Run 💻</h4>
-<p>Compile nim script and open HTML file in your browser.</p>
-<pre>  <code class="language-bash">nim js main
+<p>Just run this command and see magic ✨</p>
+<pre>  <code class="language-bash">hpx dev --reload
 </code></pre>
 <h1>Contributing 🌀</h1>
 <p>See <a href="https://github.com/HapticX/happyx/blob/master/.github/CONTRIBUTING.md">Contributing.md</a> for more information</p>
@@ -215,7 +225,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-15T01:21:43Z
+        Builded at 2023-05-16T01:20:30Z
         </p>
       </div>
     </div>
