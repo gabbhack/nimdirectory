@@ -105,12 +105,10 @@
 <p>HappyX is very simple to use. Keep it mind 🙂</p>
 <h2>Features ⚡</h2>
 <ul>
-<li>Support <code>asynchttpserver</code> as default HTTP server.</li>
-<li>Support <code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers.</li>
+<li>Use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers).</li>
 <li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSG</code> on other backends.</li>
 <li>Building HTML with <code>buildHtml</code> macro.</li>
-<li>Routing <code>SPA</code>/<code>SSG</code> with <code>routes</code> marco.</li>
-<li>Powerful path params for routing.</li>
+<li>Routing and powerful path params.</li>
 <li>Logging with <code>-d:debug</code>.</li>
 <li>CLI tool for <code>creating</code>, <code>serving</code> and <code>building</code> your projects.</li>
 <li>Hot code reloading (now only for <code>SPA</code> projects).</li>
@@ -119,12 +117,18 @@
 <p>Jester doesn&apos;t provides some features that provides Happyx.</p>
 <h1>Get Started 👨‍🔬</h1>
 <h2>Installing 📥</h2>
-<h3>Via Nimble</h3>
-<pre>  <code class="language-bash">nimble install happyx
-</code></pre>
-<h3>Via GitHub</h3>
-<pre>  <code class="language-bash">nimble install https://github.com/HapticX/happyx
-</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">Nimble</th>
+<th align="left">GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">  <pre lang="bash">nimble install happyx</pre></td>
+<td align="left">  <pre lang="bash">nimble install https://github.com/HapticX/happyx</pre></td>
+</tr></tbody></table>
 <h2>Usage ▶</h2>
 <h3>SSG</h3>
 <pre>  <code class="language-bash">hpx create --name ssg_project --kind SSG
@@ -135,16 +139,16 @@ cd ssg_project
 <table>
 <thead>
 <tr>
-<th align="center">Default</th>
-<th align="center">Httpx</th>
-<th align="center">microasynchttpserver</th>
+<th align="left">Default</th>
+<th align="left">Httpx</th>
+<th align="left">microasynchttpserver</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">  <code>nim c -r -d:debug main</code></td>
-<td align="center">  <code>nim c -r -d:debug -d:httpx main</code></td>
-<td align="center">  <code>nim c -r -d:debug -d:micro main</code></td>
+<td align="left">  <pre lang="bash">nim c -r -d:debug main</pre></td>
+<td align="left">  <pre lang="bash">nim c -r -d:debug -d:httpx main</pre></td>
+<td align="left">  <pre lang="bash">nim c -r -d:debug -d:micro main</pre></td>
 </tr></tbody></table>
 <h3>SPA</h3>
 <pre>  <code class="language-bash">hpx create --name spa_project --kind SPA --path-params
@@ -225,7 +229,7 @@ cd spa_project
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-16T01:20:30Z
+        Builded at 2023-05-17T01:21:48Z
         </p>
       </div>
     </div>
