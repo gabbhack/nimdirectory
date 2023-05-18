@@ -137,7 +137,7 @@ $ brew install mcsrvstat
 <h2>⚡ Usage</h2>
 <p>This package, AKA mcsrvstat.nim, is a <a href="https://github.com/nim-lang/nimble#hybrids">hybrid package</a>. Meaning that it can be used as both a Nim library and a standalone CLI application inside your terminal. <br /></p>
 <h3>... as a CLI application</h3>
-<p>After installing the package <a href="#installation">(see this section)</a>, the binary for mcsrvstat.nim should be in your <code>PATH</code> variable depending on how you&apos;ve installed it. This means, a new <code>mcsrvstat</code> command will be added to your shell environment. Simply run it using the following command snippets:</p>
+<p>After installing the package <a href="#-installation">(see this section)</a>, the binary for mcsrvstat.nim should be in your <code>PATH</code> variable depending on how you&apos;ve installed it. This means, a new <code>mcsrvstat</code> command will be added to your shell environment. Simply run it using the following command snippets:</p>
 <pre>  <code class="language-bash"># The default help command.
 $ mcsrvstat --help  # -h also works
 
@@ -148,17 +148,14 @@ $ mcsrvstat hypixel.net
 $ mcsrvstat mco.mineplex.com --bedrock
 </code></pre>
 <h3>... as a Nim library</h3>
-<p>Aside of the CLI binary, mcsrvstat.nim can also work as a Nim library as mentioned once before. You&apos;ll have to install the package using Nimble <a href="#%F0%9F%93%A6-installation">(see this section)</a> and then you&apos;re done. Here is some basic code for you to get started with:</p>
+<p>Aside of the CLI binary, mcsrvstat.nim can also work as a Nim library as mentioned once before. You&apos;ll have to install the package using Nimble <a href="#-installation">(see this section)</a> and then you&apos;re done. Here is some basic code for you to get started with:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Imports.</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span>[</div></div><div class="line"><div class="line-content">    <span class="ide">asyncdispatch</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">strformat</span></div></div><div class="line"><div class="line-content">]</div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mcsrvstatpkg</span><span class="op">/</span><span class="ide">base</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Defining a Server object instance. This represents a Minecraft server.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">Server</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">address</span>: <span class="str">&quot;hypixel.net&quot;</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">platform</span>: <span class="ide">JAVA</span>  <span class="com"># can also be BEDROCK (derives from the Platform enum, see documentation to learn more)</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># The primary procedure.</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">server</span><span class="op">.</span><span class="ide">refreshData</span>()  <span class="com"># Loads the server data into memory.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">server</span><span class="op">.</span><span class="ide">online</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> fmt"Server running on: {server.ip} (port {server.port})"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">        <span class="com"># Save the icon of the server.</span></div></div><div class="line"><div class="line-content">        <span class="ide">server</span><span class="op">.</span><span class="ide">icon</span><span class="op">.</span><span class="ide">save</span>(<span class="str">&quot;filename&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;Server is offline!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Running it.</span></div></div><div class="line"><div class="line-content"><span class="ide">waitFor</span> <span class="ide">main</span>()</div></div>  </code></pre>
 <p>For more use cases and detailed explanation, you can visit the <a href="https://hitblast.github.io/mcsrvstat.nim">official documentation</a> and view the different types, examples and procedures. It&apos;s frequently updated with the package itself so any new features will directly modify the documentation alongside!</p>
 <br />
 <h2>🔨 Building</h2>
-<p>The default build configuration (development) for this project is kept in the root <a href="https://github.com/hitblast/mcsrvstat.nim/blob/main/config.nims">config.nims</a> file. You can easily build binaries using the following commands:</p>
-<pre>  <code class="language-bash"># development
-$ nimble build --accept
-
-# release
-$ nimble -d:release build --accept
+<p>The default build configuration (both for development and production) for this project is kept in the <a href="https://github.com/hitblast/mcsrvstat.nim/blob/main/mcsrvstat.nimble">mcsrvstat.nimble</a> file. You can easily build binaries using the following command:</p>
+<pre>  <code class="language-bash"># build using the built-in task
+$ nimble release
 </code></pre>
 <p>The various third-party libraries and dependancies used for developing this project are mentioned below:</p>
 <ul>
@@ -250,7 +247,7 @@ $ nimble -d:release build --accept
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-17T01:21:48Z
+        Builded at 2023-05-18T01:19:21Z
         </p>
       </div>
     </div>
