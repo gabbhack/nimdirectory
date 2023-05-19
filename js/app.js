@@ -30205,11 +30205,25 @@ const packages = [
     "url": "https://github.com/joshuajohncohen/chat_openai-nim",
     "method": "git",
     "tags": [
-      "openai"
+      "openai", "chatgpt", "chat", "client", "cli", "gpt4", "gpt-4", "gpt"
     ],
     "description": "A CLI for the Chat series of models provided by OpenAI",
     "license": "MIT",
     "web": "https://github.com/joshuajohncohen/chat_openai-nim"
+  },
+  {
+    "name": "nmostr",
+    "url": "https://github.com/Gruruya/nmostr",
+    "method": "git",
+    "tags": [
+      "nostr library",
+      "decentralized messaging protocol",
+      "censorship-resistant social media"
+    ],
+    "description": "Library for Nostr: a simple, open protocol enabling censorship-resistant social media.",
+    "license": "AGPL-3.0-only",
+    "web": "https://github.com/Gruruya/nmostr",
+    "doc": "https://gruruya.github.io/nmostr"
   }
 ]
 const options = {
