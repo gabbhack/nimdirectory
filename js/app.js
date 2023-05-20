@@ -30205,7 +30205,14 @@ const packages = [
     "url": "https://github.com/joshuajohncohen/chat_openai-nim",
     "method": "git",
     "tags": [
-      "openai", "chatgpt", "chat", "client", "cli", "gpt4", "gpt-4", "gpt"
+      "openai",
+      "chatgpt",
+      "chat",
+      "client",
+      "cli",
+      "gpt4",
+      "gpt-4",
+      "gpt"
     ],
     "description": "A CLI for the Chat series of models provided by OpenAI",
     "license": "MIT",
@@ -30224,6 +30231,18 @@ const packages = [
     "license": "AGPL-3.0-only",
     "web": "https://github.com/Gruruya/nmostr",
     "doc": "https://gruruya.github.io/nmostr"
+  },
+  {
+    "name": "StripeKit",
+    "url": "https://github.com/vfehring/StripeKit",
+    "method": "git",
+    "tags": [
+      "payment-processor",
+      "stripe"
+    ],
+    "description": "Stripe API wrapper for Nim",
+    "license": "MIT",
+    "web": "https://github.com/vfehring/StripeKit"
   }
 ]
 const options = {
