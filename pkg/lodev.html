@@ -109,7 +109,12 @@
 <p>  <em>Note: current implementaion doesn&apos;t work with Firefox on Linux, implementation planned in the future.</em></p>
 <h2>Installation</h2>
 <p>Download correct binary from the latest <a href="https://github.com/vandot/lodev/releases">release</a> and place it somewhere in the PATH.</p>
-<p>Or <code>nimble install lodev</code></p>
+<p>Or pipe the install script to bash</p>
+<pre>  <code>curl -sSfL https://raw.githubusercontent.com/vandot/lodev/main/install.sh | bash
+</code></pre>
+<p>Or build it locally</p>
+<pre>  <code>nimble install lodev
+</code></pre>
 <h2>Configuration</h2>
 <p>lodev comes preconfigured for all supported platforms to act as a HTTPS reverse proxy server behind <code>*.dev.lo</code> domain.</p>
 <p>On MacOS and Linux it will ask for sudo password</p>
@@ -207,7 +212,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-20T01:18:04Z
+        Builded at 2023-05-21T01:26:01Z
         </p>
       </div>
     </div>

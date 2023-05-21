@@ -90,13 +90,18 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h2>frida.nim</h2>
-<p>This repository contains wrappers for <code>frida-core</code> library</p>
-<p><code>frida-core-devkit</code> are not included, you must download and install them manually.</p>
+<p>This repository contains wrappers for <code>frida-core</code> and  <code>frida-gum</code> libraries</p>
+<p><code>frida-x-devkit</code> are not included, you must download and install them manually.</p>
 <ul>
 <li>The devkits for the respective platform can be found at <a href="https://github.com/frida/frida/releases">Frida releases on GitHub</a>,</li>
 <li>Download and put them in LIBRARY_PATH
 <ul>
 <li>For linux put library in to <code>/usr/lib/x86_64-linux-gnu</code> for x86_64 and <code>/usr/lib/i386-linux-gnu</code> for x86</li>
+</ul>
+</li>
+<li>Or you can specify absolute path to devkit with <code>FRIDA_CORE_PATH</code> &amp; <code>FRIDA_GUM_PATH</code>
+<ul>
+<li>Eg: <code>nim c -d:FRIDA_GUM_PATH=/home/user/libs/libfrida-gum.a tests/frida_persistent_hook.nim</code></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +173,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-20T01:18:04Z
+        Builded at 2023-05-21T01:26:01Z
         </p>
       </div>
     </div>
