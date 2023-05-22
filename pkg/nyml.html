@@ -140,6 +140,10 @@ jobs:
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">contents</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;sample.yaml&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">jsonContents</span>: <span class="ide">JsonNode</span> <span class="op">=</span> <span class="ide">yaml</span>(<span class="ide">contents</span>)<span class="op">.</span><span class="ide">toJson</span><span class="op">.</span><span class="ide">get</span></div></div>  </code></pre>
 <h3>Get a specific value using <code>.</code> notation</h3>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">osName</span>: <span class="ide">JsonNode</span> <span class="op">=</span> <span class="ide">yaml</span>(<span class="ide">contents</span>)<span class="op">.</span><span class="ide">toJson</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;jobs.test.runs-on&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">osName</span><span class="op">.</span><span class="ide">getStr</span></div></div>  </code></pre>
+<h3>Handle variables</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">example</span> <span class="op">=</span> """
+name: ${{username}}
+"""</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">yml</span> <span class="op">=</span> <span class="ide">yaml</span>(<span class="ide">example</span>, <span class="ide">data</span> <span class="op">=</span> <span class="op">%*</span>{<span class="str">&quot;username&quot;</span>: <span class="str">&quot;John Do The Do&quot;</span>})</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">yml</span> <span class="com"># {&quot;name&quot;: &quot;John Do The Do&quot;}</span></div></div>  </code></pre>
 <h3>Dump YAML to JSON string</h3>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">yaml</span>(<span class="ide">contents</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># dump to json with indentation</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">yaml</span>(<span class="ide">contents</span>, <span class="ide">true</span>)</div></div>  </code></pre>
 <h2>Roadmap</h2>
@@ -220,7 +224,7 @@ Copyright © 2023 OpenPeep &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-21T01:26:01Z
+        Builded at 2023-05-22T01:23:59Z
         </p>
       </div>
     </div>
