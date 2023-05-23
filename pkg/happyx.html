@@ -91,22 +91,22 @@
             
                 <document><div align="center">
 <p>  <img src="https://user-images.githubusercontent.com/49402667/228402522-6dd72d4b-c21c-4acf-b1e2-8318b6e809da.png" style="max-width: 100%;" alt="Happyx" /></p>
-<h3>Macro-oriented asynchronous web-framework written in Nim with ♥</h3>
+<h3>Macro-oriented asynchronous full-stack web-framework written in Nim with ♥</h3>
 <p><img src="https://img.shields.io/badge/%3E=1.6.12-1b1e2b?style=for-the-badge&amp;logo=nim&amp;logoColor=f1fa8c&amp;label=Nim&amp;labelColor=2b2e3b" style="max-width: 100%;" alt="Nim language" /><a href="https://wakatime.com/badge/user/eaf11f95-5e2a-4b60-ae6a-38cd01ed317b/project/bbd13748-36e6-4383-ac40-9c4e72c060d1">  <img src="https://wakatime.com/badge/user/eaf11f95-5e2a-4b60-ae6a-38cd01ed317b/project/bbd13748-36e6-4383-ac40-9c4e72c060d1.svg?style=for-the-badge" style="max-width: 100%;" alt="wakatime" /></a>
 <a href="https://github.com/HapticX/happyx/actions/workflows/tests.yml">  <img src="https://img.shields.io/github/actions/workflow/status/HapticX/HappyX/tests.yml?label=Testing&amp;logo=github&amp;style=for-the-badge" style="max-width: 100%;" alt="Testing" /></a></p>
 </div>
 <h1>Why HappyX? 💁‍♀️</h1>
 <blockquote>
-<p>HappyX is macro-oriented asynchronous web framework.</p>
+<p>HappyX is macro-oriented asynchronous full stack web framework.</p>
 </blockquote>
 <p>In HappyX you can write <code>single page</code>, <code>static site generation</code> and <code>server side rendering</code> applications 💡</p>
-<p>You can writing Rest API with HappyX also 🔌</p>
-<p>HappyX is very simple to use. Keep it mind 🙂</p>
+<p>You can write Rest API with HappyX also 🔌</p>
+<p>HappyX is very simple to use. Keep your peace of mind 🙂</p>
 <h2>Features ⚡</h2>
 <ul>
 <li>Use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers).</li>
 <li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSG</code> on other backends.</li>
-<li>Building HTML with <code>buildHtml</code> macro.</li>
+<li>Build HTML with <code>buildHtml</code> macro.</li>
 <li>Request JSON models with <code>model</code> macro.</li>
 <li>Routing and powerful path params.</li>
 <li>Assignment path params with <code>pathParams</code> macro.</li>
@@ -116,8 +116,31 @@
 <li>Hot code reloading (now only for <code>SPA</code> projects).</li>
 </ul>
 <h2>Why not Jester? 🤔</h2>
-<p>Jester doesn&apos;t provides some features that provides Happyx.</p>
-<h1>Get Started 👨‍🔬</h1>
+<p>Jester doesn&apos;t provides some features that Happyx provides.</p>
+<h2>Minimal Example 👩‍💻</h2>
+<table height="180px">
+  <thead>
+    <tr>
+      <td align="center">SPA</td>
+      <td align="center">SSG</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre lang="nim"><code>
+import happyx
+<pre>  <code>appRoutes(&quot;app&quot;):
+  &quot;/&quot;:
+    &quot;Hello, world!&quot;
+</code></pre>
+<p />
+<pre lang="nim">  <code>
+import happyx</code>  <code>serve(&quot;127.0.0.1&quot;, 5000):
+  &quot;/&quot;:
+    &quot;Hello, world!&quot;
+</code></pre>
+<p /></code><h1>Get Started 👨‍🔬</h1>
 <h2>Installing 📥</h2>
 <table>
 <thead>
@@ -165,7 +188,7 @@ cd spa_project
 <p>See <a href="https://github.com/HapticX/happyx/blob/master/.github/CONTRIBUTING.md">Contributing.md</a> for more information</p>
 <h2>Star History ✨</h2>
 <p>  <a href="https://star-history.com/#HapticX/happyx&amp;Date">    <img src="https://api.star-history.com/svg?repos=HapticX/happyx&amp;type=Date" style="max-width: 100%;" alt="Star History Chart" />  </a></p>
-</document>
+</pre></td></tr></tbody></table></document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -233,7 +256,7 @@ cd spa_project
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-22T01:23:59Z
+        Builded at 2023-05-23T01:20:45Z
         </p>
       </div>
     </div>

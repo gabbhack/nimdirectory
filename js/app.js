@@ -30243,6 +30243,27 @@ const packages = [
     "description": "Stripe API wrapper for Nim",
     "license": "MIT",
     "web": "https://github.com/vfehring/StripeKit"
+  },
+  {
+    "name": "physfs_static",
+    "url": "https://github.com/konsumer/nim-physfs_static",
+    "method": "git",
+    "tags": [
+      "physfs",
+      "zip",
+      "wad",
+      "iso9660",
+      "7z",
+      "grp",
+      "hog",
+      "mvl",
+      "qpak",
+      "slp",
+      "vdf"
+    ],
+    "description": "Wrapper around physfs",
+    "license": "MIT",
+    "web": "https://github.com/konsumer/nim-physfs_static"
   }
 ]
 const options = {
