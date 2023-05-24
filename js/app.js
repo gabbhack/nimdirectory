@@ -30264,6 +30264,44 @@ const packages = [
     "description": "Wrapper around physfs",
     "license": "MIT",
     "web": "https://github.com/konsumer/nim-physfs_static"
+  },
+  {
+    "name": "nats",
+    "url": "https://github.com/deem0n/nim-nats",
+    "method": "git",
+    "tags": [
+      "nats",
+      "library",
+      "wrapper"
+    ],
+    "description": "Nim wrapper for the nats.c - NATS client library",
+    "license": "MIT",
+    "web": "https://github.com/deem0n/nim-nats"
+  },
+  {
+    "name": "nico_font_tool",
+    "url": "https://github.com/TakWolf/nico-font-tool",
+    "method": "git",
+    "tags": [
+      "pico-8",
+      "game"
+    ],
+    "description": "A tool for converting fonts to NICO Game Framework format fonts.",
+    "license": "MIT",
+    "web": "https://github.com/TakWolf/nico-font-tool"
+  },
+  {
+    "name": "perceptual",
+    "url": "https://github.com/deNULL/perceptual",
+    "method": "git",
+    "tags": [
+      "perceptual",
+      "hashes",
+      "images"
+    ],
+    "description": "A library for computing and comparing perceptual hashes in Nim",
+    "license": "MIT",
+    "web": "https://github.com/deNULL/perceptual"
   }
 ]
 const options = {
