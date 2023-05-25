@@ -89,7 +89,26 @@
 </code></pre>
 <h2>Usage</h2>
 <h3>Command</h3>
-<p>TODO</p>
+<p>For example:</p>
+<pre>  <code class="language-commandline">nicofont ./assets/fonts/quan/quan.ttf ./examples/assets/fonts/demo quan --fontSize=8
+</code></pre>
+<p>All params:</p>
+<pre>  <code class="language-text">nicofont {fontFilePath} {outputsDir} {outputsName}
+
+options:
+  -fs, --fontSize
+      Glyph rasterize size when using OpenType font.
+  -gox, --glyphOffsetX
+      Glyph offset x.
+  -goy, --glyphOffsetY
+      Glyph offset y.
+  -gaw, --glyphAdjustWidth
+      Glyph adjust width.
+  -gah, --glyphAdjustHeight
+      Glyph adjust height.
+  -m, --mode
+      Png sheet color mode, can be &apos;palette&apos; or &apos;rgba&apos;, default is &apos;palette&apos;.
+</code></pre>
 <h3>Scripts</h3>
 <p>See: <a href="examples/gen_fonts.nim">gen_fonts</a></p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nico_font_tool</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">sheetData</span>, <span class="ide">alphabet</span>) <span class="op">=</span> <span class="ide">createSheet</span>(<span class="str">&quot;your/font/file/path.ttf&quot;</span>, <span class="num">8</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">savePalettePng</span>(<span class="ide">sheetData</span>, <span class="str">&quot;outputs/palette/dir&quot;</span>, <span class="str">&quot;outputsName&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">saveDatFile</span>(<span class="ide">alphabet</span>, <span class="str">&quot;outputs/palette/dir&quot;</span>, <span class="str">&quot;outputsName&quot;</span>)</div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content"><span class="ide">saveRgbaPng</span>(<span class="ide">sheetData</span>, <span class="str">&quot;outputs/rgba/dir&quot;</span>, <span class="str">&quot;outputsName&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">saveDatFile</span>(<span class="ide">alphabet</span>, <span class="str">&quot;outputs/rgba/dir&quot;</span>, <span class="str">&quot;outputsName&quot;</span>)</div></div>  </code></pre>
@@ -168,7 +187,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-24T01:23:25Z
+        Builded at 2023-05-25T01:20:01Z
         </p>
       </div>
     </div>

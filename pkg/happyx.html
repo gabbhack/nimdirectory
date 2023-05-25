@@ -97,26 +97,28 @@
 </div>
 <h1>Why HappyX? 💁‍♀️</h1>
 <blockquote>
-<p>HappyX is macro-oriented asynchronous full stack web framework.</p>
+<p>HappyX is a web framework with asynchronous, macro-oriented, full stack support.</p>
 </blockquote>
 <p>In HappyX you can write <code>single page</code>, <code>static site generation</code> and <code>server side rendering</code> applications 💡</p>
 <p>You can write Rest API with HappyX also 🔌</p>
 <p>HappyX is very simple to use. Keep your peace of mind 🙂</p>
+<h2>Why Not Jester/Karax? 🤔</h2>
+<p>Jester and Karax have many features, but Jester is a <code>backend web framework</code>, and Karax is a <code>frontend web framework</code>. HappyX  is a <code>full-stack web framework</code> that combines the features of Jester and Karax and slightly improves them 🛠</p>
+<p>With HappyX you mustn&apos;t learn new libraries/frameworks to switch between <code>frontend</code> and <code>backend</code>. You can switch between them easily using HappyX ✌</p>
+<p>HappyX is macro-oriented web framework so you mustn&apos;t write a lot of code ✨</p>
 <h2>Features ⚡</h2>
 <ul>
-<li>Use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers).</li>
+<li>Multiple options for HTTP server! Happyx use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:httpx</code> and <code>microhttpserver</code> via <code>-d:micro</code> as alternative HTTP servers).</li>
 <li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSG</code> on other backends.</li>
-<li>Build HTML with <code>buildHtml</code> macro.</li>
+<li>Build HTML and CSS with <code>buildHtml</code> and <code>buildStyle</code> macros.</li>
 <li>Request JSON models with <code>model</code> macro.</li>
 <li>Routing and powerful path params.</li>
 <li>Assignment path params with <code>pathParams</code> macro.</li>
 <li>Powerful mounting sub-applications with <code>mount</code> macro.</li>
 <li>Logging with <code>-d:debug</code>.</li>
 <li>CLI tool for <code>creating</code>, <code>serving</code> and <code>building</code> your projects.</li>
-<li>Hot code reloading (now only for <code>SPA</code> projects).</li>
+<li>Hot code reloading (only for <code>SPA</code> projects as of now).</li>
 </ul>
-<h2>Why not Jester? 🤔</h2>
-<p>Jester doesn&apos;t provides some features that Happyx provides.</p>
 <h2>Minimal Example 👩‍💻</h2>
 <table height="180px">
   <thead>
@@ -140,9 +142,7 @@ import happyx</code>  <code>serve(&quot;127.0.0.1&quot;, 5000):
   &quot;/&quot;:
     &quot;Hello, world!&quot;
 </code></pre>
-<p /></code><h1>Get Started 👨‍🔬</h1>
-<h2>Installing 📥</h2>
-<table>
+<p /></code>Get Started 👨‍🔬</pre>Installing 📥</td>
 <thead>
 <tr>
 <th align="left">Nimble</th>
@@ -153,12 +153,9 @@ import happyx</code>  <code>serve(&quot;127.0.0.1&quot;, 5000):
 <tr>
 <td align="left">  <pre lang="bash">nimble install happyx</pre></td>
 <td align="left">  <pre lang="bash">nimble install https://github.com/HapticX/happyx</pre></td>
-</tr></tbody></table>
-<h2>Usage ▶</h2>
-<h3>SSG</h3>
-<pre>  <code class="language-bash">hpx create --name ssg_project --kind SSG
-cd ssg_project
-</code></pre>
+</tr></tbody></tr>Usage ▶</tbody>SSG</table><code class="language-bash">hpx create --name ssg_project --kind SSG
+cd ssg_project/src
+</code>
 <p>Main script will be able in <code>/ssg_project/src/main.nim</code></p>
 <h4>Run 💻</h4>
 <table>
@@ -184,11 +181,13 @@ cd spa_project
 <p>Just run this command and see magic ✨</p>
 <pre>  <code class="language-bash">hpx dev --reload
 </code></pre>
+<h1>Have A Nice Idea? 🍍</h1>
+<p><a href="https://github.com/HapticX/happyx/issues/new/choose">Open issue</a> or contact us hapticx.company@gmail.com</p>
 <h1>Contributing 🌀</h1>
 <p>See <a href="https://github.com/HapticX/happyx/blob/master/.github/CONTRIBUTING.md">Contributing.md</a> for more information</p>
 <h2>Star History ✨</h2>
 <p>  <a href="https://star-history.com/#HapticX/happyx&amp;Date">    <img src="https://api.star-history.com/svg?repos=HapticX/happyx&amp;type=Date" style="max-width: 100%;" alt="Star History Chart" />  </a></p>
-</pre></td></tr></tbody></table></document>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -256,7 +255,7 @@ cd spa_project
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-24T01:23:25Z
+        Builded at 2023-05-25T01:20:01Z
         </p>
       </div>
     </div>
