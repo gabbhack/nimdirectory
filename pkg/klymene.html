@@ -102,20 +102,23 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><p align="center">
-  <img src="https://raw.githubusercontent.com/openpeep/klymene/main/.github/klymene.png" style="max-width: 100%;" width="225px" alt="Klymene CLI framework" /><br />
+  <img src="https://raw.githubusercontent.com/openpeeps/klymene/main/.github/klymene.png" style="max-width: 100%;" width="225px" alt="Klymene CLI framework" /><br />
   Klymene — Build delightful command line interfaces with Nim language 👑
 </p>
 <p align="center">
   <code>nimble install klymene</code>
 </p>
 <p align="center">
+  <img src="https://raw.githubusercontent.com/openpeeps/klymene/main/.github/klymene-cli.png" style="max-width: 100%;" width="650px" alt="Klymene CLI Example" /><br />
+</p>
+<p align="center">
   <a href="https://openpeep.github.io/klymene/">API reference</a><br /><br />
-  <img src="https://github.com/openpeep/klymene/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" /> <img src="https://github.com/openpeep/klymene/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
+  <img src="https://github.com/openpeeps/klymene/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" /> <img src="https://github.com/openpeeps/klymene/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
 </p>
 <h2>😍 Key Features</h2>
 <ul>
 <li>[x] Generates Commands &amp; Subcommands based on Nim&apos;s Macros</li>
-<li>[ ] CLI flat file Database <code>JSON</code>, <code>BSON</code>, <code>LMDB</code> or <code>SQLite</code></li>
+<li>[ ] CLI flat file Database <code>JSON</code>, <code>MessagePack</code>, <code>LMDB</code> or <code>SQLite</code></li>
 <li>[ ] Plugins. Extend your CLI functionality</li>
 <li>[ ] Self Updater</li>
 <li>[ ] Auto-Generates Bash/ZSH Completion scripts</li>
@@ -134,15 +137,16 @@
 </ul>
 <h2>Example</h2>
 <p>Compile with <code>-d:debugcli</code> to show generated commands at compile-time</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="op">./</span><span class="ide">commands</span><span class="op">/</span>[<span class="ide">newCommand</span>, <span class="ide">helloCommand</span>, <span class="ide">helloWorldCommand</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">App</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">about</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Optional. When not provided will use .nimble info</span></div></div><div class="line"><div class="line-content">    <span class="str">&quot;👋 Yay! My command line interface&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">commands</span>:</div></div><div class="line"><div class="line-content">    <span class="op">$</span> <span class="str">&quot;new&quot;</span> (<span class="str">&quot;app&quot;</span>, <span class="str">&quot;rest&quot;</span>):</div></div><div class="line"><div class="line-content">      <span class="op">?</span>       <span class="str">&quot;Create a new project&quot;</span>            <span class="com"># describe your command</span></div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="ide">app</span>   <span class="str">&quot;Create a new WEB project&quot;</span>        <span class="com"># describe a specific argument</span></div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="ide">rest</span>  <span class="str">&quot;Create a new REST API project&quot;</span></div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="op">---</span> <span class="str">&quot;Dev stuff&quot;</span>   <span class="com"># a label/separator</span></div></div><div class="line"><div class="line-content">    <span class="op">$</span> <span class="str">&quot;hello&quot;</span>:</div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="str">&quot;A second command&quot;</span></div></div><div class="line"><div class="line-content">    <span class="op">---</span> <span class="com"># a separator without label</span></div></div><div class="line"><div class="line-content">    <span class="op">$</span> <span class="str">&quot;hello.world&quot;</span>:</div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="str">&quot;A sub command&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">klymene</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="op">./</span><span class="ide">commands</span><span class="op">/</span>[<span class="ide">newCommand</span>, <span class="ide">helloCommand</span>, <span class="ide">helloWorldCommand</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">App</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">about</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># Optional. When not provided will use .nimble info</span></div></div><div class="line"><div class="line-content">    <span class="str">&quot;👋 Yay! My command line interface&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">commands</span>:</div></div><div class="line"><div class="line-content">    <span class="op">---</span> <span class="str">&quot;Main commands&quot;</span> <span class="com"># separator</span></div></div><div class="line"><div class="line-content">    <span class="op">$</span> <span class="str">&quot;new&quot;</span> (<span class="str">&quot;app&quot;</span>, <span class="str">&quot;rest&quot;</span>):</div></div><div class="line"><div class="line-content">      <span class="op">?</span>       <span class="str">&quot;Create a new project&quot;</span>            <span class="com"># describe your command</span></div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="ide">app</span>   <span class="str">&quot;Create a new WEB project&quot;</span>        <span class="com"># describe a specific argument</span></div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="ide">rest</span>  <span class="str">&quot;Create a new REST API project&quot;</span></div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="op">---</span> <span class="str">&quot;Dev stuff&quot;</span> <span class="com"># separator with text</span></div></div><div class="line"><div class="line-content">    <span class="op">$</span> <span class="str">&quot;hello&quot;</span> `<span class="ide">input</span>` [<span class="str">&quot;jazz&quot;</span>]:</div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="str">&quot;A second command&quot;</span></div></div><div class="line"><div class="line-content">    <span class="op">$</span> <span class="str">&quot;hello.world&quot;</span>:</div></div><div class="line"><div class="line-content">      <span class="op">?</span> <span class="str">&quot;A sub command&quot;</span></div></div>  </code></pre>
 <p>Once compiled run <code>myapp -h</code> to print:</p>
 <pre>  <code>👋 Yay! My command line interface
 
-  new app|rest          Create a new project
+Main commands:
+  new app|rest                  Create a new project
 
 Dev stuff:
-  hello                 A second command
-  hello.world           A sub command
+  hello &lt;input&gt; --jazz          A second command
+  hello.world                   A sub command
 </code></pre>
 <p>Append a command with <code>-h</code> to show all flags/arguments, including description, for example</p>
 <pre>  <code>myapp new -h
@@ -156,9 +160,16 @@ which in this case should be named <code>newCommand.nim</code>.</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">klymene</span><span class="op">/</span><span class="ide">runtime</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">runCommand</span><span class="op">*</span>(<span class="ide">v</span>: <span class="ide">Values</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># my stuff</span></div></div>  </code></pre>
 <h1>TODO</h1>
 <p>Do the do. Add more examples</p>
+<h3>❤ Contributions &amp; Support</h3>
+<ul>
+<li>🐛 Found a bug? <a href="https://github.com/openpeeps/klymene/issues">Create a new Issue</a></li>
+<li>👋 Wanna help? <a href="https://github.com/openpeeps/klymene/fork">Fork it!</a></li>
+<li>😎 <a href="https://hetzner.cloud/?ref=Hm0mYGM9NxZ4">Get €20 in cloud credits from Hetzner</a></li>
+<li>🥰 <a href="https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C">Donate to The Enthusiast via PayPal address</a></li>
+</ul>
 <h3>🎩 License</h3>
-<p>Klymene | <code>MIT</code> license. <a href="https://github.com/openpeep">Made by Humans from OpenPeep</a>.<br />
-Copyright © 2023 OpenPeep &amp; Contributors — All rights reserved.</p>
+<p>Klymene | <code>MIT</code> license. <a href="https://github.com/openpeeps">Made by Humans from OpenPeeps</a>.<br />
+Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
 </document>
             
         </div>
@@ -227,7 +238,7 @@ Copyright © 2023 OpenPeep &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-26T01:20:21Z
+        Builded at 2023-05-27T01:20:54Z
         </p>
       </div>
     </div>
