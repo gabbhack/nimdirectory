@@ -85,7 +85,29 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>HOTTEXT</h1>
+<p>A hot medium for plain text.</p>
+<p>Reads text from stdin, starts paused.</p>
+<p>Inspired by <a href="https://ino.is/stutter">Stutter</a>.</p>
+<p>Wrap it up in a script, set it as your PAGER, or just use it directly.</p>
+<pre>  <code class="language-sh">fortune | hottext
+</code></pre>
+<h2>Install</h2>
+<p>Requires Nim and SDL2.</p>
+<pre>  <code class="language-sh">export PATH=$PATH:$HOME/.nimble/bin
+nimble install hottext
+</code></pre>
+<h2>Configuration</h2>
+<p>Configuration is done via environmental variables.</p>
+<h3>HOTTEXT_FONT_PATH</h3>
+<p>Path to a TTF font file. If set at build-time then this font file will be a baked-in default.</p>
+<h3>HOTTEXT_FONT_SIZE</h3>
+<p>Size of font by some definition of size.</p>
+<h3>HOTTEXT_WPM</h3>
+<p>Words-per-minute, defaults to 400.</p>
+<hr />
+<p>  <a href="https://repology.org/project/hottext/versions">    <img src="https://repology.org/badge/vertical-allrepos/hottext.svg" style="max-width: 100%;" alt="Packaging status" />  </a></p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -153,7 +175,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-27T01:20:54Z
+        Builded at 2023-05-28T01:35:57Z
         </p>
       </div>
     </div>

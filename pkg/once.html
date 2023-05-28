@@ -81,7 +81,73 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>once</h1>
+<p>Once is a Nim library that provides a type that will enforce that a callback is invoked only once.</p>
+<h2>Installation</h2>
+<p><code>once</code> can be installed using Nimble:</p>
+<pre>  <code>nimble install once
+</code></pre>
+<p>Or add the following to your .nimble file:</p>
+<pre>  <code># Dependencies
+
+requires &quot;once &gt;= 1.0.0&quot;
+</code></pre>
+<h2>Usage</h2>
+<p>The <code>tests</code> directory has a couple of simple examples, but usage is briefly as follows:</p>
+<pre>  <code>import once
+
+var i = 0
+
+proc cb() =
+  i += 1
+
+var onceInstance = initOnce(cb)
+
+for i in 0..5:
+  onceInstance.run()
+
+assert(i == 1)
+</code></pre>
+<p>Once also works in multi-threaded mode:</p>
+<pre>  <code>import once
+
+var i = 0
+
+proc cb() =
+  i += 1
+
+var
+  onceInstance = initOnce(cb)
+  thr: array[0..4, Thread[void]]
+
+proc threadProc() {.thread.} =
+  onceInstance.run()
+
+for i in 0..high(thr):
+  createThread(thr[i], threadProc)
+
+joinThreads(thr)
+
+assert(i == 1)
+</code></pre>
+<h2>CI Status</h2>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debian (Nim stable)</td>
+<td>  <a href="https://builds.sr.ht/~euantorano/once.nim/commits/debian.yml?">    <img src="https://builds.sr.ht/~euantorano/once.nim/commits/debian.yml.svg" style="max-width: 100%;" alt="builds.sr.ht status" />  </a></td>
+</tr>
+<tr>
+<td>Debian (Nim devel)</td>
+<td>  <a href="https://builds.sr.ht/~euantorano/once.nim/commits/debian_devel.yml?">    <img src="https://builds.sr.ht/~euantorano/once.nim/commits/debian_devel.yml.svg" style="max-width: 100%;" alt="builds.sr.ht status" />  </a></td>
+</tr></tbody></table>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -149,7 +215,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-27T01:20:54Z
+        Builded at 2023-05-28T01:35:57Z
         </p>
       </div>
     </div>

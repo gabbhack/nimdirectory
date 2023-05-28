@@ -81,7 +81,13 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>SipHash</h1>
+<p>SipHash is an add–rotate–xor (ARX) based family of pseudorandom functions.
+It may be used to implement hash tables with resistence to hash flooding.</p>
+<p>See: https://en.wikipedia.org/wiki/SipHash</p>
+<h2>Usage</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">hashes</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">hash</span>(<span class="ide">s</span>: <span class="ide">string</span>): <span class="ide">Hash</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">key</span>: <span class="ide">siphash</span><span class="op">.</span><span class="ide">Key</span></div></div><div class="line"><div class="line-content">    <span class="com"># this is a keyed hash function, use a zero key</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">b</span>: <span class="ide">array</span>[<span class="num">8</span>, <span class="ide">byte</span>] <span class="op">=</span> <span class="ide">sipHash</span>(<span class="ide">toOpenArrayByte</span>(<span class="ide">s</span>, <span class="ide">s</span><span class="op">.</span><span class="ide">low</span>, <span class="ide">s</span><span class="op">.</span><span class="ide">high</span>), <span class="ide">key</span>)</div></div><div class="line"><div class="line-content">    <span class="com"># the hash fuction operates over byte arrays</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="kwd">cast</span>[<span class="ide">Hash</span>](<span class="ide">b</span>)</div></div><div class="line"><div class="line-content">    <span class="com"># casting or converting is up to you</span></div></div>  </code></pre>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -149,7 +155,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-27T01:20:54Z
+        Builded at 2023-05-28T01:35:57Z
         </p>
       </div>
     </div>

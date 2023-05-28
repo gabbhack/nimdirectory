@@ -25913,7 +25913,11 @@ const packages = [
   },
   {
     "name": "klymene",
-    "url": "https://github.com/georgelemon/clymene",
+    "alias": "kapsis"
+  },
+  {
+    "name": "kapsis",
+    "url": "https://github.com/openpeeps/kapsis",
     "method": "git",
     "tags": [
       "cli",
@@ -25921,12 +25925,11 @@ const packages = [
       "toolkit",
       "command-line",
       "cli-framework",
-      "klymene",
       "interactive"
     ],
-    "description": "Create beautiful command line interfaces in Nim. Based on docopt.",
+    "description": "Build delightful command line interfaces in seconds.",
     "license": "MIT",
-    "web": "https://github.com/georgelemon/clymene"
+    "web": "https://github.com/openpeeps/kapsis"
   },
   {
     "name": "tim",
@@ -30329,6 +30332,21 @@ const packages = [
     "description": "A template processor and language.",
     "license": "MIT",
     "web": "https://github.com/flenniken/statictea"
+  },
+  {
+    "name": "pyopenai",
+    "url": "https://github.com/HACCKKER/pyopenai",
+    "method": "git",
+    "tags": [
+      "python",
+      "openai",
+      "http",
+      "api",
+      "library"
+    ],
+    "description": "An attempt to reimplement python OpenAI API bindings in nim",
+    "license": "MIT",
+    "web": "https://github.com/HACCKKER/pyopenai"
   }
 ]
 const options = {

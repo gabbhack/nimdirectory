@@ -81,7 +81,23 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>freedesktop_org</h1>
+<p>Some Nim procedures for looking up <a href="https://specifications.freedesktop.org/">freedesktop.org</a> data.</p>
+<h2>Samples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">path</span> <span class="op">=</span> <span class="str">&quot;freedesktop_org.html&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">exec</span> <span class="op">=</span> <span class="ide">defaultApplicationExec</span>(<span class="str">&quot;text/html&quot;</span>, <span class="ide">path</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">exec</span> <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;firefox freedesktop_org.html&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">mimeTypeOf</span>(<span class="ide">path</span>) <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;text/html&quot;</span>, <span class="str">&quot;application/xhtml+xml&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">data</span> <span class="op">=</span> <span class="ide">newStringStream</span>(<span class="ide">readFile</span> <span class="ide">path</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">mimeTypeOf</span>(<span class="ide">data</span>) <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;application/xhtml+xml&quot;</span>, <span class="str">&quot;text/html&quot;</span>, <span class="str">&quot;application/xml&quot;</span>]</div></div>  </code></pre>
+<h2>Alternatives</h2>
+<h3>Filetype</h3>
+<p>The <a href="https://github.com/jiro4989/filetype">filetype</a> library also provides MIME
+type detection but ships with its own heuristics. This makes it work without
+relying on system MIME database but the standard
+<a href="https://cgit.freedesktop.org/xdg/shared-mime-info/tree/data/freedesktop.org.xml.in">freedesktop.org.xml</a>
+file already comes with more MIME types than provided by the <strong>filetype</strong> library.</p>
+<h3>std/mimetypes</h3>
+<p>The Nim standard library has a <a href="https://nim-lang.org/docs/mimetypes.html">library</a> with Mime-type to filename-extension mappings but is also not extensible at runtime.</p>
+<h2>Acknowledgment</h2>
+<p>This library was initially written as part of the <a href="https://eris.codeberg.page/">ERIS</a> standardization project. As such this library was indirectly funded by <a href="https://nlnet.nl/assure">NGI Assure</a>, a fund established by <a href="https://nlnet.nl/">NLnet</a> with financial support from the European Commission&apos;s <a href="https://ngi.eu/">Next Generation Internet</a> program.</p>
+<p>  <a href="https://nlnet.nl/assure">    <img src="https://nlnet.nl/image/logos/NGIAssure_tag.svg" style="max-width: 100%;" alt="NGIAssure" />  </a></p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -149,7 +165,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-27T01:20:54Z
+        Builded at 2023-05-28T01:35:57Z
         </p>
       </div>
     </div>

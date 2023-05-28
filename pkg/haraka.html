@@ -81,7 +81,20 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>Haraka v2</h1>
+<p>Haraka v2 is a secure and efficient short-input (256 or 512 bits) hash function, designed
+to be very fast on modern platforms which support AES-NI. One of the main applications
+for such a design is the use in hash-based signature schemes like XMSS and SPHINCS.
+For more information see our <a href="https://eprint.iacr.org/2016/098">paper</a>.</p>
+<h2>Implementation</h2>
+<p>This is implementation is in pure Nim and does not yet make use of AES-NI instructions.
+It may be useful for building and testing hash-based signature schemes, but should be
+considered underperformant.</p>
+<h2>Reference</h2>
+<p>Haraka v2 - Efficient Short-Input Hashing for Post-Quantum Applications</p>
+<p>Stefan Kölbl and Martin M. Lauridsen and Florian Mendel and Christian Rechberger
+https://eprint.iacr.org/2016/098</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -149,7 +162,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-27T01:20:54Z
+        Builded at 2023-05-28T01:35:57Z
         </p>
       </div>
     </div>
