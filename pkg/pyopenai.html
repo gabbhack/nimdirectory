@@ -99,11 +99,12 @@
 <p>An attempt to reimplement python OpenAI API bindings in nim</p>
 <h2>Project Status:</h2>
 <ul>
-<li>in developement (not a full OpenAI API spec implementation yet)</li>
-<li>async not implemented yet</li>
-<li>if you need features that are not implemented yet, try <a href="https://nimble.directory/pkg/openaiclient">this</a></li>
+<li>streams not implemented</li>
+<li>async not implemented</li>
+<li>not fully tested so if you encounter errors open an issue</li>
 </ul>
-<h4>What is already implemented:</h4>
+<p>If you need features that are not implemented yet, try <a href="https://nimble.directory/pkg/openaiclient">openaiclient</a> but at the time of writing this, it&apos;s nimble package is broken and cannot be used as it has no sources in it, so you have to download and import sources manually.</p>
+<h3>What is implemented:</h3>
 <ul>
 <li>  <a href="https://platform.openai.com/docs/api-reference/models">Models</a></li>
 <li>  <a href="https://platform.openai.com/docs/api-reference/completions">Completions</a></li>
@@ -111,8 +112,10 @@
 <li>  <a href="https://platform.openai.com/docs/api-reference/edits">Edits</a></li>
 <li>  <a href="https://platform.openai.com/docs/api-reference/images">Images</a></li>
 <li>  <a href="https://platform.openai.com/docs/api-reference/embeddings">Embeddings</a></li>
-<li>  <a href="https://platform.openai.com/docs/api-reference/moderations">Moderations</a></li>
 <li>  <a href="https://platform.openai.com/docs/api-reference/audio/create">Audio</a></li>
+<li>  <a href="https://platform.openai.com/docs/api-reference/files">Files</a></li>
+<li>  <a href="https://platform.openai.com/docs/api-reference/fine-tunes">Fine-Tunes</a></li>
+<li>  <a href="https://platform.openai.com/docs/api-reference/moderations">Moderations</a></li>
 </ul>
 <h1>Installation</h1>
 <p>To install pyopenai, you can simply run</p>
@@ -196,7 +199,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-28T01:35:57Z
+        Builded at 2023-05-29T01:23:35Z
         </p>
       </div>
     </div>
