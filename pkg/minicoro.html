@@ -81,13 +81,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>Coroutine in Nim, courtesy of https://github.com/edubart/minicoro</p>
-<p>Warning: minicoro is not tested without <code>--mm:orc</code> or <code>--mm:arc</code></p>
-<h2>Usage</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">minicoro</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">coro_entry</span>(<span class="ide">co</span>: <span class="ide">Coro</span>) {<span class="op">.</span><span class="ide">cdecl</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">data</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">co</span><span class="op">.</span><span class="ide">pop</span>(<span class="ide">data</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">data</span> <span class="com"># print 42</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">co</span><span class="op">.</span><span class="kwd">yield</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">desc</span> <span class="op">=</span> <span class="ide">initCoroDesc</span>(<span class="ide">coro_entry</span>, <span class="num">0</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">co</span> <span class="op">=</span> <span class="ide">desc</span><span class="op">.</span><span class="ide">create</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">co</span><span class="op">.</span><span class="ide">push</span>(<span class="num">42.</span><span class="ide">int</span>) <span class="com"># each corotine has its own storage stack</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">co</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="ide">coSUSPENDED</span></div></div><div class="line"><div class="line-content"><span class="ide">co</span><span class="op">.</span><span class="ide">resume</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">co</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="ide">coSUSPENDED</span></div></div><div class="line"><div class="line-content"><span class="ide">co</span><span class="op">.</span><span class="ide">resume</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">co</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="ide">coDEAD</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">co</span><span class="op">.</span><span class="ide">destroy</span>()</div></div>  </code></pre>
-<p>For another example, see <a href="tests/test1.nim">this test file</a>
-For complete API, see <a href="src/minicoro.nim">source code</a></p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -155,7 +149,7 @@ For complete API, see <a href="src/minicoro.nim">source code</a></p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-29T01:23:35Z
+        Builded at 2023-05-30T01:25:10Z
         </p>
       </div>
     </div>

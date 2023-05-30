@@ -30347,6 +30347,23 @@ const packages = [
     "description": "An attempt to reimplement python OpenAI API bindings in nim",
     "license": "MIT",
     "web": "https://github.com/HACCKKER/pyopenai"
+  },
+  {
+    "name": "facedetect",
+    "url": "https://github.com/deNULL/facedetect",
+    "method": "git",
+    "tags": [
+      "face",
+      "detection",
+      "eye",
+      "pupil",
+      "pico",
+      "facial",
+      "landmarks"
+    ],
+    "description": "A face detection, pupil/eyes localization and facial landmark points detection library",
+    "license": "MIT",
+    "web": "https://github.com/deNULL/facedetect"
   }
 ]
 const options = {
