@@ -30364,6 +30364,33 @@ const packages = [
     "description": "A face detection, pupil/eyes localization and facial landmark points detection library",
     "license": "MIT",
     "web": "https://github.com/deNULL/facedetect"
+  },
+  {
+    "name": "nimcatapi",
+    "url": "https://github.com/nirokay/nimcatapi",
+    "method": "git",
+    "tags": [
+      "thecatapi",
+      "thedogapi",
+      "api",
+      "animals",
+      "network",
+      "images"
+    ],
+    "description": "nimcatapi is a library that lets you easily request images from thecatapi and/or thedogapi.",
+    "license": "GPL-3.0-only",
+    "web": "https://github.com/nirokay/nimcatapi"
+  },
+  {
+    "name": "simplelog",
+    "url": "https://github.com/sslime336/simplelog",
+    "method": "git",
+    "tags": [
+      "log"
+    ],
+    "description": "A deadly simply log package supporting very simple colorful logging.",
+    "license": "MIT",
+    "web": "https://github.com/sslime336/simplelog"
   }
 ]
 const options = {
