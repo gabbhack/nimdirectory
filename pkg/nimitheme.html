@@ -106,9 +106,12 @@
 <blockquote>
 <p>  <em>Make nimib look   <strong>beautiful</strong> with nimitheme</em></p>
 </blockquote>
-<p>Nimitheme is a Nimble package that provides additional themes for <a href="https://github.com/pietroppeter/nimib">nimib</a>.</p>
-<p>You can view the index of all the themes available in nimitheme here: <a href="https://neroist.github.io/nimitheme/themes">https://neroist.github.io/nimitheme/themes</a>.</p>
-<p>In addition, support for <a href="https://github.com/darkreader/darkreader">Dark Reader</a> and
+<p>Nimitheme is a Nimble package that provides additional themes for
+<a href="https://github.com/pietroppeter/nimib">nimib</a>.</p>
+<p>You can view the index of all the themes available in nimitheme here:
+<a href="https://neroist.github.io/nimitheme/themes">https://neroist.github.io/nimitheme/themes</a>.</p>
+<p>In addition, support for
+<a href="https://github.com/darkreader/darkreader">Dark Reader</a> and
 <a href="https://highlightjs.org/">highlight.js</a> are available.</p>
 <h2>Installation</h2>
 <p>Execute this command in a terminal or shell:</p>
@@ -120,13 +123,25 @@
 <p>or call the function directly:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nbInit</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nb</span><span class="op">.</span><span class="ide">useAwsmBigStone</span>()</div></div>  </code></pre>
 <h3>Dark Reader Support</h3>
-<p>You can enable Dark Reader in your nimib document by calling <code>useDarkReader</code> on the <code>nb</code> variable injected by <code>nbInit</code>, like so:</p>
+<p>You can enable Dark Reader in your nimib document by calling <code>useDarkReader</code>
+on the <code>nb</code> variable injected by <code>nbInit</code>, like so:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nb</span><span class="op">.</span><span class="ide">useDarkReader</span>()</div></div>  </code></pre>
 <h3>Highlight.js support</h3>
-<p>You can also easily set the highlight.js code theme using <code>highlight=</code>. For example, you can do something like this:</p>
+<p>You can also further stylize your code via setting a specific highlight.js
+code theme (outside of Android Dark and Atom One light). You can do this by
+using the <code>highlight=</code> template. For example, you can do something like this:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nb</span><span class="op">.</span><span class="ide">highlight</span> <span class="op">=</span> <span class="ide">materialPalenight</span></div></div>  </code></pre>
-<p><em>All</em> highlight.js themes are available (see <a href="https://github.com/neroist/nimitheme/blob/main/src/nimitheme/highlight_js.nim">  <code>highlight_js.nim</code></a>).</p>
-<p>For themes that have the same name as a base16 theme, the base16 theme&apos;s name is postfixed with <code>_base16</code>.</p>
+<p>to set the highlight.js theme your nimib document uses.</p>
+<p><em>  <strong>All</strong></em> highlight.js themes are available (see
+<a href="src/nimitheme/highlight_js.nim">  <code>highlight_js.nim</code></a>).</p>
+<p>For themes that have the same name as a base16 theme, the base16 theme&apos;s
+name is postfixed with <code>_base16</code>.</p>
+<h3>Edit CSS Variables</h3>
+<p>Many CSS libraries that nimitheme uses allow you to customize the style of
+your document using CSS variables the user can manually set. Nimitheme allows
+you to set such variables via the <code>setCssVar</code> template. For example, you can
+do stuff like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nbInit</span>(<span class="ide">useTerminal</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nb</span><span class="op">.</span><span class="ide">setCssVar</span>(<span class="str">&quot;global-font-size&quot;</span>, <span class="str">&quot;16px&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Set multiple variables at once</span></div></div><div class="line"><div class="line-content"><span class="ide">nb</span><span class="op">.</span><span class="ide">setCssVar</span>({</div></div><div class="line"><div class="line-content">  <span class="str">&quot;primary-color&quot;</span>: <span class="str">&quot;purple&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;secondary-color&quot;</span>: <span class="str">&quot;pink&quot;</span></div></div><div class="line"><div class="line-content">})</div></div>  </code></pre>
 <h2>License</h2>
 <p>This project is licensed under the MIT license.</p>
 <h6>Made with Nim with ❤️</h6>
@@ -198,7 +213,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-05-31T01:40:45Z
+        Builded at 2023-06-01T01:59:53Z
         </p>
       </div>
     </div>
