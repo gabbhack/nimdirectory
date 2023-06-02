@@ -30366,6 +30366,39 @@ const packages = [
     "web": "https://github.com/deNULL/facedetect"
   },
   {
+    "name": "denim",
+    "url": "https://github.com/openpeeps/denim",
+    "method": "git",
+    "tags": [
+      "node",
+      "nodejs",
+      "bun",
+      "bunsh",
+      "napi",
+      "addon",
+      "toolkit"
+    ],
+    "description": "DENIM - Nim code to Bun.js/Node.js in seconds via NAPI",
+    "license": "MIT",
+    "web": "https://github.com/openpeeps/denim"
+  },
+  {
+    "name": "bro",
+    "url": "https://github.com/openpeeps/bro",
+    "method": "git",
+    "tags": [
+      "css",
+      "sass",
+      "parser",
+      "css-parser",
+      "css-compiler",
+      "stylesheet"
+    ],
+    "description": "A super fast statically typed stylesheet language for cool kids",
+    "license": "MIT",
+    "web": "https://github.com/openpeeps/bro"
+  },
+  {
     "name": "nimcatapi",
     "url": "https://github.com/nirokay/nimcatapi",
     "method": "git",
@@ -30405,7 +30438,22 @@ const packages = [
     ],
     "description": "General purpose measuring units datatypes with integrated conversions and definitions.",
     "license": "MIT",
-    "web": "https://github.com/energy-nim/measures" 
+    "web": "https://github.com/energy-nim/measures"
+  },
+  {
+    "name": "shio",
+    "url": "https://github.com/arashi-software/shio",
+    "method": "git",
+    "tags": [
+      "web",
+      "server",
+      "file",
+      "http",
+      "jester"
+    ],
+    "description": "A quick media server in nim",
+    "license": "GPL-3.0-only",
+    "web": "https://github.com/arashi-software/shio"
   }
 ]
 const options = {

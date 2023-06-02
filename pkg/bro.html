@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">bro</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">css</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sass</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">css-parser</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">css-compiler</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">stylesheet</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A super fast statically typed stylesheet language for cool kids")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install bro" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p align="center">
+  <img src="https://github.com/openpeeps/bro/blob/main/.github/bro.png" style="max-width: 100%;" width="170px" alt="Bro aka NimSass" /><br />
+  😋 Bro aka NimSass ⚡ A super fast statically typed stylesheet language for cool kids<br />👑 Written in Nim language
+</p>
+<p align="center">
+  <a href="https://openpeeps.github.io/bro">API reference</a> | <a href="#">Download</a> (not yet)<br />
+  <img src="https://github.com/openpeeps/bro/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" />  <img src="https://github.com/openpeeps/bro/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
+  <br /><br /><img src="https://github.com/openpeeps/bro/blob/main/.github/bro-cli.png" style="max-width: 100%;" width="779px" />
+</p>
+<h2>😍 Key Features</h2>
+<ul>
+<li>🍃 Lightweight, tiny executable</li>
+<li>🐱 Dependency Free / <strong>No Virtual Machine</strong></li>
+<li>💪 <strong>Strong Typed Stylesheet</strong> = Perfect <strong>Cascading Style Sheets</strong> 🤩</li>
+<li>🌍 Works on <strong>Linux</strong>, <strong>macOS</strong>, <strong>Windows</strong></li>
+<li>👉 <code>Warnings</code> =&gt; Unused <strong>Variables</strong></li>
+<li>👉 <code>Warnings</code> =&gt; Unused <strong>Mixins</strong>, <strong>Functions</strong>, <strong>Empty selectors</strong></li>
+<li>👉 <code>Errors</code> =&gt; <strong>invalid</strong> properties/values or typos!</li>
+<li>🔖 A beautiful, improved <code>SASS</code>-like Syntax <a href="https://github.com/openpeeps/bro/wiki/Learn-Bro-in-5-minutes">Learn Bro in 5 minutes</a></li>
+<li>🎁 <strong>CSS Minifier</strong></li>
+<li>🗺 <strong>CSS SourceMap Generator</strong></li>
+<li>🌴 <strong>Abstract Syntax Tree</strong> binary serialization via <strong>MessagePack</strong></li>
+<li>🎉 Built-in <code>HTML</code> Documentation Generator</li>
+<li>🔥 Works with <strong>NodeJS</strong> &amp; <strong>BunJS</strong> via <code>NAPI</code></li>
+<li>🎩 Open Source | <code>MIT</code> License</li>
+<li>👑 Written in <strong>Nim language</strong></li>
+<li>😋 <strong>Made for Cool Kids</strong></li>
+</ul>
+<blockquote>
+<p><strong>Warning</strong> Bro is still under development. Expect bugs and incomplete features.</p>
+</blockquote>
+<h2>Bro CLI</h2>
+<pre>  <code>😋 Bro aka NimSass - A super fast stylesheet language for cool kids!
+   https://github.com/openpeeps/bro
+
+   &lt;style&gt; --minify --map --gzip          Compiles a stylesheet to CSS
+
+Development:
+  watch &lt;style&gt; &lt;delay&gt;                   Watch for changes and compile
+  map &lt;style&gt;                             Generates a source map
+  ast &lt;style&gt; --gzip                      Generates a packed AST
+  repr &lt;ast&gt; --minify --gzip              Compiles packed AST to CSS
+
+Documentation:
+  doc &lt;style&gt;                             Builds a documentation website
+
+</code></pre>
+<h3>Bro 💛 Nim</h3>
+<p>Integrate Bro in your Nim application</p>
+<pre>  <code class="language-bash">nimble install bro
+</code></pre>
+<h3>Bro 💖 BunJS &amp; Node</h3>
+<p>Use Bro as a native addon compiled via NAPI with Node or Bun. <a href="#">Get it from releases</a> or compile by yourself from source.
+<em>Bun.js implements 90% of the APIs available in Node-API (napi). <a href="https://github.com/oven-sh/bun#node-api-napi">Read more</a></em></p>
+<pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="kwd">const</span> {<span class="ide">compile</span>} <span class="op">=</span> <span class="ide">require</span>(<span class="str">&quot;./bro.node&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">compile</span>(<span class="str">&quot;./awesome.sass&quot;</span>)</div></div>  </code></pre>
+<h2>Friendly Warnings</h2>
+<p><strong>This is part of &quot;No need to run 1000 npm packages&quot;</strong> to write some CSS.</p>
+<ol>
+<li>  <strong>Perfect for beginners!</strong></li>
+</ol>
+<pre>  <code>Error (18:17) Invalid value font-style: bold 
+      Available values:
+            normal
+            italic
+            oblique
+ 👉 /examples/dummies.sass
+</code></pre>
+<ol start="2">
+<li>Typos? No worries!</li>
+</ol>
+<pre>  <code>Error (21899:2): Unknown pseudo-class `focusa`
+👉 /examples/main.sass
+</code></pre>
+<ol start="3">
+<li>Keep your stylesheets clean!</li>
+</ol>
+<pre>  <code>Warning (5:0): Declared and not used $primary-color
+👉 /examples/main.sass
+
+Warning (6:0): Declared and not used $file-border-color
+👉 /examples/form.sass
+
+Warning (11:0) CSS selector .btn has no properties
+👉 /examples/form.sass
+
+</code></pre>
+<h2>Benchmarks</h2>
+<p>DartSass, SassC, <strong>Bro</strong>, <strong>BroJS (via NAPI w/ Node &amp; Bun)</strong>, Sass (JS w/ Node &amp; Bun)</p>
+<p>1.572.876 lines of</p>
+<pre>  <code class="language-sass">button_0
+  background: yellow
+</code></pre>
+<pre>  <code>Benchmark 1: ./dart sass.snapshot big.sass:big.css --no-source-map --style=compressed
+  Time (abs ≡):         5.009 s               [User: 6.379 s, System: 0.278 s]
+ 
+Benchmark 2: sassc big.sass big.css --style=compressed
+  Time (abs ≡):         6.448 s               [User: 5.881 s, System: 0.564 s]
+ 
+Benchmark 3: bro big.sass --minify
+  Time (abs ≡):         1.066 s               [User: 0.697 s, System: 0.367 s]
+ 
+Benchmark 4: node bro.js
+  Time (abs ≡):         1.598 s               [User: 1.226 s, System: 0.373 s]
+ 
+Benchmark 5: bun bro.js
+  Time (abs ≡):         1.396 s               [User: 1.088 s, System: 0.308 s]
+ 
+Benchmark 6: node sass.js
+  Time (abs ≡):        14.910 s               [User: 22.484 s, System: 1.483 s]
+ 
+Benchmark 7: bun sass.js
+  Time (abs ≡):        11.963 s               [User: 20.004 s, System: 1.236 s]
+ 
+Summary
+  &apos;bro big.sass --minify&apos; ran
+    1.31 times faster than &apos;bun bro.js&apos;
+    1.50 times faster than &apos;node bro.js&apos;
+    4.70 times faster than &apos;./dart sass.snapshot big.sass:big.css --no-source-map --style=compressed&apos;
+    6.05 times faster than &apos;sassc big.sass big.css --style=compressed&apos;
+   11.22 times faster than &apos;bun sass.js&apos;
+   13.98 times faster than &apos;node sass.js&apos;
+</code></pre>
+<h3>BRO vs BRO Binary AST</h3>
+<p>Obviously, the <code>repr</code> command will run faster, since the entire AST is built</p>
+<pre>  <code>Benchmark 1: bro big.sass
+  Time (abs ≡):         1.084 s               [User: 0.762 s, System: 0.317 s]
+ 
+Benchmark 2: bro repr big.ast
+  Time (abs ≡):        793.0 ms               [User: 548.7 ms, System: 240.3 ms]
+
+</code></pre>
+
+<p>Benchmarks made with <a href="https://github.com/sharkdp/hyperfine">hyperfine</a> on<br />
+<strong>Ubuntu 22.04 LTS</strong> / Ryzen 5 5600g 3.9GHz × 12 / RAM 32 GB 3200MHz / SSD M.2</p>
+<h2>TODO</h2>
+<ul>
+<li>[x] Tokenizier</li>
+<li>[x] Selectors <a href="https://www.w3.org/TR/selectors-3/#selectors">ref</a>
+<ul>
+<li>[ ] Type Selectors <a href="https://www.w3.org/TR/selectors-3/#type-selectors">ref</a></li>
+<li>[ ] Universal Selectors <a href="https://www.w3.org/TR/selectors-3/#universal-selector">ref</a></li>
+<li>[ ] Attribute Selectors <a href="https://www.w3.org/TR/selectors-3/#attribute-selectors">ref</a></li>
+<li>[ ] Class Selectors <a href="https://www.w3.org/TR/selectors-3/#class-html">ref</a></li>
+<li>[ ] ID Selectors <a href="https://www.w3.org/TR/selectors-3/#id-selectors">ref</a></li>
+<li>[ ] Pseudo-classes <a href="https://www.w3.org/TR/selectors-3/#pseudo-classes">ref</a></li>
+<li>[ ] Pseudo-elements <a href="https://www.w3.org/TR/selectors-3/#pseudo-elements">ref</a></li>
+<li>[ ] Groups of Selectors <a href="https://www.w3.org/TR/selectors-3/#grouping">ref</a></li>
+<li>[ ] Combinators <a href="https://www.w3.org/TR/selectors-3/#combinators">ref</a></li>
+</ul>
+</li>
+<li>[x] Partials</li>
+<li>[x] Compile-time
+<ul>
+<li>[x] Compile-time Variables <code>$myvar: 12px</code></li>
+<li>[ ] Compile-time Constants</li>
+<li>[ ] Functions</li>
+<li>[ ] Conditionals (<code>if</code>, <code>elif</code>, <code>else</code>)</li>
+<li>[ ] For/Loop statements <code>for $x in $y</code></li>
+<li>[ ] Magically <code>@when</code> instead of <code>@media</code></li>
+<li>[ ] Typed properties declaration</li>
+<li>[ ] Warnings for unused <code>variables</code>, <code>functions</code></li>
+<li>[ ] CSS Variable Declaration using <code>var</code></li>
+</ul>
+</li>
+<li />
+<li>[ ] Handle single/multi line comments</li>
+<li>[ ] <code>Preview</code> snippets (Building docs from Stylesheets)</li>
+<li>[x] Command Line Interface
+<ul>
+<li>[x] CLI <code>watch</code> for live changes</li>
+<li>[x] CLI <code>build</code> sass to css</li>
+<li>[ ] CLI generate source <code>map</code></li>
+<li>[x] CLI generate <code>ast</code> nodes to binary AST via <code>MessagePack</code></li>
+<li>[ ] CLI build code documentation with <code>doc</code></li>
+<li>[ ] CLI convert boring sass to Bro</li>
+</ul>
+</li>
+<li>[x] Compiled Node.js / Bun.js addon via NAPI <a href="https://github.com/openpeeps/denim">Check @openpeeps/denim</a></li>
+</ul>
+<h3>❤ Contributions &amp; Support</h3>
+<ul>
+<li>🐛 Found a bug? <a href="https://github.com/openpeeps/bro/issues">Create a new Issue</a></li>
+<li>👋 Wanna help? <a href="https://github.com/openpeeps/bro/fork">Fork it!</a></li>
+<li>Create a Syntax Highlighter for your favorite code editor.</li>
+<li>😎 <a href="https://hetzner.cloud/?ref=Hm0mYGM9NxZ4">Get €20 in cloud credits from Hetzner</a></li>
+<li>🥰 <a href="https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C">Donate to OpenPeeps via PayPal address</a></li>
+</ul>
+<h3>🎩 License</h3>
+<p>BRO aka NimSass | MIT license. Proudly made in 🇪🇺 Europe <a href="https://github.com/openpeeps">by Humans from OpenPeeps</a>.<br />
+Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/openpeeps/bro">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-06-02T01:43:10Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
