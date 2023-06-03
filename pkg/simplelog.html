@@ -79,7 +79,24 @@
             
                 <document><h1>simplelog</h1>
 <p>A deadly simple log package.</p>
-<p>  <img src="logging.png" style="max-width: 100%;" alt="log" /></p>
+<p>Perform differently in different build modes:</p>
+<p>  <strong>   <code>when not defined(release) and not defined(js):</code></strong></p>
+<p>  <img src="imgs/debug-mode.png" style="max-width: 100%;" alt="debug" /></p>
+<p>  <strong>  <code>when defined(release):</code> (without filename and number of line)</strong></p>
+<p>  <img src="imgs/release-mode.png" style="max-width: 100%;" alt="debug" /></p>
+<p>Choose your own timer:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># demo.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span> <span class="op">/</span> <span class="ide">times</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">simplelog</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">simplelog</span><span class="op">.</span><span class="ide">timer</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span>(): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="op">$</span><span class="ide">now</span>()<span class="op">.</span><span class="ide">utc</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">debug</span>(<span class="str">&quot;different timer&quot;</span>)</div></div>  </code></pre>
+<pre>  <code class="language-shell">nim c -r demo.nim
+</code></pre>
+<p>output:</p>
+<font color="green">
+2023-06-02T08:02:33Z [DEBUG] E:\projects\simplelog\demo.nim:12 different timer
+</font>
+<p>todo:</p>
+<ul>
+<li>[ ] Log level</li>
+<li>[ ] ...whatever(lazy I am)</li>
+</ul>
 </document>
             
         </div>
@@ -148,7 +165,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-02T01:43:10Z
+        Builded at 2023-06-03T01:40:15Z
         </p>
       </div>
     </div>

@@ -114,6 +114,10 @@
 </p>
 <h2>😍 Key Features</h2>
 <ul>
+<li>[x] Native build via <code>node-gyp</code></li>
+<li>[ ] Native build via <code>CMake.js</code></li>
+<li>[x] Low-level API</li>
+<li>[ ] High-level API</li>
 <li>[x] Open Source | <code>MIT</code> License</li>
 <li>[x] Written in 👑 Nim language</li>
 </ul>
@@ -123,14 +127,8 @@
 <li>Install Node.js and <code>node-gyp</code>, the native addon build tool</li>
 <li>Install Denim CLI via <code>nimble</code></li>
 </ul>
-<h2>Example</h2>
-<p>Here we&apos;ll use <a href="https://github.com/openpeeps/nyml">nyml package</a> to build a native nodejs yaml parser</p>
-<p>My <code>yaml.nim</code></p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">denim</span><span class="op">/</span><span class="ide">napi</span><span class="op">/</span><span class="ide">napibindings</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nyml</span> <span class="kwd">except</span> `<span class="op">%*</span>`</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">1</span>, <span class="str">&quot;parse&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">yamlContent</span> <span class="op">=</span> <span class="ide">args</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getStr</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">napiCall</span>(<span class="str">&quot;JSON.parse&quot;</span>, [</div></div><div class="line"><div class="line-content">      <span class="op">%*</span> <span class="ide">yaml</span>(<span class="ide">yamlContent</span>)<span class="op">.</span><span class="ide">toJsonStr</span></div></div><div class="line"><div class="line-content">    ])</div></div>  </code></pre>
-<p>Magically run</p>
-<p>  <code>denim build yaml.nim</code></p>
-<p>Here is my JS code.</p>
-<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">const</span> {<span class="ide">parse</span>} <span class="op">=</span> <span class="ide">require</span>('./yaml.node')</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">sample</span> <span class="op">=</span> <span class="str">&quot;email: test@example.com&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">let</span> <span class="ide">obj</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">sample</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">obj</span>)</div></div><div class="line"><div class="line-content"><span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">obj</span>.<span class="ide">email</span> <span class="op">==</span> <span class="str">&quot;test@example.com&quot;</span>)</div></div>  </code></pre>
+<h2>Examples</h2>
+<p>todo add examples</p>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
 <li>🐛 Found a bug? <a href="https://github.com/openpeeps/denim/issues">Create a new Issue</a></li>
@@ -210,7 +208,7 @@ Thanks to <a href="https://github.com/AjBreidenbach">Andrew Breidenbach</a> and 
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-02T01:43:10Z
+        Builded at 2023-06-03T01:40:15Z
         </p>
       </div>
     </div>

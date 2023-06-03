@@ -88,9 +88,9 @@
                 <document><h1>nim-notcurses</h1>
 <p><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
-<a href="#stability">  <img src="https://img.shields.io/badge/ABI-experimental-orange.svg" style="max-width: 100%;" alt="ABI: experimental" /></a>
 <a href="#stability">  <img src="https://img.shields.io/badge/API-experimental-orange.svg" style="max-width: 100%;" alt="API: experimental" /></a>
-<a href="https://github.com/michaelsbradleyjr/nim-notcurses/actions?query=workflow%3ABuilds+branch%3Amaster">  <img src="https://github.com/michaelsbradleyjr/nim-notcurses/workflows/Builds/badge.svg?branch=master" style="max-width: 100%;" alt="Builds (GitHub Actions)" /></a></p>
+<a href="https://github.com/michaelsbradleyjr/nim-notcurses/actions?query=workflow%3ABuilds+branch%3Amaster">  <img src="https://github.com/michaelsbradleyjr/nim-notcurses/workflows/Builds/badge.svg?branch=master" style="max-width: 100%;" alt="Builds (GitHub Actions)" /></a>
+<a href="https://codecov.io/gh/michaelsbradleyjr/nim-notcurses">  <img src="https://codecov.io/gh/michaelsbradleyjr/nim-notcurses/branch/master/graph/badge.svg?token=VLN0VLATJS" style="max-width: 100%;" alt="codecov" /></a></p>
 <p>Nim wrapper for <a href="https://github.com/dankamongmen/notcurses#readme">Notcurses</a>: blingful TUIs and character graphics.</p>
 <p>This package provides a Nim API and a lower-level wrapper for Notcurses&apos; raw C API.</p>
 <hr />
@@ -113,30 +113,58 @@ requires &quot;notcurses &gt;= 3.N.N &amp; &lt; 4.0.0&quot;
 <p>or import its core</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span><span class="op">/</span><span class="ide">core</span></div></div>  </code></pre>
 <p>:bulb: The <em>core</em> does not link against Notcurses&apos; multimedia stack, as explained in its <a href="https://github.com/dankamongmen/notcurses#faqs">FAQs</a>.</p>
-<h4>Initialize</h4>
+<h4>Initialization</h4>
 <p><em>TUI mode</em> is the default and facilitates high-performance, non-scrolling, full-screen applications</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">nc</span> <span class="op">=</span> <span class="ide">Nc</span><span class="op">.</span><span class="ide">init</span></div></div>  </code></pre>
+<h4>Shutdown</h4>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nc</span><span class="op">.</span><span class="ide">stop</span></div></div>  </code></pre>
 <h4>CLI mode</h4>
 <p><em>CLI mode</em> supports scrolling output for shell utilities, but with the full power of Notcurses</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">nc</span> <span class="op">=</span> <span class="ide">Nc</span><span class="op">.</span><span class="ide">init</span> <span class="ide">NcOpts</span><span class="op">.</span><span class="ide">init</span> [<span class="ide">InitFlags</span><span class="op">.</span><span class="ide">CliMode</span>]</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">nc</span> <span class="op">=</span> <span class="ide">Nc</span><span class="op">.</span><span class="ide">init</span> <span class="ide">NcOpts</span><span class="op">.</span><span class="ide">init</span> [<span class="ide">InitFlags</span><span class="op">.</span><span class="ide">CliMode</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">nc</span><span class="op">.</span><span class="ide">stop</span></div></div>  </code></pre>
 <h4>Direct mode</h4>
 <p><em>Direct mode</em> makes a limited subset of Notcurses available for manipulating typical scrolling or file-backed output</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span><span class="op">/</span><span class="ide">direct</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/direct/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ncd</span> <span class="op">=</span> <span class="ide">Ncd</span><span class="op">.</span><span class="ide">init</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span><span class="op">/</span><span class="ide">direct</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/direct/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ncd</span> <span class="op">=</span> <span class="ide">Ncd</span><span class="op">.</span><span class="ide">init</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">ncd</span><span class="op">.</span><span class="ide">stop</span></div></div>  </code></pre>
 <p>:bulb: It&apos;s generally recommended to use <a href="#cli-mode">CLI mode</a> instead of Direct mode. See Notcurses&apos; <a href="https://github.com/dankamongmen/notcurses#faqs">FAQs</a>, and for more context see <a href="https://github.com/dankamongmen/notcurses/discussions/1853">dankamongmen/notcurses#1853</a> and <a href="https://github.com/dankamongmen/notcurses/issues/1834">dankamongmen/notcurses#1834</a>.</p>
 <h3>ABI</h3>
 <p>If you don&apos;t fancy the Nim API provided by this package, you can import its wrapper for Notcurses&apos; raw C API and work with that directly, or use it to build an API to your liking</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span><span class="op">/</span><span class="ide">abi</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/abi/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">opts</span> <span class="op">=</span> <span class="ide">notcurses_options</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">nc</span> <span class="op">=</span> <span class="ide">notcurses_init</span>(<span class="kwd">addr</span> <span class="ide">opts</span>, <span class="ide">stdout</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">nc</span><span class="op">.</span><span class="ide">isNil</span>: <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Defect</span>)(<span class="ide">msg</span>: <span class="str">&quot;notcurses_init failed&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or: let nc = notcurses_core_init(addr opts, stdout)</span></div></div><div class="line"><div class="line-content"><span class="com"># or: if nc.isNil: raise (ref Defect)(msg: &quot;notcurses_core_init failed&quot;)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">notcurses_stop</span>(<span class="ide">nc</span>) <span class="op">&lt;</span> <span class="num">0</span>: <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Defect</span>)(<span class="ide">msg</span>: <span class="str">&quot;notcurses_stop failed&quot;</span>)</div></div>  </code></pre>
 <h4>Direct mode</h4>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span><span class="op">/</span><span class="ide">abi</span><span class="op">/</span><span class="ide">direct</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/abi/direct/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ncd</span> <span class="op">=</span> <span class="ide">ncdirect_init</span>(<span class="kwd">nil</span>, <span class="ide">stdout</span>, <span class="ide">flags</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">ncd</span><span class="op">.</span><span class="ide">isNil</span>: <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Defect</span>)(<span class="ide">msg</span>: <span class="str">&quot;ncdirect_init failed&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or: let ncd = ncdirect_core_init(nil, stdout, flags)</span></div></div><div class="line"><div class="line-content"><span class="com"># or: if ncd.isNil: raise (ref Defect)(msg: &quot;ncdirect_core_init failed&quot;)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">ncdirect_stop</span>(<span class="ide">ncd</span>) <span class="op">&lt;</span> <span class="num">0</span>: <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Defect</span>)(<span class="ide">msg</span>: <span class="str">&quot;ncdirect_stop failed&quot;</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">notcurses</span><span class="op">/</span><span class="ide">abi</span><span class="op">/</span><span class="ide">direct</span></div></div><div class="line"><div class="line-content"><span class="com"># or: import notcurses/abi/direct/core</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">flags</span> <span class="op">=</span> <span class="num">0&apos;</span><span class="ide">u64</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ncd</span> <span class="op">=</span> <span class="ide">ncdirect_init</span>(<span class="kwd">nil</span>, <span class="ide">stdout</span>, <span class="ide">flags</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">ncd</span><span class="op">.</span><span class="ide">isNil</span>: <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Defect</span>)(<span class="ide">msg</span>: <span class="str">&quot;ncdirect_init failed&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or: let ncd = ncdirect_core_init(nil, stdout, flags)</span></div></div><div class="line"><div class="line-content"><span class="com"># or: if ncd.isNil: raise (ref Defect)(msg: &quot;ncdirect_core_init failed&quot;)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">ncdirect_stop</span>(<span class="ide">ncd</span>) <span class="op">&lt;</span> <span class="num">0</span>: <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Defect</span>)(<span class="ide">msg</span>: <span class="str">&quot;ncdirect_stop failed&quot;</span>)</div></div>  </code></pre>
 <h2>Examples</h2>
 <p>See the modules in <a href="examples">  <code>examples</code></a>. To build and run the <a href="examples/tui1.nim">  <code>tui1</code></a> example do</p>
 <pre>  <code class="language-text">$ nim c -r examples/tui1.nim
 </code></pre>
 <p>You can use additional compiler options, cf. <a href="#requirements">requirements</a></p>
 <pre>  <code class="language-text">$ nim c --passC:&quot;-I${HOME}/repos/notcurses/include&quot; \
-        --passL:&quot;-L${HOME}/repos/notcurses/build -rpath ${HOME}/repos/notcurses/build&quot; \
+        --passL:&quot;-L${HOME}/repos/notcurses/build&quot; \
+        --passL:&quot;-rpath ${HOME}/repos/notcurses/build&quot; \
         -r examples/tui1.nim
 </code></pre>
+<p>To build all the examples do</p>
+<pre>  <code class="language-text">$ extras/build_examples.sh
+</code></pre>
+<p>Additional options are supported</p>
+<pre>  <code class="language-text">$ extras/build_examples.sh -d:release --passC ...
+</code></pre>
+<h2>Tests</h2>
+<p>Unit tests for nim-notcurses can be run with <a href="https://github.com/nim-lang/nimble#readme">  <code>nimble</code></a></p>
+<pre>  <code class="language-text">$ nimble test
+</code></pre>
+<p>You can use additional <code>nimble</code> and compiler options</p>
+<pre>  <code class="language-text">$ nimble --verbose test --passC ...
+</code></pre>
+<p>The test suites are rather thin at present but will be expanded eventually.</p>
+<h2>Coverage</h2>
+<p>Coverage data is collected with <a href="https://github.com/linux-test-project/lcov#readme">  <code>lcov</code></a> and uploaded to <a href="https://codecov.io/gh/michaelsbradleyjr/nim-notcurses">codecov</a>.</p>
+<p>Most of Notcurses&apos; facilities expect a proper terminal. Also, given the nature of the library, visual inspection of program output and interaction with it as it runs are the most practical means to ensure it&apos;s functioning as intended. For those reasons coverage runs are peformed locally, i.e. a CI pipeline isn&apos;t suitable.</p>
+<p>Currently, most of the coverage data is generated by building and running the <a href="#examples">examples</a>, with unit <a href="#tests">tests</a> filling in a few gaps</p>
+<pre>  <code class="language-text">$ extras/coverage.sh
+</code></pre>
+<p>Additional options are supported</p>
+<pre>  <code class="language-text">$ extras/coverage.sh --passC ...
+</code></pre>
+<p>Upload to codecov is not attempted if environment variable <code>CODECOV_TOKEN</code> is empty or not set.</p>
+<p>:bulb: Quality of coverage data varies with the version of the Nim compiler, the newer the better. Also, owing to Nim&apos;s dead code elimination, which can&apos;t be disabled, coverage numbers can be misleading: a module may have many unmapped lines and still report <code>100%</code>. To get a true sense of the state of coverage, look at the reports for modules in <a href="notcurses/abi">  <code>notcurses/abi</code></a>: only lines pertaining to <code>proc</code> and <code>func</code> are generally of interest, and any that are not highlighted are not covered, i.e. those procedures are not being called via modules in <a href="notcurses/api">  <code>notcurses/api</code></a>.</p>
 <h2>Requirements</h2>
 <p><a href="https://github.com/dankamongmen/notcurses#readme">Notcurses</a> needs to be installed with your package manager :package:, or you can compile it from source.</p>
 <p>For example, on macOS, you could install it with <a href="https://brew.sh/">  <code>brew</code></a></p>
@@ -159,7 +187,8 @@ $ make -j16
 <p>If you build Notcurses yourself and don&apos;t install it system-wide, then its headers and libraries will not be in locations known to your compiler and linker. In that case, use <code>--passC</code> and <code>--passL</code> with <code>nim c</code>.</p>
 <p>For example, on macOS, if your own build of Notcurses is in <code>${HOME}/repos/notcurses/build</code>, you would use</p>
 <pre>  <code class="language-text">$ nim c --passC:&quot;-I${HOME}/repos/notcurses/include&quot; \
-        --passL:&quot;-L${HOME}/repos/notcurses/build -rpath ${HOME}/repos/notcurses/build&quot; \
+        --passL:&quot;-L${HOME}/repos/notcurses/build&quot; \
+        --passL:&quot;-rpath ${HOME}/repos/notcurses/build&quot; \
         ...
 </code></pre>
 <p>On Linux and Windows, drop the <code>-rpath</code> option.</p>
@@ -274,7 +303,7 @@ Notcurses&apos; ABI is stable per major version, and this package&apos;s low-lev
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-02T01:43:10Z
+        Builded at 2023-06-03T01:40:15Z
         </p>
       </div>
     </div>
