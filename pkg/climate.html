@@ -97,8 +97,8 @@
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;climate &gt;= 1.0.0&quot;</span></div></div>  </code></pre>
 <h1>Usage</h1>
 <p><strong>Command</strong> is defined by a <strong>route</strong> and a <strong>handler</strong>.</p>
-<p>Route is how you call your command. For example, <code>flow release start</code> is a route.</p>
-<p>Handler is the proc that is invoked when the command is called. It accepts a <code>Context</code> object and returns an <code>int</code>.</p>
+<p>Route is how you call your command. For example, in git flow, <code>flow release start</code> is a route.</p>
+<p>Handler is a proc invoked when the command is called. It accepts a <code>Context</code> object and returns an <code>int</code>.</p>
 <p><strong>Context</strong> is an object that holds the values for the arguments and options from the command line stored as a <code>cmdArguments</code> sequence and <code>cmdOptions</code> table.</p>
 <p>Command definition may look something like this:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># git.nim</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">climate</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">commands</span><span class="op">/</span><span class="ide">flow</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">commands</span><span class="op">/</span><span class="ide">flow</span><span class="op">/</span><span class="ide">release</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">commands</span> <span class="op">=</span> {</div></div><div class="line"><div class="line-content">  <span class="str">&quot;flow init&quot;</span>: <span class="ide">flow</span><span class="op">.</span><span class="ide">init</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;flow release start&quot;</span>: <span class="ide">release</span><span class="op">.</span><span class="ide">start</span>,</div></div><div class="line"><div class="line-content">  <span class="str">&quot;flow release finish&quot;</span>: <span class="ide">release</span><span class="op">.</span><span class="ide">finish</span></div></div><div class="line"><div class="line-content">}</div></div>  </code></pre>
@@ -108,7 +108,7 @@
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># git.nim</span></div></div><div class="line"><div class="line-content"><span class="ide">quit</span> <span class="ide">parseCommands</span>(<span class="ide">commands</span>)</div></div>  </code></pre>
 <p>See the full example in <code>demo</code> folder.</p>
 <h2>Sugar</h2>
-<p>To make it easier to work with arguments and options, Climate offers <code>arg</code>, <code>args</code>, and <code>opt</code> templates in <code>climate/sugar</code> module.</p>
+<p>To make it easier to work with arguments and options, Climate offers <code>arg(Context)</code>, <code>args(Context)</code>, and <code>opt(Context)</code> templates in <code>climate/sugar</code> module.</p>
 <p><code>arg</code> checks that the command has been invoked with exactly one argument and captures its value; if the command was invoked with zero or more than one arguments, the fallback code is executed:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">start</span><span class="op">*</span>(<span class="ide">context</span>: <span class="ide">Context</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">context</span><span class="op">.</span><span class="ide">arg</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">stdout</span><span class="op">.</span><span class="ide">write</span> fmt"Starting release {arg}..."</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;done!&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Release name is mandatory&quot;</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="num">1</span></div></div>  </code></pre>
 <p><code>args</code> checks that the command has been invoked with at least one argument and captures the values of the passed arguments; if the command was invoked with no arguments, the fallback code is executed:</p>
@@ -186,7 +186,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-03T01:40:15Z
+        Builded at 2023-06-04T01:56:02Z
         </p>
       </div>
     </div>

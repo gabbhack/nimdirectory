@@ -29855,6 +29855,8 @@ const packages = [
       "web",
       "async",
       "framework",
+      "frontend",
+      "backend",
       "hapticx"
     ],
     "description": "Macro-oriented asynchronous web-framework written with ♥",
