@@ -114,6 +114,10 @@
 <p>you wanna develop a telegram bot using <a href="https://github.com/ba0f3/telebot.nim/">telebot</a> for example, you come upon <code>UpdateCallback</code> type:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span>(<span class="ide">bot</span>: <span class="ide">Telebot</span>, <span class="ide">update</span>: <span class="ide">Update</span>): <span class="ide">Future</span>[<span class="ide">bool</span>]</div></div>  </code></pre>
 <p>what is <code>Future[bool]</code> for? why a <code>bool</code>? you can&apos;t even guess it without reading the docs [RTFM right? :D]</p>
+<h3>scenario 3</h3>
+<p>you&apos;ve stored list of attedences&apos; names by age.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">namesByAge</span>: <span class="ide">seq</span>[<span class="ide">seq</span>[<span class="ide">string</span>]]</div></div>  </code></pre>
+<p>Isn&apos;t <code>seq[seq[string]]</code> like a 2D matrix of names ?!?!?! 😵</p>
 <h2>Solution</h2>
 <p>but if you could somehow just <strong>  <em>label your types</em></strong>, the code would be a lot more readable!</p>
 <p>the <code>labeledtypes</code> package enables you to do this:</p>
@@ -121,6 +125,8 @@
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">cars</span>: <span class="ide">Table</span>[<span class="op">!</span>(<span class="ide">name</span>: <span class="ide">string</span>), <span class="op">!</span>(<span class="ide">isReady</span>: <span class="ide">bool</span>)]</div></div>  </code></pre>
 <h3>scenario 2</h3>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span>(<span class="ide">bot</span>: <span class="ide">Telebot</span>, <span class="ide">update</span>: <span class="ide">Update</span>): <span class="op">!</span>(<span class="ide">shouldEndWaiting</span>: <span class="ide">Future</span>[<span class="ide">bool</span>])</div></div>  </code></pre>
+<h3>scenario 3</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">namesByAge</span>: <span class="ide">seq</span>[(<span class="ide">age</span>: <span class="ide">int</span>) <span class="op">!&gt;</span> (<span class="ide">names</span>: <span class="ide">seq</span>[<span class="ide">string</span>])] <span class="com"># converts to seq[seq[string]]</span></div></div>  </code></pre>
 <h2>Origin of the Idea</h2>
 <p>I like the idea of <a href="https://go.dev/tour/basics/7">named return in golang</a>:</p>
 <pre>  <code class="language-go">func join(paths ...string) (joined_path string)
@@ -205,7 +211,7 @@ nimble install https://github.com/hamidb80/labeledtypes
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-04T01:56:02Z
+        Builded at 2023-06-05T01:41:44Z
         </p>
       </div>
     </div>
