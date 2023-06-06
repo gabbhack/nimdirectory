@@ -120,7 +120,7 @@
 <h2>Features ⚡</h2>
 <ul>
 <li>Multiple options for HTTP server! Happyx use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:happyxHttpx</code> and <code>microhttpserver</code> via <code>-d:happyxMicro</code> as alternative HTTP servers).</li>
-<li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSG</code> on other backends.</li>
+<li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSR</code> on other backends.</li>
 <li>Build HTML, CSS and pure JS with <code>buildHtml</code>, <code>buildStyle</code> and <code>buildJs</code> macros.</li>
 <li>Request JSON models with <code>model</code> macro.</li>
 <li>Routing and powerful path params.</li>
@@ -135,7 +135,7 @@
   <thead>
     <tr>
       <td align="center">SPA</td>
-      <td align="center">SSG</td>
+      <td align="center">SSR</td>
     </tr>
   </thead>
   <tbody>
@@ -164,10 +164,10 @@ import happyx</code>  <code>serve(&quot;127.0.0.1&quot;, 5000):
 <tr>
 <td align="left">  <pre lang="bash">nimble install happyx</pre></td>
 <td align="left">  <pre lang="bash">nimble install https://github.com/HapticX/happyx</pre></td>
-</tr></tbody></tr>Usage ▶</tbody>SSG</table><code class="language-bash">hpx create --name ssg_project --kind SSG
-cd ssg_project/src
+</tr></tbody></tr>Usage ▶</tbody>SSR</table><code class="language-bash">hpx create --name ssr_project --kind SSR
+cd ssr_project/src
 </code>
-<p>Main script will be able in <code>/ssg_project/src/main.nim</code></p>
+<p>Main script will be able in <code>/ssr_project/src/main.nim</code></p>
 <h4>Run 💻</h4>
 <table>
 <thead>
@@ -266,7 +266,7 @@ cd spa_project
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-05T01:41:44Z
+        Builded at 2023-06-06T01:44:06Z
         </p>
       </div>
     </div>
