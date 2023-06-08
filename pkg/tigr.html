@@ -149,10 +149,10 @@ The &apos;hello world&apos; example is less than 100kB:</p>
 <td>74k</td>
 </tr></tbody></table>
 <p>There are no additional libraries to include; everything is baked right into your program.</p>
-<p>TIGR is free to copy with no restrictions; see <a href="tigr.nim">tigr.nim</a>.</p>
+<p>TIGR is free to copy with no restrictions; see <a href="src/tigr.nim">tigr.nim</a>.</p>
 <h2>How do I program with TIGR?</h2>
 <p>  <img src="https://github.com/Angluca/tigr/blob/master/demo.gif" style="max-width: 100%;" alt="" /></p>
-<p>Here&apos;s an example Hello World program. For more information, just read <a href="tigr.nim">tigr.nim</a> to see the APIs available.</p>
+<p>Here&apos;s an example Hello World program. For more information, just read <a href="src/tigr.nim">tigr.nim</a> to see the APIs available.</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">tigr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">screen</span> <span class="op">=</span> <span class="ide">window</span>(<span class="num">320</span>, <span class="num">240</span>, <span class="str">&quot;Hello&quot;</span>, <span class="num">0</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="ide">screen</span><span class="op">.</span><span class="ide">closed</span>() <span class="op">==</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">screen</span><span class="op">.</span><span class="ide">clear</span>(<span class="ide">RGB</span>(<span class="num">0x80</span>, <span class="num">0x90</span>, <span class="num">0xa0</span>))</div></div><div class="line"><div class="line-content">  <span class="ide">screen</span><span class="op">.</span><span class="ide">print</span>(<span class="ide">tfont</span>, <span class="num">120</span>, <span class="num">110</span>, <span class="ide">tigr</span><span class="op">.</span><span class="ide">RGB</span>(<span class="num">0xff</span>, <span class="num">0xff</span>, <span class="num">0xff</span>), <span class="str">&quot;Hello the world!&quot;</span>);</div></div><div class="line"><div class="line-content">  <span class="com"># c: tigrUpdate,tigrRGB ... == nim: tigr.update, tigr.RGB ...</span></div></div><div class="line"><div class="line-content">  <span class="ide">update</span>(<span class="ide">screen</span>) <span class="com"># == screen.update() == tigr.update(screen)</span></div></div>  </code></pre>
 <h2>How to use TIGR</h2>
 <pre>  <code class="language-bash"># first install and test
@@ -253,7 +253,7 @@ The custom shader is in the form of a shader function: <code>void fxShader(out v
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-07T01:45:15Z
+        Builded at 2023-06-08T01:42:57Z
         </p>
       </div>
     </div>

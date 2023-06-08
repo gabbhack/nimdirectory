@@ -93,7 +93,53 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>See the docs</h1>
+<p>You can find the latest docs at <a href="https://ofthomas.gitlab.io/noptics">https://ofthomas.gitlab.io/noptics</a>.</p>
+<h1>To install Noptics</h1>
+<p>Clone the repo and run nimble install</p>
+<pre>  <code>git clone https://gitlab.com/OFThomas/noptics.git
+cd noptics
+nimble install 
+</code></pre>
+<p>That&apos;s it! You&apos;re ready to go, see some of the examples :).</p>
+<h3>Nim install (unix)</h3>
+<pre>  <code>curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+</code></pre>
+<p>Add to path add your <code>~/.bashrc</code></p>
+<pre>  <code>export PATH=~/.nimble/bin:$PATH
+</code></pre>
+<h3>To use nim</h3>
+<p>To compile to c (using c compiler):</p>
+<pre>  <code>nim c -r test.nim
+</code></pre>
+<p>To compile to c++ (using c++ compiler):</p>
+<pre>  <code>nim cpp -r test.nim
+</code></pre>
+<h2>Nim setup for vim</h2>
+<pre>  <code>https://github.com/BitR/ycm-nimsuggest
+</code></pre>
+<h1>Requires</h1>
+<pre>  <code>nimble install timeit
+nimble install weave
+nimble install gnuplot
+</code></pre>
+<p>gnuplot i.e.</p>
+<pre>  <code>sudo apt-get install gnuplot-x11
+</code></pre>
+<h1>build options</h1>
+<p>For Maximum Speed TM use</p>
+<pre>  <code>nim c -d:danger -d:lto quantum.nim
+</code></pre>
+<p>For debugging</p>
+<pre>  <code>nim c -d:danger --debugger:native --passC:-flto --passL:-flto --mm:orc quantum.nim
+</code></pre>
+<p>Profiling,</p>
+<pre>  <code>valgrind --tool=callgrind --dump-instr=yes --collect-jumps=yes ./quantum
+</code></pre>
+<p>Single thread 24clicks takes 60s with half_modes_gray_split_for</p>
+<p>Multithreaded 24clicks takes 11s with  double_prec_all_clicks_parallel(dim)
+Multithreaded 26clicks takes 60s with  double_prec_all_clicks_parallel(dim)</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -161,7 +207,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-07T01:45:15Z
+        Builded at 2023-06-08T01:42:57Z
         </p>
       </div>
     </div>

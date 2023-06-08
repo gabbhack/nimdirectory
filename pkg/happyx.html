@@ -119,7 +119,7 @@
 <p>HappyX is macro-oriented web framework so you mustn&apos;t write a lot of code ✨</p>
 <h2>Features ⚡</h2>
 <ul>
-<li>Multiple options for HTTP server! Happyx use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:happyxHttpx</code> and <code>microhttpserver</code> via <code>-d:happyxMicro</code> as alternative HTTP servers).</li>
+<li>Multiple options for HTTP server! Happyx use <code>asynchttpserver</code> as default HTTP server (<code>httpx</code> via <code>-d:happyxHttpx</code>, <code>httpbeast</code> via <code>-d:happyxBeast</code> and <code>microhttpserver</code> via <code>-d:happyxMicro</code> as alternative HTTP servers).</li>
 <li>Support <code>SPA</code> on <code>JS</code> backend and <code>SSR</code> on other backends.</li>
 <li>Build HTML, CSS and pure JS with <code>buildHtml</code>, <code>buildStyle</code> and <code>buildJs</code> macros.</li>
 <li>Request JSON models with <code>model</code> macro.</li>
@@ -172,16 +172,26 @@ cd ssr_project/src
 <table>
 <thead>
 <tr>
-<th align="left">Default</th>
-<th align="left">Httpx</th>
-<th align="left">microasynchttpserver</th>
+<th>HTTP Server</th>
+<th>Flag</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">  <pre lang="bash">nim c -r main</pre></td>
-<td align="left">  <pre lang="bash">nim c -r -d:httpx main</pre></td>
-<td align="left">  <pre lang="bash">nim c -r -d:micro main</pre></td>
+<td>Default</td>
+<td>no flags</td>
+</tr>
+<tr>
+<td>Httpx</td>
+<td>  <code>-d:httpx</code></td>
+</tr>
+<tr>
+<td>MicroAsyncHttpServer</td>
+<td>  <code>-d:micro</code></td>
+</tr>
+<tr>
+<td>HttpBeast</td>
+<td>  <code>-d:beast</code></td>
 </tr></tbody></table>
 <h3>SPA</h3>
 <pre>  <code class="language-bash">hpx create --name spa_project --kind SPA --path-params
@@ -266,7 +276,7 @@ cd spa_project
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-07T01:45:15Z
+        Builded at 2023-06-08T01:42:57Z
         </p>
       </div>
     </div>

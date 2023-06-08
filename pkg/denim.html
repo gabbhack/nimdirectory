@@ -127,8 +127,21 @@
 <li>Install Node.js and <code>node-gyp</code>, the native addon build tool</li>
 <li>Install Denim CLI via <code>nimble</code></li>
 </ul>
+<h3>Defining a module</h3>
+<p>Use <code>init</code> to define module initialization.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># registering properties and functions here</span></div></div>  </code></pre>
+<h3>Registering module exports</h3>
+<p>Export properties and functions using <code>registerFn()</code> for functions and <code>register()</code> for properties</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">0</span>, <span class="str">&quot;hello&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># fn body</span></div></div>  </code></pre>
+<h3>Check function arguments</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">3</span>, <span class="str">&quot;setUsername&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># throw NAPI error when</span></div></div><div class="line"><div class="line-content">    <span class="com"># mismatch arg types / receive less args than expected </span></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">Env</span><span class="op">.</span><span class="ide">expect</span>(<span class="ide">args</span>, <span class="str">&quot;MyProgram&quot;</span>,</div></div><div class="line"><div class="line-content">      (<span class="str">&quot;name&quot;</span>, <span class="ide">napi_string</span>),</div></div><div class="line"><div class="line-content">      (<span class="str">&quot;email&quot;</span>, <span class="ide">napi_string</span>),</div></div><div class="line"><div class="line-content">      (<span class="str">&quot;?age&quot;</span>, <span class="ide">napi_number</span>) <span class="com"># prefix with `?` to set as optional arg</span></div></div><div class="line"><div class="line-content">    ): <span class="kwd">return</span></div></div><div class="line"><div class="line-content">    <span class="com"># do the do</span></div></div>  </code></pre>
 <h2>Examples</h2>
-<p>todo add examples</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">1</span>, <span class="str">&quot;hello&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># access function arguments using `args` seq</span></div></div><div class="line"><div class="line-content">    <span class="com"># use `%*` operator to convert Nim types to `napi_value`</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="op">%*</span> <span class="str">&quot;Yay! &quot;</span> <span class="op">&amp;</span> <span class="ide">args</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getStr</span></div></div>  </code></pre>
+<h2>Real-World Examples</h2>
+<ul>
+<li><strong>Tim Engine</strong> is a powerful template engine and markup language written in Nim. <a href="https://github.com/openpeeps/tim/blob/main/src/tim.nim#L8-L133">Here is the code for building Tim to Node/Bun via NAPI</a>,</li>
+<li><strong>Bro</strong>, a statically typed stylesheet language alternative to SassC, DartSass, SassJS. Written in Nim. <a href="https://github.com/openpeeps/bro/blob/main/src/bro.nim#L6">Here is the code</a></li>
+</ul>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
 <li>🐛 Found a bug? <a href="https://github.com/openpeeps/denim/issues">Create a new Issue</a></li>
@@ -208,7 +221,7 @@ Thanks to <a href="https://github.com/AjBreidenbach">Andrew Breidenbach</a> and 
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-07T01:45:15Z
+        Builded at 2023-06-08T01:42:57Z
         </p>
       </div>
     </div>
