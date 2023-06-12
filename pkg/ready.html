@@ -98,6 +98,8 @@
 <p>If Ready is unable to convert the reply from Redis to your requested type, a <code>RedisError</code> is raised.</p>
 <h2>Connection pooling</h2>
 <p>Ready includes a built-in connection pool when compiled with <code>--threads:on</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ready</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">redisPool</span> <span class="op">=</span> <span class="ide">newRedisPool</span>(<span class="num">3</span>) <span class="com"># Defaults to localhost:6379</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This autoamtically removes a connection from the pool, runs the command</span></div></div><div class="line"><div class="line-content"><span class="com"># and then returns it back to the pool</span></div></div><div class="line"><div class="line-content"><span class="ide">redisPool</span><span class="op">.</span><span class="ide">command</span>(<span class="str">&quot;PING&quot;</span>)</div></div>  </code></pre>
+<p>Or, if you want to run more than one command with the same connection:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ready</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">redisPool</span> <span class="op">=</span> <span class="ide">newRedisPool</span>(<span class="num">3</span>) <span class="com"># Defaults to localhost:6379</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">redisPool</span><span class="op">.</span><span class="ide">withConnection</span> <span class="ide">conn</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># `conn` is automatically recycled back into the pool after this block</span></div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">command</span>(<span class="str">&quot;PING&quot;</span>)</div></div>  </code></pre>
 <p>Reusing Redis connections is much faster and more efficient than opening new connections for every command.</p>
 <h2>Pipelining commands and transactions</h2>
@@ -113,7 +115,7 @@
 <h2>Pro Tips</h2>
 <p>You can use Ready in two ways, either by calling <code>command</code> or by calling <code>send</code> and <code>receive</code>. Calling <code>command</code> is the equivalent of calling <code>send</code> and then calling <code>receive</code> immediately.</p>
 <p>Whenever a <code>command</code> or <code>receive</code> call gets an error reply from Redis a <code>RedisError</code> is raised. This means discarding the reply in <code>discard redis.command(&quot;PING&quot;)</code> is perfectly ok. If the reply was an error an exception would have been raised.</p>
-<p>Remember to call <code>close</code> if you no longer need a Redis connection. The connections are not garbage collected.</p>
+<p>If you open a short-lived Redis connection, remember to call <code>close</code> when you no longer need it. The connections are not garbage collected. (For HTTP servers this is unlikely, see <a href="https://github.com/guzba/ready/issues/1#issuecomment-1586255510">#1</a> for a brief discussion.)</p>
 <h2>Why use <code>send</code> and <code>receive</code> separately? Two reasons:</h2>
 <p>First, where possible, it is more efficient to pipeline many Redis commands. This is easy to do with Ready, just call <code>send</code> multiple times (or ideally call <code>send</code> with a seq of commands).</p>
 <p>Second, you may want to have a separate thread be sending vs receiving. A common use of this is <a href="https://redis.io/docs/manual/pubsub/">PubSub</a>, where one thread is dedicated to receiving messages and the sending thread manages what channels are subscribed to. See <a href="https://github.com/guzba/ready/blob/master/examples/pubsub.nim">this example</a>.</p>
@@ -185,7 +187,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-11T01:50:09Z
+        Builded at 2023-06-12T01:42:22Z
         </p>
       </div>
     </div>
