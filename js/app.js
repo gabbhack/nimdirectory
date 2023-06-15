@@ -30447,7 +30447,8 @@ const packages = [
     ],
     "description": "nimcatapi is a library that lets you easily request images from thecatapi and/or thedogapi.",
     "license": "GPL-3.0-only",
-    "web": "https://github.com/nirokay/nimcatapi"
+    "web": "https://github.com/nirokay/nimcatapi",
+    "doc": "https://nirokay.github.io/nim-docs/nimcatapi/nimcatapi.html"
   },
   {
     "name": "simplelog",
@@ -30523,6 +30524,36 @@ const packages = [
     "license": "Unlicense",
     "web": "https://github.com/patternspandemic/pixienator",
     "doc": "https://patternspandemic.github.io/pixienator/"
+  },
+  {
+    "name": "nimmicrograd",
+    "url": "https://github.com/soheil555/nimmicrograd",
+    "method": "git",
+    "tags": [
+      "micrograd",
+      "neural-network",
+      "deep-learning",
+      "autograd-engine"
+    ],
+    "description": "Nim implementation of micrograd autograd engine.",
+    "license": "MIT",
+    "web": "https://github.com/soheil555/nimmicrograd"
+  },
+  {
+    "name": "nimegenerator",
+    "url": "https://github.com/nirokay/nimegenerator",
+    "method": "git",
+    "tags": [
+      "random-name-generator",
+      "random-word-generator",
+      "library",
+      "executable",
+      "hybrid"
+    ],
+    "description": "Random name/word generator.",
+    "license": "GPL-3.0-only",
+    "web": "https://github.com/nirokay/nimegenerator",
+    "doc": "https://nirokay.github.io/nim-docs/nimegenerator/nimegenerator.html"
   }
 ]
 const options = {
