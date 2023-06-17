@@ -30554,6 +30554,22 @@ const packages = [
     "license": "GPL-3.0-only",
     "web": "https://github.com/nirokay/nimegenerator",
     "doc": "https://nirokay.github.io/nim-docs/nimegenerator/nimegenerator.html"
+  },
+  {
+    "name": "hyperloglog",
+    "url": "https://github.com/deNULL/hyperloglog",
+    "method": "git",
+    "tags": [
+      "hyperloglog",
+      "hll",
+      "data-structure",
+      "count-distinct",
+      "cardinality",
+      "sets"
+    ],
+    "description": "A HyperLogLog data structure implementation in Nim",
+    "license": "MIT",
+    "web": "https://github.com/deNULL/hyperloglog"
   }
 ]
 const options = {
