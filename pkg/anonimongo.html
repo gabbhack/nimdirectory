@@ -336,7 +336,7 @@ the whole <code>to</code> conversion.</p>
 each field as its own.</p>
 <p>  <a href="#table-of-content">TOC</a></p>
 <h2>Install</h2>
-<p>Anonimongo requires minimum Nim version of <code>v1.2.0</code>.</p>
+<p>Anonimongo requires minimum Nim version of <code>v1.4.0</code>.</p>
 <p>For installation, we can choose several methods will be mentioned below.</p>
 <p>Using Nimble package:</p>
 <pre>  <code>nimble install anonimongo
@@ -368,6 +368,7 @@ is usually only changes in something unrelated to the code itself.</p>
 and <a href="https://github.com/mongodb/specifications">mongo spec</a>.</p>
 <h3>Features connection</h3>
 <ul>
+<li>:heavy_check_mark: Driver for Mongo 6 and up</li>
 <li>:heavy_check_mark: URI connect</li>
 <li>:heavy_check_mark: Multiquery on URI connect</li>
 <li>:heavy_check_mark: Multihost on URI connect</li>
@@ -386,24 +387,24 @@ and <a href="https://github.com/mongodb/specifications">mongo spec</a>.</p>
 <h3>Features commands</h3>
 <h4>:white_check_mark: Aggregation commands 4/4 <a href="https://docs.mongodb.com/manual/reference/command/nav-aggregation/">Mongo doc</a> <a href="src/anonimongo/dbops/aggregation.nim">Anonimongo module</a></h4>
 <ul>
-<li>:heavy_check_mark: <code>aggregate</code> (collection procs: <a href="/src/anonimongo/collections.nim#L283">  <code>aggregate</code></a>)</li>
-<li>:heavy_check_mark: <code>count</code> (collection procs: <a href="/src/anonimongo.collections.nim#L231">  <code>count</code></a>)</li>
-<li>:heavy_check_mark: <code>distinct</code> (collection procs: <a href="/src/anonimongo.collections.nim#L267">  <code>distinct</code></a>)</li>
-<li>:heavy_check_mark: <code>mapReduce</code></li>
+<li>:heavy_check_mark: <code>aggregate</code> (collection procs: <a href="/src/anonimongo/collections.nim#L289">  <code>aggregate</code></a>)</li>
+<li>:heavy_check_mark: <code>count</code> (collection procs: <a href="/src/anonimongo.collections.nim#L236">  <code>count</code></a>)</li>
+<li>:heavy_check_mark: <code>distinct</code> (collection procs: <a href="/src/anonimongo.collections.nim#L273">  <code>distinct</code></a>)</li>
+<li>:heavy_check_mark: <code>mapReduce</code> (db procs: <a href="/src/anonimongo/dbops/aggregation.nim#L81">  <code>mapReduce</code></a>)</li>
 </ul>
 <h4>:white_check_mark: Geospatial command 1/1 <a href="https://docs.mongodb.com/manual/reference/command/nav-geospatial/">Mongo doc</a> <a href="src/anonimongo/dbops/geospatial.nim#L109">Anonimongo module</a></h4>
 <ul>
-<li>:heavy_check_mark: <code>geoSearch</code></li>
+<li>:heavy_check_mark: <code>geoSearch</code> (db procs: <a href="/src/anonimongo/dbops/aggregation.nim#L110">  <code>geoSearch</code></a>)</li>
 </ul>
 <h4>:white_check_mark: Query and write operations commands 7/7 (<del>8</del>) <a href="https://docs.mongodb.com/manual/reference/command/nav-crud/">Mongo doc</a> <a href="src/anonimongo/dbops/crud.nim">Anonimongo module</a></h4>
 <ul>
 <li>:heavy_check_mark: <code>delete</code> (collection procs: <a href="/src/anonimongo/collections.nim#L167">  <code>remove</code></a>, <a href="/src/anonimongo/collections.nim#L179">  <code>remove</code></a>, <a href="/src/anonimongo/collections.nim#L199">  <code>remove</code></a>)</li>
 <li>:heavy_check_mark: <code>find</code> (collection procs: <a href="/src/anonimongo/collections.nim#L99">  <code>find</code></a>, <a href="/src/anonimongo/collections.nim#L103">  <code>findOne</code></a>, <a href="/src/anonimongo/collections.nim#L109">  <code>findAll</code></a>, <a href="/src/anonimongo/collections.nim#L116">  <code>findIter</code></a>)</li>
 <li>:heavy_check_mark: <code>findAndModify</code> (collection procs: <a href="/src/anonimongo/collections.nim#L122">  <code>findAndModify</code></a>)</li>
-<li>:heavy_check_mark: <code>getMore</code></li>
+<li>:heavy_check_mark: <code>getMore</code> (db procs: <a href="/src/anonimongo/dbops/crud.nim#L73">  <code>getMore</code></a>)</li>
 <li>:heavy_check_mark: <code>insert</code> (collection procs: <a href="/src/anonimongo/collections.nim#L211">  <code>insert</code></a>)</li>
 <li>:heavy_check_mark: <code>update</code> (collection procs: <a href="/src/anonimongo/collections.nim#L143">  <code>update</code></a>)</li>
-<li>:heavy_check_mark: <code>getLastError</code></li>
+<li>:heavy_check_mark: <code>getLastError</code> (db procs: <a href="/src/anonimongo/dbops/crud.nim#L147">  <code>getLastError</code></a>)</li>
 <li>:white_square_button: <code>resetError</code> (deprecated)</li>
 </ul>
 <h4>:x: Query plan cache commands 0/6 <a href="https://docs.mongodb.com/manual/reference/command/nav-plan-cache/">Mongo doc</a> <del>Anonimongo module</del></h4>
@@ -417,48 +418,47 @@ and <a href="https://github.com/mongodb/specifications">mongo spec</a>.</p>
 </ul>
 <h4>:ballot_box_with_check: Database operations commands 1/3 <a href="https://docs.mongodb.com/manual/reference/command/nav-authentication/">Mongo doc</a> <a href="src/anonimongo/core/types.nim#L511">Anonimongo module</a></h4>
 <ul>
-<li>:heavy_check_mark: <code>authenticate</code>, implemented as Mongo proc. (<a href="src/anonimongo/core/types.nim#L511">  <code>authenticate</code></a>, <a href="src/anonimongo/core/types.nim#L519">  <code>authenticate</code></a>)</li>
+<li>:heavy_check_mark: <code>authenticate</code>, implemented as Mongo proc. (<a href="src/anonimongo/core/types.nim#L509">  <code>authenticate</code></a>, <a href="src/anonimongo/core/types.nim#L517">  <code>authenticate</code></a>)</li>
 <li>:white_square_button: <code>getnonce</code></li>
 <li>:white_square_button: <code>logout</code></li>
 </ul>
 <h4>:white_check_mark: User management commands 7/7 <a href="https://docs.mongodb.com/manual/reference/command/nav-user-management/">Mongo doc</a> <a href="src/anonimongo/dbops/client.nim">Anonimongo module</a></h4>
 <ul>
-<li>:heavy_check_mark: <code>createUser</code></li>
-<li>:heavy_check_mark: <code>dropAllUsersFromDatabase</code></li>
-<li>:heavy_check_mark: <code>dropUser</code></li>
-<li>:heavy_check_mark: <code>grantRolesToUser</code></li>
-<li>:heavy_check_mark: <code>revokeRolesFromUser</code></li>
-<li>:heavy_check_mark: <code>updateUser</code></li>
-<li>:heavy_check_mark: <code>usersInfo</code></li>
+<li>:heavy_check_mark: <code>createUser</code> (db procs: <a href="/src/anonimongo/dbops/client.nim#L162">  <code>createUser</code></a>)</li>
+<li>:heavy_check_mark: <code>dropAllUsersFromDatabase</code> (db:procs <a href="/src/anonimongo/dbops/client.nim#L196">  <code>dropAllUsersFromDatabase</code></a>)</li>
+<li>:heavy_check_mark: <code>dropUser</code> (db procs: <a href="/src/anonimongo/dbops/client.nim#L218">  <code>dropUser</code></a>)</li>
+<li>:heavy_check_mark: <code>grantRolesToUser</code> (db procs: <a href="/src/anonimongo/dbops/client.nim#L231">  <code>grantRolesToUser</code></a>)</li>
+<li>:heavy_check_mark: <code>revokeRolesFromUser</code> (db procs: <a href="/src/anonimongo/dbops/client.nim#L235">  <code>revokeRolesFromUser</code></a>)</li>
+<li>:heavy_check_mark: <code>updateUser</code> (db procs: <a href="/src/anonimongo/dbops/client.nim#L171">  <code>updateUser</code></a>)</li>
+<li>:heavy_check_mark: <code>usersInfo</code> (db procs: <a href="/src/anonimongo/dbops/client.nim#L180">  <code>usersInfo</code></a>)</li>
 </ul>
 <h4>:white_check_mark: Role management commands 10/10 <a href="https://docs.mongodb.com/manual/reference/command/nav-role-management/">Mongo doc</a> <a href="src/anonimongo/dbops/rolemgmt.nim">Anonimongo module</a></h4>
 <ul>
-<li>:heavy_check_mark: <code>createRole</code></li>
-<li>:heavy_check_mark: <code>dropRole</code></li>
-<li>:heavy_check_mark: <code>dropAllRolesFromDatabase</code></li>
-<li>:heavy_check_mark: <code>grantPrivilegesToRole</code></li>
-<li>:heavy_check_mark: <code>grantRolesToRole</code></li>
-<li>:heavy_check_mark: <code>invalidateUserCache</code></li>
-<li>:heavy_check_mark: <code>revokePrivilegesFromRole</code></li>
-<li>:heavy_check_mark: <code>rovokeRolesFromRole</code></li>
-<li>:heavy_check_mark: <code>rolesInfo</code></li>
-<li>:heavy_check_mark: <code>updateRole</code></li>
+<li>:heavy_check_mark: <code>createRole</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L18">  <code>createRole</code></a>)</li>
+<li>:heavy_check_mark: <code>dropRole</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L53">  <code>dropRole</code></a>)</li>
+<li>:heavy_check_mark: <code>dropAllRolesFromDatabase</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L59">  <code>dropAllRolesFromDatabase</code></a>)</li>
+<li>:heavy_check_mark: <code>grantPrivilegesToRole</code>(db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L73">  <code>grantPrivilegesToRole</code></a>)</li>
+<li>:heavy_check_mark: <code>grantRolesToRole</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L78">  <code>grantRolesToRole</code></a>)</li>
+<li>:heavy_check_mark: <code>invalidateUserCache</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L83">  <code>invalidateUserCache</code></a>)</li>
+<li>:heavy_check_mark: <code>revokePrivilegesFromRole</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L86">  <code>revokePrivilegesFromRole</code></a>)</li>
+<li>:heavy_check_mark: <code>revokeRolesFromRole</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L91">  <code>revokeRolesFromRole</code></a>)</li>
+<li>:heavy_check_mark: <code>rolesInfo</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L96">  <code>rolesInfo</code></a>)</li>
+<li>:heavy_check_mark: <code>updateRole</code> (db procs: <a href="/src/anonimongo/dbops/rolemgmt.nim#L31">  <code>updateRole</code></a>)</li>
 </ul>
 <h4>:white_check_mark: Replication commands 12/12(<del>13</del>) <a href="https://docs.mongodb.com/manual/reference/command/nav-replication/">Mongo doc</a> <a href="src/anonimongo/dbops/replication.nim">Anonimongo module</a></h4>
 <ul>
 <li>:white_square_button: <code>applyOps</code> (internal command)</li>
-<li>:heavy_check_mark: <code>isMaster</code></li>
-<li>:heavy_check_mark: <code>replSetAbortPrimaryCatchUp</code></li>
-<li>:heavy_check_mark: <code>replSetFreeze</code></li>
-<li>:heavy_check_mark: <code>replSetGetConfig</code></li>
-<li>:heavy_check_mark: <code>replSetGetStatus</code></li>
-<li>:heavy_check_mark: <code>replSetGetStatus</code></li>
-<li>:heavy_check_mark: <code>replSetInitiate</code></li>
-<li>:heavy_check_mark: <code>replSetMaintenance</code></li>
-<li>:heavy_check_mark: <code>replSetReconfig</code></li>
-<li>:heavy_check_mark: <code>replSetResizeOplog</code></li>
-<li>:heavy_check_mark: <code>replSetStepDown</code></li>
-<li>:heavy_check_mark: <code>replSetSyncFrom</code></li>
+<li>:heavy_check_mark: <code>isMaster</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L5">  <code>isMaster</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetAbortPrimaryCatchUp</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L16">  <code>replSetAbortPrimaryCatchUp</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetFreeze</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L19">  <code>replSetFreeze</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetGetConfig</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L22">  <code>replSetGetConfig</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetGetStatus</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L32">  <code>replSetGetStatus</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetInitiate</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L38">  <code>replSetInitiate</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetMaintenance</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L44">  <code>replSetMaintenance</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetReconfig</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L48">  <code>replSetReconfig</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetResizeOplog</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L58">  <code>replSetResizeOplog</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetStepDown</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L67">  <code>replSetStepDown</code></a>)</li>
+<li>:heavy_check_mark: <code>replSetSyncFrom</code> (db procs: <a href="/src/anonimongo/dbops/replication.nim#L81">  <code>replSetSyncFrom</code></a>)</li>
 </ul>
 <h4>:x: Sharding commands 0/27 <a href="https://docs.mongodb.com/manual/reference/command/nav-sharding/">Mongo doc</a> <del>Anonimongo module</del></h4>
 <ul>
@@ -510,65 +510,65 @@ and <a href="https://github.com/mongodb/specifications">mongo spec</a>.</p>
 <li>:white_square_button: <code>compact</code></li>
 <li>:white_square_button: <code>connPoolSync</code></li>
 <li>:white_square_button: <code>convertToCapped</code></li>
-<li>:heavy_check_mark: <code>create</code></li>
+<li>:heavy_check_mark: <code>create</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L23">  <code>create</code></a>)</li>
 <li>:heavy_check_mark: <code>createIndexes</code> (collection proc: <a href="src/anonimongo/collections.nim#L248">  <code>createIndexes</code></a>)</li>
-<li>:heavy_check_mark: <code>currentOp</code></li>
-<li>:heavy_check_mark: <code>drop</code></li>
-<li>:heavy_check_mark: <code>dropDatabase</code></li>
+<li>:heavy_check_mark: <code>currentOp</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L192">  <code>currentOp</code></a>)</li>
+<li>:heavy_check_mark: <code>drop</code> (collection procs: <a href="/src/anonimongo/collections.nim#L233">  <code>drop</code></a>)</li>
+<li>:heavy_check_mark: <code>dropDatabase</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L71">  <code>dropDatabase</code></a>)</li>
 <li>:white_square_button: <code>dropConnections</code></li>
 <li>:heavy_check_mark: <code>dropIndexes</code> (collection procs: <a href="src/anonimongo/collections.nim#L275">  <code>dropIndex</code></a>, <a href="src/anonimongo/collections.nim#L275">  <code>dropIndexes</code></a>)</li>
 <li>:white_square_button: <code>filemd5</code></li>
 <li>:white_square_button: <code>fsync</code></li>
 <li>:white_square_button: <code>fsyncUnlock</code></li>
 <li>:white_square_button: <code>getParameter</code></li>
-<li>:heavy_check_mark: <code>getDefaultReadConcern</code></li>
-<li>:heavy_check_mark: <code>killCursors</code></li>
-<li>:heavy_check_mark: <code>killOp</code></li>
-<li>:heavy_check_mark: <code>listCollections</code></li>
-<li>:heavy_check_mark: <code>listDatabases</code></li>
+<li>:heavy_check_mark: <code>getDefaultReadConcern</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L241">  <code>getDefaultReadConcern</code></a>)</li>
+<li>:heavy_check_mark: <code>killCursors</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L223">  <code>killCursors</code></a>)</li>
+<li>:heavy_check_mark: <code>killOp</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L205">  <code>killOp</code></a>)</li>
+<li>:heavy_check_mark: <code>listCollections</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L87">  <code>listCollections</code></a>)</li>
+<li>:heavy_check_mark: <code>listDatabases</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L114">  <code>listDatabases</code></a></li>
 <li>:heavy_check_mark: <code>listIndexes</code> (collection proc: <a href="src/anonimongo/collections.nim#L264">  <code>listIndexes</code></a>)</li>
 <li>:white_square_button: <code>logRotate</code></li>
 <li>:white_square_button: <code>reIndex</code></li>
-<li>:heavy_check_mark: <code>renameCollection</code></li>
-<li>:heavy_check_mark: <code>setDefaultRWConcern</code></li>
+<li>:heavy_check_mark: <code>renameCollection</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L158">  <code>renameCollection</code></a>)</li>
+<li>:heavy_check_mark: <code>setDefaultRWConcern</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L228">  <code>setDefaultRWConcern</code></a>)</li>
 <li>:white_square_button: <code>setFeatureCompabilityVersion</code></li>
 <li>:white_square_button: <code>setIndexCommitQuorum</code></li>
 <li>:white_square_button: <code>setParameter</code></li>
-<li>:heavy_check_mark: <code>shutdown</code></li>
+<li>:heavy_check_mark: <code>shutdown</code> (db procs: <a href="/src/anonimongo/dbops/admmgmt.nim#L173">  <code>shutdown</code></a>)</li>
 </ul>
 <h4>:white_check_mark: Diagnostic commands 17/17 (<del>26</del>) <a href="https://docs.mongodb.com/manual/reference/command/nav-diagnostic/">Mongo module</a> <a href="src/anonimongo/dbops/diagnostic.nim">Anonimongo module</a></h4>
 <ul>
 <li>:white_square_button: <code>availableQueryOptions</code> (internal command)</li>
-<li>:heavy_check_mark: <code>buildInfo</code></li>
-<li>:heavy_check_mark: <code>collStats</code></li>
-<li>:heavy_check_mark: <code>connPoolStats</code></li>
-<li>:heavy_check_mark: <code>connectionStatus</code></li>
+<li>:heavy_check_mark: <code>buildInfo</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L18">  <code>buildInfo</code></a>)</li>
+<li>:heavy_check_mark: <code>collStats</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L21">  <code>collStats</code></a>)</li>
+<li>:heavy_check_mark: <code>connPoolStats</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L25">  <code>connPoolStats</code></a>)</li>
+<li>:heavy_check_mark: <code>connectionStatus</code> *(db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L28">  <code>connectionStatus</code></a>)</li>
 <li>:white_square_button: <code>cursorInfo</code> (removed, use metrics.cursor from <code>serverStatus</code> instead)</li>
-<li>:heavy_check_mark: <code>dataSize</code></li>
-<li>:heavy_check_mark: <code>dbHash</code></li>
-<li>:heavy_check_mark: <code>dbStats</code></li>
+<li>:heavy_check_mark: <code>dataSize</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L33">  <code>dataSize</code></a>)</li>
+<li>:heavy_check_mark: <code>dbHash</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L41">  <code>dbHash</code></a>)</li>
+<li>:heavy_check_mark: <code>dbStats</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L46">  <code>dbStats</code></a>)</li>
 <li>:white_square_button: <code>diagLogging</code> (removed, on Mongo 3.6, use mongoreplay instead)</li>
 <li>:white_square_button: <code>driverOIDTest</code> (internal command)</li>
-<li>:heavy_check_mark: <code>explain</code></li>
+<li>:heavy_check_mark: <code>explain</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L51">  <code>explain</code></a>)</li>
 <li>:white_square_button: <code>features</code> (internal command)</li>
-<li>:heavy_check_mark: <code>getCmdLineOpts</code></li>
-<li>:heavy_check_mark: <code>getLog</code></li>
-<li>:heavy_check_mark: <code>hostInfo</code></li>
+<li>:heavy_check_mark: <code>getCmdLineOpts</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L56">  <code>getCmdLineOpts</code></a>)</li>
+<li>:heavy_check_mark: <code>getLog</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L59">  <code>getLog</code></a>)</li>
+<li>:heavy_check_mark: <code>hostInfo</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L62">  <code>hostInfo</code></a>)</li>
 <li>:white_square_button: <code>isSelf</code> (internal command)</li>
-<li>:heavy_check_mark: <code>listCommands</code></li>
+<li>:heavy_check_mark: <code>listCommands</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L66">  <code>listCommands</code></a>)</li>
 <li>:white_square_button: <code>netstat</code> (internal command)</li>
-<li>:heavy_check_mark: <code>ping</code></li>
-<li>:white_square_button: <code>profile</code> (internal command)</li>
-<li>:heavy_check_mark: <code>serverStatus</code></li>
-<li>:heavy_check_mark: <code>shardConnPoolStats</code></li>
-<li>:heavy_check_mark: <code>top</code></li>
-<li>:heavy_check_mark: <code>validate</code></li>
+<li>:heavy_check_mark: <code>ping</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L69">  <code>ping</code></a>)</li>
+<li>:heavy_check_mark: <code>profile</code> (internal command) (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L75">  <code>profile</code></a>)</li>
+<li>:heavy_check_mark: <code>serverStatus</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L83">  <code>serverStat</code></a>)</li>
+<li>:heavy_check_mark: <code>shardConnPoolStats</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L86">  <code>shardConnPoolStats</code></a>)</li>
+<li>:heavy_check_mark: <code>top</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L89">  <code>top</code></a>)</li>
+<li>:heavy_check_mark: <code>validate</code> (db procs: <a href="src/anonimongo/dbops/diagnostic.nim#L92">  <code>validate</code></a>)</li>
 <li>:white_square_button: <code>whatsmyuri</code> (internal command)</li>
 </ul>
 <h4>:white_check_mark: Free monitoring commands 2/2 <a href="https://docs.mongodb.com/manual/reference/command/nav-free-monitoring/">Mongo doc</a> <a href="src/anonimongo/dbops/freemonitoring.nim">Anonimongo module</a></h4>
 <ul>
-<li>:heavy_check_mark: <code>getFreeMonitoringStatus</code></li>
-<li>:heavy_check_mark: <code>setFreeMonitoring</code></li>
+<li>:heavy_check_mark: <code>getFreeMonitoringStatus</code> (db procs: <a href="src/anonimongo/dbops/freemonitoring.nim#L4">  <code>getFreeMonitoringStatus</code></a>)</li>
+<li>:heavy_check_mark: <code>setFreeMonitoring</code> (db procs: <a href="src/anonimongo/dbops/freemonitoring.nim#L9">  <code>setFreeMonitoring</code></a>)</li>
 </ul>
 <h4>:x: <del>Auditing commands 0/1</del>, only available for Mongodb Enterprise and AtlasDB <a href="https://docs.mongodb.com/manual/reference/command/nav-auditing/">Mongo doc</a> <del>Anonimongo module</del></h4>
 <ul>
@@ -679,7 +679,7 @@ you can email to <a href="rahmatullah21@proton.me">rahmatullah21@proton.me</a> f
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-21T01:27:03Z
+        Builded at 2023-06-22T01:37:01Z
         </p>
       </div>
     </div>
