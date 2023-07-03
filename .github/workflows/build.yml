@@ -24,7 +24,7 @@ jobs:
         uses: jiro4989/setup-nim-action@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          nim-version: stable
+          nim-version: 1.6.12
 
       - name: Install dependencies
         run: nimble install -d -y
