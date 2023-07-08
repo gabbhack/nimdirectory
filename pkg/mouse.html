@@ -94,45 +94,63 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>mouse</h1>
-<p>  <a href="https://raw.githubusercontent.com/hiikion/mouse/main/assets/made-with-nim.svg">    <img src="https://raw.githubusercontent.com/hiikion/mouse/main/assets/made-with-nim.svg" style="max-width: 100%;" alt="" />  </a></p>
 <p>This library allows you to programmatically control the mouse.</p>
-<h2>Installing</h2>
 <pre>  <code>nimble install mouse
 </code></pre>
-<h3>installing deps on linux <br /></h3>
-<p>arch: <code>pacman -S xdotool</code> <br />
-ubuntu/debian: <code>apt-get install xdotool</code> <br />
-fedora: <code>dnf install xdotool</code> <br />
-openSUSE: <code>zypper install xdotool</code> <br />
-other: <code>brew install xdotool</code> <br /></p>
-<h3>installing dependencies for macos <br /></h3>
-<p><code>brew install xdotool</code> <br /></p>
-<h2>Suported platforms</h2>
+<h1>Suported platforms</h1>
 <table>
 <thead>
 <tr>
 <th>Platform</th>
-<th>Is supported</th>
+<th>Support</th>
+<th>Implementation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Windows</td>
-<td>✔️</td>
+<td>full</td>
+<td>WINAPI</td>
 </tr>
 <tr>
 <td>Linux</td>
-<td>✔️</td>
+<td>full</td>
+<td>X11</td>
 </tr>
 <tr>
-<td>Mac</td>
-<td>✔️</td>
+<td>Macos</td>
+<td>none</td>
+<td>none</td>
 </tr></tbody></table>
-<h2>Examples</h2>
-<h3>Universal</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mouse</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">click</span>(<span class="ide">Left</span>) </div></div><div class="line"><div class="line-content"><span class="ide">press</span>(<span class="ide">Left</span>)</div></div><div class="line"><div class="line-content"><span class="ide">release</span>(<span class="ide">Left</span>)</div></div><div class="line"><div class="line-content"><span class="ide">move</span>(<span class="num">30</span>, <span class="num">30</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="ide">true</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">position</span> <span class="op">=</span> <span class="ide">getPos</span>()</div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> fmt"position: {position}"</div></div>  </code></pre>
-<h3>Windows-only</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mouse</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">scroll</span>(<span class="num">5</span>)</div></div>  </code></pre>
+<h1>Docs</h1>
+<h2>procs</h2>
+<h3>click</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">click</span>(<span class="ide">button</span>: <span class="ide">MouseButton</span>)</div></div>  </code></pre>
+<p>Clicks the given mouse button.</p>
+<h3>press</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">press</span>(<span class="ide">button</span>: <span class="ide">MouseButton</span>)</div></div>  </code></pre>
+<p>Presses the given mouse button.</p>
+<h3>release</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">release</span>(<span class="ide">button</span>: <span class="ide">MouseButton</span>)</div></div>  </code></pre>
+<p>Releases the given mouse button.</p>
+<h3>move</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">move</span>(<span class="ide">x</span>, <span class="ide">y</span>: <span class="ide">int</span>, `<span class="kwd">type</span>` <span class="op">=</span> <span class="ide">Relative</span>)</div></div>  </code></pre>
+<p>Moves the mouse pointer to the location given in <code>x</code> <code>y</code>.</p>
+<p><code>Relative</code> moves the mouse relative to the current mouse position.</p>
+<p>For exmaple calling <code>move(0, 100)</code> will move the pointer 100 pixels up.</p>
+<p><code>Absolute</code> moves the mouse to absolute coordinates on the screen.</p>
+<p>So calling <code>move(0, 100, Absolute)</code> will move the pointer to the pixel in the position <code>(0, 100)</code>.</p>
+<h3>smoothMove</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">smoothMove</span>(<span class="ide">x</span>: <span class="ide">int</span>, <span class="ide">y</span>: <span class="ide">int</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">smoothingStep</span>: <span class="ide">float</span> <span class="op">=</span> <span class="num">0.005</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">sleep</span> <span class="op">=</span> <span class="num">3</span>,</div></div><div class="line"><div class="line-content">    `<span class="kwd">type</span>` <span class="op">=</span> <span class="ide">Absolute</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>Moves the mouse pointer in a smooth human like way, to the location given in <code>x</code> <code>y</code>.</p>
+<h3>scroll</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">scroll</span>(<span class="ide">amount</span>: <span class="ide">int</span>, <span class="ide">direction</span>: <span class="ide">ScrollDirection</span>)</div></div>  </code></pre>
+<p>Scrolls the mouse wheel the <code>amount</code> of notches in the given direction.</p>
+<h3>getPos</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">getPos</span>(): <span class="ide">Point</span></div></div>  </code></pre>
+<p>Gets the pointer position on the screen.</p>
+<h2>types</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">MouseButton</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Left</span>, <span class="ide">Right</span>, <span class="ide">Middle</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content"><span class="ide">PositionKind</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Relative</span>, <span class="ide">Absolute</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content"><span class="ide">ScrollDirection</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Up</span>, <span class="ide">Down</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Point</span> <span class="op">=</span> <span class="kwd">tuple</span></div></div><div class="line"><div class="line-content">    <span class="ide">x</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">    <span class="ide">y</span>: <span class="ide">int</span></div></div>  </code></pre>
 </document>
             
         </div>
@@ -201,7 +219,7 @@ other: <code>brew install xdotool</code> <br /></p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-27T01:48:35Z
+        Builded at 2023-07-08T01:46:13Z
         </p>
       </div>
     </div>

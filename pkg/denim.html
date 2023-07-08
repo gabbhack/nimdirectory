@@ -102,45 +102,76 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><p align="center">
-  <img src="https://github.com/openpeeps/denim/blob/main/.github/denim.png" style="max-width: 100%;" width="170px" alt="Denim" /><br />
+  <img src="https://github.com/openpeeps/denim/blob/main/.github/denim.png" style="max-width: 100%;" width="210px" alt="Denim" height="210px" /><br />
   Denim - Native NodeJS/BunJS addons powered by Nim<br />👑 Written in Nim language
 </p>
 <p align="center">
-  <code>nimble install denim</code>
-</p>
-<p align="center">
+  <code>nimble install denim</code><br /><br />
   <a href="https://openpeeps.github.io/denim">API reference</a><br />
   <img src="https://github.com/openpeeps/denim/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" />  <img src="https://github.com/openpeeps/denim/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
 </p>
 <h2>😍 Key Features</h2>
 <ul>
-<li>[x] Native build via <code>node-gyp</code></li>
-<li>[ ] Native build via <code>CMake.js</code></li>
+<li>[x] CLI build via Nim + <code>node-gyp</code> or CMake.js (faster)</li>
+<li>[ ] CLI publish to NPM</li>
 <li>[x] Low-level API</li>
-<li>[ ] High-level API</li>
+<li>[x] High-level API</li>
 <li>[x] Open Source | <code>MIT</code> License</li>
 <li>[x] Written in 👑 Nim language</li>
 </ul>
 <h2>Requirements</h2>
 <ul>
-<li>Get the latest Nim version (<strong>Note</strong> Denim works with <code>choosenim</code>)</li>
-<li>Install Node.js and <code>node-gyp</code>, the native addon build tool</li>
-<li>Install Denim CLI via <code>nimble</code></li>
+<li>Nim (latest / via <code>choosenim</code>)</li>
+<li>Node (latest) and <code>node-gyp</code> or CMake.js</li>
 </ul>
+<h3>CLI</h3>
+<p>Denim is a hybrid package, you can use it as a CLI for compiling Nim code to <code>.node</code> addon via <code>Nim</code> + <code>NodeGYP</code> and as a library for importing NAPI bindings.</p>
+<p>Simply run <code>denim -h</code></p>
+<pre>  <code>DENIM 🔥 Native Node/BunJS addons powered by Nim
+
+  build &lt;entry&gt; &lt;links&gt; --cmake --yes --verbose          Build Nim project to a native NodeJS addon
+  publish                                                Publish addon to NPM (requires npm cli)
+</code></pre>
+<p>Use Denim as a Nimble task:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">task</span> <span class="ide">napi</span>, <span class="str">&quot;Build a .node addon&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">exec</span> <span class="str">&quot;denim build src/myprogram.nim&quot;</span></div></div>  </code></pre>
+<p>Want to pass custom flags to Nim Compiler? Create a <code>.nims</code> file:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span> <span class="ide">napibuild</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># add some flags</span></div></div>  </code></pre>
+<blockquote>
+<p><strong>Note</strong> Check fully-working examples in <a href="https://github.com/openpeeps/denim/tree/main/tests">/tests</a></p>
+</blockquote>
 <h3>Defining a module</h3>
 <p>Use <code>init</code> to define module initialization.</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># registering properties and functions here</span></div></div>  </code></pre>
-<h3>Registering module exports</h3>
-<p>Export properties and functions using <code>registerFn()</code> for functions and <code>register()</code> for properties</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">0</span>, <span class="str">&quot;hello&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># fn body</span></div></div>  </code></pre>
-<h3>Check function arguments</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">3</span>, <span class="str">&quot;setUsername&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># throw NAPI error when</span></div></div><div class="line"><div class="line-content">    <span class="com"># mismatch arg types / receive less args than expected </span></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="kwd">not</span> <span class="ide">Env</span><span class="op">.</span><span class="ide">expect</span>(<span class="ide">args</span>, <span class="str">&quot;MyProgram&quot;</span>,</div></div><div class="line"><div class="line-content">      (<span class="str">&quot;name&quot;</span>, <span class="ide">napi_string</span>),</div></div><div class="line"><div class="line-content">      (<span class="str">&quot;email&quot;</span>, <span class="ide">napi_string</span>),</div></div><div class="line"><div class="line-content">      (<span class="str">&quot;?age&quot;</span>, <span class="ide">napi_number</span>) <span class="com"># prefix with `?` to set as optional arg</span></div></div><div class="line"><div class="line-content">    ): <span class="kwd">return</span></div></div><div class="line"><div class="line-content">    <span class="com"># do the do</span></div></div>  </code></pre>
-<h2>Examples</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">1</span>, <span class="str">&quot;hello&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="com"># access function arguments using `args` seq</span></div></div><div class="line"><div class="line-content">    <span class="com"># use `%*` operator to convert Nim types to `napi_value`</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="op">%*</span> <span class="str">&quot;Yay! &quot;</span> <span class="op">&amp;</span> <span class="ide">args</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getStr</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span> <span class="ide">napibuild</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># optionally, you can use `napibuild` flag to wrap your code</span></div></div><div class="line"><div class="line-content">  <span class="com"># this flag is set when compiling via `denim build src/myprogram.nim` </span></div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">denim</span> <span class="com"># import NAPI bindings </span></div></div><div class="line"><div class="line-content">  <span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="com"># registering properties and functions here</span></div></div><div class="line"><div class="line-content">    <span class="com"># this is similar with javascript `module.exports`</span></div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;just a normal nim program&quot;</span></div></div>  </code></pre>
+<h3>Nim Type to NapiValueType</h3>
+<p>Use low-level API to convert Nim values to <code>napi_value</code> (<code>NapiValueType</code>) such as <code>number</code>, <code>string</code>, <code>object</code>, <code>bool</code>, and so on.
+Use <code>assert</code> to check if a low-level function returns a success or failure. <a href="https://nodejs.org/api/n-api.html#napi_status">Currently, the following status codes are supported</a></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">denim</span></div></div><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">module</span><span class="op">.</span><span class="ide">registerFn</span>(<span class="num">0</span>, <span class="str">&quot;awesome&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">str2napi</span>: <span class="ide">napi_value</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">str</span> <span class="op">=</span> <span class="str">&quot;Nim is awesome!&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">assert</span> <span class="ide">Env</span><span class="op">.</span><span class="ide">napi_create_string_utf8</span>(<span class="ide">str</span>, <span class="ide">str</span><span class="op">.</span><span class="ide">len</span><span class="op">.</span><span class="ide">csize_t</span>, <span class="ide">str2napi</span><span class="op">.</span><span class="kwd">addr</span>) </div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">str2napi</span></div></div>  </code></pre>
+<p>Alternatively, use <code>%*</code> to auto-convert Nim values to <code>NapiValueType</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span>: <span class="ide">napi_value</span> <span class="op">=</span> <span class="op">%*</span> <span class="str">&quot;Hey&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span>: <span class="ide">napi_value</span> <span class="op">=</span> <span class="op">%*</span> <span class="ide">true</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">a</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">napi_string</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">b</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">napi_boolean</span></div></div>  </code></pre>
+<h3>Exports</h3>
+<p>Since <code>v0.1.5</code>, you can use <code>{.export_napi.}</code> pragma to export functions and object properties.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">denim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">init</span> <span class="kwd">proc</span>(<span class="ide">module</span>: <span class="ide">Module</span>): <span class="com"># the name `module` is required</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">hello</span>(<span class="ide">name</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">export_napi</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="com">## A simple function from Nim</span></div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="op">%*</span>(<span class="str">&quot;Hello, &quot;</span> <span class="op">&amp;</span> <span class="ide">args</span><span class="op">.</span><span class="ide">get</span>(<span class="str">&quot;name&quot;</span>)<span class="op">.</span><span class="ide">getStr</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">awesome</span> {<span class="op">.</span><span class="ide">export_napi</span><span class="op">.</span>} <span class="op">=</span> <span class="str">&quot;Nim is Awesome!&quot;</span></div></div>  </code></pre>
+<p>Calling a function/property from Node/Bun</p>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">require</span>('myaddon.node')</div></div><div class="line"><div class="line-content"><span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">app</span>.<span class="ide">hello</span>(<span class="str">&quot;World!&quot;</span>))       <span class="com">// Hello, World!</span></div></div><div class="line"><div class="line-content"><span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">app</span>.<span class="ide">awesome</span>)               <span class="com">// Nim is Awesome!</span></div></div>  </code></pre>
+<h3>Built-in type checker</h3>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="ide">app</span>.<span class="ide">hello</span>()</div></div>  </code></pre>
+<pre>  <code>/*
+ * A simple function from Nim
+ * @param {string} name
+ * @return {string}
+ */
+Type mismatch parameter: `name`. Got `undefined`, expected `string`
+</code></pre>
 <h2>Real-World Examples</h2>
 <ul>
-<li><strong>Tim Engine</strong> is a powerful template engine and markup language written in Nim. <a href="https://github.com/openpeeps/tim/blob/main/src/tim.nim#L8-L133">Here is the code for building Tim to Node/Bun via NAPI</a>,</li>
-<li><strong>Bro</strong>, a better stylesheet language, alternative to SassC, DartSass, SassJS. Written in Nim. <a href="https://github.com/openpeeps/bro/blob/main/src/bro.nim#L6">Here is the code</a></li>
+<li><strong>Tim Engine</strong>, a template engine written in Nim. <a href="https://github.com/openpeeps/tim/blob/main/src/tim.nim#L8-L133">Here is the code for building Tim to Node/Bun via NAPI</a>,</li>
+<li><strong>Bro</strong>, a better stylesheet language, alternative to SassC, DartSass... <a href="https://github.com/openpeeps/bro/blob/main/src/bro.nim#L6">Here is the code</a></li>
+<li>Add yours!</li>
+</ul>
+<h3>Todo</h3>
+<ul>
+<li>Option to link external C Headers/libraries</li>
+<li>Extend High-level API with compile-time functionality.</li>
 </ul>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
@@ -221,7 +252,7 @@ Thanks to <a href="https://github.com/AjBreidenbach">Andrew Breidenbach</a> and 
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-27T01:48:35Z
+        Builded at 2023-07-08T01:46:13Z
         </p>
       </div>
     </div>

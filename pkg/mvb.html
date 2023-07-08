@@ -149,7 +149,7 @@ cd mvb-opencv
 nim&gt; import mvb
 nim&gt; var frame: Mat
 nim&gt; let cap = newVideoCapture()
-nim&gt; for i in countup(1,100):
+nim&gt; for i in 1 .. 100:
 ....   cap.read frame
 ....   imshow &quot;MVB - OpenCV Demo&quot;, frame
 ....   waitKey(5)
@@ -161,7 +161,7 @@ nim&gt;
 
 nim&gt; import mvb
 nim&gt; const imagePath = &quot;tests/img/nim-logo.png&quot;
-nim&gt; var img: Mat = imread imagePath
+nim&gt; var img = imread imagePath
 nim&gt; imshow &quot;MVB - OpenCV Demo&quot;, img
 nim&gt; waitKey(0)
 nim&gt;
@@ -173,7 +173,7 @@ nim&gt; import os
 nim&gt; import mvb
 nim&gt; const imagePath = &quot;tests/img/nim-logo.png&quot;
 nim&gt; const imageResultPath = &quot;tests/img/nim-logo.test.png&quot;
-nim&gt; var img: Mat = imread imagePath
+nim&gt; var img = imread imagePath
 nim&gt;
 nim&gt; fileExists imageResultPath
 false == type bool
@@ -252,7 +252,7 @@ nim&gt;
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-27T01:48:35Z
+        Builded at 2023-07-08T01:46:13Z
         </p>
       </div>
     </div>

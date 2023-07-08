@@ -93,26 +93,30 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>nimreadfq</h1>
+                <document><h1>Note</h1>
+<p>This repository was started before Heng Li wrote his article <a href="https://lh3.github.io/2020/05/17/fast-high-level-programming-languages">&quot;Fast high-level programming languages&quot;</a>, which contains a native Nim implementation (see klib below), which is just as fast as the implementation here (depending on whether you reuse memory or not) and could simply be used instead.</p>
+<h1>nimreadfq</h1>
 <p>A Nim wrapper for <a href="https://github.com/lh3/readfq/">Heng Li&apos;s kseq/readfq</a>, an efficient and fast parser for FastQ and Fasta files.
-nimreadfq supports reading of FastQ and Fasta files from stdin (use &quot;-&quot;), gzipped or flat files and is <strong>very</strong> fast (see benchmark below).</p>
+nimreadfq supports reading of FastQ and Fasta files from stdin (use &quot;-&quot;), gzipped or flat files and is fast (see benchmark below).</p>
 <p>The main function is <code>readFQ()</code>, an iterator that yields <code>FQRecord(s)</code>. An alternative is <code>readFQPtr()</code>, which returns <code>FQRecordPtr(s)</code>. The difference is that the latter uses <code>ptr char</code> instead of strings and is thus potentially faster but memory is reused during iterations.</p>
 <p>See <code>example.nim</code> and <code>tests/tester.nim</code> for code examples.</p>
 <p>The initial Nim integration (and hard work) was done by <a href="https://github.com/tanghaibao">Haibao Tang</a> as part of his <a href="https://github.com/tanghaibao/bio-pipeline/">bio-pipeline
 repo</a>. Haibao generously <a href="https://github.com/tanghaibao/bio-pipeline/issues/4">granted full rights to his code base</a>, after which I started this separate package called <a href="https://github.com/andreas-wilm/nimreadfq">nimreadfq</a> for integration into nimble.</p>
 <h2>Benchmark</h2>
-<p>nimreadfq is almost an order of magnitude faster than packages with similar functionality.</p>
-<p>Below are timing for reading 500k sequences on a Surface Book 2 running WSL2 (first 500k sequences from SRR8616947_1):</p>
-<p>Gzipped FastQ:</p>
+<p>nimreadfq is significantly faster than packages with similar functionality. Below are example timings for reading 5,682,010 sequences from <code>M_abscessus_HiSeq.fq</code> (<a href="https://github.com/lh3/biofast/releases/tag/biofast-data-v1">source; see also <code>./benchmark/get_fq.sh</code></a>) run on my MacBook Pro 2019:</p>
+<p>fastq:</p>
 <ul>
-<li>readfq gz: 1.490s</li>
-<li>bioseq gz: 18.731s</li>
+<li>readfqPtr: 2.3s</li>
+<li>klib: 7.0s</li>
+<li>readfq: 7.6s</li>
+<li>fastx: 39.6s</li>
+<li>bioseq: 42.1s</li>
 </ul>
-<p>Flat file FastQ:</p>
+<p>fastq.gz:</p>
 <ul>
-<li>readfq: 1.250s</li>
-<li>bioseq: 8.898s</li>
-<li>fastx: 6.486s</li>
+<li>readfq gz: 15.6s</li>
+<li>klib gz: 15.8s</li>
+<li>bioseq gz: 150.0s</li>
 </ul>
 <p>How to reproduce results:</p>
 <pre>  <code>cd ./benchmark
@@ -187,7 +191,7 @@ nimble build
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-27T01:48:35Z
+        Builded at 2023-07-08T01:46:13Z
         </p>
       </div>
     </div>

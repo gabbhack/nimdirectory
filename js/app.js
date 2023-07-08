@@ -30585,23 +30585,23 @@ const packages = [
     "web": "https://codeberg.org/Yepoleb/nim-bz2"
   },
   {
-  "name": "mvb",
-  "url": "https://github.com/tapsterbot/mvb-opencv",
-  "method": "git",
-  "tags": [
-    "opencv",  
-    "library",
-    "wrapper",
-    "image",
-    "processing",
-    "minimal",
-    "mininum",
-    "viable",
-    "bindings"
-  ],
-  "description": "Minimum viable bindings for OpenCV",
-  "license": "MIT",
-  "web": "https://github.com/tapsterbot/mvb-opencv"
+    "name": "mvb",
+    "url": "https://github.com/tapsterbot/mvb-opencv",
+    "method": "git",
+    "tags": [
+      "opencv",
+      "library",
+      "wrapper",
+      "image",
+      "processing",
+      "minimal",
+      "mininum",
+      "viable",
+      "bindings"
+    ],
+    "description": "Minimum viable bindings for OpenCV",
+    "license": "MIT",
+    "web": "https://github.com/tapsterbot/mvb-opencv"
   },
   {
     "name": "emailparser",
@@ -30617,6 +30617,42 @@ const packages = [
     "description": "Email parser to JsonNode based on Cyrus JMAP parser",
     "license": "BSD",
     "web": "https://github.com/mildred/emailparser.nim"
+  },
+  {
+    "name": "colored_logger",
+    "url": "https://github.com/4zv4l/colored_logger",
+    "method": "git",
+    "tags": [
+      "logging",
+      "colours"
+    ],
+    "description": "A simple colored logger from std/logging",
+    "license": "MIT",
+    "web": "https://github.com/4zv4l/colored_logger"
+  },
+  {
+    "name": "nimpath",
+    "url": "https://github.com/weskerfoot/NimPath",
+    "method": "git",
+    "tags": [
+      "web",
+      "parser"
+    ],
+    "description": "Interface to libxml2's XPath parser",
+    "license": "MIT",
+    "web": "https://github.com/weskerfoot/NimPath"
+  },
+  {
+    "name": "beautifulparser",
+    "url": "https://github.com/TelegramXPlus/beautifulparser",
+    "method": "git",
+    "tags": [
+      "parser",
+      "html"
+    ],
+    "description": "Simple parser for HTML",
+    "license": "MIT",
+    "web": "https://github.com/TelegramXPlus/beautifulparser"
   }
 ]
 const options = {

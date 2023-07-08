@@ -102,21 +102,27 @@
 </h3>
 <hr />
 <p align="center">
-    ⚙️ Runned is a simple tool to check the execution time of terminal commands.
+    ⚙️ Runned is a simple tool to check the execution time of terminal commands on Windows.
 </p>
 <hr />
+<h3>🖼 Screenshot</h3>
+<p>  <img src="img/screenshot_1.png" style="max-width: 100%;" alt="screenshot_1" />  <img src="img/screenshot_2.png" style="max-width: 100%;" alt="screenshot_2" /></p>
 <h3>❓ How to use</h3>
-<pre>  <code>USAGE: Runned.exe &lt;your commands&gt;
+<pre>  <code>USAGE: runned.exe &lt;your commands&gt;
 
 OPTIONS:
-  -ec --exitcode    # Display the exit code of the executed command.
-  -si --showinput   # Display the input given by the user.
+  -e --exitcode    Display the exit code of the executed command.
+  -i --input       Display the input given by the user.
+  -a --accuracy    Display time with more precision.
 </code></pre>
-<h3>❓ How to build</h3>
-<p>To build, you will first need to download the nim compiler. You can find it <a href="https://nim-lang.org/install.html">here</a>.</p>
-<p>Then, run the following command. You will need to change the os and cpu type to math your computer.</p>
-<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">nimble</span> install --define:release --opt:speed --app:console</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="kwd">nimble</span> install runned</div></div>  </code></pre>
-<p>If you want to download a build, check the <a href="./build/">build</a> folder. For now, there is only a windows build because it&apos;s hard to build for multiple platform without owning one of them.</p>
+<h3>❓ How to run or buidl</h3>
+<p>To run, you will need to download the lua interpreter. You can find it <a href="https://luabinaries.sourceforge.net/download.html">here</a>. <br />
+Then, run the following command:</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">lua</span> <span class="ide">.\src\runned.lua</span></div></div>  </code></pre>
+<p>To build, you will need to download a lua compiler. You can find the one I use <a href="https://github.com/samyeyo/rtc">here</a>. <br />
+Then, run the following command:</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">rtc</span> -s -c -o <span class="ide">.\build\runned.exe</span> <span class="ide">.\src\runned.lua</span></div></div>  </code></pre>
+<p>If you want to download a build, check the <a href="./build/">build</a> folder.</p>
 </document>
             
         </div>
@@ -185,7 +191,7 @@ OPTIONS:
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-06-27T01:48:35Z
+        Builded at 2023-07-08T01:46:13Z
         </p>
       </div>
     </div>
