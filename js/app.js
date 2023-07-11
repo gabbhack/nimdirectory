@@ -30669,6 +30669,21 @@ const packages = [
     "description": "Brainfuck interpreter with some advanced features, such as syntax checking and highlighting errors.",
     "license": "GPL-3.0-only",
     "web": "https://github.com/nirokay/brainimfuck"
+  },
+  {
+    "name": "gtrends",
+    "url": "https://git.ozzuu.com/thisago/gtrends",
+    "method": "git",
+    "tags": [
+      "library",
+      "google_trends",
+      "trends",
+      "rss",
+      "google"
+    ],
+    "description": "Google Trends RSS",
+    "license": "MIT",
+    "web": "https://git.ozzuu.com/thisago/gtrends"
   }
 ]
 const options = {
