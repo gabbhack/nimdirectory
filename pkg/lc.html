@@ -140,7 +140,7 @@ yet another file lister?  What&apos;s the point?  Well, <code>lc</code></p>
 <p>supports arbitrary assignment of &quot;file kind order&quot; for use in sorting</p>
 </li>
 <li>
-<p>supports &quot;multi-dimensional reasoning&quot; about file kinds, including both
+<p>supports a kind/type-<strong>vector</strong> for multi-dimensional reasoning, including
 text attribute layers and an &quot;icon vector&quot; (for utf8 &quot;icons&quot;, anyway)</p>
 </li>
 <li>
@@ -186,27 +186,26 @@ might be part of <code>lc</code> if I didn&apos;t write both pkgs.)</p>
 With so many features and few users, there are likely bugs.</p>
 </li>
 </ul>
-<h1>Multi-dimensionality/Attribute Layers</h1>
+<h1>Vector Type/Multi-dimensionality/Attribute Layers</h1>
 <p>The most obscure idea is likely &quot;multi-dimensional&quot;.  I mean this in the
 mathematical &quot;<strong>INDEPENDENT coordinate</strong>&quot; sense <strong>not</strong> a Jurassic Park (1993)-esque
-graphical file tree sense.  Examples of dimensions/attributes may help.</p>
-<p>Output text can set the foreground &amp; background colors of text <strong>independently</strong>.
+graphical file tree sense.  Examples of slots/dimensions/attributes may help.</p>
+<p>Output text can set foreground &amp; background colors of text <strong>independently</strong>.
 I happen to like <a href="https://git.suckless.org/st/">st</a> for its hackability.  That
 can do bold, italic, blink, underline, struck, inverse as 6 independent traits.
 (Color inversion involves a mapping too complex to be a very useful visual aid.)
-So, 7 usable output dimensions, with 5 being shallow 1-bit dimensions and the
-foreground &amp; background colors having more continuous value ranges.  While
-subjective, I find identifying/distinguishing text with <em>all</em> those attributes
-on|off not hard with my primary displays/fonts.  Geographical map folk often
-call this &quot;layers&quot;.  <code>lc</code> aids &quot;aligning&quot; rendered output traits with classified
-input traits.</p>
-<p>The input/data side has <em>many</em> more independent fields &amp; bits.  While <code>d_type</code>
-is mutually exclusive, most types aren&apos;t. E.g., a file can be both an executable
-regular file and some kind of script source or both a directory and a directory
-with a sticky bit set and independently of both beginning with a &apos;.&apos; or not.
-Add all of <code>struct stat</code> and deep file header inspection and the type space just
-explodes both in kinds and independent sub-kinds/dimensions (stripped or not,
-32-bit, 64-bit binaries, etc., etc.).</p>
+So, 7 usable output dimensions, with 5 being shallow 1-bit dimensions and colors
+having larger value ranges.  While subjective, I find it not hard to distinguish
+text with <em>all</em> those attributes varying.  Geographical map folk often call this
+&quot;layers&quot; (such as political borders layered atop satellite imagery).  <code>lc</code> aids
+&quot;aligning&quot; rendered output traits with classified input traits.</p>
+<p>The input/data side has <em>many</em> more independent fields &amp; bits.  While
+<code>dirent.d_type</code> is mutually exclusive type codes, most types aren&apos;t.  E.g., a
+file can be both an executable regular file and some kind of script source or
+both a directory and a directory with a sticky bit set.  Independently of all
+that, it can begin with a &apos;.&apos; or not.  Add all of <code>struct stat</code> and deep file
+header inspection and the type space just explodes both in kinds and independent
+sub-kinds/dimensions (stripped or not, 32-bit, 64-bit binaries, etc., etc.).</p>
 <p>Only end users can prioritize use of precious few output dimensions.  To aid
 this use, <code>lc</code> users can configure file kinds to pair with picked poisons of
 output traits.<a href="Operationally,">^1</a></p>
@@ -364,7 +363,7 @@ before all dot regular files, but it is obviously much more general.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-11T01:39:15Z
+        Builded at 2023-07-12T01:47:41Z
         </p>
       </div>
     </div>

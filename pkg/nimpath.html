@@ -82,11 +82,21 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h2>API to allow for parsing HTML/XML and querying it using XPath expressions</h2>
-<p>  <strong>Requires you to have libxml2 installed</strong></p>
+<p>  <a href="https://nimble.directory/pkg/nimpath">https://nimble.directory/pkg/nimpath</a></p>
+<p>  <strong>Important: requires you to have libxml2 installed</strong></p>
+<p>build dependencies:</p>
+<ul>
+<li>clang</li>
+<li>pkg-config</li>
+<li>libxml2 (installed system-wide)</li>
+</ul>
 <p>Example</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">parsed</span> <span class="op">=</span> <span class="ide">parseHTML</span>(<span class="str">&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;foobar&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>, <span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">nodes</span> : <span class="ide">seq</span>[<span class="ide">HTMLNode</span>] <span class="op">=</span> <span class="ide">toSeq</span>(<span class="ide">xpathQuery</span>(<span class="ide">parsed</span>, <span class="str">&quot;//*&quot;</span>))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">map</span>(<span class="ide">nodes</span>, (<span class="ide">n</span>) <span class="op">=&gt;</span> <span class="ide">n</span><span class="op">.</span><span class="ide">node_name</span><span class="op">.</span><span class="ide">get</span>) <span class="op">==</span> <span class="op">@</span>[<span class="str">&quot;html&quot;</span>, <span class="str">&quot;body&quot;</span>, <span class="str">&quot;h1&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">node</span> <span class="kwd">in</span> <span class="ide">xpathQuery</span>(<span class="ide">parsed</span>, <span class="str">&quot;//*&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">node</span><span class="op">.</span><span class="ide">node_name</span><span class="op">.</span><span class="ide">isSome</span> <span class="kwd">and</span> <span class="ide">node</span><span class="op">.</span><span class="ide">node_name</span><span class="op">.</span><span class="ide">get</span> <span class="op">==</span> <span class="str">&quot;h1&quot;</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">assert</span> <span class="ide">node</span><span class="op">.</span><span class="ide">textContent</span><span class="op">.</span><span class="ide">get</span> <span class="op">==</span> <span class="str">&quot;foobar&quot;</span></div></div>  </code></pre>
-<p>See the tests for more detailed examples.</p>
-<p>To install, add <code>nimpath &gt;= 0.1.9</code> to your .nimble file, and make sure clang is installed. If you installed libxml2 using something other than your package manager, it may require setting the linker flags in config.nims manually and/or using <code>LD_LIBRARY_PATH</code>.</p>
+<p>Example using <code>queryWithContext</code> to query against subnodes.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">parsed</span> <span class="op">=</span> <span class="ide">parseHTML</span>(<span class="str">&quot;&lt;html&gt;&lt;body&gt;&lt;h3&gt;foobar&lt;/h3&gt;&lt;h3&gt;sdasdasd&lt;/h3&gt;&lt;div&gt;&lt;span&gt;this is a span&lt;/span&gt;&lt;span&gt;this is another span&lt;/span&gt;&lt;/div&gt;&lt;h1 id=&apos;some_id&apos; class=&apos;header1&apos;&gt;foo bar baz&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">node</span> <span class="kwd">in</span> <span class="ide">xpathQuery</span>(<span class="ide">parsed</span>, <span class="str">&quot;//div&quot;</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">subnode</span> <span class="kwd">in</span> <span class="ide">queryWithContext</span>(<span class="ide">node</span>, <span class="str">&quot;.//*&quot;</span>):</div></div><div class="line"><div class="line-content">        <span class="ide">assert</span> <span class="op">$</span><span class="ide">subnode</span><span class="op">.</span><span class="ide">node</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;span&quot;</span></div></div>  </code></pre>
+<p>See the tests for more detailed examples. You can run the tests with <code>nimble test</code>.</p>
+<p>I have also written up a quick guide <a href="https://wesk.tech/posts/nimpath-html-parsing/">here</a> with a more detailed explanation of how the library works.</p>
+<p>To install, add <code>nimpath</code> to your .nimble file, and make sure clang is installed. If you installed libxml2 using something other than your package manager, it may require setting the linker flags in config.nims manually and/or using <code>LD_LIBRARY_PATH</code>.</p>
 <p>You must also add this code to <code>config.nims</code> to get it to build.</p>
 <pre>  <code>import strutils
 switch(&quot;passL&quot;, staticExec(&quot;pkg-config --libs libxml-2.0&quot;).strip)
@@ -159,7 +169,7 @@ switch(&quot;passL&quot;, staticExec(&quot;pkg-config --libs libxml-2.0&quot;).s
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-11T01:39:15Z
+        Builded at 2023-07-12T01:47:41Z
         </p>
       </div>
     </div>
