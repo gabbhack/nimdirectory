@@ -30684,6 +30684,17 @@ const packages = [
     "description": "Google Trends RSS",
     "license": "MIT",
     "web": "https://git.ozzuu.com/thisago/gtrends"
+  },
+  {
+    "name": "DxLib",
+    "url": "https://github.com/777shuang/DxLib",
+    "method": "git",
+    "tags": [
+      "bindings"
+    ],
+    "description": "A Nim binding for DX Library",
+    "license": "MIT",
+    "web": "https://github.com/777shuang/DxLib"
   }
 ]
 const options = {

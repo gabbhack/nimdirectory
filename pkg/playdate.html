@@ -146,13 +146,13 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">playdate</span><span class="op">/</span><span class="ide">api</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">nimLogoBitmap</span>: <span class="ide">LCDBitmap</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">update</span>(): <span class="ide">int</span> {<span class="op">.</span><span class="ide">raises</span>: []<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">nimLogoBitmap</span><span class="op">.</span><span class="ide">draw</span>(<span class="num">168</span>, <span class="num">88</span>, <span class="ide">kBitmapUnflipped</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This is the application entrypoint and event handler</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handler</span>(<span class="ide">event</span>: <span class="ide">PDSystemEvent</span>, <span class="ide">keycode</span>: <span class="ide">uint</span>) {<span class="op">.</span><span class="ide">raises</span>: []<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">event</span> <span class="op">==</span> <span class="ide">kEventInit</span>:</div></div><div class="line"><div class="line-content">        <span class="com"># Errors are handled through exceptions, this is an inline try/except</span></div></div><div class="line"><div class="line-content">        <span class="ide">nimLogoBitmap</span> <span class="op">=</span> <span class="kwd">try</span>: <span class="ide">playdate</span><span class="op">.</span><span class="ide">graphics</span><span class="op">.</span><span class="ide">newBitmap</span>(<span class="str">&quot;/images/nim_logo&quot;</span>) <span class="kwd">except</span>: <span class="kwd">nil</span></div></div><div class="line"><div class="line-content">        <span class="com"># playdate is the global PlaydateAPI instance, available when playdate/api is imported </span></div></div><div class="line"><div class="line-content">        <span class="ide">playdate</span><span class="op">.</span><span class="ide">system</span><span class="op">.</span><span class="ide">setUpdateCallback</span>(<span class="ide">update</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Used to setup the SDK entrypoint</span></div></div><div class="line"><div class="line-content"><span class="ide">initSDK</span>()</div></div>  </code></pre>
 <p>A pre-compiled pdx is also provided, please test it on your device!</p>
 <p>Compile the project (pdx) for the simulator using:</p>
-<pre>  <code class="language-sh">nim simulator
+<pre>  <code class="language-sh">nimble simulator
 </code></pre>
-<p>For the device (compile only, no pdx):</p>
-<pre>  <code class="language-sh">nim device
+<p>For the device (elf only, use pdc to create a pdx):</p>
+<pre>  <code class="language-sh">nimble device
 </code></pre>
 <p>For simulator + device (pdx):</p>
-<pre>  <code class="language-sh">nim all
+<pre>  <code class="language-sh">nimble all
 </code></pre>
 <p>The template also has a VSCode launch configuration file to build, start and debug the Nim application from the editor.</p>
 <hr />
@@ -231,7 +231,7 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-12T01:47:41Z
+        Builded at 2023-07-13T01:49:30Z
         </p>
       </div>
     </div>
