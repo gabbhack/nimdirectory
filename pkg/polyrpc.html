@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">polyrpc</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">rpc</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">remote procedure call</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("A system for generating remote-procedure-calls for any pair of server and client")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install polyrpc" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>polyrpc</h1>
+<p>A system for generating remote-procedure-calls for any pair of server and client.</p>
+<h2>Example</h2>
+<p>have a lookn at <code>tests/</code> to get a general idea of the system.</p>
+<h2>predefined connections</h2>
+<p>To establish a connection you can use the predefined ones.<br />
+For example to connect karax client with prologue server:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">polyrpc</span><span class="op">/</span><span class="ide">connections</span><span class="op">/</span><span class="ide">http</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">makeRpcConnection</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">client</span> <span class="op">=</span> <span class="op">$/</span><span class="ide">karaxRpc</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">server</span> <span class="op">=</span> <span class="op">$/</span><span class="ide">prologueRpc</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>The <code>polyrpc/connections/http</code> provides the <code>makeRpcConnection</code> macro, to generate a http connection. <br />
+<code>client</code> is the clients rpc connections module, and <code>server</code> the server one.<br />
+for convinence <code>$/</code> can be used as a shortcut for predefined ones.<br />
+So this is the same without <code>$/</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">makeRpcConnection</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">client</span> <span class="op">=</span> <span class="ide">polyrpc</span><span class="op">/</span><span class="ide">connections</span><span class="op">/</span><span class="ide">http</span><span class="op">/</span><span class="ide">clients</span><span class="op">/</span><span class="ide">karaxRpc</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">server</span> <span class="op">=</span> <span class="ide">polyrpc</span><span class="op">/</span><span class="ide">connections</span><span class="op">/</span><span class="ide">http</span><span class="op">/</span><span class="ide">servers</span><span class="op">/</span><span class="ide">prologueRpc</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>And that expands to:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">defined</span>(<span class="ide">js</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">polyrpc</span><span class="op">/</span><span class="ide">connections</span><span class="op">/</span><span class="ide">http</span><span class="op">/</span><span class="ide">clients</span><span class="op">/</span><span class="ide">karaxRpc</span></div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">import</span> <span class="ide">polyrpc</span><span class="op">/</span><span class="ide">connections</span><span class="op">/</span><span class="ide">http</span><span class="op">/</span><span class="ide">servers</span><span class="op">/</span><span class="ide">prologueRpc</span></div></div>  </code></pre>
+<h2>using the connection</h2>
+<p>first of all you need to seperate your code into server and client parts.<br />
+to do so use the <code>server</code> and <code>client</code> macros to define sections like so:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">server</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># do some stuff on server</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">client</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># do some stuff on client</span></div></div><div class="line"><div class="line-content">  </div></div><div class="line"><div class="line-content"><span class="com"># do some stuff on both</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">server</span>: <span class="com"># do some more on server</span></div></div>  </code></pre>
+<p>or use them as pragma on single procs:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span> {<span class="op">.</span><span class="ide">server</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>now if you want to make a server proc rpc callable just add the <code>rpc</code> pragma with the url it schould use,<br />
+or the <code>rpca</code> pragma for auto generated urls</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">server</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">add</span>(<span class="ide">a</span>,<span class="ide">b</span>: <span class="ide">int</span>): <span class="ide">int</span> {<span class="op">.</span><span class="ide">rpc</span>(<span class="str">&quot;/add&quot;</span>)<span class="op">.</span>} <span class="op">=</span> <span class="ide">a</span> <span class="op">+</span> <span class="ide">b</span></div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span> <span class="ide">isNeg</span>(<span class="ide">x</span>: <span class="ide">int</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">rpca</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">x</span> <span class="op">&lt;</span> <span class="num">0</span></div></div>  </code></pre>
+<p>You can change the base url for <code>rpca</code> (default is &quot;/rpc&quot;)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">setRpcAnnonymousUrl</span> <span class="str">&quot;/foo&quot;</span></div></div>  </code></pre>
+<h2>custom connections</h2>
+<h3>server</h3>
+<p>To define a custom cennection import <code>polyrpc/server</code> and use the <code>makeRpcServerHandler</code> template.<br />
+Here is how <code>prologueRpc</code>s <code>initRpc</code> is defined:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">initRpc</span><span class="op">*</span>(<span class="ide">app</span>: <span class="ide">Prologue</span>): <span class="ide">untyped</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">makeRpcServerHandler</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">app</span><span class="op">.</span><span class="ide">post</span>(<span class="ide">requestUrl</span>,</div></div><div class="line"><div class="line-content">      <span class="kwd">proc</span>(<span class="ide">ctx</span> {<span class="op">.</span> <span class="ide">inject</span> <span class="op">.</span>}: <span class="ide">Context</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">        {<span class="op">.</span><span class="kwd">cast</span>(<span class="ide">gcsafe</span>)<span class="op">.</span>}:</div></div><div class="line"><div class="line-content">          <span class="ide">resp</span> <span class="ide">callProc</span>(<span class="ide">ctx</span><span class="op">.</span><span class="ide">request</span><span class="op">.</span><span class="ide">body</span>)</div></div><div class="line"><div class="line-content">    )</div></div>  </code></pre>
+<p>inside the definition you can use:<br />
+<code>requestUrl</code><br />
+<code>callProc</code> to call the proc (it expects a string as input and returns a string, it does the rest for you)</p>
+<h3>client</h3>
+<p>To define a custom cennection import <code>polyrpc/client</code> and use the <code>makeRpcClientCb</code> or the <code>makeRpcClientReturn</code> template.</p>
+<p>Use <code>makeRpcClientCb</code> for a callback pattern.<br />
+With the callback pattern:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">x</span>: <span class="ide">int</span>): <span class="ide">bool</span> {<span class="op">.</span><span class="ide">rpca</span><span class="op">.</span>}</div></div>  </code></pre>
+<p>becomes:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">foo</span>(<span class="ide">x</span>: <span class="ide">int</span>, <span class="ide">cb</span>: <span class="kwd">proc</span>(<span class="ide">r</span>: <span class="ide">bool</span>))</div></div>  </code></pre>
+<p>Here is how <code>karaxRpc</code> is defined using <code>makeRpcClientCb</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">makeRpcClientCb</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">ajaxPost</span>(<span class="ide">requestUrl</span><span class="op">.</span><span class="ide">kstring</span>, [], <span class="ide">requestBody</span><span class="op">.</span><span class="ide">kstring</span>,</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span>(<span class="ide">httpStatus</span>: <span class="ide">int</span>, <span class="ide">response</span>: <span class="ide">kstring</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="kwd">case</span> <span class="ide">httpStatus</span></div></div><div class="line"><div class="line-content">      <span class="kwd">of</span> <span class="num">200</span>: <span class="ide">callback</span>(<span class="op">$</span><span class="ide">response</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">else</span>: <span class="kwd">discard</span></div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>Inside the defenition there are following things defined:<br />
+<code>requestUrl</code>: the url which the rpc should use<br />
+<code>requestBody</code>: the body string that needs to be send<br />
+<code>callback</code>: the callback that needs to be called with the response string</p>
+<p>Use <code>makeRpcClientReturn</code> for generating functions that return the result. (just like the original proc, but with potentialy modified return type)<br />
+Here is how <code>ajaxFutureRpc</code> is defined using <code>makeRpcClientCb</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">makeRpcClientReturn</span>( <span class="kwd">when</span> <span class="ide">T</span> <span class="kwd">is</span> <span class="ide">Future</span>: <span class="ide">T</span> <span class="kwd">else</span>: <span class="ide">Future</span>[<span class="ide">T</span>] ):</div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="ide">newPromise</span>[<span class="ide">T</span>](<span class="kwd">proc</span>(<span class="ide">resolve</span>: <span class="kwd">proc</span>(<span class="ide">response</span>: <span class="ide">T</span>)) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">xhr</span> <span class="op">=</span> <span class="ide">new_xmlhttp_request</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">xhr</span><span class="op">.</span><span class="ide">is_nil</span>: <span class="kwd">return</span></div></div><div class="line"><div class="line-content">    </div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">onRecv</span>(<span class="ide">e</span>:<span class="ide">Event</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">xhr</span><span class="op">.</span><span class="ide">readyState</span> <span class="op">==</span> <span class="ide">rsDONE</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">if</span> <span class="ide">xhr</span><span class="op">.</span><span class="ide">status</span> <span class="op">==</span> <span class="num">200</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">resolve</span> <span class="ide">resultVal</span>(<span class="op">$</span><span class="ide">xhr</span><span class="op">.</span><span class="ide">responseText</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">xhr</span><span class="op">.</span><span class="ide">onreadystatechange</span> <span class="op">=</span> <span class="ide">onRecv</span></div></div><div class="line"><div class="line-content">    <span class="ide">xhr</span><span class="op">.</span><span class="ide">open</span>(<span class="str">&quot;POST&quot;</span>, <span class="ide">requestUrl</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">xhr</span><span class="op">.</span><span class="ide">send</span>(<span class="ide">requestBody</span><span class="op">.</span><span class="ide">cstring</span>)</div></div><div class="line"><div class="line-content">  )</div></div>  </code></pre>
+<p>The first parameter defines what the return type should be,<br />
+based on the original return type <code>T</code><br />
+The second parameter defines the proc body. There are following things defined inside:<br />
+<code>requestUrl</code>: the url which the rpc should use<br />
+<code>requestBody</code>: the body string that needs to be send<br />
+<code>resultVal</code>: proc to turn result string into actual type</p>
+<h2>change serializing / deserializing procs</h2>
+<p>for example to use <code>jsony</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">static</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">serializeCall</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span>(<span class="ide">val</span>: <span class="ide">NimNode</span>): <span class="ide">NimNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">quote</span> <span class="kwd">do</span>: `<span class="ide">val</span>`<span class="op">.</span><span class="ide">toJson</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">deserializeCall</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span>(<span class="ide">str</span>, <span class="ide">T</span>: <span class="ide">NimNode</span>): <span class="ide">NimNode</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">      <span class="ide">quote</span> <span class="kwd">do</span>: `<span class="ide">str</span>`<span class="op">.</span><span class="ide">fromJson</span>(`<span class="ide">T</span>`)</div></div>  </code></pre>
+<p>This will probably be simplyfied with macros in the future.</p>
+<h1>Contribution</h1>
+<p>Issues and PRs welcome</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-07-14T01:49:11Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

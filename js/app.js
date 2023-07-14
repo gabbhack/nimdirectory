@@ -185,6 +185,17 @@ const packages = [
     "license": "MIT"
   },
   {
+    "name": "polyrpc",
+    "url": "https://github.com/choltreppe/polyrpc",
+    "method": "git",
+    "tags": [
+      "rpc",
+      "remote procedure call"
+    ],
+    "description": "A system for generating remote-procedure-calls for any pair of server and client",
+    "license": "MIT"
+  },
+  {
     "name": "geolocation",
     "url": "https://github.com/HazeCS/geolocation",
     "method": "git",
@@ -28626,7 +28637,7 @@ const packages = [
   },
   {
     "name": "gptcli",
-    "url": "https://github.com/HACCKKER/gptcli",
+    "url": "https://github.com/jaredmontoya/gptcli",
     "method": "git",
     "tags": [
       "client",
@@ -28635,7 +28646,7 @@ const packages = [
     ],
     "description": "chatgpt cli client written in nim",
     "license": "MIT",
-    "web": "https://github.com/HACCKKER/gptcli"
+    "web": "https://github.com/jaredmontoya/gptcli"
   },
   {
     "name": "update_nimble_version",
@@ -30370,7 +30381,7 @@ const packages = [
   },
   {
     "name": "pyopenai",
-    "url": "https://github.com/HACCKKER/pyopenai",
+    "url": "https://github.com/jaredmontoya/pyopenai",
     "method": "git",
     "tags": [
       "python",
@@ -30381,7 +30392,7 @@ const packages = [
     ],
     "description": "An attempt to reimplement python OpenAI API bindings in nim",
     "license": "MIT",
-    "web": "https://github.com/HACCKKER/pyopenai"
+    "web": "https://github.com/jaredmontoya/pyopenai"
   },
   {
     "name": "facedetect",
@@ -30695,6 +30706,19 @@ const packages = [
     "description": "A Nim binding for DX Library",
     "license": "MIT",
     "web": "https://github.com/777shuang/DxLib"
+  },
+  {
+    "name": "rclnim",
+    "url": "https://github.com/Pylgos/rclnim",
+    "method": "git",
+    "tags": [
+      "library",
+      "embedded",
+      "ros2"
+    ],
+    "description": "Nim bindings for ROS2",
+    "license": "MIT",
+    "web": "https://github.com/Pylgos/rclnim"
   }
 ]
 const options = {
