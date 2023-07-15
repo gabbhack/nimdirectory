@@ -88,16 +88,16 @@
                 <document><h1>sliceutils</h1>
 <p>Nimble package for extensions on Slice/HSlice. Features include:</p>
 <ul>
-<li><code>tuples</code>: indexing tuples by backwards index and by slices of ordinals or backwards indexes</li>
-<li><code>strides</code>: slice type with custom increments other than 1</li>
-<li><code>until</code>: slice utility type that counts every element except the last one, made with floats in mind</li>
-<li><code>intslices</code>: utility procedures for integer slices
+<li><code>sliceutils/tuples</code>: indexing tuples by backwards index and by slices of ordinals or backwards indexes</li>
+<li><code>sliceutils/strides</code>: slice type with custom increments other than 1</li>
+<li><code>sliceutils/until</code>: slice utility type that counts every element except the last one, made with floats in mind</li>
+<li><code>sliceutils/intslices</code>: utility procedures for integer slices
 <ul>
 <li>subscript indexing for integer slices with ordinals, backwards indexes, or slices of ordinals or backwards indexes</li>
 <li><code>diff(HSlice[T, U: SomeInteger]): int</code>: the distance between the 2 bounds, has alias <code>abs</code></li>
 </ul>
 </li>
-<li><code>general</code>: procedures for generic slices, examples being
+<li><code>sliceutils/general</code>: procedures for generic slices, examples being
 <ul>
 <li><code>to(T, U) -&gt; HSlice[T, U]</code>: alternate constructor for slices</li>
 <li><code>swap(HSlice[T, U]) -&gt; HSlice[U, T]</code>: swaps the bounds of the slice</li>
@@ -179,7 +179,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-14T01:49:11Z
+        Builded at 2023-07-15T01:48:14Z
         </p>
       </div>
     </div>

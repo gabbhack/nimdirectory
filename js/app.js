@@ -26213,7 +26213,11 @@ const packages = [
   },
   {
     "name": "variantsugar",
-    "url": "https://github.com/metagn/variantsugar",
+    "alias": "skinsuit"
+  },
+  {
+    "name": "skinsuit",
+    "url": "https://github.com/metagn/skinsuit",
     "method": "git",
     "tags": [
       "object",
@@ -26226,7 +26230,7 @@ const packages = [
     ],
     "description": "utility macros mostly for object variants",
     "license": "MIT",
-    "web": "https://github.com/metagn/variantsugar"
+    "web": "https://github.com/metagn/skinsuit"
   },
   {
     "name": "dogapi",
@@ -30706,6 +30710,21 @@ const packages = [
     "description": "A Nim binding for DX Library",
     "license": "MIT",
     "web": "https://github.com/777shuang/DxLib"
+  },
+  {
+    "name": "spotlightr",
+    "url": "https://git.ozzuu.com/thisago/spotlightr",
+    "method": "git",
+    "tags": [
+      "library",
+      "extractor",
+      "scraper",
+      "video",
+      "stream"
+    ],
+    "description": "Spotlightr basic extractor to get the video",
+    "license": "MIT",
+    "web": "https://git.ozzuu.com/thisago/spotlightr"
   },
   {
     "name": "rclnim",
