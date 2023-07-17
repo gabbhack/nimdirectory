@@ -96,14 +96,19 @@
 <p>Convert strings to any case</p>
 </blockquote>
 <h2>Usage</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">anycase</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">camel</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;anyCase&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">kebab</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;any-case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">pascal</span>(<span class="str">&quot;any case&quot;</span>)  <span class="com"># &quot;AnyCase&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;any case&quot;</span>)    <span class="com"># &quot;any/case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">snake</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;any_case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">plain</span>(<span class="str">&quot;any-case&quot;</span>)   <span class="com"># &quot;any case&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">anycase</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">camel</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;anyCase&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">cobol</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;ANY-CASE&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">dot</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;any.case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">kebab</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;any-case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">pascal</span>(<span class="str">&quot;any case&quot;</span>)  <span class="com"># &quot;AnyCase&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">pascalSnake</span>(<span class="str">&quot;any case&quot;</span>)  <span class="com"># &quot;Any_Case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">path</span>(<span class="str">&quot;any case&quot;</span>)    <span class="com"># &quot;any/case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">screamingSnake</span>(<span class="str">&quot;any case&quot;</span>)  <span class="com"># &quot;ANY_CASE&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">snake</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;any_case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">train</span>(<span class="str">&quot;any case&quot;</span>)   <span class="com"># &quot;Any-Case&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">plain</span>(<span class="str">&quot;any-case&quot;</span>)   <span class="com"># &quot;any case&quot;</span></div></div>  </code></pre>
 <h2>Supported cases</h2>
 <ul>
 <li>  <code>camel</code></li>
+<li>  <code>cobol</code></li>
+<li>  <code>dot</code></li>
 <li>  <code>kebab</code></li>
+<li>  <code>pascal snake</code></li>
 <li>  <code>pascal</code></li>
 <li>  <code>path</code></li>
+<li>  <code>screaming snake</code></li>
 <li>  <code>snake</code></li>
+<li>  <code>train</code></li>
 <li>  <code>plain</code></li>
 </ul>
 <p>If you don&apos;t see any case – feel free to open issue or pull request.</p>
@@ -175,7 +180,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-16T01:58:56Z
+        Builded at 2023-07-17T01:52:44Z
         </p>
       </div>
     </div>
