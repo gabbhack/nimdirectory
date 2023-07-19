@@ -118,6 +118,18 @@
 </ul>
 <p>Current implementation is based on nim-eth&apos;s Discovery v5 implementation.</p>
 <p>Base files were copied from <a href="https://github.com/status-im/nim-eth/commit/779d767b024175a51cf74c79ec7513301ebe2f46">  <code>status-im/nim-eth@779d767b024175a51cf74c79ec7513301ebe2f46</code></a></p>
+<h2>Building</h2>
+<p>This repo is setup to use Nimble lockfiles. This requires Nimble 0.14+ which isn&apos;t installed by default when this was written. If <code>nimble -v</code> reports <code>0.13.x</code> then you will need to install Nimble 0.14. Note that using Nimble 0.14 changes how Nimble behaves!</p>
+<p>Nimble 0.14 can be install by:</p>
+<pre>  <code class="language-sh">nimble install nimble@0.14.2
+</code></pre>
+<p>After this you can setup your Nimble environment. Note that this will build the pinned version of Nim! The first run can take ~15 minutes.</p>
+<pre>  <code class="language-sh">nimble setup # creates a nimble.paths used for rest of Nimble commands
+nimble testAll
+</code></pre>
+<p>You can also run tasks directly:</p>
+<pre>  <code class="language-sh">nim testAll
+</code></pre>
 </document>
             
         </div>
@@ -186,7 +198,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-17T01:52:44Z
+        Builded at 2023-07-19T02:46:51Z
         </p>
       </div>
     </div>

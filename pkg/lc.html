@@ -99,19 +99,14 @@
             
                 <document><p>For the impatient, here is a screenshot:</p>
 <p>  <img src="https://raw.githubusercontent.com/c-blake/lc/master/screenshots/main.png" style="max-width: 100%;" alt="screenshot" /></p>
-<p>Getting an <code>lc</code> config going <em>should</em> be as easy as (on Debian):</p>
+<p>Getting an <code>lc</code> config going <em>should</em> be as easy as (on Debian):<a href="You">^1</a></p>
 <pre>  <code>apt install nim  #(https://nim-lang.org/ has other options)
 nimble install lc
-cd $(nimble path lc); nimble installData
 </code></pre>
-<p>though the Nim experience can sometimes have fairly rough-hewn edges.  With such
-you may get an interesting 8-level sort-colorized listing from (configs/cb0 has
-details):</p>
-<pre>  <code>~/.nimble/bin/lc -oDd0134EN /dev
+<p>though the Nim experience can sometimes have fairly rough-hewn edges.  You may
+even get interesting 2-level sort-colorized listings from (etc/lc has details):</p>
+<pre>  <code>~/.nimble/bin/lc -oDd /dev
 </code></pre>
-<p>You can put <code>~/.nimble/bin</code> in <code>$PATH</code>.  As root, you may be able to export
-<code>NIMBLE_DIR=/usr/local/nimble</code> or <code>NIMBLE_DIR=/opt/nimble</code> before the above to
-possibly avoid <code>PATH</code> or <code>MANPATH</code> changes.<a href="While">^1</a></p>
 <h1>What <code>lc</code> is Not</h1>
 <p>This program is not and never will be a drop-in replacement for <code>ls</code> at the CLI
 option compatibility level.  <code>ls</code> is a poorly factored mishmash of selection,
@@ -195,11 +190,11 @@ mathematical &quot;<strong>INDEPENDENT coordinate</strong>&quot; sense <strong>n
 graphical file tree sense.  Examples of slots/dimensions/attributes may help.</p>
 <p>Output text can set foreground &amp; background colors of text <strong>independently</strong>.
 I happen to like <a href="https://git.suckless.org/st/">st</a> for its hackability.  That
-can do bold, italic, blink, underline, struck, inverse as 6 independent traits.
+can <em>also</em> bold, italic, blink, underline, struck, and inverse <em>independently</em>.
 (Color inversion involves a mapping too complex to be a very useful visual aid.)
-So, 7 usable output dimensions, with 5 being shallow 1-bit dimensions and colors
-having larger value ranges.  While subjective, I find it not hard to distinguish
-text with <em>all</em> those attributes varying.  Geographical map folk often call this
+So, 8 usable output dimensions, 6 shallow 1-bit dimensions &amp; fg/bg color with
+larger value ranges.  While subjective, I find it not hard to distinguish text
+with <em>all</em> those attributes varying.  Geographical map folk often call this
 &quot;layers&quot; (such as political borders layered atop satellite imagery).  <code>lc</code> aids
 &quot;aligning&quot; rendered output traits with classified input traits.</p>
 <p>The input/data side has <em>many</em> more independent fields &amp; bits.  While
@@ -292,8 +287,7 @@ human reading time and fast NVMe devices, even doing &quot;du -s&quot; inside a 
 not unthinkable, though unlikely to be a popular default style.  Hard-coding Git
 support seems popular these days.  I don&apos;t do that yet.  I&apos;m not sure I want a
 direct dependency, but you may be able to hack something together.</p>
-<p>we hope you appreciate <code>lc</code>, if you don&apos;t, uninstall looks like:
-<code>(export NIMBLE_DIR=/opt/nimble; cd $(nimble path lc|grep -v Info:);nimble uninstallData)</code></p>
+<p>may need <code>PATH</code>|<code>MANPATH</code> changes.  Or <code>man -l path/to/lc.1</code> can work.</p>
 <p>users just pick small integer labels for kinds aka series
 of order-dependent tests aka classes.  The first passing kind test within a
 dimension wins that dimension.  To aid debugging kind assignments you can do
@@ -368,7 +362,7 @@ before all dot regular files, but it is obviously much more general.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-17T01:52:44Z
+        Builded at 2023-07-19T02:46:51Z
         </p>
       </div>
     </div>

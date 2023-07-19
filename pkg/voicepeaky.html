@@ -101,16 +101,22 @@
 <tr>
 <th>Option</th>
 <th>Description</th>
+<th>Default</th>
+<th>Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>-p,--port</td>
 <td>specify the port you want to serve</td>
+<td>8080</td>
+<td>false</td>
 </tr>
 <tr>
 <td>-s,--skip</td>
 <td>skip old text when new text is requested</td>
+<td>-</td>
+<td>false</td>
 </tr></tbody></table>
 <h3>Request</h3>
 <pre>  <code class="language-sh">curl -X POST -H &quot;Content-Type: application/json&quot; -d &apos;@sample.json&apos; localhost:9999
@@ -122,59 +128,64 @@ see a sample <a href="https://raw.githubusercontent.com/solaoi/voicepeaky/main/s
 <tr>
 <th>Field</th>
 <th>Type</th>
-<th>Sample</th>
+<th>Default</th>
+<th>Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>- (parent)</td>
-<td>JSONObject</td>
-<td>-</td>
-</tr>
-<tr>
 <td>narrator</td>
 <td>string*1</td>
-<td>&quot;Japanese Male Child&quot;</td>
+<td>&quot;Japanese Female 1&quot;</td>
+<td>false</td>
 </tr>
 <tr>
 <td>emotion</td>
 <td>JSONObject</td>
 <td>-</td>
+<td>false</td>
 </tr>
 <tr>
 <td>emotion/happy</td>
 <td>number(0 - 100)</td>
 <td>0</td>
+<td>false</td>
 </tr>
 <tr>
 <td>emotion/fun</td>
 <td>number(0 - 100)</td>
 <td>0</td>
+<td>false</td>
 </tr>
 <tr>
 <td>emotion/angry</td>
 <td>number(0 - 100)</td>
 <td>0</td>
+<td>false</td>
 </tr>
 <tr>
 <td>emotion/sad</td>
 <td>number(0 - 100)</td>
 <td>0</td>
+<td>false</td>
 </tr>
 <tr>
 <td>speed</td>
 <td>number(50 - 200)</td>
 <td>100</td>
+<td>false</td>
 </tr>
 <tr>
 <td>pitch</td>
 <td>number(-300 - 300)</td>
 <td>0</td>
+<td>false</td>
 </tr>
 <tr>
 <td>text</td>
 <td>string</td>
-<td>&quot;こんにちは&quot;</td>
+<td>-</td>
+<td>true</td>
 </tr></tbody></table>
 <p>*1
 | Types of Narrators    | Requirements                                                                       |
@@ -184,11 +195,11 @@ see a sample <a href="https://raw.githubusercontent.com/solaoi/voicepeaky/main/s
 | Japanese Male 1       | <a href="https://www.ah-soft.com/voice/6nare/index.html">VOICEPEAK 商用可能 6ナレーターセット</a> |
 | Japanese Male 2       | <a href="https://www.ah-soft.com/voice/6nare/index.html">VOICEPEAK 商用可能 6ナレーターセット</a> |
 | Japanese Male 3       | <a href="https://www.ah-soft.com/voice/6nare/index.html">VOICEPEAK 商用可能 6ナレーターセット</a> |
-| Japanese Male 4       | <a href="https://www.ah-soft.com/voice/narrator/index.html">VOICEPEAK 商用可能 ナレーター</a>    |
+| Japanese Male4       | <a href="https://www.ah-soft.com/voice/narrator/index.html">VOICEPEAK 商用可能 ナレーター</a>    |
 | Japanese Female 1     | <a href="https://www.ah-soft.com/voice/6nare/index.html">VOICEPEAK 商用可能 6ナレーターセット</a> |
 | Japanese Female 2     | <a href="https://www.ah-soft.com/voice/6nare/index.html">VOICEPEAK 商用可能 6ナレーターセット</a> |
 | Japanese Female 3     | <a href="https://www.ah-soft.com/voice/6nare/index.html">VOICEPEAK 商用可能 6ナレーターセット</a> |
-| Japanese Female 4     | <a href="https://www.ah-soft.com/voice/narrator/index.html">VOICEPEAK 商用可能 ナレーター</a>    |</p>
+| Japanese Female4     | <a href="https://www.ah-soft.com/voice/narrator/index.html">VOICEPEAK 商用可能 ナレーター</a>    |</p>
 <h2>Install</h2>
 <h3>1. Mac</h3>
 <pre>  <code># Install
@@ -199,7 +210,7 @@ brew upgrade voicepeaky
 <h3>2. BinaryRelease</h3>
 <pre>  <code class="language-sh"># Install with wget or curl
 ## set the latest version on releases.
-VERSION=v1.0.3
+VERSION=v1.0.5
 ## set the OS you use. (macos)
 OS=linux
 ## case you use wget
@@ -210,6 +221,10 @@ curl -LO https://github.com/voicepeaky/broly/releases/download/$VERSION/voicepea
 tar xvf ./voicepeaky${OS}.tar.gz
 ## move it to a location in your $PATH, such as /usr/local/bin.
 mv ./voicepeaky /usr/local/bin/
+</code></pre>
+<h3>3. Nimble</h3>
+<pre>  <code class="language-sh"># Install &amp; Update
+nimble install voicepeaky
 </code></pre>
 <h2>Note</h2>
 <p>Voicepeak occasionally crashes; Voicepeaky will automatically retry, but if an error popup appears, please close it.</p>
@@ -281,7 +296,7 @@ mv ./voicepeaky /usr/local/bin/
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-17T01:52:44Z
+        Builded at 2023-07-19T02:46:51Z
         </p>
       </div>
     </div>

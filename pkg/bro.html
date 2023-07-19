@@ -248,21 +248,30 @@ Benchmark 2: bro repr big.ast
 <li>[ ] Combinators <a href="https://www.w3.org/TR/selectors-3/#combinators">ref</a></li>
 </ul>
 </li>
-<li>[x] Partials</li>
 <li>[x] Compile-time
 <ul>
-<li>[x] Compile-time Variables <code>$myvar: 12px</code></li>
-<li>[ ] Compile-time Constants</li>
-<li>[ ] Functions</li>
-<li>[ ] Conditionals (<code>if</code>, <code>elif</code>, <code>else</code>)</li>
-<li>[ ] For/Loop statements <code>for $x in $y</code></li>
-<li>[ ] Magically <code>@when</code> instead of <code>@media</code></li>
-<li>[ ] Typed properties declaration</li>
-<li>[ ] Warnings for unused <code>variables</code>, <code>functions</code></li>
-<li>[ ] CSS Variable Declaration using <code>var</code></li>
+<li>[x] Compile-time Variables <code>$myvar = 12px</code></li>
+<li>[x] Arrays/Objects
+<ul>
+<li>[ ] Anonymous arrays and objects</li>
 </ul>
 </li>
-<li />
+<li>[ ] Compile-time Constants</li>
+<li>[x] Functions
+<ul>
+<li>[x] Closures</li>
+<li>[x] Overloading</li>
+</ul>
+</li>
+<li>[x] Conditionals (<code>if</code>, <code>elif</code>, <code>else</code>, and <code>case</code>)</li>
+<li>[x] For/Loop statements <code>for $x in $y</code></li>
+<li>[ ] Magically <code>@when</code> instead of <code>@media</code></li>
+<li>[ ] Typed properties declaration</li>
+<li>[x] Warnings unused <code>variables</code>, <code>functions</code></li>
+<li>[ ] CSS Variable Declaration using <code>var</code> instead of <code>--</code></li>
+<li>[ ] String/Variable concatenation using <code>&amp;</code> and backticks</li>
+</ul>
+</li>
 <li>[ ] Handle single/multi line comments</li>
 <li>[ ] <code>Preview</code> snippets (Building docs from Stylesheets)</li>
 <li>[x] Command Line Interface
@@ -356,7 +365,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-17T01:52:44Z
+        Builded at 2023-07-19T02:46:51Z
         </p>
       </div>
     </div>

@@ -130,8 +130,8 @@ Supported Databases are <a href="https://www.sqlite.org/index.html">Sqlite3</a>,
 <li>  <a href="#documents">Documents</a></li>
 <li><a href="#nim-api-documents">Nim API Documents</a>
 <ul>
+<li>  <a href="#schema-builder-1">Schema Builder</a></li>
 <li>  <a href="#query-builder-for-rdb">Query Builder for RDB</a></li>
-<li>  <a href="#schema-builder-for-rdb">Schema Builder for RDB</a></li>
 <li>  <a href="#query-builder-for-surrealdb">Query Builder for SurrealDB</a></li>
 </ul>
 </li>
@@ -144,7 +144,7 @@ Supported Databases are <a href="https://www.sqlite.org/index.html">Sqlite3</a>,
 </li>
 </ul>
 <!--  Created by https://github.com/ekalinin/github-markdown-toc  -->
-<!--  Added by: root, at: Tue Jun  6 05:51:58 UTC 2023  -->
+<!--  Added by: root, at: Mon Jul 17 07:46:10 UTC 2023  -->
 <!-- te -->
 <hr />
 <h2>Install</h2>
@@ -173,19 +173,23 @@ These environment variables have to be set at compile time, so they have to be w
 <li>logDir: Define logging dir path.</li>
 </ul>
 <h2>Documents</h2>
-<p><a href="./documents/rdb/query_builder.md">Query Builder for RDB</a><br />
-<a href="./documents/rdb/schema_builder.md">Schema Builder for RDB</a><br />
+<p><a href="./documents/rdb/schema_builder.md">Schema Builder for RDB</a><br />
+<a href="./documents/rdb/query_builder.md">Query Builder for RDB</a><br />
+<a href="./documents/surrealdb/schema_builder.md">Schema Builder for SurrealDB</a><br />
 <a href="./documents/surrealdb/query_builder.md">Query Builder for SurrealDB</a></p>
 <h2>Nim API Documents</h2>
 <p>  <a href="https://itsumura-h.github.io/nim-allographer/connection.html">connection</a></p>
+<h3>Schema Builder</h3>
+<p><a href="https://itsumura-h.github.io/nim-allographer/schema_builder/usecases/create.html">usecases/create</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/usecases/alter.html">usecases/alter</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/usecases/drop.html">usecases/drop</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/models/table.html">models/table</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/models/column.html">models/column</a><br />
+<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/queries/query_interface.html">queries/query_interface</a></p>
 <h3>Query Builder for RDB</h3>
 <p><a href="https://itsumura-h.github.io/nim-allographer/query_builder/rdb/rdb_types.html">rdb_types</a><br />
 <a href="https://itsumura-h.github.io/nim-allographer/query_builder/rdb/rdb_interface.html">rdb_interface</a><br />
-<a href="https://itsumura-h.github.io/nim-allographer/query_builder/rdb/query/grammar.html">grammars</a><br />
-<a href="https://itsumura-h.github.io/nim-allographer/query_builder/rdb/exec.html">exec</a></p>
-<h3>Schema Builder for RDB</h3>
-<p><a href="https://itsumura-h.github.io/nim-allographer/schema_builder/schema.html">schema</a><br />
-<a href="https://itsumura-h.github.io/nim-allographer/schema_builder/grammars.html">grammar</a></p>
+<a href="https://itsumura-h.github.io/nim-allographer/query_builder/rdb/query/grammar.html">grammars</a></p>
 <h3>Query Builder for SurrealDB</h3>
 <p><a href="https://itsumura-h.github.io/nim-allographer/query_builder/surreal/surreal_types.html">surreal_types</a><br />
 <a href="https://itsumura-h.github.io/nim-allographer/query_builder/surreal/surreal_interface.html">surreal_interface</a><br />
@@ -282,7 +286,7 @@ These environment variables have to be set at compile time, so they have to be w
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-17T01:52:44Z
+        Builded at 2023-07-19T02:46:51Z
         </p>
       </div>
     </div>

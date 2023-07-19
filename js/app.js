@@ -1,5 +1,23 @@
 const packages = [
   {
+    "name": "sun_moon",
+    "url": "https://github.com/dschaadt/sun_moon",
+    "method": "git",
+    "tags": [
+      "astro",
+      "sun",
+      "moon",
+      "position",
+      "sunrise",
+      "sunset",
+      "moonrise",
+      "moonset"
+    ],
+    "description": "Astro functions for calcuation of sun and moon position, rise and set time as well as civil, nautical and astronomical dawn and dusk as a function of latitude and longitude.",
+    "license": "MIT",
+    "web": "https://github.com/dschaadt/sun_moon"
+  },
+  {
     "name": "nimip",
     "url": "https://github.com/hitblast/nimip",
     "method": "git",
@@ -30783,6 +30801,20 @@ const packages = [
     "web": "https://github.com/Pylgos/rclnim"
   },
   {
+    "name": "broly",
+    "url": "https://github.com/solaoi/broly",
+    "method": "git",
+    "tags": [
+      "mock",
+      "stub",
+      "test",
+      "server"
+    ],
+    "description": "High Performance Stub Server",
+    "license": "MIT",
+    "web": "https://github.com/solaoi/broly"
+  },
+  {
     "name": "voicepeaky",
     "url": "https://github.com/solaoi/voicepeaky",
     "method": "git",
@@ -30793,6 +30825,53 @@ const packages = [
     "description": "Voicepeak Server",
     "license": "MIT",
     "web": "https://github.com/solaoi/voicepeaky"
+  },
+  {
+    "name": "nimf",
+    "url": "https://github.com/Gruruya/nimf",
+    "method": "git",
+    "tags": [
+      "find command-line utility",
+      "multithreaded filesystem search tool",
+      "fast",
+      "finder",
+      "cli",
+      "shell",
+      "terminal",
+      "console"
+    ],
+    "description": "Search for files in a directory hierarchy.",
+    "license": "AGPL-3.0-only",
+    "web": "https://github.com/Gruruya/nimf"
+  },
+  {
+    "name": "bard",
+    "url": "https://github.com/thisago/bard",
+    "method": "git",
+    "tags": [
+      "library",
+      "batchexecute",
+      "bard",
+      "ai",
+      "google"
+    ],
+    "description": "Nim interface of Google Bard free API",
+    "license": "MIT",
+    "web": "https://github.com/thisago/bard"
+  },
+  {
+    "name": "docid",
+    "url": "https://github.com/thisago/docid",
+    "method": "git",
+    "tags": [
+      "library",
+      "id",
+      "generator",
+      "verifier"
+    ],
+    "description": "Document IDs generation and validation",
+    "license": "MIT",
+    "web": "https://github.com/thisago/docid"
   }
 ]
 const options = {
