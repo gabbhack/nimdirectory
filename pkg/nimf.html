@@ -123,7 +123,8 @@ Options:
   -h, --help                                   print this cligen-erated help
   --help-syntax                                advanced: prepend,plurals,..
   --version              bool           false  print version
-  -a, --all              bool           false  Search all directories, normally a few choice directories are skipped.
+  -a, --all              bool           false  Search all directories, including those ignored by default/your `.config/nimf/ignore.csv` file.
+  -x=, --exclude=        strings        {}     Add patterns to ignore.
   -t=, --types=          set(filetype)  any    Select which file kind(s) to match. File kinds include any|file|directory|link|lfile|ldir.
   -e=, --execute=        strings        {}     Execute a command for each matching search result in parallel.
                                                Alternatively, end this argument with &quot;+&quot; to execute the command once with all results as arguments.
@@ -311,7 +312,7 @@ As the <strong>3 matches</strong> search finished printing its results much earl
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-19T02:46:51Z
+        Builded at 2023-07-20T01:23:25Z
         </p>
       </div>
     </div>

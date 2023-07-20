@@ -95,35 +95,21 @@
             
                 <document><div align="center">
 <h1>Bard</h1>
-<h4>Nim interface for Google Bard batchexecute API <!-- &lt;br&gt;&lt;small&gt;(ps: with cli :D)&lt;/small&gt; --></h4>
+<h4>Nim interface for Google Bard batchexecute API</h4>
 <p><strong><a href="#about">About</a> - <a href="#usage">Usage</a></strong> - <a href="#license">License</a></p>
 </div>
 <h1>About</h1>
 <p>Google Bard AI batchexecute implementation in Nim</p>
+<p>Take a look at <a href="https://github.com/thisago/clibard">clibard</a>, an example of how
+use this lib.</p>
 <p>This project was based in</p>
 <ul>
 <li>  <a href="https://github.com/EvanZhouDev/bard-ai" title="Go to Github">EvanZhouDev/bard-ai ↗</a></li>
 <li>  <a href="https://github.com/acheong08/Bard" title="Go to Github">acheong08/Bard ↗</a></li>
 </ul>
 <h2>Usage</h2>
-<!-- 
-### As CLI app
-
-**Start chat**
-
-```bash
-$ bard chat
-```
-
-**Single question**
-
-```bash
-$ bard prompt Tell me an Asian traditional history in ten words
-```
-
-### As library  -->
 <p>  <strong>    <a href="examples/single.nim">Individual prompts example</a>  </strong></p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ai</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">newBardAi</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">psid</span> <span class="op">=</span> <span class="ide">getEnv</span>(<span class="str">&quot;bard_psid&quot;</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">psidts</span> <span class="op">=</span> <span class="ide">getEnv</span>(<span class="str">&quot;bard_psidts&quot;</span>)</div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">waitFor</span>(<span class="ide">ai</span><span class="op">.</span><span class="ide">prompt</span> <span class="str">&quot;Tell me an Asian traditional history in ten words&quot;</span>)<span class="op">.</span><span class="ide">text</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ai</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">newBardAi</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">psid</span> <span class="op">=</span> <span class="str">&quot;__Session-1PSID cookie&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">psidts</span> <span class="op">=</span> <span class="str">&quot;__Session-1PSIDTS cookie&quot;</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">waitFor</span>(<span class="ide">ai</span><span class="op">.</span><span class="ide">prompt</span> <span class="str">&quot;Tell me an Asian traditional history in ten words&quot;</span>)<span class="op">.</span><span class="ide">text</span></div></div>  </code></pre>
 <details>
 <summary>output</summary>
 <pre>  <code class="language-text">Sure, here is an Asian traditional history in 10 words:
@@ -221,7 +207,7 @@ These are just a few examples of the many ways to summarize Asian traditional hi
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-19T02:46:51Z
+        Builded at 2023-07-20T01:23:25Z
         </p>
       </div>
     </div>

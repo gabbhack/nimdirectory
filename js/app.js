@@ -30872,6 +30872,21 @@ const packages = [
     "description": "Document IDs generation and validation",
     "license": "MIT",
     "web": "https://github.com/thisago/docid"
+  },
+  {
+    "name": "gookie",
+    "url": "https://github.com/thisago/gookie",
+    "method": "git",
+    "tags": [
+      "library",
+      "dirty",
+      "google",
+      "cookie",
+      "session"
+    ],
+    "description": "Google Cookies. In your hands",
+    "license": "MIT",
+    "web": "https://github.com/thisago/gookie"
   }
 ]
 const options = {
