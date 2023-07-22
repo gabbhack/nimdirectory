@@ -29939,10 +29939,11 @@ const packages = [
       "framework",
       "frontend",
       "backend",
-      "hapticx"
+      "hapticx",
+      "happyx"
     ],
-    "description": "Macro-oriented asynchronous web-framework written with ♥",
-    "license": "GNU GPLv3",
+    "description": "Macro-oriented full-stack web-framework written with ♥",
+    "license": "MIT",
     "web": "https://github.com/HapticX/happyx"
   },
   {
@@ -30887,6 +30888,20 @@ const packages = [
     "description": "Google Cookies. In your hands",
     "license": "MIT",
     "web": "https://github.com/thisago/gookie"
+  },
+  {
+    "name": "clibard",
+    "url": "https://github.com/thisago/clibard",
+    "method": "git",
+    "tags": [
+      "cli",
+      "bard",
+      "ai",
+      "chat"
+    ],
+    "description": "Command line interface for Google Bard",
+    "license": "GPL-3.0-or-later",
+    "web": "https://github.com/thisago/clibard"
   },
   {
     "name": "librng",

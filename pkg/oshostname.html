@@ -88,6 +88,7 @@
 <h2>Support platforms</h2>
 <p>Currently, just any that support gethostname() similarly to Linux.</p>
 <h2>Why even use this?</h2>
+<p>EDIT: don&apos;t. I don&apos;t know how i missed it, but std/nativeosckets has getHostname() already, for windows and Posix platforms, including macOS.</p>
 <p>gethostname() has this gotcha: if the configured hostname is longer than the
 buffer given to it, then the buffer might not be NUL terminated. This library
 takes the small amount of care required to avoid this case.</p>
@@ -168,7 +169,7 @@ takes the small amount of care required to avoid this case.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-21T01:24:31Z
+        Builded at 2023-07-22T01:23:38Z
         </p>
       </div>
     </div>
