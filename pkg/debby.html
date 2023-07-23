@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">debby</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">db</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">sqlite</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mysql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">postgresql</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">orm</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("Database ORM layer")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install debby" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Debby: An Opinionated ORM for Nim</h1>
+<p>  <code>nimble install debby</code></p>
+<p>  <img src="https://github.com/treeform/debby/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://treeform.github.io/debby">API reference</a></p>
+<p>This library depends on:</p>
+<ul>
+<li>jsony</li>
+</ul>
+<blockquote>
+<p>Note: Debby is still in its early stages. We appreciate your feedback and contributions!</p>
+</blockquote>
+<p>Debby is a powerful, intuitive, and opinionated Object-Relational Mapping (ORM) library designed specifically for Nim. Built with simplicity and efficiency in mind, Debby allows you to interact with your databases.</p>
+<p>With Debby, you can define models as plain Nim objects, perform CRUD operations, handle migrations, and even create complex queries with a type-safe, Nim-like filter syntax.</p>
+<ul>
+<li><strong>Powerful ORM</strong>: Create, Read, Update, and Delete operations are simple and intuitive.</li>
+<li><strong>Nim-like filter syntax</strong>: Write SQL filters as you would write Nim code!</li>
+<li><strong>Nim-centric Model Definition</strong>: Define your database schema using the familiar syntax and type system of Nim.</li>
+<li><strong>JSON fields</strong>: Automatically converts complex fields to JSON and back.</li>
+<li><strong>Custom queries and object mapping</strong>: Supports custom SQL queries and maps them to plain Nim objects.</li>
+<li><strong>Database Migrations</strong>: Detects schema changes and aids in the generation of migration scripts based on your Nim models.</li>
+</ul>
+<p>Whether you&apos;re building a small project or a large-scale application, Debby aims to make your experience with databases in Nim as efficient and enjoyable as possible.</p>
+<p><strong>Supported Databases</strong>: SQLite, PostgreSQL, MySql.</p>
+<h2>Quick Start</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">db</span> <span class="op">=</span> <span class="ide">openDatabase</span>(<span class="str">&quot;auto.db&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Auto</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">id</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">make</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">model</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">year</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">createTable</span>(<span class="ide">Auto</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">auto</span> <span class="op">=</span> <span class="ide">Auto</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">make</span>: <span class="str">&quot;Chevrolet&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">model</span>: <span class="str">&quot;Camaro Z28&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">year</span>: <span class="num">1970</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">insert</span>(<span class="ide">auto</span>)                 <span class="com"># Create</span></div></div><div class="line"><div class="line-content"><span class="ide">auto</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">get</span>(<span class="ide">Auto</span>, <span class="ide">auto</span><span class="op">.</span><span class="ide">id</span>)    <span class="com"># Read</span></div></div><div class="line"><div class="line-content"><span class="ide">auto</span><span class="op">.</span><span class="ide">year</span> <span class="op">=</span> <span class="num">1971</span></div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">auto</span>)                 <span class="com"># Update</span></div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">delete</span>(<span class="ide">auto</span>)                 <span class="com"># Delete</span></div></div>  </code></pre>
+<h1>Table Creation and Indexes</h1>
+<p>Define your database models as plain Nim objects:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Auto</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">id</span>: <span class="ide">int</span>       <span class="com">## Special primary-key field, required!!!</span></div></div><div class="line"><div class="line-content">  <span class="ide">make</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">model</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">year</span>: <span class="ide">int</span></div></div>  </code></pre>
+<p>The only required fields is the <code>.id</code> field. It must always be <code>int</code> and can&apos;t be changed. Debby uses the <code>.id</code> field for most operations.</p>
+<p>Debby makes it easy to create indices on your tables to speed up queries:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">createIndex</span>(<span class="ide">Auto</span>, <span class="str">&quot;make&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">createIndex</span>(<span class="ide">Auto</span>, <span class="str">&quot;model&quot;</span>, <span class="str">&quot;model&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">createIndex</span>(<span class="ide">Auto</span>, <span class="str">&quot;model&quot;</span>, <span class="str">&quot;model&quot;</span>, <span class="str">&quot;year&quot;</span>)</div></div>  </code></pre>
+<p>Remember to add an index when you are going to be querying based on that field or set of fields often.</p>
+<h1>The CRUD part:</h1>
+<p>Lets insert autos into the database. You can insert one items at a time:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">auto</span> <span class="op">=</span> <span class="ide">Auto</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">make</span>: <span class="str">&quot;Chevrolet&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">model</span>: <span class="str">&quot;Camaro Z28&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">year</span>: <span class="num">1970</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">insert</span>(<span class="ide">auto</span>)</div></div>  </code></pre>
+<p>When inserting debby updates the <code>.id</code> of the object just inserted.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">auto</span><span class="op">.</span><span class="ide">id</span></div></div>  </code></pre>
+<p>You can also insert whole seq of objects at at time:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">insert</span>(<span class="op">@</span>[</div></div><div class="line"><div class="line-content">    <span class="ide">Auto</span>(<span class="ide">make</span>: <span class="str">&quot;Chevrolet&quot;</span>, <span class="ide">model</span>: <span class="str">&quot;Camaro Z28&quot;</span>, <span class="ide">year</span>: <span class="num">1970</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">Auto</span>(<span class="ide">make</span>: <span class="str">&quot;Porsche&quot;</span>, <span class="ide">model</span>: <span class="str">&quot;911 Carrera RS&quot;</span>, <span class="ide">year</span>: <span class="num">1973</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">Auto</span>(<span class="ide">make</span>: <span class="str">&quot;Lamborghini&quot;</span>, <span class="ide">model</span>: <span class="str">&quot;Countach&quot;</span>, <span class="ide">year</span>: <span class="num">1974</span>),</div></div><div class="line"><div class="line-content">])</div></div>  </code></pre>
+<p>Once you know the <code>.id</code> of the object you can read the data back using <code>get()</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">car</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">get</span>(<span class="ide">Auto</span>, <span class="ide">id</span>: <span class="num">1</span>)</div></div>  </code></pre>
+<p>You can get multiple objects using <code>filter()</code> using a type-safe query builder:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">cars</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">filter</span>(<span class="ide">Auto</span>, <span class="ide">it</span><span class="op">.</span><span class="ide">year</span> <span class="op">&gt;</span> <span class="num">1990</span>)</div></div>  </code></pre>
+<p>With <code>filter()</code> you can perform complex queries even with logical operators:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">cars</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">filter</span>(<span class="ide">Auto</span>, <span class="ide">it</span><span class="op">.</span><span class="ide">make</span> <span class="op">==</span> <span class="str">&quot;Ferrari&quot;</span> <span class="kwd">or</span> <span class="ide">it</span><span class="op">.</span><span class="ide">make</span> <span class="op">==</span> <span class="str">&quot;Lamborghini&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">cars</span><span class="op">.</span><span class="ide">len</span> <span class="op">==</span> <span class="num">3</span></div></div>  </code></pre>
+<p>To save changes you&apos;ve made to your objects back to the database, just call <code>db.update</code> with the objects:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">car</span>)</div></div>  </code></pre>
+<p>Just make sure that the <code>.id</code> fields is set. Debby uses this special field for all operations.</p>
+<p>Just like you can <code>insert()</code> multiple objects in a seq, you can <code>update()</code> them too:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">update</span>(<span class="op">@</span>[<span class="ide">car1</span>, <span class="ide">car2</span>, <span class="ide">car</span>])</div></div>  </code></pre>
+<p>Some times you are not sure if you need to update or create an row. For that you can use <code>upsert()</code> and it will update or insert:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">upsert</span>(<span class="ide">car</span>)</div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">upsert</span>(<span class="op">@</span>[<span class="ide">car1</span>, <span class="ide">car2</span>, <span class="ide">car</span>])</div></div>  </code></pre>
+<p>Again the <code>.id</code> field is crucial, if its <code>0</code> debby will <code>insert()</code>, otherwise it will <code>update()</code>.</p>
+<h2>Transactions</h2>
+<p>You can use <code>withTransaction()</code> block to make sure to update or insert everything at once:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">withTransaction</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">p1</span> <span class="op">=</span> <span class="ide">Payer</span>(<span class="ide">name</span>: <span class="str">&quot;Bar&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">db</span><span class="op">.</span><span class="ide">insert</span>(<span class="ide">p1</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">db</span><span class="op">.</span><span class="ide">insert</span>(<span class="ide">Card</span>(<span class="ide">payerId</span>: <span class="ide">p1</span><span class="op">.</span><span class="ide">id</span>, <span class="ide">number</span>: <span class="str">&quot;1234.1234&quot;</span>))</div></div>  </code></pre>
+<p>If an exception happens during a transaction it will be rolled back.</p>
+<h2>Custom SQL queries</h2>
+<p>Debby also supports custom SQL queries with parameters. Use the <code>db.query()</code> function to perform queries:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">query</span>(<span class="str">&quot;select 5&quot;</span>)</div></div>  </code></pre>
+<p>Don&apos;t splice arguments into the SQL queries as it can cause SQL injection attacks. Rather use the <code>?</code> substitution placeholder.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">query</span>(<span class="str">&quot;select ?&quot;</span>, <span class="num">5</span>)</div></div>  </code></pre>
+<p>By default <code>db.query</code> returns simple <code>seq[seq[string]]</code> which corresponds to rows and columns. The results can be ignored when you don&apos;t expect any results.</p>
+<h2>Mapping SQL queries to objects.</h2>
+<p>A cool power of debby comes from mapping custom SQL queries to any <code>ref object</code>. Just pass the object type you want to map as first argument to <code>query()</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">SteamPlayer</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">id</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">steamId</span>: <span class="ide">uint64</span></div></div><div class="line"><div class="line-content">  <span class="ide">rank</span>: <span class="ide">float32</span></div></div><div class="line"><div class="line-content">  <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">players</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">SteamPlayer</span>, <span class="str">&quot;SELECT * FROM steam_player WHERE name = ?&quot;</span>, <span class="str">&quot;foo&quot;</span>)</div></div>  </code></pre>
+<p>For big heavy objects, you can select a subset of fields and map them to a different smaller <code>ref objects</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">RankName</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">rank</span>: <span class="ide">float32</span></div></div><div class="line"><div class="line-content">  <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">players</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">RankName</span>, <span class="str">&quot;SELECT name, rank FROM steam_player WHERE name = ?&quot;</span>, <span class="str">&quot;foo&quot;</span>)</div></div>  </code></pre>
+<p>This can also be used for custom rows computed entirely on the fly:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">CountYear</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">count</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">year</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rows</span> <span class="op">=</span> <span class="ide">db</span><span class="op">.</span><span class="ide">query</span>(<span class="ide">CountYear</span>, <span class="str">&quot;SELECT count(*) as count, year FROM auto GROUP BY year&quot;</span>)</div></div>  </code></pre>
+<h2>JSON Fields</h2>
+<p>Debby can map almost any plain Nim object to SQL and back. If the object field is a complex type. It will turn into JSON field serialized using <a href="https://github.com/treeform/jsony">jsony</a>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Location</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">id</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">revenue</span>: <span class="ide">Money</span></div></div><div class="line"><div class="line-content">  <span class="ide">position</span>: <span class="ide">Vec2</span></div></div><div class="line"><div class="line-content">  <span class="ide">items</span>: <span class="ide">seq</span>[<span class="ide">string</span>]</div></div><div class="line"><div class="line-content">  <span class="ide">rating</span>: <span class="ide">float32</span></div></div>  </code></pre>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>revenue</th>
+<th>position</th>
+<th>items</th>
+<th>rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Super Cars</td>
+<td>1234</td>
+<td>{&quot;x&quot;:123.0,&quot;y&quot;:456.0}</td>
+<td>[&quot;wrench&quot;,&quot;door&quot;,&quot;bathroom&quot;]</td>
+<td>1.5</td>
+</tr></tbody></table>
+<p>This means you can create and use many Nim objects as is, and save and load them from the database with minimal changes.</p>
+<p>Many DBs have JSON functions to operate on JSON stores in the rows this way.</p>
+<h2>sqlParseHook / sqlDumpHook</h2>
+<p>If JSON encoding with jsony is not enough, you can define custom <code>sqlParseHook()</code> and <code>sqlDumpHook()</code> for your field types.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Money</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">int64</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlDumpHook</span>(<span class="ide">v</span>: <span class="ide">Money</span>): <span class="ide">string</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="str">&quot;$&quot;</span> <span class="op">&amp;</span> <span class="op">$</span><span class="ide">v</span><span class="op">.</span><span class="ide">int64</span> <span class="op">&amp;</span> <span class="str">&quot;USD&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">sqlParseHook</span>(<span class="ide">data</span>: <span class="ide">string</span>, <span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">Money</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">v</span> <span class="op">=</span> <span class="ide">data</span>[<span class="num">1.</span><span class="op">.^</span><span class="num">4</span>]<span class="op">.</span><span class="ide">parseInt</span>()<span class="op">.</span><span class="ide">Money</span></div></div>  </code></pre>
+<p>It will store money as string:</p>
+<p>  <code>$1234USD</code></p>
+<h2>Check table.</h2>
+<p>As you initialize your data base you should run <code>checkTable()</code> on all of your tables.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">CheckEntry</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">id</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">toField</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">money</span>: <span class="ide">Money</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">checkTable</span>(<span class="ide">CheckEntry</span>)</div></div>  </code></pre>
+<p>Check table wil cause an exception if your schema defined with Nim does not match the schema defined in SQL. It will even suggest the SQL command to run to bring your schema up to date.</p>
+<pre>  <code>Field cars.msrp is missing
+Add it with:
+ALTER TABLE cars ADD msrp REAL;
+Or compile --d:debbyYOLO to do this automatically
+</code></pre>
+<p>Yes using <code>--d:debbyYOLO</code> can do this automatically, but it might <strong>not</strong> be what you want! Always be vigilant.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/debby">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-07-23T01:35:24Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
