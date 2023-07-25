@@ -30932,6 +30932,18 @@ const packages = [
     "description": "RNG for dummies in Nim",
     "license": "MIT",
     "web": "https://github.com/xTrayambak/librng"
+  },
+  {
+    "name": "nimautogui",
+    "url": "https://github.com/Cooperzilla/nimautogui",
+    "method": "git",
+    "tags": [
+      "library",
+      "winapi"
+    ],
+    "description": "Moving the mouse around in nim inspired by python's pyautogui. Windows Only",
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "web": "https://github.com/Cooperzilla/nimautogui"
   }
 ]
 const options = {

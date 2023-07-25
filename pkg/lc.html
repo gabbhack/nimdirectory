@@ -173,8 +173,9 @@ special sorts, formats, ..</p>
 <p>is extensible with fully user-defined file type tests &amp; field formats</p>
 </li>
 <li>
-<p>is compact (~1000 lines; ~300 is tables&amp;help, ~300 of <code>cligen/[tab, humanUt]</code>
-might be part of <code>lc</code> if I didn&apos;t write both pkgs.)</p>
+<p>is compact (~900 non-comment/blank lines; ~300 is just code dispatch tables &amp;
+help, ~650 in <code>cligen/[tab, humanUt, abbrev]</code> might be in <code>lc</code> had I not done
+both pkgs.)</p>
 </li>
 <li>
 <p>has few dependencies (just <code>cligen</code> and the Nim stdlib)</p>
@@ -185,9 +186,10 @@ With so many features and few users, there are likely bugs.</p>
 </li>
 </ul>
 <h1>Vector Type/Multi-dimensionality/Attribute Layers</h1>
-<p>The most obscure idea is likely &quot;multi-dimensional&quot;.  I mean this in the
-mathematical &quot;<strong>INDEPENDENT coordinate</strong>&quot; sense <strong>not</strong> a Jurassic Park (1993)-esque
-graphical file tree sense.  Examples of slots/dimensions/attributes may help.</p>
+<p>The most obscure idea is likely &quot;multi-dimensional&quot;.  I mean this in an abstract
+&quot;<strong>INDEPENDENT coordinate</strong>&quot; sense <strong>not</strong> a <a href="https://www.youtube.com/watch?v=URVS4H7vrdU">Jurassic Park
+(1993)-esque</a> IRIX fsn graphical
+file browser sense.  Examples of slots/dimensions/attributes may help.</p>
 <p>Output text can set foreground &amp; background colors of text <strong>independently</strong>.
 I happen to like <a href="https://git.suckless.org/st/">st</a> for its hackability.  That
 can <em>also</em> bold, italic, blink, underline, struck, and inverse <em>independently</em>.
@@ -195,41 +197,41 @@ can <em>also</em> bold, italic, blink, underline, struck, and inverse <em>indepe
 So, 8 usable output dimensions, 6 shallow 1-bit dimensions &amp; fg/bg color with
 larger value ranges.  While subjective, I find it not hard to distinguish text
 with <em>all</em> those attributes varying.  Geographical map folk often call this
-&quot;layers&quot; (such as political borders layered atop satellite imagery).  <code>lc</code> aids
-&quot;aligning&quot; rendered output traits with classified input traits.</p>
-<p>The input/data side has <em>many</em> more independent fields &amp; bits.  While
-<code>dirent.d_type</code> is mutually exclusive type codes, most types aren&apos;t.  E.g., a
-file can be both an executable regular file and some kind of script source or
-both a directory and a directory with a sticky bit set.  Independently of all
-that, it can begin with a &apos;.&apos; or not.  Add all of <code>struct stat</code> and deep file
-header inspection and the type space just explodes both in kinds and independent
-sub-kinds/dimensions (stripped or not, 32-bit, 64-bit binaries, etc., etc.).</p>
-<p>Only end users can prioritize use of precious few output dimensions.  To aid
-this use, <code>lc</code> users can configure file kinds to pair with picked poisons of
-output traits.<a href="Operationally,">^2</a></p>
+&quot;layering&quot; (such as political borders layered atop satellite imagery).</p>
+<p>The input/data side has <em>many</em> independent fields &amp; bits.  While <code>dirent.d_type</code>
+is mutually exclusive type codes (like directory/named pipe/..), most types
+aren&apos;t.  E.g., a file can be <em>  <strong>both</strong></em> an executable regular file <em>  <strong>and</strong></em>
+some kind of script source or both a directory and a directory with a sticky bit
+set.  Independently of all that, it can begin with a &apos;.&apos; or not.  Add all of
+<code>struct stat</code> and deep file header inspection and the type space explodes both
+in kinds &amp; independent sub-kinds/dimensions (stripped|not, 32|64-bit, etc.).</p>
+<p>Only end users can prioritize use of precious few output layers.  To aid this
+use, <code>lc</code> users can configure file kinds to pair with picked poisons of output
+traits.<a href="Operationally,">^2</a></p>
 <p>This may sound daunting, but many highlighting systems follow this model - e.g.
 a misspelled word bolded inside an elsewise colorized source code comment.  <code>lc</code>
-simply models this structure explicitly to try to enable better allocation over
-more dimensions than just the 2 (misspelling,comment) due to diverse file types.</p>
+simply models this structure explicitly to try to enable better allocation by
+end users over more dimensions than just the 2 (misspelling, comment) due to
+diverse file types.  Most briefly, <code>lc</code> aids &quot;aligning&quot; rendered output traits
+with classified input traits.</p>
 <h1>Configurability</h1>
 <p>As for the bread and butter of file listing, many things that are hard-coded in
 other file listers are fully user-defined in <code>lc</code>, like a concept of dot files.
 Assuming you define a &quot;dot&quot; or &quot;dotfile&quot; type <code>lc -xdot</code> will probably exclude
 those from a listing.  (Unique prefixes being adequate may mean a longer string
 if you define other file kinds with names starting with &quot;dot&quot;.)</p>
-<p>I usually have a shell alias that does the <code>-xdot</code> and a related alias ending
-with an &quot;a&quot; that does not.  That mimics <code>ls</code> usage, but without spaces and &apos;-&apos;s
-to enter.  If the listing is well organized, seeing dot files by default may be
-considered as much a feature as a bug.  Including everything by default lets
-&quot;dot&quot; be user-defined.</p>
+<p>I usually have an alias that does <code>-xdot</code> and a related one ending with an &quot;a&quot;
+that does not.  That mimics <code>ls</code> usage.  If the listing is well organized,
+seeing dot files by default may be considered as much a feature as a bug.
+Including everything by default lets &quot;dot&quot; be user-defined.</p>
 <p>You can also do <code>-idot</code> to list <em>only</em> the dot files (or any other user/system
 defined file kind) which is not something available in most file listers.  It&apos;s
 also not always easy to replicate via shell globbing the input list.  Eg., <code>lc -r0 -idir -iodd</code> in my config can be illuminating on very aged file trees.</p>
 <p>Multi-level sorting and user format strings are similar ideas to other tools
 like the Linux <code>ps</code>, <code>stat -c</code>, and <code>find -printf</code>.  Sorting by file kind is
-possible and &quot;kind orders&quot; are user-configurable.  Between kind order assignment
+possible and &quot;kind order&quot; is user-configurable.  Between kind order assignment
 and multi-dimensionality you can filter &amp; group almost any way that makes sense,
-and none of that needs any changing of <code>lc</code> proper - just your configuration.
+and none of that needs any hacking on <code>lc</code> proper - just your configuration.
 Less can be more with good factoring.  <code>lc</code> is more an &quot;<code>ls</code> framework&quot;.</p>
 <p>Because of all that flexibility, <code>lc</code> has a built in style/aliasing system.
 This lets you name canned queries &amp; reports and refer to them, like <code>lc -sl</code>.
@@ -362,7 +364,7 @@ before all dot regular files, but it is obviously much more general.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-24T01:24:35Z
+        Builded at 2023-07-25T01:39:51Z
         </p>
       </div>
     </div>
