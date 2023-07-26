@@ -87,11 +87,36 @@
             
                 <document><h1>crowngui</h1>
 <p>Web Technologies based Crossplatform GUI Framework</p>
-<p>It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and IE on Windows</p>
-<p>Notice: I mainly work on macOS, also it has well document of Cocoa/WebKit,
-contribute to Linux and Windows are welcome, the windows binding will change to Edge and webview2 api in the future.</p>
+<p>It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and webview2 on Windows</p>
+<p>crowngui contains managed code only, no native code.</p>
+<p>crowngui provide CLI tool for bundling application easier.</p>
 <p>CLI tool:<br />
-<a href="https://github.com/bung87/crowncli">crowncli</a> for build application.</p>
+<a href="https://github.com/bung87/crowncli">crowncli</a>.</p>
+<h2>Architecture</h2>
+<h3>how bindProcs works?</h3>
+<p>figure generated via asciiflow</p>
+<pre>  <code>
+┌─────────────┐         ┌──────────────────────────────┐       ┌─────────────────────────┐
+│             │         │                              │       │                         │
+│             │         │store hook function in `eps`  │       │when trigger js function │
+│             │         │hook accept one string param  │       │internally it use browser│
+│  bindProcs  ├────────►│and returns string that wraps ├──────►│`postMessage` api send   │
+│             │         │nim proc call.                │       │json string with scope,  │
+│             │         │And generate js function and  │       │name, argument.          │
+│             │         │dispatch to main queue.       │       │                         │
+└─────────────┘         └──────────────────────────────┘       └────────────┬────────────┘
+                                                                            │
+                                                                            ▼
+                        ┌────────────────────────────────────────────────────┐
+                        │browser add callback when received message          │
+                        │it calls Webview&apos;s `invokeCb` which implements      │
+                        │as `generalExternalInvokeCallback`                  │
+                        │it parse argument as json retrieve scope,           │
+                        │name, argument,then call the hook stored.           │
+                        │                                                    │
+                        └────────────────────────────────────────────────────┘
+
+</code></pre>
 <h2>Usage</h2>
 <p>file: yourexecutable.nim</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">crowngui</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">const</span>   </div></div><div class="line"><div class="line-content">    <span class="ide">cssDark</span> <span class="op">=</span> staticRead"assets/dark.css"<span class="op">.</span><span class="ide">strip</span><span class="op">.</span><span class="ide">unindent</span><span class="op">.</span><span class="ide">cstring</span></div></div><div class="line"><div class="line-content">    <span class="ide">cssLight</span> <span class="op">=</span> staticRead"assets/light.css"<span class="op">.</span><span class="ide">strip</span><span class="op">.</span><span class="ide">unindent</span><span class="op">.</span><span class="ide">cstring</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">newApplication</span>( <span class="ide">staticRead</span>(<span class="str">&quot;assets/demo.html&quot;</span>) )</div></div><div class="line"><div class="line-content">  <span class="kwd">when</span> <span class="kwd">not</span> <span class="ide">defined</span>(<span class="ide">bundle</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">theme</span> <span class="op">=</span> <span class="kwd">if</span> <span class="str">&quot;--light-theme&quot;</span> <span class="kwd">in</span> <span class="ide">commandLineParams</span>(): <span class="ide">cssLight</span> <span class="kwd">else</span>: <span class="ide">cssDark</span></div></div><div class="line"><div class="line-content">    <span class="ide">app</span><span class="op">.</span><span class="ide">css</span>(<span class="ide">theme</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">run</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">app</span><span class="op">.</span><span class="ide">exit</span>()</div></div>  </code></pre>
@@ -129,6 +154,9 @@ Options:
 CentOS: yum install mingw32-gcc | mingw64-gcc - requires EPEL
 OSX: brew install mingw-w64
 </code></pre>
+<h2>References</h2>
+<p>  <a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution">Distribute your app and the WebView2 Runtime</a></p>
+<p>  <a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/">WebView2 Win32 Reference</a></p>
 </document>
             
         </div>
@@ -197,7 +225,7 @@ OSX: brew install mingw-w64
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-25T01:39:51Z
+        Builded at 2023-07-26T01:24:52Z
         </p>
       </div>
     </div>

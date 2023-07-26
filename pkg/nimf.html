@@ -120,29 +120,29 @@ Entered `input` may be a pattern OR a path to search.
 The pattern will only match with the filename unless you include a `/`.
 
 Options:
-  -h, --help                                   print this cligen-erated help
-  --help-syntax                                advanced: prepend,plurals,..
-  --version              bool           false  print version
-  -a, --all              bool           false  Search all directories, including those ignored by default/your `.config/nimf/ignore.csv` file.
-  -x=, --exclude=        strings        {}     Add patterns to ignore.
-  -t=, --types=          set(filetype)  any    Select which file kind(s) to match. File kinds include any|file|directory|link|lfile|ldir.
-  -e=, --execute=        strings        {}     Execute a command for each matching search result in parallel.
-                                               Alternatively, end this argument with &quot;+&quot; to execute the command once with all results as arguments.
-                                               Example: f .nim -e &quot;$EDITOR&quot;+
-                                               The following placeholders are substituted before the command is executed:
-                                               &quot;{}&quot;:   path (of the current search result)
-                                               &quot;{/}&quot;:  basename
-                                               &quot;{//}&quot;: parent directory
-                                               &quot;{.}&quot;:  path without file extension
-                                               &quot;{/.}&quot;: basename without file extension
-                                               Example: f .jpg -e &apos;convert {} {.}.png&apos;
-                                               If no placeholder is present, an implicit &quot; {}&quot; at the end is assumed.
-  -d=, --max-depth=      int            0      Set a maximum of how deep in the directory tree to search.
-  -l=, --limit=          int            0      Limit the number of results.
-  -L, --follow-symlinks  bool           false  Enable traversing symlinks.
-  -0, --null             bool           false  Separate search results and split stdin with null characters `\0` instead of newlines `\n`.
-  -c, --color            flag           auto   Enable or disable colored printing. Default is based on the `NO_COLOR` environment variable.
-  --hyperlink            flag           false  Enable clickable hyperlinks in supported terminals.
+  -h, --help                               print this cligen-erated help
+  --help-syntax                            advanced: prepend,plurals,..
+  --version              bool       false  print version
+  -a, --all              bool       false  Search all directories, including those ignored by default/your `.config/nimf/ignore.csv` file.
+  -x=, --exclude=        strings    {}     Add patterns to ignore.
+  -t=, --types=          filetypes  any    Select which file type(s) to match. File type may be any|{l}file|{l}directory|{f/d}link or a file extension.
+  -e=, --execute=        strings    {}     Execute a command for each matching search result in parallel.
+                                           Alternatively, end this argument with &quot;+&quot; to execute the command once with all results as arguments.
+                                           Example: f .nim -e &quot;$EDITOR&quot;+
+                                           The following placeholders are substituted before the command is executed:
+                                           &quot;{}&quot;:   path (of the current search result)
+                                           &quot;{/}&quot;:  basename
+                                           &quot;{//}&quot;: parent directory
+                                           &quot;{.}&quot;:  path without file extension
+                                           &quot;{/.}&quot;: basename without file extension
+                                           Example: f .jpg -e &apos;convert {} {.}.png&apos;
+                                           If no placeholder is present, an implicit &quot; {}&quot; at the end is assumed.
+  -d=, --max-depth=      int        0      Set a maximum of how deep in the directory tree to search.
+  -l=, --limit=          int        0      Limit the number of results.
+  -L, --follow-symlinks  bool       false  Enable traversing symlinks.
+  -0, --null             bool       false  Separate search results and split stdin with null characters `\0` instead of newlines `\n`.
+  -c, --color            flag       auto   Enable or disable colored printing. Default is based on the `NO_COLOR` environment variable.
+  --hyperlink            flag       false  Enable clickable hyperlinks in supported terminals.
 </code></pre>
 <h2>Benchmarks</h2>
 <h4>375,000 file directory:</h4>
@@ -312,7 +312,7 @@ As the <strong>3 matches</strong> search finished printing its results much earl
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-25T01:39:51Z
+        Builded at 2023-07-26T01:24:52Z
         </p>
       </div>
     </div>
