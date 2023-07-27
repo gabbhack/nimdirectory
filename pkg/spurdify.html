@@ -93,62 +93,50 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>Spurdification! For when you want to make text sound like Spurdo Sparde wrote it.</p>
-<p>  <a href="https://dev.azure.com/paradox460/spurdify/_build/latest?definitionId=6&amp;branchName=master">    <img src="https://dev.azure.com/paradox460/spurdify/_apis/build/status/Linux%26Mac%20Build%20and%20Release?branchName=master" style="max-width: 100%;" alt="Build Status" />  </a></p>
-<h1>Usage</h1>
-<pre>  <code>Fuggs up text :DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-            ▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄▄
-           █▒▒░▄▄▀▀▀▀▄░▒░▄▄▄▄▄░▀▀▄
-          █▒░▄▀░▒▒▒▒▒░▀▄▀░▒▒▒▒▒▒▒█
-         █▒▒▒▒▒▒▒▒▒██▀▒▒▒▒▒▒██▀▄▒█
-        ▄▀▒▒▒▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▀▀▀▒▒▒█
-        █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒░░░░░░░▒█
-        █░▒▒▀▄▄▒░░░░░░▒▄▀▄▄░░░░░░▒█
-         █░▒▒▒▒▀▄▄▄▄▄███████▄▄▄▄▄▀
-          █░▒▒▒▒▒▒▀▄▀▀████▀▀▄▀▒▒█
-           ▀▀▀▄▄▄▄▄▄█▄▄▄▄▄▄█▄▄▄▀&quot;
+                <document><h1>Spurdify</h1>
+<p>Spurdification! For when you want to make text sound like Spurdo Sparde wrote it. See README-spurdo.md for an example.</p>
+<h2>Usage</h2>
+<pre>  <code>spurdify 0.1.1
+Spurdifies text
 
-Running without any arguments or stdin puts it in &quot;repl&quot; mode, for real-time spurdification.
+    ▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄▄
+   █▒▒░▄▄▀▀▀▀▄░▒░▄▄▄▄▄░▀▀▄
+  █▒░▄▀░▒▒▒▒▒░▀▄▀░▒▒▒▒▒▒▒█
+ █▒▒▒▒▒▒▒▒▒██▀▒▒▒▒▒▒██▀▄▒█
+▄▀▒▒▒▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▀▀▀▒▒▒█
+█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒░░░░░░░▒█
+█░▒▒▀▄▄▒░░░░░░▒▄▀▄▄░░░░░░▒█
+ █░▒▒▒▒▀▄▄▄▄▄███████▄▄▄▄▄▀
+  █░▒▒▒▒▒▒▀▄▀▀████▀▀▄▀▒▒█
+   ▀▀▀▄▄▄▄▄▄█▄▄▄▄▄▄█▄▄▄▀&quot;
 
-spurdify [flags] &lt;text&gt;
+USAGE:
+    spurdify [OPTIONS] [TEXT]...
 
-Flags:
-    -h, --help:                       Prints this message
-    -v, --version:                    Outputs the current version
-    -f=&lt;filename&gt;, --file=&lt;filename&gt;:    A text file to process
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -f, --file &lt;FILE&gt;    File to spurdify
+
+ARGS:
+    &lt;TEXT&gt;...    Text to spurdify
 </code></pre>
-<h1>Installation</h1>
-<p>This project uses <a href="https://nim-lang.org/">Nim</a>, and so installation is pretty easy, depending on your system.</p>
-<ol>
-<li>Install nim, using your package manager of choice (or <a href="https://github.com/asdf-vm/asdf">ASDF</a>)</li>
-<li>Run <code>nimble install https://github.com/paradox460/spurdify</code></li>
-<li>You now have a <code>spurdify</code> executable in <code>~/.nimble/bin</code> directory and you can <code>import spurdify</code> to use as a library.</li>
-</ol>
-<h1>Using as a library</h1>
-<p>Library exports a single function <code>spurdify</code>.</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">spurdify</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">spurdify</span> <span class="str">&quot;Nim is epic.&quot;</span></div></div>  </code></pre>
-<h2>Cross-compiling</h2>
-<p>Since Nim rocks, you can cross-compile. <a href="https://nim-lang.org/docs/nimc.html#cross-compilation">See the Compiler Manual for details</a>.</p>
-<h1>Other Versions</h1>
-<p>I previously wrote this thing in Crystal. That code exists on the Crystal branch.</p>
-<h1>License</h1>
+<h2>Installation</h2>
+<p>Binaries for several OSes and Architectures are available for download on the <a href="https://github.com/paradox460/spurdify/releases/latest">releases</a> page.</p>
+<p>If you don&apos;t see your arch available, you can do a cargo install</p>
+<h3>Cargo</h3>
+<pre>  <code class="language-sh">cargo install spurdify
+</code></pre>
+<h2>Other versions</h2>
+<p>I have previously written this program in Nim and Crystal. Both exist in the branches named as such.</p>
+<h2>License</h2>
 <p>The MIT License (MIT)</p>
-<p>Copyright (c) 2020 Jeff Sandberg</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the &quot;Software&quot;), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.</p>
+<p>Copyright (c) 2023 Jeff Sandberg</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </document>
             
         </div>
@@ -217,7 +205,7 @@ THE SOFTWARE.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-26T01:24:52Z
+        Builded at 2023-07-27T01:14:32Z
         </p>
       </div>
     </div>
