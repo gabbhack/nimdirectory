@@ -109,6 +109,10 @@ use this lib.</p>
 <li>  <a href="https://github.com/acheong08/Bard" title="Go to Github">acheong08/Bard ↗</a></li>
 </ul>
 <h2>Usage</h2>
+<blockquote>
+<p><strong>Note</strong>
+<em>Google Bard allows up to 200 requests per hour, if it exceeds, it will returns HTTP 429 error code.</em> - Source: Google Bard</p>
+</blockquote>
 <p>  <strong>    <a href="examples/single.nim">Individual prompts example</a>  </strong></p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ai</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">newBardAi</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">psid</span> <span class="op">=</span> <span class="str">&quot;__Session-1PSID cookie&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">psidts</span> <span class="op">=</span> <span class="str">&quot;__Session-1PSIDTS cookie&quot;</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">waitFor</span>(<span class="ide">ai</span><span class="op">.</span><span class="ide">prompt</span> <span class="str">&quot;Tell me an Asian traditional history in ten words&quot;</span>)<span class="op">.</span><span class="ide">text</span></div></div>  </code></pre>
 <details>
@@ -208,7 +212,7 @@ These are just a few examples of the many ways to summarize Asian traditional hi
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-27T01:14:32Z
+        Builded at 2023-07-28T01:16:33Z
         </p>
       </div>
     </div>
