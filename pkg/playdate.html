@@ -128,8 +128,13 @@ Language | C | Lua | Nim  |
 <li>Nim 1.6.10+ (check with <code>nim -v</code>)</li>
 <li>Nimble 0.13.1 (check with <code>nimble -v</code>)</li>
 <li><code>PLAYDATE_SDK_PATH</code> environment variable</li>
-<li>Linux or macOS (Windows support is still WIP)</li>
-<li><a href="https://sdk.play.date/Inside%20Playdate%20with%20C.html#_prerequisites">SDK Prerequisites</a> based on OS</li>
+<li><a href="https://sdk.play.date/Inside%20Playdate%20with%20C.html#_prerequisites">SDK Prerequisites</a> based on OS, and:
+<ul>
+<li>Linux: a C compiler, Make, <code>arm-none-eabi-newlib</code>.</li>
+<li>macOS: a C compiler, Make. Included in Xcode Command Line Tools.</li>
+<li>Windows: MinGW, CMake, Make. <a href="https://code.visualstudio.com/docs/cpp/config-mingw">Getting started</a></li>
+</ul>
+</li>
 </ul>
 <h3>Installation</h3>
 <p>You can quickly start using the bindings opening the <code>playdate_example</code> project included in this repository.<br />
@@ -248,7 +253,7 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-28T01:16:33Z
+        Builded at 2023-07-29T01:16:49Z
         </p>
       </div>
     </div>
