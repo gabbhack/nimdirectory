@@ -128,11 +128,12 @@ Language | C | Lua | Nim  |
 <li>Nim 1.6.10+ (check with <code>nim -v</code>)</li>
 <li>Nimble 0.13.1 (check with <code>nimble -v</code>)</li>
 <li><code>PLAYDATE_SDK_PATH</code> environment variable</li>
+<li>Make and CMake (3.19+)</li>
 <li><a href="https://sdk.play.date/Inside%20Playdate%20with%20C.html#_prerequisites">SDK Prerequisites</a> based on OS, and:
 <ul>
-<li>Linux: a C compiler, Make, <code>arm-none-eabi-newlib</code>.</li>
-<li>macOS: a C compiler, Make. Included in Xcode Command Line Tools.</li>
-<li>Windows: MinGW, CMake, Make. <a href="https://code.visualstudio.com/docs/cpp/config-mingw">Getting started</a></li>
+<li>Linux: a C compiler, <code>arm-none-eabi-newlib</code> package (naming varies based on distro).</li>
+<li>macOS: a C compiler. Included in Xcode Command Line Tools.</li>
+<li>Windows: MinGW. <a href="https://code.visualstudio.com/docs/cpp/config-mingw">Getting started</a></li>
 </ul>
 </li>
 </ul>
@@ -170,13 +171,14 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
 <p>Compile the project (pdx) for the simulator using:</p>
 <pre>  <code class="language-sh">nimble simulator
 </code></pre>
-<p>For the device (elf only, use pdc to create a pdx):</p>
+<p>For the device (pdx):</p>
 <pre>  <code class="language-sh">nimble device
 </code></pre>
 <p>For simulator + device (pdx):</p>
 <pre>  <code class="language-sh">nimble all
 </code></pre>
 <p>The example project <code>playdate_example</code> also contains VSCode launch configurations to build, start and debug your Nim application from the editor.</p>
+<p>Each project also contains a simple CMakeLists.txt as a starting point in case you&apos;d want to add libraries or other external code.</p>
 <hr />
 <p>This project is perfectly usable but do note that it&apos;s still a work in progress, here&apos;s what is missing right now:</p>
 <ul>
@@ -253,7 +255,7 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-29T01:16:49Z
+        Builded at 2023-07-30T01:20:07Z
         </p>
       </div>
     </div>
