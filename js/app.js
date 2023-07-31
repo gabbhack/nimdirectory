@@ -30975,6 +30975,21 @@ const packages = [
     "description": "Bale.ai bot API",
     "license": "MIT",
     "web": "https://github.com/hamidb80/bale"
+  },
+  {
+    "name": "minline",
+    "url": "https://github.com/h3rald/minline",
+    "method": "git",
+    "tags": [
+      "command-line",
+      "repl",
+      "prompt",
+      "readline",
+      "linenoise"
+    ],
+    "description": "A line editing library in pure Nim",
+    "license": "MIT",
+    "web": "https://github.com/h3rald/minline"
   }
 ]
 const options = {
