@@ -141,18 +141,18 @@ Language | C | Lua | Nim  |
 <p>You can quickly start using the bindings opening the <code>playdate_example</code> project included in this repository.<br />
 If you want to start from scratch, here are the steps to follow:</p>
 <ol>
-<li>If you haven&apos;t run it already, start by initializing your nimble package and follow the instructions:</li>
+<li>If you haven&apos;t done it already, start creating a folder (snake_case) and initializing your nimble package inside it running:</li>
 </ol>
 <pre>  <code>nimble init
 </code></pre>
+<p>Choose <code>binary</code> as the package type.</p>
 <ol start="2">
 <li>Install the <code>playdate</code> package:</li>
 </ol>
 <pre>  <code>nimble install playdate
 </code></pre>
 <ol start="3">
-<li>Move into your package directory.<br />
-Add the <code>playdate</code> package as a dependency and configure the build tasks by running the following:</li>
+<li>Add the <code>playdate</code> package as a dependency and configure the build tasks by running the following:</li>
 </ol>
 <pre>  <code>echo &apos;requires &quot;playdate&quot;&apos; &gt;&gt; *.nimble;
 echo &apos;include playdate/build/nimble&apos; &gt;&gt; *.nimble;
@@ -176,6 +176,9 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
 </code></pre>
 <p>For simulator + device (pdx):</p>
 <pre>  <code class="language-sh">nimble all
+</code></pre>
+<p>You can also build for simulator and launch it in one command:</p>
+<pre>  <code class="language-sh">nimble simulate
 </code></pre>
 <p>The example project <code>playdate_example</code> also contains VSCode launch configurations to build, start and debug your Nim application from the editor.</p>
 <p>Each project also contains a simple CMakeLists.txt as a starting point in case you&apos;d want to add libraries or other external code.</p>
@@ -255,7 +258,7 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-07-31T01:19:57Z
+        Builded at 2023-08-01T01:27:51Z
         </p>
       </div>
     </div>
