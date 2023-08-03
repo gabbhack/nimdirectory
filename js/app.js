@@ -31003,6 +31003,34 @@ const packages = [
     "description": "cli tool to query battery info for GNU/Linux",
     "license": "GPL-3.0-only",
     "web": "https://gitlab.com/prashere/battinfo"
+  },
+  {
+    "name": "bcs",
+    "url": "https://github.com/C-NERD/nimBcs",
+    "method": "git",
+    "tags": [
+      "bcs",
+      "aptos",
+      "serializer",
+      "deserializer",
+      "types"
+    ],
+    "description": "nim implementation of bcs serialization format",
+    "license": "MIT",
+    "web": "https://github.com/C-NERD/nimBcs"
+  },
+  {
+    "name": "karkas",
+    "url": "https://github.com/moigagoo/karkas",
+    "method": "git",
+    "tags": [
+      "Karax",
+      "frontend",
+      "layout"
+    ],
+    "description": "Layout helpers and sugar for Karax",
+    "license": "MIT",
+    "web": "https://github.com/moigagoo/karkas"
   }
 ]
 const options = {

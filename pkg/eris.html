@@ -115,20 +115,6 @@ $ nix-env -iA eriscmd -f https://codeberg.org/eris/nix-eris/archive/trunk.tar.gz
 <pre>  <code class="language-ini">[Decoder]
 URL=http://[::1]:80
 </code></pre>
-<h3>resolver</h3>
-<p>The <code>eriscmd resolver</code> utility that resolves ERIS blocks between the following:</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Constrained_Application_Protocol">CoAP</a> clients</li>
-<li>CoAP servers</li>
-<li>HTTP clients (see <a href="https://eris.codeberg.page/eer/eer-001/">ERIS over HTTP</a>)</li>
-<li>HTTP servers</li>
-<li><a href="https://dbmx.net/tkrzw/">tkrzw</a> database files</li>
-<li><a href="https://syndicate-lang.org">Syndicate</a> <a href="./protocols/syndicate_protocol.prs">actors</a></li>
-</ul>
-<p>The server configuration is inspired by <a href="https://genode.org/">Genode</a>&apos;s <a href="https://genode.org/documentation/genode-foundations/21.05/components/Component_configuration.html">dynamic component reconfiguration</a> and implemented by the Syndicated actor model. The server cannot be excuted normally, it must be supervised by a <a href="https://synit.org/book/operation/system-bus.html">Syndicate server</a>. The configuration schema is at <a href="./protocols/erisresolver_config.prs">erisresolver_config.prs</a> and sample is at <a href="./erisresolver.config.sample.pr">erisresolver.config.sample.pr</a>.</p>
-<p>If you are using UNIX you will need to ask a system administrator or a grownup that you trust to remove the restriction on binding to port 80. This is can be done with <code>sysctl</code>:</p>
-<pre>  <code class="language-sh">doas sysctl net.ipv4.ip_unprivileged_port_start=80
-</code></pre>
 <h3>verify</h3>
 <p>The <code>eriscmd verify</code> utility will fetch all blocks that constitute a read capability. It parses capabilities on the command-line in URN form and otherwise parses CBOR on standard input to find capabilities.</p>
 <pre>  <code class="language-sh">eriscmd verify urn:eris:BIAMSY42PLVLXF2GQAVOONCNWPEU2PLOYXZXAVFZIRVACKI424N24CMJPPRK7QNWH3LNRE7Q3ENOAJWPKCNUJOLCHIWSEOO6RW5KH7MJ2A
@@ -217,7 +203,7 @@ application/x-eris-link+cbor = execm /some/path/to/rclerislink
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-02T01:15:29Z
+        Builded at 2023-08-03T01:17:19Z
         </p>
       </div>
     </div>
