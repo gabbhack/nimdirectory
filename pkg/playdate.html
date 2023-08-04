@@ -125,17 +125,10 @@ Language | C | Lua | Nim  |
 <h3>Prerequisites</h3>
 <ul>
 <li>Playdate SDK</li>
-<li>Nim 1.6.10+ (check with <code>nim -v</code>)</li>
+<li>Nim 1.6.10+ (check with <code>nim -v</code>, untested with 2.0+)</li>
 <li>Nimble 0.13.1 (check with <code>nimble -v</code>)</li>
 <li><code>PLAYDATE_SDK_PATH</code> environment variable</li>
-<li>Make and CMake (3.19+)</li>
-<li><a href="https://sdk.play.date/Inside%20Playdate%20with%20C.html#_prerequisites">SDK Prerequisites</a> based on OS, and:
-<ul>
-<li>Linux: a C compiler, <code>arm-none-eabi-newlib</code> package (naming varies based on distro).</li>
-<li>macOS: a C compiler. Included in Xcode Command Line Tools.</li>
-<li>Windows: MinGW. <a href="https://code.visualstudio.com/docs/cpp/config-mingw">Getting started</a></li>
-</ul>
-</li>
+<li><a href="https://sdk.play.date/Inside%20Playdate%20with%20C.html#_prerequisites">SDK Prerequisites</a> based on OS, and <a href="https://code.visualstudio.com/docs/cpp/config-mingw">MinGW on Windows</a>.</li>
 </ul>
 <h3>Installation</h3>
 <p>You can quickly start using the bindings opening the <code>playdate_example</code> project included in this repository.<br />
@@ -181,7 +174,9 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
 <pre>  <code class="language-sh">nimble simulate
 </code></pre>
 <p>The example project <code>playdate_example</code> also contains VSCode launch configurations to build, start and debug your Nim application from the editor.</p>
-<p>Each project also contains a simple CMakeLists.txt as a starting point in case you&apos;d want to add libraries or other external code.</p>
+<p>Each project contains a <code>config.nims</code> file that can be edited to customize how the project should be built, e.g. adding libraries or other external code.<br />
+Here&apos;s an example of a <code>config.nims</code> that links a pre-built static library called chipmunk:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">playdate</span><span class="op">/</span><span class="ide">build</span><span class="op">/</span><span class="ide">config</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Add a search path for libraries based on OS.</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">defined</span>(<span class="ide">device</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;device&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">defined</span>(<span class="ide">windows</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;windows&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">defined</span>(<span class="ide">macosx</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;macos&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">defined</span>(<span class="ide">linux</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;linux&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Platform not supported!&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># Link the chipmunk library.</span></div></div><div class="line"><div class="line-content"><span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-lchipmunk&quot;</span>)</div></div>  </code></pre>
 <hr />
 <p>This project is perfectly usable but do note that it&apos;s still a work in progress, here&apos;s what is missing right now:</p>
 <ul>
@@ -258,7 +253,7 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-03T01:17:19Z
+        Builded at 2023-08-04T01:19:02Z
         </p>
       </div>
     </div>

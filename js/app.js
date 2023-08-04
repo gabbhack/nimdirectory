@@ -1,5 +1,26 @@
 const packages = [
   {
+    "name": "luigi",
+    "url": "https://github.com/neroist/luigi",
+    "method": "git",
+    "tags": [
+      "ui",
+      "gui",
+      "library",
+      "wrapper",
+      "luigi",
+      "X11",
+      "linux",
+      "windows",
+      "essence",
+      "essenceOS",
+      "cross-platform"
+    ],
+    "description": "Nim bindings for the barebones single-header GUI library for Win32, X11, and Essence: Luigi.",
+    "license": "MIT",
+    "web": "https://github.com/neroist/luigi"
+  },
+  {
     "name": "sun_moon",
     "url": "https://github.com/dschaadt/sun_moon",
     "method": "git",
@@ -31031,6 +31052,20 @@ const packages = [
     "description": "Layout helpers and sugar for Karax",
     "license": "MIT",
     "web": "https://github.com/moigagoo/karkas"
+  },
+  {
+    "name": "voicepeaky4gpt",
+    "url": "https://github.com/solaoi/voicepeaky4gpt",
+    "method": "git",
+    "tags": [
+      "voicepeak",
+      "wrapper",
+      "opeanai",
+      "gpt"
+    ],
+    "description": "Voicepeak Server With GPT",
+    "license": "MIT",
+    "web": "https://github.com/solaoi/voicepeaky4gpt"
   }
 ]
 const options = {

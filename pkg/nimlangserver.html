@@ -97,6 +97,45 @@
 <li><a href="https://github.com/saem/vscode-nim">vscode-nim</a> has support for <code>nimlangserver</code>. Follow the instructions at:
 https://github.com/saem/vscode-nim#nim-lanugage-server-integration-experimental</li>
 </ul>
+<h3>Neovim</h3>
+<ul>
+<li><a href="https://neovim.io/doc/user/lsp.html">lsp</a> Neovim has built-in LSP support. Although, you might want to use something like <a href="https://github.com/neovim/nvim-lspconfig">lsp-config</a> to take care of the boilerplate code for the most LSP configurations. Install <code>lsp-config</code> using your favourite plugin manager an place the following code into your <code>init.vim</code> config:</li>
+</ul>
+<pre>  <code class="language-lua">lua &lt;&lt;EOF
+
+require&apos;lspconfig&apos;.nim_langserver.setup{
+  settings = {
+    nim = {
+      nimsuggestPath = &quot;~/.nimble/bin/custom_lang_server_build&quot;
+    }
+  }
+}
+
+EOF
+</code></pre>
+<p>Change configuration to your liking (most probably you don&apos;t need to provide any settings at all, defaults should work fine for the majority of the users). You might also want to read <code>lsp-config</code> documentation to setup key bindings, autocompletion and so on.</p>
+<p><strong>IMPORTANT</strong> you might want to use latest build of the <code>nimlangserver</code> and/or build it from source.</p>
+<h3>VIM/Neovim</h3>
+<ul>
+<li><a href="https://github.com/neoclide/coc.nvim">coc.nvim</a> supports both classical VIM as well as Neovim. It also supports vscode-like <code>coc-settings.json</code> for LSP configuraition. Install the plugin via your favourite plugin manager, create <code>coc-settings.json</code> alongside your <code>init.vim</code> and add the following contents to it:</li>
+</ul>
+<pre>  <code class="language-json">{
+  &quot;languageserver&quot;: {
+    &quot;nim&quot;: {
+      &quot;command&quot;: &quot;nimlangserver&quot;,
+      &quot;filetypes&quot;: [&quot;nim&quot;],
+      &quot;trace.server&quot;: &quot;verbose&quot;,
+      &quot;settings&quot;: {
+        &quot;nim&quot;: {
+          &quot;nimsuggestPath&quot;: &quot;~/.nimble/bin/nimsuggest&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>Ofcourse, change the configuraition to your liking. You might also want to read <code>coc.nvim</code> documentation to setup key bindings, autocompletion and so on.</p>
+<p><strong>IMPORTANT</strong> you might want to use latest build of the <code>nimlangserver</code> and/or build it from source.</p>
 <h3>Installing binaries</h3>
 <p><em>NB:</em> <code>nimlangserver</code> requires <code>nimsuggest</code> version that supports <code>--v3</code>:</p>
 <ul>
@@ -287,7 +326,7 @@ crashes more gracefully.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-03T01:17:19Z
+        Builded at 2023-08-04T01:19:02Z
         </p>
       </div>
     </div>
