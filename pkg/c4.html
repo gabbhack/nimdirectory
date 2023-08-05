@@ -94,7 +94,7 @@
 <h2>Brief overview</h2>
 <p>&quot;Cat 400&quot; is a cross-platform framework designed to provide nice experience in game development. Written in nim language, it benefits from the language&apos;s elegance and expressiveness, as well as compilation to fast native code.</p>
 <p>Core of &quot;Cat 400&quot; is platform-independent and may be run on every target platform supported by nim. However, default systems (which are optional) have external dependencies which may restrict their usage on some platforms.</p>
-<p>Key features:</p>
+<h1>Key features</h1>
 <ul>
 <li>client-server multithreading architecture (even for single-player games) with network support</li>
 <li>modularity: all code is split into &quot;systems&quot; (video/user input/networking etc) which work independently</li>
@@ -103,6 +103,18 @@
 <li>simple overwriting of existing systems and ability to create custom systems</li>
 <li>templates which include some reasonable defaults for specific game genre</li>
 </ul>
+<h1>So why another game framework?</h1>
+<p>I&apos;ve made a research about game engines and frameworks for Nim, and none of them had solid and thoughtful design. It&apos;s super easy to display something on screen, and many people think that opportunity for a program to display cubes on screen makes it a game engine. It doesn&apos;t. When I see another game framework, I read its documentation (or code, if there are no docs at all) and try to find answers to these questions:</p>
+<ol>
+<li>What about physics, i.e. collisions, collision shapes, force, velocity, position etc?</li>
+<li>Can I do 3D graphics?</li>
+<li>What if I want multiplayer over network?</li>
+<li>How do I map user input to specific actions?</li>
+<li>How do I occupy all cores effectively?</li>
+<li>What about logging? How to debug?</li>
+<li>How easy it is to create large project with thousands lines of code? How does the engine help me not get lost?</li>
+</ol>
+<p>Usually many of these questions aren&apos;t covered at all, but for <code>Cat-400</code> I do my best to address all of them and beyond.</p>
 <h2>Is 2D/3D supported?</h2>
 <p>Yes, 2D via SDL, 3D via SDL+Ogre3d. Also note that <code>C4</code> is a <em>framework</em>, which means that you can use any backend for any of your systems. So, unlike game <em>engines</em>, you can make a 2D, 3D or even 4D (<a href="https://www.youtube.com/watch?v=0t4aKJuKP0Q">wat?!</a>) game using any graphics library of your choice.</p>
 <h2>GUI / Game Engine</h2>
@@ -125,13 +137,7 @@
 <p><a href="c4/messages.nim"><code>c4.messages</code> module</a> - <code>Message</code> type and any user-defined subtypes, which may be packed and unpacked using msgpack, correctly preserving type information.</p>
 <p><a href="c4/threads.nim"><code>c4.threads</code> module</a> - module for spawning named threads and sending messages between them; allows programmer to focus on his multithreaded app, not on settings up connection between threads.</p>
 <h2>Wrappers</h2>
-<p>There are several wrappers which are subpackages of &quot;Cat-400&quot; and may be installed and used separately:</p>
-<ul>
-<li><a href="c4/lib/enet"><code>enet</code> wrapper</a> for <a href="http://enet.bespin.org/">Enet networking library</a></li>
-<li><a href="c4/lib/horde3d"><code>horde3d</code> wrapper</a> for <a href="http://horde3d.org/">Horde3d graphics engine</a></li>
-<li><a href="c4/lib/bgfx"><code>bgfx</code> wrapper</a> for <a href="https://github.com/bkaradzic/bgfx">BGFX graphics library</a></li>
-<li><a href="c4/lib/ode"><code>ode</code> wrapper</a> for <a href="https://www.ode.org/">Open dynamics engine</a></li>
-</ul>
+<p>There are several wrappers which are subpackages of &quot;Cat-400&quot; and may be installed and used separately, see <a href="c4/lib">lib folder</a>.</p>
 <h2>Contribute to the project</h2>
 <p>Developing a game framework, well... takes time! If you want to speed things up, you may contribute by</p>
 <ol>
@@ -214,7 +220,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-04T01:19:02Z
+        Builded at 2023-08-05T01:15:34Z
         </p>
       </div>
     </div>
