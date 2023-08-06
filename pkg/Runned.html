@@ -102,26 +102,22 @@
 </h3>
 <hr />
 <p align="center">
-    :gear: Runned is a simple tool to check the execution time of terminal commands and applications launched in the terminal.
+    :gear: Runned is a simple tool to check the execution time of terminal commands or applications launched in the terminal.
 </p>
 <hr />
-<h3>🖼 Screenshot</h3>
-<p>  <img src="screenshots/screenshot_1.png" style="max-width: 100%;" alt="screenshot_1" />  <img src="screenshots/screenshot_2.png" style="max-width: 100%;" alt="screenshot_2" /></p>
 <h3>:question: How to use</h3>
-<pre>  <code>USAGE: runned.exe &lt;your commands&gt;
-
-OPTIONS:
-  -e --exitcode    Display the exit code of the executed command.
-  -i --input       Display the input given by the user.
-  -a --accuracy    Display time with more precision.
+<pre>  <code>runned your_command
+runned --version  or -v      # Print the version
+runned --github   or -g      # Give the GitHub link
+runned --exitcode or -e      # Display the exit code of the executed command or application
+runned --input    or -i      # Display the input given by the user
 </code></pre>
-<h3>:question: How to run or build</h3>
-<p>To run the script, you will need to download the lua interpreter. You can find it <a href="https://luabinaries.sourceforge.net/download.html">here</a>. <br /></p>
-<p>Then, run the following command:</p>
-<pre>  <code class="language-console"><div class="line"><div class="line-content"><span class="out">lua .\src\runned.lua</span></div></div>  </code></pre>
-<p>To build from source, you will need to download a lua compiler. You can find the one I use <a href="https://github.com/samyeyo/rtc">here</a> for Windows. <br />
-Then, run the following command:</p>
-<pre>  <code class="language-console"><div class="line"><div class="line-content"><span class="out">git clone https://github.com/Gael-Lopes-Da-Silva/Runned</span></div></div><div class="line"><div class="line-content"><span class="out">cd Runned</span></div></div><div class="line"><div class="line-content"><span class="out">rtc -s -c -o .\build\runned.exe .\src\runned.lua</span></div></div>  </code></pre>
+<h3>:question: How to build</h3>
+<p>To build the interpreter you will first need to download the Go compiler <a href="https://go.dev/dl/">here</a>.</p>
+<p>If you want a precompiled executable, run this.</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content"><span class="out">go install github.com/gael-lopes-da-silva/runned@latest</span></div></div>  </code></pre>
+<p>If you want to build the application from the source, run this.</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content"><span class="out">git clone https://github.com/Gael-Lopes-Da-Silva/Runned</span></div></div><div class="line"><div class="line-content"><span class="out">cd Brainfuck</span></div></div><div class="line"><div class="line-content"><span class="out">go build .</span></div></div>  </code></pre>
 </document>
             
         </div>
@@ -190,7 +186,7 @@ Then, run the following command:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-05T01:15:34Z
+        Builded at 2023-08-06T01:12:52Z
         </p>
       </div>
     </div>

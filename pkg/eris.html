@@ -77,65 +77,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>  <img src="./eris48.png" style="max-width: 100%;" alt="ERIS logo" title="ERIS" /></p>
-<h1>ERIS</h1>
-<p>A collection of libraries and utilities for the <a href="https://eris.codeberg.page">Encoding for Robust Immutable Storage</a>.</p>
-<p>The latest version of this repository should be available at <a href="https://codeberg.org/eris/nim-eris">Codeberg</a>.</p>
-<h2>Building</h2>
-<h3>Debian</h3>
-<p>The Debian is too old and crusty to support.</p>
-<p>The Nix way:</p>
-<pre>  <code class="language-sh"># https://nixos.org/download.html#download-nix
-$ sh &lt;(curl -L https://nixos.org/nix/install) --no-daemon
-$ nix-env -iA nixpkgs.gitMinimal
-$ nix-env -iA eriscmd -f https://codeberg.org/eris/nix-eris/archive/trunk.tar.gz
-</code></pre>
-<p>The Debian way:</p>
-<ul>
-<li>Install pkg-config</li>
-<li>Build and install the current Nim compiler and the Nimble utility from source.</li>
-<li>Build and install the <a href="https://dbmx.net/tkrzw/">tkrzw library</a> from source.</li>
-<li>Build and install the <a href="https://getdnsapi.net/">getdns library</a> from source.</li>
-<li>Run <code>nimble install https://codeberg.org/eris/nim-eris.git</code>.</li>
-<li>Probably do some other stuff but you are Debian user so you should be able to manage on your own.</li>
-</ul>
-<h2>eriscmd</h2>
-<p><code>eriscmd</code> is a utility program with a bunch of subcommands. They are mostly self-describing.</p>
-<h3>link</h3>
-<p>The <code>eriscmd link</code> utility creates <a href="https://codeberg.org/eris/eer/pulls/15">ERIS link files</a>.</p>
-<p>This utility requires the location of an ERIS CoAP server which should be passed with the environmental variable <code>ERIS_STORE_URL</code>.</p>
-<p>A simple example:</p>
-<pre>  <code class="language-sh">test &quot;$ERIS_STORE_URL = coap+tcp://[::1]:5683&quot;
-</code></pre>
-<h3>open</h3>
-<p>The <code>eriscmd open</code> utility opens <a href="https://eris.codeberg.page/eer/linkfile.xml">ERIS link files</a> in an application that is locally configured for the given MIME type of the link file. To integrate it within a <a href="https://www.freedesktop.org/">Freedesktop.org</a> environment the <a href="./eris-open.desktop">eris-open.desktop</a>, <a href="./eris-link.xml">eris-link.xml</a>, and <a href="./eris48.png">eris48.png</a> should be installed in their appropriate locations.</p>
-<p>The utility only works as well as the associations that are configured for different MIME types, see the <code>xdg-mime</code> utility from <a href="https://freedesktop.org/wiki/Software/xdg-utils/">xdg-utils</a> for more information.</p>
-<p>The utility requires a configuration file that describes the location of the preferred HTTP decoder service. The file is called <code>eris-open.ini</code> and must be located in the <code>XDG_CONFIG_HOME</code> <code>XDG_CONFIG_DIRS</code> hierarchy (<code>~./config/</code> is good enough).</p>
-<p>A simple example:</p>
-<pre>  <code class="language-ini">[Decoder]
-URL=http://[::1]:80
-</code></pre>
-<h3>verify</h3>
-<p>The <code>eriscmd verify</code> utility will fetch all blocks that constitute a read capability. It parses capabilities on the command-line in URN form and otherwise parses CBOR on standard input to find capabilities.</p>
-<pre>  <code class="language-sh">eriscmd verify urn:eris:BIAMSY42PLVLXF2GQAVOONCNWPEU2PLOYXZXAVFZIRVACKI424N24CMJPPRK7QNWH3LNRE7Q3ENOAJWPKCNUJOLCHIWSEOO6RW5KH7MJ2A
-
-cat *.eris | eriscmd verify
-</code></pre>
-<h2>Helpers</h2>
-<h3>rclerislink</h3>
-<p>The <code>rclerislink</code> utility is a document input handler for the <a href="https://www.recoll.org/">Recoll</a> indexer that allows <a href="https://eris.codeberg.page/eer/linkfile.xml">ERIS link file</a> content to be dereferenced and indexed.</p>
-<p>This input handler  needs to be registered in the <code>~/.recoll/mimeconf</code> file so that it is invoked for the <code>application/x-eris-link+cbor</code> file MIME type. For detection of this MIME type to work the <a href="./eris-link.xml">eris-link.xml</a> file should be installed in a location where it is discoverable by <code>xdg-mime query filetype …</code>.</p>
-<pre>  <code>[index]
-application/x-eris-link+cbor = execm /some/path/to/rclerislink
-
-</code></pre>
-<h2>Nix development</h2>
-<pre>  <code class="language-sh">nix develop git+https://codeberg.org/eris/nix-eris#nim-eris
-</code></pre>
-<hr />
-<p>The drafting of the ERIS specification and this implementation was funded by the <a href="https://nlnet.nl/assure">NGI Assure</a> Fund, a fund established by <a href="https://nlnet.nl/">NLnet</a> with financial support from the European Commission&apos;s <a href="https://ngi.eu/">Next Generation Internet</a> program.</p>
-<p>  <a href="https://nlnet.nl/assure">    <img src="https://nlnet.nl/image/logos/NGIAssure_tag.svg" style="max-width: 100%;" alt="NGIAssure" />  </a></p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -203,7 +145,7 @@ application/x-eris-link+cbor = execm /some/path/to/rclerislink
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-05T01:15:34Z
+        Builded at 2023-08-06T01:12:52Z
         </p>
       </div>
     </div>

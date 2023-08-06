@@ -108,6 +108,7 @@
 <li>Automatic memory management</li>
 </ul>
 <p>The main takeaway is that, while this is to some extent a 1 to 1 mapping of the C API, it also adds extra features such as reference counted memory, OOP syntax, many other nice to haves and enhanced developer experience.</p>
+<p>The bindings are perfectly usable but a few breaking changes are expected on the road to v1.0.</p>
 <hr />
 <p>Here&apos;s a quick comparison between the main languages usable on the Playdate:
 Language | C | Lua | Nim  |
@@ -178,7 +179,7 @@ The example code is in <code>playdate_example/src/playdate_example.nim</code></p
 Here&apos;s an example of a <code>config.nims</code> that links a pre-built static library called chipmunk:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">include</span> <span class="ide">playdate</span><span class="op">/</span><span class="ide">build</span><span class="op">/</span><span class="ide">config</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Add a search path for libraries based on OS.</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">defined</span>(<span class="ide">device</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;device&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">defined</span>(<span class="ide">windows</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;windows&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">defined</span>(<span class="ide">macosx</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;macos&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">elif</span> <span class="ide">defined</span>(<span class="ide">linux</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-L&quot;</span> <span class="op">&amp;</span> <span class="ide">getCurrentDir</span>() <span class="op">/</span> <span class="str">&quot;lib&quot;</span> <span class="op">/</span> <span class="str">&quot;linux&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;Platform not supported!&quot;</span></div></div><div class="line"><div class="line-content"><span class="com"># Link the chipmunk library.</span></div></div><div class="line"><div class="line-content"><span class="ide">switch</span>(<span class="str">&quot;passL&quot;</span>, <span class="str">&quot;-lchipmunk&quot;</span>)</div></div>  </code></pre>
 <hr />
-<p>This project is perfectly usable but do note that it&apos;s still a work in progress, here&apos;s what is missing right now:</p>
+<p>This project is a work in progress, here&apos;s what is missing right now:</p>
 <ul>
 <li>various playdate.sound funcionalities (but FilePlayer and SamplePlayer are available)</li>
 <li>playdate.json, but you can use Nim std/json, which is very convenient</li>
@@ -253,7 +254,7 @@ Here&apos;s an example of a <code>config.nims</code> that links a pre-built stat
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-05T01:15:34Z
+        Builded at 2023-08-06T01:12:52Z
         </p>
       </div>
     </div>
