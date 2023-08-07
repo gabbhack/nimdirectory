@@ -85,7 +85,61 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>Nemini</h1>
+<h3>&apos;/nɛmɪnaɪ/&apos; <em>Nem-in-eye</em></h3>
+<p><a href="https://nimble.directory/ci/badges/nemini/nimdevel/output.html">  <img src="https://nimble.directory/ci/badges/nemini/nimdevel/status.svg" style="max-width: 100%;" alt="Build Status" /></a>
+<a href="https://nimble.directory/ci/badges/nemini/nimdevel/doc_build_output.html">  <img src="https://nimble.directory/ci/badges/nemini/nimdevel/docstatus.svg" style="max-width: 100%;" alt="Build Status" /></a></p>
+<p>Web : https://paulwilde.uk/dev/nemini<br />
+Gemini : gemini://paulwilde.uk/dev/nemini<br />
+A simple (to configure) Gemini server capable of serving static files with virtual host support.<br />
+Nemini also has a basic header/footer implementation - you can create a header and footer .gemini file in your root which will be applied to each page!<br />
+Leveraging the good work done by @benob for the <a href="https://github.com/benob/gemini">Nim Gemini Library</a></p>
+<h2>Features</h2>
+<ul>
+<li>Serves static files</li>
+<li>Has virtual host capability with aliases</li>
+<li>Header and Footer can be applied to each page</li>
+</ul>
+<h2>Installation</h2>
+<p>Nemini can be installed in a variety of ways. The processes below set Nemini up in such a way that it should almost &apos;just work&apos;™ (i.e. copy folders system-wide, create nemini user, create systemd service, etc.)</p>
+<h3>Arch Linux</h3>
+<p>Nemini is available in the AUR and can be installed via yay or your desired AUR package manager</p>
+<pre>  <code class="language-sh">yay -S nemini-git
+</code></pre>
+<p>or</p>
+<pre>  <code class="language-sh">git clone https://aur.archlinux.org/nemini-git.git
+cd nemini-git
+makepkg -si
+</code></pre>
+<h3>From Source</h3>
+<p>Nemini can be easily compiled from source within a few minutes.</p>
+<pre>  <code class="language-sh">git clone https://codeberg.org/pswilde/nemini.git
+cd nemini
+make              # Will build the binary, effectively just runs `nimble build`
+sudo make install # This will copy files and folders to system-wide locations
+</code></pre>
+<h2>How to run</h2>
+<ul>
+<li>Edit the <code>/etc/nemini/nemini.toml</code> file as you need.</li>
+<li>Certificates are <strong>REQUIRED</strong>, so make sure you have those set in your config. (Automatically created if they don&apos;t exist)</li>
+<li>Host your gemini files in the desired <code>root_dir</code> directory</li>
+</ul>
+<p>If Nemini has been installed via the above Installation methods, then <code>systemctl enable --now nemini</code> should start the service and get your server running. Otherwise you can run the binary directly if you have permission on the folders in your config file.</p>
+<h3>Parameters</h3>
+<p>Passing <code>--config</code> parameter with a config file location will allow the use of a custom config file saved wherever you wish.</p>
+<h2>Certificates</h2>
+<p>With Gemini, Certificates are mandatory.
+If certificates don&apos;t exist they will be created via openssl when first run.</p>
+<h2>Static files</h2>
+<p>Nemini is able to serve static gemtext files from your root directory or subdirectories.<br />
+Your static files must use the extension <code>.gemini</code>, <code>.gmi</code> or <code>.gmni</code>. Currently, other file extensions are not supported, but easily fixed if there&apos;s need for it.</p>
+<h2>Headers and Footers</h2>
+<p>In your sites <code>root_dir</code>, add the files <code>header.gemini</code> and <code>footer.gemini</code> and they will be prepended and appended to your site content</p>
+<h2>Contact me</h2>
+<p>Say &quot;Hi&quot;!<br />
+I&apos;m on the Fediverse at <a href="https://notnull.click/paul">@paul@notnull.click</a><br />
+Or raise an issue here (Codeberg) for anything related to issues with Nemini</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -153,7 +207,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-06T01:12:52Z
+        Builded at 2023-08-07T01:18:07Z
         </p>
       </div>
     </div>
