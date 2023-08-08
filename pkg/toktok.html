@@ -102,8 +102,8 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><p align="center">
-    <img src="https://raw.githubusercontent.com/openpeep/toktok/main/.github/logo.png" style="max-width: 100%;" width="140px" /><br />
-    Generic tokenizer written in Nim language, powered by Nim&apos;s Macros 👑   
+  <img src="https://raw.githubusercontent.com/openpeep/toktok/main/.github/logo.png" style="max-width: 100%;" width="140px" /><br />
+  Generic tokenizer written in Nim language, powered by Nim&apos;s Macros 👑
 </p>
 <p align="center">
   <code>nimble install toktok</code>
@@ -114,46 +114,31 @@
 </p>
 <h2>😍 Key Features</h2>
 <ul>
-<li>[x] Support <code>char</code>, <code>string</code>, <code>int</code> based tokens</li>
-<li>[x] Powered by Nim&apos;s Macros ✨</li>
-<li>[x] No RegEx 🍃</li>
-<li>[x] Meta-programming <code>TokenKind*</code> <code>enum</code></li>
-<li>[x] Meta-programming <code>case</code> statement for all tokens</li>
-<li>[x] <code>getToken()</code> procedure to retrieve token by token</li>
-<li>[ ] Multi <code>TokenKind</code> handler in one line (<code>=</code>, <code>==</code>, <code>!==</code>)</li>
-<li>[x] Open Source | <code>MIT</code></li>
+<li>✨ Powered by Nim&apos;s Macros</li>
+<li>🪄 Based on <code>std/lexbase</code> / Zero Regular Expression</li>
+<li>Static generation using <strong>TokenKind</strong> <code>enum</code>, <code>lexbase</code></li>
+<li>Dynamic generation using <strong>TokenKind</strong> <code>tables</code>, <code>lexbase</code></li>
+<li>Open Source | <code>MIT</code></li>
 </ul>
-<p>Toktok is a generic Lexer, based on standard Nim libraries <code>streams</code>, <code>lexbase</code> and <code>macros</code>.
-It is meant to be used by higher level parsers for writing any kind of tools or programs.</p>
-<h2>Debug</h2>
-<p>Compile with <code>-d:toktokdebug</code> to print your tokens</p>
+<blockquote>
+<p><strong>Note</strong> Toktok is a generic Lexer, based on standard Nim libraries <code>streams</code>, <code>lexbase</code> and <code>macros</code>. It is meant to be used by higher level parsers for writing any kind of tools or programs.
+<strong>Note</strong> Compile with <code>-d:toktokdebug</code> to inspect the generated code.</p>
+</blockquote>
 <h2>Quick Example</h2>
-<details>
-    <summary>Show sample.txt example</summary>
-<pre>  <code>const hello = 1 + 1
-</code></pre>
-</details>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">toktok</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">static</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">Program</span><span class="op">.</span><span class="ide">settings</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">uppercase</span> <span class="op">=</span> <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">prefix</span> <span class="op">=</span> <span class="str">&quot;Tk_&quot;</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">allowUnknown</span> <span class="op">=</span> <span class="ide">false</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">keepUnknownChars</span> <span class="op">=</span> <span class="ide">false</span></div></div><div class="line"><div class="line-content">  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">tokens</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">Plus</span>      <span class="op">&gt;</span> '+'</div></div><div class="line"><div class="line-content">  <span class="ide">Minus</span>     <span class="op">&gt;</span> '-'</div></div><div class="line"><div class="line-content">  <span class="ide">Multi</span>     <span class="op">&gt;</span> '*'</div></div><div class="line"><div class="line-content">  <span class="kwd">Div</span>       <span class="op">&gt;</span> '/':</div></div><div class="line"><div class="line-content">    <span class="ide">BlockComment</span> <span class="op">?</span> '*' <span class="op">..</span> <span class="str">&quot;*/&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">InlineComment</span> <span class="op">?</span> '/' <span class="op">..</span> <span class="ide">EOL</span></div></div><div class="line"><div class="line-content">  <span class="ide">Assign</span>      <span class="op">&gt;</span> '='</div></div><div class="line"><div class="line-content">  <span class="kwd">Var</span>         <span class="op">&gt;</span> <span class="str">&quot;var&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">Let</span>         <span class="op">&gt;</span> <span class="str">&quot;let&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">Const</span>       <span class="op">&gt;</span> <span class="str">&quot;const&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">SetTrue</span>     <span class="op">&gt;</span> {<span class="str">&quot;TRUE&quot;</span>, <span class="str">&quot;True&quot;</span>, <span class="str">&quot;true&quot;</span>, <span class="str">&quot;YES&quot;</span>, <span class="str">&quot;Yes&quot;</span>, <span class="str">&quot;yes&quot;</span>, <span class="str">&quot;y&quot;</span>}</div></div><div class="line"><div class="line-content">  <span class="ide">SetFalse</span>    <span class="op">&gt;</span> {<span class="str">&quot;FALSE&quot;</span>, <span class="str">&quot;False&quot;</span>, <span class="str">&quot;false&quot;</span>, <span class="str">&quot;NO&quot;</span>, <span class="str">&quot;No&quot;</span>, <span class="str">&quot;no&quot;</span>, <span class="str">&quot;n&quot;</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">lex</span> <span class="op">=</span> <span class="ide">Lexer</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">fileContents</span> <span class="op">=</span> <span class="ide">readFile</span>(<span class="str">&quot;sample.txt&quot;</span>))</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">lex</span><span class="op">.</span><span class="ide">hasError</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">lex</span><span class="op">.</span><span class="ide">getError</span></div></div><div class="line"><div class="line-content">  <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">while</span> <span class="ide">true</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">var</span> <span class="ide">curr</span> <span class="op">=</span> <span class="ide">lex</span><span class="op">.</span><span class="ide">getToken</span>()           <span class="com"># tuple[kind: TokenKind, value: string, wsno, col, line: int]</span></div></div><div class="line"><div class="line-content">      <span class="kwd">if</span> <span class="ide">curr</span><span class="op">.</span><span class="ide">kind</span> <span class="op">==</span> <span class="ide">TK_EOF</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">      <span class="ide">echo</span> <span class="ide">curr</span></div></div>  </code></pre>
-<details>
-    <summary>See output</summary>
-<pre>  <code class="language-nim">(kind: TK_CONST, value: &quot;const&quot;, wsno: 1, col: 0, line: 1)
-(kind: TK_IDENTIFIER, value: &quot;hello&quot;, wsno: 1, col: 6, line: 1)
-(kind: TK_ASSIGN, value: &quot;&quot;, wsno: 0, col: 12, line: 1)
-(kind: TK_INTEGER, value: &quot;1&quot;, wsno: 1, col: 15, line: 1)
-(kind: TK_PLUS, value: &quot;&quot;, wsno: 0, col: 16, line: 1)
-(kind: TK_INTEGER, value: &quot;1&quot;, wsno: 1, col: 19, line: 1)
-</code></pre>
-</details>
-<p>  <a href="https://hetzner.cloud/?ref=Hm0mYGM9NxZ4">    <img src="https://openpeep.ro/banners/openpeep-footer.png" style="max-width: 100%;" width="100%" />  </a></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Register your tokens</span></div></div><div class="line"><div class="line-content"><span class="ide">registerTokens</span> <span class="ide">defaultSettings</span>:</div></div><div class="line"><div class="line-content">  `<span class="kwd">const</span>` <span class="op">=</span> <span class="str">&quot;const&quot;</span></div></div><div class="line"><div class="line-content">  `<span class="ide">echo</span>` <span class="op">=</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">asgn</span> <span class="op">=</span> '=':   <span class="com"># `=` is tkAsgn</span></div></div><div class="line"><div class="line-content">    <span class="ide">eq</span> <span class="op">=</span> '='    <span class="com"># `==` is tkEQ</span></div></div><div class="line"><div class="line-content">  <span class="ide">excl</span> <span class="op">=</span> '!':</div></div><div class="line"><div class="line-content">    <span class="ide">ne</span> <span class="op">=</span> '='</div></div><div class="line"><div class="line-content">  <span class="ide">at</span> <span class="op">=</span> '@':</div></div><div class="line"><div class="line-content">    <span class="kwd">import</span> <span class="op">=</span> <span class="ide">tokenizer</span>(<span class="ide">handleImport</span>, <span class="str">&quot;import&quot;</span>) </div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Tokenizing...</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">tok</span> <span class="op">=</span> <span class="ide">lexer</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">sample</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">prev</span>: <span class="ide">TokenTuple</span></div></div><div class="line"><div class="line-content">  <span class="ide">curr</span>: <span class="ide">TokenTuple</span> <span class="op">=</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">getToken</span></div></div><div class="line"><div class="line-content">  <span class="ide">next</span>: <span class="ide">TokenTuple</span> <span class="op">=</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">getToken</span> </div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">walk</span>(<span class="ide">tok</span>: <span class="kwd">var</span> <span class="ide">Lexer</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">prev</span> <span class="op">=</span> <span class="ide">curr</span></div></div><div class="line"><div class="line-content">  <span class="ide">curr</span> <span class="op">=</span> <span class="ide">next</span></div></div><div class="line"><div class="line-content">  <span class="ide">next</span> <span class="op">=</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">getToken</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="ide">likely</span>(<span class="ide">curr</span><span class="op">.</span><span class="ide">kind</span> <span class="op">!=</span> <span class="ide">tkEOF</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">hasError</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">curr</span> <span class="com"># use `getToken` consumer to get token by token</span></div></div><div class="line"><div class="line-content">  <span class="ide">walk</span> <span class="ide">tok</span></div></div>  </code></pre>
+<h2>TODO</h2>
+<ul>
+<li>[ ] Runtime Token generation using tables/critbits</li>
+</ul>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
 <li>🐛 Found a bug? <a href="https://github.com/openpeeps/toktok/issues">Create a new Issue</a></li>
 <li>👋 Wanna help? <a href="https://github.com/openpeeps/toktok/fork">Fork it!</a></li>
 <li>😎 <a href="https://hetzner.cloud/?ref=Hm0mYGM9NxZ4">Get €20 in cloud credits from Hetzner</a></li>
-<li>🥰 <a href="https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C">Donate to The Enthusiast via PayPal address</a></li>
+<li>🥰 <a href="https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C">Donate to OpenPeeps via PayPal address</a></li>
 </ul>
 <h3>🎩 License</h3>
-<p><code>toktok</code> | <code>MIT</code> license. <a href="https://github.com/openpeeps">Made by Humans from OpenPeeps</a>.<br />
+<p><code>MIT</code> license. <a href="https://github.com/openpeeps">Made by Humans from OpenPeeps</a>.<br />
 Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
 </document>
             
@@ -223,7 +208,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-07T01:18:07Z
+        Builded at 2023-08-08T01:16:10Z
         </p>
       </div>
     </div>
