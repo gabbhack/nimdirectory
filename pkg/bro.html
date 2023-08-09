@@ -99,7 +99,7 @@
             
                 <document><p align="center">
   <img src="https://github.com/openpeeps/bro/blob/main/.github/bro.png" style="max-width: 100%;" width="170px" alt="Bro aka NimSass" /><br />
-  😋 Bro aka NimSass ⚡ A super fast stylesheet language for cool kids!<br />👑 Written in Nim language
+  😋 Bro ⚡ A super fast stylesheet language for cool kids!<br />👑 Written in Nim language
 </p>
 <p align="center">
   <a href="https://openpeeps.github.io/bro/theindex.html">API reference</a> | <a href="#">Download</a> (not yet)<br />
@@ -110,7 +110,7 @@
 <ul>
 <li>🍃 Lightweight, tiny executable</li>
 <li>🐱 Dependency Free / <strong>No Virtual Machine</strong></li>
-<li>💪 <strong>Strong Typed</strong> = Perfect <strong>Cascading Style Sheets</strong> 🤩</li>
+<li>💪 <strong>Strongly Typed</strong> = Perfect <strong>Cascading Style Sheets</strong> 🤩</li>
 <li>🌍 Works on <strong>Linux</strong>, <strong>macOS</strong>, <strong>Windows</strong></li>
 <li>👉 <code>Warnings</code> =&gt; Unused <strong>Variables</strong></li>
 <li>👉 <code>Warnings</code> =&gt; Unused <strong>Mixins</strong>, <strong>Functions</strong>, <strong>Empty selectors</strong></li>
@@ -120,70 +120,45 @@
 <li>🗺 <strong>CSS SourceMap Generator</strong></li>
 <li>🔄 <strong>CSS Reload</strong> &amp; <strong>Browser sync</strong> <a href="https://github.com/openpeeps/bro/wiki/Index#css-reload--browser-syncing">Setup info</a></li>
 <li>🌴 <strong>Abstract Syntax Tree</strong> binary serialization via <strong>MessagePack</strong></li>
-<li>🎉 Built-in <code>HTML</code> Documentation Generator</li>
-<li>🔥 Works with <strong>NodeJS</strong> &amp; <strong>BunJS</strong> via <code>NAPI</code></li>
+<li>🎉 Built-in <code>HTML</code>, <code>JSON</code> Documentation Generator</li>
+<li>🔥 Works with <strong>Node.js</strong> &amp; <strong>Bun.js</strong> via <code>NAPI</code></li>
+<li>🎆 Works in <strong>Browser via WASM</strong> (unstable)</li>
+<li>🌍 Dynamically Linked Library</li>
 <li>🎩 Open Source | <a href="https://github.com/openpeeps/bro/blob/main/LICENSE">LGPLv3 license</a></li>
 <li>👑 Written in <strong>Nim language</strong></li>
 <li>😋 <strong>Made for Cool Kids</strong></li>
 </ul>
 <blockquote>
-<p><strong>Warning</strong> Bro is still under development. Expect bugs and incomplete features.</p>
+<p>[!WARNING]<br />
+Bro is still under development. Expect bugs and incomplete features.</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]
+Since Bro is written in native code, anti-virus software can sometimes incorrectly flag it as a virus</p>
 </blockquote>
 <h2>Bro CLI</h2>
-<pre>  <code>😋 Bro aka NimSass - A super fast stylesheet language for cool kids!
-   https://github.com/openpeeps/bro
-
-   &lt;style&gt; --minify --map --gzip          Compiles a stylesheet to CSS
-
-Development:
-  watch &lt;style&gt; &lt;delay&gt;                   Watch for changes and compile
-  map &lt;style&gt;                             Generates a source map
-  ast &lt;style&gt; --gzip                      Generates a packed AST
-  repr &lt;ast&gt; --minify --gzip              Compiles packed AST to CSS
-
-Documentation:
-  doc &lt;style&gt;                             Builds a documentation website
-
-</code></pre>
+<p>Install Bro as a standalone CLI application. Get it from <a href="#">Releases</a>, or you might want to compile from source.</p>
 <h3>Bro 💛 Nim</h3>
 <p>Integrate Bro in your Nim application</p>
-<pre>  <code class="language-bash">nimble install bro
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">bro</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">stylesheet</span> <span class="op">=</span> """
+$colors = [blue, yellow, orchid]
+for $color in $colors:
+  .bg-{$color}:
+    background: $color 
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">p</span>: <span class="ide">Parser</span> <span class="op">=</span> <span class="ide">parseStylesheet</span>(<span class="ide">stylesheet</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">c</span>: <span class="ide">Compiler</span> <span class="op">=</span> <span class="ide">newCompiler</span>(<span class="ide">p</span><span class="op">.</span><span class="ide">getStylesheet</span>, <span class="ide">minify</span> <span class="op">=</span> <span class="ide">true</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">c</span><span class="op">.</span><span class="ide">getCSS</span> <span class="com"># .bg-blue{background:blue}.bg-yellow{...</span></div></div>  </code></pre>
+<h3>Bro 💖 Bun &amp; Node.js</h3>
+<p>Integrate the most powerful CSS pre-processor with Node.js/Bun.sh!</p>
+<pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="ide">let</span> <span class="ide">stylesheet</span> <span class="op">=</span> `</div></div><div class="line"><div class="line-content"><span class="op">$</span><span class="ide">colors</span> <span class="op">=</span> [<span class="ide">blue</span>, <span class="ide">yellow</span>, <span class="ide">orchid</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="op">$</span><span class="ide">color</span> <span class="kwd">in</span> <span class="op">$</span><span class="ide">colors</span>:</div></div><div class="line"><div class="line-content">  .<span class="ide">bg</span><span class="op">-</span>{<span class="op">$</span><span class="ide">color</span>}:</div></div><div class="line"><div class="line-content">    <span class="ide">background</span>: <span class="op">$</span><span class="ide">color</span></div></div><div class="line"><div class="line-content">`</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">bro</span> <span class="op">=</span> <span class="ide">require</span>(<span class="str">&quot;bro.node&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">bro</span>.<span class="ide">compile</span>(<span class="ide">stylesheet</span>) <span class="com">// .bg-blue{background:blue}.bg-yellow{...</span></div></div>  </code></pre>
+<h3>Bro in Browser via WASM</h3>
+<pre>  <code class="language-html">&lt;style type=&quot;text/bro&quot; id=&quot;stylesheet&quot;&gt;
+$colors = [blue, yellow, orchid]
+for $color in $colors:
+  .bg-{$color}:
+    background: $color
+&lt;/style&gt;
+&lt;script src=&quot;/bro.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<h3>Bro 💖 BunJS &amp; Node</h3>
-<p>Use Bro as a native addon compiled via NAPI with Node or Bun. <a href="#">Get it from releases</a> or compile by yourself from source.
-<em>Bun.js implements 90% of the APIs available in Node-API (napi). <a href="https://github.com/oven-sh/bun#node-api-napi">Read more</a></em></p>
-<pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="kwd">const</span> {<span class="ide">compile</span>} <span class="op">=</span> <span class="ide">require</span>(<span class="str">&quot;./bro.node&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">compile</span>(<span class="str">&quot;./awesome.sass&quot;</span>)</div></div>  </code></pre>
-<h2>Friendly Warnings</h2>
-<p><strong>This is part of &quot;No need to run 1000 npm packages&quot;</strong> to write some CSS.</p>
-<ol>
-<li>  <strong>Perfect for beginners!</strong></li>
-</ol>
-<pre>  <code>Error (18:17) Invalid value font-style: bold 
-      Available values:
-            normal
-            italic
-            oblique
- 👉 /examples/dummies.sass
-</code></pre>
-<ol start="2">
-<li>Typos? No worries!</li>
-</ol>
-<pre>  <code>Error (21899:2): Unknown pseudo-class `focusa`
-👉 /examples/main.sass
-</code></pre>
-<ol start="3">
-<li>Keep your stylesheets clean!</li>
-</ol>
-<pre>  <code>Warning (5:0): Declared and not used $primary-color
-👉 /examples/main.sass
-
-Warning (6:0): Declared and not used $file-border-color
-👉 /examples/form.sass
-
-Warning (11:0) CSS selector .btn has no properties
-👉 /examples/form.sass
-
-</code></pre>
+<pre>  <code class="language-js"><div class="line"><div class="line-content"><span class="ide">bro</span>.<span class="ide">compile</span>('#stylesheet') <span class="com">// .bg-blue{background:blue}.bg-yellow{...</span></div></div>  </code></pre>
 <h2>Benchmarks</h2>
 <p>DartSass, SassC, <strong>Bro</strong>, <strong>BroJS (via NAPI w/ Node &amp; Bun)</strong>, Sass (JS w/ Node &amp; Bun)</p>
 <p>1.572.876 lines of</p>
@@ -220,23 +195,14 @@ Summary
    15.01 times faster than &apos;bun sass.js&apos;
    19.07 times faster than &apos;node sass.js&apos;
 </code></pre>
-<p>  <a href="https://github.com/openpeeps/bro/wiki/Benchmarks">Check Benchmarks page for more</a></p>
-<h3>BRO vs BRO Binary AST</h3>
-<p>Obviously, the <code>repr</code> command will run faster, since the entire AST is built</p>
-<pre>  <code>Benchmark 1: bro big.sass
-  Time (abs ≡):         1.084 s               [User: 0.762 s, System: 0.317 s]
- 
-Benchmark 2: bro repr big.ast
-  Time (abs ≡):        793.0 ms               [User: 548.7 ms, System: 240.3 ms]
-
-</code></pre>
+<p><a href="https://github.com/openpeeps/bro/wiki/Benchmarks">Check Benchmarks page</a> for more numbers</p>
 
 <p>Benchmarks made with <a href="https://github.com/sharkdp/hyperfine">hyperfine</a> on<br />
 <strong>Ubuntu 22.04 LTS</strong> / Ryzen 5 5600g 3.9GHz × 12 / RAM 32 GB 3200MHz / SSD M.2</p>
 <h2>TODO</h2>
 <ul>
-<li>[x] Tokenizier</li>
-<li>[x] Selectors <a href="https://www.w3.org/TR/selectors-3/#selectors">ref</a>
+<li>[x] The Interpreter (Tokens, Lexer, Parser, AST, Compiler)</li>
+<li>[x] CSS Selectors <a href="https://www.w3.org/TR/selectors-3/#selectors">ref</a>
 <ul>
 <li>[ ] Type Selectors <a href="https://www.w3.org/TR/selectors-3/#type-selectors">ref</a></li>
 <li>[ ] Universal Selectors <a href="https://www.w3.org/TR/selectors-3/#universal-selector">ref</a></li>
@@ -251,10 +217,10 @@ Benchmark 2: bro repr big.ast
 </li>
 <li>[x] Compile-time
 <ul>
-<li>[x] Compile-time Variables <code>$myvar = 12px</code></li>
+<li>[x] Compile-time Variables</li>
 <li>[x] Arrays/Objects
 <ul>
-<li>[ ] Anonymous arrays and objects</li>
+<li>[x] Anonymous arrays and objects</li>
 </ul>
 </li>
 <li>[ ] Compile-time Constants</li>
@@ -262,30 +228,48 @@ Benchmark 2: bro repr big.ast
 <ul>
 <li>[x] Closures</li>
 <li>[x] Overloading</li>
+<li>[ ] Recursive calls</li>
 </ul>
 </li>
+<li>[ ] Mixins</li>
 <li>[x] Conditionals (<code>if</code>, <code>elif</code>, <code>else</code>, and <code>case</code>)</li>
 <li>[x] For/Loop statements <code>for $x in $y</code></li>
 <li>[ ] Magically <code>@when</code> instead of <code>@media</code></li>
-<li>[ ] Typed properties declaration</li>
+<li>[ ] Typed CSS properties/values</li>
 <li>[x] Warnings unused <code>variables</code>, <code>functions</code></li>
 <li>[ ] CSS Variable Declaration using <code>var</code> instead of <code>--</code></li>
 <li>[ ] String/Variable concatenation using <code>&amp;</code> and backticks</li>
 </ul>
 </li>
 <li>[ ] Handle single/multi line comments</li>
-<li>[ ] <code>Preview</code> snippets (Building docs from Stylesheets)</li>
+<li>[x] Memoization</li>
+<li>[ ] CSS Parser to BRO AST</li>
+<li>[ ] Import CSS/BASS files
+<ul>
+<li>[ ] Implement AST caching system for imported files</li>
+</ul>
+</li>
+<li>[ ] <code>AST</code> Macro system (used internally to generate BASS code from CSS)</li>
 <li>[x] Command Line Interface
 <ul>
 <li>[x] CLI <code>watch</code> for live changes</li>
-<li>[x] CLI <code>build</code> sass to css</li>
+<li>[x] CLI <code>build</code> BASS code to css</li>
 <li>[ ] CLI generate source <code>map</code></li>
 <li>[x] CLI generate <code>ast</code> nodes to binary AST via <code>MessagePack</code></li>
-<li>[ ] CLI build code documentation with <code>doc</code></li>
-<li>[ ] CLI convert boring sass to Bro</li>
 </ul>
 </li>
-<li>[x] Compiled Node.js / Bun.js addon via NAPI <a href="https://github.com/openpeeps/denim">Check @openpeeps/denim</a></li>
+<li>[x] Build
+<ul>
+<li>[x] Cross-platform compilation</li>
+<li>[x] Node.js/Bun.js via NAPI</li>
+<li>[ ] Browser with WASM via Emscripten</li>
+</ul>
+</li>
+</ul>
+<h4>0.2.x</h4>
+<ul>
+<li>[ ] Convert boring SASS to BASS</li>
+<li>[ ] CLI build code documentation with <code>doc</code></li>
 </ul>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
@@ -296,7 +280,7 @@ Benchmark 2: bro repr big.ast
 <li>🥰 <a href="https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C">Donate to OpenPeeps via PayPal address</a></li>
 </ul>
 <h3>🎩 License</h3>
-<p>BRO aka NimSass | <a href="https://github.com/openpeeps/bro/blob/main/LICENSE">LGPLv3 license</a>. Proudly made in 🇪🇺 Europe <a href="https://github.com/openpeeps">by Humans from OpenPeeps</a>.<br />
+<p>Bro Language <a href="https://github.com/openpeeps/bro/blob/main/LICENSE">LGPLv3 license</a>. Proudly made in 🇪🇺 Europe <a href="https://github.com/openpeeps">by Humans from OpenPeeps</a>.<br />
 Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
 </document>
             
@@ -366,7 +350,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-08T01:16:10Z
+        Builded at 2023-08-09T01:19:17Z
         </p>
       </div>
     </div>
