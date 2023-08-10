@@ -31066,6 +31066,24 @@ const packages = [
     "description": "Voicepeak Server With GPT",
     "license": "MIT",
     "web": "https://github.com/solaoi/voicepeaky4gpt"
+  },
+  {
+    "name": "dan_magaji",
+    "url": "https://github.com/C-NERD/dan_magaji",
+    "method": "git",
+    "tags": [
+      "proxy",
+      "http",
+      "ws",
+      "websocket",
+      "tcp",
+      "udp",
+      "extensible",
+      "server"
+    ],
+    "description": "extensible performant http and web socket proxy server",
+    "license": "MIT",
+    "web": "https://github.com/C-NERD/dan_magaji"
   }
 ]
 const options = {
