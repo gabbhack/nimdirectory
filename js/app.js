@@ -31101,6 +31101,21 @@ const packages = [
     "description": "fast PNM (.pbm .pgm .ppm) parser",
     "license": "MIT",
     "web": "https://github.com/hamidb80/fastpnm"
+  },
+  {
+    "name": "mapster",
+    "url": "https://github.com/PhilippMDoerner/mapster",
+    "method": "git",
+    "tags": [
+      "mapping",
+      "map",
+      "pragma",
+      "convert",
+      "code-generation"
+    ],
+    "description": "A library to quickly generate functions converting instances of type A to B",
+    "license": "MIT",
+    "web": "https://github.com/PhilippMDoerner/mapster"
   }
 ]
 const options = {

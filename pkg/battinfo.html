@@ -85,9 +85,22 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h2>battinfo</h2>
-<p>A simple command line utility, written in <a href="https://nim-lang.org">nim</a>, to discover Batteries in your GNU/Linux machine and print it&apos;s information in the console.</p>
-<h3>License</h3>
+                <document><h1>battinfo</h1>
+<p>  <a href="https://github.com/yglukhov/nimble-tag">    <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png" style="max-width: 100%;" alt="nimble" />  </a></p>
+<h2>Introduction</h2>
+<p>A simple command line utility and a <a href="https://nim-lang.org">nim</a> library to discover batteries in your GNU/Linux machine and print it&apos;s information in the console.</p>
+<h2>Get Started</h2>
+<p>Install using <a href="https://github.com/nim-lang/nimble#readme">nimble</a> package manager</p>
+<pre>  <code class="language-shell">  $ nimble install battinfo
+</code></pre>
+<p><strong>Note</strong>: One can also install without nimble directly by downloading either the 64-bit executable binary or .deb package for Debian/Ubuntu based distros from the <a href="https://gitlab.com/prashere/battinfo/-/releases">releases</a></p>
+<p>Using as cli tool</p>
+<pre>  <code class="language-shell">  # discovers batteries and displays their info
+  $ battinfo
+</code></pre>
+<p>Using battinfo as library in your Nim program</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">battinfopkg</span><span class="op">/</span><span class="ide">battery</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">batteries</span>: <span class="ide">seq</span> <span class="op">=</span> <span class="ide">get_batteries</span>()  <span class="com"># returns a sequence of battery files found in the system.</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">batteries</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">batteries</span><span class="op">.</span><span class="ide">len</span> <span class="op">&gt;</span> <span class="num">0</span>:</div></div><div class="line"><div class="line-content">  <span class="com"># following procedures accept battery file path as argument</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_status</span>(<span class="ide">batteries</span>[<span class="num">0</span>])          <span class="com"># returns charging/discharging status as string</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_manufacturer</span>(<span class="ide">batteries</span>[<span class="num">0</span>])    <span class="com"># returns the name of the manufacturer as string</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_model</span>(<span class="ide">batteries</span>[<span class="num">0</span>])           <span class="com"># returns the battery model as string</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_tech</span>(<span class="ide">batteries</span>[<span class="num">0</span>])            <span class="com"># returns the type of battery as string</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_serial</span>(<span class="ide">batteries</span>[<span class="num">0</span>])          <span class="com"># returns serial info of the battery as string</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_percentage</span>(<span class="ide">batteries</span>[<span class="num">0</span>])      <span class="com"># returns battery percentage left as int</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_current_charge</span>(<span class="ide">batteries</span>[<span class="num">0</span>])  <span class="com"># returns the current charge as float</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">get_total_capacity</span>(<span class="ide">batteries</span>[<span class="num">0</span>])  <span class="com"># returns the total capacity of the battery as float</span></div></div>  </code></pre>
+<h2>License</h2>
 <p>This software is offered as a Free Software under the terms of <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License version 3</a>.</p>
 </document>
             
@@ -157,7 +170,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-11T01:04:45Z
+        Builded at 2023-08-12T01:03:57Z
         </p>
       </div>
     </div>
