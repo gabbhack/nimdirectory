@@ -31116,6 +31116,19 @@ const packages = [
     "description": "A library to quickly generate functions converting instances of type A to B",
     "license": "MIT",
     "web": "https://github.com/PhilippMDoerner/mapster"
+  },
+  {
+    "name": "namenumbersort",
+    "url": "https://github.com/amaank404/namenumbersort",
+    "method": "git",
+    "tags": [
+      "sorting",
+      "hybrid",
+      "cmp"
+    ],
+    "description": "Provides a system.cmp like function that can be used with std/algorithm.sort to smartly sort string sequences based on their contents rather than exact match",
+    "license": "MIT",
+    "web": "https://github.com/amaank404/namenumbersort"
   }
 ]
 const options = {
