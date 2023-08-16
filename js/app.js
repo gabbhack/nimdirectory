@@ -30967,6 +30967,20 @@ const packages = [
     "web": "https://github.com/Cooperzilla/nimautogui"
   },
   {
+    "name": "strophe",
+    "url": "https://github.com/SillaIndustries/nim-strophe",
+    "method": "git",
+    "tags": [
+      "library",
+      "wrapper",
+      "strophe",
+      "messaging"
+    ],
+    "description": "Libstrophe wrapper",
+    "license": "MIT",
+    "web": "https://github.com/SillaIndustries/nim-strophe"
+  },
+  {
     "name": "chatgptclient",
     "url": "https://github.com/jaredmontoya/chatgptclient",
     "method": "git",
@@ -31131,6 +31145,20 @@ const packages = [
     "web": "https://github.com/amaank404/namenumbersort"
   },
   {
+    "name": "cflags",
+    "url": "https://github.com/MCRusher/cflags",
+    "method": "git",
+    "tags": [
+      "c",
+      "interop",
+      "library"
+    ],
+    "description": "A C-compatible bitmask flags interface, with a subset of nim set functionality",
+    "license": "MIT",
+    "web": "https://github.com/MCRusher/cflags",
+    "doc": "https://mcrusher.github.io/cflags/cflags.html"
+  },
+  {
     "name": "propositionalLogic",
     "url": "https://github.com/Azumabashi/nim-propositional-logic/",
     "method": "git",
@@ -31140,6 +31168,20 @@ const packages = [
     "description": "A library for (standard) propositional logic",
     "license": "MIT",
     "web": "https://github.com/Azumabashi/nim-propositional-logic/"
+  },
+  {
+    "name": "stack_strings",
+    "url": "https://github.com/termermc/nim-stack-strings/",
+    "method": "git",
+    "tags": [
+      "stack",
+      "zero-allocation",
+      "string",
+      "openArray"
+    ],
+    "description": "Library for guaranteed zero heap allocation strings ",
+    "license": "MIT",
+    "web": "https://github.com/termermc/nim-stack-strings/"
   }
 ]
 const options = {

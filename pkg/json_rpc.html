@@ -117,7 +117,7 @@ It is designed to automatically generate marshalling and parameter checking code
 <p><code>body</code>: The parameters and code to execute for this call.</p>
 <h3>Example</h3>
 <p>Here&apos;s a simple example:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json_rpc</span><span class="op">/</span><span class="ide">rpcserver</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span> <span class="op">=</span> <span class="ide">newRpcRouter</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">rpc</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="op">%</span><span class="str">&quot;Hello&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">json_rpc</span><span class="op">/</span><span class="ide">rpcserver</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span> <span class="op">=</span> <span class="ide">newRpcRouter</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">rpc</span>(<span class="str">&quot;hello&quot;</span>) <span class="kwd">do</span>() <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="str">&quot;Hello&quot;</span></div></div>  </code></pre>
 <p>As no return type was specified in this example, <code>result</code> defaults to the <code>JsonNode</code> type.
 A JSON string is returned by passing a string though the <code>%</code> operator, which converts simple types to <code>JsonNode</code>.</p>
 <p>The <code>body</code> parameters can be defined by using <a href="https://nim-lang.org/docs/manual.html#procedures-do-notation">do notation</a>.
@@ -370,7 +370,7 @@ Returning
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-15T01:05:37Z
+        Builded at 2023-08-16T01:05:16Z
         </p>
       </div>
     </div>
