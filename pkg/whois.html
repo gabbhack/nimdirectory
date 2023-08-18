@@ -81,83 +81,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><!-- 
-  Created at: 06/09/2021 12:05:16 Wednesday
-  Modified at: 09/17/2021 12:46:24 AM Friday
-
-        Copyright (C) 2021 Thiago Navarro
-  See file &quot;license&quot; for details about copyright
- -->
-<!--  Hello! Thanks for interest in my lib! :)  -->
-<h1>Whois.nim</h1>
-<p>The Whois.nim is a simple whois client.
-<strong>With cache (kashae)!</strong></p>
-<p>  <strong>The doyosi whois demo website is down, to use this lib you will need an instance of that</strong></p>
-<hr />
-<h2>Requirements</h2>
-<ul>
-<li>The Nim (<a href="https://nim-lang.org/">Official website</a>) programming language (Min version 1.4.0)</li>
-<li>Nimble (<a href="https://github.com/nim-lang/nimble">Github</a>), the Nim&apos;s package manager</li>
-</ul>
-<p>Hint: Install Nim with Choosenim (<a href="https://github.com/dom96/choosenim">Github</a>)</p>
-<h2>Installation</h2>
-<p>Directly with Nimble</p>
-<pre>  <code class="language-bash"># Install directly with Nimble
-nimble install whois
-</code></pre>
-<p>or</p>
-<p>Directly with Nimble (with url)</p>
-<pre>  <code class="language-bash"># Install directly with Nimble (with url)
-nimble install https://github.com/thisago/whois.nim
-</code></pre>
-<p>or</p>
-<p>Manually with Nimble</p>
-<pre>  <code class="language-bash"># Clone repo
-git clone https://github.com/thisago/whois.nim
-
-# go to folder
-cd whois
-
-# Install (with Nimble)
-nimble install -y
-</code></pre>
-<h2>Docs</h2>
-<p>You can find the <a href="https://thisago.github.io/whois/whois.html">docs in Github pages</a></p>
-<h2>Usage</h2>
-<p>example/example.nim</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">whois</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">whois</span>(<span class="str">&quot;duckduckgo.com&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">domain</span> <span class="op">=</span> <span class="str">&quot;metager.org&quot;</span><span class="op">.</span><span class="ide">toDomain</span> <span class="com"># convert to a `Domain` instance</span></div></div><div class="line"><div class="line-content"><span class="ide">domain</span><span class="op">.</span><span class="ide">update</span>() <span class="com"># Get data from API</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">domain</span></div></div>  </code></pre>
-<p>Run:</p>
-<pre>  <code class="language-bash">nim c -r -d:ssl -d:release example/example.nim
-</code></pre>
-<p>NOTE: Compile with <code>-d:ssl</code></p>
-<h2>TODO</h2>
-<ul>
-<li>[ ] Change the nimble package url from gitea to github</li>
-</ul>
-<h2>Contributing</h2>
-<p>Its easy to create a parser for another API!</p>
-<p>Just see <code>src/whois/api_doyosi.nim</code> to understand how simple is it.</p>
-<p>All definitions is in <code>src/whois/core.nim</code>.</p>
-<ul>
-<li>Create a new file in <code>src/whois/</code> called <code>api_APINAME.nim</code></li>
-<li>Import module <code>src/whois/core.nim</code></li>
-<li>Export a function named <code>apiFetch</code></li>
-<li>In <code>src/whois.nim</code>
-<ul>
-<li>Import the new api parser using:
-<pre>  <code class="language-nim">from whois/api_APINAME.nim import nil
-</code></pre>
-</li>
-<li>Call the <code>apiFetch</code> function in <code>update</code> in end like:
-<pre>  <code class="language-nim">if api_APINAME.apiFetch(self, noCache): return # If any error, try next API
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h2>NOTICE</h2>
-<p>The implemented API service has no relation with this lib.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -225,7 +149,7 @@ nimble install -y
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-17T01:04:26Z
+        Builded at 2023-08-18T01:05:18Z
         </p>
       </div>
     </div>

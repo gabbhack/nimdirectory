@@ -31182,6 +31182,35 @@ const packages = [
     "description": "Library for guaranteed zero heap allocation strings ",
     "license": "MIT",
     "web": "https://github.com/termermc/nim-stack-strings/"
+  },
+  {
+    "name": "getpodia",
+    "url": "https://github.com/thisago/getpodia",
+    "method": "git",
+    "tags": [
+      "scraper",
+      "podia",
+      "library"
+    ],
+    "description": "Extract Podia sites courses data",
+    "license": "GPL-3",
+    "web": "https://github.com/thisago/getpodia"
+  },
+  {
+    "name": "websitegenerator",
+    "url": "https://github.com/nirokay/websitegenerator",
+    "method": "git",
+    "tags": [
+      "html",
+      "css",
+      "website",
+      "generator",
+      "library"
+    ],
+    "description": "Static html and css generator.",
+    "license": "GPL-3.0-only",
+    "web": "https://github.com/nirokay/websitegenerator",
+    "doc": "https://nirokay.github.io/nim-docs/websitegenerator/websitegenerator.html"
   }
 ]
 const options = {

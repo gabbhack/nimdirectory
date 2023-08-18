@@ -85,63 +85,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>dataUrl</h1>
-<p>Easily create data urls! CLI included</p>
-<p>  <strong>Lib usage</strong></p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">dataUrl</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">initDataUrl</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">data</span> <span class="op">=</span> <span class="str">&quot;&lt;h1&gt;Hello World&lt;/h1&gt;&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">mime</span> <span class="op">=</span> <span class="str">&quot;text/html&quot;</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
-<h2>Installation</h2>
-<h3>Requirements</h3>
-<ul>
-<li>  <a href="https://nim-lang.org/">Nim</a></li>
-<li>Git</li>
-</ul>
-<pre>  <code class="language-bash">$ nimble install https://github.com/thisago/dataUrl
-</code></pre>
-<hr />
-<h2>CLI</h2>
-<p>Converts locally or remote images in data url content</p>
-<h3>Features</h3>
-<ul>
-<li>Work with local paths and remote urls seamless</li>
-<li>Save all results in a <code>TSV</code> file using <code>-O</code> option</li>
-<li>Can be integrated with any project</li>
-<li>Lib works with JS (not CLI)</li>
-</ul>
-<h3>Usage</h3>
-<pre>  <code class="language-bash">$ dataUrl image.png https://example.com/image.png
-# Output each image in a file
-$ dataUrl image.png https://example.com/image.png -o .
-# Output all images in single file (tsv)
-$ dataUrl image.png https://example.com/image.png -O images.txt
-# inject with pipe
-cat page.html | dataUrl -m text/html
-</code></pre>
-<h3>Help</h3>
-<pre>  <code class="language-bash">$ dataUrl --help
-Usage:
-  main [optional-params] Content urls (can be local or remote)
-Data Url
-Options:
-  -h, --help                      print this cligen-erated help
-  --help-syntax                   advanced: prepend,plurals,..
-  -m=, --mime=     string  &quot;&quot;     Force the mime type; Default is auto
-  -b, --base64     bool    true   Disable base64 encoding
-  -o=, --outDir=   string  &quot;&quot;     Saves the output files in one folder
-  -O=, --outFile=  string  &quot;&quot;     Saves the output to one file (tsv)
-  -c, --clean      bool    false  Easy to integrate output
-  -a, --anySize    bool    false  Disable max data url size (65529) verification
-</code></pre>
-<hr />
-<h2>TODO</h2>
-<ul>
-<li>[ ] Add tests</li>
-<li>[ ] Add <code>docs</code> to GH Pages</li>
-<li>[ ] Add js examples</li>
-<li>[ ] Add to <code>nim-lang/packages</code></li>
-</ul>
-<h2>License</h2>
-<p>GPL-3</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -209,7 +153,7 @@ Options:
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-17T01:04:26Z
+        Builded at 2023-08-18T01:05:18Z
         </p>
       </div>
     </div>
