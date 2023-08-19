@@ -93,7 +93,41 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><div align="center">
+<h1>  <strong>Bible Tools</strong></h1>
+<p>Bible tools to manipulate bible references!</p>
+<p><a href="#examples">Examples</a> - <a href="#todo">TODO</a> - <a href="#license">License</a></p>
+</div>
+<h2>Examples</h2>
+<p>For more examples, please see the <a href="tests">  <code>tests</code></a></p>
+<h3>Identify books</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;second bar&quot;</span><span class="op">.</span><span class="ide">identifyBibleBookEn</span> <span class="op">==</span> <span class="ide">Baruk2</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;ex&quot;</span><span class="op">.</span><span class="ide">identifyBibleBookEn</span> <span class="op">==</span> <span class="ide">Exodus</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;Jo&quot;</span><span class="op">.</span><span class="ide">identifyBibleBookPt</span> <span class="op">==</span> <span class="ide">John</span></div></div>  </code></pre>
+<h3>Smart book identification</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;second bar&quot;</span><span class="op">.</span><span class="ide">identifyBibleBook</span> <span class="op">==</span> (<span class="ide">Baruk2</span>, <span class="ide">ALEnglish</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;tg&quot;</span><span class="op">.</span><span class="ide">identifyBibleBook</span> <span class="op">==</span> (<span class="ide">James</span>, <span class="ide">ALPortuguese</span>)</div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;1ts&quot;</span><span class="op">.</span><span class="ide">identifyBibleBook</span> <span class="op">==</span> (<span class="ide">book</span>: <span class="ide">Thessalonians1</span>, <span class="ide">lang</span>: <span class="ide">ALPortuguese</span>)</div></div>  </code></pre>
+<h3>Parse verse</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;Mt 5:17-20&quot;</span><span class="op">.</span><span class="ide">parseBibleVerse</span> <span class="op">==</span> <span class="ide">BibleVerse</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">book</span>: <span class="ide">AnyLangBook</span> (<span class="ide">Matthew</span>, <span class="ide">ALPortuguese</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">chapter</span>: <span class="num">5</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">verses</span>: <span class="op">@</span>[<span class="num">17</span>, <span class="num">18</span>, <span class="num">19</span>, <span class="num">20</span>],</div></div><div class="line"><div class="line-content">  <span class="ide">translation</span>: <span class="str">&quot;&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">error</span>: <span class="ide">false</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h3>Parse multiple verses</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">pkg</span><span class="op">/</span><span class="ide">bibleTools</span> <span class="kwd">import</span> <span class="ide">ALPortuguese</span>, <span class="ide">ALEnglish</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">found</span> <span class="op">=</span> <span class="str">&quot;Gen 1:1; exod 2:2; Lv 3:3&quot;</span><span class="op">.</span><span class="ide">parseBibleVerses</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">found</span>[<span class="num">2</span>]<span class="op">.</span><span class="ide">parsed</span><span class="op">.</span><span class="ide">book</span><span class="op">.</span><span class="ide">lang</span> <span class="op">==</span> <span class="ide">ALPortuguese</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">found</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">parsed</span><span class="op">.</span><span class="ide">book</span><span class="op">.</span><span class="ide">lang</span> <span class="op">==</span> <span class="ide">ALEnglish</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="op">$</span><span class="ide">found</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">parsed</span> <span class="op">==</span> <span class="str">&quot;Exo 2:2&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">found</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">raw</span> <span class="op">==</span> <span class="str">&quot;exod 2:2&quot;</span></div></div>  </code></pre>
+<h3>Stringify verse</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="op">$</span><span class="ide">BibleVerse</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">book</span>:  (<span class="ide">Proverbs</span>, <span class="ide">ALPortuguese</span>),</div></div><div class="line"><div class="line-content">  <span class="ide">chapter</span>: <span class="num">29</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">verses</span>: <span class="op">@</span>[<span class="num">27</span>],</div></div><div class="line"><div class="line-content">  <span class="ide">translation</span>: <span class="str">&quot;&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">error</span>: <span class="ide">false</span></div></div><div class="line"><div class="line-content">) <span class="op">==</span> <span class="str">&quot;Pv 29:27&quot;</span></div></div>  </code></pre>
+<h3>To Ozzuu Bible URL</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="str">&quot;Revelation 14:12&quot;</span><span class="op">.</span><span class="ide">parseBibleVerse</span><span class="op">.</span><span class="ide">inOzzuuBible</span>(<span class="str">&quot;en_wyc2014&quot;</span>) <span class="op">==</span></div></div><div class="line"><div class="line-content">  <span class="str">&quot;https://bible.ozzuu.com/en_wyc2014/Rev/14#12&quot;</span></div></div>  </code></pre>
+<h3>More examples!</h3>
+<p>Please see the tests files to see more examples!</p>
+<ul>
+<li>  <a href="tests/testBooks.nim">books test</a></li>
+<li>  <a href="tests/testVerses.nim">verses test</a></li>
+</ul>
+<h2>TODO</h2>
+<ul>
+<li>[ ] Add documentation</li>
+<li>[-] Add missing hebrew book names</li>
+<li>[ ] Add hebrew transliteration book identification</li>
+<li>[x] Add a function to get the short version of a book</li>
+</ul>
+<h2>License</h2>
+<p>MIT</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -161,7 +195,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-18T01:05:18Z
+        Builded at 2023-08-19T01:03:26Z
         </p>
       </div>
     </div>

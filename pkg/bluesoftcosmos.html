@@ -89,7 +89,85 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>bluesoftcosmos</h1>
+<p>Bluesoft Cosmos extractor</p>
+<p>Bluesoft Cosmos is online catalog that allows search products by barcode</p>
+<p>This website <a href="https://cosmos.bluesoft.io/api-pricings">sells an API access</a> to get some of these data, but the API doens&apos;t provides all data of website frontend.</p>
+<h2>Extracted data</h2>
+<ul>
+<li>Barcode (the provided code)</li>
+<li>Product name</li>
+<li>Product image</li>
+<li>MCN (Mercosur Common Nomenclature)</li>
+<li>Register country</li>
+<li>Brand
+<ul>
+<li>Name</li>
+<li>Image</li>
+</ul>
+</li>
+<li>Category</li>
+<li>Average price</li>
+<li>Medium price
+<ul>
+<li>Min</li>
+<li>Max</li>
+</ul>
+</li>
+<li>Prices (seq of object)
+<ul>
+<li>State</li>
+<li>Smaller price</li>
+<li>Larger price</li>
+<li>Medium price</li>
+<li>Most common price</li>
+<li>Searches (based in how many searches)</li>
+</ul>
+</li>
+<li>Same MCN products (seq of object)
+<ul>
+<li>Product name</li>
+<li>Image</li>
+<li>Code</li>
+</ul>
+</li>
+<li>Same categories products (seq of object)
+<ul>
+<li>Product name</li>
+<li>Image</li>
+<li>Code</li>
+</ul>
+</li>
+<li>Price history
+<ul>
+<li>Maximum (tuple of price and time)</li>
+<li>Minimum (tuple of price and time)</li>
+</ul>
+</li>
+<li>seq of ProductUnits
+<ul>
+<li>Barcode</li>
+<li>Kind</li>
+<li>PackageQnt</li>
+<li>BallastQnt</li>
+<li>LayerQnt</li>
+<li>Length</li>
+<li>Height</li>
+<li>Width</li>
+<li>GrossWeight</li>
+<li>NetWeight</li>
+</ul>
+</li>
+</ul>
+<h2>TODO</h2>
+<ul>
+<li>[x] Extract package width, height, weight</li>
+<li>[ ] Extract MCN comments</li>
+<li>[ ] Fix related products extraction. It needs to be name based not index based</li>
+</ul>
+<h2>License</h2>
+<p>GPL-3</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -157,7 +235,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-18T01:05:18Z
+        Builded at 2023-08-19T01:03:26Z
         </p>
       </div>
     </div>

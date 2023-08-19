@@ -85,7 +85,187 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><!-- 
+  Created at: 08/03/2021 17:17:54 Tuesday
+  Modified at: 09/10/2021 11:39:54 PM Friday
+ -->
+<h1>ytextractor</h1>
+<p><strong>Y</strong>ou<strong>t</strong>ube data <strong>extractor</strong></p>
+<p>Extracts the data of a Youtube url.
+but more will be added soon!</p>
+<p>The objective is extract every data that don&apos;t need authentication</p>
+<hr />
+<h2>Features</h2>
+<p>This parser gets:</p>
+<ul>
+<li>
+<p>Video url</p>
+<ul>
+<li>Video info
+<ul>
+<li>[x] Id (video code)</li>
+<li>[x] Title</li>
+<li>[x] Description</li>
+<li>[x] Thumbnails</li>
+<li>[x] Embed</li>
+<li>[x] Publish date</li>
+<li>[x] Upload date</li>
+<li>[x] Length</li>
+<li>[x] Family friendly</li>
+<li>[x] Unlisted</li>
+<li>[x] Private</li>
+<li>[x] Live (is live)</li>
+<li>[x] Channel</li>
+<li>[x] Views</li>
+<li>[x] Category</li>
+<li>[x] Likes</li>
+<li>[x] Keywords</li>
+<li>[x] Captions URLs</li>
+</ul>
+</li>
+<li>Channel
+<ul>
+<li>[x] Name</li>
+<li>[x] Id</li>
+<li>[x] Url</li>
+<li>[x] Subscribers</li>
+<li>[x] Channel icons</li>
+<li>[x] Hidden subscribers (bool)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Channel url</p>
+<ul>
+<li>[x] Id</li>
+<li>[x] Url</li>
+<li>[x] Name</li>
+<li>[x] Subscribers</li>
+<li>[x] Channel icons</li>
+<li>[x] Hidden subscribers (bool)</li>
+<li>[x] Family safe</li>
+<li>[x] Tags</li>
+<li>[x] Description (about)</li>
+<li>[x] Banners</li>
+<li>[x] Links
+<ul>
+<li>[x] Primary</li>
+<li>[x] Secondary</li>
+</ul>
+</li>
+<li>[x] Highlighted playlists videos</li>
+<li>[x] Highlighted video
+<ul>
+<li>[x] Id (video code)</li>
+<li>[x] Title</li>
+<li>[x] Description</li>
+<li>[ ] Thumbnails</li>
+<li>[x] Views</li>
+<li>[x] Rounded publish date</li>
+<li>[x] Badges
+<ul>
+<li>[x] Name</li>
+<li>[x] Icon</li>
+<li>[x] IconType</li>
+<li>[x] Style</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>[x] Video captions</p>
+</li>
+<li>
+<p>Video data</p>
+<ul>
+<li>[ ] Subtitles</li>
+<li>[ ] Comments
+<ul>
+<li>[ ] Comments of comments</li>
+</ul>
+</li>
+<li>Livechat
+<ul>
+<li>[ ] Realtime</li>
+<li>[ ] Replay</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>[ ] Search results</p>
+</li>
+<li>
+<p>[ ] All videos from channel/user</p>
+</li>
+<li>
+<p>[ ] All videos of playlist (a seq of videos)</p>
+</li>
+</ul>
+<h3>JS (browser) target avaliable!</h3>
+<p>  <a href="https://thisago.github.io/ytextractor/examples/web/">Online example</a></p>
+<p>An example can be found in <a href="examples/web">  <code>examples/web</code></a>.</p>
+<p>Unfortunately the implementation isn&apos;t async, soon it will be fixed</p>
+<p><strong>TODO:</strong> Add captions extraction to JS example</p>
+<hr />
+<h2>Usage</h2>
+<h3>  <a href="src/ytextractor/video.nim">    <code>video.nim</code>  </a></h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ytextractor</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">extractVideo</span> <span class="str">&quot;7on15IWC2u4&quot;</span></div></div>  </code></pre>
+<p>or</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ytextractor</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">vid</span> <span class="op">=</span> <span class="ide">initYoutubeVideo</span> <span class="str">&quot;7on15IWC2u4&quot;</span><span class="op">.</span><span class="ide">videoId</span></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">vid</span><span class="op">.</span><span class="ide">update</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">vid</span></div></div>  </code></pre>
+<hr />
+<h3>  <a href="src/ytextractor/channel.nim">    <code>channel.nim</code>  </a></h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ytextractor</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">extractChannel</span> <span class="str">&quot;https://www.youtube.com/c/taofledermaus&quot;</span></div></div>  </code></pre>
+<p>or</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ytextractor</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">channel</span> <span class="op">=</span> <span class="ide">initYoutubeChannel</span> <span class="str">&quot;https://www.youtube.com/c/taofledermaus&quot;</span><span class="op">.</span><span class="ide">channelId</span></div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">channel</span><span class="op">.</span><span class="ide">update</span>(<span class="ide">home</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">channel</span></div></div>  </code></pre>
+<hr />
+<h3>  <a href="src/ytextractor/captions.nim">    <code>captions.nim</code>  </a></h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ytextractor</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;7on15IWC2u4&quot;</span><span class="op">.</span><span class="ide">extractVideo</span><span class="op">.</span><span class="ide">captions</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">url</span><span class="op">.</span><span class="ide">extractCaptions</span></div></div>  </code></pre>
+<p>or</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">ytextractor</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">captions</span> <span class="op">=</span> <span class="ide">initYoutubecaptions</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">captions</span><span class="op">.</span><span class="ide">update</span> <span class="str">&quot;7on15IWC2u4&quot;</span><span class="op">.</span><span class="ide">extractVideo</span><span class="op">.</span><span class="ide">captions</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">url</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">captions</span></div></div>  </code></pre>
+<hr />
+<h2>Installation</h2>
+<p>Minimum <a href="https://nim-lang.org">Nim</a> version is <code>1.2.2</code></p>
+<p>Please choice one installation method:</p>
+<ul>
+<li>
+<p>Automatically with nimble</p>
+<pre>  <code class="language-bash">nimble install ytextractor
+</code></pre>
+<p>Or</p>
+</li>
+<li>
+<p>Manually</p>
+<pre>  <code class="language-bash">git clone https://github.com/thisago/ytextractor
+cd ytextractor/
+nimble install
+</code></pre>
+</li>
+</ul>
+<hr />
+<h2>Docs</h2>
+<p>A online docs is hosted in <a href="https://thisago.github.io/ytextractor/docs/ytextractor.html">Github Pages</a></p>
+<hr />
+<h2>TODO</h2>
+<ul>
+<li>[ ] Usage guide (not only Nim)</li>
+<li>[ ] Make requests async</li>
+<li>[ ] Use API https://www.youtube.com/youtubei/v1/browse to get channel data
+instead using simple page request</li>
+<li>[ ] Add tests for captions sub module</li>
+</ul>
+<hr />
+<h2>Useful links</h2>
+<h3>  <a href="https://github.com/nlitsme/youtube_tool">nlitsme/youtube_tool</a></h3>
+<p>Python3 parser<br />
+With a &quot;How it works&quot; section</p>
+<hr />
+<h2>License</h2>
+<p>MIT</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -153,7 +333,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-18T01:05:18Z
+        Builded at 2023-08-19T01:03:26Z
         </p>
       </div>
     </div>
