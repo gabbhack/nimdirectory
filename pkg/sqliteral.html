@@ -104,10 +104,16 @@ zero-copy data paths, debugging, JSON, optimizing, backups, and more...</p>
 <h2>Documentation</h2>
 <p>http://olliNiinivaara.github.io/SQLiteral/</p>
 <h2>Installation</h2>
-<p>  <code>nimble install sqliteral</code></p>
-<h2>3.0.1 Release notes (2023-03-27)</h2>
+<p>  <code>atlas use sqliteral</code></p>
+<h2>4.0.0 Release notes (2023-08-19)</h2>
 <ul>
-<li>catching CatchableError instead of Exception in transaction template</li>
+<li>Compatibility with Nim 2</li>
+<li>Single-threaded mode is not supported anymore (breaking change)</li>
+<li>Avoid crashing from trying to get filesize of in-memory database in about</li>
+<li>Unlimited amount of threads supported</li>
+<li>New finalizeStatements proc (semi-breaking change)</li>
+<li>New interrupt proc</li>
+<li>Various minor performance and other fixes</li>
 </ul>
 <h2>Example</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sqliteral</span></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">Schema</span> <span class="op">=</span> <span class="str">&quot;CREATE TABLE IF NOT EXISTS Example(string TEXT NOT NULL)&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">SqlStatements</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">  <span class="ide">Upsert</span> <span class="op">=</span> """INSERT INTO Example(rowid, string) VALUES(1, ?)
@@ -180,7 +186,7 @@ zero-copy data paths, debugging, JSON, optimizing, backups, and more...</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-19T01:03:26Z
+        Builded at 2023-08-20T01:08:03Z
         </p>
       </div>
     </div>
