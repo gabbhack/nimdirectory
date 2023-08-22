@@ -108,22 +108,42 @@
 </p>
 <h2>😍 Key Features</h2>
 <ul>
-<li>🍃 Lightweight, tiny executable</li>
+<li>⚡ Extremely fast &amp; Highly optimized <a href="#benchmarks">Jump to Benchmarks</a></li>
+<li>🍃 Lightweight, <strong>1.5MB</strong> tiny executable</li>
 <li>🐱 Dependency Free / <strong>No Virtual Machine</strong></li>
 <li>💪 <strong>Strongly Typed</strong> = Perfect <strong>Cascading Style Sheets</strong> 🤩</li>
 <li>🌍 Works on <strong>Linux</strong>, <strong>macOS</strong>, <strong>Windows</strong></li>
-<li>👉 <code>Warnings</code> =&gt; Unused <strong>Variables</strong></li>
-<li>👉 <code>Warnings</code> =&gt; Unused <strong>Mixins</strong>, <strong>Functions</strong>, <strong>Empty selectors</strong></li>
-<li>👉 <code>Errors</code> =&gt; <strong>invalid</strong> properties/values or typos!</li>
 <li>🔖 A beautiful, improved <code>SASS</code>-like Syntax <a href="https://github.com/openpeeps/bro/wiki/Learn-Bro-in-5-minutes">Learn Bro in 5 minutes</a></li>
-<li>🎁 <strong>CSS Minifier</strong></li>
+<li>📚 Standard Library (<code>strings</code>, <code>arrays</code>, <code>objects</code>, <code>math</code>, <code>regex</code>, <code>os</code>) <a href="https://github.com/openpeeps/bro/wiki/Standard-Library">Check the manual</a></li>
+<li>👋 Human readable Syntax =&gt; <strong>Developer friendly</strong>
+<ul>
+<li><code>var</code> &amp; <code>const</code></li>
+<li><code>[]</code> Arrays</li>
+<li><code>{}</code> Objects</li>
+<li><code>if</code> &amp; <code>case</code> Conditionals</li>
+<li><code>for</code> Loop Statements</li>
+<li><code>fn</code> Functions &amp; <code>mix</code> Mixins
+<ul>
+<li>Overloading + Closures + Forward declaration</li>
+</ul>
+</li>
+<li><code>CSS</code> to <code>BASS</code> AST with <code>include some.css</code></li>
+<li><code>BASS</code> imports using <code>import std/[strings, math]</code></li>
+<li><strong>JSON/YAML stream</strong> to BASS using <code>json(&quot;some.json&quot;)</code>, <code>yaml(&quot;some.yml&quot;)</code></li>
+</ul>
+</li>
+<li>👏 Built-in CSS Optimization (Autoprefixer, Minifier, CSS Alphabetize &amp; Deduplication)</li>
 <li>🗺 <strong>CSS SourceMap Generator</strong></li>
 <li>🔄 <strong>CSS Reload</strong> &amp; <strong>Browser sync</strong> <a href="https://github.com/openpeeps/bro/wiki/Index#css-reload--browser-syncing">Setup info</a></li>
-<li>🌴 <strong>Abstract Syntax Tree</strong> binary serialization via <strong>MessagePack</strong></li>
+<li>🌴 <strong>Abstract Syntax Tree</strong> binary serialization</li>
 <li>🎉 Built-in <code>HTML</code>, <code>JSON</code> Documentation Generator</li>
 <li>🔥 Works with <strong>Node.js</strong> &amp; <strong>Bun.js</strong> via <code>NAPI</code></li>
 <li>🎆 Works in <strong>Browser via WASM</strong> (unstable)</li>
 <li>🌍 Dynamically Linked Library</li>
+<li>👉 <code>Warnings</code> =&gt; Unused <strong>Variables</strong></li>
+<li>👉 <code>Warnings</code> =&gt; Unused <strong>Mixins</strong>, <strong>Functions</strong>, <strong>Empty selectors</strong></li>
+<li>👉 <code>Errors</code> =&gt; <strong>invalid</strong> properties/values or typos!</li>
+<li>🏳 Recommended Extension <code>.bass</code></li>
 <li>🎩 Open Source | <a href="https://github.com/openpeeps/bro/blob/main/LICENSE">LGPLv3 license</a></li>
 <li>👑 Written in <strong>Nim language</strong></li>
 <li>😋 <strong>Made for Cool Kids</strong></li>
@@ -137,23 +157,24 @@ Bro is still under development. Expect bugs and incomplete features.</p>
 Since Bro is written in native code, anti-virus software can sometimes incorrectly flag it as a virus</p>
 </blockquote>
 <h2>Bro CLI</h2>
-<p>Install Bro as a standalone CLI application. Get it from <a href="#">Releases</a>, or you might want to compile from source.</p>
+<p>Install Bro as a standalone CLI application. Get it from <a href="#">Releases</a> or build it from source using Nim &amp; Nimble.</p>
 <h3>Bro 💛 Nim</h3>
 <p>Integrate Bro in your Nim application</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">bro</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">stylesheet</span> <span class="op">=</span> """
-var colors = [blue, yellow, orchid]
+$colors = [blue, yellow, orchid]
 for $color in $colors:
-  .bg-{$color}:
+  .bg-{$color}
     background: $color 
 """</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">p</span>: <span class="ide">Parser</span> <span class="op">=</span> <span class="ide">parseStylesheet</span>(<span class="ide">stylesheet</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">c</span>: <span class="ide">Compiler</span> <span class="op">=</span> <span class="ide">newCompiler</span>(<span class="ide">p</span><span class="op">.</span><span class="ide">getStylesheet</span>, <span class="ide">minify</span> <span class="op">=</span> <span class="ide">true</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">c</span><span class="op">.</span><span class="ide">getCSS</span> <span class="com"># .bg-blue{background:blue}.bg-yellow{...</span></div></div>  </code></pre>
 <h3>Bro 💖 Bun &amp; Node.js</h3>
-<p>Integrate the most powerful CSS pre-processor with Node.js/Bun.sh!</p>
-<pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="ide">let</span> <span class="ide">stylesheet</span> <span class="op">=</span> `</div></div><div class="line"><div class="line-content"><span class="ide">var</span> <span class="ide">colors</span> <span class="op">=</span> [<span class="ide">blue</span>, <span class="ide">yellow</span>, <span class="ide">orchid</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="op">$</span><span class="ide">color</span> <span class="kwd">in</span> <span class="op">$</span><span class="ide">colors</span>:</div></div><div class="line"><div class="line-content">  .<span class="ide">bg</span><span class="op">-</span>{<span class="op">$</span><span class="ide">color</span>}:</div></div><div class="line"><div class="line-content">    <span class="ide">background</span>: <span class="op">$</span><span class="ide">color</span></div></div><div class="line"><div class="line-content">`</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">bro</span> <span class="op">=</span> <span class="ide">require</span>(<span class="str">&quot;bro.node&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">bro</span>.<span class="ide">compile</span>(<span class="ide">stylesheet</span>) <span class="com">// .bg-blue{background:blue}.bg-yellow{...</span></div></div>  </code></pre>
-<h3>Bro in Browser via WASM</h3>
+<p>Integrate the most powerful CSS pre-processor in your Node.js/Bun app. Bro is available as a native addon module</p>
+<pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="ide">let</span> <span class="ide">stylesheet</span> <span class="op">=</span> `</div></div><div class="line"><div class="line-content"><span class="op">$</span><span class="ide">colors</span> <span class="op">=</span> [<span class="ide">blue</span>, <span class="ide">yellow</span>, <span class="ide">orchid</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="op">$</span><span class="ide">color</span> <span class="kwd">in</span> <span class="op">$</span><span class="ide">colors</span>:</div></div><div class="line"><div class="line-content">  .<span class="ide">bg</span><span class="op">-</span>{<span class="op">$</span><span class="ide">color</span>}</div></div><div class="line"><div class="line-content">    <span class="ide">background</span>: <span class="op">$</span><span class="ide">color</span></div></div><div class="line"><div class="line-content">`</div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">bro</span> <span class="op">=</span> <span class="ide">require</span>(<span class="str">&quot;bro.node&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">bro</span>.<span class="ide">compile</span>(<span class="ide">stylesheet</span>) <span class="com">// .bg-blue{background:blue}.bg-yellow{...</span></div></div>  </code></pre>
+<h3>Bro in Browser via Wasm</h3>
+<p>Build complex real-time web-apps using Bro + WebAssembly</p>
 <pre>  <code class="language-html">&lt;style type=&quot;text/bro&quot; id=&quot;stylesheet&quot;&gt;
-var colors = [blue, yellow, orchid]
+$colors = [blue, yellow, orchid]
 for $color in $colors:
-  .bg-{$color}:
+  .bg-{$color}
     background: $color
 &lt;/style&gt;
 &lt;script src=&quot;/bro.min.js&quot;&gt;&lt;/script&gt;
@@ -166,39 +187,39 @@ for $color in $colors:
   background: yellow
 </code></pre>
 <pre>  <code>Benchmark 1: ./dart sass.snapshot test.sass:test.css --no-source-map --style=compressed
-  Time (abs ≡):         4.846 s               [User: 6.077 s, System: 0.208 s]
+  Time (abs ≡):         4.925 s               [User: 6.060 s, System: 0.263 s]
  
-Benchmark 2: sassc test.sass test.css --style=compressed
-  Time (abs ≡):         5.982 s               [User: 5.531 s, System: 0.448 s]
+Benchmark 2: bro test.sass test.css --min
+  Time (abs ≡):        441.7 ms               [User: 422.3 ms, System: 19.9 ms]
  
-Benchmark 3: bro test.sass test.css --min
-  Time (abs ≡):        658.9 ms               [User: 543.7 ms, System: 112.8 ms]
+Benchmark 3: sassc test.sass test.css --style=compressed
+  Time (abs ≡):         5.757 s               [User: 5.346 s, System: 0.400 s]
  
-Benchmark 4: node bro.js
-  Time (abs ≡):        942.3 ms               [User: 835.2 ms, System: 107.9 ms]
+Benchmark 4: bun bro.js
+  Time (abs ≡):        679.0 ms               [User: 616.0 ms, System: 24.0 ms]
  
-Benchmark 5: bun bro.js
-  Time (abs ≡):        969.6 ms               [User: 775.7 ms, System: 153.5 ms]
+Benchmark 5: node bro.js
+  Time (abs ≡):        653.7 ms               [User: 625.8 ms, System: 32.3 ms]
  
 Benchmark 6: node sass.js
-  Time (abs ≡):        12.566 s               [User: 19.499 s, System: 1.212 s]
+  Time (abs ≡):        12.783 s               [User: 19.640 s, System: 1.185 s]
  
 Benchmark 7: bun sass.js
-  Time (abs ≡):         9.892 s               [User: 18.939 s, System: 0.938 s]
+  Time (abs ≡):        10.485 s               [User: 20.422 s, System: 1.030 s]
  
 Summary
   &apos;bro test.sass test.css --min&apos; ran
-    1.43 times faster than &apos;node bro.js&apos;
-    1.47 times faster than &apos;bun bro.js&apos;
-    7.35 times faster than &apos;./dart sass.snapshot test.sass:test.css --no-source-map --style=compressed&apos;
-    9.08 times faster than &apos;sassc test.sass test.css --style=compressed&apos;
-   15.01 times faster than &apos;bun sass.js&apos;
-   19.07 times faster than &apos;node sass.js&apos;
+    1.48 times faster than &apos;node bro.js&apos;
+    1.54 times faster than &apos;bun bro.js&apos;
+   11.15 times faster than &apos;./dart sass.snapshot test.sass:test.css --no-source-map --style=compressed&apos;
+   13.03 times faster than &apos;sassc test.sass test.css --style=compressed&apos;
+   23.74 times faster than &apos;bun sass.js&apos;
+   28.94 times faster than &apos;node sass.js&apos;
 </code></pre>
 <p><a href="https://github.com/openpeeps/bro/wiki/Benchmarks">Check Benchmarks page</a> for more numbers</p>
 
-<p>Benchmarks made with <a href="https://github.com/sharkdp/hyperfine">hyperfine</a> on<br />
-<strong>Ubuntu 22.04 LTS</strong> / Ryzen 5 5600g 3.9GHz × 12 / RAM 32 GB 3200MHz / SSD M.2</p>
+Benchmarks made with [hyperfine](https://github.com/sharkdp/hyperfine) on<br />
+**Ubuntu 22.04 LTS** / Ryzen 5 5600g 3.9GHz × 12 / RAM 32 GB 3200MHz / SSD M.2
 <h2>TODO</h2>
 <ul>
 <li>[x] The Interpreter (Tokens, Lexer, Parser, AST, Compiler)</li>
@@ -234,7 +255,6 @@ Summary
 <li>[ ] Mixins</li>
 <li>[x] Conditionals (<code>if</code>, <code>elif</code>, <code>else</code>, and <code>case</code>)</li>
 <li>[x] For/Loop statements <code>for $x in $y</code></li>
-<li>[ ] Magically <code>@when</code> instead of <code>@media</code></li>
 <li>[ ] Typed CSS properties/values</li>
 <li>[x] Warnings unused <code>variables</code>, <code>functions</code></li>
 <li>[ ] CSS Variable Declaration using <code>var</code> instead of <code>--</code></li>
@@ -251,9 +271,9 @@ Summary
 <li>[x] Command Line Interface
 <ul>
 <li>[x] CLI <code>watch</code> for live changes</li>
-<li>[x] CLI <code>build</code> BASS code to css</li>
+<li>[x] CLI <code>build</code> BASS code to CSS</li>
 <li>[ ] CLI generate source <code>map</code></li>
-<li>[x] CLI generate <code>ast</code> nodes to binary AST</li>
+<li>[x] CLI <code>ast</code> command for generating binary AST</li>
 </ul>
 </li>
 <li>[x] Build
@@ -267,7 +287,7 @@ Summary
 <h4>0.2.x</h4>
 <ul>
 <li>[ ] Convert boring SASS to BASS</li>
-<li>[ ] CLI build code documentation with <code>doc</code></li>
+<li>[ ] CLI <code>doc</code> command for generating documentation website</li>
 </ul>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
@@ -348,7 +368,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-21T01:05:20Z
+        Builded at 2023-08-22T01:06:26Z
         </p>
       </div>
     </div>
