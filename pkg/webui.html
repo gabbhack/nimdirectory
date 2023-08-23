@@ -127,11 +127,10 @@
             
                 <document><h1>WebUI</h1>
 <blockquote>
-<p><em>Use any web browser as GUI, with Nim in the backend, and</em>
-<em>HTML/Nim/JS/TS/CSS in the frontend.</em></p>
+<p>WebUI is not a web-server solution or a framework, but it allows you to use any web browser as a GUI, with Nim in the backend and HTML5 in the frontend. All in a lightweight portable lib.</p>
 </blockquote>
 <p>  <img src="https://raw.githubusercontent.com/malisipi/vwebui/main/screenshot.png" style="max-width: 100%;" alt="Image" /></p>
-<p>Nim wrapper and bindings for <a href="https://github.com/alifcommunity/webui">WebUI</a>, a
+<p>Nim wrapper and bindings for <a href="https://github.com/webui-dev/webui">WebUI</a>, a
 fully independent and cross-platform web UI library.</p>
 <p>Instead of using a third-party library, WebUI instead uses a pre-installed
 browser (Edge, Firefox, Chrome, Chromium, or Safari). So, there&apos;s no need for any
@@ -166,12 +165,12 @@ to use any installed web browser as a user interface.</p>
 <h2>Documentation</h2>
 <p>Online documentation can be found here:</p>
 <ul>
-<li>  <a href="https://neroist.github.io/webui">https://neroist.github.io/webui</a></li>
-<li>  <a href="https://neroist.github.io/webui-docs/">https://neroist.github.io/webui-docs/</a></li>
+<li>  <a href="https://webui.me/docs/2.4.0/#/nim_api">https://webui.me/docs/2.4.0/#/nim_api</a></li>
+<li><a href="https://neroist.github.io/webui-docs/">https://neroist.github.io/webui-docs/</a> (same thing but made in nimib)</li>
 </ul>
 <p>There isn&apos;t much documentation as of right now, so I suggest to get started
 using some <a href="#examples">examples</a> or WebUI&apos;s own
-<a href="https://github.com/alifcommunity/webui/tree/main/examples">examples</a> or
+<a href="https://github.com/webui-dev/webui/tree/main/examples">examples</a> or
 <a href="https://webui.me/docs/">documentation</a>.</p>
 <p>Heres a very <a href="examples/minimal.nim">  <em>minimal</em></a> example of using the wrapper:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">webui</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">window</span> <span class="op">=</span> <span class="ide">newWindow</span>() <span class="com"># Create a new Window</span></div></div><div class="line"><div class="line-content"><span class="ide">window</span><span class="op">.</span><span class="ide">show</span>(<span class="str">&quot;&lt;html&gt;Hello&lt;/html&gt;&quot;</span>) <span class="com"># Show the window with html content</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wait</span>() <span class="com"># Wait until the window gets closed</span></div></div>  </code></pre>
@@ -201,166 +200,77 @@ only works for static compilation.</p>
 <table>
 <thead>
 <tr>
-<th>OS</th>
 <th>Browser</th>
-<th>Status</th>
+<th>Windows</th>
+<th>macOS</th>
+<th>Linux</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Windows</td>
 <td>Mozilla Firefox</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Google Chrome</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Microsoft Edge</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Chromium</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Yandex</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Brave</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Vivaldi</td>
 <td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
 </tr>
 <tr>
-<td>Windows</td>
 <td>Epic</td>
 <td>✔️</td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>Opera</td>
-<td>  <em>coming soon</em></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Mozilla Firefox</td>
 <td>✔️</td>
+<td>  <em>not available</em></td>
 </tr>
 <tr>
-<td>Linux</td>
-<td>Google Chrome</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Microsoft Edge</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Chromium</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Yandex</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Brave</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Vivaldi</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Epic</td>
-<td>  <em>Does Not Exist</em></td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>Opera</td>
-<td>  <em>coming soon</em></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Mozilla Firefox</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Google Chrome</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Microsoft Edge</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Chromium</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Yandex</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Brave</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Vivaldi</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Epic</td>
-<td>✔️</td>
-</tr>
-<tr>
-<td>macOS</td>
 <td>Apple Safari</td>
+<td>  <em>not available</em></td>
 <td>  <em>coming soon</em></td>
+<td>  <em>not available</em></td>
 </tr>
 <tr>
-<td>macOS</td>
 <td>Opera</td>
+<td>  <em>coming soon</em></td>
+<td>  <em>coming soon</em></td>
 <td>  <em>coming soon</em></td>
 </tr></tbody></table>
 <h2>License</h2>
 <p>MIT License. See <a href="LICENSE">LICENSE</a></p>
 <p>Original WebUI library is licensed under MIT. See
-<a href="https://github.com/alifcommunity/webui/blob/main/LICENSE">LICENSE</a>.</p>
+<a href="https://github.com/webui-dev/webui/blob/main/LICENSE">LICENSE</a>.</p>
 </document>
             
         </div>
@@ -431,7 +341,7 @@ only works for static compilation.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-22T01:06:26Z
+        Builded at 2023-08-23T01:05:10Z
         </p>
       </div>
     </div>

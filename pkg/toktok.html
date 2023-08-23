@@ -116,13 +116,17 @@
 <ul>
 <li>✨ Powered by Nim&apos;s Macros</li>
 <li>🪄 Based on <code>std/lexbase</code> / Zero Regular Expression</li>
-<li>Static generation using <strong>TokenKind</strong> <code>enum</code>, <code>lexbase</code></li>
-<li>Dynamic generation using <strong>TokenKind</strong> <code>tables</code>, <code>lexbase</code></li>
+<li>Compile-time generation using macro-based <strong>TokenKind</strong> <code>enum</code>, <code>lexbase</code></li>
+<li>Runtime generation using <strong>TokenKind</strong> <code>tables</code>, <code>lexbase</code></li>
 <li>Open Source | <code>MIT</code></li>
 </ul>
 <blockquote>
-<p><strong>Note</strong> Toktok is a generic Lexer, based on standard Nim libraries <code>streams</code>, <code>lexbase</code> and <code>macros</code>. It is meant to be used by higher level parsers for writing any kind of tools or programs.
-<strong>Note</strong> Compile with <code>-d:toktokdebug</code> to inspect the generated code.</p>
+<p>[!NOTE]
+This is a generic Lexer, based on std/ <code>streams</code>, <code>lexbase</code> and <code>macros</code>. It is meant to be used by higher level parsers for writing any kind of tools or programs.</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]
+Compile with <code>-d:toktokdebug</code> to inspect the generated code.</p>
 </blockquote>
 <h2>Quick Example</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Register your tokens</span></div></div><div class="line"><div class="line-content"><span class="ide">registerTokens</span> <span class="ide">defaultSettings</span>:</div></div><div class="line"><div class="line-content">  `<span class="kwd">const</span>` <span class="op">=</span> <span class="str">&quot;const&quot;</span></div></div><div class="line"><div class="line-content">  `<span class="ide">echo</span>` <span class="op">=</span> <span class="str">&quot;hello&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">asgn</span> <span class="op">=</span> '=':   <span class="com"># `=` is tkAsgn</span></div></div><div class="line"><div class="line-content">    <span class="ide">eq</span> <span class="op">=</span> '='    <span class="com"># `==` is tkEQ</span></div></div><div class="line"><div class="line-content">  <span class="ide">excl</span> <span class="op">=</span> '!':</div></div><div class="line"><div class="line-content">    <span class="ide">ne</span> <span class="op">=</span> '='</div></div><div class="line"><div class="line-content">  <span class="ide">at</span> <span class="op">=</span> '@':</div></div><div class="line"><div class="line-content">    <span class="kwd">import</span> <span class="op">=</span> <span class="ide">tokenizer</span>(<span class="ide">handleImport</span>, <span class="str">&quot;import&quot;</span>) </div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Tokenizing...</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">tok</span> <span class="op">=</span> <span class="ide">lexer</span><span class="op">.</span><span class="ide">init</span>(<span class="ide">sample</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">prev</span>: <span class="ide">TokenTuple</span></div></div><div class="line"><div class="line-content">  <span class="ide">curr</span>: <span class="ide">TokenTuple</span> <span class="op">=</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">getToken</span></div></div><div class="line"><div class="line-content">  <span class="ide">next</span>: <span class="ide">TokenTuple</span> <span class="op">=</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">getToken</span> </div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">walk</span>(<span class="ide">tok</span>: <span class="kwd">var</span> <span class="ide">Lexer</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">prev</span> <span class="op">=</span> <span class="ide">curr</span></div></div><div class="line"><div class="line-content">  <span class="ide">curr</span> <span class="op">=</span> <span class="ide">next</span></div></div><div class="line"><div class="line-content">  <span class="ide">next</span> <span class="op">=</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">getToken</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="ide">likely</span>(<span class="ide">curr</span><span class="op">.</span><span class="ide">kind</span> <span class="op">!=</span> <span class="ide">tkEOF</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">tok</span><span class="op">.</span><span class="ide">hasError</span>: <span class="kwd">break</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">curr</span> <span class="com"># use `getToken` consumer to get token by token</span></div></div><div class="line"><div class="line-content">  <span class="ide">walk</span> <span class="ide">tok</span></div></div>  </code></pre>
@@ -208,7 +212,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-22T01:06:26Z
+        Builded at 2023-08-23T01:05:10Z
         </p>
       </div>
     </div>
