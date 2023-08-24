@@ -81,30 +81,28 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>  <img src="https://github.com/olliNiinivaara/GuildenStern/workflows/Tests/badge.svg" style="max-width: 100%;" alt="Tests" /></p>
-<h1>GuildenStern</h1>
+                <document><h1>GuildenStern</h1>
 <p>Modular multithreading Linux HTTP + WebSocket server</p>
 <h2>Example</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># nim c -r --gc:arc --d:release --threads:on --d:threadsafe example.nim</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cgi</span>, <span class="ide">strtabs</span>, <span class="ide">httpcore</span>, <span class="ide">guildenstern</span><span class="op">/</span>[<span class="ide">ctxheader</span>, <span class="ide">ctxbody</span>]</div></div><div class="line"><div class="line-content">     </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleGet</span>(<span class="ide">ctx</span>: <span class="ide">HttpCtx</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">html</span> <span class="op">=</span> """
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># nim r --d:release --d:threadsafe thisexample</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cgi</span>, <span class="ide">guildenstern</span><span class="op">/</span>[<span class="ide">dispatcher</span>, <span class="ide">httpserver</span>]</div></div><div class="line"><div class="line-content">     </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleGet</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">html</span> <span class="op">=</span> """
     <!doctype html><title>GuildenStern Example</title><body>
-    <form action="http://localhost:5051" method="post">
-    <input name="say" id="say" value="Hi"><button>Send"""</div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span><span class="op">.</span><span class="ide">reply</span>(<span class="ide">html</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handlePost</span>(<span class="ide">ctx</span>: <span class="ide">HttpCtx</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>: <span class="ide">echo</span> <span class="ide">readData</span>(<span class="ide">ctx</span><span class="op">.</span><span class="ide">getBody</span>())<span class="op">.</span><span class="ide">getOrDefault</span>(<span class="str">&quot;say&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">except</span>: (<span class="ide">ctx</span><span class="op">.</span><span class="ide">reply</span>(<span class="ide">Http400</span>) ; <span class="kwd">return</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">ctx</span><span class="op">.</span><span class="ide">reply</span>(<span class="ide">HttpCode</span>(<span class="num">303</span>), [<span class="str">&quot;location: http://localhost:5050&quot;</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">new</span> <span class="ide">GuildenServer</span></div></div><div class="line"><div class="line-content"><span class="ide">server</span><span class="op">.</span><span class="ide">initHeaderCtx</span>(<span class="ide">handleGet</span>, <span class="num">5050</span>, <span class="ide">false</span>)</div></div><div class="line"><div class="line-content"><span class="ide">server</span><span class="op">.</span><span class="ide">initBodyCtx</span>(<span class="ide">handlePost</span>, <span class="num">5051</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;GuildenStern HTTP server serving at 5050&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">loglevel</span> <span class="op">=</span> <span class="ide">DEBUG</span>)</div></div>  </code></pre>
+    <form action="http://localhost:5051" method="post" accept-charset="utf-8">
+    <input name="say" id="say" value="Hi"><button>Send"""</div></div><div class="line"><div class="line-content">  <span class="ide">reply</span>(<span class="ide">html</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handlePost</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>: <span class="ide">echo</span> <span class="ide">readData</span>(<span class="ide">getBody</span>())<span class="op">.</span><span class="ide">getOrDefault</span>(<span class="str">&quot;say&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">except</span>: (<span class="ide">reply</span>(<span class="ide">Http400</span>) ; <span class="kwd">return</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">reply</span>(<span class="ide">Http303</span>, [<span class="str">&quot;location: http://localhost:5050&quot;</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">getserver</span> <span class="op">=</span> <span class="ide">newHttpServer</span>(<span class="ide">handleGet</span>)</div></div><div class="line"><div class="line-content"><span class="ide">getserver</span><span class="op">.</span><span class="ide">start</span>(<span class="num">5050</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">postserver</span> <span class="op">=</span> <span class="ide">newHttpServer</span>(<span class="ide">handlePost</span>)</div></div><div class="line"><div class="line-content"><span class="ide">postserver</span><span class="op">.</span><span class="ide">start</span>(<span class="num">5051</span>)</div></div><div class="line"><div class="line-content"><span class="ide">joinThreads</span>(<span class="ide">getserver</span><span class="op">.</span><span class="ide">thread</span>, <span class="ide">postserver</span><span class="op">.</span><span class="ide">thread</span>)</div></div>  </code></pre>
 <h2>Documentation</h2>
-<p>  <a href="http://olliNiinivaara.github.io/GuildenStern/">User Guide</a></p>
-<p>  <a href="https://github.com/olliNiinivaara/GuildenStern/blob/master/docs/customhandler.nim">How to implement a custom handler</a></p>
+<p>https://olliniinivaara.github.io/GuildenStern/index.html</p>
+<p>  <a href="https://github.com/olliNiinivaara/GuildenStern/blob/master/docs/migration.md">migration guide</a></p>
 <h2>Installation</h2>
-<p>  <code>nimble install guildenstern</code></p>
-<h2>Features</h2>
+<p>atlas use GuildenStern</p>
+<h2>Release notes, 6.0.0 (2023-08-23)</h2>
 <ul>
-<li>Modular architecture means simpler codebase, easy customization and more opportunities for performance optimization</li>
-<li>Every request is served in dedicated thread - scales vertically and requests cannot stall each other</li>
-<li>Can listen to multiple ports with different handlers</li>
-</ul>
-<h2>Release notes, 5.1.0 (2022-02-06)</h2>
-<ul>
-<li>new <em>multiSend</em> proc for WebSockets: can be called from multiple threads in parallel</li>
-<li>better default logging</li>
-<li>other fixes</li>
+<li>major rewrite, breaking changes here and there, consult migration guide and code examples.</li>
+<li>dispatcher(s) can now be replaced just by changing import(s)</li>
+<li>every TCP port is now served by different server, allowing port-by-port configuration of resource usage</li>
+<li>non-blocking I/O with cooperative multithreading now used everywhere</li>
+<li>new suspend procedure for allowing other threads to run also when waiting for I/O in user code</li>
+<li>overall compatibility with Nim version 2.0</li>
+<li>single-threaded mode is no more</li>
+<li>TimerCtx is no more</li>
 </ul>
 </document>
             
@@ -174,7 +172,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-23T01:05:10Z
+        Builded at 2023-08-24T01:05:19Z
         </p>
       </div>
     </div>

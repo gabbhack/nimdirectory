@@ -85,10 +85,19 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>Nim wrapper for libdeflate. Only <code>--mm:arc</code> and <code>--mm:orc</code> are supported.
+                <document><h1>About</h1>
+<p>Nim wrapper for libdeflate&apos;s gzip functionality.
+Since this library relies on destructors only <code>--mm:arc</code> and <code>--mm:orc</code> are supported.
 No external dependencies are needed because libdeflate is embedded.</p>
 <p>The main difference from Zippy is that libdeflate supports
 gzips with multiple members (ie. multiple gzips concatenated together).</p>
+<h1>Usage</h1>
+<p>Examples are in <code>tests/test.nim</code>. If you want to iterate through all members
+use iterator <code>decompressGzipMembers</code>.</p>
+<h1>Updating libdeflate</h1>
+<p>Libdeflate can be updated by running</p>
+<pre>  <code class="language-shell">git subtree pull --prefix src/libdeflate_gzip/private/libdeflate https://github.com/ebiggers/libdeflate.git master --squash
+</code></pre>
 </document>
             
         </div>
@@ -157,7 +166,7 @@ gzips with multiple members (ie. multiple gzips concatenated together).</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-23T01:05:10Z
+        Builded at 2023-08-24T01:05:19Z
         </p>
       </div>
     </div>
