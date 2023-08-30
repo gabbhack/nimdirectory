@@ -31309,6 +31309,20 @@ const packages = [
     "web": "https://github.com/metagn/knot"
   },
   {
+    "name": "spread",
+    "url": "https://github.com/metagn/spread",
+    "method": "git",
+    "tags": [
+      "macro",
+      "sugar",
+      "syntax",
+      "argument"
+    ],
+    "description": "macro for spreading blocks into call parameters/collections ",
+    "license": "MIT",
+    "web": "https://github.com/metagn/spread"
+  },
+  {
     "name": "shopifyextractor",
     "url": "https://github.com/thisago/shopifyextractor",
     "method": "git",
@@ -31321,6 +31335,20 @@ const packages = [
     "description": "Shopify ecommerces data in a instant",
     "license": "GPL-3.0-only",
     "web": "https://github.com/thisago/shopifyextractor"
+  },
+  {
+    "name": "saucenao-nim",
+    "url": "https://github.com/filvyb/saucenao-nim",
+    "method": "git",
+    "tags": [
+      "async",
+      "api",
+      "wrapper",
+      "SauceNAO"
+    ],
+    "description": "Asynchronous Nim wrapper for SauceNAO's API",
+    "license": "LGPL-3.0-or-later",
+    "web": "https://github.com/filvyb/saucenao-nim"
   }
 ]
 const options = {

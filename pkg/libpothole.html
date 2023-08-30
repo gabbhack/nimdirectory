@@ -85,39 +85,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>libpothole</h1>
-<p>Essential libraries for the Pothole microblogging server and related projects.</p>
-<p><em>Note:</em> Pothole and thus libpothole is very much a work-in-progress. Lots of implementation details are being figured out just now and are thus likely to change over time. In other words, this is pre-alpha or even <em>research</em> stage.</p>
-<p><em>Note:</em> This is the <code>main</code> branch which should hopefully be stable enough for all of your server projects. The <code>staging</code> branch contains all the latest features and a slight risk at running unclean, insecure code. Pick your poison! (or choose a specific feature branch to test a feature out if you are a developer)</p>
-<h2>What is Pothole?</h2>
-<p>Pothole is a microblogging server written in Nim, it&apos;s designed to be simple &amp; fast. It has unique features such as allowing user-profiles to be customized. Pothole is far more reminiscent of Tumblr in this sense since it allows you to fully customize your profile and unleash your creativity in ways that other microblogging websites do not allow for.</p>
-<p>Pothole federates to other servers using the ActivityPub protocol which means you can communicate to users on Mastodon, Akkoma, Misskey or whatever website that implements ActivityPub. Pothole is also compatible with Mastodon&apos;s API interface, so your clients, frontends and bots should work with little to no changes.</p>
-<h2>What is <em>this</em> then?</h2>
-<p>This is libpothole, it basically contains all the nifty logic for storing, processing and handling data such as Users, Posts and generic Activities. The main pothole server relies on this as a dependency since this library is the brains of the operation and without it Pothole would simply not work.</p>
-<p>Think of it like a glass of water. Sure, you can drink the water without the glass but you would just make a mess unless you create your own cup (In this analogy, the water is the library and the cup is the server program)</p>
-<h2>How do I use this library?</h2>
-<p>Library documentation is an on-going effort that is yet to be complete. But you can simply browse the source code and read what each function does. We try to keep the code as readable as possible.</p>
-<p>The <code>README.md</code> file inside of the <code>src/</code> folder tells you what each module is for.</p>
-<p>You can generate documentation by running <code>nimble docs</code>, this will generate HTML documentation in a separate directory named <code>htmldocs</code></p>
-<p>When it comes to importing a module into your app, you should have this library installed and you should use these snippets:</p>
-<pre>  <code>import libpothole/MODULE # Replace module with your module obviously...
-import libpothole/conf # For configuration file parsing etc.
-import libpothole/[conf, user, post] # Imports multiple modules at the same time.
-</code></pre>
-<p><strong>Warning when updating to newer versions:</strong> Don&apos;t just use newer versions of libpothole! Always double-check the release notes of any libpothole release for breaking changes such as database migrations, and make sure to inform your users of the same!</p>
-<h2>Why is Pothole and libpothole separate?</h2>
-<p>Well it&apos;s primarily to help foster a unique ecosystem of servers. If you want to build your own ActivityPub server then you can use this as a base and code anything you want in addition! And it&apos;s also done to separate <code>potholectl</code> from the main server repository since those programs are very different from each other and should not be in the same place at all.</p>
-<p>We don&apos;t want this useful piece of software to be locked inside of a single monolithic server application, we want to allow developers to use this library if they want to. Oh and it also means we can easily test this out for any bugs, security issues and so on.</p>
-<p>I know it seems a bit confusing but you, as a user, don&apos;t really have to worry about this change/separation. You can still call the entirety of this and the server program &quot;Pothole&quot;, it doesn&apos;t really matter and people will in 99% of cases know what you are talking about.</p>
-<p>In short, the decision to separate libpothole from pothole&apos;s main server repository means we can focus on re-writing libpothole to have good clean code, instead of returning to the old mess containing un-factorable code and circular dependencies.</p>
-<h2>What is the release cycle?</h2>
-<p>Well, this library follows the same versioning and release cycle as the regular Pothole server program. This is to reduce confusion. However, new versions are released as quickly as possible if they address a security issue or a critical bug.</p>
-<p>Please read our development workflow article for more information (The article is available at <a href="https://xmoo.vern.cc/pothole/contrib/workflow/">this location</a>) (Ignore the parts about mailing lists, tilambda does not <em>yet</em> have proper Email infrastructure in place)</p>
-<h2>Copyright</h2>
-<p>Copyright © Leo Gavilieau 2022-2023</p>
-<p>All code is licensed under the GNU General Public License version 3 or later. (File: <code>LICENSES/GPL.txt</code>)
-All generated documentation is licensed under the Creative Common Attribution-ShareAlike 4.0 International license (File: <code>LICENSES/CC.txt</code>)</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -185,7 +153,7 @@ All generated documentation is licensed under the Creative Common Attribution-Sh
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-29T01:07:16Z
+        Builded at 2023-08-30T01:06:56Z
         </p>
       </div>
     </div>
