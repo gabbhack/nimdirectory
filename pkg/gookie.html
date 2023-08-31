@@ -94,33 +94,31 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><div align="center">
-<h1>Gookie</h1>
-<h4>Google Cookies. In your hands.</h4>
+<h1>ieCook</h1>
+<h4>iecook<small>_iecook_</small> - In other words: Cook</h4>
 <p><strong><a href="#about">About</a> - <a href="#why">Why</a> - <a href="#how">How</a> - <a href="#usage">Usage</a></strong> - <a href="#license">License</a></p>
 <blockquote>
 <p><strong>Warning</strong>
-This is a dangerous way to get Google Cookies, any program listening in port
-5566 will receive the Google cookies sent by extension too.<br />
-<strong>Don&apos;t forget to disable the extension after use!</strong></p>
+This is a dangerous way to get cookies, any program listening in port 5566 can
+request the cookies sent by extension too.<br />
+<strong>So don&apos;t forget to disable the extension after use!</strong></p>
 </blockquote>
 </div>
 <h2>About</h2>
-<p>Take your Google session cookies with a line of Nim code!</p>
+<p>Have you ever needed to get <code>httpOnly</code> cookies to use in your application?
+No? Doesn&apos;t matter, this library gives you this power!</p>
+<p>It gets all cookies from all Firefox containers too! :D</p>
 <h2>Why?</h2>
-<p>One of required session cookies for authentication, the <code>__Secure-1PSIDTS</code> expires in ~20 minutes. This makes impossible to automate things like using <a href="https://github.com/thisago/bard">Google Bard in nim</a>.</p>
-<p>With this library, any time you want you can get the session cookies!</p>
+<p>This is needed to interface with authentication in some websites.</p>
+<p>Currently, you can see this library used in <a href="https://github.com/thisago/bard">thisago/bard</a></p>
 <h2>How?</h2>
-<p>When you run:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">getGoogleCookies</span>()</div></div>  </code></pre>
-<p>it will start an HTTP server (using Jester) that will wait the extension send
-the cookies. The extension sends it every second.</p>
-<p>When the server receives the cookies, it will self close and return the cookie
-for you.</p>
-<h2>Usage</h2>
-<p>As said before, you can get the cookies with one call:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">cookies</span> <span class="op">=</span> <span class="ide">getGoogleCookies</span>()</div></div>  </code></pre>
-<p>But first you need to install the client extension:</p>
-<p>  <strong>In Firefox</strong></p>
+<p>It will start an HTTP server that waits the extension requests the website which
+you want the cookies and send to server the wanted cookies.</p>
+<p>When the server receives the cookies, it closes itself and return the cookie for
+you!</p>
+<h2>Setup</h2>
+<p>Tou need to install the client extension:
+<strong>In Firefox</strong></p>
 <blockquote>
 <p><strong>Note</strong>
 Firefox automatically deletes on close. <strong>More secure</strong></p>
@@ -137,11 +135,14 @@ Firefox automatically deletes on close. <strong>More secure</strong></p>
 <li>Click &quot;Load unpacked&quot;</li>
 <li>Select <a href="client/extension">client/extension</a> dir</li>
 </ol>
-<p>Then you need to be logged in into your Google account.</p>
 <blockquote>
 <p><strong>Note</strong>
 Don&apos;t forget to keep your browser open! :)</p>
 </blockquote>
+<h2>Usage</h2>
+<p>The usage is pretty simple</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">cooked</span> <span class="op">=</span> <span class="ide">ieCookDomain</span> <span class="str">&quot;google.com&quot;</span></div></div>  </code></pre>
+<p>It returns to you a <code>seq[GoogleCookies]</code></p>
 <h2>License</h2>
 <p>This library is FOSS, licensed over MIT license!</p>
 </document>
@@ -212,7 +213,7 @@ Don&apos;t forget to keep your browser open! :)</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-30T01:06:56Z
+        Builded at 2023-08-31T01:07:07Z
         </p>
       </div>
     </div>

@@ -87,15 +87,19 @@
             
                 <document><h1>nim-registry</h1>
 <p>Deal with Windows Registry from Nim.</p>
-<p>Online docs here: http://miere.ru/docs/registry/</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">winregistry</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span></div></div><div class="line"><div class="line-content">  <span class="ide">faceName</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="ide">fontSize</span>: <span class="ide">int32</span></div></div><div class="line"><div class="line-content">  <span class="ide">fontWeight</span>: <span class="ide">int32</span></div></div><div class="line"><div class="line-content">  <span class="ide">h</span>: <span class="ide">RegHandle</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">h</span> <span class="op">=</span> <span class="ide">open</span>(<span class="str">&quot;HKEY_CURRENT_USER</span>\\<span class="str">Console</span>\\<span class="str">Git Bash&quot;</span>, <span class="ide">samRead</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">faceName</span> <span class="op">=</span> <span class="ide">h</span><span class="op">.</span><span class="ide">readString</span>(<span class="str">&quot;FaceName&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">fontSize</span> <span class="op">=</span> <span class="ide">h</span><span class="op">.</span><span class="ide">readInt32</span>(<span class="str">&quot;FontSize&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">fontWeight</span> <span class="op">=</span> <span class="ide">h</span><span class="op">.</span><span class="ide">readInt32</span>(<span class="str">&quot;FontWeight&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">except</span> <span class="ide">OSError</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;err: &quot;</span>, <span class="ide">getCurrentExceptionMsg</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">finally</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">close</span>(<span class="ide">h</span>)</div></div>  </code></pre>
 <h2>Tests</h2>
 <p>Run in command line:</p>
 <pre>  <code>$ nimble test
-$ nimble testansi
 </code></pre>
 <p>You should see a &quot;tests passed&quot; message. If you get <code>Access is denied</code> error, try running with administrator rights.</p>
 <h2>Changelog</h2>
+<h3>2.0.0</h3>
+<ul>
+<li>Added support for Nim 2.0.0</li>
+<li>Removed support for <code>useWinUnicode</code> switch</li>
+<li><code>WinString</code> type was removed; use <code>WideCString</code> instead</li>
+</ul>
 <h3>1.0.0</h3>
 <ul>
 <li><code>RegValueKind</code> and <code>RegKeyRights</code> are distinct <code>uint32</code>&apos;s now (fixed warning about enums with holes).</li>
@@ -187,7 +191,7 @@ $ nimble testansi
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-30T01:06:56Z
+        Builded at 2023-08-31T01:07:07Z
         </p>
       </div>
     </div>
