@@ -103,62 +103,12 @@
 <li><strong>--output-file=&lt;file&gt;</strong> causes HastyScribe to write output to a local file (Use <a href="class:opt">--output-file=-</a> to output to standard output).</li>
 <li><strong>--watermark=&lt;file&gt;</strong> causes HastyScribe to embed and display an image as a watermark throughout the document.</li>
 <li><strong>--fragment</strong> causes HastyScribe to output just an HTML fragment instead of a full document, without embedding any image, font or stylesheet.</li>
-<li><strong>--dump=all|styles|fonts</strong> causes HastyScribe to dump all resources/stylesheets/fonts to the current directory.</li>
+<li><strong>--noembed</strong> causes styles and images not to be embedded.</li>
 <li><strong>--help</strong> causes HastyScribe to display the usage information and quit.</li>
 </ul>
 </li>
 </ul>
-<h2>FAQs</h2>
-<h3>Why is <em>HastyScribe</em> different from other markdown converters?</h3>
-<p>Because:</p>
-<ul>
-<li>It is a cross-platform, self-contained executable file.</li>
-<li>It can generate standalone HTML files.</li>
-<li>It comes with its own stylesheet, which is automatically embedded into every HTML document, along with all the needed web fonts.</li>
-<li>It is built on top of <a href="http://www.pell.portland.or.us/~orc/Code/discount/">Discount</a>, which means that besides standard markdown you also get:
-<ul>
-<li>strikethrough</li>
-<li>automatic Table of Contents generation</li>
-<li><a href="http://daringfireball.net/projects/smartypants/">SmartyPants</a> substitutions</li>
-<li>paragraph centering</li>
-<li>image sizes</li>
-<li>definition lists</li>
-<li>alphabetic lists</li>
-<li>pseudo-protocols to generate <code>span</code> tags with arbitrary CSS classes, <code>abbr</code> tags, and anchors</li>
-<li>class blocks</li>
-<li>tables</li>
-<li>fenced code blocks</li>
-<li><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>-style document headers</li>
-</ul>
-</li>
-<li>It automatically embeds any referenced image as data URI.</li>
-<li>It has supports for text snippets, custom fields, and substitution macros.</li>
-</ul>
-<h3>What can I use it for?</h3>
-<p><em>HastyScribe</em> is best suited to produce self-contained documents such as essays, meeting notes, project status documents, and articles.</p>
-<h3>What language is <em>HastyScribe</em> implemented in?</h3>
-<p>HastyScribe is implemented in <a href="http://nim-lang.org/">Nim</a>, a very expressive language that compiles to C and is able to generate small, standalone and self-contained executable files.</p>
-<h3>How do I build <em>HastyScribe</em> from source?</h3>
-<ol>
-<li>Download and install <a href="http://nim-lang.org/">Nim</a>.</li>
-<li>Download and build <a href="https://github.com/h3rald/nifty">Nifty</a>, and put it somewhere in your $PATH.</li>
-<li>Clone the HastyScribe <a href="https://github.com/h3rald/hastyscribe">repository</a>.</li>
-<li>Navigate to the HastyScribe repository local folder.</li>
-<li>Run <strong>nifty install</strong> to download HastyScribe&apos;s dependencies.</li>
-</ol>
-<ul>
-<li>Note: Some users may need to install libmarkdown2-dev</li>
-</ul>
-<ol start="6">
-<li>Run <strong>nifty build discount</strong> to build the Discount markdown library.</li>
-<li>Run <strong>nim c -d:release hastyscribe.nim</strong>.</li>
-</ol>
-<h3>Quick Installation</h3>
-<pre>  <code class="language-sh">nimble install nifty
-&amp;&amp; sudo apt install libmarkdown2-dev
-&amp;&amp; nimble install hastyscribe
-</code></pre>
-<p>If you are using another operating system without apt you can install libmarkdown2 <a href="https://launchpad.net/debian/+source/discount">here</a></p>
+<p>→ For more information, see the <a href="https://h3rald.com/hastyscribe/HastyScribe_UserGuide.htm">HastyScribe User Guide</a></p>
 </document>
             
         </div>
@@ -227,7 +177,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-08-31T01:07:07Z
+        Builded at 2023-09-01T01:11:25Z
         </p>
       </div>
     </div>
