@@ -84,7 +84,7 @@
                 <document><h1>GuildenStern</h1>
 <p>Modular multithreading Linux HTTP + WebSocket server</p>
 <h2>Example</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># nim r --d:release --d:threadsafe thisexample</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cgi</span>, <span class="ide">guildenstern</span><span class="op">/</span>[<span class="ide">dispatcher</span>, <span class="ide">httpserver</span>]</div></div><div class="line"><div class="line-content">     </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleGet</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">html</span> <span class="op">=</span> """
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># nim r --d:release --d:threadsafe thisexample</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">cgi</span>, <span class="ide">strtabs</span>, <span class="ide">guildenstern</span><span class="op">/</span>[<span class="ide">dispatcher</span>, <span class="ide">httpserver</span>]</div></div><div class="line"><div class="line-content">     </div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handleGet</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">html</span> <span class="op">=</span> """
     <!doctype html><title>GuildenStern Example</title><body>
     <form action="http://localhost:5051" method="post" accept-charset="utf-8">
     <input name="say" id="say" value="Hi"><button>Send"""</div></div><div class="line"><div class="line-content">  <span class="ide">reply</span>(<span class="ide">html</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handlePost</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>: <span class="ide">echo</span> <span class="ide">readData</span>(<span class="ide">getBody</span>())<span class="op">.</span><span class="ide">getOrDefault</span>(<span class="str">&quot;say&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">except</span>: (<span class="ide">reply</span>(<span class="ide">Http400</span>) ; <span class="kwd">return</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">reply</span>(<span class="ide">Http303</span>, [<span class="str">&quot;location: http://localhost:5050&quot;</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">getserver</span> <span class="op">=</span> <span class="ide">newHttpServer</span>(<span class="ide">handleGet</span>)</div></div><div class="line"><div class="line-content"><span class="ide">getserver</span><span class="op">.</span><span class="ide">start</span>(<span class="num">5050</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">postserver</span> <span class="op">=</span> <span class="ide">newHttpServer</span>(<span class="ide">handlePost</span>)</div></div><div class="line"><div class="line-content"><span class="ide">postserver</span><span class="op">.</span><span class="ide">start</span>(<span class="num">5051</span>)</div></div><div class="line"><div class="line-content"><span class="ide">joinThreads</span>(<span class="ide">getserver</span><span class="op">.</span><span class="ide">thread</span>, <span class="ide">postserver</span><span class="op">.</span><span class="ide">thread</span>)</div></div>  </code></pre>
@@ -93,16 +93,13 @@
 <p>  <a href="https://github.com/olliNiinivaara/GuildenStern/blob/master/docs/migration.md">migration guide</a></p>
 <h2>Installation</h2>
 <p>atlas use GuildenStern</p>
-<h2>Release notes, 6.0.0 (2023-08-23)</h2>
+<h2>Release notes, 6.1.0 (2023-09-02)</h2>
 <ul>
-<li>major rewrite, breaking changes here and there, consult migration guide and code examples.</li>
-<li>dispatcher(s) can now be replaced just by changing import(s)</li>
-<li>every TCP port is now served by different server, allowing port-by-port configuration of resource usage</li>
-<li>non-blocking I/O with cooperative multithreading now used everywhere</li>
-<li>new suspend procedure for allowing other threads to run also when waiting for I/O in user code</li>
-<li>overall compatibility with Nim version 2.0</li>
-<li>single-threaded mode is no more</li>
-<li>TimerCtx is no more</li>
+<li>fixed nimble path</li>
+<li>fixed README example</li>
+<li>new receiveInChucks iterator in streamingserver for receiving big data, for example POST data that does not fit in main memory</li>
+<li>new startDownload-continueDownload-finishDownload combo in streamingserver for sending big and/or dynamic responses as <em>Transfer-Encoding: chunked</em></li>
+<li>new and upgraded streamingserver examples as required</li>
 </ul>
 </document>
             
@@ -172,7 +169,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-01T01:11:25Z
+        Builded at 2023-09-05T01:06:57Z
         </p>
       </div>
     </div>

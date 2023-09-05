@@ -91,18 +91,19 @@
             
                 <document><h1>ttop</h1>
 <p>System monitoring tool with TUI, historical data service and triggers</p>
-<p>  <img src="https://user-images.githubusercontent.com/4949069/214555373-d9a8288a-558b-488c-84fa-d18afb5bcbf5.png" style="max-width: 100%;" alt="image" /></p>
+<p>  <img src="https://github.com/inv2004/ttop/assets/4949069/29aa89bc-a34d-4ba4-854f-2d1b3dd4dcf4.png" style="max-width: 100%;" alt="image" /></p>
 <ul>
 <li>[x] Saving historical snapshots via systemd.timer or crontab</li>
 <li>[x] Scroll via historical data</li>
 <li>[x] External triggers (for notifications or other needs)</li>
+<li>[x] Docker-related info</li>
 <li>[x] Ascii graph of historical stats (via https://github.com/Yardanico/asciigraph)</li>
 <li>[x] TUI with critical values highlights</li>
+<li>[x] Search filters: <code>@u</code> - user u, <code>#d</code> - docker d</li>
 <li>[x] Temperature via <code>sysfs</code></li>
 <li>[x] User-space only, doesn&apos;t require root permissions</li>
 <li>[x] Static build</li>
 <li>[x] Threads tree</li>
-<li>[ ] Docker-related info</li>
 </ul>
 <h2>Install</h2>
 <h3>Arch/AUR</h3>
@@ -139,6 +140,8 @@ cmd = &quot;$HOME/bin/tel.sh&quot;
 </code></pre>
 <h4>Config with all parameters described</h4>
 <pre>  <code class="language-toml">light = false            # set true for light term (default = false)
+
+# docker = &quot;/var/run/docker.sock&quot;   # docker&apos;s socket path
 
 # [data]
 # path = &quot;/var/log/ttop&quot; # custom storage path (default = if exists /var/log/ttop, else ~/.cache/ttop )
@@ -245,7 +248,7 @@ echo &quot;$TEXT&quot; | curl --ssl-reqd \
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-01T01:11:25Z
+        Builded at 2023-09-05T01:06:57Z
         </p>
       </div>
     </div>

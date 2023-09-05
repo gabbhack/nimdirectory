@@ -107,6 +107,8 @@ $ nix-env -iA eriscmd -f https://codeberg.org/eris/nix-eris/archive/trunk.tar.gz
 <p>A simple example:</p>
 <pre>  <code class="language-sh">test &quot;$ERIS_STORE_URL = coap+tcp://[::1]:5683&quot;
 </code></pre>
+<h3>linkedit</h3>
+<p>Replace the MIME-type and metadata of ERIS­link files.</p>
 <h3>open</h3>
 <p>The <code>eriscmd open</code> utility opens <a href="https://eris.codeberg.page/eer/linkfile.xml">ERIS link files</a> in an application that is locally configured for the given MIME type of the link file. To integrate it within a <a href="https://www.freedesktop.org/">Freedesktop.org</a> environment the <a href="./eris-open.desktop">eris-open.desktop</a>, <a href="./eris-link.xml">eris-link.xml</a>, and <a href="./eris48.png">eris48.png</a> should be installed in their appropriate locations.</p>
 <p>The utility only works as well as the associations that are configured for different MIME types, see the <code>xdg-mime</code> utility from <a href="https://freedesktop.org/wiki/Software/xdg-utils/">xdg-utils</a> for more information.</p>
@@ -203,7 +205,7 @@ application/x-eris-link+cbor = execm /some/path/to/rclerislink
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-01T01:11:25Z
+        Builded at 2023-09-05T01:06:57Z
         </p>
       </div>
     </div>

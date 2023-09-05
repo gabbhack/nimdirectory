@@ -1,5 +1,33 @@
 const packages = [
   {
+    "name": "nulid",
+    "url": "https://github.com/Yu-Vitaqua-fer-Chronos/NULID",
+    "method": "git",
+    "tags": [
+      "library",
+      "id",
+      "ulid",
+      "uuid",
+      "guid"
+    ],
+    "description": "A ULID implementation in Nim!",
+    "license": "CC0"
+  },
+  {
+    "name": "crockford-base32",
+    "url": "https://github.com/Yu-Vitaqua-fer-Chronos/Crockford-Base32-Nim",
+    "method": "git",
+    "tags": [
+      "base",
+      "base32",
+      "crockford",
+      "encode",
+      "decode"
+    ],
+    "description": "A simple implementation of Crockford Base32.",
+    "license": "CC0"
+  },
+  {
     "name": "rtmidi",
     "url": "https://github.com/stoneface86/nim-rtmidi/",
     "method": "git",
@@ -2414,6 +2442,21 @@ const packages = [
     "description": "Small library to generate procedures with a type derivation system",
     "license": "MIT",
     "web": "https://github.com/PMunch/deriveables"
+  },
+  {
+    "name": "mapm",
+    "url": "https://github.com/PMunch/mapm-nim",
+    "method": "git",
+    "tags": [
+      "library",
+      "decimal",
+      "arithmetic",
+      "precision",
+      "wrapper"
+    ],
+    "description": "Nim wrapper for MAPM, an arbitrary maths library with support for trig functions",
+    "license": "MIT+Freeware",
+    "web": "https://github.com/PMunch/mapm-nim"
   },
   {
     "name": "sdl2_nim",
@@ -31348,6 +31391,19 @@ const packages = [
     "description": "Asynchronous Nim wrapper for SauceNAO's API",
     "license": "LGPL-3.0-or-later",
     "web": "https://github.com/filvyb/saucenao-nim"
+  },
+  {
+    "name": "instagram",
+    "url": "https://github.com/thisago/instagram",
+    "method": "git",
+    "tags": [
+      "instagram",
+      "library",
+      "internal-api"
+    ],
+    "description": "Instagram internal web api implementation",
+    "license": "MIT",
+    "web": "https://github.com/thisago/instagram"
   }
 ]
 const options = {
