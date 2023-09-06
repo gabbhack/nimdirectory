@@ -89,8 +89,10 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>ttop</h1>
-<p>System monitoring tool with TUI, historical data service and triggers</p>
+                <document><p><a href="https://github.com/inv2004/ttop/actions/workflows/build.yaml">  <img src="https://github.com/inv2004/ttop/actions/workflows/build.yaml/badge.svg?branch=v1.2.2" style="max-width: 100%;" alt="Build" /></a>
+<img src="https://img.shields.io/aur/version/ttop" style="max-width: 100%;" alt="AUR version" /><a href="https://github.com/inv2004/ttop/releases/latest">  <img src="https://img.shields.io/github/downloads/inv2004/ttop/total.svg" style="max-width: 100%;" alt="Github All Releases" /></a></p>
+<h1>  <code>ttop</code></h1>
+<p>System monitoring tool with historical data service, triggers and top-like TUI</p>
 <p>  <img src="https://github.com/inv2004/ttop/assets/4949069/29aa89bc-a34d-4ba4-854f-2d1b3dd4dcf4.png" style="max-width: 100%;" alt="image" /></p>
 <ul>
 <li>[x] Saving historical snapshots via systemd.timer or crontab</li>
@@ -126,7 +128,7 @@ git clone https://github.com/inv2004/ttop
 cd ttop
 nimble -d:release build
 </code></pre>
-<h3>Notification</h3>
+<h3>Triggers / Notifications</h3>
 <ul>
 <li>stmp support was removed in prev version by the reason that static binary with ssl is more that 3Mb</li>
 </ul>
@@ -248,7 +250,7 @@ echo &quot;$TEXT&quot; | curl --ssl-reqd \
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-05T01:06:57Z
+        Builded at 2023-09-06T01:06:57Z
         </p>
       </div>
     </div>

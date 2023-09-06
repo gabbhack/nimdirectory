@@ -77,25 +77,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>f l o w e r</h1>
-<p>  <em>A pure Nim bloom filter.</em></p>
-<blockquote>
-<p>A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. False positive matches are possible, but false negatives are not – in other words, a query returns either &quot;possibly in set&quot; or &quot;definitely not in set&quot;.  <em>-- Wikipedia</em></p>
-</blockquote>
-<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">flower</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">bloom</span> <span class="op">=</span> <span class="ide">newBloom</span>(<span class="num">1e7</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">bloom</span><span class="op">.</span><span class="ide">add</span> <span class="str">&quot;string&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">bloom</span><span class="op">.</span><span class="ide">add</span> <span class="num">12345678</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="str">&quot;string&quot;</span> <span class="kwd">in</span> <span class="ide">bloom</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="str">&quot;not&quot;</span> <span class="kwd">notin</span> <span class="ide">bloom</span></div></div>  </code></pre>
-<h2>p a r a m e t e r s</h2>
-<p>The two arguments that can be passed when creating a bloom filter are used to decide the best parameters for the filter, so that the false-positive rate will equal <code>errorRate</code> when the number of added items is <code>capacity</code>. If excess items are added, the filter will continue to function, but the false-positive rate will increase.</p>
-<h2>d a t a t y p e s</h2>
-<p>Flower uses <a href="https://nim-lang.org/docs/hashes.html">std/hashes</a> for creating the k-hashes, so all built-in types are supported, and it&apos;s easy to add support for your own.</p>
-<h2>p r o c s</h2>
-<ul>
-<li>  <code>proc newBloom(capacity: SomeNumber, errorRate: float = 0.001): Bloom</code></li>
-<li>  <code>proc add[T](bloom: var Bloom, x: T)</code></li>
-<li>  <code>proc contains[T](bloom: var Bloom, x: T): bool</code></li>
-<li>  <code>proc union(x, y: Bloom): Bloom</code></li>
-<li>  <code>proc merge(x: var Bloom, y: Bloom)</code></li>
-</ul>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -163,7 +145,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-05T01:06:57Z
+        Builded at 2023-09-06T01:06:57Z
         </p>
       </div>
     </div>
