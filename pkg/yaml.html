@@ -100,46 +100,49 @@ available as tags in this repository and can be fetched via nimble:</p>
 </code></pre>
 <h2>Status</h2>
 <p>This library is stable.
-I only maintain it and will not add any features due to lack of time and interest.
-NimYAML passes all tests of the current YAML 1.2 test suite.
-See <a href="https://matrix.yaml.info/">the official YAML test matrix</a> for details.</p>
-<p>PRs for bugs are welcome. If you want to add a feature, you are free to; but be aware that I will not maintain it and am unlikely to review it in depth, so if I accept it, you will be co-maintainer.</p>
-<h2>Features that have been planned, but will not be implemented by myself</h2>
+NimYAML passes all tests of the current <a href="https://github.com/yaml/yaml-test-suite">YAML 1.2 test suite</a>.
+This project follows <a href="https://semver.org">SemVer</a>.</p>
+<p>I am committed to maintaining the library, but will seldom introduce new features.
+PRs are welcome.</p>
+<h2>Dependencies</h2>
+<p>NimYAML requires Nim 2.0.0 or later.
+The last version supporting Nim 1.6.x is <code>v1.1.0</code>.
+Use this in your <code>.nimble</code> file if you haven&apos;t migrated to Nim 2.x yet:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;yaml ^= 1.1.0&quot;</span></div></div>  </code></pre>
+<h2>Missing Features</h2>
+<p>Be aware that serialization currently doesn&apos;t support the following features in types that are used for loading and dumping:</p>
 <ul>
-<li>Serialization:
-<ul>
-<li>Support for more standard library types</li>
-<li>Support for polymorphism</li>
-<li>Support for generic objects</li>
-</ul>
-</li>
+<li>Polymorphism: If a field has a type <code>ref Parent</code>, you cannot load a <code>ref Child</code> into it.</li>
+<li>Generic objects: The code auto-generating loading and dumping functions currently cannot process instances of generic objects anywhere in the type you want to load/dump.</li>
+<li>Default values: NimYAML uses its own <code>{.defaultVal: &quot;foo&quot;.}</code> pragma.
+It currently cannot process default values introduced in Nim 2.0.</li>
 </ul>
 <h2>Developers</h2>
+<p>Nix users can <code>nix develop</code> to get a devshell with the required Nim version. You&apos;ll need to have Flakes enabled.</p>
 <pre>  <code class="language-bash">nim test # runs all tests
 nim lexerTests # run lexer tests
 nim parserTests # run parser tests (git-clones yaml-dev-kit)
 nim nativeTests # runs native value tests
 nim quickstartTests # run tests for quickstart snippets from documentation
-nim bench # runs benchmarks, requires libyaml
 nim clean # guess
 nim build # build a library
 </code></pre>
-<p>NimYAML supports Nim 1.4.0 and later.
-Previous versions are untested.</p>
 <p>When debugging crashes in this library, use the <code>d:debug</code> compile flag to enable printing of the internal stack traces for calls to <code>internalError</code> and <code>yAssert</code>.</p>
 <h3>Web Documentation</h3>
 <p>The online documentation on <a href="https://nimyaml.org">nimyaml.org</a>, including the
-testing ground, is generated via <a href="https://nixos.wiki/wiki/Flakes">Nix Flake</a> and easily deployable on NixOS.
-Just include the NixOS module in the flake and do</p>
+testing ground, is generated via <a href="https://nixos.wiki/wiki/Flakes">Nix Flake</a>.</p>
+<p>You can build &amp; run the docs server at via</p>
+<pre>  <code class="language-bash">nix run .#webdocs
+</code></pre>
+<p>It can be deployed to NixOS by importing the Flake&apos;s NixOS module and then doing</p>
 <pre>  <code class="language-nix">services.nimyaml-webdocs.enable = true;
 </code></pre>
-<p>This will run the documentation server locally at <code>127.0.0.1:5000</code>. You can
-change the <code>address</code> setting to make it public, but I suggest proxying via nginx
-to get HTTPS.</p>
+<p>This will run the documentation server locally at <code>127.0.0.1:5000</code>.
+Since there isn&apos;t much of a use-case for third parties to host this documentation, there is no support for running the server without Nix.</p>
 <h2>License</h2>
 <p>  <a href="copying.txt">MIT</a></p>
 <h2>Support this Project</h2>
-<p>If you like this project and want to give something back, you can check out GitHub&apos;s Sponsor button to the right. This is just an option I provide, not something I request you to do, and I will never nag about it.</p>
+<p>If you want to support this project financially, there&apos;s a GitHub Sponsor button to the right.</p>
 </document>
             
         </div>
@@ -208,7 +211,7 @@ to get HTTPS.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-06T01:06:57Z
+        Builded at 2023-09-07T01:07:15Z
         </p>
       </div>
     </div>
