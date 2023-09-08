@@ -94,6 +94,9 @@
 <p>This library is a implementation of internal Instagram web API.</p>
 <p>With this library, you can get data and even interact with Instagram!</p>
 <h2>Features</h2>
+<ul>
+<li><strong>  <code>ig.sharedData</code></strong>: Logged account data</li>
+</ul>
 <p>The following internal endpoints are implemented:</p>
 <h3>GET</h3>
 <ul>
@@ -117,6 +120,7 @@
 This implementation may violate the Instagram&apos;s terms of use, to prevent bans,
 call the API with random delays to looks like a human.</p>
 </blockquote>
+<p>The full documentation is <a href="https://thisago.github.io/instagram">hosted at Github Pages</a></p>
 <p>  <strong>Let&apos;s start with the usage guide</strong></p>
 <h3>Getting data</h3>
 <p>To use the lib, you&apos;ll need a <code>Instagram</code> object instance, it stores your
@@ -127,12 +131,24 @@ authentication cookies, the CSRF cookie and extra IDs</p>
 <p>  <strong>[...]</strong></p>
 <h2>TODO</h2>
 <ul>
-<li>Get post comments</li>
-<li>Comment in a post</li>
-<li>Add new post</li>
-<li>Add new status</li>
-<li>Get your following state of a user</li>
-<li><code>follow</code> and <code>unfollow</code> needs to return the response object</li>
+<li>
+<p>[ ] <code>follow</code> and <code>unfollow</code> needs to return the response object</p>
+</li>
+<li>
+<p>[ ] POST</p>
+<ul>
+<li>[ ] Create posts</li>
+<li>[ ] Create status posts</li>
+<li>[ ] Comment in a post</li>
+</ul>
+</li>
+<li>
+<p>[ ] GET</p>
+<ul>
+<li>[ ] Get post comments</li>
+<li>[ ] Get your following state of a user</li>
+</ul>
+</li>
 </ul>
 <h2>Resources</h2>
 <ul>
@@ -214,7 +230,7 @@ authentication cookies, the CSRF cookie and extra IDs</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-07T01:07:15Z
+        Builded at 2023-09-08T01:07:52Z
         </p>
       </div>
     </div>

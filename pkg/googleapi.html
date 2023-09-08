@@ -98,6 +98,12 @@
 <li>Storage</li>
 </ul>
 <p>Feel free to add new services as they are wrapped. But it might just be easier to use REST Api.</p>
+<h2>Different jwt backends:</h2>
+<ul>
+<li>default: https://github.com/yglukhov/nim-jwt (takes really long to compile)</li>
+<li>-d:googleApiUseQuickJwt <code>quickjwt</code>: https://github.com/treeform/quickjwt (segfaults with wrong libcrypto setup)</li>
+<li>-d:googleApiUseJwtea <code>jwtea</code>: https://github.com/guzba/jwtea (pure nim but can take a second to compute)</li>
+</ul>
 <h2>REST API</h2>
 <p>But you can always access Google API through REST. For example find the REST documniation you want like:</p>
 <p>https://cloud.google.com/datastore/docs/reference/data/rest/v1/projects/runQuery</p>
@@ -181,7 +187,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-07T01:07:15Z
+        Builded at 2023-09-08T01:07:52Z
         </p>
       </div>
     </div>
