@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">forge</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">compilation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">compile</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cross-compile</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cli</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">zig</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("basic toolchain to forge (cross-compile) your multi-platform nim binaries")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install forge" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>forge</h1>
+<p>  <a href="https://nimble.directory/pkg/forge">    <img src="https://img.shields.io/github/v/tag/daylinmorgan/forge?filter=v*&amp;logo=Nim&amp;label=nimble&amp;labelColor=black&amp;color=yellow" style="max-width: 100%;" alt="nimble shield" />  </a></p>
+<p>A basic toolchain to forge (cross-compile) your multi-platform <code>nim</code> binaries.</p>
+<h2>Why?</h2>
+<p><code>Nim</code> is a great language and the code is as portable as any other code written in C.
+But who wants to manage C toolchains or CI/CD DSL&apos;s to cross-compile your code into easily sharable native executable binaries</p>
+<h2>Installation</h2>
+<p>In order to use <code>forge</code> you must first install <a href="https://ziglang.org/">  <code>zig</code></a> as all compilation
+is done using a thin wrapper around <code>zig cc</code>.</p>
+<blockquote>
+<p>[!NOTE]
+Future versions may use an automated/isolated <code>zig</code> installation.</p>
+</blockquote>
+<pre>  <code class="language-sh">nimble install https://github.com/daylinmorgan/forge
+</code></pre>
+<h2>Usage</h2>
+<p><code>Forge</code> provide two key methods to compile your <code>nim</code> source <code>forge cc</code> and <code>forge release</code>.</p>
+<h3>  <code>forge cc</code></h3>
+<p>To compile a single binary for a platform you can use <code>forge cc</code>.</p>
+<p>Example:</p>
+<pre>  <code class="language-sh">forge cc --target x86_64-linux-musl -- -d:release src/forge.nim -o:forge
+</code></pre>
+<h3>  <code>forge release</code></h3>
+<p>This command is useful for generating many compiled binaries like you may be accustomed to seeing from <code>go</code> or <code>rust</code> cli&apos;s.
+<code>Forge release</code> will make attempts to infer many values based on the assumption that it&apos;s
+likely run from the root directory of a <code>nim</code> project with a <code>&lt;project&gt;.nimble</code></p>
+<p>You can either specify all commands on the CLI or use a config file.</p>
+<p>Example:</p>
+<pre>  <code class="language-sh">forge release --target,=,x86_64-linux-musl,x86_64-macos-none --bin src/forge.nim
+</code></pre>
+<p>Result:</p>
+<pre>  <code>dist
+├── forge-v2023.1001-x86_64-linux-musl
+│   └── forge
+└── forge-v2023.1001-x86_64-macos-none
+    └── forge
+</code></pre>
+<p>The output directories used for each binary are determined
+by a format string: <code>${name}-v${version}-${target}</code>.
+You can modify this with additional info at runtime like using
+date instead of version string: <code>--format &quot;\${name}-$(date +&apos;%Y%M%d&apos;)-\${target}&quot;</code>.</p>
+<p>You can also create a config file by default at <code>./.forge.cfg</code> that controls the behavior of <code>forge release</code>:</p>
+<pre>  <code class="language-dosini"># flags are specified at the top level
+nimble # key without value for booleans
+format = &quot;${name}-${target}&quot;
+outdir = forge-dist
+
+# use sections to list targets/bins with optional args
+[target]
+x86_64-linux-musl = &quot;--debugInfo:on&quot;
+x86_64-linux-gnu
+
+[bin]
+src/forge
+src/forgecc = &quot;--opt:size&quot; # use a custom flag for this binary
+</code></pre>
+<p>Example:</p>
+<pre>  <code class="language-sh">forge release --verbose --dryrun
+</code></pre>
+<p>Output:</p>
+<pre>  <code>forge release -V --dryrun
+forge || config =
+| nimble  true
+| outdir  forge-dist
+| format  ${name}-${target}
+| version 2023.1001
+| targets:
+|   x86_64-linux-musl|--debugInfo:on
+|   x86_64-linux-gnu
+| bins:
+|   src/forge
+|   src/forgecc|--opt:size
+forge || dry run...see below for commands
+forge || compiling 2 binaries for 2 targets
+nimble c --cpu:amd64 --os:Linux --cc:clang --clang.exe=&apos;forgecc&apos; --clang.linkerexe=&apos;forgecc&apos; --passC:&apos;-target x86_64-linux-musl&apos; --passL:&apos;-target x86_64-linux-musl&apos; -d:release --outdir:&apos;dist/forge-x86_64-linux-musl&apos; --debugInfo:on src/forge
+nimble c --cpu:amd64 --os:Linux --cc:clang --clang.exe=&apos;forgecc&apos; --clang.linkerexe=&apos;forgecc&apos; --passC:&apos;-target x86_64-linux-musl&apos; --passL:&apos;-target x86_64-linux-musl&apos; -d:release --outdir:&apos;dist/forge-x86_64-linux-musl&apos; --debugInfo:on --opt:size src/forgecc
+nimble c --cpu:amd64 --os:Linux --cc:clang --clang.exe=&apos;forgecc&apos; --clang.linkerexe=&apos;forgecc&apos; --passC:&apos;-target x86_64-linux-gnu&apos; --passL:&apos;-target x86_64-linux-gnu&apos; -d:release --outdir:&apos;dist/forge-x86_64-linux-gnu&apos; src/forge
+nimble c --cpu:amd64 --os:Linux --cc:clang --clang.exe=&apos;forgecc&apos; --clang.linkerexe=&apos;forgecc&apos; --passC:&apos;-target x86_64-linux-gnu&apos; --passL:&apos;-target x86_64-linux-gnu&apos; -d:release --outdir:&apos;dist/forge-x86_64-linux-gnu&apos; --opt:size src/forgecc
+
+</code></pre>
+<h2>Acknowledgements</h2>
+<p>Thanks to <a href="https://github.com/andrewrk">Andrew Kelley</a> and the many <code>zig</code> <a href="https://github.com/ziglang/zig/graphs/contributors">contributors</a>.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/daylinmorgan/forge">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-09-09T01:05:02Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

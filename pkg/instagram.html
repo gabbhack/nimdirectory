@@ -85,84 +85,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><div align="center">
-<h1>Instagram</h1>
-<h4>Instagram internal web api implementation</h4>
-<p><strong><a href="#about">About</a> - <a href="#features">Features</a></strong> - <a href="#license">License</a></p>
-</div>
-<h2>About</h2>
-<p>This library is a implementation of internal Instagram web API.</p>
-<p>With this library, you can get data and even interact with Instagram!</p>
-<h2>Features</h2>
-<ul>
-<li><strong>  <code>ig.sharedData</code></strong>: Logged account data</li>
-</ul>
-<p>The following internal endpoints are implemented:</p>
-<h3>GET</h3>
-<ul>
-<li><strong>  <code>ig.user(&quot;username&quot;)</code></strong> <sup>(<code>/api/v1/users/web_profile_info</code>)</sup>: Gets all info used to render the user page</li>
-<li><strong>  <code>ig.post(&quot;postId&quot;)</code></strong> <sup>(<code>/api/v1/media/{postId}/comments</code>)</sup>: All data used to render the post</li>
-<li><strong>  <code>ig.followers(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/friendships/{userId}/followers</code>)</sup>: User followers</li>
-<li><strong>  <code>ig.following(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/friendships/{userId}/following</code>)</sup>: User following</li>
-<li><strong>  <code>ig.feed(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/feed/user/{userId}</code>)</sup>: Feed data, posts</li>
-</ul>
-<h3>POST</h3>
-<ul>
-<li><strong>  <code>ig.follow(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/friendships/create/{userId}</code>)</sup>: Follows the user</li>
-<li><strong>  <code>ig.unfollow(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/friendships/destroy/{userId}</code>)</sup>: Unfollows the user</li>
-<li><strong>  <code>ig.like(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/web/likes/{postId}/like</code>)</sup>: Likes the post</li>
-<li><strong>  <code>ig.unlike(&quot;userId&quot;)</code></strong> <sup>(<code>/api/v1/web/likes/{postId}/unlike</code>)</sup>: Remove the like of post</li>
-</ul>
-<p>* <strong>  <code>Ig</code></strong> is a <code>Instagram</code> object</p>
-<h2>Usage</h2>
-<blockquote>
-<p><strong>Warning</strong>
-This implementation may violate the Instagram&apos;s terms of use, to prevent bans,
-call the API with random delays to looks like a human.</p>
-</blockquote>
-<p>The full documentation is <a href="https://thisago.github.io/instagram">hosted at Github Pages</a></p>
-<p>  <strong>Let&apos;s start with the usage guide</strong></p>
-<h3>Getting data</h3>
-<p>To use the lib, you&apos;ll need a <code>Instagram</code> object instance, it stores your
-authentication cookies, the CSRF cookie and extra IDs</p>
-<p>To create one:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ig</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">newInstagram</span>() <span class="com"># No cookies, there&apos;s rate limit and limited just to GET functions</span></div></div><div class="line"><div class="line-content"><span class="com"># or</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">loggedIg</span> <span class="op">=</span> <span class="ide">waitFor</span> <span class="ide">newInstagram</span> <span class="str">&quot;YOUR COOKIES&quot;</span> <span class="com"># With login</span></div></div>  </code></pre>
-<p>To get cookies, consider using <a href="https://github.com/thisago/iecook">iecook</a> because it gets the HttpOnly cookies, the needed ones. automatically.</p>
-<p>  <strong>[...]</strong></p>
-<h2>TODO</h2>
-<ul>
-<li>
-<p>[ ] <code>follow</code> and <code>unfollow</code> needs to return the response object</p>
-</li>
-<li>
-<p>[ ] POST</p>
-<ul>
-<li>[ ] Create posts</li>
-<li>[ ] Create status posts</li>
-<li>[ ] Comment in a post</li>
-</ul>
-</li>
-<li>
-<p>[ ] GET</p>
-<ul>
-<li>[ ] Get post comments</li>
-<li>[ ] Get your following state of a user</li>
-</ul>
-</li>
-</ul>
-<h2>Resources</h2>
-<ul>
-<li>https://instagram.api-docs.io</li>
-</ul>
-<h3>Related</h3>
-<ul>
-<li>https://github.com/pavlovdog/Instagram-private-API/blob/master/api.py</li>
-<li>https://github.com/dilame/instagram-private-api</li>
-<li>https://github.com/ping/instagram_private_api</li>
-</ul>
-<h2>License</h2>
-<p>This library is licensed over MIT license!</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -230,7 +153,7 @@ authentication cookies, the CSRF cookie and extra IDs</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-08T01:07:52Z
+        Builded at 2023-09-09T01:05:02Z
         </p>
       </div>
     </div>

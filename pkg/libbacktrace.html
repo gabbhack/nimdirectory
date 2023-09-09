@@ -82,9 +82,7 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>All the backtrace, none of the overhead</h1>
-<p><a href="https://travis-ci.org/status-im/nim-libbacktrace">  <img src="https://travis-ci.org/status-im/nim-libbacktrace.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a>
-<a href="https://ci.appveyor.com/project/nimbus/nim-libbacktrace/branch/master">  <img src="https://ci.appveyor.com/api/projects/status/mrvu6ks50dl5y5y4/branch/master?svg=true" style="max-width: 100%;" alt="Build status" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
+<p><img src="https://github.com/status-im/nim-libbacktrace/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /><a href="https://opensource.org/licenses/Apache-2.0">  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" style="max-width: 100%;" alt="License: Apache" /></a>
 <a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;" alt="License: MIT" /></a>
 <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /></p>
 <p>Nim&apos;s default stack tracing functionality comes with significant
@@ -125,13 +123,13 @@ nim c -r --debugger:native --stacktrace:off bttest.nim
 disk, not in memory). If we don&apos;t need to use GDB on that binary, we can get
 away with significantly fewer debugging symbols by switching to &quot;-g1&quot;:</p>
 <pre>  <code class="language-bash"># for the C backend
-nim c --debugger:native --gcc.options.debug:&apos;-g1&apos; -d:release somefile.nim
+nim c -d:release --debugger:native --gcc.options.debug:&apos;-g1&apos; somefile.nim
 
 # for the C++ backend
-nim cpp --debugger:native --gcc.cpp.options.debug:&apos;-g1&apos; -d:release somefile.nim
+nim cpp -d:release --debugger:native --gcc.cpp.options.debug:&apos;-g1&apos; somefile.nim
 
 # Clang needs a different argument
-nim c --cc:clang --debugger:native --clang.options.debug:&apos;-gline-tables-only&apos; -d:release somefile.nim
+nim c -d:release --cc:clang --debugger:native --clang.options.debug:&apos;-gline-tables-only&apos; somefile.nim
 </code></pre>
 <p>When the C compiler inlines some functions, or does tail-call optimisation -
 usually with <code>-d:release</code> or <code>-d:danger</code> - your stack trace might be incomplete.</p>
@@ -252,7 +250,7 @@ good that even Clang links it by default ;-)</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-08T01:07:52Z
+        Builded at 2023-09-09T01:05:02Z
         </p>
       </div>
     </div>
