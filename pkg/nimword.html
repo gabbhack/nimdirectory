@@ -104,7 +104,8 @@
 <ul>
 <li>  <a href="https://philippmdoerner.github.io/nimword/nimword.html">API index</a></li>
 </ul>
-<p>This package is a collection of functions for password hashing implemented by other packages, presented with a unified interface.</p>
+<p>This package is a collection of functions for password hashing implemented by other packages, presented with a unified interface.
+It is currently only tested for Linux, but <em>should</em> work for Windows as well assuming the same libraries are installed.</p>
 <p>Currently available hashing algorithms:</p>
 <ul>
 <li>PBKDF2 - HMAC with SHA256 from <a href="https://nim-lang.org/docs/openssl.html">openssl</a></li>
@@ -136,7 +137,7 @@ Proc to validate if a given password is identical to the one that was used to cr
 <p>The individual algorithm-modules further provide 2 procs in case some customization is needed:</p>
 <ul>
 <li><code>hashPassword</code>:
-Proc to create base 64 encoded hashes like <code>hashEncodePassword</code>, but returns the hash directly from there without turning it into a specific format like <code>hashEncodePassword</code> does.</li>
+Proc to create unencoded raw hashes like <code>hashEncodePassword</code>, but returns the hash-bytes directly from there without turning it into a specific format like <code>hashEncodePassword</code> does.</li>
 <li><code>encodeHash</code>:
 Proc to generate strings of the format that <code>hashEncodePassword</code> outputs, but without doing any of the hashing itself. The output can be used with <code>isValidPassword</code>.</li>
 </ul>
@@ -214,7 +215,7 @@ Proc to generate strings of the format that <code>hashEncodePassword</code> outp
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-09T01:05:02Z
+        Builded at 2023-09-10T01:10:50Z
         </p>
       </div>
     </div>
