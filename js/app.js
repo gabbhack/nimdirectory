@@ -31419,6 +31419,22 @@ const packages = [
     "description": "basic toolchain to forge (cross-compile) your multi-platform nim binaries",
     "license": "MIT",
     "web": "https://github.com/daylinmorgan/forge"
+  },
+  {
+    "name": "stdx",
+    "url": "https://github.com/jjv360/nim-stdx",
+    "method": "git",
+    "tags": [
+      "std",
+      "standard",
+      "lib",
+      "library",
+      "extras",
+      "stdx"
+    ],
+    "description": "A collection of extra utilities for Nim.",
+    "license": "MIT",
+    "web": "https://github.com/jjv360/nim-stdx"
   }
 ]
 const options = {
