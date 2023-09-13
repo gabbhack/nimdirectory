@@ -165,7 +165,7 @@ nimble -d:release build
 <p>From v0.8.1 you can trigger external tool, for example curl, to send notifications</p>
 <p>  <img src="https://user-images.githubusercontent.com/4949069/215402008-eb0325f9-3e6e-4908-a6aa-d7b3b64f09db.png" style="max-width: 100%;" alt="image" /></p>
 <h3>Config example</h3>
-<p><code>~/.config/ttop.toml</code> or <code>/etc/ttop.toml</code></p>
+<p><code>~/.config/ttop/ttop.toml</code> or <code>/etc/ttop.toml</code></p>
 <h4>My default server&apos;s config</h4>
 <pre>  <code class="language-toml">[[trigger]]
 cmd = &quot;$HOME/bin/tel.sh&quot;
@@ -178,6 +178,7 @@ cmd = &quot;$HOME/bin/tel.sh&quot;
 # [data]
 # path = &quot;/var/log/ttop&quot; # custom storage path (default = if exists /var/log/ttop, else ~/.cache/ttop )
 
+# Trigger is any external script or command which receives text from ttop into stdin + some envs
 [[trigger]]              # telegram example
 on_alert = true          # execute trigger on alert (true if no other on_* provided)
 on_info = true           # execute trigger without alert (default = false)
@@ -280,7 +281,7 @@ echo &quot;$TEXT&quot; | curl --ssl-reqd \
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-12T01:05:40Z
+        Builded at 2023-09-13T01:08:35Z
         </p>
       </div>
     </div>

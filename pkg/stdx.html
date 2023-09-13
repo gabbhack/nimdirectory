@@ -100,7 +100,7 @@
                 <document><h1>Nim Extras (<code>stdx</code>)</h1>
 <p>This is a library of extra utility functions for the Nim standard library. Each extension to the standard lib is named after the module it extends, and is placed in the <code>stdx</code> package. It also exports the standard lib package, so you only need to replace <code>std</code> with <code>stdx</code>. For example, to use extra <code>seq</code> utils, you would do:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Instead of this</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">sequtils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Do this</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">stdx</span><span class="op">/</span><span class="ide">sequtils</span></div></div>  </code></pre>
-<p>You can install <code>stdx</code> by running <code>nimble install https://github.com/jjv360/nim-stdx</code></p>
+<p>You can install <code>stdx</code> by running <code>nimble install stdx</code></p>
 <h2>Why this?</h2>
 <p>Because I keep finding myself adding little one-line functions to my projects, and I&apos;m tired of copy-pasting them around. So why not wrap them all up into a single package?</p>
 <h2>API Reference</h2>
@@ -319,7 +319,7 @@ drain(int.high)
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-12T01:05:40Z
+        Builded at 2023-09-13T01:08:35Z
         </p>
       </div>
     </div>

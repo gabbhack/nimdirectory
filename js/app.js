@@ -1,5 +1,17 @@
 const packages = [
   {
+    "name": "worldtree",
+    "url": "https://github.com/keithaustin/worldtree",
+    "method": "git",
+    "tags": [
+      "entity-component-system",
+      "ecs",
+      "dod"
+    ],
+    "description": "A small, lightweight ECS framework for Nim.",
+    "license": "MIT"
+  },
+  {
     "name": "nulid",
     "url": "https://github.com/Yu-Vitaqua-fer-Chronos/NULID",
     "method": "git",
@@ -31391,19 +31403,6 @@ const packages = [
     "description": "Asynchronous Nim wrapper for SauceNAO's API",
     "license": "LGPL-3.0-or-later",
     "web": "https://github.com/filvyb/saucenao-nim"
-  },
-  {
-    "name": "instagram",
-    "url": "https://github.com/thisago/instagram",
-    "method": "git",
-    "tags": [
-      "instagram",
-      "library",
-      "internal-api"
-    ],
-    "description": "Instagram internal web api implementation",
-    "license": "MIT",
-    "web": "https://github.com/thisago/instagram"
   },
   {
     "name": "forge",
