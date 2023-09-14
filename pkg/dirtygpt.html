@@ -111,9 +111,18 @@
 <p>Prompt in ChatGPT web using Nim!</p>
 <p>See this lib working at <a href="https://github.com/thisago/cligpt">cligpt</a></p>
 <h2>How it works?</h2>
-<p>The client userscript controls the ChatGPT webpage, it connects with backend,
-the lib via Websocket and wait the prompts. Once that userscript receives, it
-prompts to AI manipulating DOM and send to backend the answered MD.</p>
+<p>When you create a new instance of <code>DirtyGPT</code>, an http web server starts
+asynchronously, it accept multiple websocket connections and when you query the
+prompt in lib, the server will add your prompt to the queue, and the connected
+userscripts will request a prompt. When the server sends the prompt to a client
+(userscript), it saves the client ID in prompt and if for some reason the client
+disconnects, the items bound to that client ID will be cleaned and wait to be
+asked, in higher priority than others.</p>
+<p>The client userscript controls the ChatGPT webpage, when it receives the prompt,
+it fills up the input and clicks in the button to send. When AI is answering, the
+button changes, when it returns to their original form, the userscript reads the
+output HTML, converts it to Markdown and sends back to server (lib). Then it&apos;s
+available to another prompt, the loop will request the next one.</p>
 <h2>Installation</h2>
 <p>Install the lib with Nimble:</p>
 <pre>  <code class="language-bash">nimble install dirtygpt
@@ -209,7 +218,7 @@ with <a href="https://chat.openai.com">ChatGPT</a> logged in.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-13T01:08:35Z
+        Builded at 2023-09-14T01:06:39Z
         </p>
       </div>
     </div>

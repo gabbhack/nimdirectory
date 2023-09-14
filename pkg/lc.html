@@ -97,8 +97,10 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>For the impatient, here is a screenshot:</p>
-<p>  <img src="https://raw.githubusercontent.com/c-blake/lc/master/screenshots/main.png" style="max-width: 100%;" alt="screenshot" /></p>
+                <document><p>For the impatient, here is a screenshot (NOTE: my terminal is set up to
+embellish bold text with dark orange and italic with light orange which
+is..uncommon at best.):</p>
+<p>  <img src="https://raw.githubusercontent.com/c-blake/lc/master/screenshots/multi.png" style="max-width: 100%;" alt="screenshot" /></p>
 <p>Getting an <code>lc</code> config going <em>should</em> be as easy as (on Debian):<a href="You">^1</a></p>
 <pre>  <code>apt install nim  #(https://nim-lang.org/ has other options)
 nimble install lc
@@ -126,94 +128,90 @@ not so fast &amp; very large directories are usually ill-advised.</p>
 yet another file lister?  What&apos;s the point?  Well, <code>lc</code></p>
 <ul>
 <li>
-<p>is clearly factored into independent actions and very configurable</p>
+<p>is clearly factored into independent actions and very configurable with good
+CLI ergonomics (unique prefixes good enough, spellcheck, etc.)</p>
 </li>
 <li>
-<p>has good CLI ergonomics (unique prefixes good enough, spellcheck, etc.)</p>
+<p>supports <em>  <strong>multi-level sorting</strong></em> for many forward/reverse attributes</p>
 </li>
 <li>
-<p>supports multi-level sorting for many forward/reverse attributes</p>
-</li>
-<li>
-<p>supports arbitrary assignment of &quot;file kind order&quot; for use in sorting</p>
+<p>supports arbitrary assignment of &quot;<em>  <strong>file kind order</strong></em>&quot; for use in sorting
+(note how, in the screenshot, dot-directories precede dot files precede
+directories precede regular files)</p>
 </li>
 <li>
 <p>supports a kind/type-<strong>vector</strong> for multi-dimensional reasoning, including
 text attribute layers and an &quot;icon vector&quot; (for utf8 &quot;icons&quot;, anyway)</p>
 </li>
 <li>
-<p>supports both latter-day nanosecond file times and <em>very</em> abbreviated ages</p>
+<p>supports from <em>  <strong>nanosecond file times</strong></em> to <em>  <strong>very</strong></em> abbreviated ages</p>
 </li>
 <li>
-<p>has value-dependent coloring for file times, sizes, permissions, etc.</p>
+<p>has <em>  <strong>value-dependent coloring</strong></em> for file times, sizes, permissions, etc.</p>
 </li>
 <li>
 <p>can emit &quot;hyperlink&quot; escape codes to make entries clickable in some terminals</p>
 </li>
 <li>
-<p>supports file/user/group/link target abbreviation via <code>-mNum</code>, <code>-ma</code>, etc.</p>
+<p>supports file/user/group/link target <em>  <strong>abbreviation</strong></em> via <code>-mNum</code>, etc.</p>
 </li>
 <li>
-<p>supports &quot;local tweak files&quot; - extra config options in a local <code>.lc</code> (or a
-<code>.lc</code> in a shadow tree under a user&apos;s control if needed).  Nice to eg, avoid
-NFS automounts or inversely to engage expensive classification, for dirs with
-special sorts, formats, ..</p>
+<p>supports &quot;<em>  <strong>local tweak files</strong></em>&quot; - extra config options in a local <code>.lc</code>
+(or a <code>.lc</code> in a shadow tree under a user&apos;s control if needed).  Nice to eg,
+avoid NFS automounts or inversely to engage expensive classification, for
+dirs with special sorts, formats, ..</p>
 </li>
 <li>
-<p>supports &quot;theming&quot; (operationally, environment-variable-keyed cfg includes)</p>
+<p>supports &quot;<em>  <strong>theming</strong></em>&quot; (operationally, environ-variable-keyed cfg includes)</p>
 </li>
 <li>
-<p>supports latter-day Linux statx/b)irth times (but works on non-Linux, too)</p>
+<p>supports latter-day Linux <em>  <strong>statx/b)irth</strong></em> times</p>
 </li>
 <li>
-<p>supports <code>file(1)</code>/<code>libmagic</code> deep file inspection-based classification
+<p>supports <code>file(1)</code>/<code>libmagic</code> <em>  <strong>deep file inspection-based classification</strong></em>
 (though using this with large directories can be woefully slow)</p>
 </li>
 <li>
-<p>is extensible with fully user-defined file type tests &amp; field formats</p>
-</li>
-<li>
-<p>is compact (~900 non-comment/blank lines; ~300 is just code dispatch tables &amp;
-help, ~650 in <code>cligen/[tab, humanUt, abbrev]</code> might be in <code>lc</code> had I not done
-both pkgs.)</p>
-</li>
-<li>
-<p>has few dependencies (just <code>cligen</code> and the Nim stdlib)</p>
-</li>
-<li>
-<p>is a work in progress, but a unique enough bundle of useful ideas to share.
-With so many features and few users, there are likely bugs.</p>
+<p>is <em>  <strong>extensible</strong></em> with fully user-defined file type tests &amp; field formats</p>
 </li>
 </ul>
+<p>With so many features you might think <code>lc</code> is huge, but it is also <em>  <strong>compact</strong></em>
+(~900 non-comment/blank lines; ~300 is just code dispatch tables &amp; help, ~650 in
+<code>cligen/[tab, humanUt, abbrev]</code> might be in <code>lc</code> had I not done both pkgs) with
+only <code>cligen</code> and the Nim stdlib as dependencies.</p>
 <h1>Vector Type/Multi-dimensionality/Attribute Layers</h1>
-<p>The most obscure idea is likely &quot;multi-dimensional&quot;.  I mean this in an abstract
+<p>The trickiest idea is (likely) &quot;multi-dimensional&quot;.  I mean this in an abstract
 &quot;<strong>INDEPENDENT coordinate</strong>&quot; sense <strong>not</strong> a <a href="https://www.youtube.com/watch?v=URVS4H7vrdU">Jurassic Park
 (1993)-esque</a> IRIX fsn graphical
 file browser sense.  Examples of slots/dimensions/attributes may help.</p>
-<p>Output text can set foreground &amp; background colors of text <strong>independently</strong>.
+<p>In the screenshot at the top of this text, &quot;foo.c&quot; and &quot;bar.c&quot; are <em>both</em> source
+code files (highlighted green) <em>and</em> hard-links (underlined) to each other.
+Similarly, &quot;/tmp/root&quot; is a directory - so it is <code>WHITE on_blue</code> - <em>  <strong>but</strong></em>
+inaccessible to the user running <code>lc</code> and so &quot;struck through&quot; text.  This all
+matters since listing files is often a precursor to acting upon them.</p>
+<p>Most any terminal can set text fore- &amp; background colors <strong>independently</strong>.
 I happen to like <a href="https://git.suckless.org/st/">st</a> for its hackability.  That
 can <em>also</em> bold, italic, blink, underline, struck, and inverse <em>independently</em>.
 (Color inversion involves a mapping too complex to be a very useful visual aid.)
-So, 8 usable output dimensions, 6 shallow 1-bit dimensions &amp; fg/bg color with
+So, 8 usable output dimensions, 6 shallow 1-bit dimensions + fg/bg color with
 larger value ranges.  While subjective, I find it not hard to distinguish text
 with <em>all</em> those attributes varying.  Geographical map folk often call this
 &quot;layering&quot; (such as political borders layered atop satellite imagery).</p>
 <p>The input/data side has <em>many</em> independent fields &amp; bits.  While <code>dirent.d_type</code>
-is mutually exclusive type codes (like directory/named pipe/..), most types
+is a mutually exclusive type code (like directory/named pipe/..), most types
 aren&apos;t.  E.g., a file can be <em>  <strong>both</strong></em> an executable regular file <em>  <strong>and</strong></em>
 some kind of script source or both a directory and a directory with a sticky bit
 set.  Independently of all that, it can begin with a &apos;.&apos; or not.  Add all of
 <code>struct stat</code> and deep file header inspection and the type space explodes both
-in kinds &amp; independent sub-kinds/dimensions (stripped|not, 32|64-bit, etc.).</p>
-<p>Only end users can prioritize use of precious few output layers.  To aid this
-use, <code>lc</code> users can configure file kinds to pair with picked poisons of output
-traits.<a href="Operationally,">^2</a></p>
-<p>This may sound daunting, but many highlighting systems follow this model - e.g.
+in kinds &amp; independent sub-kinds/dimensions (stripped|not, 32|64-bit, etc.).
+Only end users can prioritize use of precious few output layers to represent the
+huge space of input kinds.</p>
+<p>This may sound daunting, but other highlighting systems follow this model - e.g.
 a misspelled word bolded inside an elsewise colorized source code comment.  <code>lc</code>
-simply models this structure explicitly to try to enable better allocation by
-end users over more dimensions than just the 2 (misspelling, comment) due to
-diverse file types.  Most briefly, <code>lc</code> aids &quot;aligning&quot; rendered output traits
-with classified input traits.</p>
+simply explicitly models this structure to try to enable better allocation by
+end users over more dimensions than just 2 (misspelling, comment) due to diverse
+file types.  Most briefly, <code>lc</code> aids &quot;aligning&quot; rendered output traits with
+classified input traits.<a href="Operationally,">^2</a></p>
 <h1>Configurability</h1>
 <p>As for the bread and butter of file listing, many things that are hard-coded in
 other file listers are fully user-defined in <code>lc</code>, like a concept of dot files.
@@ -364,7 +362,7 @@ before all dot regular files, but it is obviously much more general.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-13T01:08:35Z
+        Builded at 2023-09-14T01:06:39Z
         </p>
       </div>
     </div>
