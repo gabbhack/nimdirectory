@@ -165,6 +165,19 @@ dynamicImport(&quot;uxtheme.dll&quot;):
 </code></pre>
 </li>
 </ul>
+<h3>  <code>stdx/os</code></h3>
+<ul>
+<li>
+<p><code>startNativeEventLoop()</code> with async support</p>
+<p>Starts the system event loop (ie GetMessage/TranslateMessage/DispatchMessage on Windows) in a way that&apos;s compatible with asyncdispatch. If it&apos;s called multiple times, it will still only start the loop once.</p>
+<pre>  <code class="language-nim"># Start the loop in parallel
+asyncCheck startNativeEventLoop()
+
+# Ensure asyncdispatch is running
+drain(int.high)
+</code></pre>
+</li>
+</ul>
 <h3>  <code>stdx/osproc</code></h3>
 <ul>
 <li>
@@ -225,29 +238,6 @@ if items.allZero:
 <p><code>newString()</code> with filled bytes</p>
 <p>Creates a string of the specified length with all bytes set to a value.</p>
 <pre>  <code class="language-nim">var str = newString(512, filledWith = &apos;A&apos;)
-</code></pre>
-</li>
-</ul>
-<h3>  <code>stdx/winlean</code></h3>
-<ul>
-<li>
-<p><code>getLastErrorString()</code> / <code>raiseLastError(prefix)</code></p>
-<p>Get or raise the last WinAPI error as a Nim error.</p>
-<pre>  <code class="language-nim"># Get the last error as a string
-echo getLastErrorString()
-
-# Raise the last error as a Nim error
-raiseLastError(&quot;Unable to perform action.&quot;)
-</code></pre>
-</li>
-<li>
-<p><code>startWindowsEventLoop()</code> with async support</p>
-<p>Starts the standard Windows event loop (GetMessage/TranslateMessage/DispatchMessage) in a way that&apos;s compatible with asyncdispatch. If it&apos;s called multiple times, it will still only start the loop once.</p>
-<pre>  <code class="language-nim"># Start the loop in parallel
-asyncCheck startWindowsEventLoop()
-
-# Ensure asyncdispatch is running
-drain(int.high)
 </code></pre>
 </li>
 </ul>
@@ -319,7 +309,7 @@ drain(int.high)
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-14T01:06:39Z
+        Builded at 2023-09-15T01:08:18Z
         </p>
       </div>
     </div>
