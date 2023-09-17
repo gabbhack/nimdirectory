@@ -114,6 +114,24 @@ It only takes two commands to install and launch it.</p>
 <p>Enjoy.</p>
 </li>
 </ul>
+<h2>Bug Notice</h2>
+<p>As of September 2023, you may encounter the following error when launching the playground:</p>
+<pre>  <code>SIGSEGV: Illegal storage access. (Attempt to read from nil?)
+Segmentation fault
+</code></pre>
+<p>This issue originates from the <a href="https://github.com/dom96/httpbeast">httpbeast</a> library, which is a dependency of  <a href="https://github.com/dom96/jester">jester</a>. For further information, refer to this <a href="https://github.com/dom96/jester/issues/321">GitHub issue</a>.</p>
+<h3>Quick Fix</h3>
+<ul>
+<li>Run the playground:</li>
+</ul>
+<pre>  <code class="language-bash">nimble run -d:useStdLib
+</code></pre>
+<ul>
+<li>Compile the playground:</li>
+</ul>
+<pre>  <code class="language-bash">nimble build -d:useStdLib
+</code></pre>
+<p>The flag <code>-d:useStdLib</code> directs jester to use <a href="https://nim-lang.org/docs/asynchttpserver.html">std/asynchttpserver</a> instead of <a href="https://github.com/dom96/httpbeast">httpbeast</a>.</p>
 <h2>Security notice</h2>
 <p>The playground <strong>is NOT</strong> intended for public hosting / being available publicly, since any user could
 wreak havoc on the running machine (delete files, etc).</p>
@@ -191,7 +209,7 @@ wreak havoc on the running machine (delete files, etc).</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-16T01:06:11Z
+        Builded at 2023-09-17T01:11:05Z
         </p>
       </div>
     </div>
