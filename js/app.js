@@ -30145,19 +30145,6 @@ const packages = [
     "web": "https://github.com/c-blake/cron"
   },
   {
-    "name": "libpothole",
-    "url": "https://gt.tilambda.zone/o/pothole/libpothole.git",
-    "method": "git",
-    "tags": [
-      "library",
-      "pothole",
-      "activitypub"
-    ],
-    "description": "Essential libraries for the Pothole server.",
-    "license": "GPL-3.0-or-later",
-    "web": "https://gt.tilambda.zone/o/pothole/libpothole"
-  },
-  {
     "name": "dnsstamps2",
     "url": "https://github.com/rockcavera/nim-dnsstamps2",
     "method": "git",
@@ -31418,6 +31405,19 @@ const packages = [
     "description": "basic toolchain to forge (cross-compile) your multi-platform nim binaries",
     "license": "MIT",
     "web": "https://github.com/daylinmorgan/forge"
+  },
+  {
+    "name": "unicody",
+    "url": "https://github.com/guzba/unicody",
+    "method": "git",
+    "tags": [
+      "utf8",
+      "utf-8",
+      "unicode"
+    ],
+    "description": "An alternative / companion to std/unicode",
+    "license": "MIT",
+    "web": "https://github.com/guzba/unicody"
   },
   {
     "name": "stdx",
