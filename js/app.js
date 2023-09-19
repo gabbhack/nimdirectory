@@ -31450,6 +31450,21 @@ const packages = [
     "description": "The easiest way to interact with a graphql api",
     "license": "LGPL-3.0-or-later",
     "web": "https://github.com/arashi-software/zuhyo"
+  },
+  {
+    "name": "nimbooru",
+    "url": "https://github.com/filvyb/nimbooru",
+    "method": "git",
+    "tags": [
+      "api",
+      "async",
+      "wrapper",
+      "booru",
+      "gelbooru"
+    ],
+    "description": "Basic wrapper for APIs of various Boorus",
+    "license": "LGPL-3.0-or-later",
+    "web": "https://github.com/filvyb/nimbooru"
   }
 ]
 const options = {
