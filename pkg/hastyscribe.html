@@ -90,20 +90,15 @@
 <h1>HastyScribe</h1>
 <p><em>HastyScribe</em> is a simple command-line program able to convert <a href="http://daringfireball.net/projects/markdown">markdown</a> files into HTML files.</p>
 <h2>Usage</h2>
-<p><strong>hastyscribe</strong> <em>filename-or-glob-expression</em> <strong>[</strong> <em>&lt;options&gt;</em> <strong>]</strong></p>
+<p><strong>hastyscribe</strong> <strong>[</strong> options <strong>]</strong> <em>filename-or-glob-expression</em> ...</p>
 <p>Where:</p>
 <ul>
-<li><em>filename-or-glob-expression</em> is a valid file or <a href="http://en.wikipedia.org/wiki/Glob_(programming)">glob</a> expression that will be compiled into HTML.</li>
+<li><em>filename-or-glob-expression</em> is a valid markdown file or <a href="http://en.wikipedia.org/wiki/Glob_(programming)">glob</a> expression that will be compiled into HTML. Multiple files and/or globs are supported.</li>
 <li>The following options are supported:
 <ul>
-<li><strong>--field/&lt;field&gt;=&lt;value&gt;</strong> causes HastyScribe to set a custom field to a specific value.</li>
-<li><strong>--notoc</strong> causes HastyScribe to output HTML documents <em>without</em> automatically generating a Table of Contents at the start.</li>
-<li><strong>--user-css=&lt;file&gt;</strong> causes HastyScribe to insert the contents of the specified local file as a CSS stylesheet.</li>
-<li><strong>--user-js=&lt;file&gt;</strong> causes HastyScribe to insert the contents of the specified local file as a Javascript script.</li>
-<li><strong>--output-file=&lt;file&gt;</strong> causes HastyScribe to write output to a local file (Use <a href="class:opt">--output-file=-</a> to output to standard output).</li>
-<li><strong>--watermark=&lt;file&gt;</strong> causes HastyScribe to embed and display an image as a watermark throughout the document.</li>
-<li><strong>--fragment</strong> causes HastyScribe to output just an HTML fragment instead of a full document, without embedding any image, font or stylesheet.</li>
-<li><strong>--noembed</strong> causes styles and images not to be embedded.</li>
+<li><strong>--output-file=<file /><code>--output-file=-</code> to output to standard output).</strong><strong>--output-dir=<dir /><strong>-d=<dir /><code>--output-file</code> option. Please note that this option does not preserve the input directory structure (that, for example, can be observed while traversing glob patterns); all output files will be placed directly in the specified directory.</strong><strong>--field/<field>=<value /></field><strong>--user-css=<file /></strong><strong>--user-js=<file /></strong><strong>--watermark=<file /></strong><strong>--notoc</strong> causes HastyScribe to output HTML documents <em>without</em> automatically generating a Table of Contents at the start.</strong><strong>--noembed</strong> causes styles and images not to be embedded.</strong><strong>--fragment</strong> causes HastyScribe to output just an HTML fragment instead of a full document, without embedding any image, font or stylesheet.</li>
+<li><strong>--iso</strong> enables HastyScribe to use the ISO 8601 date format (e.g., 2000-12-31) in the footer of the generated HTML documents.</li>
+<li><strong>--no-clobber</strong> or <strong>-n</strong> prevents HastyScribe from overwriting existing files. If a file with the same name already exists, HastyScribe will issue a warning and will not overwrite it.</li>
 <li><strong>--help</strong> causes HastyScribe to display the usage information and quit.</li>
 </ul>
 </li>
@@ -177,7 +172,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-19T01:08:09Z
+        Builded at 2023-09-20T01:07:38Z
         </p>
       </div>
     </div>

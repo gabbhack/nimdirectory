@@ -109,6 +109,14 @@
 <li>
 <p><code>list</code>: Lists all git repositories.</p>
 </li>
+<li>
+<p><code>install</code>: Executes installation commands specified in the installation json file (defualt: <code>$GITMAN_REPOS_LOCATION/.gitman-install.json</code>).</p>
+<p><strong>Example:</strong> <code>gitman install</code> (executes install instructions on every repository)</p>
+</li>
+<li>
+<p><code>edit-install</code>: Edits the installation json-file. Uses the <code>EDITOR</code> environment variable for the editor.</p>
+<p><strong>Example:</strong> <code>gitman edit-install</code> (opens the file in your editor)</p>
+</li>
 </ul>
 <p>Some commands may also have aliases, see <code>help</code> for more information.</p>
 <h2>Installation</h2>
@@ -118,7 +126,26 @@
 <h3>nimble</h3>
 <p>  <code>nimble install gitman</code></p>
 <h3>Compiling manually from source</h3>
-<p>Clone the repository and run <code>nimble build -d:release</code> to compile or <code>nimble install</code> to install it to the nimble/bin directory.</p>
+<p>Clone the repository and run <code>nimble build -d:release</code> to compile or <code>nimble install</code> to compile and install it to the nimble/bin directory.</p>
+<p>You can also set some compile-time flags to customise your the program to your liking.</p>
+<p>  <strong>List of compile-time flags:</strong></p>
+<ul>
+<li>
+<p><code>environment_variable</code> (default: <code>GITMAN_REPOS_LOCATION</code>)</p>
+<p>This sets the environment variable the program uses.</p>
+</li>
+<li>
+<p><code>gitman_install_file</code> (default: <code>.gitman-install.json</code>)</p>
+<p>Changes the installation json-file name.</p>
+</li>
+</ul>
+<p>  <strong>Usage:</strong></p>
+<p>When compiling add the <code>-d:</code> flag. For example:</p>
+<ul>
+<li>  <code>nimble build -d:environment_variable:NEW_ENV_VARIABLE</code></li>
+<li>  <code>nimble build -d:gitman_install_file:new_file_name.json</code></li>
+<li>  <code>nimble build -d:environment_variable:NEW_ENV_VARIABLE -d:gitman_install_file:new_file_name.json</code></li>
+</ul>
 <h2>Configuration</h2>
 <p>There are no configuration files for this program (anymore). You can set a custom git directory by changing the <code>GITMAN_REPOS_LOCATION</code> environment variable.</p>
 <p>  <strong>Example (Linux):</strong></p>
@@ -208,7 +235,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-19T01:08:09Z
+        Builded at 2023-09-20T01:07:38Z
         </p>
       </div>
     </div>
