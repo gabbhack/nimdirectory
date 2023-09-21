@@ -98,6 +98,7 @@
 <ul>
 <li><strong>--output-file=<file /><code>--output-file=-</code> to output to standard output).</strong><strong>--output-dir=<dir /><strong>-d=<dir /><code>--output-file</code> option. Please note that this option does not preserve the input directory structure (that, for example, can be observed while traversing glob patterns); all output files will be placed directly in the specified directory.</strong><strong>--field/<field>=<value /></field><strong>--user-css=<file /></strong><strong>--user-js=<file /></strong><strong>--watermark=<file /></strong><strong>--notoc</strong> causes HastyScribe to output HTML documents <em>without</em> automatically generating a Table of Contents at the start.</strong><strong>--noembed</strong> causes styles and images not to be embedded.</strong><strong>--fragment</strong> causes HastyScribe to output just an HTML fragment instead of a full document, without embedding any image, font or stylesheet.</li>
 <li><strong>--iso</strong> enables HastyScribe to use the ISO 8601 date format (e.g., 2000-12-31) in the footer of the generated HTML documents.</li>
+<li><strong>--minify-css</strong> uses an unsophisticated minifier on the built-in stylesheet before embedding it into HTML. Ignored when combined with <code>--noembed</code>.</li>
 <li><strong>--no-clobber</strong> or <strong>-n</strong> prevents HastyScribe from overwriting existing files. If a file with the same name already exists, HastyScribe will issue a warning and will not overwrite it.</li>
 <li><strong>--help</strong> causes HastyScribe to display the usage information and quit.</li>
 </ul>
@@ -172,7 +173,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-20T01:07:38Z
+        Builded at 2023-09-21T01:07:02Z
         </p>
       </div>
     </div>
