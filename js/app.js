@@ -31478,6 +31478,20 @@ const packages = [
     "description": "Generate random prime numbers, and do prime number tests. Note: don't support prime numbers larger than approximately 3037000499 (sqrt(int.high)).",
     "license": "MIT",
     "web": "https://github.com/xjzh123/getprime"
+  },
+  {
+    "name": "chalk",
+    "url": "https://github.com/crashappsec/chalk",
+    "method": "git",
+    "tags": [
+      "observability",
+      "security",
+      "docker",
+      "sbom"
+    ],
+    "description": "Software artifact metadata to make it easy to tie deployments to source code and collect metadata.",
+    "license": "GPLv3",
+    "web": "https://github.com/crashappsec/chalk"
   }
 ]
 const options = {

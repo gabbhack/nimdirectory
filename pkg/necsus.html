@@ -260,10 +260,14 @@ manner as a system. This allows your runner to access entities, shared values or
 integrating with an SDK that uses a callback mechanism for controlling the main game loop. For those situations,
 you can manually initialize your app and invoke the <code>tick</code> function that Necsus generates:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">necsus</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myExampleSystem</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myApp</span>() {<span class="op">.</span><span class="ide">necsus</span>([], [<span class="op">~</span><span class="ide">myExampleSystem</span>], [], <span class="ide">newNecsusConf</span>())<span class="op">.</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Initialize the app and execute the main loop 3 times</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">app</span> <span class="op">=</span> <span class="ide">initMyApp</span>()</div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">tick</span>()</div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">tick</span>()</div></div><div class="line"><div class="line-content"><span class="ide">app</span><span class="op">.</span><span class="ide">tick</span>()</div></div>  </code></pre>
-<h2>Debugging</h2>
+<h2>Debugging an Entity</h2>
+<p>When you find yourelf in a position that you need to see the exact state that an entity is in, you can get a string
+dump of that entity by using the <code>EntityDebug</code> directive:</p>
+<h2>Debugging Generated Code</h2>
 <p>If Necsus isn&apos;t behaving as you would expect, the best tool you&apos;ve got in your toolbox is the ability to dump the code
 that it generates. This allows you to walk through what is happening, or even substitute the generated code into your
 app and execute it. This can be enabled by compiling with the <code>-d:dump</code> flag set.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">necsus</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">A</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">debuggingSystem</span>(<span class="ide">query</span>: <span class="ide">Query</span>[(<span class="ide">A</span>, )], <span class="ide">debug</span>: <span class="ide">EntityDebug</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">eid</span>, <span class="ide">_</span> <span class="kwd">in</span> <span class="ide">query</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="ide">debug</span>(<span class="ide">eid</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myApp</span>() {<span class="op">.</span><span class="ide">necsus</span>([], [<span class="op">~</span><span class="ide">debuggingSystem</span>], [], <span class="ide">newNecsusConf</span>())<span class="op">.</span>}</div></div>  </code></pre>
 <h1>License</h1>
 <p>Code released under the <a href="https://github.com/NecsusECS/Necsus/blob/main/LICENSE">Apache 2.0 license</a></p>
 </document>
@@ -334,7 +338,7 @@ app and execute it. This can be enabled by compiling with the <code>-d:dump</cod
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-27T01:08:27Z
+        Builded at 2023-09-28T01:08:15Z
         </p>
       </div>
     </div>

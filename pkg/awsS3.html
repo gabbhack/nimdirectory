@@ -203,8 +203,9 @@ keyFrom        =&gt; 24/files/old.jpg
 </code></pre>
 <hr />
 <h2>s3MoveObjects*</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">s3MoveObjects</span><span class="op">*</span>(<span class="ide">creds</span>: <span class="ide">AwsCreds</span>, <span class="ide">bucketHost</span>, <span class="ide">bucketFromHost</span>, <span class="ide">bucketFromName</span>: <span class="ide">string</span>, <span class="ide">keys</span>: <span class="ide">seq</span>[<span class="ide">string</span>]) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">s3MoveObjects</span><span class="op">*</span>(<span class="ide">creds</span>: <span class="ide">AwsCreds</span>, <span class="ide">bucketHost</span>, <span class="ide">bucketFromHost</span>, <span class="ide">bucketFromName</span>: <span class="ide">string</span>, <span class="ide">keys</span>: <span class="ide">seq</span>[<span class="ide">string</span>], <span class="ide">waitValidate</span> <span class="op">=</span> <span class="num">0</span>, <span class="ide">waitDelete</span> <span class="op">=</span> <span class="num">0</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
 <p>In this (plural) multiple moves are performed. The keys are identical in &quot;from&quot; and &quot;to&quot;, so origin and destination are the same.</p>
+<p>The <code>waitValidate</code> and <code>waitDelete</code> are used to wait between the validation if the file exists and delete operation.</p>
 <hr />
 <h2>s3TrashObject*</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">s3TrashObject</span><span class="op">*</span>(<span class="ide">creds</span>: <span class="ide">AwsCreds</span>, <span class="ide">bucketTrashHost</span>, <span class="ide">bucketFromHost</span>, <span class="ide">bucketFromName</span>, <span class="ide">keyFrom</span>: <span class="ide">string</span>) {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div>  </code></pre>
@@ -312,7 +313,7 @@ and then run the following command:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-27T01:08:27Z
+        Builded at 2023-09-28T01:08:15Z
         </p>
       </div>
     </div>
