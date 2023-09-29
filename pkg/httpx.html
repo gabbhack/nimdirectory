@@ -103,8 +103,8 @@
 <h2>Hello world</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">options</span>, <span class="ide">asyncdispatch</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">httpx</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">onRequest</span>(<span class="ide">req</span>: <span class="ide">Request</span>): <span class="ide">Future</span>[<span class="ide">void</span>] <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">req</span><span class="op">.</span><span class="ide">httpMethod</span> <span class="op">==</span> <span class="ide">some</span>(<span class="ide">HttpGet</span>):</div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">req</span><span class="op">.</span><span class="ide">path</span><span class="op">.</span><span class="ide">get</span>()</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;/&quot;</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">req</span><span class="op">.</span><span class="ide">send</span>(<span class="str">&quot;Hello World&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">req</span><span class="op">.</span><span class="ide">send</span>(<span class="ide">Http404</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">run</span>(<span class="ide">onRequest</span>)</div></div>  </code></pre>
 <h2>Websocket support</h2>
-<p>https://github.com/xflywind/websocketx</p>
-<pre>  <code>nimble install https://github.com/xflywind/websocketx
+<p>https://github.com/ringabout/websocketx</p>
+<pre>  <code>nimble install https://github.com/ringabout/websocketx
 </code></pre>
 </document>
             
@@ -174,7 +174,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-09-28T01:08:15Z
+        Builded at 2023-09-29T01:08:07Z
         </p>
       </div>
     </div>
