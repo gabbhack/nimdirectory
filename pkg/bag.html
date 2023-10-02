@@ -90,39 +90,38 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><p align="center">
-  <img src="https://github.com/openpeep/bag/blob/main/.github/logo.png" style="max-width: 100%;" width="64px" /><br />
+  <img src="https://github.com/openpeeps/bag/blob/main/.github/logo.png" style="max-width: 100%;" width="64px" /><br />
   Validate HTTP input data in a fancy way.<br />👑 Written in Nim language
 </p>
 <p align="center">
   <code>nimble install bag</code>
 </p>
 <p align="center">
-  <a href="https://openpeep.github.io/bag">API reference</a><br />
-  <img src="https://github.com/openpeep/bag/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" /> | <img src="https://github.com/openpeep/bag/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
+  <a href="https://openpeeps.github.io/bag">API reference</a><br />
+  <img src="https://github.com/openpeeps/bag/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" /> | <img src="https://github.com/openpeep/bag/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
 </p>
 <h2>😍 Key Features</h2>
 <ul>
 <li>[x] Macro-based validation</li>
 <li>[x] Framework agnostic</li>
 <li>[x] i18n support</li>
-<li>[x] Based on <a href="https://github.com/openpeep/valido">Valido package</a></li>
+<li>[x] Based on <a href="https://github.com/openpeeps/valido">Valido package</a></li>
 <li>[x] Open Source | <code>MIT</code> License</li>
 <li>[x] Written in 👑 Nim language</li>
 </ul>
 <h2>Examples</h2>
-<p>The macro way</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># can be a seq/array containing a key/value tuple (string, string)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">data</span> <span class="op">=</span> [(<span class="str">&quot;email&quot;</span>, <span class="str">&quot;test@example.com&quot;</span>), (<span class="str">&quot;password&quot;</span>, <span class="str">&quot;123admin&quot;</span>)]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># create a new bag with given data</span></div></div><div class="line"><div class="line-content"><span class="ide">newBag</span> <span class="ide">data</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">email</span>: <span class="ide">TEmail</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.email&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">password</span>: <span class="ide">TPassword</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">min</span>: <span class="num">8</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password.min&quot;</span></div></div><div class="line"><div class="line-content">  <span class="op">*</span><span class="ide">remember</span>: <span class="ide">TCheckbox</span>  <span class="com"># Optional field. Default: false</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">Bag</span><span class="op">.</span><span class="ide">isInvalid</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">err</span> <span class="kwd">in</span> <span class="ide">Bag</span><span class="op">.</span><span class="ide">getErrors</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">err</span></div></div>  </code></pre>
-<p>For more examples, check in <a href="https://github.com/openpeep/bag/blob/main/tests/test1.nim">unittests</a></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># can be a seq/array containing a key/value tuple (string, string)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">data</span> <span class="op">=</span> [(<span class="str">&quot;email&quot;</span>, <span class="str">&quot;test@example.com&quot;</span>), (<span class="str">&quot;password&quot;</span>, <span class="str">&quot;123admin&quot;</span>)]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># create a new bag with given data</span></div></div><div class="line"><div class="line-content"><span class="ide">newBag</span> <span class="ide">data</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">email</span>: <span class="ide">tEmail</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.email&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">password</span>: <span class="ide">tPassword</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">min</span>: <span class="num">8</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password.min&quot;</span></div></div><div class="line"><div class="line-content">  <span class="op">*</span><span class="ide">remember</span>: <span class="ide">tCheckbox</span>  <span class="com"># `*` prefix makes field optional</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">Bag</span><span class="op">.</span><span class="ide">isInvalid</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">err</span> <span class="kwd">in</span> <span class="ide">Bag</span><span class="op">.</span><span class="ide">getErrors</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">err</span></div></div>  </code></pre>
+<p>For more examples, check in <a href="https://github.com/openpeeps/bag/blob/main/tests/test1.nim">unittests</a></p>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
-<li>🐛 Found a bug? <a href="https://github.com/openpeep/bag/issues">Create a new Issue</a></li>
-<li>👋 Wanna help? <a href="https://github.com/openpeep/bag/fork">Fork it!</a></li>
+<li>🐛 Found a bug? <a href="https://github.com/openpeeps/bag/issues">Create a new Issue</a></li>
+<li>👋 Wanna help? <a href="https://github.com/openpeeps/bag/fork">Fork it!</a></li>
 <li>😎 <a href="https://hetzner.cloud/?ref=Hm0mYGM9NxZ4">Get €20 in cloud credits from Hetzner</a></li>
 <li>🥰 <a href="https://www.paypal.com/donate/?hosted_button_id=RJK3ZTDWPL55C">Donate via PayPal address</a></li>
 </ul>
 <h3>🎩 License</h3>
-<p>Bag | MIT license. <a href="https://github.com/openpeep">Made by Humans from OpenPeep</a>.<br />
-Copyright © 2023 OpenPeep &amp; Contributors — All rights reserved.</p>
+<p>Bag | MIT license. <a href="https://github.com/openpeeps">Made by Humans from OpenPeeps</a>.<br />
+Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
 </document>
             
         </div>
@@ -191,7 +190,7 @@ Copyright © 2023 OpenPeep &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-01T01:16:54Z
+        Builded at 2023-10-02T01:09:02Z
         </p>
       </div>
     </div>
