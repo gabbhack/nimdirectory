@@ -31508,6 +31508,20 @@ const packages = [
     "description": "Multi backend HTTP fetching",
     "license": "MIT",
     "web": "https://github.com/thisago/unifetch"
+  },
+  {
+    "name": "sigui",
+    "url": "https://github.com/levovix0/sigui",
+    "method": "git",
+    "tags": [
+      "ui",
+      "gui",
+      "opengl",
+      "siwin"
+    ],
+    "description": "Easy to use and flexible UI framework in pure Nim",
+    "license": "MIT",
+    "web": "https://github.com/levovix0/sigui"
   }
 ]
 const options = {
