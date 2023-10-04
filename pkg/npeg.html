@@ -223,6 +223,7 @@ stage-two parser for lexed tokens.</p>
 <ul>
 <li>  <a href="#why-does-npeg-not-support-regular-peg-syntax">Why does NPeg not support regular PEG syntax?</a></li>
 <li>  <a href="#can-npeg-be-used-to-parse-ebnf-grammars">Can NPeg be used to parse EBNF grammars?</a></li>
+<li>  <a href="#npeg-and-generic-functions">NPeg and generic functions</a></li>
 </ul>
 </li>
 <li><a href="#examples">Examples</a>
@@ -1100,6 +1101,17 @@ your favorite editor.</p>
 some subtle but important differences which do not allow a literal translation
 from EBNF to PEG. Notable differences are left recursion and ordered choice.
 Also, see &quot;From EBNF to PEG&quot; from Roman R. Redziejowski.</p>
+<h3>NPeg and generic functions</h3>
+<p>Nim&apos;s macro system is sometimes finicky and not well defined, and NPeg seems to
+push it to the limit. This means that you might run into strange and
+unexpected issues, especially when mixing NPeg with generic code.</p>
+<p>If you run into weird error messages that do not seem to make sense when using
+NPeg from generic procs, check the links below for more information and
+possible workarounds:</p>
+<ul>
+<li>https://github.com/nim-lang/Nim/issues/22740</li>
+<li>https://github.com/zevv/npeg/issues/68</li>
+</ul>
 <h2>Examples</h2>
 <h3>Parsing arithmetic expressions</h3>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">parser</span> <span class="op">=</span> <span class="ide">peg</span> <span class="str">&quot;line&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">exp</span>      <span class="op">&lt;-</span> <span class="ide">term</span>   <span class="op">*</span> <span class="op">*</span>( ('+'<span class="op">|</span>'-') <span class="op">*</span> <span class="ide">term</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">term</span>     <span class="op">&lt;-</span> <span class="ide">factor</span> <span class="op">*</span> <span class="op">*</span>( ('*'<span class="op">|</span>'/') <span class="op">*</span> <span class="ide">factor</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">factor</span>   <span class="op">&lt;-</span> <span class="op">+</span>{'0'<span class="op">..</span>'9'} <span class="op">|</span> ('(' <span class="op">*</span> <span class="ide">exp</span> <span class="op">*</span> ')')</div></div><div class="line"><div class="line-content">  <span class="ide">line</span>     <span class="op">&lt;-</span> <span class="ide">exp</span> <span class="op">*</span> <span class="op">!</span><span class="num">1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">doAssert</span> <span class="ide">parser</span><span class="op">.</span><span class="ide">match</span>(<span class="str">&quot;3*(4+15)+2&quot;</span>)<span class="op">.</span><span class="ide">ok</span></div></div>  </code></pre>
@@ -1229,7 +1241,7 @@ ideas on how to improve this.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-03T01:08:56Z
+        Builded at 2023-10-04T01:10:01Z
         </p>
       </div>
     </div>
