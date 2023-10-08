@@ -86,29 +86,23 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>CodeGenLib</h1>
-<p>A code generation library for other programming languages, in Nim! This is really made for projects such as <a href="https://github.com/Mythical-Forest-Collective/Nimpiler">Nimpiler</a>, but it can be used in anything really! If you&apos;re using CodeGenLib in your own project, make a github issue to let us know and we can add it to the list here!</p>
-<h2>How To Install</h2>
-<p>To install CodeGenLib, just do <code>nimble install CodeGenLib</code>!</p>
-<h2>Currently Implemented Languages</h2>
+<p>A library made for the sole purpose of code generation, for use in things such as for codegen in compilers.
+This project is going to be used in a W.I.P project of mine for Java codegen with Nim.</p>
+<p>This package is listed on Nimble and can be installed with <code>nimble install CodeGenLib</code>.</p>
+<h2>Currently Supported</h2>
 <ul>
 <li>Java
 <ul>
-<li>Mostly complete, just need to implement a way to create &apos;bindings&apos; to Java modules so they can be used near seamlessly within the code.</li>
+<li>This is a small subset of Java.</li>
 </ul>
 </li>
 </ul>
-<h2>Languages To Implement</h2>
+<h2>To-Do</h2>
 <ul>
-<li>Lua 5.1
-<ul>
-<li>Reason why we want to implement Lua 5.1 specifically is so we can find ways around gotos, so more of Nim&apos;s semantics can be translated more accurately to Lua (though not against adding things such as <code>goto</code>s, or other features from future versions).</li>
-</ul>
-</li>
-<li>Python 3.8
-<ul>
-<li>Python 3.8 EoL is in 2 years approx (as of the time writing this) and I think it&apos;d be one of the more common versions for a while, meaning it just makes sense to support this instead of anything newer (for now).</li>
-</ul>
-</li>
+<li>[ ] For the love of god please properly reorganise this so it&apos;s semi-sane.</li>
+<li>[ ] Look into using ropes rather than string manipulation? Unsure how it works.</li>
+<li>[ ] Implement enum/record/interface/abstract class support.</li>
+<li>[ ] Document the code properly and clearly.</li>
 </ul>
 </document>
             
@@ -178,7 +172,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-07T01:07:44Z
+        Builded at 2023-10-08T01:12:57Z
         </p>
       </div>
     </div>
