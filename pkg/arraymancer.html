@@ -122,6 +122,10 @@ It can also use the OpenMP, Cuda or OpenCL backends.</p>
 <li><code>-d:openblas</code>: Use OpenBLAS</li>
 <li>by default Arraymancer will try to use your default <code>blas.so/blas.dll</code>
 Archlinux users may have to specify <code>-d:blas=cblas</code>.
+Windows users may have to download <code>libopenblas.dll</code> from the binary releases
+section of <a href="https://www.openblas.net">openblas</a>, extract it to the compilation
+output folder and specify <code>-d:blas=libopenblas -d:lapack=libopenblas</code> when compiling
+(or set those options on your <code>nim.cfg</code> file).
 See <a href="https://github.com/unicredit/nimblas">nimblas</a> for further configuration.</li>
 <li><code>-d:cuda</code>: Build with Cuda support</li>
 <li><code>-d:cudnn</code>: Build with CuDNN support, implies <code>cuda</code>.</li>
@@ -536,7 +540,7 @@ Also CudaTensors and CLTensors can only be float32 or float64 while CpuTensors c
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-08T01:12:57Z
+        Builded at 2023-10-09T01:08:32Z
         </p>
       </div>
     </div>

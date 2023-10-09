@@ -99,8 +99,11 @@ simply <code>axpy</code>, and the correct version is chosen by checking the size
 parameters at the usage site.</p>
 <p>Only a subset of BLAS is available under <code>nimblas</code>, with more operations added
 on necessity.</p>
-<p>For a higher-level linear algebra library based on this, check out
-<a href="http://unicredit.github.io/neo/">neo</a>.</p>
+<p>For a higher-level linear algebra library based on this, check out</p>
+<ul>
+<li>  <a href="https://andreaferretti.github.io/neo/">neo</a></li>
+<li><a href="https://github.com/mratsim/Arraymancer">arraymancer</a>.</li>
+</ul>
 <h2>Linking BLAS implementations</h2>
 <p>The library requires to link some BLAS implementation to perform the actual
 linear algebra operations. By default, it tries to link whatever is the default
@@ -109,24 +112,27 @@ system-wide BLAS implementation.</p>
 <ul>
 <li>changing the path for linked libraries (use
 <a href="https://nim-lang.org/docs/nimc.html#compiler-usage-command-line-switches">  <code>--clibdir</code></a>
-for this)</li>
-<li>using the <code>--define:blas</code> flag. By default, the system tries to load a BLAS
-library called <code>blas</code>, which translates into something called <code>blas.dll</code>
-or <code>libblas.so</code> according to the underling operating system. To link,
-say, the library <code>libopenblas.so.3</code> on Linux, you should pass to Nim the
-option <code>--define:blas=openblas</code>.</li>
+for this).</li>
+<li>using the <code>--define:blas</code> flag. By default (i.e. if you don&apos;t set this flag), the system
+tries to load a BLAS library by looking for the most common blas library file names according
+to the underling operating system (e.g. <code>blas.dll</code>, <code>openblas.dll</code>, <code>libopenblas.dll</code>,
+<code>mkl_intel_lp64.dll</code> in Windows, <code>libblas.so</code>, <code>libcblas.so</code> or <code>libopenblas.so</code> on Linux, etc).
+However, if you want to link to one specific library, skipping the automatic search, you can
+specify it with this flag. For instance, the Linux Arch distribution and its derivatives (such
+as Manjaro) expose the C API for BLAS inside a library called <code>libcblas.so</code> (unlike most other
+distributions that put it into <code>libblas.so</code>). To explicitly link with that library, you can set
+<code>--define:blas=cblas</code>. Note the missing <code>lib</code> prefix and <code>.so</code> suffix, which nimblas adds automatically
+(similarly on windows you should not include the <code>.dll</code> extension when setting this flag).</li>
 </ul>
-<p>For instance, the Linux Arch distribution and its derivatives (such as Manjaro)
-expose the C API for BLAS inside a library called <code>libcblas.so</code> (unlike most
-other distributions that put it into <code>libblas.so</code>). In this case, you can make
-use of this library with the flag <code>--define:blas=cblas</code>. For more examples, see
-the tasks inside <a href="https://github.com/unicredit/nimblas/blob/master/nimblas.nimble">nimblas.nimble</a>.</p>
+<p>For more examples, see the tasks inside <a href="https://github.com/SciNim/nimblas/blob/master/nimblas.nimble">nimblas.nimble</a>.</p>
 <p>(Previously there was a more ad hoc mechanism using flags called <code>-d:atlas</code>,
 <code>-d:openblas</code> or <code>-d:mkl</code>, which is deprecated as of NimBLAS 0.2.)</p>
 <p>Packages for various BLAS implementations are available from the package
 managers of many Linux distributions. On OSX one can add the brew formulas
 from <a href="https://github.com/Homebrew/homebrew-science">Homebrew Science</a>, such
-as <code>brew install homebrew/science/openblas</code>.</p>
+as <code>brew install homebrew/science/openblas</code>. On Windows you can download pre-built
+binaries from the <a href="https://github.com/OpenMathLib/OpenBLAS/releases">OpenBLAS github repository</a>
+and add the library folder to your PATH or copy it into your executable folder.</p>
 <p>You may also need to add suitable paths for the includes and library dirs.
 On OSX, this should do the trick</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">switch</span>(<span class="str">&quot;clibdir&quot;</span>, <span class="str">&quot;/usr/local/opt/openblas/lib&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">switch</span>(<span class="str">&quot;cincludes&quot;</span>, <span class="str">&quot;/usr/local/opt/openblas/include&quot;</span>)</div></div>  </code></pre>
@@ -202,7 +208,7 @@ the options</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-08T01:12:57Z
+        Builded at 2023-10-09T01:08:32Z
         </p>
       </div>
     </div>
