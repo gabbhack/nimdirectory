@@ -35,7 +35,9 @@ const packages = [
       "guid"
     ],
     "description": "A ULID implementation in Nim!",
-    "license": "CC0"
+    "license": "CC0",
+    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/NULID",
+    "doc": "https://yu-vitaqua-fer-chronos.github.io/NULID/"
   },
   {
     "name": "crockfordb32",
@@ -24115,7 +24117,7 @@ const packages = [
   },
   {
     "name": "preserves",
-    "url": "https://git.sr.ht/~ehmry/preserves-nim",
+    "url": "https://git.syndicate-lang.org/ehmry/preserves-nim",
     "method": "git",
     "tags": [
       "binary",
@@ -24337,7 +24339,7 @@ const packages = [
   },
   {
     "name": "syndicate",
-    "url": "https://git.sr.ht/~ehmry/syndicate-nim",
+    "url": "https://git.syndicate-lang.org/ehmry/syndicate-nim",
     "method": "git",
     "tags": [
       "actors",
@@ -28004,16 +28006,18 @@ const packages = [
   },
   {
     "name": "codegenlib",
-    "url": "https://github.com/Mythical-Forest-Collective/CodeGenLib",
+    "url": "https://github.com/Yu-Vitaqua-fer-Chronos/CodeGenLib",
     "method": "git",
     "tags": [
       "library",
       "codegen",
-      "codegeneration"
+      "codegeneration",
+      "java"
     ],
-    "description": "A simple code generation library for other programming languages!",
+    "description": "A simple code generation library for other programming languages.",
     "license": "MIT",
-    "web": "https://github.com/Mythical-Forest-Collective/CodeGenLib"
+    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/CodeGenLib",
+    "doc": "https://yu-vitaqua-fer-chronos.github.io/CodeGenLib/"
   },
   {
     "name": "safeset",
