@@ -102,12 +102,12 @@ in your project, we support encoding or decoding of those types too!</p>
 <p><a href="https://github.com/status-im/nim-stint">  <code>stint</code></a> support is
 unimplemented, but planned to be added in the future.</p>
 <p>This project is also licensed under CC0, so it can be used in any way,
-shape or form! No credit needed!</p>
+shape or form! No credit needed (but still appreciated)!</p>
 <h2>Usage</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">crockfordb32</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">encoded</span> <span class="op">=</span> <span class="ide">int</span><span class="op">.</span><span class="ide">encode</span>(<span class="num">2829</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">encoded</span>  <span class="com"># Output is `2RD`</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">decoded</span> <span class="op">=</span> <span class="ide">int</span><span class="op">.</span><span class="ide">decode</span>(<span class="str">&quot;2RD&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">decoded</span>  <span class="com"># Output is `2829`</span></div></div>  </code></pre>
 <p>The <code>encode</code> functions additionally have a length parameter allowing
-you to truncate the generated string, by default, there&apos;s a limit of
-100 characters.</p>
+you to pad the generated string (for example, ULIDs must be 26
+characters long).</p>
 </document>
             
         </div>
@@ -120,6 +120,8 @@ you to truncate the generated string, by default, there&apos;s a limit of
                     </p>
                 
 
+                
+                    <p> <a href="https://github.com/Yu-Vitaqua-fer-Chronos/Crockford-Base32-Nim">Project website</a> </p>
                 
 
                 
@@ -174,7 +176,7 @@ you to truncate the generated string, by default, there&apos;s a limit of
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-10T01:08:00Z
+        Builded at 2023-10-11T01:08:12Z
         </p>
       </div>
     </div>

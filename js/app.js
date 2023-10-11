@@ -9,7 +9,9 @@ const packages = [
       "mc"
     ],
     "description": "ModernNet is a barebones library to interact with the Minecraft Java Edition protocol!",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0",
+    "web": "https://github.com/Nimberite-Development/ModernNet",
+    "doc": "https://nimberite-development.github.io/ModernNet/"
   },
   {
     "name": "worldtree",
@@ -51,7 +53,9 @@ const packages = [
       "decode"
     ],
     "description": "A simple implementation of Crockford Base32.",
-    "license": "CC0"
+    "license": "CC0",
+    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/Crockford-Base32-Nim",
+    "doc": "https://yu-vitaqua-fer-chronos.github.io/Crockford-Base32-Nim/"
   },
   {
     "name": "rtmidi",
@@ -31538,6 +31542,21 @@ const packages = [
     "description": "Easy to use and flexible UI framework in pure Nim",
     "license": "MIT",
     "web": "https://github.com/levovix0/sigui"
+  },
+  {
+    "name": "webidl2nim",
+    "url": "https://github.com/ASVIEST/webidl2nim",
+    "method": "git",
+    "tags": [
+      "web",
+      "webidl",
+      "js",
+      "javascript",
+      "tool"
+    ],
+    "description": "webidl to Nim bindings generator",
+    "license": "MIT",
+    "web": "https://github.com/ASVIEST/webidl2nim"
   }
 ]
 const options = {
