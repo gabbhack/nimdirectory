@@ -100,7 +100,7 @@
                 <document><div align="center">
 <h1>Unifetch</h1>
 <h4>Multi backend HTTP fetching</h4>
-<p><strong><a href="#about">About</a> - <a href="#why">Why?</a> - <a href="#usage">Usage</a></strong> - <a href="#license">License</a></p>
+<p><strong><a href="#about">About</a> - <a href="#features">Features</a> - <a href="#why">Why?</a> - <a href="#usage">Usage</a></strong> - <a href="#license">License</a></p>
 <blockquote>
 <p><strong>Warning</strong>
 Not all backends are implemented.</p>
@@ -108,6 +108,23 @@ Not all backends are implemented.</p>
 </div>
 <h2>About</h2>
 <p>Unified fetching</p>
+<h2>Features</h2>
+<ul>
+<li>Supported backends
+<ul>
+<li>[x] C-like</li>
+<li>[x] Javascript
+<ul>
+<li>[x] Web (async XMLHttpRequest)</li>
+<li>[x] NodeJS (std http/https)</li>
+<li>[ ] Userscript (GM API)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[x] Sharable request caching over backends and others binaries</li>
+<li>[x] Request Curl representation</li>
+</ul>
 <h2>Why?</h2>
 <p>Compile the same code to any backend with extra features!</p>
 <h3>Development features</h3>
@@ -128,9 +145,10 @@ entry</p>
 <h2>TODO</h2>
 <ul>
 <li>[ ] Javascript Backend
+<!--  - [ ] Use fetch for web  -->
 <ul>
-<li>[ ] NodeJS</li>
-<li>[ ] Userscript</li>
+<li>[ ] Userscript (GM API)</li>
+<li>[ ] Implement proxy at NodeJS backend</li>
 </ul>
 </li>
 <li>[ ] Add tests</li>
@@ -210,7 +228,7 @@ entry</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-13T01:10:22Z
+        Builded at 2023-10-14T01:06:52Z
         </p>
       </div>
     </div>
