@@ -31557,6 +31557,18 @@ const packages = [
     "description": "webidl to Nim bindings generator",
     "license": "MIT",
     "web": "https://github.com/ASVIEST/webidl2nim"
+  },
+  {
+    "name": "nimzip",
+    "url": "https://github.com/thechampagne/nimzip",
+    "method": "git",
+    "tags": [
+      "zip",
+      "binding"
+    ],
+    "description": "Binding for a portable, simple zip library",
+    "license": "MIT",
+    "web": "https://github.com/thechampagne/nimzip"
   }
 ]
 const options = {
