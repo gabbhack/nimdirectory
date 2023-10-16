@@ -96,6 +96,8 @@
                 <document><h1>NULID</h1>
 <p>This is an implementation of the <a href="https://github.com/ulid/spec">ULID</a>
 spec in Nim!</p>
+<h2>Compile Flags</h2>
+<p><code>-d:nulidInsecureRandom</code>: Uses <code>std/random</code> instead of <code>std/sysrand</code>.</p>
 <h2>Usage</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">gen</span> <span class="op">=</span> <span class="ide">NULIDGenerator</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">nulid</span> <span class="op">=</span> <span class="ide">gen</span><span class="op">.</span><span class="ide">nulidSync</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">nulid</span></div></div>  </code></pre>
 </document>
@@ -166,7 +168,7 @@ spec in Nim!</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-15T01:13:07Z
+        Builded at 2023-10-16T01:09:48Z
         </p>
       </div>
     </div>
