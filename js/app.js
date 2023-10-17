@@ -31569,6 +31569,19 @@ const packages = [
     "description": "Binding for a portable, simple zip library",
     "license": "MIT",
     "web": "https://github.com/thechampagne/nimzip"
+  },
+  {
+    "name": "bz",
+    "url": "https://github.com/pcarrier/bz",
+    "method": "git",
+    "tags": [
+      "unix",
+      "cli",
+      "utils"
+    ],
+    "description": "A few CLI utilities",
+    "license": "0BSD",
+    "web": "https://github.com/pcarrier/bz"
   }
 ]
 const options = {
