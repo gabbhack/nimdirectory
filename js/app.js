@@ -31514,6 +31514,36 @@ const packages = [
     "web": "https://github.com/crashappsec/chalk"
   },
   {
+    "name": "fedi_auth",
+    "url": "https://codeberg.org/pswilde/fedi_auth",
+    "method": "git",
+    "tags": [
+      "library",
+      "fediverse",
+      "mastodon",
+      "gotosocial",
+      "pleroma",
+      "mastoapi"
+    ],
+    "description": "A basic library to authenticate to fediverse instances",
+    "license": "GPLv3",
+    "web": "https://codeberg.org/pswilde/fedi_auth"
+  },
+  {
+    "name": "gts_emoji_importer",
+    "url": "https://codeberg.org/pswilde/gts_emoji_importer",
+    "method": "git",
+    "tags": [
+      "library",
+      "emojis",
+      "fediverse",
+      "gotosocial"
+    ],
+    "description": "A tool for admins to import custom emojis into GoToSocial",
+    "license": "GPLv3",
+    "web": "https://codeberg.org/pswilde/gts_emoji_importer"
+  },
+  {
     "name": "unifetch",
     "url": "https://github.com/thisago/unifetch",
     "method": "git",
@@ -31595,6 +31625,20 @@ const packages = [
     "description": "An unofficial wrapper to Hyprland's IPC layer",
     "license": "GPLv3",
     "web": "https://github.com/xTrayambak/hyprland_ipc"
+  },
+  {
+    "name": "gemmaJSON",
+    "url": "https://github.com/sainttttt/gemmaJSON",
+    "method": "git",
+    "tags": [
+      "simd",
+      "json",
+      "parser",
+      "wrapper"
+    ],
+    "description": "json parsing library based on bindings of simdjson",
+    "license": "MIT",
+    "web": "https://github.com/sainttttt/gemmaJSON"
   }
 ]
 const options = {
