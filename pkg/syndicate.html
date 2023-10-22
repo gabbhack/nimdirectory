@@ -130,10 +130,7 @@ Says = &lt;Says @who string @what string&gt;.
 <h2>Examples</h2>
 <h3>  <a href="./tests/test_chat.nim">test_chat</a></h3>
 <p>Simple chat demo that is compatible with <a href="https://git.syndicate-lang.org/syndicate-lang/syndicate-py/src/branch/main/chat.py">chat.py</a>.</p>
-<pre>  <code class="language-sh">nim c -r tests/test_chat.nim \
-    --cap:&apos;&lt;ref {oid: &quot;syndicate&quot; sig: #x&quot;69ca300c1dbfa08fba692102dd82311a&quot;}&gt;&apos; \
-    --transport:&apos;&lt;tcp &quot;127.0.0.1&quot; 666&gt;&apos; \
-    --user:fnord
+<pre>  <code class="language-sh">SYNDICATE_ROUTE=&apos;&lt;route [&lt;unix &quot;/run/user/1000/dataspace&quot;&gt;] [&lt;ref {oid: &quot;syndicate&quot; sig: #x&quot;69ca300c1dbfa08fba692102dd82311a&quot;}&gt;]&gt;&apos; nim c -r tests/test_chat.nim --user:fnord
 </code></pre>
 <h3>  <a href="https://git.syndicate-lang.org/ehmry/xdg_open_ng">xdg_open_ng</a></h3>
 <p>Messaging, UNIX sockets, dynamic configuration, <a href="https://synit.org/book/operation/system-bus.html">Syndicate server</a> interaction.</p>
@@ -208,7 +205,7 @@ Says = &lt;Says @who string @what string&gt;.
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-21T01:06:48Z
+        Builded at 2023-10-22T01:13:01Z
         </p>
       </div>
     </div>
