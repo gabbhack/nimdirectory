@@ -31663,6 +31663,21 @@ const packages = [
     "description": "Yet another CLI option parser generator for Nim.",
     "license": "MIT",
     "web": "https://github.com/xjzh123/clim"
+  },
+  {
+    "name": "htmlparser",
+    "url": "https://github.com/nim-lang/htmlparser",
+    "method": "git",
+    "tags": [
+      "parser",
+      "HTML",
+      "official",
+      "web",
+      "library"
+    ],
+    "description": "Parse a HTML document in Nim.",
+    "license": "MIT",
+    "web": "https://github.com/nim-lang/htmlparser"
   }
 ]
 const options = {
