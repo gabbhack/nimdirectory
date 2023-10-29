@@ -31678,6 +31678,18 @@ const packages = [
     "description": "Parse a HTML document in Nim.",
     "license": "MIT",
     "web": "https://github.com/nim-lang/htmlparser"
+  },
+  {
+    "name": "stackclosures",
+    "url": "https://github.com/guibar64/stackclosures",
+    "method": "git",
+    "tags": [
+      "closures",
+      "optimization"
+    ],
+    "description": "Allocate closures on stack",
+    "license": "MIT",
+    "web": "https://github.com/guibar64/stackclosures"
   }
 ]
 const options = {
