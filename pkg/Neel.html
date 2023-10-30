@@ -217,6 +217,12 @@ example:</p>
 example:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">gc</span>:<span class="ide">orc</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
 <p>When compiling for Windows, also compile with the <code>--app:gui</code> flag. This will prevent the app opening up with the terminal.</p>
+<h4>Final Thoughts Before Developing With Neel</h4>
+<p>Keep the following in mind when developing you Neel App:</p>
+<ul>
+<li>All of your frontend assets are embedded into the binary at compile-time. For now you&apos;ll need to recompile when modifying/changing static frontend assets.</li>
+<li>To prevent crashes when users spam refresh or constantly switch between different pages, we implemented a sort of countdown timer for shutting down. Approximately 10 seconds after closing the app window, the server and program is killed if a websocket hasn&apos;t reconnected within that time period. Just keep that in mind before doing CTL+C in the terminal during testing.</li>
+</ul>
 <h2>Examples</h2>
 <p>A simple Neel app that picks a random filename out of a given folder (something impossible from a browser):</p>
 <p>  <a href="https://github.com/Niminem/Neel/tree/master/examples">Random File Picker</a></p>
@@ -299,7 +305,7 @@ example:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-29T01:12:16Z
+        Builded at 2023-10-30T01:08:58Z
         </p>
       </div>
     </div>
