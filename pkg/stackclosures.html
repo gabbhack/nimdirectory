@@ -94,8 +94,8 @@
 <ul>
 <li>the current implementation is quite eager to transform any inner proc to a closure even non-capturing ones, use explicit annotations like <code>nimcall</code> to avoid that.</li>
 <li>Should not be compatible with <code>--mm:refc</code> (tests do pass but it may be an happy accident)</li>
-<li><code>sugar.=&gt;</code> does not work (yet)</li>
 <li>capturing parameters is allowed, caution is advised. Currently, <code>openArray</code> is not supported.</li>
+<li>generics are not supported (the implementation use typed AST but generics are mostly untyped)</li>
 <li>compatibility with regular Nim closures implies allocating some space for ref-like bookkeeping, that is an overhead of <code>2*sizeof(int)</code>
 for ARC and <code>3*sizeof(int)</code> for ORC</li>
 <li>the current implementation use one environment per containing function, it works OK for this limited purpose but it could be improved</li>
@@ -168,7 +168,7 @@ for ARC and <code>3*sizeof(int)</code> for ORC</li>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-30T01:08:58Z
+        Builded at 2023-10-31T01:09:07Z
         </p>
       </div>
     </div>

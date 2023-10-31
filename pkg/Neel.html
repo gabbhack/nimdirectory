@@ -118,7 +118,7 @@
 <ul>
 <li>Eliminate 99% of boilerplate code</li>
 <li>Automatic routes</li>
-<li>Embeds frontend assets at compiletime</li>
+<li>Embeds frontend assets at compiletime (on <code>release</code> builds)</li>
 <li>Automatic type conversions (from JSON to each procedure&apos;s parameter types)</li>
 <li>Simple interface for backend/frontend communication</li>
 <li>Cross-platform (tested on Mac, Windows, and Linux)</li>
@@ -213,19 +213,21 @@ example:</p>
 <p>Now open the console in Chrome developer tools and you should see &quot;Hello from Nim!&quot;.</p>
 <p><strong>IMPORTANT: Be sure to use absolute paths within your HTML files</strong> ex: <code>&lt;script src=&quot;/this_js_module.js&gt;&lt;/script&gt;</code></p>
 <h4>Compilation Step</h4>
-<p>If using nim 1.6.X, compile your Neel application with <code>--threads:on</code> and <code>--gc:orc</code>. Nim &gt;= 2.0.0 does this by default.
+<p>If using nim 1.6.X, compile your Neel application with <code>--threads:on</code> and <code>--mm:orc</code>. <em>Nim &gt;= 2.0.0 does this by default.</em>
 example:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">gc</span>:<span class="ide">orc</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
-<p>When compiling for Windows, also compile with the <code>--app:gui</code> flag. This will prevent the app opening up with the terminal.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">mm</span>:<span class="ide">orc</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
+<p>When compiling for Windows, also compile with the <code>--app:gui</code> flag. This will prevent the app opening up with the terminal.
+example:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">mm</span>:<span class="ide">orc</span> <span class="op">--</span><span class="ide">app</span>:<span class="ide">gui</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
 <h4>Final Thoughts Before Developing With Neel</h4>
 <p>Keep the following in mind when developing you Neel App:</p>
 <ul>
-<li>All of your frontend assets are embedded into the binary at compile-time. For now you&apos;ll need to recompile when modifying/changing static frontend assets.</li>
+<li>All of your frontend assets are embedded into the binary when compiling a <code>release</code> build. Stick to debug builds when needing to modify/change static frontend assets, as you can simply refresh a page and see the updates in real-time.</li>
 <li>To prevent crashes when users spam refresh or constantly switch between different pages, we implemented a sort of countdown timer for shutting down. Approximately 10 seconds after closing the app window, the server and program is killed if a websocket hasn&apos;t reconnected within that time period. Just keep that in mind before doing CTL+C in the terminal during testing.</li>
 </ul>
 <h2>Examples</h2>
 <p>A simple Neel app that picks a random filename out of a given folder (something impossible from a browser):</p>
-<p>  <a href="https://github.com/Niminem/Neel/tree/master/examples">Random File Picker</a></p>
+<p>  <a href="https://github.com/Niminem/Neel/tree/master/examples/FilePicker">Random File Picker</a></p>
 <h2>Neel version 1.0.0 Newly Released 10/28/23</h2>
 <p>Neel now leverages the power of <a href="https://github.com/guzba/mummy">Mummy</a> for websever / websocket needs. Mummy returns to the ancient way of threads, removing the need for async entirely. Historically Neel applications ran into async problems in certain situations. For example, try/except blocks were necessary in some exposed procedures yet using async procedures within an except block is a no go.</p>
 <h2>Future Work</h2>
@@ -305,7 +307,7 @@ example:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-10-30T01:08:58Z
+        Builded at 2023-10-31T01:09:07Z
         </p>
       </div>
     </div>
