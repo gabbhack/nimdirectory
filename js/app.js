@@ -312,6 +312,14 @@ const packages = [
     "license": "MIT"
   },
   {
+    "name": "arrayutils",
+    "url": "https://github.com/choltreppe/arrayutils",
+    "method": "git",
+    "tags": ["array"],
+    "description": "map/mapIt for arrays",
+    "license": "MIT"
+  },
+  {
     "name": "geolocation",
     "url": "https://github.com/HazeCS/geolocation",
     "method": "git",
@@ -31690,6 +31698,17 @@ const packages = [
     "description": "Allocate closures on stack",
     "license": "MIT",
     "web": "https://github.com/guibar64/stackclosures"
+  },
+  {
+    "name": "astiife",
+    "url": "https://github.com/xjzh123/astiife",
+    "method": "git",
+    "tags": [
+      "macros"
+    ],
+    "description": "AST IIFE for nim. Generate code with AST.",
+    "license": "MIT",
+    "web": "https://github.com/xjzh123/astiife"
   }
 ]
 const options = {
