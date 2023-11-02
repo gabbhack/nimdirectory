@@ -95,7 +95,7 @@
             
                 <document><h1>NULID</h1>
 <p>This is an implementation of the <a href="https://github.com/ulid/spec">ULID</a>
-spec in Nim!</p>
+spec in Nim! This also supports the JS backend for ULID generation!</p>
 <p>This supports <a href="https://github.com/treeform/jsony">  <code>jsony</code></a> and
 <a href="https://github.com/treeform/debby">  <code>debby</code></a> out of the box too!</p>
 <p>Random fun fact: I coded the initial code for ULID generation on my phone
@@ -103,6 +103,7 @@ via Termux!</p>
 <h2>Compile Flags</h2>
 <p><code>-d:nulidInsecureRandom</code>: Uses <code>std/random</code> instead of <code>std/sysrand</code>.</p>
 <p><code>-d:nulidNoLocks</code>: Disables any usage of locks within the program.</p>
+<p>The JS backend automatically defines <code>-d:nulidNoLocks</code>.</p>
 <h2>Usage</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">gen</span> <span class="op">=</span> <span class="ide">initUlidGenerator</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">ulid</span> <span class="op">=</span> <span class="ide">gen</span><span class="op">.</span><span class="ide">ulid</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">ulid</span></div></div>  </code></pre>
 </document>
@@ -173,7 +174,7 @@ via Termux!</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-01T01:12:53Z
+        Builded at 2023-11-02T01:08:28Z
         </p>
       </div>
     </div>

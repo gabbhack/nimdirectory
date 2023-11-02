@@ -315,7 +315,9 @@ const packages = [
     "name": "arrayutils",
     "url": "https://github.com/choltreppe/arrayutils",
     "method": "git",
-    "tags": ["array"],
+    "tags": [
+      "array"
+    ],
     "description": "map/mapIt for arrays",
     "license": "MIT"
   },
@@ -15542,6 +15544,63 @@ const packages = [
     "description": "High-level wrapper for Linux's kmod library",
     "license": "ISC",
     "web": "https://github.com/alaviss/kmod"
+  },
+  {
+    "name": "nostr",
+    "url": "https://github.com/theAkito/nim-nostr",
+    "method": "git",
+    "tags": [
+      "akito",
+      "nostr",
+      "nostrich",
+      "relay",
+      "api",
+      "node",
+      "cluster",
+      "note",
+      "notes",
+      "amethyst",
+      "social",
+      "protocol",
+      "nip",
+      "nipple",
+      "security",
+      "pgp",
+      "gpg",
+      "bitcoin",
+      "twitter",
+      "mastodon",
+      "bluesky",
+      "blog",
+      "blogging",
+      "microblog",
+      "microblogging"
+    ],
+    "description": "NOSTR Protocol implementation.",
+    "license": "GPL-3.0-or-later"
+  },
+  {
+    "name": "zoominvitr",
+    "url": "https://github.com/theAkito/zoominvitr",
+    "method": "git",
+    "tags": [
+      "akito",
+      "zoom",
+      "meeting",
+      "conference",
+      "video",
+      "schedule",
+      "invite",
+      "invitation",
+      "social",
+      "jitsi",
+      "bigbluebutton",
+      "bluejeans",
+      "api",
+      "docker"
+    ],
+    "description": "Automatically send invitations regarding planned Zoom meetings.",
+    "license": "AGPL-3.0-or-later"
   },
   {
     "name": "couchdb",
@@ -31132,6 +31191,18 @@ const packages = [
     "web": "https://gitlab.com/prashere/battinfo"
   },
   {
+    "name": "anycallconv",
+    "url": "https://github.com/sls1005/anycallconv",
+    "method": "git",
+    "tags": [
+      "macro",
+      "sugar"
+    ],
+    "description": "A macro to create special procedural types for parameters.",
+    "license": "MIT",
+    "web": "https://github.com/sls1005/anycallconv"
+  },
+  {
     "name": "bcs",
     "url": "https://github.com/C-NERD/nimBcs",
     "method": "git",
@@ -31709,6 +31780,21 @@ const packages = [
     "description": "AST IIFE for nim. Generate code with AST.",
     "license": "MIT",
     "web": "https://github.com/xjzh123/astiife"
+  },
+  {
+    "name": "cap10",
+    "url": "https://github.com/crashappsec/cap10",
+    "method": "git",
+    "tags": [
+      "terminal",
+      "expect",
+      "pty",
+      "capture",
+      "replay"
+    ],
+    "description": "A tool to capture and replay command line terminal sessions",
+    "license": "Apache-2.0",
+    "web": "https://github.com/crashappsec/cap10"
   }
 ]
 const options = {

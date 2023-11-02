@@ -135,7 +135,7 @@
 <h2>Usage</h2>
 <h3>Directory Structure</h3>
 <p>Currently, Neel applications consist of various static web assets (HTML,CSS,JS, etc.) and Nim modules.</p>
-<p>All of the frontend files need to be placed within a single folder (they can be further divided into folders inside it if necessary). The starting URL must be named <code>index.html</code> and placed within the root of the web folder.</p>
+<p>All of the frontend files need to be placed within a single folder (they can be further divided into more folders within it if necessary). The starting URL must be named <code>index.html</code> and placed within the root of the web folder.</p>
 <pre>  <code>main.nim            &lt;----\
 database.nim        &lt;-------- Nim files
 other.nim           &lt;----/
@@ -152,23 +152,32 @@ other.nim           &lt;----/
 <p>(main.nim)</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neel</span> <span class="com">#1</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">exposeProcs</span>: <span class="com">#2</span></div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">echoThis</span>(<span class="ide">jsMsg</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;got this from frontend: &quot;</span> <span class="op">&amp;</span> <span class="ide">jsMsg</span></div></div><div class="line"><div class="line-content">        <span class="ide">callJs</span>(<span class="str">&quot;logThis&quot;</span>, <span class="str">&quot;Hello from Nim!&quot;</span>) <span class="com">#3</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">startApp</span>(<span class="ide">webDirPath</span><span class="op">=</span><span class="str">&quot;path-to-web-assets-folder&quot;</span>) <span class="com">#4</span></div></div>  </code></pre>
 <h5 />
-<p>When you <code>import neel</code>, several modules are exported into the calling module. <code>exposedProcs</code> and <code>startApp</code> are macros that require these modules in order to work properly.</p>
-<p>One of the exported modules includes <code>json</code>, which is needed should you have params in your procedures that are of type <code>seq</code> or <code>table</code>. More on this below.</p>
+<p>When you <code>import neel</code>, several modules are exported into the calling module. <code>exposedProcs</code> and <code>startApp</code> are macros that require these modules in order to work properly. The list below are all of the exported modules. It&apos;s not necessary to remember them, and even if you accidently imported the module twice Nim disregards it. This is just for your reference really.</p>
+<ul>
+<li>  <code>std/os</code></li>
+<li>  <code>std/osproc</code></li>
+<li>  <code>std/strutils</code></li>
+<li>  <code>std/json</code></li>
+<li>  <code>std/threadpool</code></li>
+<li>  <code>std/browsers</code></li>
+<li>  <code>std/jsonutils</code></li>
+<li>  <code>pkg/mummy</code></li>
+<li>  <code>pkg/routers</code></li>
+</ul>
 <h5 />
 <p><code>exposeProcs</code> is a macro that <em>exposes</em> specific procedures for javascript to be able to call from the frontend. When the macro is expanded, it creates a procedure <code>callNim</code> which contains <strong>all exposed procedures</strong> and will call a specified procedure based on frontend data, passing in the appropriate parameters (should there be any).</p>
-<p>The data being received is initially <strong>JSON</strong> and needs to be converted into the appropriate types for each parameter in a procedure. This is also handled by the macro. Unfortunately, due to Nim&apos;s static type system there&apos;s a limit on what&apos;s able to be converted programmatically. <strong>Update: design in progress that will allow new types, including objects</strong></p>
-<p>Currently accepted parameter types for all <em>exposed procedures</em> are:</p>
+<p>The data being received is initially <strong>JSON</strong> and needs to be converted into the appropriate types for each parameter in a procedure. This is also handled by the macro.</p>
+<p>As of Neel 1.1.0, you can use virtually any Nim type for parameters in <em>exposed procedures</em>. Neel uses <code>std/jsonutils</code> to programmatically handle the conversions. Some caveats:</p>
 <ul>
-<li>string, int, float, bool</li>
-<li>seq[JsonNode]</li>
-<li>OrderedTable[string, JsonNode]</li>
+<li>Does not support default values for parameters.</li>
+<li>Does not support generics for parameters.</li>
 </ul>
 <p>This above macro produces this result:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">callNim</span>(<span class="ide">jsData</span>: <span class="ide">JsonNode</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span></div></div><div class="line"><div class="line-content">        <span class="ide">procName</span> <span class="op">=</span> <span class="ide">jsData</span>[<span class="str">&quot;procName&quot;</span>]<span class="op">.</span><span class="ide">getStr</span></div></div><div class="line"><div class="line-content">        <span class="ide">params</span> <span class="op">=</span> <span class="ide">jsData</span>[<span class="str">&quot;params&quot;</span>]<span class="op">.</span><span class="ide">getElems</span></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">procName</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;echoThis&quot;</span>: <span class="ide">echoThis</span>(<span class="ide">params</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getStr</span>)</div></div>  </code></pre>
-<p>Don&apos;t worry, you&apos;re still able to pass complex data as your params if need be, such as a <code>seq</code> within a <code>seq</code> containing a <code>table</code> of arbitrary types. Just have that param be either of type <code>seq[JsonNode]</code> or <code>OrderedTable[string, JsonNode]</code> and manually convert them within your procedure. Converting JSON is very simple, refer to the <a href="https://nim-lang.org/docs/json.html">documentation</a>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">callNim</span>(<span class="ide">procName</span>: <span class="ide">string</span>; <span class="ide">params</span>: <span class="ide">seq</span>[<span class="ide">JsonNode</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">echoThis</span>(<span class="ide">jsMsg</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="ide">echo</span> <span class="str">&quot;got this from frontend: &quot;</span> <span class="op">&amp;</span> <span class="ide">jsMsg</span></div></div><div class="line"><div class="line-content">        <span class="ide">callJs</span>(<span class="str">&quot;logThis&quot;</span>, <span class="str">&quot;Hello from Nim!&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">procName</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="str">&quot;echoThis&quot;</span>: <span class="ide">echoThis</span>(<span class="ide">params</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getStr</span>)</div></div><div class="line"><div class="line-content">    <span class="op">...</span></div></div>  </code></pre>
+<p>NOTE: You <em>can</em> pass complex data in a single parameter now if you&apos;d like to. Use Javascript objects or dictionaries and simply create a custom object type to accept it from the Nim side.</p>
 <p>I&apos;m sure this is obvious, but it&apos;s much cleaner to have your exposed procedures call procedures from other modules.</p>
 <p>Example:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># (main.nim)</span></div></div><div class="line"><div class="line-content"><span class="ide">exposeProcs</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">proc1</span>(<span class="ide">param</span>: <span class="ide">seq</span>[<span class="ide">JsonNode</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="ide">doStuff</span>(<span class="ide">param</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getInt</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># (othermodule.nim)</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">neel</span> <span class="kwd">import</span> <span class="ide">callJs</span> <span class="com"># you only need to import this macro from Neel :)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">doStuff</span>(<span class="ide">param</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">dataForFrontEnd</span> <span class="op">=</span> <span class="ide">param</span> <span class="op">+</span> <span class="num">100</span></div></div><div class="line"><div class="line-content">    <span class="ide">callJs</span>(<span class="str">&quot;myJavascriptFunc&quot;</span>, <span class="ide">dataForFrontEnd</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># (main.nim)</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">neel</span>, <span class="ide">othermodule</span></div></div><div class="line"><div class="line-content"><span class="ide">exposeProcs</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">proc</span> <span class="ide">proc1</span>(<span class="ide">param</span>: <span class="ide">seq</span>[<span class="ide">JsonNode</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">        <span class="ide">doStuff</span>(<span class="ide">param</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getInt</span>)</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># (othermodule.nim)</span></div></div><div class="line"><div class="line-content"><span class="kwd">from</span> <span class="ide">neel</span> <span class="kwd">import</span> <span class="ide">callJs</span> <span class="com"># you only need to import this macro from Neel :)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">doStuff</span><span class="op">*</span>(<span class="ide">param</span>: <span class="ide">int</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">dataForFrontEnd</span> <span class="op">=</span> <span class="ide">param</span> <span class="op">+</span> <span class="num">100</span></div></div><div class="line"><div class="line-content">    <span class="ide">callJs</span>(<span class="str">&quot;myJavascriptFunc&quot;</span>, <span class="ide">dataForFrontEnd</span>)</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
 <h5 />
 <p><code>callJs</code> is a macro that takes in at least one value, a <code>string</code>, and it&apos;s <em>the name of the javascript function you want to call</em>. Any other value will be passed into that javascript function call on the frontend. You may pass in any amount to satisfy your function parameters needs like so:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">callJs</span>(<span class="str">&quot;myJavascriptFunc&quot;</span>,<span class="num">1</span>,<span class="num">3.14</span>,[<span class="str">&quot;some stuff&quot;</span>,<span class="num">1</span>,<span class="num">9000</span>])</div></div>  </code></pre>
@@ -204,26 +213,27 @@ example:</p>
 </code></pre>
 <p>(main.js)</p>
 <pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="ide">neel</span>.<span class="ide">callNim</span>(<span class="str">&quot;echoThis&quot;</span>,<span class="str">&quot;Hello from Javascript!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">function</span> <span class="ide">logThis</span>(<span class="ide">param</span>){</div></div><div class="line"><div class="line-content">    <span class="ide">console</span>.<span class="ide">log</span>(<span class="ide">param</span>)</div></div><div class="line"><div class="line-content">}</div></div>  </code></pre>
-<p>The first thing you&apos;ll notice is we&apos;ve included a script tag containing <code>/neel.js</code> in the <head> section of our HTML page. This allows Neel to handle all of the logic on the frontend for websocket connections and function/procedure calls.</head><code>callNim</code> is a function that takes in at least one value, a <code>string</code>, and it&apos;s <em>the name of the Nim procedure you want to call</em>. Any other value will be passed into that Nim procedure call on the backend. <strong>You must pass in the correct number of params for that proc, in order, and of the correct types.</strong> Example:</p>
+<p>The first thing you&apos;ll notice is we&apos;ve included a script tag containing <code>/neel.js</code> in the <head> section of our HTML page. This allows Neel to handle all of the logic on the frontend for websocket connections and function/procedure calls.</head><code>neel.callNim</code> is a function that takes in at least one value, a <code>string</code>, and it&apos;s <em>the name of the Nim procedure you want to call</em>. Any other value will be passed into that Nim procedure call on the backend asa parameter. <strong>You must pass in the correct number of params for that proc, in order, and of the correct types for it to be called properly.</strong> Example:</p>
 <p>frontend call to backend:</p>
 <pre>  <code class="language-javascript"><div class="line"><div class="line-content"><span class="ide">neel</span>.<span class="ide">callNim</span>(<span class="str">&quot;myNimProc&quot;</span>,<span class="num">1</span>,<span class="num">3.14</span>,[<span class="str">&quot;some stuff&quot;</span>,<span class="num">1</span>,<span class="num">9000</span>])</div></div>  </code></pre>
 <p>must match the result of the <code>exposeProcs</code> macro:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="str">&quot;myNimProc&quot;</span>: <span class="kwd">return</span> <span class="ide">myNimProc</span>(<span class="ide">params</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getInt</span>,<span class="ide">params</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">getFloat</span>,<span class="ide">params</span>[<span class="num">2</span>]<span class="op">.</span><span class="ide">getElems</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="kwd">of</span> <span class="str">&quot;myNimProc&quot;</span>: <span class="kwd">return</span> <span class="ide">myNimProc</span>(<span class="ide">params</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">getInt</span>,<span class="ide">params</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">getFloat</span>,<span class="ide">params</span>[<span class="num">2</span>]<span class="op">.</span><span class="ide">getElems</span>)</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
+<p>As of Neel 1.1.0, there is exception handling in place (with a verbose logging in debug builds) for unknown procedure calls and parameter type mismatches.</p>
 <p>Going back to our first example, when <code>index.html</code> is served, Javascript will call the <code>echoThis</code> procedure and pass &quot;Hello from Javascript!&quot; as the param. This will print the string in the terminal. Then, Nim will call the <code>logThis</code> function and pass &quot;Hello from Nim!&quot;. Neel handles the JSON conversion, calls the function and passes in the param.</p>
 <p>Now open the console in Chrome developer tools and you should see &quot;Hello from Nim!&quot;.</p>
-<p><strong>IMPORTANT: Be sure to use absolute paths within your HTML files</strong> ex: <code>&lt;script src=&quot;/this_js_module.js&gt;&lt;/script&gt;</code></p>
+<p><strong>Keep In Mind: absolute paths must be used within your HTML files</strong> ex: <code>&lt;script src=&quot;/this_js_module.js&gt;&lt;/script&gt;</code></p>
 <h4>Compilation Step</h4>
-<p>If using nim 1.6.X, compile your Neel application with <code>--threads:on</code> and <code>--mm:orc</code>. <em>Nim &gt;= 2.0.0 does this by default.</em>
+<p>If using nim 1.6.X branch, compile your Neel application with <code>--threads:on</code> and <code>--mm:orc</code>. <em>Nim &gt;= 2.0.0 does this by default.</em>
 example:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">mm</span>:<span class="ide">orc</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
-<p>When compiling for Windows, also compile with the <code>--app:gui</code> flag. This will prevent the app opening up with the terminal.
+<p>When compiling for Windows, also pass the <code>--app:gui</code> flag on your <code>release</code> builds if you want to prevent the app opening up with a terminal.
 example:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">mm</span>:<span class="ide">orc</span> <span class="op">--</span><span class="ide">app</span>:<span class="ide">gui</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">r</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="op">--</span><span class="ide">mm</span>:<span class="ide">orc</span> <span class="op">--</span><span class="ide">app</span>:<span class="ide">gui</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">release</span> <span class="ide">main</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
 <h4>Final Thoughts Before Developing With Neel</h4>
 <p>Keep the following in mind when developing you Neel App:</p>
 <ul>
 <li>All of your frontend assets are embedded into the binary when compiling a <code>release</code> build. Stick to debug builds when needing to modify/change static frontend assets, as you can simply refresh a page and see the updates in real-time.</li>
-<li>To prevent crashes when users spam refresh or constantly switch between different pages, we implemented a sort of countdown timer for shutting down. Approximately 10 seconds after closing the app window, the server and program is killed if a websocket hasn&apos;t reconnected within that time period. Just keep that in mind before doing CTL+C in the terminal during testing.</li>
+<li>To prevent crashes when users spam refresh or constantly switch between different pages, we implemented a sort of countdown timer for shutting down. For debug builds, approximately 3 seconds after closing the app window the server and program is shutdown if a websocket hasn&apos;t reconnected within that time period. For release builds that time delay is approximately 10 seconds for some extra cusion.</li>
 </ul>
 <h2>Examples</h2>
 <p>A simple Neel app that picks a random filename out of a given folder (something impossible from a browser):</p>
@@ -233,12 +243,23 @@ example:</p>
 <h2>Future Work</h2>
 <p>The vision for this library is to eventually have this as full-fledged as Electron for Nim. I believe it has the potential for developing commercial applications and maybe one day even rival Electron as a framework.</p>
 <p>A BIG teaser for what&apos;s to come within the next few releases:</p>
-<h3>Arbitrary JavaScript-To-Nim Type Conversions (JSON Parsing)</h3>
-<p>As long as the parameter types from the Javascript side match to the Nim side, use what you want!</p>
-<h3>Webview Capabilities</h3>
-<p><a href="https://github.com/webview/webview">Webview</a> is an MIT licensed cross-platform webview library for C/C++. Uses WebKit (GTK/Cocoa) and Edge WebView2 (Windows). Having a webview target will get us closer to solid framework for shipping commercial builds.</p>
-<h3>Distributable Applications</h3>
-<p>Build your Neel app and have it packaged and ready to be shipped.</p>
+<ul>
+<li>
+<p>[X] Arbitrary JavaScript-To-Nim Type Conversions (JSON Parsing)</p>
+<pre>  <code>As long as the parameter types from the Javascript side match to the Nim side, use what you want!
+</code></pre>
+</li>
+<li>
+<p>[ ] Webview Capabilities</p>
+<pre>  <code>[Webview](https://github.com/webview/webview) is an MIT licensed cross-platform webview library for C/C++. Uses WebKit (GTK/Cocoa) and Edge WebView2 (Windows). Having a webview target will get us closer to solid framework for shipping commercial builds.
+</code></pre>
+</li>
+<li>
+<p>[ ] Distributable Applications</p>
+<pre>  <code>Build your Neel app and have it packaged and ready to be shipped.
+</code></pre>
+</li>
+</ul>
 </document>
             
         </div>
@@ -307,7 +328,7 @@ example:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-01T01:12:53Z
+        Builded at 2023-11-02T01:08:28Z
         </p>
       </div>
     </div>
