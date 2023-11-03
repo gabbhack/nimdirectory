@@ -127,49 +127,21 @@ Run &quot;checkif help&quot; to get *comprehensive* help.
   file [REQUIRED,optional-params] The files to check, can be any quantity
 Check if expression is meet in a file
 
-If `then` or `else` was provided, the return code will be of
-the command
+If `then` or `else` was provided, the return code will be of the command
 Options:
-  -h, --help                                 print this
-                                             cligen-erated
-                                             help
-  --help-syntax                              advanced:
-                                             prepend,plurals,..
-  -c=, --condition=      FileCond  REQUIRED  The file check
-                                             condition. Can be
-                                             one of: exists or
-                                             dataHas or dataIs
-                                             or dataNum
+  -h, --help                                 print this cligen-erated help
+  --help-syntax                              advanced: prepend,plurals,..
+  -c=, --condition=      FileCond  REQUIRED  The file check condition. Can be one of: exists or dataHas or dataIs or dataNum
   -n, --invert           bool      false     Invert result
-  -m=, --min=            int       0         Minimum succeeded
-                                             checks
-  -s=, --str=            strings   &quot;&quot;        The text to be
-                                             searched
-  --minStr=              int       0         Minimum string
-                                             succeeded checks
-  -i, --caseInsensitive  bool      false     Ignore uppercase
-                                             and lowercase
-  -t=, --then=           string    &quot;&quot;        The command to be
-                                             run on success
-  -e=, --else=           string    &quot;&quot;        The command to be
-                                             run on error
-  -l, --headless         bool      false     If some error
-                                             occur in
-                                             `commands` it
-                                             will stop
-  --moreThan=            float     0.0       Configure the
-                                             `dataNum` maximum
-                                             acceptable number
-                                             (default: maximum
-                                             number)
-  --lessThan=            float     inf       Configure the
-                                             `dataNum` minimum
-                                             acceptable number
-                                             (default: 0)
-  --stripNum             bool      false     Removes
-                                             everything that
-                                             isn&apos;t digits from
-                                             file data
+  -m=, --min=            int       0         Minimum succeeded checks
+  -s=, --str=            string    &quot;&quot;        The text to be searched
+  -i, --caseInsensitive  bool      false     Ignore uppercase and lowercase
+  -t=, --then=           string    &quot;&quot;        The command to be run on success
+  -e=, --else=           string    &quot;&quot;        The command to be run on error
+  -l, --headless         bool      false     If some error occur in `commands` it will stop
+  --moreThan=            float     0.0       Configure the `dataNum` maximum acceptable number (default: maximum number)
+  --lessThan=            float     inf       Configure the `dataNum` minimum acceptable number (default: 0)
+  --stripNum             bool      false     Removes everything that isn&apos;t digits from file data
 </code></pre>
 <h3>Dir</h3>
 <pre>  <code>Usage:
@@ -218,7 +190,7 @@ Options:
                 
 
                 
-                    <p> <a href="https://git.ozzuu.com/thisago/checkif">Project website</a> </p>
+                    <p> <a href="https://github.com/thisago/checkif">Project website</a> </p>
                 
 
                 
@@ -273,7 +245,7 @@ Options:
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-02T01:08:28Z
+        Builded at 2023-11-03T01:09:11Z
         </p>
       </div>
     </div>

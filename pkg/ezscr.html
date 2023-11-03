@@ -93,12 +93,6 @@
 <p>Portable and easy Nimscript runner.</p>
 <p>With this tool, you can bundle a lot of scripts and run it everywhere</p>
 <p>No extra binary needed</p>
-<h2>Installation</h2>
-<p>First install <a href="https://nim-lang.org">Nim</a>, then run:</p>
-<pre>  <code class="language-bash">nimble install ezscr
-</code></pre>
-<p>And the command <code>ezscr</code> will be available in your terminal. (Make sure that
-Nimble bin dir is on your PATH)</p>
 <h2>Usage</h2>
 <p>The usage is very simple and there&apos;s just 4 commands that you need to learn!</p>
 <p>See some <a href="examples/">examples here</a></p>
@@ -155,7 +149,7 @@ scripts has full support to Nim&apos;s std lib</p>
 <p>Just download it by using this syntax:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Note the mandatory space after `&gt;`</span></div></div><div class="line"><div class="line-content"><span class="com">#&gt; staticDownload &quot;https://example.com/file.txt&quot;</span></div></div>  </code></pre>
 <p>and import it, see the full example:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com">#&gt; staticDownload &quot;https://git.ozzuu.com/thisago/util/raw/branch/master/src/util/forStr.nim&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">forStr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span><span class="op">*</span>(<span class="ide">params</span>: <span class="ide">seq</span>[<span class="ide">string</span>]): <span class="ide">bool</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Hello John Doe!&quot;</span><span class="op">.</span><span class="ide">between</span>(<span class="str">&quot;llo &quot;</span>, <span class="str">&quot; Do&quot;</span>) <span class="com"># -&gt; John</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com">#&gt; staticDownload &quot;https://raw.githubusercontent.com/thisago/util/master/src/util/forStr.nim&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">forStr</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span><span class="op">*</span>(<span class="ide">params</span>: <span class="ide">seq</span>[<span class="ide">string</span>]): <span class="ide">bool</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;Hello John Doe!&quot;</span><span class="op">.</span><span class="ide">between</span>(<span class="str">&quot;llo &quot;</span>, <span class="str">&quot; Do&quot;</span>) <span class="com"># -&gt; John</span></div></div>  </code></pre>
 <p>Limitations:</p>
 <ul>
 <li>You cannot specify the destination</li>
@@ -166,21 +160,13 @@ scripts has full support to Nim&apos;s std lib</p>
 <h2>TODO</h2>
 <ul>
 <li>[ ] Add possibility to add multiple aliases to same script</li>
-<li>[ ] Add a possibility to reuse same encryption key (instead compilation time),
-maybe provide in nimble file</li>
+<li>[ ] Add a possibility to reuse same encryption key (instead compilation time), maybe provide in nimble file</li>
 <li>[ ] Add option to run again x times until the raised exception stop to be
 raise in <code>run</code> command</li>
 <li>[ ] Add option to process the <code>main</code> return (bool) <code>false</code> as a raised error
 and run the script until returns true</li>
 <li>[ ] Add optional custom destination fot <code>staticDownload</code> downloads</li>
 <li>[ ] Add possibility to import pkg modules from nimble package list</li>
-<li>[ ] Add listed and unlisted scripts (now all is unlisted)</li>
-<li>[ ] Add <code>--help</code> in scripts, extract from <code>main</code> proc doc comment</li>
-<li>[ ] Add static files in config to pack it and with a internal proc call,
-access the file</li>
-<li>[ ] Add a lib extension file like <code>config/lib.nim</code> to add more internal procs
-to the Nimscript scope, adding procs that cannot be ran in Nimscript, like ddl
-handling</li>
 </ul>
 <h2>License</h2>
 <p>MIT</p>
@@ -197,7 +183,7 @@ handling</li>
                 
 
                 
-                    <p> <a href="https://git.ozzuu.com/thisago/ezscr">Project website</a> </p>
+                    <p> <a href="https://github.com/thisago/ezscr">Project website</a> </p>
                 
 
                 
@@ -252,7 +238,7 @@ handling</li>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-02T01:08:28Z
+        Builded at 2023-11-03T01:09:11Z
         </p>
       </div>
     </div>
