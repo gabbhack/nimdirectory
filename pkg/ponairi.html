@@ -87,7 +87,7 @@
             
                 <document><h1>Pónairí 🫘</h1>
 <p>Simple ORM to handle basic CRUD tasks. Future plans are to expand the query generation to make needing to write SQL less common</p>
-<p>  <a href="https://tempdocs.netlify.app/ponairi/stable/ponairi.html">Docs here</a></p>
+<p>  <a href="https://ire4ever1190.github.io/ponairi/ponairi.html">Docs here</a></p>
 <h3>Create</h3>
 <p>To start you want to create your objects that will define your schema</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Customer</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span> {<span class="op">.</span><span class="ide">primary</span>, <span class="ide">autoIncrement</span><span class="op">.</span>}: <span class="ide">int64</span></div></div><div class="line"><div class="line-content">    <span class="ide">email</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">firstName</span>, <span class="ide">lastName</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">Order</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">id</span> {<span class="op">.</span><span class="ide">primary</span>, <span class="ide">autoIncrement</span><span class="op">.</span>}: <span class="ide">int64</span></div></div><div class="line"><div class="line-content">    <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="ide">customer</span> {<span class="op">.</span><span class="ide">references</span>: <span class="ide">Customer</span><span class="op">.</span><span class="ide">id</span><span class="op">.</span>}: <span class="ide">int64</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Open connection to database, make sure to close connection when finished</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">db</span> <span class="op">=</span> <span class="ide">newConn</span>(<span class="str">&quot;:memory:&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="com"># Create the tables</span></div></div><div class="line"><div class="line-content"><span class="ide">db</span><span class="op">.</span><span class="ide">create</span>(<span class="ide">Customer</span>, <span class="ide">Order</span>)</div></div>  </code></pre>
@@ -172,7 +172,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-04T01:08:12Z
+        Builded at 2023-11-05T01:13:30Z
         </p>
       </div>
     </div>
