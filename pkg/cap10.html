@@ -103,27 +103,32 @@ later. You&apos;re good.</p>
 <ul>
 <li><code>cap10 record [optional command]</code> starts recording.</li>
 <li>  <code>cap10 play file.cap10</code></li>
+<li><code>cap10 convert [filename]</code> will convert a cap10 file to the <em>asciicast 2.0</em> format.</li>
 </ul>
-<p>Currently, there&apos;s no web player here, just the in-terminal
-player. When you use modern terminals, you may not get awesome results
-if you try to play back in a different terminal, since the underlying
-codes sent are replayed.  More generic xterm stuff is going to be more
-portable.</p>
-<p>Note that this is not the same format file that asciinema uses. We
-haven&apos;t looked at that yet; we use a binary format that&apos;s highly
-efficient, allowing us to basically directly write what&apos;s recorded
-directly as the terminal generates it. At some point soon we will
-either generate their format at the end, or adapt an OSS web terminal
-to use our format, whichever seems to make the most sense.</p>
-<p>Additionally, on Linux, cap10 should build as a static ELF binary, so
-can run in minimal environments like Alpine, without the Python
-dependencies of asciinema.</p>
+<p>The <code>cap10</code> capture format is binary, and there&apos;s currently not a web
+player for it. But you can convert it to asciicast format.</p>
+<p>On Linux, cap10 should build as a static ELF binary, so can run in
+minimal environments like Alpine, without the Python dependencies of
+asciinema.</p>
+<p>Also, we produce a separate input log to make it easier to automate
+scripting for demos (in conjunction w/ our expect capabilities
+below). It captures keypresses only, so if you don&apos;t type out a full
+command, it won&apos;t capture the exact commands (in the future we may do
+some shell integration to get the shell view).</p>
+<p>Essentially, cap10 should replace the following tools:</p>
+<ul>
+<li>script</li>
+<li>asciinema</li>
+<li>expect</li>
+<li>autoexpect (which never worked well anyway)</li>
+</ul>
 <h2>Expect More</h2>
 <p>You can also use <code>cap10</code> as an expect-like library, with the added
 benefits:</p>
 <ol>
 <li>You can fully capture your <code>expect</code> sessions if you want.</li>
 <li>You can interact with your scripts if you want.</li>
+<li>You can capture the input from your interactions.</li>
 </ol>
 <p>The second makes expect-like automation easier to write. I&apos;ve had many
 cases where the regexp didn&apos;t fire, and the result was a hanging
@@ -132,7 +137,8 @@ manually enter input, which will generate output that runs through the
 pattern matcher.</p>
 <p>For example, the below code waits for a prompt, runs a command, then
 waits for &apos;hiho&apos; followed by the enter key (The enter key generates
-&apos;\r&apos; NOT &apos;\n&apos;).</p>
+&apos;\r&apos; NOT &apos;\n&apos;; the log file does translate them back to &apos;\n&apos; to be more
+human readable).</p>
 <p>But the code never does anything to send that string to the
 terminal. Instead, you&apos;re left to manually interact with it, and when
 the pattern is matched, the &apos;expect&apos; call returns.</p>
@@ -159,15 +165,16 @@ other file descriptors, callbacks, etc, all without the need for
 threads. We&apos;ve got a bunch of little utilities we&apos;d like to see on top
 of this, that we may eventually add.</p>
 <h2>Status</h2>
-<p>It&apos;s early, and there are plenty of rough edges. This was done for our
-internal use, but eventually we will polish this up. Until then, use
-at your own risk :)</p>
+<p>It&apos;s early, and there are some rough edges (for instance, if there are
+file perms issues, we&apos;re currently not handling gracefully). This was
+done for our internal use, but eventually we will polish this
+up. Until then, use at your own risk :)</p>
 <h2>Building</h2>
 <p>You need to have Nim 2.0 installed, and be on a 64-bit posix
 system. We really develop only on Linux and Mac, so there&apos;s more than
 a non-zero chance that *BSD or WSL won&apos;t work at this point...</p>
-<p>But all you need to do to build the <code>cap10</code> binary is run from the
-root of the repo:</p>
+<p>But all you should need to do to build the <code>cap10</code> binary is run from
+the root of the repo:</p>
 <pre>  <code>nimble build
 </code></pre>
 </document>
@@ -238,7 +245,7 @@ root of the repo:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-05T01:13:30Z
+        Builded at 2023-11-06T01:11:22Z
         </p>
       </div>
     </div>
