@@ -95,6 +95,7 @@
             
                 <document><h1>Cap10</h1>
 <h2>Script, capture and replay terminal sessions</h2>
+<p>  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/4764481/280741508-3a3d90cd-b4d2-44e0-9b1a-c38543cbd903.gif" style="max-width: 100%;" alt="Cap10 Demo" /></p>
 <p>You record and play back terminal sessions or other terminal programs
 with the <code>cap10</code> command, which will record a process until it exits.</p>
 <p>Cap10 will automatically remove long pauses in your input stream. So
@@ -122,6 +123,11 @@ some shell integration to get the shell view).</p>
 <li>expect</li>
 <li>autoexpect (which never worked well anyway)</li>
 </ul>
+<h2>GIF conversion</h2>
+<p>If you&apos;d like to convert the output to a video for a web page, instead
+of an Asciicast, we recommend producing an GIF, which you can do
+do this by exporting to asciicast and then running the
+<a href="https://github.com/asciinema/agg">agg tool</a> from asciinema.</p>
 <h2>Expect More</h2>
 <p>You can also use <code>cap10</code> as an expect-like library, with the added
 benefits:</p>
@@ -169,6 +175,11 @@ of this, that we may eventually add.</p>
 file perms issues, we&apos;re currently not handling gracefully). This was
 done for our internal use, but eventually we will polish this
 up. Until then, use at your own risk :)</p>
+<p>In the not too distant future, we&apos;ll bundle the API for direct calling
+from other languages, with wrappers for (at least) Go and Python.</p>
+<p>Eventually, we&apos;d like to have a native player and more, and be able to
+natively produce GIFs. But no hurry; the asciinema tools there are
+good.</p>
 <h2>Building</h2>
 <p>You need to have Nim 2.0 installed, and be on a 64-bit posix
 system. We really develop only on Linux and Mac, so there&apos;s more than
@@ -245,7 +256,7 @@ the root of the repo:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-06T01:11:22Z
+        Builded at 2023-11-07T01:10:17Z
         </p>
       </div>
     </div>

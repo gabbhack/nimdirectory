@@ -31812,6 +31812,18 @@ const packages = [
     "license": "GPL-3.0-only",
     "web": "https://github.com/nirokay/docchanger",
     "doc": "https://nirokay.github.io/nim-docs/docchanger/docchanger"
+  },
+  {
+    "name": "threadlogging",
+    "url": "https://codeberg.org/pswilde/threadlogging",
+    "method": "git",
+    "tags": [
+      "logging",
+      "threads"
+    ],
+    "description": "A thread safe logging library using Nim's own logging module",
+    "license": "AGPL-3.0-or-later",
+    "web": "https://pswilde.codeberg.page/threadlogging_docs/threadlogging.html"
   }
 ]
 const options = {
