@@ -81,6 +81,10 @@
 <p>AST IIFE for nim. Generate code with AST.</p>
 <p>Example:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">astiife</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">ast</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">result</span> <span class="op">=</span> <span class="ide">newStmtList</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">i</span> <span class="kwd">in</span> [<span class="str">&quot;&quot;</span>, <span class="str">&quot;8&quot;</span>, <span class="str">&quot;16&quot;</span>, <span class="str">&quot;32&quot;</span>, <span class="str">&quot;64&quot;</span>]:</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">j</span> <span class="kwd">in</span> [<span class="str">&quot;int&quot;</span>, <span class="str">&quot;uint&quot;</span>]:</div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> <span class="ide">t</span> <span class="op">=</span> <span class="ide">ident</span>(<span class="ide">j</span> <span class="op">&amp;</span> <span class="ide">i</span>)</div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> <span class="ide">s</span> <span class="op">=</span> <span class="ide">newLit</span>(<span class="ide">j</span> <span class="op">&amp;</span> <span class="ide">i</span>)</div></div><div class="line"><div class="line-content">      <span class="ide">result</span><span class="op">.</span><span class="ide">add</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">quote</span> <span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">          <span class="kwd">proc</span> <span class="ide">echoIntType</span>(<span class="ide">it</span>: `<span class="ide">t</span>`) {<span class="op">.</span><span class="ide">used</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">            <span class="ide">echo</span> `<span class="ide">s</span>`</div></div>  </code></pre>
+<h2>Why to make this</h2>
+<p>I know this provides a very basic feature, but I really see many macros that are used at once to generate some definitions.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">macro</span> <span class="ide">foo</span>(<span class="ide">x</span>: <span class="ide">untyped</span>): <span class="ide">untyped</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Many lines...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">foo</span>()</div></div>  </code></pre>
+<p>This is not that graceful, is it? So I made this. I know maybe IIFE isn&apos;t a very proper name for macros, as IIFE contains a &quot;function&quot; in it. But it&apos;s intuitive enough, isn&apos;t it?</p>
 </document>
             
         </div>
@@ -149,7 +153,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-08T01:09:42Z
+        Builded at 2023-11-09T01:10:35Z
         </p>
       </div>
     </div>

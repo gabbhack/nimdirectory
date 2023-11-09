@@ -117,12 +117,12 @@
 <h2>Introduction</h2>
 <p>Chronos is an efficient <a href="https://en.wikipedia.org/wiki/Async/await">async/await</a> framework for Nim. Features include:</p>
 <ul>
-<li>Efficient dispatch pipeline for asynchronous execution</li>
+<li>Asynchronous socket and process I/O</li>
 <li>HTTP server with SSL/TLS support out of the box (no OpenSSL needed)</li>
-<li>Cancellation support</li>
 <li>Synchronization primitivies like queues, events and locks</li>
-<li>FIFO processing order of dispatch queue</li>
-<li>Minimal exception effect support (see <a href="#exception-effects">exception effects</a>)</li>
+<li>Cancellation</li>
+<li>Efficient dispatch pipeline with excellent multi-platform support</li>
+<li>Exception effect support (see <a href="#exception-effects">exception effects</a>)</li>
 </ul>
 <h2>Installation</h2>
 <p>You can use Nim&apos;s official package manager Nimble to install Chronos:</p>
@@ -188,28 +188,43 @@ you. If an async procedure modifies global state, and you can&apos;t predict whe
 will start executing, the only way to avoid that state changing underneath your
 feet, in a certain section, is to not use <code>await</code> in it.</p>
 <h3>Error handling</h3>
-<p>Exceptions inheriting from <code>CatchableError</code> are caught by hidden <code>try</code> blocks
-and placed in the <code>Future.error</code> field, changing the future&apos;s status to
-<code>Failed</code>.</p>
-<p>When a future is awaited, that exception is re-raised only to be caught again
-by a hidden <code>try</code> block in the calling async procedure. That&apos;s how these
-exceptions move up the async chain.</p>
-<p>A failed future&apos;s callbacks will still be scheduled, but it&apos;s not possible to
-resume execution from the point an exception was raised.</p>
+<p>Exceptions inheriting from <a href="https://nim-lang.org/docs/system.html#CatchableError">  <code>CatchableError</code></a>
+interrupt execution of the <code>async</code> procedure. The exception is placed in the
+<code>Future.error</code> field while changing the status of the <code>Future</code> to <code>Failed</code>
+and callbacks are scheduled.</p>
+<p>When a future is awaited, the exception is re-raised, traversing the <code>async</code>
+execution chain until handled.</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p1</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">1.</span><span class="ide">seconds</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">ValueError</span>, <span class="str">&quot;ValueError inherits from CatchableError&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p2</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">sleepAsync</span>(<span class="num">1.</span><span class="ide">seconds</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p3</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">fut1</span> <span class="op">=</span> <span class="ide">p1</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">fut2</span> <span class="op">=</span> <span class="ide">p2</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut1</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;unreachable code here&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut2</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># `waitFor()` would call `Future.read()` unconditionally, which would raise the</span></div></div><div class="line"><div class="line-content"><span class="com"># exception in `Future.error`.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">fut3</span> <span class="op">=</span> <span class="ide">p3</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="kwd">not</span>(<span class="ide">fut3</span><span class="op">.</span><span class="ide">finished</span>()):</div></div><div class="line"><div class="line-content">  <span class="ide">poll</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;fut3.state = &quot;</span>, <span class="ide">fut3</span><span class="op">.</span><span class="ide">state</span> <span class="com"># &quot;Failed&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">fut3</span><span class="op">.</span><span class="ide">failed</span>():</div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;p3() failed: &quot;</span>, <span class="ide">fut3</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">name</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">fut3</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">msg</span></div></div><div class="line"><div class="line-content">  <span class="com"># prints &quot;p3() failed: ValueError: ValueError inherits from CatchableError&quot;</span></div></div>  </code></pre>
 <p>You can put the <code>await</code> in a <code>try</code> block, to deal with that exception sooner:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p3</span>() {<span class="op">.</span><span class="ide">async</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span></div></div><div class="line"><div class="line-content">    <span class="ide">fut1</span> <span class="op">=</span> <span class="ide">p1</span>()</div></div><div class="line"><div class="line-content">    <span class="ide">fut2</span> <span class="op">=</span> <span class="ide">p2</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">await</span> <span class="ide">fut1</span></div></div><div class="line"><div class="line-content">  <span class="kwd">except</span> <span class="ide">CachableError</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;p1() failed: &quot;</span>, <span class="ide">fut1</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">name</span>, <span class="str">&quot;: &quot;</span>, <span class="ide">fut1</span><span class="op">.</span><span class="ide">error</span><span class="op">.</span><span class="ide">msg</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;reachable code here&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">fut2</span></div></div>  </code></pre>
-<p>Chronos does not allow that future continuations and other callbacks raise
-<code>CatchableError</code> - as such, calls to <code>poll</code> will never raise exceptions caused
-originating from tasks on the dispatcher queue. It is however possible that
-<code>Defect</code> that happen in tasks bubble up through <code>poll</code> as these are not caught
-by the transformation.</p>
+<p>Because <code>chronos</code> ensures that all exceptions are re-routed to the <code>Future</code>,
+<code>poll</code> will not itself raise exceptions.</p>
+<p><code>poll</code> may still panic / raise <code>Defect</code> if such are raised in user code due to
+undefined behavior.</p>
 <h4>Checked exceptions</h4>
 <p>By specifying a <code>raises</code> list to an async procedure, you can check which
 exceptions can be raised by it:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p1</span>(): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span>: (<span class="ide">raises</span>: [<span class="ide">IOError</span>])<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="kwd">not</span> (<span class="ide">compiles</span> <span class="kwd">do</span>: <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">ValueError</span>, <span class="str">&quot;uh-uh&quot;</span>))</div></div><div class="line"><div class="line-content">  <span class="kwd">raise</span> <span class="ide">newException</span>(<span class="ide">IOError</span>, <span class="str">&quot;works&quot;</span>) <span class="com"># Or any child of IOError</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">p2</span>(): <span class="ide">Future</span>[<span class="ide">void</span>] {<span class="op">.</span><span class="ide">async</span>, (<span class="ide">raises</span>: [<span class="ide">IOError</span>])<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">await</span> <span class="ide">p1</span>() <span class="com"># Works, because await knows that p1</span></div></div><div class="line"><div class="line-content">             <span class="com"># can only raise IOError</span></div></div>  </code></pre>
 <p>Under the hood, the return type of <code>p1</code> will be rewritten to an internal type
 which will convey raises informations to <code>await</code>.</p>
+<h4>The <code>Exception</code> type</h4>
+<p>Exceptions deriving from <code>Exception</code> are not caught by default as these may
+include <code>Defect</code> and other forms undefined or uncatchable behavior.</p>
+<p>Because exception effect tracking is turned on for <code>async</code> functions, this may
+sometimes lead to compile errors around forward declarations, methods and
+closures as Nim conservatively asssumes that any <code>Exception</code> might be raised
+from those.</p>
+<p>Make sure to excplicitly annotate these with <code>{.raises.}</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Forward declarations need to explicitly include a raises list:</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myfunction</span>() {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">ValueError</span>]<span class="op">.</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># ... as do `proc` types</span></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">MyClosure</span> <span class="op">=</span> <span class="kwd">proc</span>() {<span class="op">.</span><span class="ide">raises</span>: [<span class="ide">ValueError</span>]<span class="op">.</span>}</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myfunction</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">ValueError</span>)(<span class="ide">msg</span>: <span class="str">&quot;Implementation here&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">closure</span>: <span class="ide">MyClosure</span> <span class="op">=</span> <span class="ide">myfunction</span></div></div>  </code></pre>
+<p>For compatibility, <code>async</code> functions can be instructed to handle <code>Exception</code> as
+well, specifying <code>handleException: true</code>. <code>Exception</code> that is not a <code>Defect</code> and
+not a <code>CatchableError</code> will then be caught and remapped to
+<code>AsyncExceptionError</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">raiseException</span>() {<span class="op">.</span><span class="ide">async</span>: (<span class="ide">handleException</span>: <span class="ide">true</span>, <span class="ide">raises</span>: [<span class="ide">AsyncExceptionError</span>])<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">raise</span> (<span class="kwd">ref</span> <span class="ide">Exception</span>)(<span class="ide">msg</span>: <span class="str">&quot;Raising Exception is UB&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">callRaiseException</span>() {<span class="op">.</span><span class="ide">async</span>: (<span class="ide">raises</span>: [])<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">raiseException</span>()</div></div><div class="line"><div class="line-content">  <span class="kwd">except</span> <span class="ide">AsyncExceptionError</span> <span class="kwd">as</span> <span class="ide">exc</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># The original Exception is available from the `parent` field</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">exc</span><span class="op">.</span><span class="ide">parent</span><span class="op">.</span><span class="ide">msg</span></div></div>  </code></pre>
+<p>This mode can be enabled globally with <code>-d:chronosHandleException</code> as a help
+when porting code to <code>chronos</code> but should generally be avoided as global
+configuration settings may interfere with libraries that use <code>chronos</code> leading
+to unexpected behavior.</p>
 <h3>Raw functions</h3>
 <p>Raw functions are those that interact with <code>chronos</code> via the <code>Future</code> type but
 whose body does not go through the async transformation.</p>
@@ -237,22 +252,6 @@ more specific. In particular, it&apos;s possible that some functions that are
 annotated as raising <code>CatchableError</code> only raise on <em>some</em> platforms - in order
 to work on all platforms, calling code must assume that they will raise even
 when they don&apos;t seem to do so on one platform.</p>
-<h3>Strict exception mode</h3>
-<p><code>chronos</code> currently offers minimal support for exception effects and <code>raises</code>
-annotations. In general, during the <code>async</code> transformation, a generic
-<code>except CatchableError</code> handler is added around the entire function being
-transformed, in order to catch any exceptions and transfer them to the <code>Future</code>.
-Because of this, the effect system thinks no exceptions are &quot;leaking&quot; because in
-fact, exception <em>handling</em> is deferred to when the future is being read.</p>
-<p>Effectively, this means that while code can be compiled with
-<code>{.push raises: []}</code>, the intended effect propagation and checking is
-<strong>disabled</strong> for <code>async</code> functions.</p>
-<p>To enable checking exception effects in <code>async</code> code, enable strict mode with
-<code>-d:chronosStrictException</code>.</p>
-<p>In the strict mode, <code>async</code> functions are checked such that they only raise
-<code>CatchableError</code> and thus must make sure to explicitly specify exception
-effects on forward declarations, callbacks and methods using
-<code>{.raises: [CatchableError].}</code> (or more strict) annotations.</p>
 <h3>Cancellation support</h3>
 <p>Any running <code>Future</code> can be cancelled. This can be used for timeouts,
 to let a user cancel a running task, to start multiple futures in parallel
@@ -382,7 +381,7 @@ asynchronous API, to disable the latter.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-08T01:09:42Z
+        Builded at 2023-11-09T01:10:35Z
         </p>
       </div>
     </div>
