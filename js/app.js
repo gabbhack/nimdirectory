@@ -28881,10 +28881,11 @@ const packages = [
     "tags": [
       "client",
       "cli",
-      "chatgpt"
+      "chatgpt",
+      "openai"
     ],
     "description": "chatgpt cli client written in nim",
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "web": "https://github.com/jaredmontoya/gptcli"
   },
   {
