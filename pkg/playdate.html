@@ -126,7 +126,7 @@ Language | C | Lua | Nim  |
 <h3>Prerequisites</h3>
 <ul>
 <li>Playdate SDK</li>
-<li>Nim 1.6.10+ (check with <code>nim -v</code>, untested with 2.0+)</li>
+<li>Nim 1.6.10+ (check with <code>nim -v</code>, untested with 2.0+) (<a href="https://marketplace.visualstudio.com/items?itemName=nimsaem.nimvscode">recommended extension for VSCode</a>)</li>
 <li>Nimble 0.13.1 (check with <code>nimble -v</code>)</li>
 <li><code>PLAYDATE_SDK_PATH</code> environment variable</li>
 <li><a href="https://sdk.play.date/Inside%20Playdate%20with%20C.html#_prerequisites">SDK Prerequisites</a> based on OS, and <a href="https://code.visualstudio.com/docs/cpp/config-mingw">MinGW on Windows</a>.</li>
@@ -158,8 +158,11 @@ echo &apos;include playdate/build/config&apos; &gt; config.nims;
 <pre>  <code>nimble setup
 </code></pre>
 <h2>Usage</h2>
+<p>If you haven&apos;t done it already, install the package:</p>
+<pre>  <code>nimble install playdate
+</code></pre>
 <p><code>playdate_example</code> contains a basic example of the bindings utilization.
-The example code is in <code>playdate_example/src/playdate_example.nim</code></p>
+The example code is in <code>playdate_example/src/playdate_example.nim</code>.</p>
 <p>Here&apos;s also a minimal snippet to make a Nim application:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">playdate</span><span class="op">/</span><span class="ide">api</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">nimLogoBitmap</span>: <span class="ide">LCDBitmap</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">update</span>(): <span class="ide">int</span> {<span class="op">.</span><span class="ide">raises</span>: []<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">nimLogoBitmap</span><span class="op">.</span><span class="ide">draw</span>(<span class="num">168</span>, <span class="num">88</span>, <span class="ide">kBitmapUnflipped</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This is the application entrypoint and event handler</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">handler</span>(<span class="ide">event</span>: <span class="ide">PDSystemEvent</span>, <span class="ide">keycode</span>: <span class="ide">uint</span>) {<span class="op">.</span><span class="ide">raises</span>: []<span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">event</span> <span class="op">==</span> <span class="ide">kEventInit</span>:</div></div><div class="line"><div class="line-content">        <span class="com"># Errors are handled through exceptions, this is an inline try/except</span></div></div><div class="line"><div class="line-content">        <span class="ide">nimLogoBitmap</span> <span class="op">=</span> <span class="kwd">try</span>: <span class="ide">playdate</span><span class="op">.</span><span class="ide">graphics</span><span class="op">.</span><span class="ide">newBitmap</span>(<span class="str">&quot;/images/nim_logo&quot;</span>) <span class="kwd">except</span>: <span class="kwd">nil</span></div></div><div class="line"><div class="line-content">        <span class="com"># playdate is the global PlaydateAPI instance, available when playdate/api is imported </span></div></div><div class="line"><div class="line-content">        <span class="ide">playdate</span><span class="op">.</span><span class="ide">system</span><span class="op">.</span><span class="ide">setUpdateCallback</span>(<span class="ide">update</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Used to setup the SDK entrypoint</span></div></div><div class="line"><div class="line-content"><span class="ide">initSDK</span>()</div></div>  </code></pre>
 <p>Compile the project (pdx) for the simulator using:</p>
@@ -254,7 +257,7 @@ Here&apos;s an example of a <code>config.nims</code> that links a pre-built stat
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-12T01:14:23Z
+        Builded at 2023-11-13T01:11:29Z
         </p>
       </div>
     </div>
