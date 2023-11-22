@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimpk</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">pocketlang</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">script</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">scripting</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">programming</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">language</button></a>
+                </span>
+            
+        </p>
+        <p class="pkg-desc">some("PocketLang binding for Nim")</p>
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimpk" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><p>  <a href="https://paypal.me/khchen0915?country.x=TW&amp;locale.x=zh_TW">    <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" style="max-width: 100%;" alt="Donate" />  </a></p>
+<h1>NimPK</h1>
+<p><a href="https://thakeenathees.github.io/pocketlang/" title="**PocketLang**">  <strong>PocketLang</strong></a> is a lightweight, fast embeddable scripting language. And <strong>NimPK</strong> is a powerful PocketLang binding for Nim.</p>
+<h2>Features of NimPK</h2>
+<ul>
+<li>Deep integration. Nim code can access everything in VM (modules, classes, closure, variables, etc).</li>
+<li>Easy-to-use macro to create native modules and classes.</li>
+<li>Bind Nim procedures or code block as closure or method, support  overloaded procedure, generic procedure, and varargs parameter.</li>
+<li>Bind any Nim types as native class (set, object, ref, tuple, enum, whatever even char or int).</li>
+<li>Automatic type conversion plus custom type conversion can convert any type between Nim value and script variable.</li>
+<li>Well error handling, catching script error in Nim, or catching Nim exception in script.</li>
+</ul>
+<h2>Features of PocketLang NimPK Version</h2>
+<p>NimPK use an <a href="https://github.com/khchen/pocketlang" title="enhanced version of PocketLang">enhanced version of PocketLang</a>. Enhancements compare to original version:</p>
+<ul>
+<li>String format via modulo operator.</li>
+<li>Optional parameters, and arguments with default values.</li>
+<li>Command like function call.</li>
+<li>Conditional expression.</li>
+<li>Magic methods: _getter, _setter, _call, _dict, etc.</li>
+<li>Iterator protocol.</li>
+<li>RegExp, Timsort, PRNG, etc via new built-in module.</li>
+<li>Error handling.</li>
+<li>Metaprogramming.</li>
+<li>And more...</li>
+</ul>
+<p>Demostartion: https://github.com/khchen/pocketlang/blob/devel/tests/devel/demo.pk</p>
+<h2>Features of PocketLang CLI</h2>
+<p>NimPK provide an enhanced version of CLI program wrote in Nim.</p>
+<ul>
+<li>Script modules can be imported from a zip archive attached to the main executable, instead of from path (powered by <a href="https://github.com/guzba/zippy" title="zippy">zippy</a>).</li>
+<li>Native modules can be imported from the zip archive, too (powered by <a href="https://github.com/khchen/memlib" title="memlib">memlib</a>, Windows only).</li>
+<li>Builtin <code>zip</code> module.</li>
+<li>Additional builtin functions: <code>echo</code>, <code>args</code>, <code>load</code>.</li>
+</ul>
+<h2>Examples</h2>
+<p>Run a piece of script.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  print "Hello, world! (1)"
+"""</div></div>  </code></pre>
+<p>Call nim code and get the return value in script.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># There are a lot of ways to bind nim code as closure in the VM.</span></div></div><div class="line"><div class="line-content"><span class="com"># Here using vm.def macro and anonymous procedure (lambda).</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">def</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">hello</span> <span class="kwd">do</span> (<span class="ide">n</span>: <span class="ide">int</span>) <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> fmt"Hello, world! ({n})"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  print hello(2)
+"""</div></div>  </code></pre>
+<p>Run script code and get the return value in nim.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">ret</span> <span class="op">=</span> <span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  return "Hello, world! (3)"
+"""</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">ret</span></div></div>  </code></pre>
+<p>Run script code, and then run the returned closure in nim.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">closure</span> <span class="op">=</span> <span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  return fn (n)
+    return "Hello, world! (${n})"
+  end
+"""</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">closure</span>(<span class="num">4</span>)</div></div>  </code></pre>
+<p>Create a module in nim, and use it in script.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># In vm.def, [] to create a module, and lambda to create module function.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">def</span>:</div></div><div class="line"><div class="line-content">  [<span class="ide">Module</span>]:</div></div><div class="line"><div class="line-content">    <span class="ide">hello</span> <span class="kwd">do</span> (<span class="ide">n</span>: <span class="ide">int</span>) <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">return</span> fmt"Hello, world! ({n})"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  import Module
+  print Module.hello(5)
+"""</div></div>  </code></pre>
+<p>Create a class in script, and use it in nim.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">Foo</span> <span class="op">=</span> <span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  class Foo
+    def _init(n)
+      self.n = n
+    end
+    def hello()
+      return "Hello, world! (${self.n})"
+    end
+  end
+  return Foo
+"""</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">foo</span> <span class="op">=</span> <span class="ide">Foo</span>(<span class="num">6</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">foo</span><span class="op">.</span><span class="ide">hello</span>()</div></div>  </code></pre>
+<p>Create a class in nim, and use it in script.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># In module definition of vm.def, [] to create a class.</span></div></div><div class="line"><div class="line-content"><span class="com"># Lambda to create class methods (first parameter must be self).</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">def</span>:</div></div><div class="line"><div class="line-content">  [<span class="ide">Module</span>]:</div></div><div class="line"><div class="line-content">    [<span class="ide">Foo</span>]:</div></div><div class="line"><div class="line-content">      <span class="str">&quot;_init&quot;</span> <span class="kwd">do</span> (<span class="ide">self</span>: <span class="ide">NpVar</span>, <span class="ide">n</span>: <span class="ide">int</span>):</div></div><div class="line"><div class="line-content">        <span class="ide">self</span><span class="op">.</span><span class="ide">n</span> <span class="op">=</span> <span class="ide">n</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">      <span class="ide">hello</span> <span class="kwd">do</span> (<span class="ide">self</span>: <span class="ide">NpVar</span>) <span class="op">-&gt;</span> <span class="ide">string</span>:</div></div><div class="line"><div class="line-content">        <span class="kwd">return</span> fmt"Hello, world! ({self.n})"</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">vm</span><span class="op">.</span><span class="ide">run</span> """
+  from Module import Foo
+  foo = Foo(7)
+  print foo.hello()
+"""</div></div>  </code></pre>
+<p>More examples and tutorials: https://github.com/khchen/nimpk/tree/main/examples.</p>
+<h2>Docs</h2>
+<ul>
+<li>https://khchen.github.io/nimpk</li>
+</ul>
+<h2>License</h2>
+<p>Read license.txt for more details.</p>
+<p>Copyright (c) 2022 Kai-Hung Chen, Ward. All rights reserved.</p>
+<h2>Donate</h2>
+<p>If this project help you reduce time to develop, you can give me a cup of coffee :)</p>
+<p>  <a href="https://paypal.me/khchen0915?country.x=TW&amp;locale.x=zh_TW">    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="max-width: 100%;" alt="paypal" />  </a></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/khchen/nimpk">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-11-22T01:14:20Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

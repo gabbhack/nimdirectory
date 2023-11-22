@@ -89,56 +89,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>NimFunge98 : a Funge-98 interpreter written in nim</h1>
-<p>This repository contains code for a nim program that can interpret a valid <a href="https://github.com/catseye/Funge-98/blob/master/doc/funge98.markdown">Funge-98</a> program. It passes the <a href="https://github.com/Deewiant/Mycology">mycology test suite</a>.</p>
-<p>Current limitations are :</p>
-<ul>
-<li>currently does not implement any fingerprints</li>
-<li>does not implement concurrent execution with the <code>t</code> command</li>
-<li>does not implement file I/O with the <code>i</code> and <code>o</code> commands</li>
-<li>does not implement system execution with the <code>=</code> command</li>
-</ul>
-<h2>Contents</h2>
-<ul>
-<li>  <a href="#dependencies">Dependencies</a></li>
-<li>  <a href="#quick-install">Quick install</a></li>
-<li>  <a href="#usage">Usage</a></li>
-<li>  <a href="#building">Building</a></li>
-<li>  <a href="#running-tests">Running tests</a></li>
-</ul>
-<h2>Dependencies</h2>
-<p>nim is required. Only nim version &gt;= 1.4.8 on linux amd64 (Gentoo) is being regularly tested.</p>
-<h2>Quick Install</h2>
-<p>To install, clone this repository then run :</p>
-<pre>  <code>nimble install
-</code></pre>
-<h2>Usage</h2>
-<p>Launching the interpreter is as simple as :</p>
-<pre>  <code>nimfunge98 something.b98
-</code></pre>
-<p>The interpreter will then load and execute the specified Funge-98 program until the program normally terminates or is interrupted or killed.</p>
-<h2>Building</h2>
-<p>For a debug build, use :</p>
-<pre>  <code>nimble build
-</code></pre>
-<p>For a release build, use :</p>
-<pre>  <code>nimble build -d:release
-</code></pre>
-<h2>Running tests</h2>
-<p>To run unit tests, use :</p>
-<pre>  <code>nimble tests
-</code></pre>
-<p>To run tests only on (for example) the stack module, use :</p>
-<pre>  <code>nim r tests/stack.nim
-</code></pre>
-<p>To debug these particular tests, use :</p>
-<pre>  <code>nim c --debugger:on --parallelBuild:1 --debuginfo --linedir:on tests/stack.nim
-gdb tests/stack
-set args XXXXX-if-necessary
-b src/truc.nim:123
-r
-</code></pre>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -206,7 +157,7 @@ r
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-21T01:14:40Z
+        Builded at 2023-11-22T01:14:20Z
         </p>
       </div>
     </div>

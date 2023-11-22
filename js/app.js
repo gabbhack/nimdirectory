@@ -322,6 +322,18 @@ const packages = [
     "license": "MIT"
   },
   {
+    "name": "objaccess",
+    "url": "https://github.com/choltreppe/objaccess",
+    "method": "git",
+    "tags": [
+      "getter", "setter",
+      "setable", "getable",
+      "object"
+    ],
+    "description": "generate setters and getters for object types",
+    "license": "MIT"
+  },
+  {
     "name": "geolocation",
     "url": "https://github.com/HazeCS/geolocation",
     "method": "git",
@@ -31783,6 +31795,24 @@ const packages = [
     "web": "https://github.com/xjzh123/astiife"
   },
   {
+    "name": "noxen",
+    "url": "https://github.com/ptVoid/noxen",
+    "method": "git",
+    "tags": [
+      "libary",
+      "terminal",
+      "boxes",
+      "windows",
+      "terminal-boxes",
+      "terminal-windows",
+      "nim-boxen",
+      "boxen"
+    ],
+    "description": "highly customizable terminal boxes for nim!",
+    "license": "MIT",
+    "web": "https://github.com/ptVoid/noxen"
+  },
+  {
     "name": "cap10",
     "url": "https://github.com/crashappsec/cap10",
     "method": "git",
@@ -31857,6 +31887,63 @@ const packages = [
     "description": "webpage information extractor",
     "license": "MIT",
     "web": "https://github.com/bung87/webpage_extractors"
+  },
+  {
+    "name": "niMIDI",
+    "url": "https://github.com/Mycsina/NiMIDI",
+    "method": "git",
+    "tags": [
+      "MIDI",
+      "parser",
+      "writer",
+      "library"
+    ],
+    "description": "MIDI file parser in Nim, for Nim",
+    "license": "MIT",
+    "web": "https://github.com/Mycsina/NiMIDI"
+},
+{
+    "name": "yahttp",
+    "url": "https://github.com/mishankov/yahttp",
+    "method": "git",
+    "tags": [
+      "http",
+      "http-client",
+      "ssl"
+    ],
+    "description": "Awesome simple HTTP client for Nim",
+    "license": "MIT",
+    "web": "https://github.com/mishankov/yahttp?tab=readme-ov-file#-yahttp---awesome-simple-http-client-for-nim"
+  },
+  {
+    "name": "nimpk",
+    "url": "https://github.com/khchen/nimpk",
+    "method": "git",
+    "tags": [
+      "pocketlang",
+      "script",
+      "scripting",
+      "programming",
+      "language"
+    ],
+    "description": "PocketLang binding for Nim",
+    "license": "MIT",
+    "web": "https://github.com/khchen/nimpk"
+  },
+  {
+    "name": "gura",
+    "url": "https://github.com/khchen/gura",
+    "method": "git",
+    "tags": [
+      "configuration",
+      "serialization",
+      "parsing",
+      "toml",
+      "yaml"
+    ],
+    "description": "Gura Configuration Language for Nim",
+    "license": "MIT",
+    "web": "https://github.com/khchen/gura"
   }
 ]
 const options = {
