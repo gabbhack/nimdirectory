@@ -1,5 +1,20 @@
 const packages = [
   {
+    "name": "avr_io",
+    "url": "https://github.com/Abathargh/avr_io",
+    "method": "git",
+    "tags": [
+      "avr",
+      "atmega",
+      "microcontroller",
+      "embedded",
+      "firmware"
+    ],
+    "description": "AVR registers, interrupts, progmem and peripheral support in nim!",
+    "license": "BSD-3",
+    "web": "https://github.com/Abathargh/avr_io/wiki"
+  },
+  {
     "name": "modernnet",
     "url": "https://github.com/Nimberite-Development/ModernNet",
     "method": "git",
@@ -31944,6 +31959,45 @@ const packages = [
     "description": "Gura Configuration Language for Nim",
     "license": "MIT",
     "web": "https://github.com/khchen/gura"
+  },
+  {
+    "name": "jacket",
+    "url": "https://github.com/SpotlightKid/jacket",
+    "method": "git",
+    "tags": [
+      "audio",
+      "midi",
+      "jack",
+      "library",
+      "wrapper"
+    ],
+    "description": "A Nim wrapper for the JACK client-side C API aka libjack",
+    "license": "MIT",
+    "web": "https://github.com/SpotlightKid/jacket"
+  },
+  {
+    "name": "wasmrt",
+    "url": "https://github.com/yglukhov/wasmrt",
+    "method": "git",
+    "tags": [
+      "wasm",
+      "webassembly"
+    ],
+    "description": "Nim wasm runtime",
+    "license": "MIT",
+    "web": "https://github.com/yglukhov/wasmrt"
+  },
+  {
+    "name": "yasync",
+    "url": "https://github.com/yglukhov/yasync",
+    "method": "git",
+    "tags": [
+      "async",
+      "futures"
+    ],
+    "description": "Yet another async/await for Nim",
+    "license": "MIT",
+    "web": "https://github.com/yglukhov/yasync"
   }
 ]
 const options = {

@@ -101,15 +101,17 @@ $ nix-env -iA eriscmd -f https://codeberg.org/eris/nix-eris/archive/trunk.tar.gz
 </ul>
 <h2>eriscmd</h2>
 <p><code>eriscmd</code> is a utility program with a bunch of subcommands. They are mostly self-describing.</p>
-<h3>link</h3>
-<p>The <code>eriscmd link</code> utility creates <a href="https://codeberg.org/eris/eer/pulls/15">ERIS link files</a>.</p>
+<h3>eriscmd link</h3>
+<p>The <code>eriscmd link</code> utility creates <a href="https://codeberg.org/eris/eer/pulls/15">ERIS link files</a> from ERIS URNs.
+A URN is read from stdin or passed as an argument an a link file is written to stdout.</p>
 <p>This utility requires the location of an ERIS CoAP server which should be passed with the environmental variable <code>ERIS_STORE_URL</code>.</p>
 <p>A simple example:</p>
-<pre>  <code class="language-sh">test &quot;$ERIS_STORE_URL = coap+tcp://[::1]:5683&quot;
+<pre>  <code class="language-sh">$ ERIS_STORE_URL=&quot;coap+tcp://[::1]:5683&quot;
+$ pv ./some.data | eris-go put --convergent &quot;$ERIS_STORE_URL&quot; | eriscmd link &gt; some.data.eris
 </code></pre>
-<h3>linkedit</h3>
+<h3>eriscmd linkedit</h3>
 <p>Replace the MIME-type and metadata of ERIS­link files.</p>
-<h3>open</h3>
+<h3>eriscmd open</h3>
 <p>The <code>eriscmd open</code> utility opens <a href="https://eris.codeberg.page/eer/linkfile.xml">ERIS link files</a> in an application that is locally configured for the given MIME type of the link file. To integrate it within a <a href="https://www.freedesktop.org/">Freedesktop.org</a> environment the <a href="./eris-open.desktop">eris-open.desktop</a>, <a href="./eris-link.xml">eris-link.xml</a>, and <a href="./eris48.png">eris48.png</a> should be installed in their appropriate locations.</p>
 <p>The utility only works as well as the associations that are configured for different MIME types, see the <code>xdg-mime</code> utility from <a href="https://freedesktop.org/wiki/Software/xdg-utils/">xdg-utils</a> for more information.</p>
 <p>The utility requires a configuration file that describes the location of the preferred HTTP decoder service. The file is called <code>eris-open.ini</code> and must be located in the <code>XDG_CONFIG_HOME</code> <code>XDG_CONFIG_DIRS</code> hierarchy (<code>~./config/</code> is good enough).</p>
@@ -117,11 +119,16 @@ $ nix-env -iA eriscmd -f https://codeberg.org/eris/nix-eris/archive/trunk.tar.gz
 <pre>  <code class="language-ini">[Decoder]
 URL=http://[::1]:80
 </code></pre>
-<h3>verify</h3>
+<h3>eriscmd verify</h3>
 <p>The <code>eriscmd verify</code> utility will fetch all blocks that constitute a read capability. It parses capabilities on the command-line in URN form and otherwise parses CBOR on standard input to find capabilities.</p>
-<pre>  <code class="language-sh">eriscmd verify urn:eris:BIAMSY42PLVLXF2GQAVOONCNWPEU2PLOYXZXAVFZIRVACKI424N24CMJPPRK7QNWH3LNRE7Q3ENOAJWPKCNUJOLCHIWSEOO6RW5KH7MJ2A
+<pre>  <code class="language-sh">$ eriscmd verify urn:eris:BIAMSY42PLVLXF2GQAVOONCNWPEU2PLOYXZXAVFZIRVACKI424N24CMJPPRK7QNWH3LNRE7Q3ENOAJWPKCNUJOLCHIWSEOO6RW5KH7MJ2A
 
 cat *.eris | eriscmd verify
+</code></pre>
+<h2>mkerisfs</h2>
+<p>Creates <a href="https://eris.codeberg.page/eer/eris-fs.xml">ERIS-FS</a> images.
+This utility only writes out raw images, so pipe it to the ERIS encoder of your choice.</p>
+<pre>  <code class="language-sh">$ mkerisfs --1k «some relative file path» | eris-go put --convergent &quot;$ERIS_STORE_URL&quot;
 </code></pre>
 <h2>Helpers</h2>
 <h3>rclerislink</h3>
@@ -132,7 +139,7 @@ application/x-eris-link+cbor = execm /some/path/to/rclerislink
 
 </code></pre>
 <h2>Nix development</h2>
-<pre>  <code class="language-sh">nix develop git+https://codeberg.org/eris/nix-eris#nim-eris
+<pre>  <code class="language-sh">$ nix develop git+https://codeberg.org/eris/nix-eris#nim-eris
 </code></pre>
 <hr />
 <p>The drafting of the ERIS specification and this implementation was funded by the <a href="https://nlnet.nl/assure">NGI Assure</a> Fund, a fund established by <a href="https://nlnet.nl/">NLnet</a> with financial support from the European Commission&apos;s <a href="https://ngi.eu/">Next Generation Internet</a> program.</p>
@@ -205,7 +212,7 @@ application/x-eris-link+cbor = execm /some/path/to/rclerislink
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-23T01:11:23Z
+        Builded at 2023-11-24T01:10:05Z
         </p>
       </div>
     </div>
