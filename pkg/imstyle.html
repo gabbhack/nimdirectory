@@ -90,30 +90,32 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>ImStyle</h1>
-<p>A nice way to manage your ImGui application&apos;s style.</p>
+<p>A simple way to manage your ImGui application&apos;s style.</p>
 <h2>Installation</h2>
 <pre>  <code>nimble install imstyle
 </code></pre>
 <h2>Usage</h2>
 <p>Normally you would do this to change your application&apos;s style:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimgl</span><span class="op">/</span><span class="ide">imgui</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">style</span> <span class="op">=</span> <span class="ide">igGetStyle</span>()</div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">alpha</span> <span class="op">=</span> <span class="num">1</span><span class="ide">f</span></div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">windowPadding</span> <span class="op">=</span> <span class="ide">ImVec2</span>(<span class="ide">x</span>: <span class="num">4</span><span class="ide">f</span>, <span class="ide">y</span>: <span class="num">4</span><span class="ide">f</span>)</div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">windowMenuButtonPosition</span> <span class="op">=</span> <span class="ide">ImGuiDir</span><span class="op">.</span><span class="ide">Left</span></div></div><div class="line"><div class="line-content"><span class="ide">style</span><span class="op">.</span><span class="ide">colors</span>[<span class="ide">ord</span> <span class="ide">ImGuiCol</span><span class="op">.</span><span class="ide">Text</span>] <span class="op">=</span> <span class="ide">ImVec4</span>(<span class="ide">x</span>: <span class="num">0</span><span class="ide">f</span>, <span class="ide">y</span>: <span class="num">0</span><span class="ide">f</span>, <span class="ide">z</span>: <span class="num">0</span><span class="ide">f</span>, <span class="ide">w</span>: <span class="num">1</span><span class="ide">f</span>) <span class="com"># RGBA</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
-<p>But with <em>ImStyle</em> you wil just create a <code>style.kdl</code>:</p>
+<p>But with <em>ImStyle</em> you can store your style in <code>style.kdl</code>:</p>
 <pre>  <code class="language-kdl"># ImStyle
 alpha 1 # -&gt; 1.0
-windowPadding 4 4 # -&gt; ImVec2(x: 4.0, y: 4.0) 
+windowPadding 4 4 # -&gt; ImVec2(x: 4.0, y: 4.0)
 windowMenuButtonPosition &quot;Left&quot; # ImGuiDir.Left
 ...
 colors {
-  Text 0 0 0 1 # -&gt; ImVec4(x: 0f, y: 0f, z: 0f, w: 1f)
+  Text 255 130 0 1 # -&gt; ImVec4(x: 255f, y: 130f, z: 0f, w: 1f)
   ...
 }
 </code></pre>
-<p>Then read and set the style like this:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">imstyle</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="ide">parseKdlFile</span>(<span class="str">&quot;style.kdl&quot;</span>)<span class="op">.</span><span class="ide">loadStyle</span>()<span class="op">.</span><span class="ide">setCurrent</span>()</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
-<p>With <em>ImStyle</em> it&apos;s way more clear and <strong>you don&apos;t need to compile your application again each time you change its style</strong>.</p>
+<h2>Then read and set the style like this:
+<code>nim import imstyle ... parseKdlFile(&quot;style.kdl&quot;).loadStyle().setCurrent() ...</code>
+With <em>ImStyle</em> it&apos;s way more clear and <strong>you don&apos;t need to compile your application again each time you change its style</strong>.</h2>
+<p>ImStyle uses <a href="https://github.com/Patitotective/kdl-nim">kdl-nim</a> to store the style file, since <code>kdl-nim</code> provides serialization to/from Nim objects, converting an ImGuiStyle object to KDL is a trivial thing:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">imstyle</span></div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="ide">writeFile</span>(<span class="str">&quot;mystyle.kdl&quot;</span>, <span class="ide">igGetStyle</span>()<span class="op">.</span><span class="ide">encodeKdlDoc</span>()<span class="op">.</span><span class="ide">pretty</span>())</div></div><div class="line"><div class="line-content"><span class="op">...</span></div></div>  </code></pre>
 <p>Read more at the <a href="https://patitotective.github.io/ImStyle">docs</a>.</p>
 <h2>Styles</h2>
-<p>For style examples look at <a href="https://github.com/Patitotective/ImStyle/tree/main/styles">styles/</a>.<br />
+<p>For style examples look at <a href="https://github.com/Patitotective/ImStyle/tree/main/styles">styles/</a>.
 Or at <a href="https://github.com/Patitotective/ImThemes">ImThemes</a>, a theme manager and editor that supports ImStyle!</p>
 <h2>Fields Description</h2>
 <p>Fields of <a href="https://nimgl.dev/docs/imgui.html#ImGuiStyle">  <code>ImGuiStyle</code></a>:</p>
@@ -245,7 +247,7 @@ Or at <a href="https://github.com/Patitotective/ImThemes">ImThemes</a>, a theme 
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-24T01:10:05Z
+        Builded at 2023-11-25T01:08:52Z
         </p>
       </div>
     </div>
