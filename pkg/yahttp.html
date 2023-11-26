@@ -113,7 +113,7 @@
 <li><code>query</code> - request query params. Example: <code>{&quot;param1&quot;: &quot;val&quot;, &quot;param2&quot;: &quot;val2&quot;}</code></li>
 <li><code>encodeQueryParams</code> - parameters for <code>encodeQuery</code> function that encodes query params. <a href="https://nim-lang.org/docs/uri.html#encodeQuery%2CopenArray%5B%5D%2Cchar">More</a></li>
 <li><code>body</code> - request body as a string. Example: <code>&quot;{\&quot;key\&quot;: \&quot;value\&quot;}\&quot;</code>. Is not available for <code>get</code>, <code>head</code> and <code>options</code> procedures</li>
-<li><code>auth</code> - login and password for basic authentication. Example: <code>(&quot;login&quot;, &quot;password&quot;)</code></li>
+<li><code>auth</code> - login and password for basic authorization. Example: <code>(&quot;login&quot;, &quot;password&quot;)</code></li>
 <li><code>ignoreSsl</code> - no certificate verification if <code>true</code></li>
 </ul>
 <h2>General procedure</h2>
@@ -127,7 +127,13 @@
 <ul>
 <li><code>status</code> - HTTP status code</li>
 <li><code>body</code> - response body as a string</li>
-<li><code>headers</code> - sequence of response headers</li>
+<li><code>headers</code> - table, where keys are header keys and values are sequences of header values for a key</li>
+<li><code>request</code> - object with request data processed by <code>yahttp</code>
+<ul>
+<li><code>url</code> - stores full url with query params</li>
+<li><code>headers</code> - stores HTTP headers with <code>Authorization</code> for basic authorization</li>
+</ul>
+</li>
 </ul>
 <p><code>Response</code> object has some helper procedures:</p>
 <ul>
@@ -203,7 +209,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-25T01:08:52Z
+        Builded at 2023-11-26T01:15:33Z
         </p>
       </div>
     </div>

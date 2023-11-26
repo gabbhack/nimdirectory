@@ -341,8 +341,10 @@ const packages = [
     "url": "https://github.com/choltreppe/objaccess",
     "method": "git",
     "tags": [
-      "getter", "setter",
-      "setable", "getable",
+      "getter",
+      "setter",
+      "setable",
+      "getable",
       "object"
     ],
     "description": "generate setters and getters for object types",
@@ -31916,8 +31918,8 @@ const packages = [
     "description": "MIDI file parser in Nim, for Nim",
     "license": "MIT",
     "web": "https://github.com/Mycsina/NiMIDI"
-},
-{
+  },
+  {
     "name": "yahttp",
     "url": "https://github.com/mishankov/yahttp",
     "method": "git",
@@ -31998,6 +32000,21 @@ const packages = [
     "description": "Yet another async/await for Nim",
     "license": "MIT",
     "web": "https://github.com/yglukhov/yasync"
+  },
+  {
+    "name": "iniplus",
+    "url": "https://github.com/systemonia/iniplus",
+    "method": "git",
+    "tags": [
+      "ini",
+      "config",
+      "parser",
+      "extended",
+      "library"
+    ],
+    "description": "An extended INI parser for Nim.",
+    "license": "BSD-3-Clause",
+    "web": "https://github.com/systemonia/iniplus"
   }
 ]
 const options = {
