@@ -351,6 +351,18 @@ const packages = [
     "license": "MIT"
   },
   {
+    "name": "unroll",
+    "url": "https://github.com/choltreppe/unroll",
+    "method": "git",
+    "tags": [
+      "unroll",
+      "compiletime",
+      "map"
+    ],
+    "description": "unroll for-loops (and map into seq/array) at compile-time in nim",
+    "license": "MIT"
+  },
+  {
     "name": "geolocation",
     "url": "https://github.com/HazeCS/geolocation",
     "method": "git",
@@ -32015,6 +32027,47 @@ const packages = [
     "description": "An extended INI parser for Nim.",
     "license": "BSD-3-Clause",
     "web": "https://github.com/systemonia/iniplus"
+  },
+  {
+    "name": "pathutils",
+    "url": "https://github.com/hmbemba/pathutils",
+    "method": "git",
+    "tags": [
+      "utils",
+      "paths",
+      "helper"
+    ],
+    "description": "Utilities for handling paths",
+    "license": "MIT",
+    "web": "https://github.com/hmbemba/pathutils"
+  },
+  {
+    "name": "sqids",
+    "url": "https://github.com/sqids/sqids-nim",
+    "method": "git",
+    "tags": [
+      "library",
+      "ids",
+      "id",
+      "sqids"
+    ],
+    "description": "Official Nim port of Sqids. Generate short YouTube-looking IDs from numbers.",
+    "license": "MIT",
+    "web": "https://github.com/sqids/sqids-nim"
+  },
+  {
+    "name": "dlutils",
+    "url": "https://github.com/amnr/dlutils",
+    "method": "git",
+    "tags": [
+      "shared",
+      "library",
+      "helper",
+      "wrapper"
+    ],
+    "description": "Nim package for easy shared library loading.",
+    "license": "NCSA",
+    "web": "https://github.com/amnr/dlutils"
   }
 ]
 const options = {
