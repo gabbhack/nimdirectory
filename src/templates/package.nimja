@@ -10,7 +10,9 @@
                 </span>
             {% endfor %}
         </p>
-        <p class="pkg-desc">{{package.description}}</p>
+        {% if package.description.isSome %}
+            <p class="pkg-desc">{{package.description.get()}}</p>
+        {% endif %}
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
