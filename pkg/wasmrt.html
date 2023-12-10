@@ -67,7 +67,9 @@
                 </span>
             
         </p>
-        <p class="pkg-desc">some("Nim wasm runtime")</p>
+        
+            <p class="pkg-desc">Nim wasm runtime</p>
+        
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
@@ -81,7 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>wasmrt <a href="https://github.com/yglukhov/wasmrt/actions?query=branch%3Amaster">  <img src="https://github.com/yglukhov/wasmrt/workflows/CI/badge.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a></h1>
+                <document><h1>wasmrt <a href="https://github.com/yglukhov/wasmrt/actions?query=branch%3Amaster">  <img src="https://github.com/yglukhov/wasmrt/workflows/CI/badge.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a> <a href="https://nimble.directory/pkg/wasmrt">  <img src="https://img.shields.io/badge/nimble-black?logo=nim&amp;style=flat&amp;labelColor=171921&amp;color=%23f3d400" style="max-width: 100%;" alt="nimble" /></a></h1>
 <p>Compile nim to wasm</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">wasmrt</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">consoleLog</span>(<span class="ide">a</span>: <span class="ide">cstring</span>) {<span class="op">.</span><span class="ide">importwasmraw</span>: <span class="str">&quot;console.log(_nimsj($0))&quot;</span><span class="op">.</span>}</div></div><div class="line"><div class="line-content"><span class="ide">consoleLog</span>(<span class="str">&quot;Hello, world!&quot;</span>)</div></div>  </code></pre>
 <pre>  <code class="language-sh">nim c --out:test.wasm test.nim # Special nim config is required, see below
@@ -167,7 +169,7 @@ node tests/runwasm.js test.wasm
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-27T01:11:57Z
+        Builded at 2023-12-10T09:01:36Z
         </p>
       </div>
     </div>

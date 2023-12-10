@@ -71,7 +71,9 @@
                 </span>
             
         </p>
-        <p class="pkg-desc">some("Utilities for handling paths")</p>
+        
+            <p class="pkg-desc">Utilities for handling paths</p>
+        
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
@@ -97,8 +99,7 @@ If a path is not valid, an exception is raised. This allows you to fail fast and
 <li><strong>File and Directory Creation</strong>: Functions to create files and directories, with options to handle non-existent paths.</li>
 </ul>
 <h2>Installation</h2>
-<p>To install <code>pathutils</code>, add the following to your Nimble file:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Add this to your .nimble file</span></div></div><div class="line"><div class="line-content"><span class="ide">nimble</span> <span class="ide">install</span> <span class="ide">pathutils</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nimble</span> <span class="ide">install</span> <span class="ide">pathutils</span></div></div>  </code></pre>
 <h2>Usage</h2>
 <h3>Types</h3>
 <ul>
@@ -121,6 +122,10 @@ If a path is not valid, an exception is raised. This allows you to fail fast and
 <p>Custom exceptions are raised for various error conditions, such as non-existent paths or invalid file extensions.</p>
 <h3>Examples</h3>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pathutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># if any of the paths do not exist, an exception is raised</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myPath</span> <span class="op">=</span> <span class="ide">newStrictPath</span>(<span class="ide">os</span><span class="op">.</span><span class="ide">getCurrentDir</span>() <span class="op">&amp;</span> <span class="str">&quot;</span>\e<span class="str">xample_file.txt&quot;</span> )</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myFile</span> <span class="op">=</span> <span class="ide">newStrictFile</span>(<span class="ide">os</span><span class="op">.</span><span class="ide">getCurrentDir</span>() <span class="op">&amp;</span> <span class="str">&quot;</span>\e<span class="str">xample_file.txt&quot;</span> )</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myDir</span>  <span class="op">=</span> <span class="ide">newStrictDir</span>(<span class="ide">os</span><span class="op">.</span><span class="ide">getCurrentDir</span>()  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myDir</span> <span class="op">/</span> f"example_file.txt" <span class="com"># if the file does not exist, an exception is raised</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">newStrictPath</span>(<span class="str">&quot;C:</span>\P<span class="str">rogram Files&quot;</span>) <span class="op">/</span> <span class="str">&quot;nodjs&quot;</span> <span class="com"># If the path does not exist, an exception is raised</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span><span class="ide">myPath</span> <span class="com"># prints the path as a string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> f"example_file.txt"<span class="op">.</span><span class="ide">ext</span> <span class="com"># prints the file extension &quot;txt&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> f"example_file.txt"<span class="op">.</span><span class="ide">name</span> <span class="com"># prints the file name &quot;example_file&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span>f"example_file.txt" <span class="com"># prints the file path as a string &quot;example_file.txt&quot;</span></div></div>  </code></pre>
+<h3>Extension</h3>
+<p>This can be really useful when you wish to define your own StrictFile types.</p>
+<p>Now you know with confidence that whatever file myThing is acting on is of the file type you need and actually exists.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">strictimg</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newStrictImg</span>(<span class="ide">path</span>:<span class="ide">string</span>) : <span class="ide">strictimg</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">newStrictFile</span>(<span class="ide">path</span>, <span class="ide">allowed_ext</span><span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;png&quot;</span>, <span class="str">&quot;jpg&quot;</span>, <span class="str">&quot;jpeg&quot;</span>, <span class="str">&quot;gif&quot;</span>])</div></div><div class="line"><div class="line-content">  <span class="kwd">finally</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">path</span><span class="op">.</span><span class="ide">strictimg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">p</span> <span class="op">=</span> <span class="ide">newStrictImg</span>(r"C:\Users\...\Screenshot 2023-11-23 181938.png")</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">p</span><span class="op">.</span><span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myThing</span>(<span class="ide">t</span>: <span class="ide">strictimg</span>) <span class="op">=</span> </div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">t</span><span class="op">.</span><span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">myThing</span>(<span class="ide">p</span>)</div></div>  </code></pre>
 <h2>Testing</h2>
 <p>To run tests, use <code>nimble test</code>. The test suite covers a range of scenarios including path recognition, file and directory existence, error handling, and path concatenation.</p>
 <h2>License</h2>
@@ -193,7 +198,7 @@ If a path is not valid, an exception is raised. This allows you to fail fast and
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-27T01:11:57Z
+        Builded at 2023-12-10T09:01:36Z
         </p>
       </div>
     </div>

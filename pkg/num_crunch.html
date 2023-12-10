@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">num_crunch</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">hpc</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">distributed</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">computation</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">number crunching</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">Allows to write distributed programs for number crunching easily.</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install num_crunch" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>num_crunch</h1>
+<p>  <a href="./LICENSE">    <img src="https://img.shields.io/github/license/willi-kappler/num_crunch" style="max-width: 100%;" alt="MIT licensed" />  </a></p>
+<p>Distributed number crunching with <a href="https://nim-lang.org/" title="The Nim programming language">Nim</a>.</p>
+<p>(Keywords: numeric computing, scientific computing, HPC)</p>
+<p>The num_crunch library allows you to write distributed number crunching programs easily.</p>
+<p>It takes care of the communication between the server and the individual compute processes (called nodes), so you don&apos;t have to worry about it.</p>
+<p>The communication is encrypted and heartbeat messages ensure that if one node crashes the server and the other nodes still keep working.</p>
+<p>You can also add new nodes while your computation is running. Thus is allows you to add more computational power when needed without restarting the
+whole process.</p>
+<p>The library is written in the powerful <a href="https://nim-lang.org/" title="The Nim programming language">Nim</a> programming language which allows for easy integration with C code and other programming languages.</p>
+<p>Have a look at the Mandelbrot example to see how it works.</p>
+<h2>How to use it</h2>
+<p>You have to provide two data structures and implement some method for them.</p>
+<ol>
+<li>
+<p>For the compute node: <strong>NCNodeDataProcessor.</strong> Implement your own data structure based on this one:</p>
+<pre>  <code class="language-nim">import num_crunch
+
+type MyStructNode ref object of NCNodeDataProcessor
+    data: int32
+
+method ncInit(self: var MyStructNode, data: seq[byte]) =
+    # This method is optionaly and only has to be implemented
+    # if needed. It will be called exactly once when the node
+    # connects to the server for the first time.
+
+    # Convert the data given by the server to the data type we need:
+    let initData = ncFromBytes(data, int32)
+
+    # Assign the data to our struct:
+    self.data = initData
+
+method ncProcessData(self: var MyStructNode, inputData: seq[byte]): seq[byte] =
+    # This method has to be implemented.
+    # It will be called everytime the node connects to the server and asks for
+    # new data to be processed by the node.
+
+    # Convert the input data given by the server to the data type we need:
+    let data = ncFromBytes(inputData, float64)
+
+    # Do some heavy calculations:
+    let value = float64(self.data) * data
+
+    # Convert it back to a stream of bytes for the server:
+    let bytes = ncToBytes(value)
+
+    # And just return it:
+    return bytes
+</code></pre>
+</li>
+<li>
+<p>For the server: <strong>NCServerDataProcessor.</strong> Implement your own data structure based on this one:</p>
+<pre>  <code class="language-nim">import num_crunch
+
+type MyStructServer ref object of NCServerDataProcessor
+    data: float64
+
+method ncIsFinished(self: var MyStructServer): bool =
+    # This method has to be implemented and tells the server when the
+    # compute job is done.
+    return self.data &gt; 10
+
+method ncGetInitData(self: var MyStructServer): seq[byte] =
+    # This method is optionally and just returns the initial data for the node.
+    # It is called exactly once when the node connects to the server 
+    # for the first time.
+    return ncToBytes(2.0)
+
+method ncGetNewData(self: var MyStructServer, n: NCNodeID): seq[byte] =
+    # This method has to be implemented and returns the new data
+    # that needs to be processed by the given node (node id).
+    # The node id should be stored so that when collecting the data
+    # the server knows which node has processed which piece of data.
+    # It is called everytime the node requests new data to be processed.
+    return ncToBytes(3.5)
+
+method ncCollectData(self: var MyStructServer, n: NCNodeID, data: seq[byte]) =
+    # This method has to be implemented and collects the processed data
+    # from the given node (ndoe id).
+    # It is called every time the node has processed the data and sends it back 
+    # to the server.
+    self.data = ncFromBytes(data, float64)
+
+method ncMaybeDeadNode(self: var MyStructServer, n: NCNodeID) =
+    # This method has to be implemented and manages a list of registered nodes.
+    # If a node misses a heartbeat message this method will be called.
+    # The piece of data that the node should have been processed has to be
+    # marked as &quot;dirty&quot; or &quot;unprocessed&quot; and should be given to another node.
+    discard
+
+method ncSaveData(self: var MyStructServer) =
+    # This method has to be implemented. It will be called when the job is done.
+    # Thas is when the method &quot;ncIsFinished()&quot; returns true.
+    # It has to save the data onto disk or into a database or somewhere else.
+    discard
+
+</code></pre>
+</li>
+</ol>
+<p>There is more work to do for the server side, but the idea is that these methods will be just delegated
+(or passed on) to another method of a &quot;smart&quot; data structure that knows how to handle it.
+Currently num_crunch provides two such &quot;smart&quot; data structure: NCArray2D and NCFileArray.
+More data structures will be added in future versions of this library.
+See the Mandelbrot example on how this works in detail.</p>
+<h2>FAQ</h2>
+<ul>
+<li>
+<p>Why is it called num_crunch ?
+It stands for &quot;<strong>num</strong>ber <strong>crunch</strong>ing&quot;.
+It&apos;s also a wordplay: nim -&gt; num</p>
+</li>
+<li>
+<p>When should I use it ?
+The network is the bottleneck, so you should keep the nodes busy.
+That is each node should have enough data to process for at least 10 minutes.
+Try to keep the network traffic low (= transmit small amounts of data).</p>
+</li>
+<li>
+<p>Can it run on a cluster (HPC) ?
+Yes there is an example batch script for <a href="https://slurm.schedmd.com/">SLURM</a> (sbatch) and <a href="https://adaptivecomputing.com/cherry-services/torque-resource-manager/">Torq / Moab / PBS</a> (qsub) in the mandelbrot2 folder.</p>
+</li>
+<li>
+<p>How does it compare to MPI (<a href="https://www.open-mpi.org/">OpenMPI</a>) ?
+MPI (message passing interface) is super optimized and has support for C, C++ and Fortran.
+It&apos;s faster than num_crunch and has a lot more features but is less flexible.
+You can&apos;t add more nodes while the program is running and if one node crashes the whole program crashes.
+With num_crunch you can add more nodes while your program is running and one node can&apos;t crash
+your whole program. You can also easily mix different operating systems (Windows, Linux, MacOS)
+with num_crunch.</p>
+</li>
+<li>
+<p>Why does the server not stop directly after the job is done ?
+The server just waits some more time since there may be some nodes that still try to connect.
+Those nodes will just receive the &quot;job is done&quot; message.</p>
+</li>
+</ul>
+<h2>License</h2>
+<p>This library is licensed under the MIT license.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/willi-kappler/num_crunch">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-12-10T09:01:36Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

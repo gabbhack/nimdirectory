@@ -31975,6 +31975,20 @@ const packages = [
     "web": "https://github.com/khchen/gura"
   },
   {
+    "name": "num_crunch",
+    "url": "https://github.com/willi-kappler/num_crunch",
+    "method": "git",
+    "tags": [
+      "hpc",
+      "distributed",
+      "computation",
+      "number crunching"
+    ],
+    "description": "Allows to write distributed programs for number crunching easily.",
+    "license": "MIT",
+    "web": "https://github.com/willi-kappler/num_crunch"
+  },
+  {
     "name": "jacket",
     "url": "https://github.com/SpotlightKid/jacket",
     "method": "git",
@@ -32068,6 +32082,29 @@ const packages = [
     "description": "Nim package for easy shared library loading.",
     "license": "NCSA",
     "web": "https://github.com/amnr/dlutils"
+  },
+  {
+    "name": "whisper",
+    "url": "https://github.com/maleyva1/whisper",
+    "method": "git",
+    "tags": [
+      "bindings",
+      "whisper.cpp"
+    ],
+    "description": "Bindings for Whisper.cpp",
+    "license": "MIT",
+    "web": "https://github.com/maleyva1/whisper"
+  },
+  {
+    "name": "moveiterators",
+    "url": "https://github.com/sls1005/moveiterators",
+    "method": "git",
+    "tags": [
+      "iterator"
+    ],
+    "description": "Special iterators that use move semantics",
+    "license": "MIT",
+    "web": "https://github.com/sls1005/moveiterators"
   }
 ]
 const options = {

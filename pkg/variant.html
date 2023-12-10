@@ -63,7 +63,9 @@
                 </span>
             
         </p>
-        <p class="pkg-desc">some("Variant type and type matching")</p>
+        
+            <p class="pkg-desc">Variant type and type matching</p>
+        
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
@@ -77,7 +79,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>variant <a href="https://github.com/yglukhov/variant/actions?query=branch%3Amaster">  <img src="https://github.com/yglukhov/variant/workflows/CI/badge.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a> <a href="https://github.com/yglukhov/nimble-tag">  <img src="https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble_js.png" style="max-width: 100%;" alt="nimble" /></a></h1>
+                <document><h1>variant <a href="https://github.com/yglukhov/variant/actions?query=branch%3Amaster">  <img src="https://github.com/yglukhov/variant/workflows/CI/badge.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a> <a href="https://nimble.directory/pkg/variant">  <img src="https://img.shields.io/badge/nimble-black?logo=nim&amp;style=flat&amp;labelColor=171921&amp;color=%23f3d400" style="max-width: 100%;" alt="nimble" /></a></h1>
 <p>Variant type and type matching for Nim</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">variant</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">v</span> <span class="op">=</span> <span class="ide">newVariant</span>(<span class="num">5</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">ofType</span>(<span class="ide">int</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">get</span>(<span class="ide">int</span>) <span class="op">==</span> <span class="num">5</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">v</span> <span class="op">=</span> <span class="ide">newVariant</span>(<span class="num">3.0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">ofType</span>(<span class="ide">float</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">get</span>(<span class="ide">float</span>) <span class="op">==</span> <span class="num">3.0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">v</span> <span class="op">=</span> <span class="ide">newVariant</span>(<span class="op">@</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>])</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">ofType</span>(<span class="ide">seq</span>[<span class="ide">int</span>])</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">v</span><span class="op">.</span><span class="ide">get</span>(<span class="ide">seq</span>[<span class="ide">int</span>])[<span class="num">1</span>] <span class="op">==</span> <span class="num">2</span></div></div>  </code></pre>
 <p>Matching:</p>
@@ -153,7 +155,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-27T01:11:57Z
+        Builded at 2023-12-10T09:01:36Z
         </p>
       </div>
     </div>

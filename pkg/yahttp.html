@@ -71,7 +71,9 @@
                 </span>
             
         </p>
-        <p class="pkg-desc">some("Awesome simple HTTP client for Nim")</p>
+        
+            <p class="pkg-desc">Awesome simple HTTP client for Nim</p>
+        
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
@@ -114,6 +116,7 @@
 <li><code>encodeQueryParams</code> - parameters for <code>encodeQuery</code> function that encodes query params. <a href="https://nim-lang.org/docs/uri.html#encodeQuery%2CopenArray%5B%5D%2Cchar">More</a></li>
 <li><code>body</code> - request body as a string. Example: <code>&quot;{\&quot;key\&quot;: \&quot;value\&quot;}\&quot;</code>. Is not available for <code>get</code>, <code>head</code> and <code>options</code> procedures</li>
 <li><code>auth</code> - login and password for basic authorization. Example: <code>(&quot;login&quot;, &quot;password&quot;)</code></li>
+<li><code>timeout</code> - stop waiting for a response after a given number of milliseconds. <code>-1</code> for no timeout, which is default value</li>
 <li><code>ignoreSsl</code> - no certificate verification if <code>true</code></li>
 </ul>
 <h2>General procedure</h2>
@@ -132,6 +135,7 @@
 <ul>
 <li><code>url</code> - stores full url with query params</li>
 <li><code>headers</code> - stores HTTP headers with <code>Authorization</code> for basic authorization</li>
+<li><code>httpMethod</code> - HTTP method</li>
 </ul>
 </li>
 </ul>
@@ -209,7 +213,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-27T01:11:57Z
+        Builded at 2023-12-10T09:01:36Z
         </p>
       </div>
     </div>

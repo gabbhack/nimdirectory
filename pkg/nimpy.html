@@ -67,7 +67,9 @@
                 </span>
             
         </p>
-        <p class="pkg-desc">some("Nim - Python bridge")</p>
+        
+            <p class="pkg-desc">Nim - Python bridge</p>
+        
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
@@ -81,7 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>nimpy <a href="https://github.com/yglukhov/nimpy/actions?query=branch%3Amaster">  <img src="https://github.com/yglukhov/nimpy/workflows/CI/badge.svg?branch=master" style="max-width: 100%;" alt="Build Status" /></a></h1>
+                <document><h1>nimpy <a href="https://github.com/yglukhov/nimpy/actions/workflows/test.yml">  <img src="https://github.com/yglukhov/nimpy/actions/workflows/test.yml/badge.svg?branch=master" style="max-width: 100%;" alt="CI" /></a> <a href="https://nimble.directory/pkg/nimpy">  <img src="https://img.shields.io/badge/nimble-black?logo=nim&amp;style=flat&amp;labelColor=171921&amp;color=%23f3d400" style="max-width: 100%;" alt="nimble" /></a></h1>
 <p>Native language integration with Python has never been easier!</p>
 <h2>Implementing a Python Module in Nim</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># mymodule.nim - file name should match the module name you&apos;re going to import from python</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimpy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">greet</span>(<span class="ide">name</span>: <span class="ide">string</span>): <span class="ide">string</span> {<span class="op">.</span><span class="ide">exportpy</span><span class="op">.</span>} <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">return</span> <span class="str">&quot;Hello, &quot;</span> <span class="op">&amp;</span> <span class="ide">name</span> <span class="op">&amp;</span> <span class="str">&quot;!&quot;</span></div></div>  </code></pre>
@@ -250,7 +252,7 @@ assert(tt.getMyField() == &quot;Hello&quot;)
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-27T01:11:57Z
+        Builded at 2023-12-10T09:01:36Z
         </p>
       </div>
     </div>

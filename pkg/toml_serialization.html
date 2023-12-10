@@ -75,7 +75,9 @@
                 </span>
             
         </p>
-        <p class="pkg-desc">some("Flexible TOML serialization [not] relying on run-time type information")</p>
+        
+            <p class="pkg-desc">Flexible TOML serialization [not] relying on run-time type information</p>
+        
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
@@ -95,37 +97,70 @@
 <a href="https://github.com/toml-lang/toml/releases/tag/1.0.0">  <img src="assets/badge-TOML.svg" style="max-width: 100%;" alt="TOML" /></a>
 <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /><img src="https://img.shields.io/badge/available%20on-nimble-yellow.svg?style=flat-square" style="max-width: 100%;" alt="nimble" /><img src="https://github.com/status-im/nim-toml-serialization/workflows/CI/badge.svg" style="max-width: 100%;" alt="Github action" /></p>
 <p>Flexible TOML serialization [not] relying on run-time type information.</p>
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="#overview">Overview</a>
+<ul>
+<li>  <a href="#spec-compliance">Spec compliance</a></li>
+<li>  <a href="#nonstandard-features">Nonstandard features</a></li>
+<li>  <a href="#keyed-mode">Keyed mode</a></li>
+</ul>
+</li>
+<li><a href="#decoder">Decoder</a>
+<ul>
+<li>  <a href="#parse-inline-table-with-newline">Parse inline table with newline</a></li>
+<li>  <a href="#load-and-save">Load and save</a></li>
+<li>  <a href="#toml-we-cant-do">TOML we can[&apos;t] do</a></li>
+<li>  <a href="#optiont">Option[T]</a></li>
+<li>  <a href="#bignum">Bignum</a></li>
+<li>  <a href="#table">Table</a></li>
+<li>  <a href="#sets-and-list-like">Sets and list-like</a></li>
+<li>  <a href="#enums">Enums</a></li>
+<li>  <a href="#helper-functions">Helper functions</a></li>
+</ul>
+</li>
+<li>  <a href="#implementation-specifics">Implementation specifics</a></li>
+<li>  <a href="#installation">Installation</a></li>
+<li>  <a href="#license">License</a></li>
+<li>  <a href="#credits">Credits</a></li>
+</ul>
 <h2>Overview</h2>
 <p>nim-toml-serialization is a member of <a href="https://github.com/status-im/nim-serialization">nim-serialization</a>
 family and provides several operation modes:</p>
 <ul>
 <li>Decode into Nim data types without any intermediate steps using only a <strong>subset</strong> of TOML.
 <ul>
-<li>Unlike typical lexer based parser, nim-toml-serialization is very efficient because
-the parser convert text directly into Nim data types and using no intermediate <code>token</code>.</li>
+<li>Unlike typical lexer-based parser, nim-toml-serialization is very efficient because
+the parser converts text directly into Nim data types and uses no intermediate <code>token</code>.</li>
 </ul>
 </li>
 <li>Decode into Nim data types mixed with <code>TomlValueRef</code> to parse any valid TOML value.
 <ul>
 <li>Using <code>TomlValueRef</code> can offer more flexibility but also require more memory.
-If you can avoid using dotted key, there is no reason to use <code>TomlValueRef</code>.</li>
+If you can avoid using a dotted key, there is no reason to use <code>TomlValueRef</code>.</li>
 </ul>
 </li>
 <li>Decode into <code>TomlValueRef</code> from any valid TOML.</li>
 <li>Encode Nim data types into a <strong>subset</strong> of TOML.</li>
 <li>Encode <code>TomlValueRef</code> into full spec TOML.</li>
 <li>Both encoder and decoder support <code>keyed</code> mode.</li>
-<li>Allow skipping unknown fields using <code>TomlUnknownFields</code> flag.
+<li>Allow skipping unknown fields using the <code>TomlUnknownFields</code> flag.
 <ul>
-<li>Skipping unknown fields also done efficiently, no token produced.
-But skipped fields should contains valid TOML value or the parser will raise exception.</li>
+<li>Skipping unknown fields is also done efficiently, with no token produced.
+But skipped fields should contain valid TOML values or the parser will raise an exception.</li>
 </ul>
 </li>
 <li>Since v0.2.1 you can choose to use <code>OrderedTable</code> instead of <code>Table</code> when parsing into <code>TomlValueRef</code>
 using <code>-d:tomlOrderedTable</code> compile time switch.</li>
-<li>Since v0.2.3, compile time decode/loadFile are allowed. It means you can initialize const value using
-<code>decode</code> or <code>loadFile</code>. It also ok to use it inside static block or other nim VM code.</li>
+<li>Since v0.2.3, compile time decode/loadFile is allowed. It means you can initialize a const value using
+<code>decode</code> or <code>loadFile</code>. It is also ok to use it inside a static block or other nim VM code.</li>
 </ul>
+<blockquote>
+<p><strong>Note</strong><br />
+On Windows, you might need to increase the stack size as nim-toml-serialization uses the stack to pass the object around.
+Example: add <code>--passL:&quot;-Wl,--stack,8388608&quot;</code> to your command line when running the compiler.
+But you only need to do this if the object you serializing can produce deep recursion.</p>
+</blockquote>
 <h2>Spec compliance</h2>
 <p>nim-toml-serialization implements <a href="https://github.com/toml-lang/toml/releases/tag/1.0.0">v1.0.0</a>
 TOML spec and pass these test suites:</p>
@@ -133,36 +168,36 @@ TOML spec and pass these test suites:</p>
 <li>  <a href="https://github.com/iarna/toml-spec-tests">iarna toml test suite</a></li>
 <li>  <a href="https://github.com/BurntSushi/toml-test">burntsushi toml test suite</a></li>
 </ul>
-<h2>Non standard features</h2>
+<h2>Nonstandard features</h2>
 <ul>
 <li>
 <p>TOML key comparison according to the spec is case sensitive and this is the default mode
-for both encoder/decoder. But nim-toml-serialization also support:</p>
+for both encoder/decoder. But nim-toml-serialization also supports:</p>
 <ul>
 <li>Case insensitive key comparison.</li>
 <li>Nim ident sensitivity key comparison mode (only the first char is case sensitive).</li>
 </ul>
-<p>TOML key supports Unicode chars but the comparison mentioned above only applied to ASCII chars.</p>
+<p>TOML key supports Unicode chars but the comparison mentioned above only applies to ASCII chars.</p>
 </li>
 <li>
-<p>TOML inline table disallow newline inside the table.
-nim-toml-serialization provide a switch to enable newline in inline table via <code>TomlInlineTableNewline</code>.</p>
+<p>TOML inline table disallows newline inside the table.
+nim-toml-serialization provides a switch to enable newline in an inline table via <code>TomlInlineTableNewline</code>.</p>
 </li>
 <li>
 <p>TOML standard does not support xHH escape sequence, only uHHHH or UHHHHHHHH.
-Use <code>TomlHexEscape</code> to enable this feature, otherwise it will raise exception.</p>
+Use <code>TomlHexEscape</code> to enable this feature otherwise it will raise an exception.</p>
 </li>
 <li>
 <p>TOML standard requires time in HH:MM:SS format, <code>TomlHourMinute</code> flags will allow HH:MM format.</p>
 </li>
 </ul>
 <h2>Keyed mode</h2>
-<p>When decoding, only object, tuple or <code>TomlValueRef</code> allowed at top level.
-All others Nim basic datatypes such as floats, ints, array, boolean must
+<p>When decoding, only objects, tuples or <code>TomlValueRef</code> are allowed at top level.
+All other Nim basic datatypes such as floats, ints, arrays, and booleans must
 be a value of a key.</p>
 <p>nim-toml-serialization offers <code>keyed</code> mode decoding to overcome this limitation.
 The parser can skip any non-matching key-value pair efficiently because
-the parser produce no token but at the same time can validate the syntax correctly.</p>
+the parser produces no token but at the same time can validate the syntax correctly.</p>
 <pre>  <code class="language-toml">[server]
   name = &quot;TOML Server&quot;
   port = 8005
@@ -174,18 +209,18 @@ the parser produce no token but at the same time can validate the syntax correct
 <li>TomlCaseInsensitive</li>
 <li>TomlCaseNim</li>
 </ul>
-<p>Key must be valid Toml basic-key, quoted-key, or dotted-key.</p>
+<p>The key must be a valid Toml basic key, quoted key, or dotted key.</p>
 <p>Gotcha:</p>
 <pre>  <code class="language-toml">server = { ip = &quot;127.0.0.1&quot;, port = 8005, name = &quot;TOML Server&quot; }
 </code></pre>
-<p>It maybe tempting to use keyed mode for above example like this:</p>
+<p>It may be tempting to use keyed mode for the above example like this:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">rawToml</span>, <span class="ide">string</span>, <span class="str">&quot;server.name&quot;</span>)</div></div>  </code></pre>
-<p>But it won&apos;t work because the grammar of TOML make it very difficult
-to <code>exit</code> from inline-table-parser in a clean way.</p>
+<p>But it won&apos;t work because the grammar of TOML makes it very difficult
+to <code>exit</code> from the inline table parser in a clean way.</p>
 <h2>Decoder</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">    <span class="ide">NimServer</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">      <span class="ide">port</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">MixedServer</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">name</span>: <span class="ide">TomlValueRef</span></div></div><div class="line"><div class="line-content">      <span class="ide">port</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="ide">StringServer</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">      <span class="ide">name</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">      <span class="ide">port</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># decode into native Nim</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">nim_native</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">rawtoml</span>, <span class="ide">NimServer</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># decode into mixed Nim + TomlValueRef</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">nim_mixed</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">rawtoml</span>, <span class="ide">MixedServer</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># decode any value into string</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">nim_string</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">rawtoml</span>, <span class="ide">StringServer</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># decode any valid TOML</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">toml_value</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">rawtoml</span>, <span class="ide">TomlValueRef</span>)</div></div>  </code></pre>
 <h2>Parse inline table with newline</h2>
-<pre>  <code class="language-toml"># this is a non standard toml
+<pre>  <code class="language-toml"># This is a nonstandard toml
 
 server = {
   ip = &quot;127.0.0.1&quot;,
@@ -213,65 +248,64 @@ You can parse TOML time using <code>string</code>, <code>TomlTime</code>, <code>
 </li>
 <li>
 <p>Heterogenous array.
-When parsing heterogenous array, use <code>string</code> or <code>TomlValueRef</code>.</p>
+When parsing a heterogenous array, use <code>string</code> or <code>TomlValueRef</code>.</p>
 </li>
 <li>
 <p>Floats.
 Floats should be implemented as IEEE 754 binary64 values.
-Standard TOML float are float64.
+The standard TOML float is float64.
 When parsing floats, use <code>string</code> or <code>TomlValueRef</code> or <code>SomeFloat</code>.</p>
 </li>
 <li>
 <p>Integers.
-TOML integer is an 64 bit (signed long) range expected (−9,223,372,036,854,775,808 to 9,223,372,036,854,775,807).
+TOML integer is a 64-bit (signed long) range expected (−9,223,372,036,854,775,808 to 9,223,372,036,854,775,807).
 When parsing integers, use <code>string</code> or <code>SomeInteger</code>, or <code>TomlValueRef</code>.</p>
 </li>
 <li>
 <p>Array of tables.
-Array of tables can be parsed via <code>TomlValueRef</code> or parsed as a field of object.
+An array of tables can be parsed via <code>TomlValueRef</code> or parsed as a field of object.
 Parsing with keyed mode also works.</p>
 </li>
 <li>
 <p>Dotted key.
-When parse into nim object, key must not a dotted key.
-Dotted key is supported via <code>keyed</code> decoding or <code>TomlValueRef</code>.</p>
+When parsing into a nim object, the key must not be dotted.
+The dotted key is supported via <code>keyed</code> decoding or <code>TomlValueRef</code>.</p>
 </li>
 </ul>
 <h2>Option[T]</h2>
 <p>Option[T] works as usual.</p>
 <h2>Bignum</h2>
 <p>TOML integer maxed at int64. But nim-toml-serialization can extend this to arbitrary precision bignum.
-Parsing bignum is achieved via helper function <code>parseNumber</code>.</p>
-<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="com"># this is an example how to parse bignum with `parseNumber` and `stint`.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">stint</span>, <span class="ide">toml_serialization</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">readValue</span><span class="op">*</span>(<span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">TomlReader</span>, <span class="ide">value</span>: <span class="kwd">var</span> <span class="ide">Uint256</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">z</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> (<span class="ide">sign</span>, <span class="ide">base</span>) <span class="op">=</span> <span class="ide">r</span><span class="op">.</span><span class="ide">parseNumber</span>(<span class="ide">z</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">sign</span> <span class="op">==</span> <span class="ide">Sign</span><span class="op">.</span><span class="ide">Neg</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">raiseTomlErr</span>(<span class="ide">r</span><span class="op">.</span><span class="ide">lex</span>, <span class="ide">errNegateUint</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">base</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base10</span>: <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">10</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base16</span>: <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">16</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base8</span>:  <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">8</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base2</span>:  <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">except</span> <span class="ide">ValueError</span> <span class="kwd">as</span> <span class="ide">ex</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">raiseUnexpectedValue</span>(<span class="ide">r</span><span class="op">.</span><span class="ide">lex</span>, <span class="ide">ex</span><span class="op">.</span><span class="ide">msg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">z</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="str">&quot;bignum = 1234567890_1234567890&quot;</span>, <span class="ide">Uint256</span>, <span class="str">&quot;bignum&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="op">$</span><span class="ide">z</span> <span class="op">==</span> <span class="str">&quot;12345678901234567890&quot;</span></div></div>  </code></pre>
+Parsing bignum is achieved via the helper function <code>parseNumber</code>.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="com"># This is an example of how to parse bignum with `parseNumber` and `stint`.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">stint</span>, <span class="ide">toml_serialization</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">readValue</span><span class="op">*</span>(<span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">TomlReader</span>, <span class="ide">value</span>: <span class="kwd">var</span> <span class="ide">Uint256</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">var</span> <span class="ide">z</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> (<span class="ide">sign</span>, <span class="ide">base</span>) <span class="op">=</span> <span class="ide">r</span><span class="op">.</span><span class="ide">parseNumber</span>(<span class="ide">z</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">sign</span> <span class="op">==</span> <span class="ide">Sign</span><span class="op">.</span><span class="ide">Neg</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">raiseTomlErr</span>(<span class="ide">r</span><span class="op">.</span><span class="ide">lex</span>, <span class="ide">errNegateUint</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">    <span class="kwd">case</span> <span class="ide">base</span></div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base10</span>: <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">10</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base16</span>: <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">16</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base8</span>:  <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">8</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">of</span> <span class="ide">base2</span>:  <span class="ide">value</span> <span class="op">=</span> <span class="ide">parse</span>(<span class="ide">z</span>, <span class="ide">Uint256</span>, <span class="num">2</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">except</span> <span class="ide">ValueError</span> <span class="kwd">as</span> <span class="ide">ex</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">raiseUnexpectedValue</span>(<span class="ide">r</span><span class="op">.</span><span class="ide">lex</span>, <span class="ide">ex</span><span class="op">.</span><span class="ide">msg</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">z</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">decode</span>(<span class="str">&quot;bignum = 1234567890_1234567890&quot;</span>, <span class="ide">Uint256</span>, <span class="str">&quot;bignum&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="op">$</span><span class="ide">z</span> <span class="op">==</span> <span class="str">&quot;12345678901234567890&quot;</span></div></div>  </code></pre>
 <h2>Table</h2>
-<p>Decoding a table can be achieved via <code>parseTable</code> template.
+<p>Decoding a table can be achieved via the <code>parseTable</code> template.
 To parse the value, you can use one of the helper functions or use <code>readValue</code>.</p>
-<p>Table can be used to parse top level value, regular table, and inline table
-in a manner similar to object.</p>
-<p>No builtin <code>readValue</code> for table provided, you must overload it yourself depends on your need.</p>
-<p><code>Table</code> can be stdlib table, ordered table, table ref, or any table like data types.</p>
+<p>The table can be used to parse the top-level value, regular table, and inline table like an object.</p>
+<p>No built-in <code>readValue</code> for the table provided, you must overload it yourself depending on your need.</p>
+<p><code>Table</code> can be stdlib table, ordered table, table ref, or any table-like data type.</p>
 <pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">readValue</span><span class="op">*</span>(<span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">TomlReader</span>, <span class="ide">table</span>: <span class="kwd">var</span> <span class="ide">Table</span>[<span class="ide">string</span>, <span class="ide">int</span>]) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">parseTable</span>(<span class="ide">r</span>, <span class="ide">key</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">table</span>[<span class="ide">key</span>] <span class="op">=</span> <span class="ide">r</span><span class="op">.</span><span class="ide">parseInt</span>(<span class="ide">int</span>)</div></div>  </code></pre>
 <h2>Sets and list-like</h2>
-<p>Similar to <code>Table</code>, sets and list or array like data structure can be parsed using
-<code>parseList</code> template. It come with two flavors, indexed and non indexed.</p>
-<p>Builtin <code>readValue</code> for regular <code>seq</code> and <code>array</code> are implemented for you.
-No builtin <code>readValue</code> for <code>set</code> or <code>set-like</code> provided, you must overload it yourself depends on your need.</p>
+<p>Similar to <code>Table</code>, sets and list or array-like data structure can be parsed using
+<code>parseList</code> template. It comes in two flavors, indexed and non-indexed.</p>
+<p>Built-in <code>readValue</code> for regular <code>seq</code> and <code>array</code> is implemented for you.
+No built-in <code>readValue</code> for <code>set</code> or <code>set-like</code> is provided, you must overload it yourself depending on your need.</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">HoldArray</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">data</span>: <span class="ide">array</span>[<span class="num">3</span>, <span class="ide">int</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">HoldSeq</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">data</span>: <span class="ide">seq</span>[<span class="ide">int</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">WelderFlag</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">TIG</span></div></div><div class="line"><div class="line-content">    <span class="ide">MIG</span></div></div><div class="line"><div class="line-content">    <span class="ide">MMA</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">Welder</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">flags</span>: <span class="ide">set</span>[<span class="ide">WelderFlag</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">readValue</span><span class="op">*</span>(<span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">TomlReader</span>, <span class="ide">value</span>: <span class="kwd">var</span> <span class="ide">HoldArray</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># parseList with index, `i` can be any valid identifier</span></div></div><div class="line"><div class="line-content">  <span class="ide">r</span><span class="op">.</span><span class="ide">parseList</span>(<span class="ide">i</span>):</div></div><div class="line"><div class="line-content">    <span class="ide">value</span><span class="op">.</span><span class="ide">data</span>[<span class="ide">i</span>] <span class="op">=</span> <span class="ide">r</span><span class="op">.</span><span class="ide">parseInt</span>(<span class="ide">int</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">readValue</span><span class="op">*</span>(<span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">TomlReader</span>, <span class="ide">value</span>: <span class="kwd">var</span> <span class="ide">HoldSeq</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># parseList without index</span></div></div><div class="line"><div class="line-content">  <span class="ide">r</span><span class="op">.</span><span class="ide">parseList</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">let</span> <span class="ide">lastPos</span> <span class="op">=</span> <span class="ide">value</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">len</span></div></div><div class="line"><div class="line-content">    <span class="ide">value</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">setLen</span>(<span class="ide">lastPos</span> <span class="op">+</span> <span class="num">1</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">readValue</span>(<span class="ide">r</span>, <span class="ide">value</span><span class="op">.</span><span class="ide">data</span>[<span class="ide">lastPos</span>])</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">readValue</span><span class="op">*</span>(<span class="ide">r</span>: <span class="kwd">var</span> <span class="ide">TomlReader</span>, <span class="ide">value</span>: <span class="kwd">var</span> <span class="ide">Welder</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># populating set also okay</span></div></div><div class="line"><div class="line-content">  <span class="ide">r</span><span class="op">.</span><span class="ide">parseList</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">value</span><span class="op">.</span><span class="ide">flags</span><span class="op">.</span><span class="ide">incl</span> <span class="ide">r</span><span class="op">.</span><span class="ide">parseEnum</span>(<span class="ide">WelderFlag</span>)</div></div>  </code></pre>
 <h2>Enums</h2>
-<p>There is no enums in TOML specification. The reader/decoder is able to parse both
-<code>ordinal</code> or <code>string</code> representation of an enum. While on the other hand, the
-writer/encoder only have <code>ordinal</code> builtin writer. But that is not a limitation,
+<p>There are no enums in TOML specification. The reader/decoder can parse both
+the <code>ordinal</code> or <code>string</code> representation of an enum. While on the other hand,
+the writer/encoder only has an <code>ordinal</code> built-in writer. But that is not a limitation,
 you can always overload the <code>writeValue</code> to produce whatever representation of
-enum you need.</p>
-<p><code>Ordinal</code> representation of an enum is TOML integer, and <code>string</code> representation
-is TOML <code>basic string</code> or <code>literal string</code>. Both multi-line basic string(e.g. &quot;&quot;&quot;TOML&quot;&quot;&quot;) or
-multi-line literal string(e.g. &apos;&apos;&apos;TOML&apos;&apos;&apos;) are not allowed for enum value.</p>
+the enum you need.</p>
+<p>The <code>ordinal</code> representation of an enum is TOML integer. The <code>string</code> representation
+is TOML <code>basic string</code> or <code>literal string</code>. Both multi-line basic strings(e.g. &quot;&quot;&quot;TOML&quot;&quot;&quot;) and
+multi-line literal strings(e.g. &apos;&apos;&apos;TOML&apos;&apos;&apos;) are not allowed for enum value.</p>
 <pre>  <code class="language-toml"># fruits.toml
 fruit1 = &quot;Apple&quot;   # basic string
 fruit2 = 1         # ordinal value
 fruit3 = &apos;Orange&apos;  # literal string
 </code></pre>
-<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Fruits</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Apple</span></div></div><div class="line"><div class="line-content">    <span class="ide">Banana</span></div></div><div class="line"><div class="line-content">    <span class="ide">Orange</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">FruitBasket</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit1</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit2</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit3</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">loadFile</span>(<span class="str">&quot;fruits.toml&quot;</span>, <span class="ide">FruitBasket</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit1</span> <span class="op">==</span> <span class="ide">Apple</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit2</span> <span class="op">==</span> <span class="ide">Banana</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit3</span> <span class="op">==</span> <span class="ide">Orange</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># write enum output as string</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeValue</span><span class="op">*</span>(<span class="ide">w</span>: <span class="kwd">var</span> <span class="ide">TomlWriter</span>, <span class="ide">val</span>: <span class="ide">Fruits</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">w</span><span class="op">.</span><span class="ide">writeValue</span> <span class="op">$</span><span class="ide">val</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">z</span> <span class="op">=</span> <span class="ide">FruitBasket</span>(<span class="ide">fruit1</span>: <span class="ide">Apple</span>, <span class="ide">fruit2</span>: <span class="ide">Banana</span>, <span class="ide">fruit3</span>: <span class="ide">Orange</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">encode</span>(<span class="ide">z</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span> <span class="op">==</span> <span class="str">&quot;fruit1 = </span>\"<span class="str">Apple</span>\"\n<span class="str">fruit2 = </span>\"<span class="str">Banana</span>\"\n<span class="str">fruit3 = </span>\"<span class="str">Orange</span>\"\n<span class="str">&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Fruits</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Apple</span></div></div><div class="line"><div class="line-content">    <span class="ide">Banana</span></div></div><div class="line"><div class="line-content">    <span class="ide">Orange</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">FruitBasket</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit1</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit2</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit3</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">loadFile</span>(<span class="str">&quot;fruits.toml&quot;</span>, <span class="ide">FruitBasket</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit1</span> <span class="op">==</span> <span class="ide">Apple</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit2</span> <span class="op">==</span> <span class="ide">Banana</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit3</span> <span class="op">==</span> <span class="ide">Orange</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># write enum output as a string</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeValue</span><span class="op">*</span>(<span class="ide">w</span>: <span class="kwd">var</span> <span class="ide">TomlWriter</span>, <span class="ide">val</span>: <span class="ide">Fruits</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">w</span><span class="op">.</span><span class="ide">writeValue</span> <span class="op">$</span><span class="ide">val</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">z</span> <span class="op">=</span> <span class="ide">FruitBasket</span>(<span class="ide">fruit1</span>: <span class="ide">Apple</span>, <span class="ide">fruit2</span>: <span class="ide">Banana</span>, <span class="ide">fruit3</span>: <span class="ide">Orange</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">encode</span>(<span class="ide">z</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span> <span class="op">==</span> <span class="str">&quot;fruit1 = </span>\"<span class="str">Apple</span>\"\n<span class="str">fruit2 = </span>\"<span class="str">Banana</span>\"\n<span class="str">fruit3 = </span>\"<span class="str">Orange</span>\"\n<span class="str">&quot;</span></div></div>  </code></pre>
 <h2>Helper functions</h2>
 <ul>
 <li>  <code>parseNumber(r: var TomlReader, value: var string): (Sign, NumberBase)</code></li>
@@ -285,13 +319,13 @@ fruit3 = &apos;Orange&apos;  # literal string
 <li>  <code>parseEnum(r: var TomlReader, T: type enum): T</code></li>
 <li>  <code>parseInt(r: var TomlReader, T: type SomeInteger): T</code></li>
 </ul>
-<p><code>parseAsString</code> can parse any valid TOML value into Nim string including mixed array or inline table.</p>
-<p><code>parseString</code> return a tuple:</p>
+<p><code>parseAsString</code> can parse any valid TOML value into a Nim string including a mixed array or inline table.</p>
+<p><code>parseString</code> returns a tuple:</p>
 <ul>
 <li>field 0:
 <ul>
 <li>false: is a single line string.</li>
-<li>true: is a multi line string.</li>
+<li>true: is a multi-line string.</li>
 </ul>
 </li>
 <li>field 1:
@@ -308,15 +342,15 @@ fruit3 = &apos;Orange&apos;  # literal string
 <li>  <code>Sign.Neg</code></li>
 </ul>
 <h2>Implementation specifics</h2>
-<p>TomlTime contains subsecond field. The spec says the precision is implementation specific.</p>
+<p>TomlTime contains a subsecond field. The spec says the precision is implementation-specific.</p>
 <p>In nim-toml-serialization the default is 6 digits precision.
 Longer precision will be truncated by the parser.</p>
 <p>You can override this using compiler switch <code>-d:tomlSubsecondPrecision=numDigits</code>.</p>
 <h2>Installation</h2>
-<p>You can install the developement version of the library through nimble with the following command</p>
+<p>You can install the development version of the library through Nimble with the following command</p>
 <pre>  <code>nimble install https://github.com/status-im/nim-toml-serialization@#master
 </code></pre>
-<p>or install latest release version</p>
+<p>or install the latest release version</p>
 <pre>  <code>nimble install toml_serialization
 </code></pre>
 <h2>License</h2>
@@ -330,7 +364,7 @@ Longer precision will be truncated by the parser.</p>
 </ul>
 <p>at your option. This file may not be copied, modified, or distributed except according to those terms.</p>
 <h2>Credits</h2>
-<p>A portion of toml decoder was taken from PMunch&apos;s <a href="https://github.com/NimParsers/parsetoml">  <code>parsetoml</code></a></p>
+<p>A portion of the toml decoder was taken from PMunch&apos;s <a href="https://github.com/NimParsers/parsetoml">  <code>parsetoml</code></a></p>
 </document>
             
         </div>
@@ -399,7 +433,7 @@ Longer precision will be truncated by the parser.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-11-27T01:11:57Z
+        Builded at 2023-12-10T09:01:36Z
         </p>
       </div>
     </div>
