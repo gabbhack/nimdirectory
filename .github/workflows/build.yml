@@ -1,13 +1,6 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - '.github/workflows/**'
   schedule:
     - cron: '0 0 * * *'
 
