@@ -102,7 +102,10 @@
 <p>:information_source: Unless you know what you&apos;re doing (for example writing something resource constrained or your own web framework), you are better off using <a href="https://github.com/dom96/jester">Jester</a> (which is built on Httpbeast) or another web framework.</p>
 </blockquote>
 <blockquote>
-<p>:warning: This HTTP server has been designed to utilise epoll-like OS APIs and as such does not support Windows by-design.</p>
+<p>:information_source: This HTTP server has been designed to utilise epoll-like OS APIs and as such does not support Windows by-design.</p>
+</blockquote>
+<blockquote>
+<p>:warning: This library is not yet hardened against common HTTP security exploits. If you&apos;re using it in production you should do so behind a reverse proxy like nginx.</p>
 </blockquote>
 <h2>Features</h2>
 <p>Current features include:</p>
@@ -203,7 +206,7 @@ requires &quot;httpbeast &gt;= 0.4.0&quot;
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-12-10T09:01:36Z
+        Builded at 2023-12-11T01:12:52Z
         </p>
       </div>
     </div>
