@@ -156,8 +156,9 @@ build/nimbus --help
 build/nimbus
 
 # Update to latest version
-git pull
-make -j4 update
+git pull &amp;&amp; make update
+# Build the newly downloaded version
+make -j4 nimbus
 
 # Run tests
 make test
@@ -495,7 +496,7 @@ make update
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-12-13T01:12:43Z
+        Builded at 2023-12-14T01:11:22Z
         </p>
       </div>
     </div>
