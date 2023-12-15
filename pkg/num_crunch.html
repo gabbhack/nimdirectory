@@ -102,6 +102,10 @@
 whole process.</p>
 <p>The library is written in the powerful <a href="https://nim-lang.org/" title="The Nim programming language">Nim</a> programming language which allows for easy integration with C code and other programming languages.</p>
 <p>Have a look at the Mandelbrot example to see how it works.</p>
+<p>You can run the example with this command: <code>nimble runMandel</code>.</p>
+<h2>Installation</h2>
+<p>  <code>nimble install num_crunch</code></p>
+<p>  <code>atlas use num_crunch</code></p>
 <h2>How to use it</h2>
 <p>You have to provide two data structures and implement some method for them.</p>
 <ol>
@@ -192,7 +196,7 @@ method ncSaveData(self: var MyStructServer) =
 </ol>
 <p>There is more work to do for the server side, but the idea is that these methods will be just delegated
 (or passed on) to another method of a &quot;smart&quot; data structure that knows how to handle it.
-Currently num_crunch provides two such &quot;smart&quot; data structure: NCArray2D and NCFileArray.
+Currently num_crunch provides two such &quot;smart&quot; data structure: <code>NCArray2D</code> and <code>NCFileArray</code>.
 More data structures will be added in future versions of this library.
 See the Mandelbrot example on how this works in detail.</p>
 <h2>FAQ</h2>
@@ -210,7 +214,12 @@ Try to keep the network traffic low (= transmit small amounts of data).</p>
 </li>
 <li>
 <p>Can it run on a cluster (HPC) ?
-Yes there is an example batch script for <a href="https://slurm.schedmd.com/">SLURM</a> (sbatch) and <a href="https://adaptivecomputing.com/cherry-services/torque-resource-manager/">Torq / Moab / PBS</a> (qsub) in the mandelbrot2 folder.</p>
+Yes there is an example batch script for <a href="https://slurm.schedmd.com/">SLURM</a> (<code>sbatch</code>) and <a href="https://adaptivecomputing.com/cherry-services/torque-resource-manager/">Torq / Moab / PBS</a> (<code>qsub</code>) in the mandelbrot2 folder.</p>
+</li>
+<li>
+<p>Do I need a cluster ?
+No you can also run it locally on your machine.
+Just have a look at the mandelbrot1 example.</p>
 </li>
 <li>
 <p>How does it compare to MPI (<a href="https://www.open-mpi.org/">OpenMPI</a>) ?
@@ -297,7 +306,7 @@ Those nodes will just receive the &quot;job is done&quot; message.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-12-14T01:11:22Z
+        Builded at 2023-12-15T01:13:16Z
         </p>
       </div>
     </div>

@@ -32105,6 +32105,38 @@ const packages = [
     "description": "Special iterators that use move semantics",
     "license": "MIT",
     "web": "https://github.com/sls1005/moveiterators"
+  },
+  {
+    "name": "happyx-native",
+    "url": "https://github.com/HapticX/happyx-native",
+    "method": "git",
+    "tags": [
+      "happyx",
+      "native",
+      "web",
+      "app",
+      "framework",
+      "frontend",
+      "backend",
+      "android"
+    ],
+    "description": "Macro-oriented web-framework compiles to native written with ♥",
+    "license": "MIT",
+    "web": "https://github.com/HapticX/happyx-native"
+  },
+  {
+    "name": "note",
+    "url": "https://codeberg.org/pswilde/note",
+    "method": "git",
+    "tags": [
+      "pastebin",
+      "scratchpad",
+      "web",
+      "frontend"
+    ],
+    "description": "A simple pastebin, inspired by w4/bin",
+    "license": "AGPL-3.0-or-later",
+    "web": "https://codeberg.org/pswilde/note"
   }
 ]
 const options = {
