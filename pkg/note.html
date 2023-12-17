@@ -96,7 +96,10 @@
 <p>Heavily inspired by <a href="https://github.com/w4/bin">bin</a>, infact, the HTML templates are effectively just copied over with some tweaks... because they&apos;re awesome :-)</p>
 <p><em>note</em> aims to be a minimalist binary, with very little that needs to be handled. Just run the binary and point your reverse proxy to the right port and away you go!</p>
 <h2>How to use</h2>
-<p>Simply build the binary and run it (with the <code>--bind-addr</code> arg if you want)</p>
+<p>Download the latest release from the releases page and run it</p>
+<pre>  <code class="language-sh">./note
+</code></pre>
+<p>Or simply build the binary and run it (with the <code>--bind-addr</code> arg if you want)</p>
 <pre>  <code class="language-sh">git pull https://codeberg.org/pswilde/note
 cd note
 nimble build
@@ -111,9 +114,9 @@ nimble build
 <h2>To do&apos;s</h2>
 <ul>
 <li>[x] change some colours in the template so it&apos;s a little different to bin</li>
-<li>[ ] set root folder var, so it can be hosted behind a virtual directory if required</li>
+<li>[x] set root folder var, so it can be hosted behind a virtual directory if required</li>
 <li>[ ] check on generated id to ensure it doesn&apos;t match and current notes</li>
-<li>[ ] add syntax highlighting like in bin</li>
+<li>[x] add syntax highlighting like in bin (bit of a cheat, using <a href="https://prismjs.com">prism.js</a> )</li>
 <li>[ ] curl support like in bin</li>
 <li>[ ] monitor cache size, and potentially limit it if it gets too unwieldly</li>
 <li>[ ] potential persistance (probably using something like redis)</li>
@@ -186,7 +189,7 @@ nimble build
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-12-16T01:11:26Z
+        Builded at 2023-12-17T01:16:51Z
         </p>
       </div>
     </div>
