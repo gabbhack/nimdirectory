@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">implot</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">imgui</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nimgl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">implot</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">plot</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">gui</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">graph</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">glfw</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">opengl</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">cimgui</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">Nim binding for ImPlot (CImPlot/ImGui/CImGui)</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install implot" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><!--  START doctoc generated TOC please keep comment here to allow auto update  -->
+<!--  DON&apos;T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE  -->
+<ul>
+<li>  <a href="#nim-implot-binding">Nim ImPlot binding</a></li>
+<li>  <a href="#direct-nimble-install-from-web">Direct nimble install from Web</a></li>
+<li>  <a href="#runing-all-demo-programs">Runing all demo programs</a></li>
+<li>  <a href="#compiling-application">Compiling application</a></li>
+<li>  <a href="#notice-compilation-options">Notice: Compilation options</a></li>
+<li>  <a href="#generating-implot-bindings-for-development">Generating ImPlot bindings for development</a></li>
+<li>  <a href="#development">Development</a></li>
+<li>  <a href="#tools-info">Tools info</a></li>
+<li><a href="#example-gallery-written-in-nim-language">Example gallery written in Nim language</a>
+<ul>
+<li><a href="#plots">Plots</a>
+<ul>
+<li>  <a href="#lineplotsnim">LinePlots.nim</a></li>
+<li>  <a href="#filledlineplotsnim">FilledLinePlots.nim</a></li>
+<li>  <a href="#shadedplotsnim">ShadedPlots.nim</a></li>
+<li>  <a href="#scatterplotsnim">ScatterPlots.nim</a></li>
+<li>  <a href="#realtimeplotsnim">RealTimePlots.nim</a></li>
+<li>  <a href="#stairstepplotsnim">StairstepPlots.nim</a></li>
+<li>  <a href="#bargroupsnim">BarGroups.nim</a></li>
+<li>  <a href="#barplotsnim">BarPlots.nim</a></li>
+<li>  <a href="#barstacksnim">BarStacks.nim</a></li>
+<li>  <a href="#errorbarsnim">ErrorBars.nim</a></li>
+<li>  <a href="#stemplotsnim">StemPlots.nim</a></li>
+<li>  <a href="#infinitelinesnim">InfiniteLines.nim</a></li>
+<li>  <a href="#piechartsnim">PieCharts.nim</a></li>
+<li>  <a href="#heatmapsnim">HeatMaps.nim</a></li>
+<li>  <a href="#histogramnim">Histogram.nim</a></li>
+<li>  <a href="#digitalplotsnim">DigitalPlots.nim</a></li>
+<li>  <a href="#imagesnim">Images.nim</a></li>
+<li>  <a href="#markersandtextnim">MarkersAndText.nim</a></li>
+<li>  <a href="#nanvaluesnim">NaNValues.nim</a></li>
+</ul>
+</li>
+<li><a href="#subplots">Subplots</a>
+<ul>
+<li>  <a href="#tablesnim">Tables.nim</a></li>
+<li>  <a href="#itemsharingnim">ItemSharing.nim</a></li>
+</ul>
+</li>
+<li><a href="#axes">Axes</a>
+<ul>
+<li>  <a href="#logscalenim">LogScale.nim</a></li>
+<li>  <a href="#multipleaxesnim">MultipleAxes.nim</a></li>
+</ul>
+</li>
+<li><a href="#tools">Tools</a>
+<ul>
+<li>  <a href="#offsetandstridenim">OffsetAndStride.nim</a></li>
+<li>  <a href="#dragrectsnim">DragRects.nim</a></li>
+<li>  <a href="#draganddropnim">DragAndDrop.nim</a></li>
+</ul>
+</li>
+<li><a href="#custom">Custom</a>
+<ul>
+<li>  <a href="#customdataandgettersnim">CustomDataAndGetters.nim</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!--  END doctoc generated TOC please keep comment here to allow auto update  -->
+<h3>Nim ImPlot binding</h3>
+<hr />
+<p><a href="https://github.com/epezent/implot">ImPlot</a> is an immediate mode, GPU accelerated plotting library for <a href="https://github.com/ocornut/imgui">Dear ImGui</a>.</p>
+<ol>
+<li>This project uses the modified generator that derived from the achievement of <a href="https://github.com/nimgl/imgui">Nimgl/imgui</a> and <a href="https://github.com/daniel-j/nimgl-imgui">nimgl-imgui</a>(forked).</li>
+<li>This project also uses ImGui library (<a href="https://github.com/dinau/nimgl-imgui">nim-imgui (ImGui v1.89.9 latest)</a>) derived from <a href="https://github.com/nimgl/imgui">Nimgl/imgui</a> and <a href="https://github.com/daniel-j/nimgl-imgui">nimgl-imgui</a>(forked).</li>
+<li>Also have used <a href="https://github.com/cimgui/cimgui">CImGui library</a></li>
+</ol>
+<h3>Direct nimble install from Web</h3>
+<hr />
+<pre>  <code class="language-sh">nimble install https://github.com/dinau/nim_implot
+</code></pre>
+<h3>Runing all demo programs</h3>
+<hr />
+<pre>  <code class="language-bash">git clone --recursive https://github.com/dinau/nim_implot
+cd nim_implot
+nimble test
+</code></pre>
+<p>Test source: <a href="examples/demo">examples/demo</a></p>
+<h3>Compiling application</h3>
+<hr />
+<p>It has to be used <strong>cpp</strong> backend at compilation for example,</p>
+<pre>  <code class="language-sh">pwd
+nim_implot
+cd examples/demo
+nim cpp -r ImPlotDemo.nim 
+</code></pre>
+<p><strong>Note</strong>: <strong>C</strong> backend is not supported.</p>
+<h3>Notice: Compilation options</h3>
+<hr />
+<p>If demo programs crash, please try to specify compilation option<br />
+<code>--mm:refc</code> instead of <code>--mm:arc</code> or <code>--mm:orc</code>,<br />
+especially if you use Nim-2.00, try to specify <code>--mm:refc</code>.<br />
+These are TODO at this moment.</p>
+<h3>Generating ImPlot bindings for development</h3>
+<hr />
+<pre>  <code class="language-bash">pwd
+nim_implot
+nimble gen
+</code></pre>
+<p>Genarated file: <a href="src/implot.nim">src/implot.nim</a></p>
+<h3>Development</h3>
+<hr />
+<p>It is currently being developed and tested on</p>
+<ul>
+<li>
+<p>Windows 10</p>
+</li>
+<li>
+<p>(Debian 12 Bookworm)</p>
+<pre>  <code class="language-sh">$ sudo apt install xorg-dev libopengl-dev libgl1-mesa-dev
+</code></pre>
+</li>
+</ul>
+<h3>Tools info</h3>
+<hr />
+<ul>
+<li>Windows10
+<ul>
+<li>Nim Compiler Version 1.6.14</li>
+<li>gcc.exe (Rev2, Built by MSYS2 project) 13.2.0</li>
+</ul>
+</li>
+<li>Debian 12 Bookworm
+<ul>
+<li>Nim Compiler Version 1.6.14</li>
+<li>gcc (Debian 12.2.0-14) 12.2.0</li>
+</ul>
+</li>
+</ul>
+<h3>Example gallery written in Nim language</h3>
+<hr />
+<p><strong>Now all demo (over 50) programs have been implemented in Nim language</strong> (2023/10),<br />
+(Orignal demo program is here <a href="https://github.com/epezent/implot/blob/master/implot_demo.cpp">implot_demo.cpp</a>, (C++))<br />
+below images are part of them.</p>
+<h4>Plots</h4>
+<hr />
+<h5>  <a href="examples/demo/plots/LinePlots.nim">LinePlots.nim</a></h5>
+<p>  <img src="img/LinePlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/FilledLinePlots.nim">FilledLinePlots.nim</a></h5>
+<p>  <img src="img/FilledLinePlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/ShadedPlots.nim">ShadedPlots.nim</a></h5>
+<p>  <img src="img/ShadedPlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/ScatterPlots.nim">ScatterPlots.nim</a></h5>
+<p>  <img src="img/ScatterPlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/RealTimePlots.nim">RealTimePlots.nim</a></h5>
+<p>  <img src="img/RealTimePlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/StairstepPlots.nim">StairstepPlots.nim</a></h5>
+<p>  <img src="img/StairstepPlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/BarGroups.nim">BarGroups.nim</a></h5>
+<p>  <img src="img/BarGroups.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/BarPlots.nim">BarPlots.nim</a></h5>
+<p>  <img src="img/BarPlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/BarStacks.nim">BarStacks.nim</a></h5>
+<p>  <img src="img/BarStacks.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/ErrorBars.nim">ErrorBars.nim</a></h5>
+<p>  <img src="img/ErrorBars.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/StemPlots.nim">StemPlots.nim</a></h5>
+<p>  <img src="img/StemPlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/InfiniteLines.nim">InfiniteLines.nim</a></h5>
+<p>  <img src="img/InfiniteLines.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/PieCharts.nim">PieCharts.nim</a></h5>
+<p>  <img src="img/PieCharts.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/HeatMaps.nim">HeatMaps.nim</a></h5>
+<p>  <img src="img/HeatMaps.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/Histogram.nim">Histogram.nim</a></h5>
+<p>  <img src="img/Histogram.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/DigitalPlots.nim">DigitalPlots.nim</a></h5>
+<p>  <img src="img/DigitalPlots.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/Images.nim">Images.nim</a></h5>
+<p>  <img src="img/Images.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/MarkersAndText.nim">MarkersAndText.nim</a></h5>
+<p>  <img src="img/MarkersAndText.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/plots/NaNValues.nim">NaNValues.nim</a></h5>
+<p>  <img src="img/NaNValues.png" style="max-width: 100%;" alt="alt" /></p>
+<h4>Subplots</h4>
+<hr />
+<h5>  <a href="examples/subplots/demo/Tables.nim">Tables.nim</a></h5>
+<p>  <img src="img/Tables.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/subplots/ItemSharing.nim">ItemSharing.nim</a></h5>
+<p>  <img src="img/ItemSharing.png" style="max-width: 100%;" alt="alt" /></p>
+<h4>Axes</h4>
+<hr />
+<h5>  <a href="examples/demo/axes/LogScale.nim">LogScale.nim</a></h5>
+<p>  <img src="img/LogScale.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/axes/MultipleAxes.nim">MultipleAxes.nim</a></h5>
+<p>  <img src="img/MultipleAxes.png" style="max-width: 100%;" alt="alt" /></p>
+<h4>Tools</h4>
+<hr />
+<h5>  <a href="examples/demo/tools/OffsetAndStride.nim">OffsetAndStride.nim</a></h5>
+<p>  <img src="img/OffsetAndStride.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/tools/DragRects.nim">DragRects.nim</a></h5>
+<p>  <img src="img/DragRects.png" style="max-width: 100%;" alt="alt" /></p>
+<h5>  <a href="examples/demo/tools/DragAndDrop.nim">DragAndDrop.nim</a></h5>
+<p>  <img src="img/DragAndDrop.png" style="max-width: 100%;" alt="alt" /></p>
+<h4>Custom</h4>
+<hr />
+<h5>  <a href="examples/demo/custom/CustomDataAndGetters.nim">CustomDataAndGetters.nim</a></h5>
+<p>  <img src="img/CustomDataAndGetters.png" style="max-width: 100%;" alt="alt" /></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT License
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/dinau/nim_implot">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-12-21T01:10:41Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

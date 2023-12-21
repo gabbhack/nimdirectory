@@ -32137,6 +32137,39 @@ const packages = [
     "description": "A simple pastebin, inspired by w4/bin",
     "license": "AGPL-3.0-or-later",
     "web": "https://codeberg.org/pswilde/note"
+  },
+  {
+    "name": "ccal",
+    "url": "https://github.com/inv2004/ccal",
+    "method": "git",
+    "tags": [
+      "cli",
+      "calendar",
+      "tools",
+      "productivity"
+    ],
+    "description": "calendar with local holidays via ip location",
+    "license": "MIT",
+    "web": "https://github.com/inv2004/ccal"
+  },
+  {
+    "name": "implot",
+    "url": "https://github.com/dinau/nim_implot",
+    "method": "git",
+    "tags": [
+      "imgui",
+      "nimgl",
+      "implot",
+      "plot",
+      "gui",
+      "graph",
+      "glfw",
+      "opengl",
+      "cimgui"
+    ],
+    "description": "Nim binding for ImPlot (CImPlot/ImGui/CImGui)",
+    "license": "MIT License",
+    "web": "https://github.com/dinau/nim_implot"
   }
 ]
 const options = {
