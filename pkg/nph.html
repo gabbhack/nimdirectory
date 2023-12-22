@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nph</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">nim</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">formatter</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">vscode</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">Opinionated code formatter</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nph" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nph</h1>
+<p>nph is an opinionated source code formatter for the Nim language, aiming to
+take the drudgery of manual formatting out of your coding day.</p>
+<p>Following the great tradition of <a href="https://github.com/psf/black/">  <code>black</code></a>,
+<a href="https://prettier.io/">  <code>prettier</code></a>, <a href="https://clang.llvm.org/docs/ClangFormat.html">  <code>clang-format</code></a>
+and other AST-based formatters, it discards existing styling to create a
+consistent and beautiful codebase.</p>
+<h2>Usage</h2>
+<p>Install <code>nph</code>, then run it on some files:</p>
+<pre>  <code class="language-sh"># Format the given files in-place
+nph file0.nim file1.nim
+
+# Format the given files, writing the formatted code to /tmp
+nph file0.nim file1.nim --outdir:/tmp
+
+# Format an entire directory
+nph src/
+
+# Use --check to verify that a file is formatted correctly - useful in CI
+nph --check somefile.nim || echo &quot;Not formatted!&quot;
+
+# You can format stuff as part of a pipe using `-` as input:
+echo &quot;echo 1&quot; | nph -
+</code></pre>
+<h3>Disabling formatting locally</h3>
+<p>You can mark a code section with <code>#!fmt: off</code> and <code>#!fmt: on</code> to disable formatting locally:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span>      <span class="ide">getsFormatted</span>(<span class="ide">a</span>, <span class="ide">b</span> : <span class="ide">int</span>    ) <span class="op">=</span> <span class="kwd">discard</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">#!fmt: off</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span></div></div><div class="line"><div class="line-content">  <span class="ide">myHandFormattedList</span></div></div><div class="line"><div class="line-content">        :</div></div><div class="line"><div class="line-content">   <span class="ide">array</span>[<span class="num">3</span>, <span class="ide">int</span>]</div></div><div class="line"><div class="line-content"> <span class="op">=</span></div></div><div class="line"><div class="line-content">    [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com">#!fmt: on</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">hanging</span>(<span class="ide">indent</span>: <span class="ide">int</span>,</div></div><div class="line"><div class="line-content">             <span class="ide">isUgly</span> <span class="op">=</span> <span class="ide">true</span>) <span class="op">=</span> <span class="kwd">discard</span></div></div>  </code></pre>
+<p>To disable formatting for a whole file, simply put <code>#!fmt: off</code> on top!</p>
+<p><em>Note</em> Internally, <code>#!fmt: off</code> makes nph treat the section as a big multi-line
+comment that it copies over to the formatted code - as such, you must be careful
+with indent and adjust your code to the indent that <code>nph</code> will generate!</p>
+<h2>Installation</h2>
+<p>Download binaries from the <a href="https://github.com/arnetheduck/nph/releases/tag/latest">releases page</a>.</p>
+<p>Versioned releases will be made availabe in the future.</p>
+<p><code>nph</code> can be also compiled or installed using <code>nimble</code> version <code>v0.14.2</code>+:</p>
+<pre>  <code class="language-sh">nimble -l setup
+nimble build
+</code></pre>
+<p>For bonus points, replace <code>nimpretty</code> with a symlink to <code>nph</code> - similar
+command line options are supported ;)</p>
+<h2>Editor integration</h2>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=arnetheduck.vscode-nph">VSCode</a> (<code>ext install arnetheduck.vscode-nph</code>)</li>
+</ul>
+<h2>Priorities</h2>
+<p><code>nph</code> aims to format code in such way that:</p>
+<ul>
+<li>it remains semantically unchanged, aka correct (!)
+<ul>
+<li>the AST is checked for equivalence before writing the formatted code to
+disk - on mismatch, the code is left untouched</li>
+</ul>
+</li>
+<li>it remains simple, consistent and pleasant to read
+<ul>
+<li><em>most</em> code should look as good as or better than its hand-formatted
+counterpart</li>
+</ul>
+</li>
+<li>diffs are kept at a minimum
+<ul>
+<li>diff-inducing constructs such as vertical alignment are avoided, for more
+productive merges</li>
+<li>formatting the same code again results in no differences</li>
+</ul>
+</li>
+<li>it broadly follows the <a href="https://status-im.github.io/nim-style-guide/">Status Nim style guide</a>
+and <a href="https://nim-lang.org/docs/nep1.html">NEP1</a>
+<ul>
+<li>this is tool aimed at making collaboration easier, with others and your
+future self</li>
+<li>where NEP1 contradicts itself or these priorities, these priorities have
+precedence</li>
+</ul>
+</li>
+</ul>
+<p>The formatting rules are loosely derived from other formatters that already have
+gone through the journey of debating what &quot;pleasing to read&quot; might mean while
+making adaptations for both features and quirks of the Nim parser.</p>
+<p>If in doubt, formatting that works well for descriptive identifiers and avoids
+putting too much information in a single like will be preferred.</p>
+<p>If something breaks the above guidelines, it&apos;s <em>likely</em> a bug.</p>
+<h2>FAQ</h2>
+<h3>Why use a formatter?</h3>
+<p>A formatter removes the tedium of manually adding structure to code to make it
+more readable - overlong lines, inconsistent indentation, lack of visual
+structure and other small distractions quickly nibble away at the mental budget
+available for writing code while a formatter solves this and many other things
+at the press of a button.</p>
+<p>When you work with others, debates and nitpicking over style go away and
+collaborative efforts can focus on substance instead.</p>
+<p>Finally, the code is likely to look better - manually formatting code takes a
+lot of effort which ultimately can be spent better elsewhere - as such, poorly
+formatted code ends up being more common than not.</p>
+<h3>But I&apos;ve spent a significant part of my life realigning code and now it&apos;s lost!</h3>
+<p>https://en.wikipedia.org/wiki/Sunk_cost</p>
+<h3>How do I introduce <code>nph</code> in an existing codebase?</h3>
+<p>Assuming <code>git</code> is used, format all code using <code>nph</code>, put it in a single commit
+and add a CI rule to ensure that future commits are all formatted using the same
+<code>nph</code> version.</p>
+<p>Formatting commits can be ignored for the purpose of <code>git blame</code> by adding a
+file named <code>.git-blame-ignore-revs</code> containing the formatted source code to the
+root of the project:</p>
+<pre>  <code class="language-sh">cd myproject
+
+# Format all source code with nph
+git ls-files | grep &quot;.nim$&quot; | xargs -n1 nph
+
+# Create a single commit with all changes
+git commit -am &quot;Formatted with nph $(nph --version)&quot;
+
+# Record the commit hash in the blame file
+echo &quot;# Formatted with nph $(nph --version)&quot; &gt;&gt; .git-blame-ignore-revs
+echo $(git rev-parse HEAD) &gt;&gt; .git-blame-ignore-revs
+</code></pre>
+<p>then configure git to use it:</p>
+<pre>  <code class="language-sh">git --global config blame.ignoreRevsFile .git-blame-ignore-revs
+</code></pre>
+<p>The same strategy can be used when upgrading <code>nph</code> to a new version that
+introduces formatting changes.</p>
+<h3><code>nph</code> complains about my code!</h3>
+<p>One of several things could have happened:</p>
+<ul>
+<li>The code was not valid enough - <code>nph</code> can only parse valid Nim grammar and
+while it would be nice to handle partially formatted stuff gracefully, we&apos;re
+not there yet.</li>
+<li>The parser has a bug and is unable to parse valid Nim code
+<ul>
+<li>Probably you can move some comments around to make it work!</li>
+</ul>
+</li>
+<li>the formatter has a bug and the resulting formatting is invalid
+<ul>
+<li>Probably you can move some comments around to make it work!</li>
+</ul>
+</li>
+<li>the AST equivalence checker complains
+<ul>
+<li>This often happens in complex expressions such as <code>do</code>  and parenthesis used
+for indent purposes where the Nim grammar has ambiguities and parsing
+complexity - it can usually be worked around by simplifying complex
+expressions, introducing a template or similar</li>
+<li>It could also be that the AST checker is too strict - the Nim parser will
+generate different AST:s depending on whitespace even if semantically there
+is no difference</li>
+</ul>
+</li>
+</ul>
+<p>Regardless of what happened, <code>nph</code> takes the conservative approach and retains
+the original formatting!</p>
+<p>If you have time, try to find the offending code snippet and submit an issue.</p>
+<h3>Why the cited formatters in particular?</h3>
+<ul>
+<li><code>black</code> because of our syntactic similarity with Python and its
+<a href="https://black.readthedocs.io/en/stable/the_black_code_style/index.html#stability-policy">stability policy</a></li>
+<li><code>prettier</code> for its wisdom in how formatting <a href="https://prettier.io/docs/en/option-philosophy">options</a>
+are approached and for the closeness to user experience of its developers</li>
+<li><code>clang-format</code> for being the formatter that made me stop worrying about
+formatting
+<ul>
+<li>its secret sauce was treating formatting as a balancing of priorities rather
+than a mechanical stringification using a <a href="https://youtu.be/s7JmdCfI__c?t=640">lowest-penalty</a>
+algorithm</li>
+</ul>
+</li>
+</ul>
+<h3>What is meant by consistency?</h3>
+<ul>
+<li>Similar constructs are formatted with similar rules
+<ul>
+<li>Does it look like a list? Format it with list-like rules regardless if
+its a parameter list, array of values or import list</li>
+</ul>
+</li>
+<li>Original styling is generally not preserved - instead, the formatting is based
+on the semantic structure of the program</li>
+<li>Spacing emphasizes structure and control flow to help you read the code</li>
+</ul>
+<p><code>nph</code> makes your code consistent without introducing hobgoblins in your mind!</p>
+<h3>Why are there no options?</h3>
+<p>The aim of <code>nph</code> is to create a single consistent style that allows you to
+focus on programming while <code>nph</code> takes care of the formatting, even across
+different codebases and authors.</p>
+<p>Consistency helps reading speed by removing unique and elaborate formatting
+distractions, allowing you, the experienced programmer, to derive structural
+information about the codebase at a glance.</p>
+<p>The style might feel unfamiliar in the beginning - this is fine and not a reason
+to panic - a few weeks from now, you&apos;ll forget you ever used another one.</p>
+<h3>Do you accept style suggestions and changes?</h3>
+<p>Yes! The project is still in its early phase meaning that the style is not yet
+set in stone.</p>
+<p>To submit a proposal, include some existing code, how you&apos;d like it to be
+formatted and an option-free algorithm detailing how to achieve it and how the
+outcome relates to the above styling priorities.</p>
+<p>When in doubt, look at what other opinionated formatters have done and link to
+it!</p>
+<p>Eventually, the plan is to adopt a <a href="https://black.readthedocs.io/en/stable/the_black_code_style/index.html#stability-policy">stability policy</a>
+similar to <code>black</code>, meaning that style changes will still be accepted, but
+introduced only rarely so that you don&apos;t have to worry about massive PR-breaking
+formatting diffs all the time.</p>
+<h3>Why does the formatting code look an awful lot like the Nim compiler renderer?</h3>
+<p>Because it is based on it, of course! As a starting point this is fine but the
+code would benefit greatly from being rewritten with a dedicated formatting
+AST - and here we are.</p>
+<h3>Should it be upstreamed?</h3>
+<p>Maybe parts - feel free to make PR:s to the Nim repo from this codebase! That
+said, the aim of a compiler is to compile while a formatter formats - we are not
+the same.</p>
+<h3>What about <code>nimpretty</code>?</h3>
+<p><code>nimpretty</code> formats tokens, not the AST. Use whichever you like better, but keep
+a backup if you don&apos;t use <code>nph</code> :)</p>
+<h3>Why 88 characters?</h3>
+<p>This is an experiment.</p>
+<p>Astute and experienced programmers have noticed two things: longer variable
+names aren&apos;t that bad and monitors have gotten bigger since the 80 standard was
+set.</p>
+<p>Going beyond allows code that uses descriptive names to look better - how much
+extra is needed here is an open question but 10% seems like a good start for a
+language like Nim which defaults to 2-space significant indent and a naive
+module system that encourages globally unique identifiers with longer names.</p>
+<p>Automated formatting keeps most code well below this limit but the extra 10%
+allows gives it some lenience - think of it as those cases where a prorgammer
+would use their judgement and common sense to override a style guide
+recommendation.</p>
+<h3>What about comments?</h3>
+<p>Comments may appear in many different places that are not represented in the
+Nim AST. When <code>nph</code> reformats code, it may have to move comments around in order
+to maintain line lengths and introduce or remove indentation.</p>
+<p><code>nph</code> uses heuristics to place comments into one of several categories which
+broadly play by similar rules that code does - in particular, indentation is
+used to determine &quot;ownership&quot; over the comment.</p>
+<p>The implementation currently tracks several comment categories:</p>
+<ul>
+<li>comment statement nodes - comments that appear with regular indent in
+statement list contexts (such as the body of a <code>proc</code>) as represented as such,
+ie as statement nodes and get treated similar to how regular code would</li>
+<li>node attachments - comments that are anchored to an AST node depending on
+their location in the code relative to that node:
+<ul>
+<li>prefix - anything leading up to a particular AST node - for example less
+indented or otherwise appearing before the node</li>
+<li>mid - at midpoints in composite nodes - between the <code>:</code> and the body of an
+<code>if</code> for example</li>
+<li>postfix - appearing after the node, meaning on the same line or more
+indented than the node</li>
+</ul>
+</li>
+</ul>
+<p>When rendering the code, <code>nph</code> will use these categories to guide where the
+comment text should go, maintaining comment output in such a way that parsing
+the file again results in equivalent comment placement.</p>
+<h3>How are blank lines handled?</h3>
+<p>Coming up with a fully automatic rendering of blank lines is tricky because they
+are often used to signal logical groupings of code for which no other mechanism
+exists to represent them.</p>
+<p><code>nph</code> current will:</p>
+<ul>
+<li>generally retain blank space in code but normalise it to a single line</li>
+<li>insert blanks around complex statements</li>
+</ul>
+<p>This strategy is expected to evolve over time, including the meaning of
+&quot;complex&quot;.</p>
+<h3>What features will likely not be added?</h3>
+<ul>
+<li>formatting options - things that change the way the formatting is done for
+aesthetic reasons - exceptions here might include options that increase
+compatiblity (for example with older Nim versions)</li>
+<li>semantic refactoring - reordings of imports etc - the focus is on style only</li>
+</ul>
+<h3>What&apos;s with the semicolons?</h3>
+<p>Nim&apos;s grammar unfortunately allows the use of either <code>,</code> or <code>;</code> in some places
+with a subtly different AST being produced which <em>sometimes</em> has a semantic
+impact - <code>nph</code> takes a conservative approach here and uses <code>;</code> to avoid
+ambiguity.</p>
+<p>Future versions may try to identify where <code>,</code> can be used safely - very few
+programmers <em>really</em> want <code>;</code> judging from the frequency with which it is used.</p>
+<p>Regardless, you can usually type either and <code>nph</code> will clean it up.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT License
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/arnetheduck/nph">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-12-22T01:10:26Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

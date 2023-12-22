@@ -32170,6 +32170,19 @@ const packages = [
     "description": "Nim binding for ImPlot (CImPlot/ImGui/CImGui)",
     "license": "MIT License",
     "web": "https://github.com/dinau/nim_implot"
+  },
+  {
+    "name": "nph",
+    "url": "https://github.com/arnetheduck/nph",
+    "method": "git",
+    "tags": [
+      "nim",
+      "formatter",
+      "vscode"
+    ],
+    "description": "Opinionated code formatter",
+    "license": "MIT License",
+    "web": "https://github.com/arnetheduck/nph"
   }
 ]
 const options = {
