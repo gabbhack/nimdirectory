@@ -1,5 +1,16 @@
 const packages = [
   {
+    "name": "sudoku",
+    "url": "https://github.com/roberto170/sudoku",
+    "method": "git",
+    "tags": [
+      "sudoku"
+    ],
+    "description": "sudoku generator in nim.",
+    "license": "MIT",
+    "web": "https://github.com/roberto170/sudoku"
+  },
+  {
     "name": "avr_io",
     "url": "https://github.com/Abathargh/avr_io",
     "method": "git",
