@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">threadButler</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">channels</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">multithreading</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">parallelism</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">message-passing</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">client-server</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">alpha</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">Use threads as if they were servers/microservices to enable multi-threading with a simple mental model.</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install threadButler" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>ThreadButler</h1>
+<blockquote>
+<p>[!WARNING]<br />
+This library is currently in an alpha version. Some API changes may still happen. Testing as of right now consists of compiling and manually testing the examples.</p>
+</blockquote>
+<h4>  <em>They&apos;re here to serve</em></h4>
+<p><strong>ThreadButler</strong> is a package for multithreading in applications.</p>
+<p>It simplifies setting up &quot;threadServers&quot; - threads that live as long as your application does.
+These threads communicate with your main thread via messages, which trigger registered handler procs.</p>
+<p>ThreadServers act as a &quot;backend&quot; for any heavy computation you do not wish to perform in your client loop.</p>
+<p>This package can also be used if you don&apos;t want to spawn a threadServer - the code it generates helps setting up a task-pool for one-off tasks that can send messages back when a task is done.</p>
+<p>The message passing is done through nim&apos;s <a href="https://nim-by-example.github.io/channels/">Channels</a>.</p>
+<ul>
+<li><a href="https://philippmdoerner.github.io/ThreadButler/bookCompiled/index.html">Documentation</a> (built with <a href="https://github.com/pietroppeter/nimibook">nimibook</a>)</li>
+<li>  <a href="https://philippmdoerner.github.io/ThreadButler/htmldocs/theindex.html">Index</a></li>
+<li>  <a href="https://philippmdoerner.github.io/ThreadButler/htmldocs/threadButler.html">RootModule</a></li>
+</ul>
+<h2>Installation</h2>
+<p>Install ThreadButler with Nimble:</p>
+<pre>  <code>$ nimble install -y threadButler
+</code></pre>
+<p>Add ThreadButler to your .nimble file:</p>
+<pre>  <code>requires &quot;threadButler&quot;
+</code></pre>
+<h2>Provided/Supported:</h2>
+<ul>
+<li>Defining and spawning long-running threads with threadServers that receive and send messages</li>
+<li>Typesafe message passing - A message will always be sent to the correct thread it belongs to, as determined by its type</li>
+<li>Async message handlers</li>
+<li>Running procs as tasks on a threadPool which can message results back if necessary without blocking your main thread or threadServers</li>
+<li>Customizable ServerLoops</li>
+<li>Kill-Thread mechanisms</li>
+<li>Startup/Shutdown events per Thread</li>
+</ul>
+<h2>General Architecture</h2>
+<p>The following statements describe the architecture behind threadButler:</p>
+<ul>
+<li>1 ThreadServer is an event-loop running on 1 Thread, defined by <code>proc runServerLoop</code></li>
+<li>Each ThreadServer has a name called <code>&lt;ThreadName&gt;</code></li>
+<li>Each ThreadServer has 1 dedicated Channel for messages sent to it</li>
+<li>All Channels are combined into a single hub, the ChannelHub, which is accessible by all threads.</li>
+<li>Each Thread has 1 Object Variant <code>&lt;ThreadName&gt;Message</code> wrapping any kind of message it can receive</li>
+<li>The ThreadServer&apos;s Channel can only carry instances of <code>&lt;ThreadName&gt;Message</code></li>
+<li>Messages are wrapped in the Object Variant using helper procs <code>proc sendMessage</code></li>
+<li>Each ThreadServer has its own routing <code>proc routeMessage</code>. It &quot;unwraps&quot; the object variant <code>&lt;ThreadName&gt;Message</code> and calls the registered handler proc for it.</li>
+<li>Each ThreadServer has its own (optional) threadPool for one-off tasks (e.g. waiting for a blocking operation).
+Tasks can have access to the ChannelHub to send messages with their results if necessary.</li>
+</ul>
+<h3>General Flow of Actions</h3>
+<img src="./assets/app_architecture.png" style="max-width: 100%;" />
+<h2>Special Integrations</h2>
+<p>ThreadButler provides small, simple utilities for easier integration with specific frameworks/libraries.</p>
+<p>Currently the following packages/frameworks have such modules:</p>
+<ul>
+<li>  <a href="https://philippmdoerner.github.io/ThreadButler/htmldocs/threadButler/integrations/owlButler.html">Owlkettle</a></li>
+</ul>
+<h2>Limitations</h2>
+<h4>No explicit support for --mm:refc</h4>
+<p>This package is only validated for the ARC/ORC memory management strategies (--mm:arc and --mm:orc respectively).</p>
+<p>If you are not familiar with those flags, check out the <a href="https://nim-lang.org/docs/nimc.html">nim compiler docs</a>.</p>
+<h4>Must use -d:useMalloc</h4>
+<p>Due to memory issues that occurred while running some stress-tests it is currently discouraged to use nim&apos;s default memory allocator. Use malloc with <code>-d:useMalloc</code> instead.</p>
+<p>See <a href="https://github.com/nim-lang/Nim/issues/22510">nim-lang issue#22510</a> for more context.</p>
+<h4>Using ref type messages with -d:butlerThreading is not supported by the framework</h4>
+<p>threading/channels require a message be isolateable.
+This is not easily doable as ref-types by their nature can not be isolated, as you - the user - will still be holding on to references when passing the message.</p>
+<p>So to send a message we would need to:</p>
+<ul>
+<li>dereference the message to make it isolateable</li>
+<li>send it through the threading/channel</li>
+<li>put the message behind a reference again on the other thread</li>
+</ul>
+<p>Just so the handler-proc can be called with the appropriate type again.</p>
+<p>This requires derefferencing the message before sending and moving the message into a reference again after sending but before invoking a registered handler. The added complexity does not seem worth it.</p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/PhilippMDoerner/Appster">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2023-12-26T01:09:12Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

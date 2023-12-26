@@ -32194,6 +32194,23 @@ const packages = [
     "description": "Opinionated code formatter",
     "license": "MIT License",
     "web": "https://github.com/arnetheduck/nph"
+  },
+  {
+    "name": "threadButler",
+    "url": "https://github.com/PhilippMDoerner/Appster",
+    "method": "git",
+    "tags": [
+      "channels",
+      "multithreading",
+      "parallelism",
+      "message-passing",
+      "client-server",
+      "library",
+      "alpha"
+    ],
+    "description": "Use threads as if they were servers/microservices to enable multi-threading with a simple mental model.",
+    "license": "MIT",
+    "web": "https://github.com/PhilippMDoerner/Appster"
   }
 ]
 const options = {
