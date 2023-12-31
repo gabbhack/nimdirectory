@@ -130,15 +130,15 @@ These threads communicate with your main thread via messages, which trigger regi
 <h2>Provided/Supported:</h2>
 <ul>
 <li>Defining and spawning long-running threads with threadServers that receive and send messages</li>
-<li>Typesafe message passing - A message will always be sent to the correct thread it belongs to, as determined by its type</li>
+<li>Typesafe message passing</li>
 <li>Async message handlers</li>
-<li>Running procs as tasks on a threadPool which can message results back if necessary without blocking your main thread or threadServers</li>
+<li>Running procs as tasks on a threadPool</li>
 <li>Customizable ServerLoops</li>
 <li>Kill-Thread mechanisms</li>
 <li>Startup/Shutdown events per Thread</li>
 </ul>
 <h2>General Architecture</h2>
-<p>The following statements describe the architecture behind threadButler:</p>
+<p>The following statements describe the architecture behind ThreadButler:</p>
 <ul>
 <li>1 ThreadServer is an event-loop running on 1 Thread, defined by <code>proc runServerLoop</code></li>
 <li>Each ThreadServer has a name called <code>&lt;ThreadName&gt;</code></li>
@@ -166,17 +166,10 @@ Tasks can have access to the ChannelHub to send messages with their results if n
 <h4>Must use -d:useMalloc</h4>
 <p>Due to memory issues that occurred while running some stress-tests it is currently discouraged to use nim&apos;s default memory allocator. Use malloc with <code>-d:useMalloc</code> instead.</p>
 <p>See <a href="https://github.com/nim-lang/Nim/issues/22510">nim-lang issue#22510</a> for more context.</p>
-<h4>Using ref type messages with -d:butlerThreading is not supported by the framework</h4>
-<p>threading/channels require a message be isolateable.
-This is not easily doable as ref-types by their nature can not be isolated, as you - the user - will still be holding on to references when passing the message.</p>
-<p>So to send a message we would need to:</p>
-<ul>
-<li>dereference the message to make it isolateable</li>
-<li>send it through the threading/channel</li>
-<li>put the message behind a reference again on the other thread</li>
-</ul>
-<p>Just so the handler-proc can be called with the appropriate type again.</p>
-<p>This requires derefferencing the message before sending and moving the message into a reference again after sending but before invoking a registered handler. The added complexity does not seem worth it.</p>
+<h4>Using ref type messages with -d:butlerThreading is not guaranteed to be thread-safe</h4>
+<p>threading/channels require a message be isolateable before sending it. This is to guarantee that the sending thread no longer accesses the memory of the message after its memory ownership was moved to another thread. You risk segfaults if you do.</p>
+<p>However, ref-types can not be properly isolated when users pass them into the various sending procs, as the compiler can not reason about whether the user still has references to that data somewhere and may access it.</p>
+<p>There are currently no mechanisms to do anything about this, so ThreadButler disables those isolation checks. The burden is therefore on you, the user. You must ensure to <strong>never acccess</strong> a message&apos;s memory after you pass it to any of ThreadButler&apos;s sending procs.</p>
 </document>
             
         </div>
@@ -245,7 +238,7 @@ This is not easily doable as ref-types by their nature can not be isolated, as y
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2023-12-30T01:08:47Z
+        Builded at 2023-12-31T01:15:49Z
         </p>
       </div>
     </div>
