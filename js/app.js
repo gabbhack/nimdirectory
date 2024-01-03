@@ -32225,6 +32225,23 @@ const packages = [
     "description": " A base International Phonetic Alphabet type definition. ",
     "license": "BSD-3-Clause",
     "web": "https://github.com/phononim/ipacore"
+  },
+  {
+    "name": "bight",
+    "url": "https://github.com/auxym/bight",
+    "method": "git",
+    "tags": [
+      "endianness",
+      "bytes",
+      "serialize",
+      "serialization",
+      "deserialize",
+      "deserialization"
+    ],
+    "description": "Byte-ordering operations with a simple read/write API.",
+    "license": "MIT",
+    "web": "https://github.com/auxym/bight",
+    "doc": "https://auxym.github.io/bight/bight.html"
   }
 ]
 const options = {

@@ -95,6 +95,8 @@
 <p>Calendar with local holidays via ip location</p>
 <ul>
 <li>Caches holidays and location in local cache folder</li>
+<li>Personal calendars</li>
+<li>Custom highlight <a href="#custom-style">here</a></li>
 </ul>
 <p>  <img src=".github/images/ccal.png" style="max-width: 100%;" alt="image" /></p>
 <h2>Install</h2>
@@ -106,10 +108,26 @@
 <h3>Nimble</h3>
 <pre>  <code class="language-bash">nimble install ccal
 </code></pre>
+<h3>Custom style</h3>
+<p>  <code>$HOME/.config/ccal/myevents.txt</code></p>
+<pre>  <code>fgGreen
+2024-01-05
+2024-06-01
+2024-07-01
+2024-08-01
+styleDim styleUnderscore
+2024-06-02
+2024-07-31
+2024-08-17
+</code></pre>
+<ul>
+<li>it mixes colors sometimes: if it is &quot;red&quot; holiday and your &quot;green day&quot; =&gt; yellow</li>
+</ul>
 <h2>Usage</h2>
 <pre>  <code class="language-bash">Usage:
 ccal [year(s)] [country]   year (or several) and country code
      [country] [year(s)]
+     -p                    print personal days
      --cleanup             cleanup holidays cache
      --version -v          version
 </code></pre>
@@ -181,7 +199,7 @@ ccal [year(s)] [country]   year (or several) and country code
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-02T01:09:51Z
+        Builded at 2024-01-03T01:11:10Z
         </p>
       </div>
     </div>
