@@ -190,6 +190,11 @@ Use <code>TomlHexEscape</code> to enable this feature otherwise it will raise an
 <li>
 <p>TOML standard requires time in HH:MM:SS format, <code>TomlHourMinute</code> flags will allow HH:MM format.</p>
 </li>
+<li>
+<p>TOML standard requires array elements be separated by a comma. Whitespaces are ignored.
+But due to a bug, the array/inline table elements can be separated by both comma and whitespace.
+Set <code>TomlStrictComma</code> flag on to parse in strict mode, by default the strict mode is off.</p>
+</li>
 </ul>
 <h2>Keyed mode</h2>
 <p>When decoding, only objects, tuples or <code>TomlValueRef</code> are allowed at top level.
@@ -306,65 +311,73 @@ fruit2 = 1         # ordinal value
 fruit3 = &apos;Orange&apos;  # literal string
 </code></pre>
 <pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">type</span></div></div><div class="line"><div class="line-content">  <span class="ide">Fruits</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Apple</span></div></div><div class="line"><div class="line-content">    <span class="ide">Banana</span></div></div><div class="line"><div class="line-content">    <span class="ide">Orange</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">FruitBasket</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit1</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit2</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content">    <span class="ide">fruit3</span>: <span class="ide">Fruits</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">x</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">loadFile</span>(<span class="str">&quot;fruits.toml&quot;</span>, <span class="ide">FruitBasket</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit1</span> <span class="op">==</span> <span class="ide">Apple</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit2</span> <span class="op">==</span> <span class="ide">Banana</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">x</span><span class="op">.</span><span class="ide">fruit3</span> <span class="op">==</span> <span class="ide">Orange</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># write enum output as a string</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">writeValue</span><span class="op">*</span>(<span class="ide">w</span>: <span class="kwd">var</span> <span class="ide">TomlWriter</span>, <span class="ide">val</span>: <span class="ide">Fruits</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">w</span><span class="op">.</span><span class="ide">writeValue</span> <span class="op">$</span><span class="ide">val</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">z</span> <span class="op">=</span> <span class="ide">FruitBasket</span>(<span class="ide">fruit1</span>: <span class="ide">Apple</span>, <span class="ide">fruit2</span>: <span class="ide">Banana</span>, <span class="ide">fruit3</span>: <span class="ide">Orange</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">Toml</span><span class="op">.</span><span class="ide">encode</span>(<span class="ide">z</span>)</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span> <span class="op">==</span> <span class="str">&quot;fruit1 = </span>\"<span class="str">Apple</span>\"\n<span class="str">fruit2 = </span>\"<span class="str">Banana</span>\"\n<span class="str">fruit3 = </span>\"<span class="str">Orange</span>\"\n<span class="str">&quot;</span></div></div>  </code></pre>
-<h2>Helper functions</h2>
-<ul>
-<li>  <code>parseNumber(r: var TomlReader, value: var string): (Sign, NumberBase)</code></li>
-<li>  <code>parseDateTime(r: var TomlReader): TomlDateTime</code></li>
-<li>  <code>parseString(r: var TomlReader, value: var string): (bool, bool)</code></li>
-<li>  <code>parseAsString(r: var TomlReader): string</code></li>
-<li>  <code>parseFloat(r: var TomlReader, value: var string): Sign</code></li>
-<li>  <code>parseTime(r: var TomlReader): TomlTime</code></li>
-<li>  <code>parseDate(r: var TomlReader): TomlDate</code></li>
-<li>  <code>parseValue(r: var TomlReader): TomlValueRef</code></li>
-<li>  <code>parseEnum(r: var TomlReader, T: type enum): T</code></li>
-<li>  <code>parseInt(r: var TomlReader, T: type SomeInteger): T</code></li>
-</ul>
-<p><code>parseAsString</code> can parse any valid TOML value into a Nim string including a mixed array or inline table.</p>
-<p><code>parseString</code> returns a tuple:</p>
-<ul>
-<li>field 0:
-<ul>
-<li>false: is a single line string.</li>
-<li>true: is a multi-line string.</li>
-</ul>
-</li>
-<li>field 1:
-<ul>
-<li>false: is a basic string.</li>
-<li>true: is a literal string.</li>
-</ul>
-</li>
-</ul>
-<p><code>Sign</code> can be one of:</p>
-<ul>
-<li>  <code>Sign.None</code></li>
-<li>  <code>Sign.Pos</code></li>
-<li>  <code>Sign.Neg</code></li>
-</ul>
-<h2>Implementation specifics</h2>
-<p>TomlTime contains a subsecond field. The spec says the precision is implementation-specific.</p>
-<p>In nim-toml-serialization the default is 6 digits precision.
-Longer precision will be truncated by the parser.</p>
-<p>You can override this using compiler switch <code>-d:tomlSubsecondPrecision=numDigits</code>.</p>
-<h2>Installation</h2>
-<p>You can install the development version of the library through Nimble with the following command</p>
-<pre>  <code>nimble install https://github.com/status-im/nim-toml-serialization@#master
+<p>You can control the reader behavior when deserializing specific enum using <code>configureTomlDeserialization</code>.</p>
+<p>``Nim
+configureTomlDeserialization(
+T: type[enum], allowNumericRepr: static[bool] = false,
+stringNormalizer: static[proc(s: string): string] = strictNormalize)</p>
+<pre>  <code>
+## Helper functions
+  - `parseNumber(r: var TomlReader, value: var string): (Sign, NumberBase)`
+  - `parseDateTime(r: var TomlReader): TomlDateTime`
+  - `parseString(r: var TomlReader, value: var string): (bool, bool)`
+  - `parseAsString(r: var TomlReader): string`
+  - `parseFloat(r: var TomlReader, value: var string): Sign`
+  - `parseTime(r: var TomlReader): TomlTime`
+  - `parseDate(r: var TomlReader): TomlDate`
+  - `parseValue(r: var TomlReader): TomlValueRef`
+  - `parseEnum(r: var TomlReader, T: type enum): T`
+  - `parseInt(r: var TomlReader, T: type SomeInteger): T`
+
+`parseAsString` can parse any valid TOML value into a Nim string including a mixed array or inline table.
+
+`parseString` returns a tuple:
+  - field 0:
+    - false: is a single line string.
+    - true: is a multi-line string.
+  - field 1:
+    - false: is a basic string.
+    - true: is a literal string.
+
+`Sign` can be one of:
+  - `Sign.None`
+  - `Sign.Pos`
+  - `Sign.Neg`
+
+## Implementation specifics
+TomlTime contains a subsecond field. The spec says the precision is implementation-specific.
+
+In nim-toml-serialization the default is 6 digits precision.
+Longer precision will be truncated by the parser.
+
+You can override this using compiler switch `-d:tomlSubsecondPrecision=numDigits`.
+
+## Installation
+
+You can install the development version of the library through Nimble with the following command
 </code></pre>
-<p>or install the latest release version</p>
-<pre>  <code>nimble install toml_serialization
+<p>nimble install https://github.com/status-im/nim-toml-serialization@#master</p>
+<pre>  <code>
+or install the latest release version
 </code></pre>
-<h2>License</h2>
-<p>Licensed and distributed under either of</p>
-<ul>
-<li>MIT license: <a href="LICENSE-MIT">LICENSE-MIT</a> or http://opensource.org/licenses/MIT</li>
-</ul>
-<p>or</p>
-<ul>
-<li>Apache License, Version 2.0, (<a href="LICENSE-APACHEv2">LICENSE-APACHEv2</a> or http://www.apache.org/licenses/LICENSE-2.0)</li>
-</ul>
-<p>at your option. This file may not be copied, modified, or distributed except according to those terms.</p>
-<h2>Credits</h2>
-<p>A portion of the toml decoder was taken from PMunch&apos;s <a href="https://github.com/NimParsers/parsetoml">  <code>parsetoml</code></a></p>
+<p>nimble install toml_serialization</p>
+<pre>  <code>
+## License
+
+Licensed and distributed under either of
+
+* MIT license: [LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT
+
+or
+
+* Apache License, Version 2.0, ([LICENSE-APACHEv2](LICENSE-APACHEv2) or http://www.apache.org/licenses/LICENSE-2.0)
+
+at your option. This file may not be copied, modified, or distributed except according to those terms.
+
+## Credits
+
+A portion of the toml decoder was taken from PMunch&apos;s [`parsetoml`](https://github.com/NimParsers/parsetoml)
+</code></pre>
 </document>
             
         </div>
@@ -433,7 +446,7 @@ Longer precision will be truncated by the parser.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-04T01:11:39Z
+        Builded at 2024-01-05T01:11:58Z
         </p>
       </div>
     </div>

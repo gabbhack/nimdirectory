@@ -110,10 +110,9 @@ This library is currently in an alpha version. Some API changes may still happen
 </blockquote>
 <h4>  <em>They&apos;re here to serve</em></h4>
 <p><strong>ThreadButler</strong> is a package for multithreading in applications.</p>
-<p>It simplifies setting up &quot;threadServers&quot; - threads that live as long as your application does.
-These threads communicate with your main thread via messages, which trigger registered handler procs.</p>
+<p>It simplifies setting up &quot;threadServers&quot; - threads that live as long as your application does and may also be described as &quot;microservices&quot;.
+These threads communicate with your main thread via messages, which trigger procs for handling them on the receiving thread.</p>
 <p>ThreadServers act as a &quot;backend&quot; for any heavy computation you do not wish to perform in your client loop.</p>
-<p>This package can also be used if you don&apos;t want to spawn a threadServer - the code it generates helps setting up a task-pool for one-off tasks that can send messages back when a task is done.</p>
 <p>The message passing is done through nim&apos;s <a href="https://nim-by-example.github.io/channels/">Channels</a>.</p>
 <ul>
 <li><a href="https://philippmdoerner.github.io/ThreadButler/bookCompiled/index.html">Documentation</a> (built with <a href="https://github.com/pietroppeter/nimibook">nimibook</a>)</li>
@@ -132,7 +131,7 @@ These threads communicate with your main thread via messages, which trigger regi
 <li>Defining and spawning long-running threads with threadServers that receive and send messages</li>
 <li>Typesafe message passing</li>
 <li>Async message handlers</li>
-<li>Running procs as tasks on a threadPool</li>
+<li>Running procs as tasks on a threadPool (by creating/destroying via startUp/shutDown events)</li>
 <li>Customizable ServerLoops</li>
 <li>Kill-Thread mechanisms</li>
 <li>Startup/Shutdown events per Thread</li>
@@ -147,8 +146,7 @@ These threads communicate with your main thread via messages, which trigger regi
 <li>Each Thread has 1 Object Variant <code>&lt;ThreadName&gt;Message</code> wrapping any kind of message it can receive</li>
 <li>The ThreadServer&apos;s Channel can only carry instances of <code>&lt;ThreadName&gt;Message</code></li>
 <li>Messages are wrapped in the Object Variant using helper procs <code>proc sendMessage</code></li>
-<li>Each ThreadServer has its own routing <code>proc routeMessage</code>. It &quot;unwraps&quot; the object variant <code>&lt;ThreadName&gt;Message</code> and calls the registered handler proc for it.</li>
-<li>Each ThreadServer has its own (optional) threadPool for one-off tasks (e.g. waiting for a blocking operation).
+<li>Each ThreadServer has its own routing <code>proc routeMessage</code>. It &quot;unwraps&quot; the object variant <code>&lt;ThreadName&gt;Message</code> and calls the registered handler proc for it.
 Tasks can have access to the ChannelHub to send messages with their results if necessary.</li>
 </ul>
 <h3>General Flow of Actions</h3>
@@ -163,6 +161,8 @@ Tasks can have access to the ChannelHub to send messages with their results if n
 <h4>No explicit support for --mm:refc</h4>
 <p>This package is only validated for the ARC/ORC memory management strategies (--mm:arc and --mm:orc respectively).</p>
 <p>If you are not familiar with those flags, check out the <a href="https://nim-lang.org/docs/nimc.html">nim compiler docs</a>.</p>
+<h4>No support for --mm:orc when using -d:butlerLoony</h4>
+<p>See the associated context in the <a href="https://github.com/nim-works/loony#issues">LoonyQueue project</a></p>
 <h4>Must use -d:useMalloc</h4>
 <p>Due to memory issues that occurred while running some stress-tests it is currently discouraged to use nim&apos;s default memory allocator. Use malloc with <code>-d:useMalloc</code> instead.</p>
 <p>See <a href="https://github.com/nim-lang/Nim/issues/22510">nim-lang issue#22510</a> for more context.</p>
@@ -238,7 +238,7 @@ Tasks can have access to the ChannelHub to send messages with their results if n
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-04T01:11:39Z
+        Builded at 2024-01-05T01:11:58Z
         </p>
       </div>
     </div>
