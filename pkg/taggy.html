@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">taggy</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">html</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">xml</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">css</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">Everything to do with HTML and XML</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install taggy" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Taggy - Everything to do with HTML and XML<tags>.</tags><strong>⚠️ This library is still in development and is NOT ready to be used. ⚠️</strong></h1>Both the native C backend and the JS backend is supported. Use this library both server side and client side.
+<p>  <code>nimble install taggy</code></p>
+<p>  <img src="https://github.com/treeform/taggy/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <a href="https://treeform.github.io/taggy">API reference</a></p>
+<p>This library has no dependencies other than the Nim standard library.</p>
+<ul>
+<li>HTML Parser/Serializer</li>
+<li>XML Parser/Serializer</li>
+<li>Static HTML Generator</li>
+<li>Static CSS Generator</li>
+</ul>
+<h2>HTML Parser</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">divElement</span> <span class="op">=</span> <span class="ide">parseHtml</span>(<span class="str">&quot;&lt;div class=&apos;foo&apos;&gt;&lt;span&gt;&lt;img src=&apos;img.png&apos;&gt;&lt;/span&gt;&lt;/div&gt;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">divElement</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;class&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">divElement</span>[<span class="num">0</span>][<span class="num">0</span>]<span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;src&quot;</span>]</div></div>  </code></pre>
+<pre>  <code class="language-sh">foo
+img.png
+</code></pre>
+<h2>HTML Serializer</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">divElement</span> <span class="op">=</span> <span class="ide">newElement</span>(<span class="str">&quot;div&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">divElement</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;class&quot;</span>] <span class="op">=</span> <span class="str">&quot;foo&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">spanElement</span> <span class="op">=</span> <span class="ide">newElement</span>(<span class="str">&quot;span&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">imgElement</span> <span class="op">=</span> <span class="ide">newElement</span>(<span class="str">&quot;img&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">imgElement</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;src&quot;</span>] <span class="op">=</span> <span class="str">&quot;img.png&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">spanElement</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">imgElement</span>)</div></div><div class="line"><div class="line-content"><span class="ide">divElement</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">spanElement</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span><span class="ide">divElement</span></div></div>  </code></pre>
+<pre>  <code class="language-sh">&lt;div class=&quot;foo&quot;&gt;&lt;span&gt;&lt;img src=&quot;img.png&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+</code></pre>
+<h2>XML Parser</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">xmlNode</span> <span class="op">=</span> <span class="ide">parseXml</span>("""<tag id="123" bar="the thing"><foo>here</foo><foo2></foo2></tag>""")</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">xmlNode</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;id&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">xmlNode</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;bar&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">xmlNode</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">tagName</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">xmlNode</span>[<span class="num">0</span>][<span class="num">0</span>]<span class="op">.</span><span class="ide">content</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">xmlNode</span>[<span class="num">1</span>]<span class="op">.</span><span class="ide">tagName</span></div></div>  </code></pre>
+<pre>  <code class="language-sh">123
+the thing
+foo
+here
+foo2
+</code></pre>
+<h2>XML Serializer</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">xmlNode</span> <span class="op">=</span> <span class="ide">newElement</span>(<span class="str">&quot;tag&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">xmlNode</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;id&quot;</span>] <span class="op">=</span> <span class="str">&quot;123&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">xmlNode</span><span class="op">.</span><span class="ide">attributes</span>[<span class="str">&quot;bar&quot;</span>] <span class="op">=</span> <span class="str">&quot;the thing&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">fooNode</span> <span class="op">=</span> <span class="ide">newElement</span>(<span class="str">&quot;foo&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">text</span> <span class="op">=</span> <span class="ide">Element</span>()</div></div><div class="line"><div class="line-content"><span class="ide">text</span><span class="op">.</span><span class="ide">content</span> <span class="op">=</span> <span class="str">&quot;here&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">fooNode</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">text</span>)</div></div><div class="line"><div class="line-content"><span class="ide">xmlNode</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">fooNode</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">foo2Node</span> <span class="op">=</span> <span class="ide">newElement</span>(<span class="str">&quot;foo2&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">xmlNode</span><span class="op">.</span><span class="ide">add</span>(<span class="ide">foo2Node</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span><span class="ide">xmlNode</span></div></div>  </code></pre>
+<pre>  <code class="language-sh">&lt;tag id=&quot;123&quot; bar=&quot;the thing&quot;&gt;&lt;foo&gt;here&lt;/foo&gt;&lt;foo2&gt;&lt;/foo2&gt;&lt;/tag&gt;
+</code></pre>
+<h2>Static HTML Generator</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">x</span> <span class="op">=</span> <span class="ide">render</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">html</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">head</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">title</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">say</span> <span class="str">&quot;simple page&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">styleSheet</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">css</span> <span class="str">&quot;body&quot;</span>:</div></div><div class="line"><div class="line-content">          <span class="ide">backgroundColor</span> <span class="str">&quot;black&quot;</span></div></div><div class="line"><div class="line-content">          <span class="ide">color</span> <span class="str">&quot;white&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">body</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">h1</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">say</span> <span class="str">&quot;This is a simple page&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">p</span>:</div></div><div class="line"><div class="line-content">        <span class="ide">say</span> <span class="str">&quot;Taggly allows server and client site html generation&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">x</span></div></div>  </code></pre>
+<p>Note some things are reserved words in nim such as <code>div</code> or <code>method</code> those have a <code>t</code> appended to them becomeing <code>tdiv</code> or <code>tmethod</code>.</p>
+<h2>Static CSS Generator</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">styleSheet</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">css</span> <span class="str">&quot;body&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">backgroundColor</span> <span class="ide">PureBlack</span></div></div><div class="line"><div class="line-content">    <span class="ide">fontFamily</span> <span class="str">&quot;IBM Plex Sans&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">fontStyle</span> <span class="str">&quot;normal&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">fontWeight</span> <span class="num">400</span></div></div><div class="line"><div class="line-content">    <span class="ide">fontSize</span> <span class="num">18</span></div></div><div class="line"><div class="line-content">    <span class="ide">lineHeight</span> <span class="num">23</span></div></div><div class="line"><div class="line-content">    <span class="ide">color</span> <span class="ide">PureWhite</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">css</span> <span class="str">&quot;button.selected, .button.selected&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">backgroundColor</span> <span class="str">&quot;rgba(59, 0, 96, 1)&quot;</span></div></div>  </code></pre>
+<p>You can use the regular <code>&quot;10em&quot;</code> or <code>&quot;100%&quot;</code> and <code>&quot;10px&quot;</code> but you can also omit the <code>&quot;px&quot;</code> and use the number <code>10</code> which means &quot;10px&quot; by default.</p>
+<p>While making any HTML node you can generate inline style with the <code>style</code> keyword:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">a</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">href</span> <span class="str">&quot;/manual.html&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">target</span> <span class="str">&quot;_blank&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">img</span> <span class="str">&quot;.help&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">style</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">position</span> <span class="str">&quot;absolute&quot;</span></div></div><div class="line"><div class="line-content">      <span class="ide">right</span> <span class="num">6</span></div></div><div class="line"><div class="line-content">      <span class="ide">bottom</span> <span class="num">8</span></div></div><div class="line"><div class="line-content">    <span class="ide">src</span> <span class="str">&quot;/data/images/help.png&quot;</span></div></div>  </code></pre>
+<h2>HTML parser and pretty printer</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">htmlNode</span> <span class="op">=</span> <span class="ide">parseHtml</span>(<span class="str">&quot;&lt;div&gt;&lt;span&gt;&lt;img src=&apos;img.png&apos;&gt;&lt;/span&gt;&lt;/div&gt;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span><span class="ide">htmlNode</span></div></div>  </code></pre>
+<h2>XML parser and pretty printer</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">xmlNode</span> <span class="op">=</span> <span class="op">$</span><span class="ide">parseXml</span>(<span class="str">&quot;&lt;tag id=&quot;</span><span class="num">123</span><span class="str">&quot; bar=&quot;</span><span class="ide">the</span> thing"><foo>here</foo><foo2></foo2></tag>")</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span><span class="ide">xmlNode</span></div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/treeform/taggy">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2024-01-07T01:18:06Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
