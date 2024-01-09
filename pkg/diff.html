@@ -83,34 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>diff</h1>
-<p>Nim implementation of Python difflib&apos;s sequence matcher</p>
-<p>diff is a library for finding the differences between two sequences.</p>
-<p>The sequences can be of lines, strings (e.g., words), characters,
-bytes, or of any custom “item” type so long as it implements <code>==</code>
-and <code>hash()</code>.</p>
-<p>For other Nim code see http://www.qtrac.eu/sitemap.html#foss</p>
-<h1>Examples</h1>
-<p>For example, this code:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> (<span class="str">&quot;Tulips are yellow,</span>\n<span class="str">Violets are blue,</span>\n<span class="str">Agar is sweet,</span>\n<span class="str">&quot;</span> <span class="op">&amp;</span></div></div><div class="line"><div class="line-content">         <span class="str">&quot;As are you.&quot;</span>)<span class="op">.</span><span class="ide">split</span>('\n')</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">b</span> <span class="op">=</span> (<span class="str">&quot;Roses are red,</span>\n<span class="str">Violets are blue,</span>\n<span class="str">Sugar is sweet,</span>\n<span class="str">&quot;</span> <span class="op">&amp;</span></div></div><div class="line"><div class="line-content">         <span class="str">&quot;And so are you.&quot;</span>)<span class="op">.</span><span class="ide">split</span>('\n')</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">span</span> <span class="kwd">in</span> <span class="ide">spanSlices</span>(<span class="ide">a</span>, <span class="ide">b</span>):</div></div><div class="line"><div class="line-content">  <span class="kwd">case</span> <span class="ide">span</span><span class="op">.</span><span class="ide">tag</span></div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">tagReplace</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">text</span> <span class="kwd">in</span> <span class="ide">span</span><span class="op">.</span><span class="ide">a</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span>(<span class="str">&quot;- &quot;</span>, <span class="ide">text</span>)</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">text</span> <span class="kwd">in</span> <span class="ide">span</span><span class="op">.</span><span class="ide">b</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span>(<span class="str">&quot;+ &quot;</span>, <span class="ide">text</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">tagDelete</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">text</span> <span class="kwd">in</span> <span class="ide">span</span><span class="op">.</span><span class="ide">a</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span>(<span class="str">&quot;- &quot;</span>, <span class="ide">text</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">tagInsert</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">text</span> <span class="kwd">in</span> <span class="ide">span</span><span class="op">.</span><span class="ide">b</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span>(<span class="str">&quot;+ &quot;</span>, <span class="ide">text</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">of</span> <span class="ide">tagEqual</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">for</span> <span class="ide">text</span> <span class="kwd">in</span> <span class="ide">span</span><span class="op">.</span><span class="ide">a</span>:</div></div><div class="line"><div class="line-content">      <span class="ide">echo</span>(<span class="str">&quot;= &quot;</span>, <span class="ide">text</span>)</div></div>  </code></pre>
-<p>produces this output:</p>
-<pre>  <code>- Tulips are yellow,
-+ Roses are red,
-= Violets are blue,
-- Agar is sweet,
-- As are you.
-+ Sugar is sweet,
-+ And so are you.
-</code></pre>
-<p>If you need indexes rather than subsequences themselves, use
-<code>spans(a, b)</code>.</p>
-<p>To skip the same subsequences pass <code>skipEqual = true</code> and for
-<code>tagEqual</code> use: <code>of tagEqual: doAssert(false)</code>.</p>
-<p>See also <code>tests/test.nim</code>.</p>
-<h1>License</h1>
-<p>diff is free open source software (FOSS) licensed under the
-Apache License, Version 2.0.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -178,7 +151,7 @@ Apache License, Version 2.0.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-08T01:13:23Z
+        Builded at 2024-01-09T01:13:27Z
         </p>
       </div>
     </div>

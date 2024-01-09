@@ -92,44 +92,102 @@
 <pre>  <code>nimble install pathutils
 </code></pre>
 <h2>Overview</h2>
-<p><code>pathutils</code> extends the capabilities of std/paths to offer strict definitions for paths, file paths and dir paths.
-If a path is not valid, an exception is raised.
-This allows you to fail fast and handle errors early.</p>
-<h2>Features</h2>
+<p><code>pathutils</code> enhances the standard Nim <code>std/paths</code> module by introducing strict path types and robust error handling mechanisms. It is designed to enforce strict compliance with path definitions and to identify errors early in the development process.</p>
+<h2>Key Features</h2>
 <ul>
-<li><strong>Strict Type Definitions</strong>: <code>strictpath</code>, <code>strictdir</code>, and <code>strictfile</code> ensure clear distinctions between different types of file system entities.</li>
-<li><strong>Error Handling</strong>: Custom exceptions like <code>PathNotFoundError</code>, <code>BadExtentionError</code>, and <code>BadFileNameError</code> for better error management.</li>
-<li><strong>Path Manipulation</strong>: Borrows the <code>/</code> for manipulating and combining paths, files, and directories.</li>
-<li><strong>File and Directory Creation</strong>: Functions to create files and directories, with options to handle non-existent paths.</li>
+<li><strong>Strict Path Types</strong>: Introduces <code>strictdir</code> and <code>strictfile</code> types. These types let you ensure that the path to the dir or file exists at compile time</li>
+<li><strong>Path Manipulation</strong>: Borrows the <code>/</code> for manipulating and combining paths, files, and directories. - <strong>File and Directory Creation</strong>: Functions to create files and directories, with options to handle non-existent paths.</li>
 </ul>
 <h2>Usage</h2>
 <h3>Types</h3>
 <ul>
-<li><code>strictpath</code>: Represents a path, either a file or a directory that must exist.</li>
-<li><code>strictdir</code> : Represents a directory path that must exist.</li>
-<li><code>strictfile</code>: Represents a file that must exist.</li>
-<li><code>filename</code>  : Represents a file name, with functions to extract the name and extension.</li>
+<li><code>strictdir</code>: A distinct path type for directories.</li>
+<li><code>strictfile</code>: A distinct path type for files.</li>
+<li><code>filename</code>: A type representing a file name, allowing extraction of stem and extension.</li>
 </ul>
-<h3>Procedures</h3>
+<h3>Functions</h3>
 <ul>
-<li>  <code>newStrictPath(path: string, mkIfNotExist: bool = false): strictpath</code></li>
-<li>  <code>newStrictFile(path: string, mkIfNotExist: bool = false, content: string = &quot;&quot;, allowed_ext: seq[string] = @[]): strictfile</code></li>
-<li>  <code>newStrictDir(path: string, mkIfNotExist: bool = false): strictdir</code></li>
-<li><code>f(string): filename</code>: Converts a string to a <code>filename</code> type</li>
-<li>Overloaded <code>/</code> operator for combining <code>strictpath</code>, <code>strictdir</code>, <code>strictfile</code> and <code>filename</code> types with strings or each other.</li>
+<li><code>newStrictFile</code>: Creates or validates a file path.</li>
+<li><code>newStrictDir</code>: Creates or validates a directory path.</li>
+<li><code>f</code>: Converts a string to a <code>filename</code> type.</li>
+<li>Overloaded <code>/</code> operator: Combines path types and strings for path manipulation.</li>
 </ul>
 <h3>Error Handling</h3>
-<p>Custom exceptions are raised for various error conditions, such as non-existent paths or invalid file extensions.</p>
+<p>Custom exceptions are thrown for various scenarios such as non-existent paths or invalid file extensions, enhancing the robustness of path handling.</p>
 <h3>Examples</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pathutils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># if any of the paths do not exist, an exception is raised</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myStrictPath</span> <span class="op">=</span> <span class="ide">newStrictPath</span>(<span class="ide">os</span><span class="op">.</span><span class="ide">getCurrentDir</span>() <span class="op">&amp;</span> r"\example_file.txt" )</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myStrictFile</span> <span class="op">=</span> <span class="ide">newStrictFile</span>(<span class="ide">os</span><span class="op">.</span><span class="ide">getCurrentDir</span>() <span class="op">&amp;</span> r"\example_file.txt" )</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">myStrictDir</span>  <span class="op">=</span> <span class="ide">newStrictDir</span>(<span class="ide">os</span><span class="op">.</span><span class="ide">getCurrentDir</span>()  )</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># if the file does not exist, an exception is raised</span></div></div><div class="line"><div class="line-content"><span class="com"># If the file does exist, it returns a strictfile type</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">myStrictDir</span> <span class="op">/</span> f"example_file.txt" </div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">newStrictPath</span>(r"C:\Program Files") <span class="op">/</span> <span class="str">&quot;nodejs&quot;</span> <span class="com"># If the path does not exist, an exception is raised</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span><span class="ide">myPath</span> <span class="com"># prints the path as a string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> f"example_file.txt"<span class="op">.</span><span class="ide">ext</span>  <span class="com"># prints the file extension &quot;txt&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> f"example_file.txt"<span class="op">.</span><span class="ide">stem</span> <span class="com"># prints the file stem &quot;example_file&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">$</span>f"example_file.txt"     <span class="com"># prints the file path as a string &quot;example_file.txt&quot;</span></div></div>  </code></pre>
-<h3>Extension</h3>
-<p>This can be really useful when you wish to define your own StrictFile types.</p>
-<p>Now you know with confidence that whatever file myThing is acting on is of the file type you need and actually exists at compile time.</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">strictimg</span> <span class="op">=</span> <span class="kwd">distinct</span> <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">newStrictImg</span>(<span class="ide">path</span>:<span class="ide">string</span>) : <span class="ide">strictimg</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">try</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">discard</span> <span class="ide">newStrictFile</span>(<span class="ide">path</span>, <span class="ide">allowed_ext</span><span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;png&quot;</span>, <span class="str">&quot;jpg&quot;</span>, <span class="str">&quot;jpeg&quot;</span>, <span class="str">&quot;gif&quot;</span>])</div></div><div class="line"><div class="line-content">  <span class="kwd">finally</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">return</span> <span class="ide">path</span><span class="op">.</span><span class="ide">strictimg</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">p</span> <span class="op">=</span> <span class="ide">newStrictImg</span>(r"C:\Users\...\Screenshot 2023-11-23 181938.png")</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">p</span><span class="op">.</span><span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">myThing</span>(<span class="ide">t</span>: <span class="ide">strictimg</span>) <span class="op">=</span> </div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="ide">t</span><span class="op">.</span><span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">myThing</span>(<span class="ide">p</span>)</div></div>  </code></pre>
+<h4>Basics</h4>
+<pre>  <code>import pathutils
+
+# Create or validate paths; exceptions are thrown for non-existent paths
+let myStrictDir  = newStrictDir(&quot;path/to/directory&quot;)
+if not myStrictDir.ok:
+  echo &quot;handle error&quot;
+
+let dir_path = myStrictDir.val.get
+
+# Combining paths using the `/` operator
+echo myStrictDir / f&quot;file.txt&quot; 
+
+# Printing path information
+echo $myStrictFile
+echo f&quot;file.txt&quot;.ext  
+echo f&quot;file.txt&quot;.stem 
+</code></pre>
+<h4>Real Use Case</h4>
+<ul>
+<li>One could create a proc that only takes a strictfile ensuring that it exists</li>
+</ul>
+<pre>  <code>import pathutils
+
+proc newDB(file:strictfile) = 
+  create_connection $strictfile
+</code></pre>
+<ul>
+<li>Then users of that proc would need to make sure they&apos;re passing in a strictfile</li>
+</ul>
+<pre>  <code>import pathutils
+
+let db_path = &quot;path/to/db&quot;.newStrictFile
+if not db_path.ok:
+  echo &quot;dang&quot;
+  quit()
+
+let my_db = db_path.val.get.newDB
+</code></pre>
+<ul>
+<li>If a user of your library doesn&apos;t check if the strictfile is ok the option will return none</li>
+</ul>
+<pre>  <code>import pathutils
+
+let db_path = &quot;path/to/db&quot;.newStrictFile
+
+# &quot;path/to/db&quot; doesn&apos;t exist so val is a none(strictfile)
+let my_db = db_path.val.get.newDB
+</code></pre>
+<h4>Custom Extensions</h4>
+<p>Easily extend the library to create your own strict path types, ensuring files of specific filetypes exist.</p>
+<pre>  <code>type strictimg = distinct string
+
+proc newStrictImg(path: string): tuple[ok:bool, err:string, val:Option[strictimg]] =
+  let img = newStrictFile(path, allowed_ext=@[&quot;png&quot;, &quot;jpg&quot;, &quot;jpeg&quot;, &quot;gif&quot;])
+  if not img.ok:
+    (img.ok, img.err, none(strictimg))
+  else:
+    (img.ok, img.err, some(path.strictimg))
+
+let myImage = newStrictImg(&quot;path/to/image.png&quot;)
+echo $myImage.val.get
+
+proc processImage(image: strictimg) = 
+  echo $image
+
+processImage(myImage)
+
+</code></pre>
 <h2>Testing</h2>
-<p>To run tests, use <code>nimble test</code>. The test suite covers a range of scenarios including path recognition, file and directory existence, error handling, and path concatenation.</p>
+<p>Run <code>nimble test</code> to execute the test suite, covering various scenarios like path validation, file and directory management, and error handling.</p>
 <h2>License</h2>
-<p><code>pathutils</code> is released under the MIT License. See the LICENSE file for more details.</p>
+<p><code>pathutils</code> is available under the MIT License. For more information, see the LICENSE file included with the distribution.</p>
 </document>
             
         </div>
@@ -198,7 +256,7 @@ This allows you to fail fast and handle errors early.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-08T01:13:23Z
+        Builded at 2024-01-09T01:13:27Z
         </p>
       </div>
     </div>
