@@ -83,59 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>About</h1>
-<p>nim-subviewer is a Nim module for parsing SubViewer subtitle files.</p>
-<p>For the purpose of the examples, assume a file named <code>example.sub</code> exists
-and contains the following data::</p>
-<pre>  <code>[INFORMATION]
-[TITLE]This is a title
-[AUTHOR]achesak
-[SOURCE]GitHub
-[PRG]SubRip
-[FILEPATH]/home/adam/subtitles
-[DELAY]0
-[COMMENT]extra text can go here
-[END INFORMATION]
-[SUBTITLE]
-[COLF]&amp;HFFFFFF,[STYLE]bd,[SIZE]18,[FONT]Arial
-
-00:01:30.50,00:01:40.10
-This is the first example subtitle.
-
-25:23:12.20,25:23:20.45
-This is a second subtitle.[br]This is on a new line.
-</code></pre>
-<p>Examples:</p>
-<pre>  <code># Parse the data.
-var sub : SubViewerData = readSubViewer(&quot;example.sub&quot;)
-# The previous line could also have been done the following ways:
-# var sub : SubViewerData = parseSubViewer(readFile(&quot;example.sub&quot;))
-# var sub : SubViewerData = parseSubViewer(open(&quot;example.sub&quot;))
-
-# Loop through the subtitles and output the subtitle text:
-for subtitle in sub.subtitles:
-    echo(subtitle.text)
-# Output:
-# This is the first example subtitle.
-# This is a second subtitle.
-# This is on a new line.
-
-# Output the start and end times of the second subtitle.
-var subtitle : SubViewerSubtitle = sub.subtitles[1]
-echo(subtitle.startTime) # Output: &quot;25:23:12.20&quot;
-echo(subtitle.endTime) # Output: &quot;25:23:20.45&quot;
-
-# Output the title, author, and style information.
-echo(sub.title) # Output: &quot;This is a title&quot;
-echo(sub.author) # Output: &quot;achesak&quot;
-echo(sub.color) # Output: &quot;FFFFFF&quot;
-echo(sub.style) # Output: &quot;bd&quot;
-echo(sub.size) # Output: &quot;18&quot;
-echo(sub.font) # Output: &quot;Arial&quot;
-</code></pre>
-<h1>License</h1>
-<p>nim-subviewer is released under the MIT open source license.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -203,7 +151,7 @@ echo(sub.font) # Output: &quot;Arial&quot;
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>

@@ -83,19 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>Genode platform library for Nim</h1>
-<p>This is a Nim library for interacting with the Genode OS.</p>
-<p>Simply adding <code>import genode</code> to a project is also sufficient
-for passing the necessary compiler flags thru the toolchain.</p>
-<p>A pattern for use with Nimble:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="op">...</span></div></div><div class="line"><div class="line-content"><span class="ide">srcDir</span> <span class="op">=</span> <span class="str">&quot;src&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">bin</span>    <span class="op">=</span> <span class="op">@</span>[<span class="str">&quot;foo&quot;</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">requires</span> <span class="str">&quot;nim &gt;= 1.0.0&quot;</span>, <span class="str">&quot;genode&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">task</span> <span class="ide">genode</span>, <span class="str">&quot;Build for Genode&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">exec</span> <span class="str">&quot;nim cpp --os:genode -d:posix -o:foo.genode src/foo&quot;</span></div></div>  </code></pre>
-<p>This adds a task for building a Genode binary invoked by calling <code>nimble genode</code>
-through the shell. The compilier will invoke <em>pkg-config</em> and thus needs
-<em>PKG_CONFIG_PATH</em> set to point at the pkgconfig files supplied with a Genode SDK,
-so the command to use is probably closer to
-<code>PKG_CONFIG_PATH=&quot;/opt/genode-sdk-x86_64/pkgconfig&quot; nimble genode</code>.</p>
-<p>See https://github.com/ehmry/genode/releases/ for a compatible SDK.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -163,7 +151,7 @@ so the command to use is probably closer to
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>

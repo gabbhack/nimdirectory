@@ -91,36 +91,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>About</h1>
-<p>nim-itn is a Nim module for parsing ITN (TomTom intinerary) files.</p>
-<p>For the purposes of examples, assume a file exists called <code>data.itn</code> containing
-the following text:</p>
-<pre>  <code>490843|5237653|Amsterdam Central Station|4|
-496283|5226712|Abcoude Park and Ride|0|
-507226|5208633|Stadsbaan Utrecht|2|
-509797|5199465|Company in Vianen|2|
-</code></pre>
-<p>(Example data taken from Wikipedia at https://en.wikipedia.org/wiki/Itinerary_file.)</p>
-<pre>  <code># Parse the data from the file.
-var itn : seq[ITN] = parseITN(readFile(&quot;data.itn&quot;))
-# The previous line could also be simplified to:
-# var itn : seq[ITN] = readITN(&quot;data.itn&quot;)
-
-# Loop through the parsed data, output the description, longitude, and latitude of each row.
-for row in itn:
-    echo(row.description &amp; &quot; - &quot; &amp; intToStr(row.longitude) &amp; &quot;,&quot; &amp; intToStr(row.latitude))
-# Output:
-# Amsterdam Central Station - 490843,5237653
-# Abcoude Park and Ride - 496283,5226712
-# Stadsbaan Utrecht - 507226,5208633
-# Company in Vianen - 509797,5199465
-</code></pre>
-<p>nim-itn does some error checking to make sure files are valid. It will require the first row to
-be set as a departure point (type = 4), and not allow any other row to be set as such. It will also
-not allow unrecognised types.</p>
-<h1>License</h1>
-<p>nim-itn is released under the MIT open source license.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -188,7 +159,7 @@ not allow unrecognised types.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>

@@ -87,28 +87,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>About</h1>
-<p>nim-ffbookmarks is a Nim module for working with Firefox bookmarks files. It can read and parse bookmarks files,
-in addition to converting to CSV and HTML. It can also filter duplicate bookmarks.</p>
-<p>Examples:</p>
-<pre>  <code># Load the bookmarks, convert them to CSV, and print the first ten rows.
-var allBookmarks : FFBookmark = parseBookmarksFromFile(&quot;bookmarks.json&quot;)
-var bookmarks : seq[FFBookmark] = allBookmarks.children[2].children  # children[2] is &quot;Unsorted Bookmarks&quot;, by default
-var csvData : string = formatCSV(bookmarks[0..9])
-echo(csvData)
-
-# Convert the bookmarks to HTML and write them to a file.
-writeHTML(bookmarks, &quot;bookmarks.html&quot;)
-
-# Print the number of bookmarks, then remove any duplicates and print the
-# number of unique bookmarks.
-echo(&quot;Number of bookmarks: &quot; &amp; intToStr(len(bookmarks)))
-var filtered : seq[FFBookmark] = removeDuplicates(bookmarks)
-echo(&quot;Number of bookmarks (filtered): &quot; &amp; intToStr(len(filtered)))
-</code></pre>
-<h1>License</h1>
-<p>nim-ffbookmarks is released under the MIT open source license.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -176,7 +155,7 @@ echo(&quot;Number of bookmarks (filtered): &quot; &amp; intToStr(len(filtered)))
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>

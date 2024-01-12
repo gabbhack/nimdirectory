@@ -87,41 +87,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>About</h1>
-<p>nim-fileinput is a Nim module based on the <code>fileinput</code> module in Python&apos;s
-standard library. It can read and iterate through a list of files.</p>
-<p>For the purposes of the examples, assume two files exist called &quot;hello&quot;
-and &quot;world&quot; with the given contents:</p>
-<p>File &quot;hello&quot;:</p>
-<pre>  <code>this is an
-example file
-</code></pre>
-<p>File &quot;world&quot;:</p>
-<pre>  <code>fileinput can read lines
-across files
-1234
-abcd
-</code></pre>
-<p>Examples:</p>
-<pre>  <code># Create a file input and read the first three lines.
-var input : FileInput = createFileInput(@[&quot;hello&quot;, &quot;world&quot;])
-for i in 0..2:
-    echo(input.readCurrentLine())
-# Output:
-# this is an
-# example file
-# fileinput can read lines
-
-
-# Create an input and iterate through all the lines.
-var input : FileInput = createFileInput(@[&quot;hello&quot;, &quot;world&quot;])
-for line in lines(input):
-    echo(line)
-# Outputs all the lines in the fileinput
-</code></pre>
-<h1>License</h1>
-<p>nim-fileinput is released under the MIT open source license.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -189,7 +155,7 @@ for line in lines(input):
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>

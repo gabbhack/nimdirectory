@@ -83,32 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>simplediff</h1>
-<p>A <a href="https://nim-lang.org">Nim</a> implementaion of a simple diff algorithm, based on <a href="https://github.com/paulgb/simplediff">Paul Butler&apos;s <code>simplediff</code></a>.</p>
-<h2>Usage</h2>
-<p><code>simplediff</code> provides a <code>diff</code> proc which takes two <code>openArray</code>s and generates a <code>seq</code> of &quot;instructions&quot; to turn the first into the second. Each &quot;instruction&quot; is of the <code>Diff</code> type, which is either an <code>Insertion</code>, a <code>Deletion</code>, or a <code>NoChange</code>. Each <code>Diff</code> also has a <code>tokens</code> field, which contains a subsequence of elements that the insertion/deletion/leaving alone should be applied to.</p>
-<p>For example:</p>
-<pre>  <code>import simplediff
-
-echo diff([1, 2, 3], [1, 2])
-# @[Diff(kind: NoChange, tokens: @[1, 2]), Diff(kind: Deletion, tokens: @[3])]
-</code></pre>
-<p>Any type that implements the <code>==</code> operator can be used.</p>
-<p><code>simplediff</code> also provides a convenience wrapper for diffing two strings. By default, the strings are split into lines for diffing, but this can be changed with the <code>seps</code> parameter.</p>
-<pre>  <code>import simplediff
-
-for diff in stringDiff(&quot;the word is blue&quot;, &quot;the word is red&quot;, seps={&apos; &apos;}):
-  echo diff
-# Diff(kind: NoChange, tokens: @[&quot;the&quot;, &quot;word&quot;, &quot;is&quot;])
-# Diff(kind: Deletion, tokens: @[&quot;blue&quot;])
-# Diff(kind: Insertion, tokens: @[&quot;red&quot;])
-</code></pre>
-<p>Other convenience wrappers may be added in the future! Feel free to request one or submit a patch.</p>
-<p><code>simplediff</code> also provides <code>prettyDiff</code>, which writes a formatted version of the diff to an output stream. It can be called directly or, if you need more flexibility than it offers, used as a starting point for building your own output.</p>
-<p>See the <code>when isMainModule</code> block within <code>simplediff.nim</code> for an example of a simple diff application.</p>
-<h2>Contributing</h2>
-<p>Contributions are welcome! Please send patches, questions, requests, etc. to my <a href="mailto:~reesmichael1/public-inbox@lists.sr.ht">public inbox</a>.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -176,7 +151,7 @@ for diff in stringDiff(&quot;the word is blue&quot;, &quot;the word is red&quot;
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>

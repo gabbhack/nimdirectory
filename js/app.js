@@ -32271,6 +32271,38 @@ const packages = [
     "license": "MIT",
     "web": "https://github.com/auxym/bight",
     "doc": "https://auxym.github.io/bight/bight.html"
+  },
+  {
+    "name": "highlightjs",
+    "url": "https://github.com/Ethosa/highlightjs",
+    "method": "git",
+    "tags": [
+      "highlight.js",
+      "highlight",
+      "javascript",
+      "frontend",
+      "web",
+      "bindings"
+    ],
+    "description": "highlight.js bindings for Nim",
+    "license": "MIT",
+    "web": "https://github.com/Ethosa/highlightjs"
+  },
+  {
+    "name": "tailwindcss",
+    "url": "https://github.com/Ethosa/tailwindcss-nim",
+    "method": "git",
+    "tags": [
+      "web",
+      "frontend",
+      "tailwindcss",
+      "tailwind",
+      "javascript",
+      "bindings"
+    ],
+    "description": "Tailwind CSS bindings for Nim",
+    "license": "MIT",
+    "web": "https://github.com/Ethosa/tailwindcss-nim"
   }
 ]
 const options = {

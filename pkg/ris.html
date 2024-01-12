@@ -87,59 +87,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>About</h1>
-<p>nim-ris is a Nim module for parsing Research Information Systems (RIS) citation files.</p>
-<p>For the use of the example, assume there is a file named &quot;citation.ris&quot; containing the following text:</p>
-<pre>  <code>TY  - ELEC
-AU  - Chesak,Adam
-PY  - 2015/09//
-TI  - Nim RIS module documentation
-KW  - Nim
-KW  - RIS
-KW  - module
-UR  - https://github.com/achesak/nim-ris
-N1  - this is a sample citation file
-Y2  - 2015/09/28/
-ER  -
-</code></pre>
-<p>Example:</p>
-<pre>  <code># Load the file.
-var citation : RISCitation = parseRIS(open(&quot;citation.ris&quot;))
-# Alternatively, in the previous line we could have loaded the file, stored the contents in a variable,
-# and passed that variable to parseRIS(), as it will take either a`File object or a string.
-
-# Print the type of the citation. In this case it is RISType.ELEC, representing a web page.
-echo(citation.referenceType) # outputs &quot;ELEC&quot;
-echo(ciration.referenceType == RISType.ELEC) # outputs true
-
-# Print each author of the work on a separate line.
-for author in citation.authors:
-    echo(author)
-# In this example, there is only one author specified. Therefore the only output will be &quot;Chesak,Adam&quot;.
-
-# Print the keywords in the citation, separated by spaces.
-var keywords : string = &quot;&quot;
-for kw in citation.keywords:
-    keywords &amp;= kw &amp; &quot; &quot;
-echo(keywords) # outputs &quot;Nim RIS module &quot;
-
-# Print some other data from the citation.
-echo(&quot;Title: &quot; &amp; citation.title) # outputs &quot;Title: Nim RIS module documentation&quot;
-echo(&quot;Year: &quot; &amp; citation.year) # outputs &quot;Year: 2015/09//&quot;
-echo(&quot;Access date: &quot; &amp; citation.accessDate) # outputs &quot;Access date: 2015/09/28/&quot;
-echo(&quot;Notes: &quot; &amp; citation.notes) # outputs &quot;Notes: this is a sample citation file&quot;
-</code></pre>
-<p>Note that this module mostly forces citation files to have the proper format. The spacing between tags and value
-must follow the specification exactly, and the starting tag must be <code>TY</code> (reference type) and the ending tag must
-be <code>ER</code> (end of reference).</p>
-<p>However, there are two exceptions to the specification that this module allows. First, blank (space-only) lines are
-allowed and will be skipped. Second, unknown tags will not cause the parser to raise an error, but will instead be
-added to the <code>RISCitation.unknownTags</code> property. This property is a sequence of sequences of strings, where the
-first string in the inner sequences is the tag name and the second is the tag value. If your citation uses non-standard
-tags you will find them here after the file has been parsed.</p>
-<h1>License</h1>
-<p>nim-ris is released under the MIT open source license.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -207,7 +155,7 @@ tags you will find them here after the file has been parsed.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-11T01:13:21Z
+        Builded at 2024-01-12T01:13:29Z
         </p>
       </div>
     </div>
