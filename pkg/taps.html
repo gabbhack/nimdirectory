@@ -91,7 +91,37 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>Nim Transport Services Interface</h1>
+<p>A library providing the Transport Services Interface (TAPS). TAPS is a modern
+alternative to the 1983 Berkley Sockets API. The TAPS specification is language
+agnostic and this implementation follows the recommendations of the <a href="https://datatracker.ietf.org/doc/draft-ietf-taps-impl/">Abstract
+Application Layer Interface to Transport Services</a>.</p>
+<p>Please note that the TAPS specifications are still under review within the IETF
+and this implementation will change accordingly, without warning.</p>
+<p>For more information see <a href="https://datatracker.ietf.org/wg/taps/about/">TAPS IETF working group</a>,
+or watch the <a href="https://media.ccc.de/v/Camp2019-10298-taps_transport_services_api">CCCamp19 talk</a>.</p>
+<h2>Examples</h2>
+<ul>
+<li>
+<p>  <a href="examples/minimal_example/minimalClient.nim">Simple UDP client</a></p>
+</li>
+<li>
+<p>  <a href="examples/minimal_example/minimalServer.nim">Simple UDP server</a></p>
+</li>
+<li>
+<p>  <a href="examples/echo_example/echoClient.nim">Simple TCP client</a></p>
+</li>
+<li>
+<p>  <a href="examples/echo_example/echoServer.nim">Simple TCP server</a></p>
+</li>
+</ul>
+<h2>LwIP</h2>
+<p>This library incudes a copy of <a href="https://savannah.nongnu.org/projects/lwip/">lwIP</a>
+when built for <a href="https://github.com/solo5/solo5">Solo5</a>. To update lwIP the
+<a href="./src/taps/lwip/upstream">lwIP subtree</a> should be pulled and run
+<a href="https://gittup.org/tup/">tup</a> to regenerate the
+<a href="./src/taps/lwip/core.nim">sources list</a> and commit any changes there.</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -159,7 +189,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-14T01:18:13Z
+        Builded at 2024-01-15T01:15:38Z
         </p>
       </div>
     </div>

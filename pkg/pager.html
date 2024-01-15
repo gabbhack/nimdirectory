@@ -91,7 +91,31 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>nim-pager</h1>
+<p>A simple command line pager, written in <a href="https://nim-lang.org">Nim</a>.</p>
+<h2>Usage</h2>
+<p>This project can be compiled into a binary using <code>nimble</code>. However, its primary use is as a library. In your project, use it as follows:</p>
+<pre>  <code>import pager
+
+# assign some long string to longString
+page(longString)
+</code></pre>
+<p>This will split the value of <code>longString</code> onto lines that can be stepped through with the following keys:</p>
+<ul>
+<li><code>j</code>: down</li>
+<li><code>k</code>: up</li>
+<li><code>g</code>: go to top</li>
+<li><code>G</code>: go to bottom</li>
+<li><code>Ctrl-U</code>: go up one-half of the screen</li>
+<li><code>Ctrl-D</code>: go down one-half of the screen</li>
+<li><code>q</code>: quit</li>
+</ul>
+<p>These keys can be customized by passing optional arguments to <code>page</code>. See the function signature of <code>page</code> for details.</p>
+<h2>Project Goals</h2>
+<p><code>pager</code> was written for <a href="https://git.sr.ht/~reesmichael1/roman">roman</a>, and currently only has the flexibility and features required for that task. However, any patches or requests for extension would be welcome!</p>
+<h2>Contributing</h2>
+<p>Contributions are welcome! Please send patches, questions, requests, etc. to my <a href="mailto:~reesmichael1/public-inbox@lists.sr.ht">public inbox</a>.</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -159,7 +183,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-14T01:18:13Z
+        Builded at 2024-01-15T01:15:38Z
         </p>
       </div>
     </div>

@@ -87,7 +87,225 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><p>Abstraction of ODBC for Nim. Example code:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">odbcn</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">conn</span> <span class="op">=</span> <span class="ide">newOdbcConn</span>(<span class="str">&quot;;Server=127.0.0.1;UID=sa;PWD=mybadpassword;Database=testing&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">exec</span>(<span class="str">&quot;insert into MyTable (MyIntCol, MyStrCol) values (?, ?)&quot;</span>, <span class="num">3</span>, <span class="str">&quot;Hello&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">for</span> <span class="ide">row</span> <span class="kwd">in</span> <span class="ide">conn</span><span class="op">.</span><span class="ide">exec</span> <span class="str">&quot;select * from MyTable&quot;</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="ide">row</span>[<span class="num">0</span>]<span class="op">.</span><span class="ide">toInt</span> <span class="op">==</span> <span class="num">3</span></div></div><div class="line"><div class="line-content">  <span class="ide">assert</span> <span class="op">$</span><span class="ide">row</span>[<span class="str">&quot;MyStrCol&quot;</span>] <span class="op">==</span> <span class="str">&quot;Hello&quot;</span></div></div>  </code></pre>
+<h2>Build status</h2>
+<h4>Linux (x86_64)</h4>
+<p>  <a href="https://builds.sr.ht/~mjaa/odbcn-nim/commits/master/.build.yml?">    <img src="https://builds.sr.ht/~mjaa/odbcn-nim/commits/master/.build.yml.svg" style="max-width: 100%;" alt="builds.sr.ht status" />  </a></p>
+<h4>Windows</h4>
+<p>No CI for Windows. If Linux CI works, Windows should work as well, because the
+Microsoft ODBC API is platform-independent. If Windows version of this library
+doesn&apos;t work, the C API wrapper is likely at fault.</p>
+<h2>Links</h2>
+<ul>
+<li>  <a href="https://sr.ht/~mjaa/odbcn-nim/">Project page</a></li>
+<li>  <a href="https://git.sr.ht/~mjaa/odbcn-nim">Repo</a></li>
+</ul>
+<p>See <a href="https://mjaa.srht.site/odbcn-nim/odbcn.html">the docs</a> for in-depth manual
+to the various features and API reference.</p>
+<p>If you encounter issues, please make sure you&apos;re registered at sr.ht, and
+submit a ticket by sending an email to
+<a href="mailto:~/mjaa/odbcn-nim@todo.sr.ht">~mjaa/odbcn-nim@todo.sr.ht</a>. Subscribe to
+this tracker by sending an email to
+<a href="mailto:~/mjaa/odbcn-nim/subscribe@todo.sr.ht">~/mjaa/odbcn-nim/subscribe@todo.sr.ht</a>.</p>
+<p>All contributions are done by means of <code>git send-email</code>. Send these to the
+mailing list at
+<a href="mailto:~mjaa/odbcn-nim@lists.sr.ht">~mjaa/odbcn-nim@lists.sr.ht</a>. See
+<code>CONTRIBUTING.md</code> for details on this. Subscribe to the mailing list by sending
+an email to
+<a href="mailto:~mjaa/odbcn-nim+subscribe@lists.sr.ht">~mjaa/odbcn-nim+subscribe@lists.sr.ht</a>.</p>
+<p>Read <code>CONTRIBUTING.md</code> for code guidelines. Testing is done by running
+<code>inttests/odbc.nim</code>. These integration tests are not run by CI; they must be
+run locally before pushing to master.</p>
+<h2>Conditional symbols</h2>
+<p>Add these Nim compiler flags to change <code>odbcn</code> behavior.</p>
+<ul>
+<li><code>-d:odbcNoEnvInit</code> - disable initialization of global ODBC environment
+<ul>
+<li>In this case, this variable must be manually initialized, or the <code>env</code>
+argument must be given in every applicable <code>odbcn</code> proc</li>
+</ul>
+</li>
+<li><code>-d:odbcEnvConnectionPooling</code> - enable connection pooling for global ODBC
+environment</li>
+</ul>
+<h2>Alternatives to this library:</h2>
+<ul>
+<li>std/db_odbc from Nim standard library</li>
+<li>  <a href="https://github.com/coffeepots/odbc">coffeepots/odbc</a></li>
+</ul>
+<p>Why choose this library over the above?</p>
+<p>std/db_odbc is very minimal, and is made to integrate well with the other
+database abstractions by generalizing the API. odbcn aims to utilize the whole
+ODBC API, and as such doesn&apos;t try to generalize the API together with other
+DBMS APIs. This simplifies understanding of low-level details and optimizing
+access. At the cost of its minimal design, std/db_odbc lacks features such as
+connecting to a database server with a connection string. std/db_odbc is also
+unsafe in the case of database errors, because of inproper cleanup. This is the
+case for the <code>fast*</code> procs and iterators.</p>
+<p>coffeepots/odbc is more complex than std/db_odbc, and solves the problems
+described above. What sets odbcn apart from that library is the design
+philosophy. odbcn utilizes Nim RAII with no <code>ref</code> types, while all handle types
+in coffeepots/odbc are <code>ref</code> types. The type system in odbcn emulates a subset
+of <a href="https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-b-odbc-state-transition-tables?view=sql-server-ver15">ODBC state transitions</a> by representing a handle with several types, and
+having a handle instance transition between those types. This helps eliminate
+runtime bugs such as executing a query on a handle in a result set state.</p>
+<p>&quot;coffeepots/odbc&quot; doesn&apos;t have a public API, because it is pre-1.0.0, and there
+hasn&apos;t been changes for over a year. This project also doesn&apos;t have a public
+API, but aims to do so soon.</p>
+<h2>Credit</h2>
+<p><a href="https://github.com/nanodbc/nanodbc/">&quot;nanodbc&quot; C++ ODBC abstraction</a> helped in
+the following issues:</p>
+<ul>
+<li>Simple module design: all needed code goes in one module (<code>private/core</code>);
+extensions go into separate modules</li>
+<li>Knowing which SQL data types to support, because there are very many of these
+SQL data types</li>
+<li>Knowing which C data types to support
+<ul>
+<li>E.g. don&apos;t support &quot;SQL_NUMERIC_STRUCT&quot; for fixed-precision data
+types, because it is poorly designed in ODBC; just use use the
+&quot;string&quot; C data type instead</li>
+</ul>
+</li>
+</ul>
+<h2>License</h2>
+<p>MIT</p>
+<h2>Versioning</h2>
+<p>This project follows <a href="https://semver.org/spec/v2.0.0.html">SemVer 2.0.0</a>. At
+the moment (pre-1.0.0), features and bug fixes increment patch version, and
+backwards-incompatible API changes increment minor version. If all goes well, I
+would like to bump to 1.0 at the start of 2023.</p>
+<h2>Todos</h2>
+<p>For 1.0 release:</p>
+<ul>
+<li>[ ] Reorganize and tidy integration tests in more specific <code>suite</code>s</li>
+<li>[ ] Find as many bugs in the implementation as possible, and fix and make
+integration tests for them</li>
+<li>[ ] Document remaining functions in core.nim</li>
+<li>[x] In <code>odbcn/connstr</code>, add support of <code>{...}</code> for attribute values, which is
+used to quote the value if it contains unsupported characters in ODBC</li>
+<li>[x] Use <code>openArray[char]</code> instead of <code>string</code> for <code>utf8To16</code> parameter</li>
+<li>[ ] Document or fix why the array fields in <code>OdbcValue</code> are hidden</li>
+<li>[ ] Make <code>listDrivers</code> and <code>listDataSources</code> use UTF-16 version?
+<ul>
+<li>Current implementation may get ANSI-encoded data, which is undesirable;
+must research this</li>
+</ul>
+</li>
+<li>[ ] Rework <code>OdbcException</code> so that it contains <code>OdbcError</code> objects, and not
+just a <code>string</code></li>
+<li>[ ] Restructure modules? (is <code>private/core</code> module appropriate?)</li>
+<li>[ ] Add <code>toBytes(OdbcValue): seq[byte]</code></li>
+<li>[ ] Change <code>newOdbcConn(s: string): OdbcConn</code> to <code>newOdbcConn(s: string): OdbcResult[OdbcConn]</code>?
+<ul>
+<li>Motivation: This proc may be used to test if a connection is valid, so
+raising an exception is unnecessary</li>
+</ul>
+</li>
+<li>[ ] Add <code>requiresInit</code> to all handle types (except <code>OdbcEnv</code>), because <code>nil</code>
+values are not allowed</li>
+<li>[x] Add support for <code>getData</code> of result data into a non-object
+<ul>
+<li>Motivation: Easier to do queries that only contain 1 column</li>
+</ul>
+</li>
+<li>[ ] Add warning if a field in typed <code>next</code> is unused? Maybe not</li>
+<li>[ ] Document that for static <code>prep</code>-variant, fields for typed <code>next</code> must
+correlate with the column name, else the column will not be read into a field</li>
+<li>[x] Add UTF-8 encoding for <code>varchar</code> columns</li>
+<li>[x] Add UTF-16 conversion for <code>seq[char]</code> values?</li>
+<li>[ ] Add tests for typed <code>next(OdbcAnyResult, T)</code> (and consequently typed
+<code>items</code> iterator)</li>
+<li>[ ] Split SQL Server-specific integration tests into its own file
+<ul>
+<li>Motivation: integration tests can be run with SQLite</li>
+<li>This makes it easier to run integrations tests with CI, because the
+heavy SQL Server dependencies (docker, FreeTDS, SQL Server) are not
+required</li>
+</ul>
+</li>
+<li>[ ] Add <code>insert into</code> abstraction, that makes it easier to construct the
+query</li>
+<li>[X] Add tests for overloading <code>bindCol</code>, <code>getData</code> and <code>bindParam</code> procs in
+foreign modules</li>
+<li>[ ] Add <code>tryExec*</code> and <code>tryConnect</code> on <code>OdbcConn</code> so that exceptions are not
+raised when it is possible that the operation fails</li>
+<li>[ ] Somehow improve the stack traces - the large amount of templates and
+macros make it hard to inspect the stack trace</li>
+<li>[x] Add support for <code>Option[T]</code> types
+<ul>
+<li>[x] With <code>bindParams</code> the NULL value is bound</li>
+<li>[x] With <code>getData</code>, value is assigned <code>none</code> if <code>ind == SQL_NULL_DATA</code>,
+otherwise <code>some</code> with the value of <code>SQLGetData</code></li>
+<li>Do not support <code>bindCols</code>, because there&apos;s no place to store the <code>ind</code>
+pointer (indicating if the <code>SQLFetch</code> got a NULL value) between call to
+<code>SQLBindCol</code> and <code>SQLFetch</code></li>
+<li>  <del>Not supported as nonsensical: `Option[seq[T]]` (or option of any
+sequence-like type)</del></li>
+</ul>
+</li>
+<li>[X] Support SQL_NTS in SQLBindParameter for <code>openArray[char]</code> and
+<code>openArray[Utf16Char]</code>
+<ul>
+<li><code>openArray[char|Utf16Char]</code> will always be regarded as zero-terminated
+<ul>
+<li><code>getData</code> adds zero byte at end anyway</li>
+<li><code>bindParam</code> will assume there is a zero-byte to terminate the string</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[ ] today, <code>bindParam</code> puts a value into local scope, so it&apos;s not possible to
+bind parameters and then return from the user&apos;s proc and execute the query
+later with the bound parameters
+<ul>
+<li>
+<p>must make sure the SqlLen_Or_IndPtr pointer is a safe pointer that doesn&apos;t
+go out of scope</p>
+</li>
+<li>
+<p>add mode that checks at compile-time that <code>bindParam</code> doesn&apos;t insert any
+variables in scope</p>
+<ul>
+<li>
+<p>e.g. seq will always error here, since the <code>len</code>
+address can change on V2 since it is basically a fat pointer</p>
+</li>
+<li>
+<p>e.g. string will error out becuase it creates a Utf16 string</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[X] Fix <code>setAttr</code> so it uses SQLULEN/SQLLEN</li>
+<li>[X] Make it possible not to unbind params in <code>unbind</code>, so that the same
+parameters can be reused, with something like <code>execOnlyKeepParams</code>, which
+takes no parameters (the user calls <code>bindParams</code> themselves)</li>
+</ul>
+<p>Other tasks:</p>
+<ul>
+<li>[ ] Add std/times helper</li>
+<li>[ ] Add <code>bindCols</code> specialization for <code>OdbcGenTyPreparedStmt</code> with known
+column order</li>
+<li>[ ] Maybe provide a way to call dynamic version of <code>prep</code> to
+avoid code generation</li>
+<li>[ ] Add async-support (<code>SQLCompleteAsync</code>, etc.)
+<ul>
+<li>I don&apos;t know the scale of implementing async; I know async in Nim is very
+hard to extend at the moment, so this may be a futile effort</li>
+<li>Will probably require existing structures to change</li>
+</ul>
+</li>
+<li>[ ] Add ORM table insert abstraction (getting table schema and generating
+structures)
+<ul>
+<li>Possibly do this in a separate repo, to avoid bloat of features</li>
+</ul>
+</li>
+</ul>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -155,7 +373,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-14T01:18:13Z
+        Builded at 2024-01-15T01:15:38Z
         </p>
       </div>
     </div>
