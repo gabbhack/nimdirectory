@@ -1,5 +1,33 @@
 const packages = [
   {
+    "name": "dekao",
+    "url": "https://github.com/ajusa/dekao",
+    "method": "git",
+    "tags": [
+      "html",
+      "template",
+      "htmx"
+    ],
+    "description": "Write HTML templates easily",
+    "license": "MIT",
+    "web": "https://github.com/ajusa/dekao"
+  },
+  {
+    "name": "rssatom",
+    "url": "https://codeberg.org/samsamros/rssatom",
+    "method": "git",
+    "tags": [
+      "rss",
+      "atom",
+      "rss parser",
+      "rss creator",
+      "RFC 4287"
+    ],
+    "description": "rssatom is a package designed to read and create RSS and Atom feeds",
+    "license": "MIT",
+    "web": "https://codeberg.org/samsamros/rssatom"
+  },
+  {
     "name": "sudoku",
     "url": "https://github.com/roberto170/sudoku",
     "method": "git",
