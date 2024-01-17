@@ -18015,18 +18015,6 @@ const packages = [
     "web": "https://github.com/vycb/gdbmc.nim"
   },
   {
-    "name": "diff",
-    "url": "https://github.com/mark-summerfield/diff",
-    "method": "git",
-    "tags": [
-      "diff",
-      "sequencematcher"
-    ],
-    "description": "Library for finding the differences between two sequences",
-    "license": "Apache-2.0",
-    "web": "https://github.com/mark-summerfield/diff"
-  },
-  {
     "name": "diffoutput",
     "url": "https://github.com/JohnAD/diffoutput",
     "method": "git",
@@ -32265,6 +32253,20 @@ const packages = [
     "description": "Opinionated code formatter",
     "license": "MIT License",
     "web": "https://github.com/arnetheduck/nph"
+  },
+  {
+    "name": "icecream",
+    "url": "https://github.com/hmbemba/icecream",
+    "method": "git",
+    "tags": [
+      "print",
+      "icecream",
+      "ic",
+      "echo"
+    ],
+    "description": "nim port of the icecream python library",
+    "license": "MIT",
+    "web": "https://github.com/hmbemba/icecream"
   },
   {
     "name": "threadButler",
