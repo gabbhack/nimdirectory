@@ -32347,6 +32347,45 @@ const packages = [
     "description": "Tailwind CSS bindings for Nim",
     "license": "MIT",
     "web": "https://github.com/Ethosa/tailwindcss-nim"
+  },
+  {
+    "name": "mummy_utils",
+    "url": "https://github.com/ThomasTJdev/mummy_utils",
+    "method": "git",
+    "tags": [
+      "mummy",
+      "web",
+      "server"
+    ],
+    "description": "Utility package for mummy multithreaded server",
+    "license": "MIT",
+    "web": "https://github.com/ThomasTJdev/mummy_utils"
+  },
+  {
+    "name": "httpbeastfork",
+    "url": "https://github.com/ThomasTJdev/httpbeast_fork",
+    "method": "git",
+    "tags": [
+      "http",
+      "server",
+      "parallel"
+    ],
+    "description": "Fork of httpbeast with Nim v2.x support",
+    "license": "MIT",
+    "web": "https://github.com/ThomasTJdev/httpbeast_fork"
+  },
+  {
+    "name": "jesterfork",
+    "url": "https://github.com/ThomasTJdev/jester_fork",
+    "method": "git",
+    "tags": [
+      "web",
+      "http",
+      "jester"
+    ],
+    "description": "Fork of jester with Nim v2.x support",
+    "license": "MIT",
+    "web": "https://github.com/ThomasTJdev/jester_fork"
   }
 ]
 const options = {

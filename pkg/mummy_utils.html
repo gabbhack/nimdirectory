@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">mummy_utils</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">mummy</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">web</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">server</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">Utility package for mummy multithreaded server</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install mummy_utils" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>mummy_utils</h1>
+<p>Unofficial utility package for mummy thread server. Various helper
+functions.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span>[<span class="ide">json</span>, <span class="ide">options</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mummy</span>, <span class="ide">mummy</span><span class="op">/</span><span class="ide">routers</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mummy_utils</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexParams</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Named parameter from route URL</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;projectID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># URI query param passed with ?invoiceID=123</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;invoiceID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;invoiceID&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="op">%*</span> {<span class="str">&quot;message&quot;</span>: <span class="str">&quot;Hello, World!&quot;</span>})</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexRedirect</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">redirect</span>(<span class="str">&quot;/project/123/info&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># redirect(Http301, &quot;/project/123/info&quot;)</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexHeaders</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">request</span><span class="op">.</span><span class="ide">cookies</span>(<span class="str">&quot;pass&quot;</span>) <span class="op">==</span> <span class="str">&quot;1234567890&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">setHeader</span>(<span class="str">&quot;xauth&quot;</span>, <span class="str">&quot;secret&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="kwd">else</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">resp</span>(<span class="ide">Http401</span>, <span class="str">&quot;Not authorized&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">setHeader</span>(<span class="str">&quot;Content-Type&quot;</span>, <span class="str">&quot;text/html&quot;</span>)</div></div><div class="line"><div class="line-content">  <span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="ide">headers</span>, <span class="str">&quot;&lt;h1&gt;Hello, World!&lt;/h1&gt;&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexHead</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">resp</span> <span class="ide">Http200</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexPost</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">urlParam</span> <span class="op">=</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content">  <span class="kwd">if</span> <span class="ide">urlParam</span> <span class="op">==</span> <span class="str">&quot;&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">resp</span>(<span class="ide">Http400</span>, <span class="str">&quot;Missing projectID&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">let</span> <span class="ide">body</span> <span class="op">=</span> <span class="ide">parseJson</span>(<span class="ide">request</span><span class="op">.</span><span class="ide">body</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="ide">ContentType</span><span class="op">.</span><span class="ide">Text</span>, <span class="ide">body</span>[<span class="str">&quot;msg&quot;</span>]<span class="op">.</span><span class="ide">getStr</span>())</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexFile</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">sendFile</span>(<span class="str">&quot;filepath/&quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;filename&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexMultipart</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">file</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">entry</span> <span class="kwd">in</span> <span class="ide">request</span><span class="op">.</span><span class="ide">multipart</span>:</div></div><div class="line"><div class="line-content">    <span class="kwd">if</span> <span class="ide">entry</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">isSome</span> <span class="kwd">and</span> <span class="ide">entry</span><span class="op">.</span><span class="ide">name</span> <span class="op">==</span> <span class="str">&quot;croppedImage&quot;</span>:</div></div><div class="line"><div class="line-content">      <span class="kwd">let</span> (<span class="ide">start</span>, <span class="ide">last</span>) <span class="op">=</span> <span class="ide">entry</span><span class="op">.</span><span class="ide">data</span><span class="op">.</span><span class="ide">get</span></div></div><div class="line"><div class="line-content">      <span class="ide">file</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">body</span>[<span class="ide">start</span> <span class="op">..</span> <span class="ide">last</span>]</div></div><div class="line"><div class="line-content">      <span class="kwd">break</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Do something with file</span></div></div><div class="line"><div class="line-content">  <span class="ide">resp</span> <span class="ide">Http204</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span>: <span class="ide">Router</span></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/project/@projectID/info&quot;</span>, <span class="ide">indexParams</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/redirect&quot;</span>, <span class="ide">indexRedirect</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/headers&quot;</span>, <span class="ide">indexHeaders</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpHead</span>, <span class="str">&quot;/headers&quot;</span>, <span class="ide">indexHead</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpPost</span>, <span class="str">&quot;/headers&quot;</span>, <span class="ide">indexPost</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/file/@filename&quot;</span>, <span class="ide">indexFile</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpPost</span>, <span class="str">&quot;/multipart&quot;</span>, <span class="ide">indexMultipart</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">server</span> <span class="op">=</span> <span class="ide">newServer</span>(<span class="ide">router</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;Serving on http://localhost:8080&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">server</span><span class="op">.</span><span class="ide">serve</span>(<span class="ide">Port</span>(<span class="num">8080</span>))</div></div>  </code></pre>
+<h1>Routes</h1>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span>: <span class="ide">Router</span></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/project/@projectID/info&quot;</span>, <span class="ide">indexCustom</span>)</div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpPost</span>, <span class="str">&quot;/project/@projectID/info&quot;</span>, <span class="ide">indexCustom</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpPost</span>, <span class="str">&quot;/project/@projectID/info&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;projectID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;invoiceID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;invoiceID&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="str">&quot;Hello, World!&quot;</span>)</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<h2>routeSet*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">routeSet</span><span class="op">*</span>( ) <span class="op">=</span></div></div>  </code></pre>
+<p>Transform router with route and handler. Saving the original route and including the <code>Details</code> in in the callback.</p>
+<h1>Request fields</h1>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Request</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">params</span><span class="op">*:</span> <span class="ide">StringTableRef</span>       <span class="com">## Parameters from the pattern, but also the</span></div></div><div class="line"><div class="line-content">                                <span class="com">## query string.</span></div></div><div class="line"><div class="line-content">  <span class="ide">body</span><span class="op">*:</span> <span class="ide">string</span>                 <span class="com">## Body of the request, only for POST.</span></div></div><div class="line"><div class="line-content">  <span class="ide">headers</span><span class="op">*:</span> <span class="ide">HttpHeaders</span>         <span class="com">## Headers received with the request.</span></div></div><div class="line"><div class="line-content">                                <span class="com">## Retrieving these is case insensitive.</span></div></div><div class="line"><div class="line-content">  <span class="ide">multipart</span><span class="op">*:</span> <span class="ide">seq</span>[<span class="ide">MultipartEntry</span>] <span class="com">## Form data; only present for</span></div></div><div class="line"><div class="line-content">                                <span class="com">## multipart/form-data</span></div></div><div class="line"><div class="line-content">  <span class="ide">host</span><span class="op">*:</span> <span class="ide">string</span>                 <span class="com">## Hostname.</span></div></div><div class="line"><div class="line-content">  <span class="ide">secure</span><span class="op">*:</span> <span class="ide">bool</span>                 <span class="com">## From X-Forwarded-Proto header.</span></div></div><div class="line"><div class="line-content">  <span class="ide">path</span><span class="op">*:</span> <span class="ide">string</span>                 <span class="com">## Path of request.</span></div></div><div class="line"><div class="line-content">  <span class="ide">query</span><span class="op">*:</span> <span class="ide">string</span>                <span class="com">## Query string of request.</span></div></div><div class="line"><div class="line-content">  <span class="ide">cookies</span><span class="op">*:</span> <span class="ide">StringTableRef</span>      <span class="com">## Cookies from the browser.</span></div></div><div class="line"><div class="line-content">  <span class="ide">ip</span><span class="op">*:</span> <span class="ide">string</span>                   <span class="com">## IP address of the requesting client.</span></div></div><div class="line"><div class="line-content">  <span class="ide">reqMeth</span><span class="op">*:</span> <span class="ide">HttpMethod</span>          <span class="com">## Request method, eg. HttpGet, HttpPost</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">body</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">headers</span>[<span class="str">&quot;Content-Type&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">host</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">ip</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">path</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">query</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">reqMethod</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">secure</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">cookies</span>(<span class="str">&quot;glid&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">cookies</span><span class="op">.</span><span class="ide">hasKey</span>(<span class="str">&quot;glid&quot;</span>)</div></div>  </code></pre>
+<h2>Request fields</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">body</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">host</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">ip</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">path</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">query</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">reqMethod</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">HttpMethod</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">multipart</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">seq</span>[<span class="ide">MultipartEntry</span>] <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">secure</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">bool</span> <span class="op">=</span></div></div>  </code></pre>
+<h1>Headers</h1>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">headers</span>[<span class="str">&quot;Content-Type&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">headers</span>[<span class="str">&quot;Content-Typexxx&quot;</span>] <span class="com"># returns empty string</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content"><span class="ide">setHeader</span>(<span class="str">&quot;Content-Type&quot;</span>, <span class="str">&quot;text/plain&quot;</span>)</div></div>  </code></pre>
+<h2>Headers</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">hasKey</span><span class="op">*</span>(<span class="ide">headers</span>: <span class="ide">HttpHeaders</span>, <span class="ide">key</span>: <span class="ide">string</span>): <span class="ide">bool</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">setHeader</span><span class="op">*</span>(<span class="ide">field</span>, <span class="ide">value</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<p>Set header of response. Requires you to initialize the header first.</p>
+<h1>Cookies</h1>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">cookies</span>(<span class="str">&quot;glid&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">cookies</span><span class="op">.</span><span class="ide">hasKey</span>(<span class="str">&quot;glid&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">cookies</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">c</span>[<span class="str">&quot;glid&quot;</span>]</div></div>  </code></pre>
+<h2>cookies*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cookies</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">cookie</span>: <span class="ide">string</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">cookies</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">StringTableRef</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Get cookies of request.</p>
+<h2>setCookie*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">setCookie</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">key</span>, <span class="ide">value</span>: <span class="ide">string</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">domain</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>, <span class="ide">path</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>, <span class="ide">expires</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>;</div></div><div class="line"><div class="line-content">    <span class="ide">noName</span> <span class="op">=</span> <span class="ide">false</span>, <span class="ide">secure</span> <span class="op">=</span> <span class="ide">true</span>, <span class="ide">httpOnly</span> <span class="op">=</span> <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">maxAge</span> <span class="op">=</span> <span class="ide">none</span>(<span class="ide">int</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">sameSite</span> <span class="op">=</span> <span class="ide">SameSite</span><span class="op">.</span><span class="ide">Default</span></div></div><div class="line"><div class="line-content">  ) <span class="op">=</span></div></div>  </code></pre>
+<p>Add cookie to response but requires the header to be available.</p>
+<h2>setCookie*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">setCookie</span><span class="op">*</span>(</div></div><div class="line"><div class="line-content">    <span class="ide">key</span>, <span class="ide">value</span>: <span class="ide">string</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">expires</span>: <span class="ide">DateTime</span> <span class="op">|</span> <span class="ide">Time</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">domain</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>, <span class="ide">path</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">noName</span> <span class="op">=</span> <span class="ide">false</span>, <span class="ide">secure</span> <span class="op">=</span> <span class="ide">true</span>, <span class="ide">httpOnly</span> <span class="op">=</span> <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">    <span class="ide">maxAge</span> <span class="op">=</span> <span class="ide">none</span>(<span class="ide">int</span>),</div></div><div class="line"><div class="line-content">    <span class="ide">sameSite</span> <span class="op">=</span> <span class="ide">SameSite</span><span class="op">.</span><span class="ide">Default</span></div></div><div class="line"><div class="line-content">  ) <span class="op">=</span></div></div>  </code></pre>
+<p>Add cookie to response but requires the header to be available.</p>
+<h1>Params</h1>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">params</span>(<span class="str">&quot;projectID&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">request</span><span class="op">.</span><span class="ide">params</span>(<span class="str">&quot;invoiceID&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">p</span> <span class="op">=</span> <span class="ide">request</span><span class="op">.</span><span class="ide">params</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">p</span>[<span class="str">&quot;projectID&quot;</span>]</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">p</span><span class="op">.</span><span class="ide">hasKey</span>(<span class="str">&quot;invoiceID&quot;</span>)</div></div>  </code></pre>
+<h2>params*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">params</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">s</span>: <span class="ide">string</span>): <span class="ide">string</span> <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">params</span><span class="op">*</span>(<span class="ide">request</span>: <span class="ide">Request</span>): <span class="ide">StringTableRef</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Get params. Is initialized on each call.  Includes named route parameters. Returns the value on first
+match in this order:</p>
+<ol>
+<li>URI path</li>
+<li>URI query</li>
+<li>body data</li>
+</ol>
+<p><code>URI path</code> names parameters are only available in main route <code>Details</code> callback
+is available.</p>
+<h2><code>@</code>*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="op">@</span><span class="str">&quot;invoiceID&quot;</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> `<span class="op">@</span>`<span class="op">*</span>(<span class="ide">s</span>: <span class="ide">string</span>): <span class="ide">untyped</span> <span class="op">=</span></div></div>  </code></pre>
+<p>Get param. Includes named route parameters. Returns the value on first
+match in this order:</p>
+<ol>
+<li>URI path</li>
+<li>URI query</li>
+<li>body data</li>
+</ol>
+<p><code>URI path</code> names parameters are only available in main route <code>Details</code> callback
+is available.</p>
+<h1>Responses</h1>
+<h2>Examples</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="str">&quot;Hello, World!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="str">&quot;Hello, World!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="ide">ContentType</span><span class="op">.</span><span class="ide">Html</span>, <span class="str">&quot;Hello, World!&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="op">@</span>{<span class="str">&quot;Content-Type&quot;</span>: <span class="str">&quot;text/plain&quot;</span>}, <span class="str">&quot;Hello, World!&quot;</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="op">%*</span> {<span class="str">&quot;message&quot;</span>: <span class="str">&quot;Hello, World!&quot;</span>})</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="op">%*</span> {<span class="str">&quot;message&quot;</span>: <span class="str">&quot;Hello, World!&quot;</span>})</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="ide">ContentType</span><span class="op">.</span><span class="ide">Json</span>, <span class="op">%*</span> {<span class="str">&quot;message&quot;</span>: <span class="str">&quot;Hello, World!&quot;</span>})</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">redirect</span>(<span class="str">&quot;/project/123/info&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">redirect</span>(<span class="ide">Http301</span>, <span class="str">&quot;/project/123/info&quot;</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">sendFile</span>(<span class="str">&quot;images/logo.png&quot;</span>)</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content"><span class="ide">setHeader</span>(<span class="str">&quot;xauth&quot;</span>, <span class="str">&quot;1234567890&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">setHeader</span>(<span class="str">&quot;Content-Type&quot;</span>, <span class="str">&quot;text/html&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="ide">headers</span>, <span class="str">&quot;Hello, World!&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># or</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content"><span class="ide">setHeader</span>(<span class="str">&quot;xauth&quot;</span>, <span class="str">&quot;1234567890&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">resp</span>(<span class="ide">Http200</span>, <span class="str">&quot;Hello, World!&quot;</span>)</div></div>  </code></pre>
+<h2>ContentType*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">ContentType</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">enum</span></div></div><div class="line"><div class="line-content">    <span class="ide">Json</span> <span class="op">=</span> <span class="str">&quot;application/json&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">Text</span> <span class="op">=</span> <span class="str">&quot;text/plain&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">Html</span> <span class="op">=</span> <span class="str">&quot;text/html; charset=utf-8&quot;</span></div></div>  </code></pre>
+<h2>resp*() - string</h2>
+<p>If the <code>headers</code> is declared, they will be used in the <code>resp()</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">body</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span>, <span class="ide">body</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span>, <span class="ide">contentType</span>: <span class="ide">ContentType</span>, <span class="ide">body</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span> <span class="op">=</span> <span class="ide">Http200</span>, <span class="ide">headers</span>: <span class="ide">HttpHeaders</span>, <span class="ide">body</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<h2>resp*() - JsonNode</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">body</span>: <span class="ide">JsonNode</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span>, <span class="ide">body</span>: <span class="ide">JsonNode</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">resp</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span>, <span class="ide">contentType</span>: <span class="ide">ContentType</span>, <span class="ide">body</span>: <span class="ide">JsonNode</span>) <span class="op">=</span></div></div>  </code></pre>
+<h2>sendFile*() -</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">sendFile</span><span class="op">*</span>(<span class="ide">path</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<h2>redirect*</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">redirect</span><span class="op">*</span>(<span class="ide">path</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">template</span> <span class="ide">redirect</span><span class="op">*</span>(<span class="ide">httpStatus</span>: <span class="ide">HttpCode</span>, <span class="ide">path</span>: <span class="ide">string</span>) <span class="op">=</span></div></div>  </code></pre>
+<h1>Converting existing routes from jester =&gt; mummy</h1>
+<p><code>mummy_utils</code> was developed to ease the transition from <code>jester</code> to <code>mummy</code>.
+In <code>mummy_utils</code> you have access to many of the same sugar functions
+that <code>jester</code> provides.</p>
+<h2>Examples</h2>
+<p>  <strong>Jester</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">routes</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">get</span> <span class="str">&quot;/project/@projectID/info&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;projectID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="str">&quot;Hello, World!&quot;</span></div></div>  </code></pre>
+<p>  <strong>Mummy #1</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span>: <span class="ide">Router</span></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/project/@projectID/info&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="kwd">proc</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="str">&quot;projectID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content">    <span class="ide">resp</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>  <strong>Mummy #2</strong></p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">indexCustom</span>(<span class="ide">request</span>: <span class="ide">Request</span>, <span class="ide">details</span>: <span class="ide">Details</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">echo</span> <span class="str">&quot;projectID:  &quot;</span> <span class="op">&amp;</span> <span class="op">@</span><span class="str">&quot;projectID&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">resp</span> <span class="str">&quot;Hello, World!&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">router</span>: <span class="ide">Router</span></div></div><div class="line"><div class="line-content"><span class="ide">router</span><span class="op">.</span><span class="ide">routeSet</span>(<span class="ide">HttpGet</span>, <span class="str">&quot;/project/@projectID/info&quot;</span>, <span class="ide">indexCustom</span>)</div></div>  </code></pre>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/ThomasTJdev/mummy_utils">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2024-01-21T01:18:44Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

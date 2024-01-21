@@ -127,28 +127,23 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>WebUI</h1>
+                <document><div align="center">
+<h1>WebUI Nim</h1>
+<!--  [release-version]: https://img.shields.io/github/v/tag/webui-dev/go-webui?style=for-the-badge&amp;logo=webtrees&amp;logoColor=C0CAF5&amp;labelColor=414868&amp;color=7664C6  -->
+<!--  [![][build-status]](https://github.com/webui-dev/go-webui/actions?query=branch%3Amain)  -->
+<p>  <a href="https://github.com/webui-dev/nim-webui/pulse">    <img src="https://img.shields.io/github/last-commit/webui-dev/nim-webui?style=for-the-badge&amp;logo=github&amp;logoColor=C0CAF5&amp;labelColor=414868" style="max-width: 100%;" alt="" />  </a></p>
+<!--  [![][release-version]](https://github.com/webui-dev/go-webui/releases/latest)  -->
+<p>  <a href="https://github.com/webui-dev/nim-webui/blob/main/LICENSE">    <img src="https://img.shields.io/github/license/webui-dev/nim-webui?style=for-the-badge&amp;logo=opensourcehardware&amp;label=License&amp;logoColor=C0CAF5&amp;labelColor=414868&amp;color=8c73cc" style="max-width: 100%;" alt="" />  </a></p>
 <blockquote>
 <p>WebUI is not a web-server solution or a framework, but it allows you to use any web browser as a GUI, with Nim in the backend and HTML5 in the frontend. All in a lightweight portable lib.</p>
 </blockquote>
+<!-- 
+Nim wrapper and bindings for [WebUI](https://github.com/webui-dev/webui), a fully independent and cross-platform web UI library.
+
+Instead of using a third-party library, WebUI instead uses a pre-installed browser (Edge, Firefox, Chrome, Chromium, or Safari). So, there&apos;s no need for any large SDK or library for development/production, all you need is a web browser!
+ -->
 <p>  <img src="https://raw.githubusercontent.com/malisipi/vwebui/main/screenshot.png" style="max-width: 100%;" alt="Image" /></p>
-<p>Nim wrapper and bindings for <a href="https://github.com/webui-dev/webui">WebUI</a>, a
-fully independent and cross-platform web UI library.</p>
-<p>Instead of using a third-party library, WebUI instead uses a pre-installed
-browser (Edge, Firefox, Chrome, Chromium, or Safari). So, there&apos;s no need for any
-large SDK or library for development/production, all you need is a web browser!</p>
-<blockquote>
-<p>:warning: <strong>Notice</strong>:</p>
-<ul>
-<li>
-<p>WebUI is not a web-server solution or a framework, but it&apos;s an lightweight portable lib
-to use any installed web browser as a user interface.</p>
-</li>
-<li>
-<p>WebUI&apos;s documentation is <strong>not</strong> finished.</p>
-</li>
-</ul>
-</blockquote>
+</div>
 <h2>Features</h2>
 <ul>
 <li>Fully Independent (<em>No need for any third-party library</em>)</li>
@@ -170,17 +165,12 @@ to use any installed web browser as a user interface.</p>
 <li>  <a href="https://webui.me/docs/2.4.0/#/nim_api">https://webui.me/docs/2.4.0/#/nim_api</a></li>
 <li><a href="https://neroist.github.io/webui-docs/">https://neroist.github.io/webui-docs/</a> (same thing but made in nimib)</li>
 </ul>
-<p>There isn&apos;t much documentation as of right now, so I suggest to get started
-using some <a href="#examples">examples</a> or WebUI&apos;s own
-<a href="https://github.com/webui-dev/webui/tree/main/examples">examples</a> or
-<a href="https://webui.me/docs/">documentation</a>.</p>
+<p>There isn&apos;t much documentation as of right now, so I suggest to get started using some <a href="#examples">examples</a> or WebUI&apos;s own <a href="https://github.com/webui-dev/webui/tree/main/examples">examples</a> or <a href="https://webui.me/docs/">documentation</a>.</p>
 <p>Heres a very <a href="examples/minimal.nim">  <em>minimal</em></a> example of using the wrapper:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">webui</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">window</span> <span class="op">=</span> <span class="ide">newWindow</span>() <span class="com"># Create a new Window</span></div></div><div class="line"><div class="line-content"><span class="ide">window</span><span class="op">.</span><span class="ide">show</span>(<span class="str">&quot;&lt;html&gt;Hello&lt;/html&gt;&quot;</span>) <span class="com"># Show the window with html content</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">wait</span>() <span class="com"># Wait until the window gets closed</span></div></div>  </code></pre>
 <h3>Examples</h3>
 <p>Examples can be found here at <a href="examples/">  <code>examples/</code></a>.</p>
-<p>If you&apos;re trying to run the examples remember to clone the repository
-<em>recursively</em>, as it depends on the WebUI repo as a submodule. Here&apos;s
-the command to do so for the truly lazy:</p>
+<p>If you&apos;re trying to run the examples remember to clone the repository <em>recursively</em>, as it depends on the WebUI repo as a submodule. Here&apos;s the command to do so for the truly lazy:</p>
 <pre>  <code class="language-shell">git clone --recursive https://github.com/neroist/webui.git
 </code></pre>
 <h2>Bindings and Wrapper</h2>
@@ -343,7 +333,7 @@ only works for static compilation.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-20T01:12:38Z
+        Builded at 2024-01-21T01:18:44Z
         </p>
       </div>
     </div>

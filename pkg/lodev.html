@@ -105,10 +105,14 @@
             
                 <document><h1>lodev</h1>
 <p>lodev is a simple reverse proxy server for local development with SSL termination.</p>
-<p>Obsoletes using ngrok or manually configuring combination of mkcert, dnsmasq and nginx/caddy. It provides HTTPS endpoint under <code>https://*.dev.lo</code> and by default proxies all requests to <code>http://127.0.0.1:3000</code>.</p>
+<p>Obsoletes using ngrok or manually configuring combination of mkcert, dnsmasq and nginx/caddy. It provides HTTPS endpoint under <code>https://*.dev.lo</code> or <code>https://{COMPUTER_NAME}.local</code> and by default proxies all requests to <code>http://127.0.0.1:3000</code>.</p>
 <p>It uses <a href="https://github.com/vandot/locert">locert</a> to generate and install locally trusted SSL certs and <a href="https://github.com/vandot/lodns">lodns</a> for DNS name resolution.</p>
 <p>As described in <a href="https://github.com/vandot/locert">locert</a> docs, to enable support for custom CA in Firefox on Windows and MacOS per <a href="https://support.mozilla.org/en-US/kb/setting-certificate-authorities-firefox#w_using-built-in-windows-and-macos-support">official document</a> inside <code>about:config</code> set <code>security.enterprise_roots.enabled</code> to <code>true</code>.</p>
 <p>  <em>Note: current implementaion doesn&apos;t work with Firefox on Linux, implementation planned in the future.</em></p>
+<h2>local mode</h2>
+<p>With flag <code>--local</code> it will generate certificate that is valid for <code>{COMPUTER_NAME}.local</code> domain. Using .local it enables for local mDNS server to resolves hostname to all other devices inside local network.
+Using your mobile access <code>http://{COMPUTER_NAME}.local/ca</code> to download CA certificate and install it.</p>
+<p>Follow these manuals to install it on your <a href="https://support.n4l.co.nz/s/article/Installing-an-SSL-Certificate-on-an-iOS-Device-Manually">iOS</a> or <a href="https://support.n4l.co.nz/s/article/Installing-an-SSL-Certificate-on-an-Android-Device-Manually">Android</a> device.</p>
 <h2>Installation</h2>
 <p>Download correct binary from the latest <a href="https://github.com/vandot/lodev/releases">release</a> and place it somewhere in the PATH.</p>
 <p>Or pipe the install script to bash</p>
@@ -118,30 +122,46 @@
 <pre>  <code>nimble install lodev
 </code></pre>
 <h2>Configuration</h2>
-<p>lodev comes preconfigured for all supported platforms to act as a HTTPS reverse proxy server behind <code>*.dev.lo</code> domain.</p>
+<p>lodev comes preconfigured for all supported platforms to act as a HTTPS reverse proxy server behind <code>*.dev.lo</code> or <code>{COMPUTER_NAME}.local</code> domain.</p>
+<h3>*.dev.lo</h3>
 <p>On MacOS and Linux it will ask for sudo password</p>
 <pre>  <code>lodev install
 </code></pre>
 <p>On Windows run inside elevated command prompt or Powershell</p>
 <pre>  <code>lodev.exe install
 </code></pre>
+<h3>{COMPUTER_NAME}.local</h3>
+<p>On MacOS and Linux it will ask for sudo password</p>
+<pre>  <code>lodev install --local
+</code></pre>
+<p>On Windows run inside elevated command prompt or Powershell</p>
+<pre>  <code>lodev.exe install --local
+</code></pre>
 <h2>Start</h2>
 <p>Service will bind to a well-known port <code>443</code>. By default service will proxy all requests to <code>127.0.0.1:3000</code>. You can specify different destination port using <code>-p=8000</code>.</p>
 <p>On Linux add CAP_NET_BIND_SERVICE capability to the lodev binary to able to bind port 443 as a non-root user.</p>
 <pre>  <code>sudo setcap cap_net_bind_service=+eip lodev
 </code></pre>
+<h3>*.dev.lo</h3>
 <p>On MacOS and Linux</p>
 <pre>  <code>lodev start
 </code></pre>
 <p>On Windows inside elevated command prompt or Powershell</p>
 <pre>  <code>lodev.exe start
 </code></pre>
+<h3>{COMPUTER_NAME}.local</h3>
+<p>On MacOS and Linux</p>
+<pre>  <code>lodev start --local
+</code></pre>
+<p>On Windows inside elevated command prompt or Powershell</p>
+<pre>  <code>lodev.exe start --local
+</code></pre>
 <h2>Uninstallation</h2>
 <p>On MacOS and Linux run</p>
-<pre>  <code>lodev uninstall
+<pre>  <code>lodev uninstall [--local]
 </code></pre>
 <p>On Windows run inside elevated command prompt or Powershell</p>
-<pre>  <code>lodev.exe uninstall
+<pre>  <code>lodev.exe uninstall [--local]
 </code></pre>
 <p>and remove the binary.</p>
 <h2>License</h2>
@@ -214,7 +234,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-20T01:12:38Z
+        Builded at 2024-01-21T01:18:44Z
         </p>
       </div>
     </div>
