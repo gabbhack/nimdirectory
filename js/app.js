@@ -32386,9 +32386,20 @@ const packages = [
     "description": "Fork of jester with Nim v2.x support",
     "license": "MIT",
     "web": "https://github.com/ThomasTJdev/jester_fork"
+  },
+  {
+    "name": "templater",
+    "url": "https://github.com/Wraith29/templater",
+    "method": "git",
+    "tags": [
+      "web",
+      "template engines"
+    ],
+    "description": "HTML Template Engine",
+    "license": "MIT",
+    "doc": "https://wraith29.github.io/templater/templater.html"
   }
-]
-const options = {
+]const options = {
     includeScore: false,
     keys: [
         {
