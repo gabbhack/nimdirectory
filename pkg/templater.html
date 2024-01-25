@@ -84,9 +84,36 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>Templater</h1>
-<p>A Nim-based HTML templating engine</p>
-<h2>How to use</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">templater</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">variables</span> <span class="op">=</span> <span class="ide">newTable</span>[<span class="ide">string</span>, <span class="ide">Variable</span>]([(<span class="str">&quot;pageTitle&quot;</span>, <span class="ide">newVariable</span>(<span class="str">&quot;Page Title&quot;</span>))])</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">p</span> <span class="op">=</span> <span class="ide">newParser</span>(<span class="ide">staticRead</span> <span class="str">&quot;myTemplate.html&quot;</span>, <span class="ide">variables</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">content</span> <span class="op">=</span> <span class="ide">p</span><span class="op">.</span><span class="ide">parse</span>()</div></div>  </code></pre>
+<p>A Nim-based HTML templating engine.</p>
+<p>Performs Compile-time template validation, to ensure you don&apos;t get any nasty surprises when running your code.</p>
+<p>  <a href="https://Wraith29.github.io/templater/templater.html">Docs</a></p>
+<h2>Installation</h2>
+<p>Global Installation:</p>
+<pre>  <code class="language-sh">nimble install templater
+</code></pre>
+<p>Local Installation:</p>
+<pre>  <code class="language-sh">atlas init
+atlas use templater
+</code></pre>
+<h2>Usage</h2>
+<h3>Load from Template String</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">templater</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">myTemplate</span> <span class="op">=</span> """
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{pageTitle}}</title>
+    </head>
+
+    <body>
+        <h1>{{myHeader}}</h1>
+        <ul>{{#for item in items | index}}
+            <li>{{#index}}: {{#item}}</li>
+        {{#endfor}}</ul>
+    </body>
+</html>
+"""</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">vars</span> <span class="op">=</span> <span class="ide">newVarTable</span>((<span class="str">&quot;pageTitle&quot;</span>, <span class="ide">newVariable</span>(<span class="str">&quot;My Page Title&quot;</span>)), (<span class="str">&quot;myHeader&quot;</span>, <span class="ide">newVariable</span>(<span class="str">&quot;Page Header&quot;</span>)), (<span class="str">&quot;items&quot;</span>, <span class="ide">newVariable</span>(<span class="op">@</span>[<span class="ide">newVariable</span>(<span class="str">&quot;Item 0&quot;</span>), <span class="ide">newVariable</span>(<span class="str">&quot;Item 1&quot;</span>)])))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">renderedTemplate</span> <span class="op">=</span> <span class="ide">loadTemplate</span>(<span class="ide">myTemplate</span>, <span class="ide">vars</span>)</div></div>  </code></pre>
+<h3>Load from a Template file</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">vars</span> <span class="op">=</span> <span class="ide">newVarTable</span>((<span class="str">&quot;pageTitle&quot;</span>, <span class="ide">newVariable</span>(<span class="str">&quot;My Page Title&quot;</span>)), (<span class="str">&quot;myHeader&quot;</span>, <span class="ide">newVariable</span>(<span class="str">&quot;Page Header&quot;</span>)), (<span class="str">&quot;items&quot;</span>, <span class="ide">newVariable</span>(<span class="op">@</span>[<span class="ide">newVariable</span>(<span class="str">&quot;Item 0&quot;</span>), <span class="ide">newVariable</span>(<span class="str">&quot;Item 1&quot;</span>)])))</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">renderedTemplate</span> <span class="op">=</span> <span class="ide">loadTemplateFile</span>(<span class="ide">staticRead</span>(<span class="str">&quot;template.html&quot;</span>), <span class="ide">vars</span>)</div></div>  </code></pre>
 <h2>Template Syntax</h2>
 <p>Variables:</p>
 <pre>  <code class="language-html">&lt;!DOCTYPE html&gt;
@@ -189,7 +216,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-24T01:14:31Z
+        Builded at 2024-01-25T01:14:50Z
         </p>
       </div>
     </div>
