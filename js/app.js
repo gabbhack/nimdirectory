@@ -32399,7 +32399,7 @@ const packages = [
     "license": "MIT",
     "doc": "https://wraith29.github.io/templater/templater.html"
   }
-]const options = {
+]\nconst options = {
     includeScore: false,
     keys: [
         {

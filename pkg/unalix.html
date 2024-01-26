@@ -83,52 +83,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>Unalix</h1>
-<p>Unalix is a library and CLI tool written in Nim, it implements the specification used by the <a href="https://github.com/ClearURLs/Addon">ClearURLs</a> addon for removing tracking fields from URLs.</p>
-<h2>Installation</h2>
-<p>Install using <code>nimble</code>:</p>
-<pre>  <code class="language-bash">nimble install --accept &apos;unalix&apos;
-</code></pre>
-<p>  <em>  <strong>Note</strong>: Unalix requires Nim 1.4.0 or higher.</em></p>
-<h2>Usage:</h2>
-<p>Removing tracking fields:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">unalix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">url</span>: <span class="ide">string</span> <span class="op">=</span> <span class="str">&quot;https://deezer.com/track/891177062?utm_source=deezer&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">result</span>: <span class="ide">string</span> <span class="op">=</span> <span class="ide">clearUrl</span>(<span class="ide">url</span> <span class="op">=</span> <span class="ide">url</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">result</span> <span class="op">==</span> <span class="str">&quot;https://deezer.com/track/891177062&quot;</span></div></div>  </code></pre>
-<p>Resolving shortened URL:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">unalix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">url</span>: <span class="ide">string</span> <span class="op">=</span> <span class="str">&quot;https://bitly.is/Pricing-Pop-Up&quot;</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">result</span>: <span class="ide">string</span> <span class="op">=</span> <span class="ide">unshortUrl</span>(<span class="ide">url</span> <span class="op">=</span> <span class="ide">url</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">result</span> <span class="op">==</span> <span class="str">&quot;https://bitly.com/pages/pricing&quot;</span></div></div>  </code></pre>
-<p>  <em>  <strong>Tip</strong>: The   <code>unshortUrl()</code> proc will strip tracking fields from any URL before following a redirect, so you don&apos;t need to manually call   <code>clearUrl()</code> for it&apos;s return value.</em></p>
-<h2>Downloads</h2>
-<p>You can get prebuilt static executables of the CLI tool for Linux and Android <a href="https://github.com/AmanoTeam/UnalixLibs">here</a>.</p>
-<h2>Contributing</h2>
-<p>If you have discovered a bug in this library and know how to fix it, fork this repository and open a Pull Request.</p>
-<h2>Third party software</h2>
-<p>Unalix includes some third party software in its codebase. See them below:</p>
-<ul>
-<li>
-<p>  <strong>ClearURLs</strong></p>
-<ul>
-<li>Author: Kevin Röbert</li>
-<li>Repository: <a href="https://github.com/ClearURLs/Rules">ClearURLs/Rules</a></li>
-<li>License: <a href="https://gitlab.com/ClearURLs/Rules/blob/master/LICENSE">GNU Lesser General Public License v3.0</a></li>
-</ul>
-</li>
-<li>
-<p>  <strong>Requests</strong></p>
-<ul>
-<li>Author: Kenneth Reitz</li>
-<li>Repository: <a href="https://github.com/psf/requests">psf/requests</a></li>
-<li>License: <a href="https://github.com/psf/requests/blob/master/LICENSE">Apache v2.0</a></li>
-</ul>
-</li>
-<li>
-<p>  <strong>libandroid-glob</strong></p>
-<ul>
-<li>Author: Many authors</li>
-<li>Repository: <a href="https://github.com/termux/termux-packages/tree/master/packages/libandroid-glob">termux/termux-packages</a></li>
-<li>License: <a href="https://github.com/termux/termux-packages/blob/master/packages/libandroid-glob/LICENSE">BSD 3-Clause</a></li>
-</ul>
-</li>
-</ul>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -196,7 +151,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-25T01:14:50Z
+        Builded at 2024-01-26T01:09:18Z
         </p>
       </div>
     </div>

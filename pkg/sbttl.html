@@ -106,7 +106,7 @@
 <p>see <code>tests/test.nim</code> for now</p>
 <h2>API</h2>
 <h3>types</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">TimeRange</span><span class="op">*</span> <span class="op">=</span> <span class="ide">HSlice</span>[<span class="ide">Duration</span>, <span class="ide">Duration</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Caption</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">timeRange</span><span class="op">*:</span> <span class="ide">TimeRange</span></div></div><div class="line"><div class="line-content">    <span class="ide">content</span><span class="op">*:</span> <span class="ide">string</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">TimeRange</span><span class="op">*</span> <span class="op">=</span> <span class="ide">Slice</span>[<span class="ide">Duration</span>]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Caption</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">    <span class="ide">timeRange</span><span class="op">*:</span> <span class="ide">TimeRange</span></div></div><div class="line"><div class="line-content">    <span class="ide">content</span><span class="op">*:</span> <span class="ide">string</span></div></div>  </code></pre>
 <h3>functions</h3>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">parseVTT</span>(<span class="ide">content</span>: <span class="ide">string</span>): <span class="ide">seq</span>[<span class="ide">Caption</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">genVTT</span>(<span class="ide">captions</span>: <span class="ide">seq</span>[<span class="ide">Caption</span>], <span class="ide">meta</span> <span class="op">=</span> <span class="str">&quot;&quot;</span>, <span class="ide">includeCaptionNumber</span> <span class="op">=</span> <span class="ide">false</span>): <span class="ide">string</span></div></div><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">parseSRT</span>(<span class="ide">content</span>: <span class="ide">string</span>): <span class="ide">seq</span>[<span class="ide">Caption</span>]</div></div><div class="line"><div class="line-content"><span class="kwd">func</span> <span class="ide">genSRT</span>(<span class="ide">cs</span>: <span class="ide">seq</span>[<span class="ide">Caption</span>]): <span class="ide">string</span></div></div>  </code></pre>
 </document>
@@ -177,7 +177,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-25T01:14:50Z
+        Builded at 2024-01-26T01:09:18Z
         </p>
       </div>
     </div>
