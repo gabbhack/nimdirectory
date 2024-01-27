@@ -96,8 +96,8 @@
 <h2>Installation</h2>
 <h3>VSCode</h3>
 <ul>
-<li><a href="https://github.com/saem/vscode-nim">vscode-nim</a> has support for <code>nimlangserver</code>. Follow the instructions at:
-https://github.com/saem/vscode-nim#nim-lanugage-server-integration-experimental</li>
+<li><a href="https://github.com/nim-lang/vscode-nim">vscode-nim</a> has support for <code>nimlangserver</code>. Follow the instructions at:
+https://github.com/nim-lang/vscode-nim#using</li>
 </ul>
 <h3>Neovim</h3>
 <ul>
@@ -152,7 +152,7 @@ EOF
 </code></pre>
 <h2>Configuration Options</h2>
 <ul>
-<li><code>nim.projectMapping</code> - configure how <code>nimsuggest</code> should be started. Here it is sample configuration for <code>VScode</code>. We don&apos;t want <code>nimlangserver</code> to start <code>nimsuggest</code> for each file and this configuration will allow configuring pair <code>projectPath</code>/<code>fileRegex</code> so when one of the regexp in the list matches current file
+<li><code>nim.projectMapping</code> - configure how <code>nimsuggest</code> should be started. Here it is sample configuration for <code>VScode</code>. We don&apos;t want <code>nimlangserver</code> to start <code>nimsuggest</code> for each file and this configuration will allow configuring pair <code>projectFile</code>/<code>fileRegex</code> so when one of the regexp in the list matches current file
 then <code>nimls</code> will use <code>root</code> to start <code>nimsuggest</code>. In case there are no matches <code>nimlangserver</code> will try to guess the most suitable project root.</li>
 <li><code>nim.timeout</code> - the request timeout in ms after which <code>nimlangserver</code> will restart the language server. If not specified the default is 2 minutes.</li>
 <li><code>nim.nimsuggestPath</code> - the path to the <code>nimsuggest</code>. The default is <code>&quot;nimsuggest&quot;</code>.</li>
@@ -165,11 +165,11 @@ restart.</li>
 <pre>  <code class="language-json">{
     &quot;nim.projectMapping&quot;: [{
         // open files under tests using one nimsuggest instance started with root = test/all.nim
-        &quot;projectPath&quot;: &quot;tests/all.nim&quot;,
+        &quot;projectFile&quot;: &quot;tests/all.nim&quot;,
         &quot;fileRegex&quot;: &quot;tests/.*\\.nim&quot;
     }, {
         // everything else - use main.nim as root.
-        &quot;projectPath&quot;: &quot;main.nim&quot;,
+        &quot;projectFile&quot;: &quot;main.nim&quot;,
         &quot;fileRegex&quot;: &quot;.*\\.nim&quot;
     }]
 }
@@ -240,7 +240,7 @@ Result: {
 
 </code></pre>
 <h3>VSCode</h3>
-<p>Install the <code>vscode-nim</code> extension from <a href="https://github.com/saem/vscode-nim">here</a></p>
+<p>Install the <code>vscode-nim</code> extension from <a href="https://github.com/nim-lang/vscode-nim">here</a></p>
 <h3>Emacs</h3>
 <ul>
 <li>Install <a href="https://github.com/emacs-lsp/lsp-mode">lsp-mode</a> and <code>nim-mode</code> from melpa and add the following to your
@@ -329,7 +329,7 @@ crashes more gracefully.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-26T01:09:18Z
+        Builded at 2024-01-27T01:07:00Z
         </p>
       </div>
     </div>
