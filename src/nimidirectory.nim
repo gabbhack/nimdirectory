@@ -28,7 +28,7 @@ proc main() =
   let
     packagesJson = getPackagesJson(packagesURL)
     jsContent = readFile(getCurrentDir() / "public" / "js" / "app.js")
-    patchedJs = fmt"const packages = {packagesJson}\n{jsContent}"
+    patchedJs = &"const packages = {packagesJson}\n{jsContent}"
     publicDir = getCurrentDir() / "public" 
     packageDir = getCurrentDir() / "public" / "pkg"
 
