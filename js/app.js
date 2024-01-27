@@ -32414,7 +32414,7 @@ const packages = [
     "web": "https://github.com/amnr/getopty"
   }
 ]
-\nconst options = {
+const options = {
     includeScore: false,
     keys: [
         {
