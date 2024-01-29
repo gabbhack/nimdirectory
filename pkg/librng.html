@@ -96,7 +96,11 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>librng -- RNG for dummies in Nim</h1>
-<p>librng is a 100% native Nim pseudo-random-number-generation library.</p>
+<p>librng is a 100% native Nim pseudo-random-number-generation library, supporting multiple algorithms. <br />
+It has no dependencies other than the Nim standard library (granted, you don&apos;t count <code>nph</code> as a code formatter) <br />
+You can either individually import an algorithm from the <code>librng/algorithms</code> subdirectory, or you can simply import <code>librng</code> and use the
+<code>RNG</code> helper. <br />
+librng supports the C, C++, JS and NimScript* backends.</p>
 <h1>RNG Algorithms supported</h1>
 <table>
 <thead>
@@ -112,6 +116,10 @@
 </tr>
 <tr>
 <td>LCG</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Splitmix64</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -131,26 +139,17 @@
 <td>no</td>
 </tr>
 <tr>
-<td>Xoroshiro256</td>
+<td>Xoroshiro256**</td>
+<td>incomplete</td>
+</tr>
+<tr>
+<td>ChaCha20</td>
 <td>no</td>
 </tr></tbody></table>
-<h1>Why?</h1>
-<p><code>std/random</code> is an &quot;impure&quot; library (Nim&apos;s terminology for libraries that aren&apos;t writing their core purpose in Nim)
-It also does not support multiple PRNG algorithms, just Xoroshiro128+.
-librng is built with adding more algorithms easily in mind. Just add a new type that inherits from <code>Generator</code> and implement a <code>next</code> function, and you&apos;re good to go!</p>
 <h1>Installation</h1>
+<p>You can install librng straight from Nimble.</p>
 <pre>  <code class="language-bash">$ nimble install librng
 </code></pre>
-<h1>How fast is it?</h1>
-<p>librng is generally as fast as std/random, sometimes faster. You can try <code>tests/benchmark.nim</code> for yourself as the speeds are mostly CPU-dependant.
-A small note: librng implements Xoroshiro128 whilst std/random uses Xoroshiro128+ <br />
-All the times are in seconds.
-| Iterations | std/random | librng    | Winner     |
-| ---------- | ---------- | --------- | ---------- |
-| 4          | 2.71       | 0.0001711 | librng     |
-| 64         | 4.02       | 0.0001714 | librng     |
-| 4096       | 0.00067011 | 0.0037226 | std/random |
-| 8192       | 0.00126661 | 0.0060302 | std/random |</p>
 <h1>Examples</h1>
 <p>All examples are in <code>examples/</code></p>
 </document>
@@ -221,7 +220,7 @@ All the times are in seconds.
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-01-28T01:12:31Z
+        Builded at 2024-01-29T01:08:18Z
         </p>
       </div>
     </div>

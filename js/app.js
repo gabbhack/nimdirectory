@@ -32412,6 +32412,20 @@ const packages = [
     "description": "POSIX compliant command line parser",
     "license": "MIT or NCSA",
     "web": "https://github.com/amnr/getopty"
+  },
+  {
+    "name": "awsSigV4",
+    "url": "https://github.com/ThomasTJdev/nim_awsSigV4",
+    "method": "git",
+    "tags": [
+      "aws",
+      "sigv4",
+      "signed",
+      "presigned"
+    ],
+    "description": "Simple package for creating AWS Signature Version 4 (SigV4)",
+    "license": "MIT",
+    "web": "https://github.com/ThomasTJdev/nim_awsSigV4"
   }
 ]
 
