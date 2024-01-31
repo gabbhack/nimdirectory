@@ -32317,6 +32317,23 @@ const packages = [
     "doc": "https://auxym.github.io/bight/bight.html"
   },
   {
+    "name": "nsdl1",
+    "url": "https://github.com/amnr/nsdl1",
+    "method": "git",
+    "tags": [
+      "sdl",
+      "library",
+      "wrapper",
+      "gui",
+      "graphics",
+      "audio",
+      "video"
+    ],
+    "description": "High level SDL 1.2 shared library wrapper",
+    "license": "NCSA",
+    "web": "https://github.com/amnr/nsdl1"
+  },
+  {
     "name": "highlightjs",
     "url": "https://github.com/Ethosa/highlightjs",
     "method": "git",
@@ -32400,6 +32417,42 @@ const packages = [
     "doc": "https://wraith29.github.io/templater/templater.html"
   },
   {
+    "name": "nsdl3",
+    "url": "https://github.com/amnr/nsdl3",
+    "method": "git",
+    "tags": [
+      "sdl",
+      "sdl3",
+      "library",
+      "wrapper",
+      "gui",
+      "graphics",
+      "audio",
+      "video"
+    ],
+    "description": "High level SDL 3.0 shared library wrapper",
+    "license": "NCSA OR MIT OR Zlib",
+    "web": "https://github.com/amnr/nsdl3"
+  },
+  {
+    "name": "nsdl2",
+    "url": "https://github.com/amnr/nsdl2",
+    "method": "git",
+    "tags": [
+      "sdl",
+      "sdl2",
+      "library",
+      "wrapper",
+      "gui",
+      "graphics",
+      "audio",
+      "video"
+    ],
+    "description": "High level SDL 2.0 shared library wrapper",
+    "license": "NCSA OR MIT OR Zlib",
+    "web": "https://github.com/amnr/nsdl2"
+  },
+  {
     "name": "getopty",
     "url": "https://github.com/amnr/getopty",
     "method": "git",
@@ -32426,6 +32479,19 @@ const packages = [
     "description": "Simple package for creating AWS Signature Version 4 (SigV4)",
     "license": "MIT",
     "web": "https://github.com/ThomasTJdev/nim_awsSigV4"
+  },
+  {
+    "name": "vier",
+    "url": "https://git.sr.ht/~xigoi/vier",
+    "method": "git",
+    "tags": [
+      "pixel",
+      "editor",
+      "modal"
+    ],
+    "description": "Vim-Inspired Editor of Rasters",
+    "license": "GPL-3.0-or-later",
+    "web": "https://xigoi.srht.site/vier/"
   }
 ]
 
