@@ -114,11 +114,16 @@
                 <document><img src="docs/puppyBanner.png" style="max-width: 100%;" />
 <h1>Puppy - Fetch resources via HTTP and HTTPS.</h1>
 <p>  <code>nimble install puppy</code></p>
-<p>  <img src="https://github.com/treeform/puppy/workflows/Github%20Actions/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
+<p>  <img src="https://github.com/treeform/puppy/actions/workflows/build.yml/badge.svg" style="max-width: 100%;" alt="Github Actions" /></p>
 <p>  <a href="https://treeform.github.io/puppy">API reference</a></p>
 <h2>About</h2>
-<p>Puppy does not use Nim&apos;s HTTP stack, instead it uses <code>WinHttp</code> API on Windows , <code>AppKit</code> on macOS, and <code>libcurl</code> on Linux. Because Puppy uses system APIs, there is no need to ship extra <code>*.dll</code>s, <code>cacert.pem</code>, or forget to pass the <code>-d:ssl</code> flag. This also has the effect of producing slightly smaller binaires.</p>
-<p>Furthermore, Puppy supports gzip transparently right out of the box.</p>
+<p>Puppy makes HTTP requests easy!</p>
+<p>With Puppy you can make HTTP requests without needing to pass the <code>-d:ssl</code> flag or shipping extra <code>*.dll</code>s and <code>cacerts.pem</code> on Windows. Puppy avoids these gotchas by using system APIs instead of Nim&apos;s HTTP stack.</p>
+<p>Some other highlights of Puppy are:</p>
+<ul>
+<li>Supports gzip&apos;ed responses out of the box</li>
+<li>Make an HTTP request using a one-line <code>proc</code> call</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -136,32 +141,31 @@
 <td>AppKit NSMutableURLRequest</td>
 </tr>
 <tr>
-<td>linux</td>
+<td>Linux</td>
 <td>libcurl easy_perform</td>
 </tr></tbody></table>
 <p>  <em>Curently does not support async</em></p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">puppy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">fetch</span>(<span class="str">&quot;http://neverssl.com/&quot;</span>)</div></div>  </code></pre>
-<p>Will raise <code>PuppyError</code> if the response status code is not <code>200</code>.</p>
+<h2>Easy mode</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">fetch</span>(<span class="str">&quot;http://neverssl.com/&quot;</span>)</div></div>  </code></pre>
+<p>A call to <code>fetch</code> will raise PuppyError if the response status code is not 200.</p>
+<h2>More request types</h2>
+<p>Make a basic GET request:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">puppy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">response</span> <span class="op">=</span> <span class="ide">get</span>(<span class="str">&quot;https://www.google.com/&quot;</span>)</div></div>  </code></pre>
 <p>Need to pass headers?</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">puppy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">fetch</span>(</div></div><div class="line"><div class="line-content">  <span class="str">&quot;http://neverssl.com/&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">headers</span> <span class="op">=</span> <span class="op">@</span>[(<span class="str">&quot;User-Agent&quot;</span>, <span class="str">&quot;Nim 1.0&quot;</span>)]</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
-<p>Need a more complex API?</p>
-<ul>
-<li>verbs: GET, POST, PUT, UPDATE, DELETE..</li>
-<li>headers: User-Agent, Content-Type..</li>
-<li>response code: 200, 404, 500..</li>
-<li>response headers: Content-Type..</li>
-</ul>
-<p>Use these instead.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">puppy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">response</span> <span class="op">=</span> <span class="ide">get</span>(</div></div><div class="line"><div class="line-content">  <span class="str">&quot;http://neverssl.com/&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">headers</span> <span class="op">=</span> <span class="op">@</span>[(<span class="str">&quot;User-Agent&quot;</span>, <span class="str">&quot;Nim 1.0&quot;</span>)]</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>Easy one-line procs for your favorite verbs:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">get</span>(<span class="ide">url</span>, <span class="ide">headers</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">post</span>(<span class="ide">url</span>, <span class="ide">headers</span>, <span class="ide">body</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">put</span>(<span class="ide">url</span>, <span class="ide">headers</span>, <span class="ide">body</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">patch</span>(<span class="ide">url</span>, <span class="ide">headers</span>, <span class="ide">body</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">delete</span>(<span class="ide">url</span>, <span class="ide">headers</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">discard</span> <span class="ide">head</span>(<span class="ide">url</span>, <span class="ide">headers</span>)</div></div>  </code></pre>
+<h2>Working with responses</h2>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">Response</span><span class="op">*</span> <span class="op">=</span> <span class="kwd">ref</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">headers</span><span class="op">*:</span> <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content">  <span class="ide">code</span><span class="op">*:</span> <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">body</span><span class="op">*:</span> <span class="ide">string</span></div></div>  </code></pre>
-<p>Usage examples:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">puppy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">response</span> <span class="op">=</span> <span class="ide">get</span>(<span class="str">&quot;http://www.istrolid.com&quot;</span>, <span class="op">@</span>[(<span class="str">&quot;Auth&quot;</span>, <span class="str">&quot;1&quot;</span>)])</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">code</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">headers</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">body</span><span class="op">.</span><span class="ide">len</span></div></div>  </code></pre>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">puppy</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">body</span> <span class="op">=</span> <span class="str">&quot;{</span>\"<span class="str">json</span>\"<span class="str">:true}&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">response</span> <span class="op">=</span> <span class="ide">post</span>(</div></div><div class="line"><div class="line-content">    <span class="str">&quot;http://api.website.com&quot;</span>,</div></div><div class="line"><div class="line-content">    <span class="op">@</span>[(<span class="str">&quot;Content-Type&quot;</span>, <span class="str">&quot;application/json&quot;</span>)],</div></div><div class="line"><div class="line-content">    <span class="ide">body</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">code</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">headers</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">response</span><span class="op">.</span><span class="ide">body</span><span class="op">.</span><span class="ide">len</span></div></div>  </code></pre>
-<h2>Examples</h2>
+<h2>More examples</h2>
 <p>Using multipart/form-data:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">entries</span>: <span class="ide">seq</span>[<span class="ide">MultipartEntry</span>]</div></div><div class="line"><div class="line-content"><span class="ide">entries</span><span class="op">.</span><span class="ide">add</span> <span class="ide">MultipartEntry</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">name</span>: <span class="str">&quot;input_text&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">fileName</span>: <span class="str">&quot;input.txt&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">contentType</span>: <span class="str">&quot;text/plain&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">payload</span>: <span class="str">&quot;foobar&quot;</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"><span class="ide">entries</span><span class="op">.</span><span class="ide">add</span> <span class="ide">MultipartEntry</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">name</span>: <span class="str">&quot;options&quot;</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">payload</span>: <span class="str">&quot;{</span>\"<span class="str">utf8</span>\"<span class="str">:true}&quot;</span></div></div><div class="line"><div class="line-content">)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> (<span class="ide">contentType</span>, <span class="ide">body</span>) <span class="op">=</span> <span class="ide">encodeMultipart</span>(<span class="ide">entries</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">headers</span>: <span class="ide">HttpHeaders</span></div></div><div class="line"><div class="line-content"><span class="ide">headers</span>[<span class="str">&quot;Content-Type&quot;</span>] <span class="op">=</span> <span class="ide">contentType</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">response</span> <span class="op">=</span> <span class="ide">post</span>(<span class="str">&quot;Your API endpoint here&quot;</span>, <span class="ide">headers</span>, <span class="ide">body</span>)</div></div>  </code></pre>
 <p>See the <a href="https://github.com/treeform/puppy">examples/</a> folder for more examples.</p>
-<h2>Always use Libcurl</h2>
-<p>You can pass <code>-d:puppyLibcurl</code> to force use of <code>libcurl</code> even on windows and macOS. This is useful to debug, if the some reason native OS API does not work. Libcurl is usually installed on macOS but requires a <code>curl.dll</code> on windows.</p>
+<h2>Always use libcurl</h2>
+<p>You can pass <code>-d:puppyLibcurl</code> to force use of <code>libcurl</code> even on Windows and macOS. This is useful if for some reason the native OS API is not working.</p>
+<p>Libcurl is typically ready-to-use on macOS and Linux. On Windows you&apos;ll need to grab the latest libcurl DLL from https://curl.se/windows/, rename it to libcurl.dll, and put it in the same directory as your executable.</p>
 </document>
             
         </div>
@@ -230,7 +234,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-02T01:07:48Z
+        Builded at 2024-02-03T01:06:30Z
         </p>
       </div>
     </div>
