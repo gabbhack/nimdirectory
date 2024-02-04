@@ -538,7 +538,7 @@ parsing will fail and backtrack.</p>
 use case for this is parsing sub-expressions in parentheses.</p>
 </li>
 </ul>
-<p>The heart of a Prett parser in NPeg would look something like this:</p>
+<p>The heart of a Pratt parser in NPeg would look something like this:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">exp</span> <span class="op">&lt;-</span> <span class="ide">prefix</span> <span class="op">*</span> <span class="op">*</span><span class="ide">infix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">parenExp</span> <span class="op">&lt;-</span> ( <span class="str">&quot;(&quot;</span> <span class="op">*</span> <span class="ide">exp</span> <span class="op">*</span> <span class="str">&quot;)&quot;</span> ) <span class="op">^</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">prefix</span> <span class="op">&lt;-</span> <span class="ide">number</span> <span class="op">|</span> <span class="ide">parenExp</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">infix</span> <span class="op">&lt;-</span> {'+','-'}    <span class="op">*</span> <span class="ide">exp</span> <span class="op">^</span>  <span class="num">1</span> <span class="op">|</span></div></div><div class="line"><div class="line-content">         {'*','/'}    <span class="op">*</span> <span class="ide">exp</span> <span class="op">^</span>  <span class="num">2</span> <span class="op">|</span></div></div><div class="line"><div class="line-content">         {'^'}        <span class="op">*</span> <span class="ide">exp</span> <span class="op">^^</span> <span class="num">3</span>:</div></div>  </code></pre>
 <p>More extensive documentation will be added later, for now take a look at the
 example in <code>tests/precedence.nim</code>.</p>
@@ -1243,7 +1243,7 @@ ideas on how to improve this.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-03T01:06:30Z
+        Builded at 2024-02-04T01:12:20Z
         </p>
       </div>
     </div>

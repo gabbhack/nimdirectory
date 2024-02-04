@@ -91,31 +91,7 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>Echon</h1>
-<p>A simple library to generate L-systems for <a href="https://nim-lang.org/">Nim</a>.</p>
-<p>Just call <code>generateSystem(start: string, p: seq[Prule], cycle: int)</code> where <code>start</code> is your intial word, <code>p</code> is a seq of replacement rules like <code>(sym: &apos;A&apos;, word: &quot;Hello World!&quot;)</code> and <code>cycle</code> is the number of recursions before the function returns its result.</p>
-<p>Be careful:</p>
-<pre>  <code>generateSystem(&quot;F--F--F&quot;, @[(sym: &apos;F&apos;, word: &quot;F+F--F+F&quot;)], cycle)
-</code></pre>
-<p>with a cycle &gt; 15 or so will take a really long time to generate. I&apos;m going to optimize this furher, especially with the lazy evaluation implementaion, but for now you have to accept the somewhat slow implementation. Sorry. :( (Update: I think this was a nice joke. lol)</p>
-<p>For example you get something like this:</p>
-<pre>  <code>  check generateSystem(&quot;A&quot;, @[(sym: &apos;A&apos;, word: &quot;ABCA&quot;)], 0) == &quot;ABCA&quot;
-  check generateSystem(&quot;A&quot;, @[(sym: &apos;A&apos;, word: &quot;AB&quot;), (sym: &apos;B&apos;, word: &quot;CC&quot;)], 0) == &quot;AB&quot;
-  check generateSystem(&quot;C&quot;, @[(sym: &apos;A&apos;, word: &quot;AB&quot;), (sym: &apos;B&apos;, word: &quot;CC&quot;)], 0) == &quot;C&quot;
-  check generateSystem(&quot;AA&quot;, @[(sym: &apos;A&apos;, word: &quot;AB&quot;), (sym: &apos;B&apos;, word: &quot;CC&quot;)], 0) == &quot;ABAB&quot;
-  check generateSystem(&quot;AA&quot;, @[(sym: &apos;A&apos;, word: &quot;AB&quot;), (sym: &apos;B&apos;, word: &quot;CC&quot;)], 1) == &quot;ABCCABCC&quot;
-  check generateSystem(&quot;ABC&quot;, @[(sym: &apos;A&apos;, word: &quot;AB&quot;), (sym: &apos;B&apos;, word: &quot;CC&quot;)], 1) == &quot;ABCCCCC&quot;
-  check generateSystem(&quot;A&quot;, @[(sym: &apos;A&apos;, word: &quot;Hello World!&quot;)], 0) == &quot;Hello World&quot;
-  check generateSystem(&quot;F--F--F&quot;, @[(sym: &apos;F&apos;, word: &quot;F+F--F+F&quot;)], 0) == &quot;F+F--F+F--F+F--F+F--F+F--F+F&quot;
-</code></pre>
-<p>The last one describes a version of the <a href="https://en.wikipedia.org/wiki/L-system#Example_4:_Koch_curve">Koch curve</a>.</p>
-<p>If something is unclear, please let me know.</p>
-<p>Here is a visual test:</p>
-<p>  <a href="https://www.youtube.com/watch?v=XjHvvnXVOWU">Sierpinski Triangle Youtube</a></p>
-<p>  <a href="https://www.youtube.com/watch?v=pJ6OyyDV1kc">Dragon Curve Youtube</a></p>
-<h2>Syntax</h2>
-<p>There are special characters for systems if you want to use the <code>generatePoints</code> function. All upper case letters from <code>A-Z</code> are generating a point 1 step further into the current direction. All lower case letters <code>a-z</code> do not generate a point and are used to control the l-system growth. The <code>+</code> and <code>-</code> sign are used to add or subtract the given angle and <code>[</code> and <code>]</code> are there to save and restore positions. <code>[</code> saves the current position and <code>]</code> restores the corresponding position.</p>
-</document>
+                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -183,7 +159,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-03T01:06:30Z
+        Builded at 2024-02-04T01:12:20Z
         </p>
       </div>
     </div>
