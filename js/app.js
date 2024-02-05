@@ -32505,6 +32505,19 @@ const packages = [
     "description": "Instagram internal web api implementation",
     "license": "MIT",
     "web": "https://github.com/thisago/instagram"
+  },
+  {
+    "name": "traitor",
+    "url": "https://github.com/beef331/traitor",
+    "method": "git",
+    "tags": [
+      "trait",
+      "interfaces",
+      "vtable"
+    ],
+    "description": "Trait-like package made without insight",
+    "license": "MIT",
+    "web": "https://github.com/beef331/traitor"
   }
 ]
 
