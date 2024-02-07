@@ -1,5 +1,26 @@
 const packages = [
   {
+    "name": "mutf8",
+    "url": "https://github.com/Nimberite-Development/ModernNet",
+    "method": "git",
+    "tags": [
+      "encoding",
+      "decoding",
+      "encode",
+      "decode",
+      "chartset",
+      "mutf8",
+      "mutf-8",
+      "utf8",
+      "utf-8",
+      "unicode"
+    ],
+    "description": "An implementation of a Modified UTF-8 encoder and decoder in Nim!",
+    "license": "Apache-2.0",
+    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/MUTF-8",
+    "doc": "https://yu-vitaqua-fer-chronos.github.io/MUTF-8/"
+  },
+  {
     "name": "dekao",
     "url": "https://github.com/ajusa/dekao",
     "method": "git",
@@ -32507,6 +32528,18 @@ const packages = [
     "web": "https://github.com/thisago/instagram"
   },
   {
+    "name": "dither",
+    "url": "https://github.com/Nycto/dither-nim",
+    "method": "git",
+    "tags": [
+      "dither",
+      "graphics"
+    ],
+    "description": "Dithering algorithms in Nim",
+    "license": "Apache-2.0",
+    "web": "https://github.com/Nycto/dither-nim"
+  },
+  {
     "name": "traitor",
     "url": "https://github.com/beef331/traitor",
     "method": "git",
@@ -32518,6 +32551,21 @@ const packages = [
     "description": "Trait-like package made without insight",
     "license": "MIT",
     "web": "https://github.com/beef331/traitor"
+  },
+  {
+    "name": "bttrwttrin",
+    "url": "https://github.com/nirokay/bttrwttrin",
+    "method": "git",
+    "tags": [
+      "weather",
+      "weather-api",
+      "wttrin",
+      "library"
+    ],
+    "description": "Nim library to fetch weather using wttr.in",
+    "license": "GPL-3.0-or-later",
+    "web": "https://github.com/nirokay/bttrwttrin",
+    "doc": "https://nirokay.github.io/nim-docs/bttrwttrin/bttrwttrin.html"
   }
 ]
 

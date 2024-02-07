@@ -146,12 +146,12 @@
 <h3>Static binary</h3>
 <pre>  <code class="language-bash">wget https://github.com/inv2004/ttop/releases/latest/download/ttop
 chmod +x ttop
-mv ttop ~/bin/          # add into PATH if necessary
+mv ttop ~/.local/bin/   # add into PATH if necessary
 ttop --on               # Optional: enable data collector in user&apos;s systemd.timers or crontab
 </code></pre>
 <h3>Uninstall</h3>
 <pre>  <code class="language-bash">ttop --off
-rm ~/bin/ttop
+rm ~/.local/bin/ttop
 </code></pre>
 <h3>Build from source</h3>
 <pre>  <code class="language-bash">curl https://nim-lang.org/choosenim/init.sh -sSf | sh    # Nim setup from nim-lang.org
@@ -170,7 +170,7 @@ nimble -d:release build
 <p><code>~/.config/ttop/ttop.toml</code> or <code>/etc/ttop.toml</code></p>
 <h4>My own server&apos;s config</h4>
 <pre>  <code class="language-toml">[[trigger]]
-cmd = &quot;$HOME/bin/tel.sh&quot;
+cmd = &quot;$HOME/.local/bin/tel.sh&quot;
 </code></pre>
 <h4>Config with all parameters described</h4>
 <ul>
@@ -286,7 +286,7 @@ echo &quot;$TEXT&quot; | curl --ssl-reqd \
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-06T01:07:37Z
+        Builded at 2024-02-07T01:05:49Z
         </p>
       </div>
     </div>

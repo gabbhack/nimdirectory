@@ -83,7 +83,19 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><p><strong>HTML (Un)escape</strong> is a port of Python&apos;s <a href="https://docs.python.org/3.10/library/html.html#html.escape">html.escape</a> and <a href="https://docs.python.org/3.10/library/html.html#html.unescape">html.unescape</a> to Nim.</p>
+<h4>Installation</h4>
+<p>Install using <code>nimble</code>:</p>
+<pre>  <code class="language-bash">nimble install --accept &apos;htmlunescape&apos;
+</code></pre>
+<h4>Usage:</h4>
+<p>Escaping sequences:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">htmlunescape</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">escape</span>(<span class="ide">s</span> <span class="op">=</span> <span class="str">&quot;&apos;&lt;script&gt;</span>\"<span class="str">&amp;foo;</span>\"<span class="str">&lt;/script&gt;&apos;&quot;</span>) <span class="op">==</span> <span class="str">&quot;&amp;#x27;&amp;lt;script&amp;gt;&amp;quot;&amp;amp;foo;&amp;quot;&amp;lt;/script&amp;gt;&amp;#x27;&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">escape</span>(<span class="ide">s</span> <span class="op">=</span> <span class="str">&quot;&apos;&lt;script&gt;</span>\"<span class="str">&amp;foo;</span>\"<span class="str">&lt;/script&gt;&apos;&quot;</span>, <span class="ide">quote</span> <span class="op">=</span> <span class="ide">false</span>) <span class="op">==</span> <span class="str">&quot;&apos;&amp;lt;script&amp;gt;</span>\"<span class="str">&amp;amp;foo;</span>\"<span class="str">&amp;lt;/script&amp;gt;&apos;&quot;</span></div></div>  </code></pre>
+<p>Unescaping sequences:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">htmlunescape</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">unescape</span>(<span class="ide">s</span> <span class="op">=</span> <span class="str">&quot;&amp;quot;&amp;quot;&amp;quot;&quot;</span>) <span class="op">==</span> <span class="str">&quot;</span>\"\"\"<span class="str">&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">unescape</span>(<span class="ide">s</span> <span class="op">=</span> <span class="str">&quot;&amp;amp;&amp;amp;&amp;amp;&quot;</span>) <span class="op">==</span> <span class="str">&quot;&amp;&amp;&amp;&quot;</span></div></div>  </code></pre>
+<h4>Contributing</h4>
+<p>If you have discovered a bug in this library and know how to fix it, fork this repository and open a Pull Request.</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -151,7 +163,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-06T01:07:37Z
+        Builded at 2024-02-07T01:05:49Z
         </p>
       </div>
     </div>
