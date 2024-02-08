@@ -1,5 +1,70 @@
 const packages = [
   {
+    "name": "nimplex",
+    "url": "https://github.com/amkrajewski/nimplex",
+    "method": "git",
+    "tags": [
+      "data",
+      "simplex",
+      "math",
+      "ai",
+      "ml",
+      "materials",
+      "science"
+    ],
+    "description": "NIM simPLEX: A concise scientific Nim library (with CLI and Python binding) providing samplings, uniform grids, and traversal graphs in compositional (simplex) spaces.",
+    "license": "MIT",
+    "web": "https://github.com/amkrajewski/nimplex",
+    "doc": "https://nimplex.phaseslab.org"
+  },
+  {
+    "name": "tagforge",
+    "url": "https://github.com/Nimberite-Development/TagForge-Nim",
+    "method": "git",
+    "tags": [
+      "minecraft",
+      "format",
+      "parse",
+      "dump",
+      "data",
+      "nbt",
+      "mc"
+    ],
+    "description": "A library made for the serialisation and deserialisation of MC NBT!",
+    "license": "Apache-2.0",
+    "web": "https://github.com/Nimberite-Development/TagForge-Nim",
+    "doc": "https://nimberite-development.github.io/TagForge-Nim/"
+  },
+  {
+    "name": "curlies",
+    "url": "https://github.com/svenrdz/curlies",
+    "method": "git",
+    "tags": [
+      "object construction",
+      "field init shorthand",
+      "update syntax",
+      "rust update syntax",
+      "fungus"
+    ],
+    "description": "A macro for object construction using {} (curlies).",
+    "license": "MIT",
+    "web": "https://github.com/svenrdz/curlies"
+  },
+  {
+    "name": "littlefs",
+    "url": "https://github.com/Graveflo/nim-littlefs.git",
+    "method": "git",
+    "tags": [
+      "littlefs",
+      "embeded",
+      "filesystem",
+      "fuse"
+    ],
+    "description": "API and bindings for littlefs. Includes a fuse implementation.",
+    "license": "BSD-3-Clause-1",
+    "web": "https://github.com/Graveflo/nim-littlefs"
+  },
+  {
     "name": "mutf8",
     "url": "https://github.com/Nimberite-Development/ModernNet",
     "method": "git",
@@ -32566,6 +32631,19 @@ const packages = [
     "license": "GPL-3.0-or-later",
     "web": "https://github.com/nirokay/bttrwttrin",
     "doc": "https://nirokay.github.io/nim-docs/bttrwttrin/bttrwttrin.html"
+  },
+  {
+    "name": "serde",
+    "url": "https://github.com/codex-storage/nim-json",
+    "method": "git",
+    "tags": [
+      "library",
+      "serialization",
+      "json"
+    ],
+    "description": "Easy-to-use serialization capabilities (currently json only), with a drop-in replacement for std/json.",
+    "license": "MIT",
+    "web": "https://github.com/codex-storage/nim-json"
   }
 ]
 

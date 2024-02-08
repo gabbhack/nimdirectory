@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimplex</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">simplex</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">math</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ai</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ml</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">materials</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">science</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">NIM simPLEX: A concise scientific Nim library (with CLI and Python binding) providing samplings, uniform grids, and traversal graphs in compositional (simplex) spaces.</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimplex" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>nimplex</h1>
+<p><a href="https://nimplex.phaseslab.org">  <img src="https://img.shields.io/badge/API-Documentation-e?logo=bookstack&amp;logoColor=white&amp;link=https%3A%2F%2Famkrajewski.github.io%2Fnimplex%2F" style="max-width: 100%;" alt="Static Badge" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" /></a></p>
+<p><a href="https://github.com/amkrajewski/nimplex/actions/workflows/testingOnPush_Linux.yaml">  <img src="https://github.com/amkrajewski/nimplex/actions/workflows/testingOnPush_Linux.yaml/badge.svg" style="max-width: 100%;" alt="(Linux) Grid, Graph, and CLI Tests" /></a>
+<a href="https://github.com/amkrajewski/nimplex/actions/workflows/testingOnPush_Apple.yaml">  <img src="https://github.com/amkrajewski/nimplex/actions/workflows/testingOnPush_Apple.yaml/badge.svg" style="max-width: 100%;" alt="(MaxOS) Grid, Graph, and CLI Tests" /></a>
+<a href="https://github.com/amkrajewski/nimplex/actions/workflows/testingOnPush_Windows.yaml">  <img src="https://github.com/amkrajewski/nimplex/actions/workflows/testingOnPush_Windows.yaml/badge.svg" style="max-width: 100%;" alt="(Windows) Grid, Graph, and CLI Tests" /></a></p>
+<p><strong>NIM</strong> sim<strong>PLEX</strong>: A concise high-performance scientific Nim library (with CLI and Python binding) providing samplings, uniform grids, traversal graphs, and more in compositional (simplex) spaces, where traditional methods designed for euclidean spaces fail or otherwise become impractical.</p>
+<p>Such spaces are considered when an entity can be split into a set of distinct components (a composition), and they play a critical role in many disciplines of science, engineering, and mathematics. For instance, in materials science, chemical composition refers to the way a material (or, more generally, matter) is split into distinct components, such as chemical elements, based on considerations such as fraction of atoms, occupied volume, or contributed mass. And in economics, portfolio composition may refer to how finite capital is split across assets, such as cash, equity instruments, real estate, and commodities, based on their monetary value.</p>
+<h2>Quick Start</h2>
+<p>If you have a GitHub account, you can get started with nimplex very quickly by just clicking the button below to launch a CodeSpaces environment with everything installed (per instructions in <a href="#reproducible-installation">Reproducible Installation</a> section) and ready to go! From there, you can either use the CLI tool (as explained in <a href="#cli">CLI</a> section) or import the library in Python (as explained in <a href="#usage-in-python">Usage in Python</a> section) and start using it right away. Of course, it also comes with a full Nim compiler and VSCode IDE extensions for Nim, so you can efortlessely modify/extend the source code and re-compile it if you wish.</p>
+<p>  <a href="https://codespaces.new/amkrajewski/nimplex?quickstart=1">    <img src="https://github.com/codespaces/badge.svg" style="max-width: 100%;" alt="Open in GitHub Codespaces" />  </a></p>
+<h2>Installation</h2>
+<p>There are several <strong>easy</strong> ways to quickly get <em>nimplex</em> up and running on your system. The choice depends primarily on your preffered way of interacting with the library (CLI, Nim, or Python) and your system configuration.</p>
+<h3>Pre-Compiled Binaries (quick but not recommended)</h3>
+<p>If you happen to be on one of the common systems (for which we auto-compile the binaries) and you do not need to modify anything in the source code, you can simply download the latest release from the <a href="https://github.com/amkrajewski/nimplex">nimplex GitHub repository</a>
+and run the executable (<em>nimplex</em> / <em>nimplex.exe</em>) or Python library (<em>nimplex.so</em> / <em>nimplex.pyd</em>) directly just by placing it in your working directory and using it as:</p>
+<ol>
+<li>An <strong>interactive command line interface (CLI) tool</strong>, which will guide you through how to use it if you run it without any arguments like so (on Linux/MacOS):
+<pre>  <code class="language-cmd">./nimplex   
+</code></pre>
+or with a concise configuration defining the task type and parameters (explained later in <a href="#usage-in-nim">Usage in Nim</a>):
+<pre>  <code class="language-cmd">./nimplex -c IFP 3 10
+</code></pre>
+</li>
+<li>An <strong>compiled Python library</strong>, which you can import and use in your Python code like so:
+<pre>  <code class="language-python">import nimplex
+</code></pre>
+and immediately use the functions provided by the library, as described in <a href="#usage-in-python">Usage in Python</a>:
+<pre>  <code class="language-python">nimplex.simplex_internal_grid_fractional(dim=3, ndiv=10)
+</code></pre>
+</li>
+</ol>
+<h3>Reproducible Installation (recommended)</h3>
+<p>If the above doesn&apos;t work for you, or you want to modify the source code, you can compile the library yourself fairly easily in a couple minutes.
+The only requirement is to have <a href="https://nim-lang.org/">Nim</a> installed on your system
+(<a href="https://nim-lang.org/install.html">Installation Instructions</a>) which can be done with a single command on most Unix (Linux/MacOS) systems:</p>
+<ul>
+<li>with your distribution&apos;s package manager, for instance on Ubuntu/Debian <strong>Linux</strong>:
+<pre>  <code class="language-cmd">apt-get install nim
+</code></pre>
+</li>
+<li>on <strong>MacOS</strong>, assuming you have <a href="https://brew.sh/">Homebrew</a> installed:
+<pre>  <code class="language-cmd">brew install nim
+</code></pre>
+</li>
+<li>using <a href="https://docs.conda.io/en/latest/">  <strong>conda</strong></a> cross-platform package manager:
+<pre>  <code class="language-cmd">conda install -c conda-forge nim
+</code></pre>
+</li>
+</ul>
+<p>Then, you can use the boundeled <a href="https://github.com/nim-lang/nimble">Nimble</a> tool (pip-like package manager for Nim) to install two top-level dependencies:
+<a href="https://github.com/mratsim/Arraymancer">arraymancer</a>, which is a powerful N-dimensional array library, and <a href="https://github.com/yglukhov/nimpy">nimpy</a> which
+helps with the Python bindings. You can do it with a single command:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">nimble</span> install  -y arraymancer nimpy</div></div>  </code></pre>
+<p>Finally, you can clone the repository and compile the library with:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">git</span> clone <span class="ide">https://github.com/amkrajewski/nimplex</span></div></div><div class="line"><div class="line-content"><span class="kwd">cd</span> nimplex</div></div><div class="line"><div class="line-content"><span class="kwd">nim</span> c -r -d:release <span class="ide">nimplex.nim</span> -benchmark</div></div>  </code></pre>
+<p>which will compile the library and run a few benchmarks to make sure everything runs smoothly. You should then see a compiled binary file <code>nimplex</code> in the current directory which exposes the CLI tool.</p>
+<p>If you want to use the <strong>Python bindings</strong>, you can compile the library with slightly different flags (depending on your system configuration) like so for Linux/MacOS:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">nim</span> c --d:release --threads:on --app:lib <span class="ide">--out:nimplex.so</span> nimplex</div></div>  </code></pre>
+<p>and you should see a compiled library file <code>nimplex.so</code> in the current directory which can be immediately imported and used in Python.</p>
+<h2>Capabilities</h2>
+<p><em>  <strong>Note:</strong></em> Full technical discussion of methods and motivations is provided in the manuscript. The sections below are meant to provide a concise overview of the library&apos;s capabilities.</p>
+<p>The library provides a growing number of methods specific to compositional (simplex) spaces:</p>
+<ol>
+<li>
+<p><strong>Monte Carlo sampling</strong> is the simplest method conceptually, where points are rendomly sampled from a simplex. In low dimensional cases, this can be accomplished by sampling from a uniform distribution in (d-1)-Cartesian space and then rejecting points outside the simplex (left panel below). However, in this approach, the inefficiency growth is <strong>factorial</strong> with the dimensionality of the simplex space. Instead, some try to sample from a uniform distribution in (d)-Cartesian space and normalize the points to sum to 1, however, this leads to over-sampling in the center of each simplex dimension (middle panel below).</p>
+<p>One can, however, fairly easily sample from a special case of Dirichlet distribution, as explained in the manuscript, which leads to uniform sampling in the simplex space (right panel below). <strong>Nimplex can sample around 10M points per second in 9-dimensional space</strong> on a modern CPU.</p>
+<img src="assets/Fig1.png" style="max-width: 100%;" width="800" alt="Monte Carlo Sampling" />
+</li>
+<li>
+<p><strong>Simplex / Compositional Grids</strong> are a more structured approach to sampling, where all possible compositions quantized to a given resolution, like 1% for 100 divisions per dimension, are generated. This is useful for example when one wants to map a function over the simplex space. In total <code>N_S(d, n_d) = \binom{d-1+n_d}{d-1} = \binom{d-1+n_d}{n_d}</code> are generated, where <code>d</code> is the dimensionality of the simplex space and <code>n_d</code> is the number of divisions per dimension. Nimplex uses a modified version of NEXCOM algorithm to do that procedurally (see manuscript for details) and can generate around <strong>5M points per second in 9-dimensional space</strong> on a modern CPU. A choice is given between generating the gird as a list of <strong>integer</strong> numbers of quantum units (left panel below) or as a list of <strong>fractional positions</strong> (right panel below).
+<img src="assets/Fig2.png" style="max-width: 100%;" width="800" alt="Integer and Fractional Simplex Grids in Ternary Space" /></p>
+</li>
+<li>
+<p><strong>Internal Simplex / Compositional Grids</strong> are a modification of the above method, where only points inside the simplex, i.e. all components are present, are generated. This is useful in cases where, one cannot discard any component entirely, for instance, because manufacturing setup has minimum feed rate (leakage). Nimplex introduces a new algorithm to generate these points procedurally (see manuscript for details) based on further modification of NEXCOM algorithm.</p>
+<p>In total <code>N_I(d, n_d) = \binom{n_d-1}{d-1}</code> are generated, critically without any performance penalty compared to the full grid, which can reach orders of magnitude when <code>d</code> approaches <code>n_d</code>. Similar to the full grid, a choice is given between generating the gird as a list of <strong>integer</strong> numbers of quantum units or as a list of <strong>fractional positions</strong>.</p>
+</li>
+<li>
+<p><strong>Simplex / Compositional Graphs</strong> generation is <em>  <strong>the most critical capability</strong></em>, first introduced in the nimplex manuscript. They are created by using combinatorics and disocvered patterns to assign edges between all neighboring nodes during the simplex grid (graph nodes) generation process. Effectively, a traversal graph is generated, spanning all possible compositions (given a resolution) creating an extremely efficient representation of the problem space, which allows deployment of numerous graph algorithms.</p>
+<img src="assets/Fig3.png" style="max-width: 100%;" width="800" alt="Simplex Graph for Ternary Space" />
+<p>Critically, unlike the O(N^2) distance-based graph generation methods, this approach <strong>scales linearly</strong> with the resulting number of nodes. Because of that, it is extremely efficient even in high-dimensional spaces, where the number of edges goes into trillions and beyond. Nimplex can <strong>both generate and find neighbors</strong> for around <strong>2M points per second in 9-dimensional space</strong> on a modern CPU.</p>
+<p>As explored in the manuscript, such representations, even of different dimensions, can can then be used to efficeintly encode complex problem spaces where some prior assumptions and knowledge are available. In the Example #2 from manuscript, inspired by problem of joining titanium with stainless steel in <a href="https://doi.org/10.1016/j.addma.2022.102649">10.1016/j.addma.2022.102649</a> using 3-component spaces, one encode 3 separate paths where some components are shared in predetermined fashion. This to efficiently encode the problem space in form of a structure graph (left panel below and then use it to construct a single <strong>simplex graph complex</strong> (right panel below) as a single consistent structure.</p>
+<img src="assets/Fig4.png" style="max-width: 100%;" width="800" alt="Simplex Graph Complex" />
+</li>
+</ol>
+<p>Several other methods are in testing and will likely be added in the future releases. If you have any suggestions, please open an issue on GitHub as we are always soliciting new ideas and use cases based on real-world problems in the
+scientific computing community.</p>
+<h2>Usage in Nim</h2>
+<p>Usage within Nim is fairly straightforward. You can install it using Nimble as explained earlier, or install it directly from GitHub, making sure to use the slightly modified <code>@#nimble</code> branch:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">nimble</span> install -y <span class="ide">https://github.com/amkrajewski/nimplex@#nimble</span></div></div>  </code></pre>
+<p>or, if you wish to modify the source code, you can simply download the core file <code>nimplex.nim</code> and place it in your own code, as long as you have the dependencies installed, since it is standalone.
+<strong>Then simply follow the API documentation below.</strong></p>
+<h2>Usage in Python</h2>
+<p>To use the library in Python, you can interact with it just like any other Python library. All input/output types are native Python types, so no additional conversion is necessary. Once you have the library installed and imported,
+<strong>simply follow the API documentation below, with an exception that you need to add <code>_py</code> to the function names.</strong> If you happen to forget adding <code>_py</code>, the Python interpreter will throw an error with a suggestion to do so.</p>
+<h2>CLI</h2>
+<h3>Interactive</h3>
+<p>Using Nimplex through the CLI relies on the same core library, but provides a simple interface for users who do not want to write any code. It can be used interactively, where the user is guided through the configuration process by
+just running the executable without any arguments:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">./nimplex</span></div></div>  </code></pre>
+<h3>Configured</h3>
+<p>Or it can be run with a concise configuration defining the task type and parameters. The configuration is a 3-letter string and 2-3 additional parameters, as explained below.</p>
+<ul>
+<li><strong>3-letter configuration</strong>:
+<ol>
+<li>Grid type or uniform random sampling:
+<ul>
+<li><strong>F</strong>: Full grid (including the simplex boundary)</li>
+<li><strong>I</strong>: Internal grid (only points inside the simplex)</li>
+<li><strong>R</strong>: Random/Monte Carlo uniform sampling over simplex.</li>
+<li><strong>G</strong>: Graph (list of grid nodes and list of their neighbors)</li>
+</ul>
+</li>
+<li>Fractional or Integer positions:
+<ul>
+<li><strong>F</strong>: Fractional grid/graph (points are normalized to fractions of 1)</li>
+<li><strong>I</strong>: Integer grid/graph (points are integers)</li>
+</ul>
+</li>
+<li>Print full result, its shape, or persist in a file:
+<ul>
+<li><strong>P</strong>: Print (presents full result as a table)</li>
+<li><strong>S</strong>: Shape (only the shape / size information)</li>
+<li><strong>N</strong>: Persist to NumPy array file (&quot;nimplex_<configflags>.npy&quot; or
+optionally a custom path as an additonal argument)</configflags><strong>Simplex Dimensions / N of Components</strong>: An integer number of components in the simplex space.</li>
+<li><strong>N Divisions per Dimension / N of Samples</strong>: An integer number of either:
+<ol>
+<li>Divisions per each simplex dimension for grid or graph tasks (F/I/G__)</li>
+<li>Number of samples for random sampling tasks (R__)</li>
+</ol>
+</li>
+<li><strong>(optional) NumPy Array Output Filename</strong>: A custom path to the output NumPy array file (only for __N tasks).</li>
+</ul>
+<p>For instance, to generate a 3-dimensional internal fractional grid with 10 divisions per dimension and persist it to a NumPy array file, you can run:</p>
+<pre>  <code class="language-cmd">./nimplex -c IFN 3 10
+</code></pre>
+<p>and the output will be saved to <code>nimplex_IF_3_10.npy</code> in the current directory. If you want to save it to a different path, you can provide it as an additional argument:</p>
+<pre>  <code class="language-cmd">./nimplex -c IFN 3 10 path/to/outfile.npy
+</code></pre>
+<p>Or if you want to print the full result to the console, allowing you to pipe it to virtually any other language or tool as plain text, you can run:</p>
+<pre>  <code class="language-cmd">./nimplex -c IFP 3 10
+</code></pre>
+<h3>Auxiliary Flags</h3>
+<p>You can also utilize the following auxiliary flags:</p>
+<ul>
+<li><code>--help</code> or <code>-h</code> --&gt; Show help.</li>
+<li><code>--benchmark</code> or <code>-b</code> --&gt; Run a set of tasks to benchmark performnace (<code>simplex_grid(9, 12)</code>, <code>simplex_internal_grid(9, 12)</code>, <code>simplex_sampling_mc(9, 1_000_000)</code>, <code>simplex_graph(9, 12)</code>) and
+compare performance across implementations (<code>simplex_graph(3, 1000)</code> vs <code>simplex_graph_3C(1000)</code>).</li>
+</ul>
+</li></ol></li></ul></document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/amkrajewski/nimplex">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2024-02-08T01:07:05Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
