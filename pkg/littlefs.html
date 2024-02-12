@@ -93,11 +93,12 @@
             
                 <document><h1>littlefs API + bindings for Nim</h1>
 <p>This is still experimental since I have not tested it or used it at all.</p>
-<p>Clone the <a href="https://github.com/littlefs-project/littlefs">littlefs</a> repository and observe their copyright and distribution license.
-Copyright (c) 2022, The littlefs authors.
+<p>Observe copyright and distribution license of <a href="https://github.com/littlefs-project/littlefs">littlefs</a>
+from their GitHub repository:</p>
+<p>Copyright (c) 2022, The littlefs authors.
 Copyright (c) 2017, Arm Limited. All rights reserved.</p>
 <h2>Boot count example</h2>
-<p>This example is translated from the littlefs github <a href="https://github.com/littlefs-project/littlefs/blob/master/README.md">README</a></p>
+<p>This example is translated from the littlefs GitHub <a href="https://github.com/littlefs-project/littlefs/blob/master/README.md">README</a></p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">littlefs</span><span class="op">/</span><span class="ide">all</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">littlefs</span><span class="op">/</span><span class="ide">configs</span><span class="op">/</span><span class="ide">file_config</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">os</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">const</span> <span class="ide">fsPath</span> <span class="op">=</span> <span class="str">&quot;testfs.bin&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">f</span> <span class="op">=</span> <span class="ide">open</span>(<span class="ide">fsPath</span>, <span class="kwd">if</span> <span class="ide">fileExists</span>(<span class="ide">fsPath</span>): <span class="ide">fmReadWriteExisting</span> <span class="kwd">else</span>: <span class="ide">fmReadWrite</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">lfs</span> <span class="op">=</span> <span class="ide">LittleFs</span>(<span class="ide">cfg</span>: <span class="ide">makeFileLfsConfig</span>(<span class="ide">f</span>, <span class="ide">block_count</span><span class="op">=</span><span class="num">1024</span>))</div></div><div class="line"><div class="line-content"><span class="ide">lfs</span><span class="op">.</span><span class="ide">boot</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">file</span> <span class="op">=</span> <span class="ide">lfs</span><span class="op">.</span><span class="ide">open</span>(<span class="str">&quot;boot_count&quot;</span>, <span class="ide">fmReadWrite</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">boot_count</span> <span class="op">=</span> <span class="ide">read</span>[<span class="ide">int</span>](<span class="ide">file</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="str">&quot;boot count: &quot;</span>, <span class="ide">boot_count</span></div></div><div class="line"><div class="line-content"><span class="ide">inc</span> <span class="ide">boot_count</span></div></div><div class="line"><div class="line-content"><span class="ide">file</span><span class="op">.</span><span class="ide">rewind</span>()</div></div><div class="line"><div class="line-content"><span class="ide">file</span><span class="op">.</span><span class="ide">write</span>(<span class="ide">boot_count</span>)</div></div>  </code></pre>
 <h2>Project directory</h2>
 <pre>  <code>examples
@@ -114,7 +115,7 @@ buildsys.nims               Build system will go here if needed
 <p>This library comes with a Nim implementation of lfs_util.h. To use it define <code>lfsUseNimUtils</code>. The build tasks
 and the api both observe this definition.</p>
 <p>The following will clone littlefs and build it. This task will build two versions of the littlefs C library,
-one of which is compiled expecting the nim implemnation of <code>lfs_util.h</code>. Library files will be dropped at
+one of which is compiled expecting the Nim implementation of <code>lfs_util.h</code>. Library files will be dropped at
 <code>build/liblfs.a</code> and <code>build/liblfsNim.a</code> respectively:</p>
 <p>  <code>nim buildLfsLibs buildsys.nims</code></p>
 <p>To build the littlefs C source with asserts, errors and warnings disabled:</p>
@@ -132,7 +133,7 @@ compile with this option enabled</p>
 <ul>
 <li>
 <p>The destructors are designed to try and clean up before destroying the <code>LittleFs</code> object, but this
-is not supported by the littlefs C library as far as I&apos;m aware. I did my best, but I can&apos;t gaurentee it will work.</p>
+is not supported by the littlefs C library as far as I&apos;m aware. I did my best, but I can&apos;t guarantee it will work.</p>
 </li>
 <li>
 <p>File objects and Dir objects are heap allocated <code>ref</code>s. This is because they must maintain a constant memory address for
@@ -224,7 +225,7 @@ littlefs to function properly. It&apos;s easy enough to handle them on the stack
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-11T01:12:17Z
+        Builded at 2024-02-12T01:07:52Z
         </p>
       </div>
     </div>
