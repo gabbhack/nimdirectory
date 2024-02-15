@@ -87,9 +87,13 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><p>Simply localize your apps</p>
+                <document><h1>Localize</h1>
+<img src="http://levovix.ru:8000/docs/localize/banner.png" style="max-width: 100%;" width="100%" alt="sigui" />
+<p align="center">
+  Localize your applications at compile-time
+</p>
 <p>app.nim</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">localize</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">requireLocalesToBeTranslated</span> (<span class="str">&quot;ru&quot;</span>, <span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> tr"Hello, world"  <span class="com"># &quot;Hello, world&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">globalLocale</span>[<span class="num">0</span>] <span class="op">=</span> (<span class="str">&quot;ru&quot;</span>, <span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> tr"Hello, world"  <span class="com"># &quot;Привет, мир&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">updateTranslations</span>()  <span class="com"># traslations is readed and updated when compiling</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">localize</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">requireLocalesToBeTranslated</span> (<span class="str">&quot;ru&quot;</span>, <span class="str">&quot;&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> tr"Hello, world"  <span class="com"># &quot;Hello, world&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">globalLocale</span> <span class="op">=</span> <span class="ide">locale</span> <span class="str">&quot;ru&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> tr"Hello, world"  <span class="com"># &quot;Привет, мир&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">updateTranslations</span>()  <span class="com"># traslations is readed and updated when compiling</span></div></div>  </code></pre>
 <p>translations/ru.json</p>
 <pre>  <code class="language-json">{
   &quot;app.nim&quot;: {
@@ -207,7 +211,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-14T01:08:04Z
+        Builded at 2024-02-15T01:07:53Z
         </p>
       </div>
     </div>
