@@ -112,7 +112,11 @@
 <ul>
 <li>  <a href="#background">Background</a></li>
 <li>  <a href="#install">Install</a></li>
-<li>  <a href="#getting-started">Getting Started</a></li>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li>  <a href="#go-libp2p-daemon">Go-libp2p-daemon</a></li>
+</ul>
+</li>
 <li>  <a href="#modules">Modules</a></li>
 <li>  <a href="#users">Users</a></li>
 <li>  <a href="#stability">Stability</a></li>
@@ -135,12 +139,16 @@ This implementation in native Nim, relying on <a href="https://github.com/status
 <ul>
 <li>  <a href="https://nim-lang.org/install.html">Nim</a></li>
 </ul>
+<blockquote>
+<p>The currently supported Nim version is 1.6.18.</p>
+</blockquote>
 <pre>  <code>nimble install libp2p
 </code></pre>
 <h2>Getting Started</h2>
 <p>You&apos;ll find the nim-libp2p documentation <a href="https://status-im.github.io/nim-libp2p/docs/">here</a>.</p>
-<p><strong>Go Daemon:</strong>
-Please find the installation and usage intructions in <a href="examples/go-daemon/daemonapi.md">daemonapi.md</a>.</p>
+<h3>Testing</h3>
+<p>Remember you&apos;ll need to build the <code>go-libp2p-daemon</code> binary to run the <code>nim-libp2p</code> tests.
+To do so, please follow the installation instructions in <a href="examples/go-daemon/daemonapi.md">daemonapi.md</a>.</p>
 <h2>Modules</h2>
 <p>List of packages modules implemented in nim-libp2p:</p>
 <table>
@@ -419,7 +427,7 @@ Or use <code>nimble tasks</code> to show all available tasks.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-15T01:07:53Z
+        Builded at 2024-02-16T01:07:28Z
         </p>
       </div>
     </div>

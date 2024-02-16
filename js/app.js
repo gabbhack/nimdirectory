@@ -32644,6 +32644,19 @@ const packages = [
     "description": "Easy-to-use serialization capabilities (currently json only), with a drop-in replacement for std/json.",
     "license": "MIT",
     "web": "https://github.com/codex-storage/nim-json"
+  },
+  {
+    "name": "statsdaemon",
+    "url": "https://github.com/Q-Master/statsdaemon.nim",
+    "method": "git",
+    "tags": [
+      "bin",
+      "statsd",
+      "native"
+    ],
+    "description": "StatsD compatible daemon in pure Nim",
+    "license": "MIT",
+    "web": "https://github.com/Q-Master/statsdaemon.nim"
   }
 ]
 

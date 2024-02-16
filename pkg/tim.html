@@ -108,7 +108,43 @@
   <img src="https://github.com/openpeeps/tim/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" /> <img src="https://github.com/openpeeps/tim/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
 </p>
 <h2>😍 Key Features</h2>
-<p>todo</p>
+<p>  <em>todo</em></p>
+<h2>Quick Example</h2>
+<pre>  <code class="language-timl">div.container &gt; div.row &gt; div.col-lg-7.mx-auto
+  h1.display-3.fw-bold: &quot;Tim is Awesome&quot;
+</code></pre>
+<h2>Tim in action</h2>
+<p>Check <a href="https://github.com/openpeeps/tim/tree/main/example">/example</a> folder to better understand Tim&apos;s structure. <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/openpeeps/tim/main/example/preview.html">Also, check the generated HTML file</a></p>
+<h3>Client-Side Rendering</h3>
+<p>Tim Engine seamlessly shifts rendering to the client side for dynamic interactions, using the intuitive <code>@client</code> block statement.</p>
+<pre>  <code class="language-timl">body
+  section#contact &gt; div.container
+    div.row &gt; div.col-12 &gt; h3.fw-bold: &quot;Leave a message&quot;
+    div#contact-form
+
+@client target=&quot;#contact-form&quot;
+  form method=&quot;POST&quot; action=&quot;comment&quot;
+    div &gt; input.form-control type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Your name&quot;
+    div.my-3 &gt; textarea.form-control name=&quot;message&quot;: &quot;Your message&quot; style=&quot;height: 140px&quot;
+    div &gt; button.btn.btn-dark type=&quot;submit&quot;: &quot;Submit your message&quot;
+@end
+</code></pre>
+<h2>Embeddable Code</h2>
+<p>Tim Engine is a versatile template engine. It seamlessly integrates a variety of embeddable code formats, including:
+<strong>JavaScript</strong>, <strong>YAML</strong>/<strong>JSON</strong>, <strong>CSS/SCSS</strong> and <strong>Sass</strong></p>
+<h3>JavaScript block</h3>
+<pre>  <code class="language-timl">@js
+  document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
+    console.log(&quot;Hello, hello, hello!&quot;)
+  });
+@end
+</code></pre>
+<h3>JSON block</h3>
+<p>  <em>todo</em></p>
+<h3>YAML block</h3>
+<p>  <em>todo</em></p>
+<h4>CSS/SCSS and Sass</h4>
+<p>  <em>todo</em></p>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
 <li>🐛 Found a bug? <a href="https://github.com/openpeeps/tim/issues">Create a new Issue</a></li>
@@ -118,7 +154,7 @@
 </ul>
 <h3>🎩 License</h3>
 <p>Tim Engine | <code>LGPLv3</code> license. <a href="https://github.com/openpeeps">Made by Humans from OpenPeeps</a>.<br />
-Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
+Copyright © 2024 OpenPeeps &amp; Contributors — All rights reserved.</p>
 </document>
             
         </div>
@@ -187,7 +223,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-15T01:07:53Z
+        Builded at 2024-02-16T01:07:28Z
         </p>
       </div>
     </div>
