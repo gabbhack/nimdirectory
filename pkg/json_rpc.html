@@ -262,6 +262,8 @@ So instead of this:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">bmiIndex</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">client</span><span class="op">.</span><span class="ide">call</span>(<span class="str">&quot;bmi&quot;</span>, <span class="op">%</span>[<span class="op">%</span><span class="num">120.5</span>, <span class="op">%</span><span class="num">12.0</span>])</div></div>  </code></pre>
 <p>You can use:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">bmiIndex</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">client</span><span class="op">.</span><span class="ide">bmi</span>(<span class="num">120.5</span>, <span class="num">12.0</span>)</div></div>  </code></pre>
+<p>Or you can use batch call to send multiple request at once to the server.</p>
+<pre>  <code class="language-Nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">batch</span> <span class="op">=</span> <span class="ide">client</span><span class="op">.</span><span class="ide">prepareBatch</span>()</div></div><div class="line"><div class="line-content"><span class="ide">batch</span><span class="op">.</span><span class="ide">bmi</span>(<span class="num">120.5</span>, <span class="num">12.0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">batch</span><span class="op">.</span><span class="ide">bmi</span>(<span class="num">120.5</span>, <span class="num">13.0</span>)</div></div><div class="line"><div class="line-content"><span class="ide">batch</span><span class="op">.</span><span class="ide">bmi</span>(<span class="num">120.5</span>, <span class="num">14.0</span>)</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">await</span> <span class="ide">batch</span><span class="op">.</span><span class="ide">send</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># But you need to manually process the response e.g. decode from JSON to</span></div></div><div class="line"><div class="line-content"><span class="com"># your expected type because you can mix various rpc method call in one batch</span></div></div><div class="line"><div class="line-content"><span class="com"># with various return type.</span></div></div>  </code></pre>
 <p>This allows you to leverage Nim&apos;s static type checking whilst also aiding readability and providing a unified location to declare client side RPC definitions.</p>
 <h2>Working with client transports</h2>
 <p>Transport clients should provide a type that is inherited from <code>RpcClient</code> where they can store any transport related information.</p>
@@ -372,7 +374,7 @@ Returning
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-19T01:08:39Z
+        Builded at 2024-02-20T01:06:26Z
         </p>
       </div>
     </div>
