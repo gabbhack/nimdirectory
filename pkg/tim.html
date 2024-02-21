@@ -108,30 +108,131 @@
   <img src="https://github.com/openpeeps/tim/workflows/test/badge.svg" style="max-width: 100%;" alt="Github Actions" /> <img src="https://github.com/openpeeps/tim/workflows/docs/badge.svg" style="max-width: 100%;" alt="Github Actions" />
 </p>
 <h2>😍 Key Features</h2>
-<p>  <em>todo</em></p>
+<p>or more like a <em>todo list</em></p>
+<ul>
+<li>Fast &amp; easy to code!</li>
+<li>Cross-platform and multi-threaded</li>
+<li>Caching and Pre-compilation</li>
+<li>JIT Rendering</li>
+<li>Output Minifier</li>
+<li>Transpiles to <strong>JavaScript</strong> for <strong>Client-Side Rendering</strong></li>
+<li>Supports embeddable code <code>json</code>, <code>js</code>, <code>yaml</code>, <code>css</code></li>
+<li>Available as a <strong>Nimble library</strong> for <strong>Nim development</strong></li>
+<li>Built-in <strong>Browser Sync &amp; Reload</strong></li>
+<li>Built-in real-time Server-Side Rendering <code>SSR</code> via <code>ZeroMQ</code></li>
+<li>Source-to-Source translator (transpiles to <code>JavaScript</code>, <code>Ruby</code>, <code>Python</code> and more)</li>
+<li>Written in Nim language 👑</li>
+</ul>
 <h2>Quick Example</h2>
 <pre>  <code class="language-timl">div.container &gt; div.row &gt; div.col-lg-7.mx-auto
   h1.display-3.fw-bold: &quot;Tim is Awesome&quot;
+  a href=&quot;https://github.com/openpeeps/tim&quot; title=&quot;This is hot!&quot;: &quot;Check Tim on GitHub&quot;
 </code></pre>
 <h2>Tim in action</h2>
-<p>Check <a href="https://github.com/openpeeps/tim/tree/main/example">/example</a> folder to better understand Tim&apos;s structure. <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/openpeeps/tim/main/example/preview.html">Also, check the generated HTML file</a></p>
+<p>Check <a href="https://github.com/openpeeps/tim/tree/main/example">/example</a> folder to better understand Tim&apos;s structure. <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/openpeeps/tim/main/example/preview.html">Also check the generated HTML file</a></p>
 <h3>Client-Side Rendering</h3>
 <p>Tim Engine seamlessly shifts rendering to the client side for dynamic interactions, using the intuitive <code>@client</code> block statement.</p>
 <pre>  <code class="language-timl">body
   section#contact &gt; div.container
     div.row &gt; div.col-12 &gt; h3.fw-bold: &quot;Leave a message&quot;
-    div#contact-form
+    div#commentForm
 
-@client target=&quot;#contact-form&quot;
-  form method=&quot;POST&quot; action=&quot;comment&quot;
-    div &gt; input.form-control type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Your name&quot;
-    div.my-3 &gt; textarea.form-control name=&quot;message&quot;: &quot;Your message&quot; style=&quot;height: 140px&quot;
-    div &gt; button.btn.btn-dark type=&quot;submit&quot;: &quot;Submit your message&quot;
+@client target=&quot;#commentForm&quot;
+  form method=&quot;POST&quot; action=&quot;/submitComment&quot;
+    div.form-floating
+      input.form-control type=&quot;text&quot; name=&quot;username&quot;
+        placeholder=&quot;Your name&quot; autocomplete=&quot;off&quot; required=&quot;&quot;
+      label: &quot;Your name&quot;
+
+    div.form-floating.my-3
+      textarea.form-control name=&quot;message&quot; style=&quot;height: 140px&quot; required=&quot;&quot;: &quot;Your message&quot;
+      label: &quot;Your message&quot;
+    div.text-center &gt; button.btn.btn-dark.px-4.rounded-pill type=&quot;submit&quot;: &quot;Submit your message&quot;
 @end
 </code></pre>
-<h2>Embeddable Code</h2>
-<p>Tim Engine is a versatile template engine. It seamlessly integrates a variety of embeddable code formats, including:
-<strong>JavaScript</strong>, <strong>YAML</strong>/<strong>JSON</strong>, <strong>CSS/SCSS</strong> and <strong>Sass</strong></p>
+<h2>Browser Sync &amp; Reload</h2>
+<p>Compile your project with <code>-d:timHotCode</code> flag, then connect to Tim&apos;s WebSocket server to auto reload the page when there&apos;s changes on disk
+Note that this feature is not available when compiling with <code>-d:release</code>.</p>
+<pre>  <code class="language-js"><div class="line"><div class="line-content">{</div></div><div class="line"><div class="line-content">    <span class="kwd">const</span> <span class="ide">watchout</span> <span class="op">=</span> <span class="kwd">new</span> <span class="ide">WebSocket</span>('ws://127.0.0.1:6502/ws');</div></div><div class="line"><div class="line-content">    <span class="ide">watchout</span>.<span class="ide">addEventListener</span>('message', () <span class="op">=&gt;</span> <span class="ide">location</span>.<span class="ide">reload</span>());</div></div><div class="line"><div class="line-content">  }</div></div>  </code></pre>
+<h3>Data</h3>
+<p>Tim provides 3 types of data storages. <strong>Global</strong> and <strong>Local</strong> as JsonNode objects for handling immutable data from the app to your <code>timl</code> templates,
+and <strong>Template</strong> based data at template level using Tim&apos;s built-in AST-based interpreter.</p>
+<p>Global data can be passed at precompile-time and is made available globally for all layouts, views and partials.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timl</span><span class="op">.</span><span class="ide">precompile</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">global</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">    <span class="str">&quot;year&quot;</span>: <span class="ide">parseInt</span>(<span class="ide">now</span>()<span class="op">.</span><span class="ide">format</span>(<span class="str">&quot;yyyy&quot;</span>))</div></div><div class="line"><div class="line-content">  }</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
+<p>Accessing global data can be done using the <code>$app</code> constant:</p>
+<pre>  <code class="language-timl">footer &gt; div.container &gt; div.row &gt; div.col-12
+  small: &quot;&amp;copy; &quot; &amp; $app.year &amp; &quot; &amp;mdash; Made by Humans from OpenPeeps&quot;
+</code></pre>
+<p>Local data can be passed to a template from using the route callback (controller).
+<code>$this</code> constant can be used to access data from local storage.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timl</span><span class="op">.</span><span class="ide">render</span>(<span class="str">&quot;index&quot;</span>, <span class="ide">local</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="ide">isLoggedin</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">username</span>: <span class="str">&quot;Johnny Boy&quot;</span></div></div><div class="line"><div class="line-content">})</div></div>  </code></pre>
+<pre>  <code class="language-timl">if $this.isLoggeding:
+  h1.fw-bold: &quot;Hello, &quot; &amp; $this.username
+  a href=&quot;/logout&quot;: &quot;Log out&quot;
+else:
+  h1: &quot;Hello!&quot;
+  a href=&quot;/login&quot;: &quot;Please login to view this page&quot;
+</code></pre>
+<p>Template variables can be declared inside templates using <code>var</code> or <code>const</code>. The only difference
+between these two is that constants are immutable and requires initialization.</p>
+<p>The scope of a declared variable is limited to the branch in which it was declared.</p>
+<pre>  <code class="language-timl">var a = 1       // a global variable
+if $a == 1:
+  var b = 2     // a block-scoped variable
+  echo $a + b   // prints 3
+echo $b         // error, undeclared variable
+</code></pre>
+<h4>Debug</h4>
+<p>For debug reasons you can use <code>echo</code> to print data</p>
+<pre>  <code>echo &quot;Hello, World!&quot;
+</code></pre>
+<h4>Data types</h4>
+<p>Supported datatypes: <code>string</code>, <code>int</code>, <code>float</code>, <code>bool</code>, <code>array</code>, <code>object</code></p>
+<pre>  <code>var a = &quot;Hello&quot;
+var b = 10
+var c = 10.5 
+var d = true    // false
+
+var e = []      // init an empty array
+var f = {}      // init an empty object
+</code></pre>
+<h4>Function</h4>
+<p>  <em>todo</em></p>
+<h4>Conditionals</h4>
+<p>  <em>todo</em></p>
+<h4>For loop</h4>
+<pre>  <code class="language-timl">var boxes = [
+  {
+    title: &quot;Chimney Sweep&quot;
+    description: &quot;Once feared for the soot they carried,
+      these skilled climbers cleaned fireplaces to prevent
+      fires and improve indoor air quality&quot; 
+  }
+  {
+    title: &quot;Town Crier&quot;,
+    description: &quot;With booming voices and ringing bells,
+      they delivered news and announcements in the days
+      before mass media&quot;
+  }
+  {
+    title: &quot;Ratcatcher&quot;,
+    description: &quot;These pest controllers faced smelly
+      challenges, but their work helped prevent the
+      spread of diseases like the plague&quot;
+  }
+]
+
+div.container &gt; div.row.mb-3
+  div &gt; col-12 &gt; h3.fw-bold: &quot;Forgotten Professions&quot;
+  for $box in $boxes:
+    div.col-lg-4 &gt; div.card &gt; div.card-body
+      div.card-title.fw-bold.h4: $box.title
+      p.card-text: $box.description
+</code></pre>
+<h3>Escaping</h3>
+<p>  <em>todo</em></p>
+<h2>Embed Code</h2>
+<p>Tim integrates a variety of embeddable code formats, including: <strong>JavaScript</strong>, <strong>YAML</strong>/<strong>JSON</strong> and <strong>CSS</strong></p>
 <h3>JavaScript block</h3>
 <pre>  <code class="language-timl">@js
   document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
@@ -143,7 +244,7 @@
 <p>  <em>todo</em></p>
 <h3>YAML block</h3>
 <p>  <em>todo</em></p>
-<h4>CSS/SCSS and Sass</h4>
+<h4>CSS</h4>
 <p>  <em>todo</em></p>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
@@ -223,7 +324,7 @@ Copyright © 2024 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-20T01:06:26Z
+        Builded at 2024-02-21T01:07:44Z
         </p>
       </div>
     </div>

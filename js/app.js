@@ -32657,6 +32657,21 @@ const packages = [
     "description": "StatsD compatible daemon in pure Nim",
     "license": "MIT",
     "web": "https://github.com/Q-Master/statsdaemon.nim"
+  },
+  {
+    "name": "amqpstats",
+    "url": "https://github.com/Q-Master/amqp-stats.nim",
+    "method": "git",
+    "tags": [
+      "library",
+      "pure",
+      "rabbitmq",
+      "async",
+      "sync"
+    ],
+    "description": "Pure Nim library to read AMQP stats via management plugin API",
+    "license": "MIT",
+    "web": "https://github.com/Q-Master/amqp-stats.nim"
   }
 ]
 
