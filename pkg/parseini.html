@@ -84,59 +84,79 @@
         <div class="col-8 box rounded p-3" id="readme-section">
             
                 <document><h1>parseini</h1>
-<p>A high-performance ini parse library for nim. the module implements a high performance configuration file parser, the configuration file&apos;s syntax is similar to the Windows format, but much more powerful, as it is not a line based parser. string literals, raw string literals and triple quoted string literals are supported as in the nim programming language. the module supports annotation statements, does not delete comment statements and redundant blank characters,when saving a file, the original file format can be retained without losing comments and blank lines and you can specify comment symbol,but the built-in library &apos;parsecfg&apos; in the nim language does not support this feature.</p>
+<p>A high-performance ini parse library for nim.
+the <code>parseini</code> module implements a high performance configuration file
+parser, evolved from <code>parsecfg</code>.
+the configuration file&apos;s syntax is similar to the Windows <code>.ini</code>
+format, but much more powerful, as it is not a line based parser. string
+literals, raw string literals and triple quoted string literals are
+supported as in the nim programming language.
+the module supports annotation statements, does not delete comment
+statements and redundant blank characters, leaving the original style
+and you can specify annotation delimiters.</p>
 <h1>This is a simple example of a configuration file.</h1>
-<pre>  <code class="language-ini">    charset=&quot;utf-8&quot;
-    [Package]
-    name=&quot;hello&quot;
-    --threads:&quot;on&quot;
-    [Author]
-    name=&quot;lihf8515&quot;
-    qq=&quot;10214028&quot;
-    email=&quot;lihaifeng@wxm.com&quot;
+<pre>  <code>charset=&quot;utf-8&quot;
+[Package]
+name=&quot;hello&quot;
+--threads:&quot;on&quot;
+[Author]
+name=&quot;lihf8515&quot;
+qq=&quot;10214028&quot;
+email=&quot;lihaifeng@wxm.com&quot;
 </code></pre>
-<h1>Specifies the comment symbol, the default comment symbol is &quot;#&quot; and &quot;;&quot;.</h1>
-<pre>  <code class="language-ini">    import parseini
-    var cfg=loadConfig(&quot;config.ini&quot;, {&apos;&amp;&apos;})
+<h1>Specifies the annotation symbol, the default annotation symbol is &quot;#&quot; and &quot;;&quot;.</h1>
+<pre>  <code>import parseini
+var cfg=loadConfig(&quot;config.ini&quot;,&quot;&amp;&quot;)
+</code></pre>
+<h1>Support for read-write multivalued key.</h1>
+<pre>  <code>[Author]
+name=&quot;lihf8515&quot;
+name = Li haifeng
+
+import parseini
+var cfg=loadConfig(&quot;config.ini&quot;)
+cfg.add(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
+echo cfg.gets(&quot;Author&quot;,&quot;name&quot;)
 </code></pre>
 <h1>Creating a configuration file.</h1>
-<pre>  <code class="language-ini">    import parseini
-    var cfg=newConfig()
-    cfg.setSectionKey(&quot;&quot;,&quot;charset&quot;,&quot;utf-8&quot;)
-    cfg.setSectionKey(&quot;Package&quot;,&quot;name&quot;,&quot;hello&quot;)
-    cfg.setSectionKey(&quot;Package&quot;,&quot;--threads&quot;,&quot;on&quot;)
-    cfg.setSectionKey(&quot;Author&quot;,&quot;name&quot;,&quot;lihf8515&quot;)
-    cfg.setSectionKey(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;)
-    cfg.setSectionKey(&quot;Author&quot;,&quot;email&quot;,&quot;lihaifeng@wxm.com&quot;)
-    cfg.writeConfig(&quot;config.ini&quot;)
-    echo cfg
+<pre>  <code>import parseini
+var cfg=newConfig()
+cfg.set(&quot;&quot;,&quot;charset&quot;,&quot;utf-8&quot;)
+cfg.set(&quot;Package&quot;,&quot;name&quot;,&quot;hello&quot;)
+cfg.set(&quot;Package&quot;,&quot;--threads&quot;,&quot;on&quot;)
+cfg.set(&quot;Author&quot;,&quot;name&quot;,&quot;lihf8515&quot;)
+cfg.set(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;)
+cfg.set(&quot;Author&quot;,&quot;email&quot;,&quot;lihaifeng@wxm.com&quot;)
+cfg.write(&quot;config.ini&quot;)
+echo cfg
 </code></pre>
 <h1>Reading a configuration file.
 returns the specified default value if the specified key does not exist.</h1>
-<pre>  <code class="language-ini">    import parseini
-    var cfg = loadConfig(&quot;config.ini&quot;)
-    var charset = cfg.getSectionValue(&quot;&quot;,&quot;charset&quot;)
-    var threads = cfg.getSectionValue(&quot;Package&quot;,&quot;--threads&quot;)
-    var pname = cfg.getSectionValue(&quot;Package&quot;,&quot;name&quot;)
-    var name = cfg.getSectionValue(&quot;Author&quot;,&quot;name&quot;)
-    var qq = cfg.getSectionValue(&quot;Author&quot;,&quot;qq&quot;)
-    var email = cfg.getSectionValue(&quot;Author&quot;,&quot;email&quot;,&quot;10214028@qq.com&quot;)
-    echo pname &amp; &quot;\n&quot; &amp; name &amp; &quot;\n&quot; &amp; qq &amp; &quot;\n&quot; &amp; email
+<pre>  <code>import parseini
+var cfg = loadConfig(&quot;config.ini&quot;)
+var charset = cfg.get(&quot;&quot;,&quot;charset&quot;)
+var threads = cfg.get(&quot;Package&quot;,&quot;--threads&quot;)
+var pname = cfg.get(&quot;Package&quot;,&quot;name&quot;)
+var name = cfg.get(&quot;Author&quot;,&quot;name&quot;)
+var qq = cfg.get(&quot;Author&quot;,&quot;qq&quot;)
+var email = cfg.get(&quot;Author&quot;,&quot;email&quot;,&quot;10214028@qq.com&quot;)
+echo pname &amp; &quot;\n&quot; &amp; name &amp; &quot;\n&quot; &amp; qq &amp; &quot;\n&quot; &amp; email
 </code></pre>
-<h1>Modifying a configuration file.</h1>
-<pre>  <code class="language-ini">    import parseini
-    var cfg = loadConfig(&quot;config.ini&quot;)
-    cfg.setSectionKey(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
-    cfg.setSectionKey(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;)
-    cfg.writeConfig(&quot;config.ini&quot;)
-    echo cfg
+<h1>Modifying a configuration file.
+supports specifying whether &apos;value&apos; uses quotation marks.</h1>
+<pre>  <code>import parseini
+var cfg = loadConfig(&quot;config.ini&quot;)
+cfg.set(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
+cfg.set(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;,false) # Do not use double quotes for storage
+cfg.write(&quot;config.ini&quot;)
+echo cfg
 </code></pre>
 <h1>Deleting a section key in a configuration file.</h1>
-<pre>  <code class="language-ini">    import parseini
-    var cfg = loadConfig(&quot;config.ini&quot;)
-    cfg.delSectionKey(&quot;Author&quot;,&quot;email&quot;)
-    cfg.writeConfig(&quot;config.ini&quot;)
-    echo cfg
+<pre>  <code>import parseini
+var cfg = loadConfig(&quot;config.ini&quot;)
+cfg.del(&quot;Author&quot;,&quot;email&quot;)
+cfg.write(&quot;config.ini&quot;)
+echo cfg
 </code></pre>
 </document>
             
@@ -206,7 +226,7 @@ returns the specified default value if the specified key does not exist.</h1>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-21T01:07:44Z
+        Builded at 2024-02-22T01:06:56Z
         </p>
       </div>
     </div>

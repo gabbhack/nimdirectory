@@ -121,6 +121,7 @@
 <li>Built-in <strong>Browser Sync &amp; Reload</strong></li>
 <li>Built-in real-time Server-Side Rendering <code>SSR</code> via <code>ZeroMQ</code></li>
 <li>Source-to-Source translator (transpiles to <code>JavaScript</code>, <code>Ruby</code>, <code>Python</code> and more)</li>
+<li>Template localization</li>
 <li>Written in Nim language 👑</li>
 </ul>
 <h2>Quick Example</h2>
@@ -130,6 +131,29 @@
 </code></pre>
 <h2>Tim in action</h2>
 <p>Check <a href="https://github.com/openpeeps/tim/tree/main/example">/example</a> folder to better understand Tim&apos;s structure. <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/openpeeps/tim/main/example/preview.html">Also check the generated HTML file</a></p>
+<h4>Template structure</h4>
+<p>Tim has its own little filesystem that continuously monitors <code>.timl</code> for changes/creation or deletion.
+Here is a basic filesystem structure:</p>
+<pre>  <code>storage/
+  ast/
+    # auto-generated
+    # for storing pre-compiled binary .ast nodes
+  html/
+    # auto-generated
+    # for storing html files from static templates
+templates/
+  layouts/ # main place for layouts. (create the directory manually)
+    base.timl
+    customer.timl
+  partials/ # main place for storing partials (create the directory manually)
+    product/
+      price.timl
+      cta.timl
+  views/ # main place for storing views (create the directory manually)
+    customer.timl
+    products.timl
+    product.timl
+</code></pre>
 <h3>Client-Side Rendering</h3>
 <p>Tim Engine seamlessly shifts rendering to the client side for dynamic interactions, using the intuitive <code>@client</code> block statement.</p>
 <pre>  <code class="language-timl">body
@@ -151,7 +175,7 @@
 @end
 </code></pre>
 <h2>Browser Sync &amp; Reload</h2>
-<p>Compile your project with <code>-d:timHotCode</code> flag, then connect to Tim&apos;s WebSocket server to auto reload the page when there&apos;s changes on disk
+<p>Compile your project with <code>-d:timHotCode</code> flag, then connect to Tim&apos;s WebSocket server to auto reload the page when there are changes on disk.<br />
 Note that this feature is not available when compiling with <code>-d:release</code>.</p>
 <pre>  <code class="language-js"><div class="line"><div class="line-content">{</div></div><div class="line"><div class="line-content">    <span class="kwd">const</span> <span class="ide">watchout</span> <span class="op">=</span> <span class="kwd">new</span> <span class="ide">WebSocket</span>('ws://127.0.0.1:6502/ws');</div></div><div class="line"><div class="line-content">    <span class="ide">watchout</span>.<span class="ide">addEventListener</span>('message', () <span class="op">=&gt;</span> <span class="ide">location</span>.<span class="ide">reload</span>());</div></div><div class="line"><div class="line-content">  }</div></div>  </code></pre>
 <h3>Data</h3>
@@ -163,8 +187,8 @@ and <strong>Template</strong> based data at template level using Tim&apos;s buil
 <pre>  <code class="language-timl">footer &gt; div.container &gt; div.row &gt; div.col-12
   small: &quot;&amp;copy; &quot; &amp; $app.year &amp; &quot; &amp;mdash; Made by Humans from OpenPeeps&quot;
 </code></pre>
-<p>Local data can be passed to a template from using the route callback (controller).
-<code>$this</code> constant can be used to access data from local storage.</p>
+<p>Local data can be passed to a template from route&apos;s callback (controller).
+<code>$this</code> constant can be used to access data from the local storage.</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timl</span><span class="op">.</span><span class="ide">render</span>(<span class="str">&quot;index&quot;</span>, <span class="ide">local</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="ide">isLoggedin</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">username</span>: <span class="str">&quot;Johnny Boy&quot;</span></div></div><div class="line"><div class="line-content">})</div></div>  </code></pre>
 <pre>  <code class="language-timl">if $this.isLoggeding:
   h1.fw-bold: &quot;Hello, &quot; &amp; $this.username
@@ -324,7 +348,7 @@ Copyright © 2024 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-21T01:07:44Z
+        Builded at 2024-02-22T01:06:56Z
         </p>
       </div>
     </div>
