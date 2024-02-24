@@ -181,24 +181,32 @@ Note that this feature is not available when compiling with <code>-d:release</co
 <h3>Data</h3>
 <p>Tim provides 3 types of data storages. <strong>Global</strong> and <strong>Local</strong> as JsonNode objects for handling immutable data from the app to your <code>timl</code> templates,
 and <strong>Template</strong> based data at template level using Tim&apos;s built-in AST-based interpreter.</p>
-<p>Global data can be passed at precompile-time and is made available globally for all layouts, views and partials.</p>
+<ol>
+<li><strong>Global data</strong> can be passed at precompile-time and is made available globally for all layouts, views and partials.<br />
+Note: Using <code>$app</code> in a template will mark it as JIT.</li>
+</ol>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timl</span><span class="op">.</span><span class="ide">precompile</span>(</div></div><div class="line"><div class="line-content">  <span class="ide">global</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">    <span class="str">&quot;year&quot;</span>: <span class="ide">parseInt</span>(<span class="ide">now</span>()<span class="op">.</span><span class="ide">format</span>(<span class="str">&quot;yyyy&quot;</span>))</div></div><div class="line"><div class="line-content">  }</div></div><div class="line"><div class="line-content">)</div></div>  </code></pre>
 <p>Accessing global data can be done using the <code>$app</code> constant:</p>
 <pre>  <code class="language-timl">footer &gt; div.container &gt; div.row &gt; div.col-12
   small: &quot;&amp;copy; &quot; &amp; $app.year &amp; &quot; &amp;mdash; Made by Humans from OpenPeeps&quot;
 </code></pre>
-<p>Local data can be passed to a template from route&apos;s callback (controller).
-<code>$this</code> constant can be used to access data from the local storage.</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timl</span><span class="op">.</span><span class="ide">render</span>(<span class="str">&quot;index&quot;</span>, <span class="ide">local</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="ide">isLoggedin</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">username</span>: <span class="str">&quot;Johnny Boy&quot;</span></div></div><div class="line"><div class="line-content">})</div></div>  </code></pre>
-<pre>  <code class="language-timl">if $this.isLoggeding:
+<ol start="2">
+<li><strong>Local data</strong> can be passed to a template from route&apos;s callback (controller).
+<code>$this</code> constant can be used to access data from the local storage.<br /></li>
+</ol>
+<p>Note: Using <code>$this</code> in a template will mark it as JIT.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">timl</span><span class="op">.</span><span class="ide">render</span>(<span class="str">&quot;index&quot;</span>, <span class="ide">local</span> <span class="op">=</span> <span class="op">%*</span>{</div></div><div class="line"><div class="line-content">  <span class="ide">loggedin</span>: <span class="ide">true</span>,</div></div><div class="line"><div class="line-content">  <span class="ide">username</span>: <span class="str">&quot;Johnny Boy&quot;</span></div></div><div class="line"><div class="line-content">})</div></div>  </code></pre>
+<pre>  <code class="language-timl">if $this.loggedin:
   h1.fw-bold: &quot;Hello, &quot; &amp; $this.username
   a href=&quot;/logout&quot;: &quot;Log out&quot;
 else:
   h1: &quot;Hello!&quot;
   a href=&quot;/login&quot;: &quot;Please login to view this page&quot;
 </code></pre>
-<p>Template variables can be declared inside templates using <code>var</code> or <code>const</code>. The only difference
-between these two is that constants are immutable and requires initialization.</p>
+<ol start="3">
+<li><strong>Template variables</strong> can be declared inside templates using <code>var</code> or <code>const</code>. The only difference
+between these two is that constants are immutable and requires initialization.</li>
+</ol>
 <p>The scope of a declared variable is limited to the branch in which it was declared.</p>
 <pre>  <code class="language-timl">var a = 1       // a global variable
 if $a == 1:
@@ -348,7 +356,7 @@ Copyright © 2024 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-23T01:06:03Z
+        Builded at 2024-02-24T01:05:05Z
         </p>
       </div>
     </div>

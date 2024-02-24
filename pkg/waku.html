@@ -118,6 +118,10 @@
 # You&apos;ll run `make update` after each `git pull` in the future to keep those submodules updated.
 make wakunode2
 
+# Build with custom compilation flags. Do not use NIM_PARAMS unless you know what you are doing.
+# Replace with your own flags
+make wakunode2 NIMFLAGS=&quot;-d:chronicles_colors:none -d:disableMarchNative&quot;
+
 # Run with DNS bootstrapping
 ./build/wakunode2 --dns-discovery --dns-discovery-url=DNS_BOOTSTRAP_NODE_URL
 
@@ -229,7 +233,7 @@ This includes a fully featured chat example.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-23T01:06:03Z
+        Builded at 2024-02-24T01:05:05Z
         </p>
       </div>
     </div>
