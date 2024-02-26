@@ -161,18 +161,18 @@ templates/
     div.row &gt; div.col-12 &gt; h3.fw-bold: &quot;Leave a message&quot;
     div#commentForm
 
-@client target=&quot;#commentForm&quot;
-  form method=&quot;POST&quot; action=&quot;/submitComment&quot;
-    div.form-floating
-      input.form-control type=&quot;text&quot; name=&quot;username&quot;
-        placeholder=&quot;Your name&quot; autocomplete=&quot;off&quot; required=&quot;&quot;
-      label: &quot;Your name&quot;
-
-    div.form-floating.my-3
-      textarea.form-control name=&quot;message&quot; style=&quot;height: 140px&quot; required=&quot;&quot;: &quot;Your message&quot;
-      label: &quot;Your message&quot;
-    div.text-center &gt; button.btn.btn-dark.px-4.rounded-pill type=&quot;submit&quot;: &quot;Submit your message&quot;
-@end
+  @client target=&quot;#commentForm&quot;
+    form method=&quot;POST&quot; action=&quot;/submitComment&quot;
+      div.form-floating
+        input.form-control type=&quot;text&quot; name=&quot;username&quot;
+          placeholder=&quot;Your name&quot; autocomplete=&quot;off&quot; required=&quot;&quot;
+        label: &quot;Your name&quot;
+  
+      div.form-floating.my-3
+        textarea.form-control name=&quot;message&quot; style=&quot;height: 140px&quot; required=&quot;&quot;: &quot;Your message&quot;
+        label: &quot;Your message&quot;
+      div.text-center &gt; button.btn.btn-dark.px-4.rounded-pill type=&quot;submit&quot;: &quot;Submit your message&quot;
+  @end
 </code></pre>
 <h2>Browser Sync &amp; Reload</h2>
 <p>Compile your project with <code>-d:timHotCode</code> flag, then connect to Tim&apos;s WebSocket server to auto reload the page when there are changes on disk.<br />
@@ -356,7 +356,7 @@ Copyright © 2024 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-25T01:11:26Z
+        Builded at 2024-02-26T01:09:01Z
         </p>
       </div>
     </div>

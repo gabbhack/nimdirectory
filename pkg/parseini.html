@@ -104,7 +104,8 @@ name=&quot;lihf8515&quot;
 qq=&quot;10214028&quot;
 email=&quot;lihaifeng@wxm.com&quot;
 </code></pre>
-<h1>Specifies the annotation symbol, the default annotation symbol is &quot;#&quot; and &quot;;&quot;.</h1>
+<h1>Specify annotation symbols, default annotation symbols are &quot;#&quot; and &quot;;&quot;.
+The following example replaces the annotation symbol with &quot;&amp;&quot;.</h1>
 <pre>  <code>import parseini
 var cfg=loadConfig(&quot;config.ini&quot;,&quot;&amp;&quot;)
 </code></pre>
@@ -118,7 +119,7 @@ var cfg=loadConfig(&quot;config.ini&quot;)
 cfg.add(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
 echo cfg.gets(&quot;Author&quot;,&quot;name&quot;)
 </code></pre>
-<h1>Creating a configuration file.</h1>
+<h1>Create a configuration file.</h1>
 <pre>  <code>import parseini
 var cfg=newConfig()
 cfg.set(&quot;&quot;,&quot;charset&quot;,&quot;utf-8&quot;)
@@ -130,8 +131,9 @@ cfg.set(&quot;Author&quot;,&quot;email&quot;,&quot;lihaifeng@wxm.com&quot;)
 cfg.write(&quot;config.ini&quot;)
 echo cfg
 </code></pre>
-<h1>Reading a configuration file.
-returns the specified default value if the specified key does not exist.</h1>
+<h1>Read the configuration file.
+If the specified key does not exist, return an empty string.
+Support custom default return values.</h1>
 <pre>  <code>import parseini
 var cfg = loadConfig(&quot;config.ini&quot;)
 var charset = cfg.get(&quot;&quot;,&quot;charset&quot;)
@@ -142,19 +144,21 @@ var qq = cfg.get(&quot;Author&quot;,&quot;qq&quot;)
 var email = cfg.get(&quot;Author&quot;,&quot;email&quot;,&quot;10214028@qq.com&quot;)
 echo pname &amp; &quot;\n&quot; &amp; name &amp; &quot;\n&quot; &amp; qq &amp; &quot;\n&quot; &amp; email
 </code></pre>
-<h1>Modifying a configuration file.
-supports specifying whether &apos;value&apos; uses quotation marks.</h1>
+<h1>Modify the configuration file. Support whether key values use quotation marks.
+When the last parameter is false, it indicates that the key value does not need to be wrapped in double quotes during actual storage.</h1>
 <pre>  <code>import parseini
 var cfg = loadConfig(&quot;config.ini&quot;)
 cfg.set(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
-cfg.set(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;,false) # Do not use double quotes for storage
+cfg.set(&quot;Author&quot;,&quot;qq&quot;,&quot;10214028&quot;,false)
 cfg.write(&quot;config.ini&quot;)
 echo cfg
 </code></pre>
-<h1>Deleting a section key in a configuration file.</h1>
+<h1>Delete key value pairs from the configuration file.
+Also supports deleting &quot;Section&quot;.</h1>
 <pre>  <code>import parseini
 var cfg = loadConfig(&quot;config.ini&quot;)
 cfg.del(&quot;Author&quot;,&quot;email&quot;)
+cfg.del(&quot;Author&quot;)
 cfg.write(&quot;config.ini&quot;)
 echo cfg
 </code></pre>
@@ -226,7 +230,7 @@ echo cfg
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-25T01:11:26Z
+        Builded at 2024-02-26T01:09:01Z
         </p>
       </div>
     </div>
