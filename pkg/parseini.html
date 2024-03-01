@@ -87,6 +87,7 @@
 <p>A high-performance ini parse library for nim.
 the <code>parseini</code> module implements a high performance configuration file
 parser, evolved from <code>parsecfg</code>.
+compatible with the <code>parsecfg</code> module.
 the configuration file&apos;s syntax is similar to the Windows <code>.ini</code>
 format, but much more powerful, as it is not a line based parser. string
 literals, raw string literals and triple quoted string literals are
@@ -108,16 +109,6 @@ email=&quot;lihaifeng@wxm.com&quot;
 The following example replaces the annotation symbol with &quot;&amp;&quot;.</h1>
 <pre>  <code>import parseini
 var cfg=loadConfig(&quot;config.ini&quot;,&quot;&amp;&quot;)
-</code></pre>
-<h1>Support for read-write multivalued key.</h1>
-<pre>  <code>[Author]
-name=&quot;lihf8515&quot;
-name = Li haifeng
-
-import parseini
-var cfg=loadConfig(&quot;config.ini&quot;)
-cfg.add(&quot;Author&quot;,&quot;name&quot;,&quot;lhf&quot;)
-echo cfg.gets(&quot;Author&quot;,&quot;name&quot;)
 </code></pre>
 <h1>Create a configuration file.</h1>
 <pre>  <code>import parseini
@@ -230,7 +221,7 @@ echo cfg
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-02-29T01:06:18Z
+        Builded at 2024-03-01T01:12:59Z
         </p>
       </div>
     </div>
