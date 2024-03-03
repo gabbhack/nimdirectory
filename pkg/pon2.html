@@ -116,11 +116,14 @@ native-GUI application is beta version.</p>
 <h2>Installation</h2>
 <h3>Downloading Binary</h3>
 <p>You can get the binary at the
-<a href="https://github.com/izumiya-keisuke/pon2/releases/latest">latest release</a>.</p>
-<p><strong>NOTE:</strong> Built binary may not work on macOS due to the limitation of
+<a href="https://github.com/izumiya-keisuke/pon2/releases/latest">latest release</a>.
+Note that the built binary may not work on macOS due to the limitation of
 <a href="https://github.com/simonkrauter/NiGui">NiGui</a>.</p>
 <h3>Manual Installation</h3>
-<pre>  <code class="language-shell">nimble install https://github.com/izumiya-keisuke/pon2 -p:-d:danger -p:-d:Pon2Avx2=&lt;bool&gt; -p:-d:Pon2Bmi2=&lt;bool&gt;
+<pre>  <code class="language-shell">nimble install pon2 -p:-d:danger
+</code></pre>
+<p>If you want to specify the instruction set, use the following command:</p>
+<pre>  <code class="language-shell">nimble install pon2 -p:-d:danger -p:-d:pon2.avx2=&lt;bool&gt; -p:-d:pon2.bmi2=&lt;bool&gt;
 </code></pre>
 <h2>Usage</h2>
 <p>See the documentations:</p>
@@ -227,7 +230,7 @@ native-GUI application is beta version.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-02T01:05:29Z
+        Builded at 2024-03-03T01:10:42Z
         </p>
       </div>
     </div>
