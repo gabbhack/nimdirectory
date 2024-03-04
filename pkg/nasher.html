@@ -116,7 +116,7 @@ launch them in-game.</li>
 <li>nasher uses json or <a href="https://github.com/WilliamDraco/NWNT">NWNT</a> for its text
 file format.</li>
 </ul>
-<p>This guide is current as of nasher release 0.21.x.</p>
+<p>This guide is current as of nasher release 0.22.x.</p>
 <ul>
 <li><a href="#installation-options">Installation Options</a>
 <ul>
@@ -175,7 +175,7 @@ of nasher for your OS and place a pointer to the location of the executable
 file in your <a href="https://superuser.com/a/284351"><code>PATH</code> environment variable</a>.</p>
 <p>In addition, you will need the following tools:</p>
 <ul>
-<li><a href="https://github.com/niv/neverwinter.nim/releases">neverwinter.nim</a> &gt;= 1.6.4</li>
+<li><a href="https://github.com/niv/neverwinter.nim/releases">neverwinter.nim</a> &gt;= 1.7.3</li>
 <li><a href="https://github.com/WilliamDraco/NWNT">nwnt</a> &gt;= 1.3.3</li>
 <li><a href="https://github.com/nwneetools/nwnsc/releases">nwnsc</a> &gt;= 1.1.3</li>
 <li>  <a href="https://git-scm.com/downloads">git</a></li>
@@ -984,10 +984,6 @@ same name are found for a target.
 <li>default: <code>choose</code></li>
 <li>supported: <code>choose</code> (choose manually), <code>default</code> (accept the first choice),
 <code>error</code> (abort with an error message)</li>
-<li>note: this option currently only applies for the <code>convert</code>, <code>compile</code>,
-<code>pack</code>, <code>install</code>, <code>play</code>, <code>test</code>, and <code>serve</code> commands. The <code>unpack</code>
-command still makes you choose where to unpack a file if multiple options
-are found.</li>
 </ul>
 </li>
 <li><code>abortOnCompileError</code>: whether to automatically abort packing, installing, or
@@ -1002,6 +998,26 @@ changed since the last pack.
 <ul>
 <li>default: <code>false</code></li>
 <li>supported:  <code>true</code>, <code>false</code></li>
+</ul>
+</li>
+<li><code>overwritePackedFile</code>: automatically answer the &quot;Are you sure you wish to
+overwrite?&quot; prompt when an existing file of the same name is found within
+the project dir (<code>pack</code> command only):
+<ul>
+<li>default: <code>ask</code></li>
+<li>supported: <code>ask</code> (always ask), <code>default</code> (overwrite only if the existing
+file is older than the newest source file), <code>always</code> (always overwrite),
+<code>never</code> (never overwrite)</li>
+</ul>
+</li>
+<li><code>overwriteInstalledFile</code>: automatically answer the &quot;Are you sure you wish to
+overwrite?&quot; prompt when an existing file of the same name is found within
+<code>installDir</code> (<code>install</code> command only):
+<ul>
+<li>default: <code>ask</code></li>
+<li>supported: <code>ask</code> (always ask), <code>default</code> (overwrite only if the existing
+file is older than the newest source file), <code>always</code> (always overwrite),
+<code>never</code> (never overwrite)</li>
 </ul>
 </li>
 </ul>
@@ -1215,7 +1231,7 @@ separately unless you want to compile scripts files without packing.</p>
 <p>If not supplied, <code>&lt;target&gt;</code> will default to the first target defined in the
 package&apos;s <a href="#nashercfg">  <code>nasher.cfg</code></a>. The dummy target <code>all</code> runs the command
 on all defined targets in a loop. You can also specify multiple targets by
-separatng them with spaces.</p>
+separating them with spaces.</p>
 <p>If the packed file would overwrite an existing file, you will be prompted to
 overwrite the file. The newly packaged file will have a modification time equal
 to the modification time of the newest source file. If the packed file is older
@@ -1266,6 +1282,10 @@ run it separately unless you want to pack files without installing.</p>
 <tr>
 <td>  <code>--packUnchanged</code></td>
 <td>continue packing a file if there are no changed files included</td>
+</tr>
+<tr>
+<td>  <code>--overwritePackedFile</code></td>
+<td>how to handle an existing packed file in the project dir</td>
 </tr></tbody></table>
 <h4>Examples</h4>
 <pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="com"># Pack the first target in nasher.cfg</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> pack</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Clear the cache and convert, compile and pack the &quot;demo&quot; target</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> pack demo --clean</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Pack the &quot;module&quot; target into &quot;modules/mymodule.mod&quot;, setting its name to</span></div></div><div class="line"><div class="line-content">$ <span class="com"># &quot;My Module&quot; and its minimum support game version to 1.69</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> pack module --file:"modules/mymodule.mod" --modName:"My Module" <span class="ide">--modMinGameVersion:1.69</span></div></div>  </code></pre>
@@ -1277,7 +1297,7 @@ run it separately unless you want to pack files without installing.</p>
 <p>If not supplied, <code>&lt;target&gt;</code> will default to the first target defined in the
 package&apos;s <a href="#nashercfg">  <code>nasher.cfg</code></a>. The dummy target <code>all</code> runs the command
 on all defined targets in a loop. You can also specify multiple targets by
-separatng them with spaces.</p>
+separating them with spaces.</p>
 <p>If the file to be installed would overwrite an existing file, you will be
 prompted to overwrite it. The default answer is to keep the newer file. If the
 <code>useModuleFolder</code> configuration setting is TRUE or not set, a folder containing
@@ -1335,6 +1355,14 @@ the module (<code>.mod</code>) file.</p>
 <tr>
 <td>  <code>--packUnchanged</code></td>
 <td>continue packing a file if there are no changed files included</td>
+</tr>
+<tr>
+<td>  <code>--overwritePackedFile</code></td>
+<td>how to handle an existing packed file in the project dir</td>
+</tr>
+<tr>
+<td>  <code>--overwriteInstalledFile</code></td>
+<td>how to handle an existing installed file in <code>installDir</code></td>
 </tr></tbody></table>
 <h4>Examples</h4>
 <pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="com"># Install the first target in nasher.cfg</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> install</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Install the &quot;demo&quot; target to /opt/nwn without re-packing</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> install demo --installDir:"/opt/nwn" --noPack</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Special case for Docker usage. When issuing the install and launch commands,</span></div></div><div class="line"><div class="line-content">$ <span class="com"># docker requires access to the NWN documents folder, so we attach two volumes:</span></div></div><div class="line"><div class="line-content">$ <span class="com"># - the first volume assigns the nasher project folder (source files)</span></div></div><div class="line"><div class="line-content">$ <span class="com"># - the second volume assigns the NWN user directory</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">docker</span> run --rm -it -v <span class="ide">${pwd}:/nasher</span> -v "~/Documents/Neverwinter Nights"<span class="ide">:/nasher/install</span> <span class="ide">nwntools/nasher:latest</span> install <target> --yes</div></div>  </code></pre>
@@ -1560,7 +1588,7 @@ page</a>.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-03T01:10:42Z
+        Builded at 2024-03-04T01:07:53Z
         </p>
       </div>
     </div>
