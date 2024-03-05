@@ -90,16 +90,22 @@
                 <document><h1>pgxcrown</h1>
 <p>Build Postgres Extensions in Nim.</p>
 <h2>Usage</h2>
-<h3>1- Write your module</h3>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">pgxcrown</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">PG_MODULE_MAGIC</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">pg_add_one</span>(): <span class="ide">Datum</span> {<span class="op">.</span><span class="ide">pgv1</span><span class="op">.</span>} <span class="op">=</span> <span class="ide">returnInt32</span>( <span class="ide">getInt32</span>(<span class="num">0</span>) <span class="op">+</span> <span class="num">1</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">PG_FUNCTION_INFO_V1</span>(<span class="ide">pg_add_one</span>)</div></div>  </code></pre>
-<h3>2- Build a dynamic library</h3>
-<pre>  <code class="language-bash">nim c --d:release --app:lib pg_add_one.nim
+<h3>Create a pgxcrown project</h3>
+<pre>  <code class="language-bash">
+# this command will create your project structure
 
-#Linux
-#Copy your dynlib to postgres library directory
-cp *.so $(pg_config --pgklibdir)
+pgxtool create-project test
+
 </code></pre>
-<h3>3- Call your library function from Postgresql</h3>
+<h3>Write your code into main.nim</h3>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">add_one</span>(<span class="ide">a</span>: <span class="ide">int</span>): <span class="ide">int</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span> <span class="op">+</span> <span class="num">1</span></div></div>  </code></pre>
+<h3>Build a dynamic library</h3>
+<pre>  <code class="language-bash">
+pgxtool build-extension test
+
+cp *.so $(pg_config --pkglibdir)
+</code></pre>
+<h3>Call your library function from Postgresql</h3>
 <pre>  <code class="language-sql"># Enter into psql and create a function to wrap your library function
 # omit library extension.
 
@@ -109,7 +115,7 @@ language c strict;
 
 #Example
 create function nim_add_one(integer) return integer as
-&apos;libadd_one&apos;, &apos;pg_add_one&apos;
+&apos;libadd_one&apos;, &apos;pgx_add_one&apos;
 language c strict;
 
 select nim_add_one(10); # -&gt; 11
@@ -188,7 +194,7 @@ select nim_add_one(10); # -&gt; 11
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-04T01:07:53Z
+        Builded at 2024-03-05T01:06:50Z
         </p>
       </div>
     </div>
