@@ -95,7 +95,7 @@
 <img src="https://img.shields.io/badge/stability-experimental-orange.svg" style="max-width: 100%;" alt="Stability: experimental" /></p>
 <p>A Nim wrapper for <a href="https://github.com/facebook/rocksdb">Facebook&apos;s RocksDB</a>, a persistent key-value store for Flash and RAM Storage.</p>
 <h2>Current status</h2>
-<p>Nim-RocksDB currently provides a wrapper for the low-level functions of RocksDB</p>
+<p>Nim-RocksDB provides a wrapper for the low-level functions in the librocksdb c library.</p>
 <h2>Requirements</h2>
 <p>A RocksDB installation that provides <code>librocksdb.so</code>. This means that on Debian, and possibly on other Linux distros, you need &quot;librocksdb-dev&quot;, not just a versioned &quot;librocksdbX.Y&quot; package that only provides <code>librocksdb.so.X.Y.Z</code>.</p>
 <h2>Usage</h2>
@@ -104,13 +104,6 @@
 <p>To statically link librocksdb, you would do something like:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">LibrocksbStaticArgs</span><span class="op">=</span>'-l:librocksdb.a' <span class="op">--</span><span class="ide">gcc</span><span class="op">.</span><span class="ide">linkerexe</span><span class="op">=</span><span class="ide">g</span><span class="op">++</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="ide">your_program</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
 <p>(we need the C++ linker profile because it&apos;s a C++ library)</p>
-<h2>Future directions</h2>
-<p>In the future, Nim-RocksDB might provide a high-level API that:</p>
-<ul>
-<li>is more in line with Nim conventions (types in CamelCase),</li>
-<li>automatically checks for errors,</li>
-<li>leverage Nim features like destructors for automatic resource cleanup.</li>
-</ul>
 <h3>Contribution</h3>
 <p>Any contribution intentionally submitted for inclusion in the work by you shall be dual licensed as above, without any
 additional terms or conditions.</p>
@@ -198,7 +191,7 @@ and Jeff Dean (jeff@google.com)</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-05T01:06:50Z
+        Builded at 2024-03-06T01:07:24Z
         </p>
       </div>
     </div>

@@ -32593,6 +32593,17 @@ const packages = [
     "web": "https://github.com/thisago/instagram"
   },
   {
+    "name": "cppconst",
+    "url": "https://github.com/sls1005/nim-cppconst",
+    "method": "git",
+    "tags": [
+      "cpp"
+    ],
+    "description": "Nim wrapper for C++ const-qualified types.",
+    "license": "MIT",
+    "web": "https://github.com/sls1005/nim-cppconst"
+  },
+  {
     "name": "dither",
     "url": "https://github.com/Nycto/dither-nim",
     "method": "git",
@@ -32674,6 +32685,20 @@ const packages = [
     "web": "https://github.com/Q-Master/amqp-stats.nim"
   },
   {
+    "name": "nimAdif",
+    "url": "https://github.com/clzls/nimAdif",
+    "method": "git",
+    "tags": [
+      "ham",
+      "adif",
+      "parser",
+      "formatter"
+    ],
+    "description": "An Amateur Data Interchange Format (ADIF) formatter and parser.",
+    "license": "MIT",
+    "web": "https://github.com/clzls/nimAdif"
+  },
+  {
     "name": "selfpipe",
     "url": "https://github.com/tdely/selfpipe",
     "method": "git",
@@ -32742,6 +32767,19 @@ const packages = [
     "description": "Puyo Puyo and Nazo Puyo Application",
     "license": "Apache-2.0",
     "web": "https://github.com/izumiya-keisuke/pon2"
+  },
+  {
+    "name": "sat",
+    "url": "https://github.com/nim-lang/sat",
+    "method": "git",
+    "tags": [
+      "sat",
+      "official",
+      "solver"
+    ],
+    "description": "A SAT solver written in Nim.",
+    "license": "MIT",
+    "web": "https://github.com/nim-lang/sat"
   }
 ]
 
