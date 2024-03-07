@@ -98,15 +98,15 @@
                 <document><h1>nim-glfw</h1>
 <p><strong>nim-glfw</strong> provides a nice idiomatic Nim API to <a href="https://www.glfw.org/">GLFW</a>,
 the cross-platform OpenGL, OpenGL ES &amp; Vulkan library.</p>
-<p>Not all functionality is available through the Nim API yet; in those cases you
+<p>Not all functionality is available through the Nim API yet; in those cases, you
 can just use the native C bindings directly (by importing <code>glfw/wrapper</code>).
-Please also raise a ticket about the missing functionality so we can add it,
+Please raise a ticket about such the missing functionality so we can add it,
 or even better yet, give a shot at implementing it yourself and raise a PR!
-:smile:</p>
+:sunglasses:</p>
 <h2>Versioning</h2>
 <p>Versioning follows the <code>x.y.z.w</code> scheme, where <code>x.y.z</code> corresponds to the GLFW
-version being wrapped (e.g. <code>3.3.0</code>) and <code>w</code> to the patch version of the Nim
-wrapper (e.g.  <code>3.3.0.2</code>).</p>
+version being wrapped (e.g. <code>3.4.0</code>) and <code>w</code> to the patch version of the Nim
+wrapper (e.g.  <code>3.4.0.2</code>).</p>
 <h2>Installation</h2>
 <p>The best way to install the latest version of the package is via <code>nimble</code>:</p>
 <pre>  <code>nimble install glfw
@@ -128,10 +128,10 @@ linking) nimble task in the project root directory to compile all examples:</p>
 <h2>Usage</h2>
 <p>A <a href="/examples/minimal.nim">minimal example</a> to display a window for one second
 and then terminate:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">os</span>, <span class="ide">glfw</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">glfw</span><span class="op">.</span><span class="ide">initialize</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">DefaultOpenglWindowConfig</span></div></div><div class="line"><div class="line-content">  <span class="ide">c</span><span class="op">.</span><span class="ide">title</span> <span class="op">=</span> <span class="str">&quot;Minimal Nim-GLFW example&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">w</span> <span class="op">=</span> <span class="ide">newWindow</span>(<span class="ide">c</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">1000</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">w</span><span class="op">.</span><span class="ide">destroy</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">glfw</span><span class="op">.</span><span class="ide">terminate</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">std</span><span class="op">/</span><span class="ide">os</span></div></div><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">glfw</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span> <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="ide">glfw</span><span class="op">.</span><span class="ide">initialize</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">c</span> <span class="op">=</span> <span class="ide">DefaultOpenglWindowConfig</span></div></div><div class="line"><div class="line-content">  <span class="ide">c</span><span class="op">.</span><span class="ide">title</span> <span class="op">=</span> <span class="str">&quot;Minimal Nim-GLFW example&quot;</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">w</span> <span class="op">=</span> <span class="ide">newWindow</span>(<span class="ide">c</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sleep</span>(<span class="num">1000</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">w</span><span class="op">.</span><span class="ide">destroy</span>()</div></div><div class="line"><div class="line-content">  <span class="ide">glfw</span><span class="op">.</span><span class="ide">terminate</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">main</span>()</div></div>  </code></pre>
 <p>Check out the <a href="/examples">examples</a> directory for more complex examples!</p>
 <h3>Statically linking to GLFW</h3>
-<p>To link statically against GLFW (the C sources are bundled within the module),
+<p>To link statically against GLFW (the C sources are bundled with the module),
 define the conditional symbol <code>glfwStaticLib</code> (<code>-d:glfwStaticLib</code> or
 <code>--define:glfwStaticLib</code>).</p>
 <h2>Documentation</h2>
@@ -220,7 +220,7 @@ of the <a href="https://github.com/glfw/glfw/tree/master/examples">official GLFW
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-06T01:07:24Z
+        Builded at 2024-03-07T00:56:09Z
         </p>
       </div>
     </div>

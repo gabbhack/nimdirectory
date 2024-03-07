@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">sunny</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">json</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">JSON in Nim with Go-like field tags</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install sunny" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>Sunny</h1>
+<p>  <code>nimble install sunny</code></p>
+<p>  <a href="https://guzba.github.io/sunny/">API reference</a></p>
+<p>Sunny is fast JSON library for Nim that supports field tags like those found in Go. Field tags help make working with real-world JSON comfortable and easy.</p>
+<h2>The basics</h2>
+<p>To parse JSON into an instance, use <code>fromJson</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sunny</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">MyType</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">MyType</span><span class="op">.</span><span class="ide">fromJson</span>("""{"a":3,"b":"foo"}""")</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">instance</span><span class="op">.</span><span class="ide">a</span> <span class="op">==</span> <span class="num">3</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">instance</span><span class="op">.</span><span class="ide">b</span> <span class="op">==</span> <span class="str">&quot;foo&quot;</span></div></div>  </code></pre>
+<p>To encode an instance to JSON, use <code>toJson</code>:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sunny</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">MyType</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">a</span>: <span class="ide">int</span></div></div><div class="line"><div class="line-content">  <span class="ide">b</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">MyType</span>(<span class="ide">a</span>: <span class="num">42</span>, <span class="ide">b</span>: <span class="str">&quot;boo&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">instance</span><span class="op">.</span><span class="ide">toJson</span>() <span class="com"># &quot;&quot;&quot;{&quot;a&quot;:42,&quot;b&quot;:&quot;boo&quot;}&quot;&quot;&quot;</span></div></div>  </code></pre>
+<h2>Using field tags</h2>
+<p>Sunny supports field tags exactly like those found in Go. Field tags are a comma-separated list and the first tag is always used for optionally renaming a field.</p>
+<p>The supported tags are currently <code>rename/skip</code>, <code>omitempty</code>, <code>required</code> and <code>string</code>.</p>
+<h3>Renaming fields</h3>
+<p>Often the JSON you need to consume (or produce) will not use the style convention you wish it did. This makes being able to rename fields easily very helpful. The new name for a field is <strong>always</strong> the first tag.</p>
+<p>This new name will be used by both <code>fromJson</code> and <code>toJson</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">myField</span> {<span class="op">.</span><span class="ide">json</span>: <span class="str">&quot;my_field&quot;</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">Example</span><span class="op">.</span><span class="ide">fromJson</span>("""{"my_field":9000}""")</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">instance</span><span class="op">.</span><span class="ide">myField</span> <span class="op">==</span> <span class="num">9000</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">Example</span>(<span class="ide">myField</span>: <span class="op">-</span><span class="num">1</span>)<span class="op">.</span><span class="ide">toJson</span>() <span class="com"># &quot;&quot;&quot;{&quot;my_field&quot;:-1}&quot;&quot;&quot;</span></div></div>  </code></pre>
+<h3>Skipping fields</h3>
+<p>Another common situation is having some fields on an object that you never want to be included in the JSON output. A special tag of &quot;-&quot; indicates the field should be skipped.</p>
+<p>This skips the field in both <code>fromJson</code> and <code>toJson</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">myField</span> {<span class="op">.</span><span class="ide">json</span>: <span class="str">&quot;-&quot;</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">Example</span>(<span class="ide">myField</span>: <span class="num">42</span>)<span class="op">.</span><span class="ide">toJson</span>() <span class="com"># &quot;&quot;&quot;{}&quot;&quot;&quot;</span></div></div>  </code></pre>
+<h3>Omitting empty fields</h3>
+<p>In situations such as providing a JSON API for public consumption, you may want to omit including keys when they contain a default or empty value. This can avoid confusion around if there is difference between <code>&quot;key&quot;:null</code> and <code>&quot;key&quot;</code> not being present.</p>
+<p>Using the <code>omitempty</code> tag will result in <code>toJson</code> not including the field when encoding JSON if the field is empty, meaning the value is 0, an empty string, an empty seq, or an empty object.</p>
+<p>(Be mindful of the the leading <code>,</code> which leaves first tag empty indicating the field should not be renamed.)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">foo</span> {<span class="op">.</span><span class="ide">json</span>: <span class="str">&quot;,omitempty&quot;</span><span class="op">.</span>}: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">Example</span>(<span class="ide">foo</span>: <span class="str">&quot;&quot;</span>)<span class="op">.</span><span class="ide">toJson</span>() <span class="com"># &quot;&quot;&quot;{}&quot;&quot;&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">Example</span>(<span class="ide">foo</span>: <span class="str">&quot;bar&quot;</span>)<span class="op">.</span><span class="ide">toJson</span>() <span class="com"># &quot;&quot;&quot;{&quot;foo&quot;:&quot;bar&quot;}&quot;&quot;&quot;</span></div></div>  </code></pre>
+<h3>Required fields</h3>
+<p>While this tag does not exist in Go, Sunny supports the <code>required</code> tag.</p>
+<p>Using this tag indicates that the field must be both present in the JSON and must not be <code>null</code>. If the field is missing or <code>null</code>, an exception is raised.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> {<span class="op">.</span><span class="ide">json</span>: <span class="str">&quot;,required&quot;</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Both of these raise an exception since `x` is tagged as a required field.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">Example</span><span class="op">.</span><span class="ide">fromJson</span>("""{}""")</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">Example</span><span class="op">.</span><span class="ide">fromJson</span>("""{"x":null}""")</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># This works since `x` is present and non-`null`.</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">Example</span><span class="op">.</span><span class="ide">fromJson</span>("""{"x":9000}""")</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">instance</span><span class="op">.</span><span class="ide">x</span> <span class="op">==</span> <span class="num">9000</span></div></div>  </code></pre>
+<h3>The string field tag</h3>
+<p>It is quite common to find JSON APIs that encode numbers as strings. This is usually motivated by Javascript which has an interesting approach to numbers.</p>
+<p>In Nim, you may want to parse a field as a number (integer or floating-point) even if it may be encoded as a string JSON. Using the <code>string</code> field tag makes this easy.</p>
+<p>This field tag applies to both <code>fromJson</code> and <code>toJson</code>.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">x</span> {<span class="op">.</span><span class="ide">json</span>: <span class="str">&quot;,string&quot;</span><span class="op">.</span>}: <span class="ide">int</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">instance</span> <span class="op">=</span> <span class="ide">Example</span><span class="op">.</span><span class="ide">fromJson</span>("""{"x":"42"}""")</div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">instance</span><span class="op">.</span><span class="ide">x</span> <span class="op">==</span> <span class="num">42</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">Example</span>(<span class="ide">x</span>: <span class="num">42</span>)<span class="op">.</span><span class="ide">toJson</span>() <span class="com"># &quot;&quot;&quot;{&quot;x&quot;:&quot;42&quot;}&quot;&quot;&quot;</span></div></div>  </code></pre>
+<h3>Using multiple field tags</h3>
+<p>Using multiple field tags is supported and easy to do since they are just a comma-separated list:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">myField</span> {<span class="op">.</span><span class="ide">json</span>: <span class="str">&quot;my_field,omitempty,string&quot;</span><span class="op">.</span>}: <span class="ide">int</span></div></div>  </code></pre>
+<h2>Custom <code>fromJson</code> and <code>toJson</code></h2>
+<p>While using field tags solves many of the most common problems when working with JSON, sometimes more control is needed.</p>
+<p>Taking inspiration from <a href="https://github.com/treeform/jsony">jsony</a>, Sunny supports calling custom <code>fromJson</code> and <code>toJson</code> hooks for types where you need more control than field tags provide.</p>
+<p>For the example below lets imagine that <code>Example.data</code> holds binary data. Binary data does not mix with JSON since JSON must be UTF-8 encoded. By implementing custom <code>fromJson</code> and <code>toJson</code> procs, the binary data can be transparently base64 encoded/decoded making it perfectly safe for JSON.</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sunny</span>, <span class="ide">std</span><span class="op">/</span><span class="ide">base64</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Example</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="ide">data</span>: <span class="ide">string</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fromJson</span><span class="op">*</span>(<span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">Example</span>, <span class="ide">value</span>: <span class="ide">JsonValue</span>, <span class="ide">input</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Call the default `fromJson` in `sunny` to do the initial parsing.</span></div></div><div class="line"><div class="line-content">  <span class="ide">sunny</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">v</span>, <span class="ide">value</span>, <span class="ide">input</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># Now overwrite `data` with the base64 decoded raw bytes.</span></div></div><div class="line"><div class="line-content">  <span class="ide">v</span><span class="op">.</span><span class="ide">data</span> <span class="op">=</span> <span class="ide">base64</span><span class="op">.</span><span class="ide">decode</span>(<span class="ide">v</span><span class="op">.</span><span class="ide">data</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">toJson</span><span class="op">*</span>(<span class="ide">src</span>: <span class="ide">Example</span>, <span class="ide">s</span>: <span class="kwd">var</span> <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Here we make a new temporary instance and assign `data` to be the</span></div></div><div class="line"><div class="line-content">  <span class="com"># base64 encoded string instead of the raw bytes.</span></div></div><div class="line"><div class="line-content">  <span class="kwd">var</span> <span class="ide">tmp</span>: <span class="ide">Example</span></div></div><div class="line"><div class="line-content">  <span class="ide">tmp</span><span class="op">.</span><span class="ide">data</span> <span class="op">=</span> <span class="ide">base64</span><span class="op">.</span><span class="ide">encode</span>(<span class="ide">src</span><span class="op">.</span><span class="ide">data</span>)</div></div><div class="line"><div class="line-content">  <span class="com"># Call the default `toJson` in `sunny` now that `data` is safely base64 encoded.</span></div></div><div class="line"><div class="line-content">  <span class="ide">sunny</span><span class="op">.</span><span class="ide">toJson</span>(<span class="ide">tmp</span>, <span class="ide">s</span>)</div></div>  </code></pre>
+<p>To implement behavior similar to <a href="https://github.com/treeform/jsony">jsony</a>&apos;s <code>newHook</code> and <code>postHook</code>, try something like this:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">fromJson</span><span class="op">*</span>(<span class="ide">v</span>: <span class="kwd">var</span> <span class="ide">Example</span>, <span class="ide">value</span>: <span class="ide">JsonValue</span>, <span class="ide">input</span>: <span class="ide">string</span>) <span class="op">=</span></div></div><div class="line"><div class="line-content">  <span class="com"># Any code before `sunny.fromJson` is the equivalent of a `newHook`.</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">sunny</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">v</span>, <span class="ide">value</span>, <span class="ide">input</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="com"># Anything after `sunny.fromJson` is the equivalent of a `postHook`.</span></div></div>  </code></pre>
+<p>Note that you do not need to re-implement parsing just to have a custom hook, simply calling <code>sunny.fromJson</code> will take care of all the default behaviors including field tags.</p>
+<h2>Raw JSON</h2>
+<p>Some JSON APIs use a form of variant object, where a <code>type</code> field will indicate what is stored in another field like <code>object</code>. By using <code>RawJson</code> you can indicate that a field should be treated as unparsed JSON which can then be parsed into a specific object type at a later time:</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Container</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  `<span class="kwd">type</span>`: <span class="ide">string</span></div></div><div class="line"><div class="line-content">  `<span class="kwd">object</span>`: <span class="ide">RawJson</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">a</span> <span class="op">=</span> <span class="ide">Container</span><span class="op">.</span><span class="ide">fromJson</span>("""{"type":"event","object":{}}""")</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">type</span> <span class="ide">Event</span> <span class="op">=</span> <span class="kwd">object</span></div></div><div class="line"><div class="line-content">  <span class="com"># ...</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">b</span> <span class="op">=</span> <span class="ide">Event</span><span class="op">.</span><span class="ide">fromJson</span>(<span class="ide">a</span><span class="op">.</span>`<span class="kwd">object</span>`)</div></div>  </code></pre>
+<h2>Default behaviors</h2>
+<p>Sunny&apos;s default behavior when parsing fields is loose / not strict.</p>
+<ul>
+<li>Fields are not required (use <code>required</code> field tag to become stricter).</li>
+<li>A missing field and <code>&quot;field&quot;: null</code> are treated as the same thing.</li>
+</ul>
+<p>This means you can easily parse the parts of a JSON blob you care about without a headache.</p>
+<p>While Sunny is loose about the presence / absence of fields, Sunny is strict about certain things to protect against unexpected bugs. These include:</p>
+<ul>
+<li>Detecting duplicate keys when parsing JSON (raises an exception instead of last-key-wins or something odd like that).</li>
+<li>Invalid UTF-8 will be detected and raise an exception (JSON must be valid UTF-8).</li>
+<li>All JSON values are validated as part of parsing, avoiding frustrating &quot;parses-on-my-machine&quot; situations caused by things like &quot;10_000&quot; working in Nim&apos;s <code>parseInt</code> while not being valid JSON.</li>
+</ul>
+<p>In addition to those protective measures, Sunny is also an iterative parser. This is very important when parsing untrusted inputs. A recursive parser attempting to parse an adversarial JSON blob can result in a stack overflow, terminating your process with zero information about what happened or why. This is not a great situation to find oneself in.</p>
+<h2>Performance</h2>
+<p>Sunny is a performance-aware library that includes some SIMD-optimized fast-paths. I&apos;ll include some benchmarks here later but you can expect significantly faster parsing and encoding than std/json. The performance is ~ the same as that of <a href="https://github.com/treeform/jsony">jsony</a>.</p>
+<h2>Testing</h2>
+<p>To prevent Sunny from causing a crash or otherwise misbehaving on bad JSON, a fuzzer has been run against it. You can run the fuzzer any time by running <code>nim c -r tests/fuzz.nim</code></p>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/guzba/sunny">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2024-03-07T00:56:09Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>

@@ -79,7 +79,20 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <p class="no-readme"><i>The package README is not present or from an unsupported forge.</i></p>
+                <document><h1>nimvisa</h1>
+<p>nimvisa is C wrapper for NI-VISA instrument control library</p>
+<p>As I cannot find a visa library for Nim, I decided to do it by myself.</p>
+<p><strong>visa_wrapper.nim</strong> is the FFI of  C wrapper of NI-Visa to Nim</p>
+<p><strong>nimvisa.nim</strong> is high level based on visa_wrapper and inspired by <a href="https://github.com/pyvisa/pyvisa">pyvisa</a>. Only necessary procs(function) are implemented, and others to be done later when necessary.</p>
+<h2>Installation</h2>
+<pre>  <code class="language-shell">nimble install nimvisa
+</code></pre>
+<h2>Testing your installation</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rm</span> <span class="op">=</span> <span class="ide">newResourceManager</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">rm</span><span class="op">.</span><span class="ide">list_resources</span>() <span class="com"># print all the resources.</span></div></div>  </code></pre>
+<h2>Example</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimvisa</span></div></div><div class="line"><div class="line-content"><span class="com"># an example to control Rigol DP832 DC power supply by USB cable</span></div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">rm</span> <span class="op">=</span> <span class="ide">newResourceManager</span>()</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">rm</span><span class="op">.</span><span class="ide">list_resources</span>()</div></div><div class="line"><div class="line-content"><span class="kwd">let</span> <span class="ide">my_instrument</span> <span class="op">=</span> <span class="ide">rm</span><span class="op">.</span><span class="ide">open_resource</span>(<span class="str">&quot;USB0::0x1AB1::0x0E11::DP8C185151484::INSTR&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">my_instrument</span><span class="op">.</span><span class="ide">query</span>(<span class="str">&quot;*IDN?&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">my_instrument</span><span class="op">.</span><span class="ide">write</span>(<span class="str">&quot;:APPL CH1,0.6,0.4&quot;</span>) <span class="com"># set channel 1 to 0.6V and current limitation to 0.4A</span></div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">my_instrument</span><span class="op">.</span><span class="ide">query</span>(<span class="str">&quot;:APPL? CH1&quot;</span>)</div></div><div class="line"><div class="line-content"><span class="ide">rm</span><span class="op">.</span><span class="ide">close</span>()</div></div>  </code></pre>
+<p>As limited bandwidth, I only implemented it on windows10 64-bit system.</p>
+</document>
             
         </div>
         <div class="col-3" id="meta-section">
@@ -147,7 +160,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-06T01:07:24Z
+        Builded at 2024-03-07T00:56:09Z
         </p>
       </div>
     </div>
