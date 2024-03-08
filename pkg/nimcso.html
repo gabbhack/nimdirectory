@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nim Package Directory</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="New and updated Nim packages" href="https://nimble.directory/packages.xml">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlite.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a href="https://nim-lang.org/" class="nav-link">What's Nim?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/about.html" class="nav-link">What's Nimble?</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="https://github.com/nim-lang/packages/" class="nav-link">Publish your package</a>
+        </li>
+        <!-- TODO: replace with something different -->
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link theme-switcher-btn" id="darkmode" onclick="toggle_dark_mode()" href="#">
+            <span id="light-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span id="dark-mode-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="container">
+    <div class="container pt-10">
+        <h3 class="mb-3 fw-bold display-6 pt-4">nimcso</h3>
+        <p class="tags">
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">optimization</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">metaprogramming</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">databases</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">data selection</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ai</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">ml</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">science</button></a>
+                </span>
+            
+        </p>
+        
+            <p class="pkg-desc">nim Composition Space Optimization: A high-performance tool leveraging metaprogramming to implement several methods for selecting components (data dimensions) in compositional datasets, as to optimize the data availability and density for applications such as machine learning.</p>
+        
+        <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
+            alt="Copy on clipboard">
+            <i class="fa fa-copy"></i>
+        </a>
+        <input id="cmd" onclick="this.select();" value="nimble install nimcso" readonly="">
+        <br>
+        <small style="font-size: 0.8rem;">Need help? Read <a
+                href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
+    </div>
+
+    <div class="container row pt-4" id="pkg-content">
+        <div class="col-8 box rounded p-3" id="readme-section">
+            
+                <document><h1>(nim) Composition Space Optimization</h1>
+<p><a href="https://nimcso.phaseslab.org">  <img src="https://img.shields.io/badge/API-Documentation-e?logo=bookstack&amp;logoColor=white&amp;link=https%3A%2F%2Famkrajewski.github.io%2Fnimcso%2F" style="max-width: 100%;" alt="Static Badge" /></a>
+<a href="https://opensource.org/licenses/MIT">  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="max-width: 100%;" alt="License: MIT" /></a>
+<a href="https://nimble.directory/pkg/nimcso">  <img src="https://raw.githubusercontent.com/amkrajewski/nimble-badge/master/badges/nimcso.svg" style="max-width: 100%;" alt="Nimble Package" height="20" /></a>
+<a href="paper/paper.pdf">  <img src="https://img.shields.io/badge/JOSS%20Article-Draft-Badge?color=orange" style="max-width: 100%;" alt="Paper" /></a>
+<a href="https://doi.org/10.48550/arXiv.2403.02340">  <img src="https://img.shields.io/badge/arXiv-2403.02340-8F1515?style=flat&amp;logo=arxiv&amp;logoColor=red" style="max-width: 100%;" alt="Arxiv" /></a></p>
+<p><a href="https://github.com/amkrajewski/nimCSO/actions/workflows/testingOnPush_Apple.yaml">  <img src="https://github.com/amkrajewski/nimCSO/actions/workflows/testingOnPush_Apple.yaml/badge.svg" style="max-width: 100%;" alt="MacOS Tests (M1)" /></a>
+<a href="https://github.com/amkrajewski/nimCSO/actions/workflows/testingOnPush_Linux.yaml">  <img src="https://github.com/amkrajewski/nimCSO/actions/workflows/testingOnPush_Linux.yaml/badge.svg" style="max-width: 100%;" alt="Linux (Ubuntu) Tests" /></a>
+<a href="https://github.com/amkrajewski/nimCSO/actions/workflows/testingOnPush_Windows.yaml">  <img src="https://github.com/amkrajewski/nimCSO/actions/workflows/testingOnPush_Windows.yaml/badge.svg" style="max-width: 100%;" alt="Windows Tests" /></a></p>
+<p><strong>nim</strong> <strong>C</strong>omposition <strong>S</strong>pace <strong>O</strong>ptimization is a high-performance tool implementing several methods for selecting components (data dimensions) in compositional datasets, which
+optimize the data availability and density for applications such as machine learning (ML) given a constraint on the number of components to be selected, so that they can be designed in a way balancing their accuracy and domain of applicability. Making said choice is a <em>combinatorically hard
+problem when data is composed of a large number of independent components due to the interdependency of components being present</em>. Thus, efficiency of the search becomes critical for any
+application where interaction between components is of interest in a modeling effort, ranging:</p>
+<ul>
+<li>from market <strong>economics</strong>,</li>
+<li>through <strong>medicine</strong> where drug interactions can have a significant impact on the treatment,</li>
+<li>to <strong>materials science</strong>, where the composition and processing history are critical to resulting properties.</li>
+</ul>
+<p>We are particularily interested in the latter case of materials science, where we utilize <code>nimCSO</code> to optimize ML deployment over our datasets on Compositionally Complex Materials (CCMs)
+which are largest ever collected (from almost 550 publications) spanning up to 60 dimensions and developed within the <a href="https://ultera.org">ULTERA Project (ultera.org)</a> carried under the
+<a href="https://arpa-e.energy.gov/?q=arpa-e-programs/ultimate">US DOE ARPA-E ULTIMATE</a> program which aims to develop
+a new generation of ultra-high temperature materials for aerospace applications, through generative machine learning models <a href="https://doi.org/10.20517/jmi.2021.05">10.20517/jmi.2021.05</a>
+driving thermodynamic modeling and experimentation <a href="https://dx.doi.org/10.2139/ssrn.4689687">10.2139/ssrn.4689687</a>.</p>
+<p>At its core, <code>nimCSO</code> leverages the <strong>metaprogramming</strong> ability of the <a href="https://nim-lang.org">Nim language</a> to optimize itself at the compile time, both in terms of speed and memory handling,
+to the specific problem statement and dataset at hand based on a human-readable configuration file. As demonstrated later in benchamrks, <code>nimCSO</code> reaches the physical limits of the hardware
+(L1 cache latency) and can outperform an efficient native Python implementation over 400 times in terms of speed and 50 times in terms of memory usage (<em>not</em> counting interpreter), while
+also outperforming NumPy implementation 35 and 17 times, respectively, when checking a candidate solution.</p>
+<p>  <img src="paper/assets/nimCSO_mainFigure.png" style="max-width: 100%;" alt="Main nimCSO figure" /></p>
+<p><code>nimCSO</code> is designed to be both (1) a user-ready tool (see figure above), implementing:</p>
+<ul>
+<li><strong>Efficient brute force approaches</strong> (for handling up to 25 dimensions)</li>
+<li><strong>Custom search algorithm</strong> (for up to 40 dimensions)</li>
+<li><strong>Genetic algorithm</strong> (for any dimensionality)</li>
+</ul>
+<p>and (2) a scaffold for building even more elaborate methods in the future, including heuristics going beyond
+data availability. All configuration is done with a simple human-readable <code>YAML</code> config file and plain text data files, making it easy to modify the search method and its parameters with
+no knowledge of programming and only basic command line skills. A single command is used to recompile (<code>nim c -f</code>) and run (<code>-r</code>) problem (<code>-d:configPath=config.yaml</code>) with <code>nimCSO</code>
+(<code>src/nimcso</code>) using one of several methods. Advanced users can also quickly customize the provided methods with brief scripts using the <code>nimCSO</code> as a data-centric library.</p>
+<h1>Usage</h1>
+<h2>Quick Start</h2>
+<p><strong>To use <code>nimCSO</code> you don&apos;t even need to install anything, as long as you have a (free) GitHub account, since we prepared a pre-configured Codespace for you!</strong> Simply click on the link below and it will create a cloud development environment for you, with all dependencies installed for you through <a href="https://docs.conda.io/en/latest/">Conda</a> and <a href="https://github.com/nim-lang/nimble">Nimble</a> package managers. You can then run <code>nimCSO</code> through terminal or play with a Jupyter notebook we prepared.</p>
+<p>  <a href="https://codespaces.new/amkrajewski/nimCSO?quickstart=1">    <img src="https://github.com/codespaces/badge.svg" style="max-width: 100%;" alt="Open in GitHub Codespaces" />  </a></p>
+<p>  <strong>Note: If you want to install   <code>nimCSO</code> yourself, follow the instructions in the   <a href="#installation">Installation</a> section.</strong></p>
+<h2>config.yaml</h2>
+<p>The <code>config.yaml</code> file is the critical component which defines several required parameters listed below. You can either just change the values in the provided <code>config.yaml</code> or create a custom one, like the <code>config_rhea.yaml</code>, and point to it at the compilation with <code>-d:configPath=config_rhea.yaml</code> flag. Inside, you will need to define the following parameters:</p>
+<ul>
+<li>
+<p><strong>taskName</strong> - A <code>string</code> with the name of the task. It does <em>not</em> affect the results in any way, except for being printed during runtime for easier identification.</p>
+</li>
+<li>
+<p><strong>taskDescription</strong> - A <code>string</code> with the description of the task. It does <em>not</em> affect the results in any way, except for being printed during runtime for easier identification.</p>
+</li>
+<li>
+<p><strong>datasetPath</strong> - A <code>string</code> with the path (relative to CWD) with the dataset file. Please see <a href="#dataset-files">Dataset files</a> below for details on its content.</p>
+</li>
+<li>
+<p><strong>elementOrder</strong> - A list of <code>string</code>s with the names of the elements in the dataset. The <em>order</em> does <em>not</em> affect the results in any way, except for the order in which the elements will be printed in the resulting solutions. It <em>does</em> determine the order in which they are stored internally though, so if you are an advanced user and, e.g., write a custom heuristic, you may want to take advantage of this to, e.g., assign a list of weights to the elements.</p>
+</li>
+</ul>
+<h2>Dataset Files</h2>
+<p>We wanted to make creating the input dataset as simple and as cross-platform as possible, thus <strong>the dataset file should be plain text file containing one set of elements (in any order) per line separated by commas.</strong> You can use <code>.txt</code> or <code>.csv</code> file extensions interchangeably, with no effect on the <code>nimCSO</code> behavior, but note that editing CSV with Excel in some countries (e.g., Italy) may casuse issues. The dataset should <em>not</em> contain any header. <strong>The dataset can contain any elements, as the one not present in the <code>elementOrder</code> will be ignored</strong> at the parsing stage. It will generally look like:</p>
+<pre>  <code class="language-csv">Al,Cr,Hf,Mo,Ni,Re,Ru,Si,Ta,Ti,W
+Al,Co,Cr,Cu,Fe,Ni,Ti
+Al,B,C,Co,Cr,Hf,Mo,Ni,Ta,Ti,W,Zr
+Mo,Nb,Si,Ta,W
+Co,Fe,Mo,Ni,V
+Hf,Nb,Ta,Ti,Zr
+Mo,Nb,Ta,V,W
+Al,Co,Cr,Fe,Ni,Si,Ti
+Al,Co,Cr,Cu,Fe,Ni
+</code></pre>
+<p>you are also welcome to align the elements in columns, like below,</p>
+<pre>  <code class="language-csv">Al, B, Co, Cr
+    B,     Cr, Fe, Ni
+Al,    Co,     Fe, Ni
+</code></pre>
+<p>but having empty fields is not allowed, so <code>Al,  ,Co,Cr, , ,W</code> would not be parsed correctly.</p>
+<p>The dataset provided by default with <code>nimCSO</code> comes from a snapshot of the ULTERA Database and lists elements in &quot;aggregated&quot; alloys, which means every entry corresponds to a unique HEA composition-processing-structure triplet (which has from one to several attached properties). The dataset access is currently limited, but once published, you will be able to obtain it (and newer versions) with Python code like this using the <code>pymongo</code> library:</p>
+<pre>  <code class="language-python"><div class="line"><div class="line-content"></div></div>  </code></pre>
+<h1>Installation</h1>
+<p>If you want to use nimCSO on your machine (local or remote), the best course of action is likely to install dependencies and clone the software so that you can get a ready-to-use setup you can also customize.You can do it fairly easily in just a couple minutes.</p>
+<p>First you need to install Nim <a href="https://nim-lang.org/">Nim</a> which on most Unix (Linux/MacOS) systems is as simple as using:</p>
+<ul>
+<li>
+<p><a href="https://docs.conda.io/en/latest/">  <strong>conda</strong></a> (or <code>mamba</code>) cross-platform package manager:</p>
+<pre>  <code class="language-cmd">conda install -c conda-forge nim
+</code></pre>
+</li>
+<li>
+<p>your distribution&apos;s package manager, for instance on Ubuntu/Debian <strong>Linux</strong>:</p>
+<pre>  <code class="language-cmd">apt-get install nim
+</code></pre>
+</li>
+<li>
+<p>on <strong>MacOS</strong>, assuming you have <a href="https://brew.sh/">Homebrew</a> installed:</p>
+<pre>  <code class="language-cmd">brew install nim
+</code></pre>
+</li>
+<li>
+<p>on <strong>Windows</strong>, you may want to follow these <a href="https://nim-lang.org/install.html">installation instructions</a></p>
+</li>
+</ul>
+<p>Then, you can use the boundeled <a href="https://github.com/nim-lang/nimble">Nimble</a> tool (package manager for Nim, similar to Rust&apos;s <em>crate</em> or Python&apos;s <em>pip</em>) to install two top-level dependencies:
+<a href="https://github.com/mratsim/Arraymancer">arraymancer</a>, which is a powerful N-dimensional array library, and <a href="https://nimyaml.org/index.html">yaml</a> which
+parses the configuration files. Its a single command:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">nimble</span> install  -y arraymancer yaml</div></div>  </code></pre>
+<p>Finally, you can clone the repository and compile the library with:</p>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">git</span> clone <span class="ide">https://github.com/amkrajewski/nimcso</span></div></div><div class="line"><div class="line-content"><span class="kwd">cd</span> nimcso</div></div><div class="line"><div class="line-content"><span class="kwd">nim</span> c -r -f -d:release <span class="ide">src/nimcso</span></div></div>  </code></pre>
+<p>which will compile the library and print out concise <code>help</code> message with available CLI options. And now, you are ready to use <code>nimCSO</code> :)</p>
+<h1>Citing</h1>
+</document>
+            
+        </div>
+        <div class="col-3" id="meta-section">
+            <div class="container box rounded p-3">
+                
+                    <p>
+                        <strong>Licence:</strong>
+                        MIT
+                    </p>
+                
+
+                
+                    <p> <a href="https://github.com/amkrajewski/nimcso">Project website</a> </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer class="pt-10 px-3">
+  <div class="container pt-4">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <h4 class="h5">Getting started with Nim</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://learnxinyminutes.com/docs/nim/">Learn Nim in 5 minutes</a></li>
+          <li><a class="text-decoration-none" href="https://nim-by-example.github.io/">Nim by Example</a></li>
+          <li><a class="text-decoration-none" href="https://play.nim-lang.org/">Official Playground</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Official Tutorials</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut1.html">General Tutorial</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut2.html">Advanced Features</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tut3.html">Macros and Metaprogramming</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Nim for...</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-C-programmers">C programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-Python-Programmers">Python programmers</a></li>
+          <li><a class="text-decoration-none" href="https://github.com/nim-lang/Nim/wiki/Nim-for-TypeScript-Programmers">TypeScript programmers</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5">Documentation</h4>
+        <ul>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/lib.html">Standard Library</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/manual.html">Language Manual</a></li>
+          <li><a class="text-decoration-none" href="https://nim-lang.org/docs/tools.html">Tools Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center mt-4 mx-auto">
+        <a href="#" class="d-block mb-3 mx-auto bw"></a>
+        <p class="text-muted">
+        Created in <a href="https://nim-lang.org/">Nim</a> on <a href="https://pages.github.com/">GitHub Pages</a>.
+        <a href="https://github.com/gabbhack/nimidirectory">Available</a>
+        under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
+        </p>
+        <p class="text-muted">
+        Builded at 2024-03-08T01:06:48Z
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
