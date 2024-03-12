@@ -32827,9 +32827,21 @@ const packages = [
     "description": "A SAT solver written in Nim.",
     "license": "MIT",
     "web": "https://github.com/nim-lang/sat"
+  },
+  {
+    "name": "nginwho",
+    "url": "https://github.com/pouriyajamshidi/nginwho",
+    "method": "git",
+    "tags": [
+      "nginx",
+      "linux",
+      "nginx log parser"
+    ],
+    "description": "A lightweight and extremely fast nginx log parser that stores the result into a sqlite3 database for further analysis and action",
+    "license": "MIT",
+    "web": "https://github.com/pouriyajamshidi/nginwho"
   }
 ]
-
 const options = {
     includeScore: false,
     keys: [

@@ -160,7 +160,7 @@ The only requirement is to have <a href="https://nim-lang.org/">Nim</a> installe
 helps with the Python bindings. You can do it with a single command:</p>
 <pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">nimble</span> install  -y arraymancer nimpy</div></div>  </code></pre>
 <p>Finally, you can clone the repository and compile the library with:</p>
-<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">git</span> clone <span class="ide">https://github.com/amkrajewski/nimplex</span></div></div><div class="line"><div class="line-content"><span class="kwd">cd</span> nimplex</div></div><div class="line"><div class="line-content"><span class="kwd">nim</span> c -r -d:release <span class="ide">nimplex.nim</span> -benchmark</div></div>  </code></pre>
+<pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">git</span> clone <span class="ide">https://github.com/amkrajewski/nimplex</span></div></div><div class="line"><div class="line-content"><span class="kwd">cd</span> nimplex</div></div><div class="line"><div class="line-content"><span class="kwd">nim</span> c -r -d:release <span class="ide">nimplex.nim</span> --benchmark</div></div>  </code></pre>
 <p>which will compile the library and run a few benchmarks to make sure everything runs smoothly. You should then see a compiled binary file <code>nimplex</code> in the current directory which exposes the CLI tool.</p>
 <p>If you want to use the <strong>Python bindings</strong>, you can compile the library with slightly different flags (depending on your system configuration) like so for Linux/MacOS:</p>
 <pre>  <code class="language-cmd"><div class="line"><div class="line-content"><span class="kwd">nim</span> c --d:release --threads:on --app:lib <span class="ide">--out:nimplex.so</span> nimplex</div></div>  </code></pre>
@@ -322,7 +322,7 @@ compare performance across implementations (<code>simplex_graph(3, 1000)</code> 
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-11T01:08:14Z
+        Builded at 2024-03-12T01:06:50Z
         </p>
       </div>
     </div>
