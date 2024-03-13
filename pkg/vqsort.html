@@ -55,34 +55,38 @@
 <div class="content">
   <div class="container">
     <div class="container pt-10">
-        <h3 class="mb-3 fw-bold display-6 pt-4">codegenlib</h3>
+        <h3 class="mb-3 fw-bold display-6 pt-4">vqsort</h3>
         <p class="tags">
             
                 <span class="tag">
-                    <button class="btn-tag pkg-btn-tag">library</button></a>
+                    <button class="btn-tag pkg-btn-tag">data</button></a>
                 </span>
             
                 <span class="tag">
-                    <button class="btn-tag pkg-btn-tag">codegen</button></a>
+                    <button class="btn-tag pkg-btn-tag">optimization</button></a>
                 </span>
             
                 <span class="tag">
-                    <button class="btn-tag pkg-btn-tag">codegeneration</button></a>
+                    <button class="btn-tag pkg-btn-tag">sorting</button></a>
                 </span>
             
                 <span class="tag">
-                    <button class="btn-tag pkg-btn-tag">java</button></a>
+                    <button class="btn-tag pkg-btn-tag">simd</button></a>
+                </span>
+            
+                <span class="tag">
+                    <button class="btn-tag pkg-btn-tag">quicksort</button></a>
                 </span>
             
         </p>
         
-            <p class="pkg-desc">A simple code generation library for other programming languages.</p>
+            <p class="pkg-desc">A vectorized Quicksort (AVX2-only)</p>
         
         <a title="Copy" onclick="document.querySelector('#cmd').select();document.execCommand('copy');"
             alt="Copy on clipboard">
             <i class="fa fa-copy"></i>
         </a>
-        <input id="cmd" onclick="this.select();" value="nimble install codegenlib" readonly="">
+        <input id="cmd" onclick="this.select();" value="nimble install vqsort" readonly="">
         <br>
         <small style="font-size: 0.8rem;">Need help? Read <a
                 href="https://github.com/nim-lang/nimble#creating-packages">Nimble</a></small>
@@ -91,25 +95,15 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>CodeGenLib</h1>
-<p>A library made for the sole purpose of code generation, for use in things such as for codegen in compilers.
-This project is going to be used in a W.I.P project of mine for Java codegen with Nim.</p>
-<p>This package is listed on Nimble and can be installed with <code>nimble install CodeGenLib</code>.</p>
-<h2>Currently Supported</h2>
-<ul>
-<li>Java
-<ul>
-<li>This is a small subset of Java.</li>
-</ul>
-</li>
-</ul>
-<h2>To-Do</h2>
-<ul>
-<li>[ ] For the love of god please properly reorganise this so it&apos;s semi-sane.</li>
-<li>[ ] Look into using ropes rather than string manipulation? Unsure how it works.</li>
-<li>[ ] Implement enum/record/interface/abstract class support.</li>
-<li>[ ] Document the code properly and clearly.</li>
-</ul>
+                <document><h1>Vectorized Quicksort &apos;VQsort&apos;</h1>
+<p>This is a pure <a href="https://nim-lang.org">Nim</a>-version of <em>VQsort</em> (AVX2-version) based on the article <em>&apos;Fast and Robust Vectorized In-Place Sorting of Primitive Types&apos;</em> from 2021 <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol190-sea2021/LIPIcs.SEA.2021.3/LIPIcs.SEA.2021.3.pdf">PDF</a> by Blacher et al.
+It combines sorting-networks (4/8/16) with bitonic merge procedures, a tiny pseudo-random generator (xoroshiro128+) on registers and a twofold pivot-selection strategy. The authors claim to dethrone Intels de-facto best performing sort algorithm. I can confirm its performance is amazing.
+This implementation is for educational purposes. It can sort 32-bit Integers (and soon floats).
+So this marks the return of Quicksort to the top of the food-chain of sorting algorithms.
+Find the genuine C++ implementation of their project <strong>&quot;Fast and Robust&quot;</strong> at <a href="https://github.com/simd-sorting/fast-and-robust">github-repo</a>.</p>
+<h3>Note</h3>
+<p>According to this <a href="https://opensource.googleblog.com/2022/06/Vectorized%20and%20performance%20portable%20Quicksort.html">blog-post</a> of June.2022 by Jan Wassenberg, it seems  Googles Brain-group has developed a advanced version of VQSort. It&apos;s based on their Highway-library and can support Intel-/ARM-/RISC-V-SIMD including all mainline compilers. If you are after a production-ready algorithm you can find it at <a href="https://github.com/google/highway/tree/master/hwy/contrib/sort">github/google/highway/contrib/sort</a>.
+Their advanced version adapts to the SIMD-capabillities of the targeted platform - including AVX-512 - and does multithreading. Their paper says this gives another 1.5-2.8-X. Furthermore it can sort 8/16/32/64/128-Bit Integers and Floats. For a detailed description consult this preprint <a href="http://arxiv.org/abs/2205.05982">Vectorized and performance-portable Quicksort</a> [ retrieved May.2022].</p>
 </document>
             
         </div>
@@ -122,8 +116,6 @@ This project is going to be used in a W.I.P project of mine for Java codegen wit
                     </p>
                 
 
-                
-                    <p> <a href="https://github.com/Yu-Vitaqua-fer-Chronos/CodeGenLib">Project website</a> </p>
                 
 
                 
@@ -178,7 +170,7 @@ This project is going to be used in a W.I.P project of mine for Java codegen wit
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-12T01:06:50Z
+        Builded at 2024-03-13T01:08:27Z
         </p>
       </div>
     </div>

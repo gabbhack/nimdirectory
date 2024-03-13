@@ -18,6 +18,20 @@ const packages = [
     "web": "https://github.com/amkrajewski/nimcso",
     "doc": "https://nimcso.phaseslab.org"
   },
+   {
+    "name": "vqsort",
+    "url": "https://github.com/Asc2011/vqsort",
+    "method": "git",
+    "tags": [
+      "data",
+      "optimization",
+      "sorting",
+      "simd",
+      "quicksort"
+    ],
+    "description": "A vectorized Quicksort (AVX2-only)",
+    "license": "MIT"
+  },
   {
     "name": "nimplex",
     "url": "https://github.com/amkrajewski/nimplex",
@@ -85,7 +99,7 @@ const packages = [
   },
   {
     "name": "mutf8",
-    "url": "https://github.com/Nimberite-Development/ModernNet",
+    "url": "https://github.com/The-Ticking-Clockwork/MUTF-8",
     "method": "git",
     "tags": [
       "encoding",
@@ -101,8 +115,8 @@ const packages = [
     ],
     "description": "An implementation of a Modified UTF-8 encoder and decoder in Nim!",
     "license": "Apache-2.0",
-    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/MUTF-8",
-    "doc": "https://yu-vitaqua-fer-chronos.github.io/MUTF-8/"
+    "web": "https://github.com/The-Ticking-Clockwork/MUTF-8",
+    "doc": "https://the-ticking-clockwork.github.io/MUTF-8/"
   },
   {
     "name": "dekao",
@@ -186,7 +200,7 @@ const packages = [
   },
   {
     "name": "nulid",
-    "url": "https://github.com/Yu-Vitaqua-fer-Chronos/NULID",
+    "url": "https://github.com/The-Ticking-Clockwork/NULID",
     "method": "git",
     "tags": [
       "library",
@@ -197,12 +211,12 @@ const packages = [
     ],
     "description": "A ULID implementation in Nim!",
     "license": "CC0",
-    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/NULID",
-    "doc": "https://yu-vitaqua-fer-chronos.github.io/NULID/"
+    "web": "https://github.com/The-Ticking-Clockwork/NULID",
+    "doc": "https://the-ticking-clockwork.github.io/NULID/"
   },
   {
     "name": "crockfordb32",
-    "url": "https://github.com/Yu-Vitaqua-fer-Chronos/Crockford-Base32-Nim",
+    "url": "https://github.com/The-Ticking-Clockwork/Crockford-Base32-Nim",
     "method": "git",
     "tags": [
       "base",
@@ -213,8 +227,8 @@ const packages = [
     ],
     "description": "A simple implementation of Crockford Base32.",
     "license": "CC0",
-    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/Crockford-Base32-Nim",
-    "doc": "https://yu-vitaqua-fer-chronos.github.io/Crockford-Base32-Nim/"
+    "web": "https://github.com/The-Ticking-Clockwork/Crockford-Base32-Nim",
+    "doc": "https://the-ticking-clockwork.github.io/Crockford-Base32-Nim/"
   },
   {
     "name": "rtmidi",
@@ -28309,21 +28323,6 @@ const packages = [
     "web": "https://github.com/thisago/brightcove"
   },
   {
-    "name": "codegenlib",
-    "url": "https://github.com/Yu-Vitaqua-fer-Chronos/CodeGenLib",
-    "method": "git",
-    "tags": [
-      "library",
-      "codegen",
-      "codegeneration",
-      "java"
-    ],
-    "description": "A simple code generation library for other programming languages.",
-    "license": "MIT",
-    "web": "https://github.com/Yu-Vitaqua-fer-Chronos/CodeGenLib",
-    "doc": "https://yu-vitaqua-fer-chronos.github.io/CodeGenLib/"
-  },
-  {
     "name": "safeset",
     "url": "https://github.com/avahe-kellenberger/safeset",
     "method": "git",
@@ -32840,8 +32839,24 @@ const packages = [
     "description": "A lightweight and extremely fast nginx log parser that stores the result into a sqlite3 database for further analysis and action",
     "license": "MIT",
     "web": "https://github.com/pouriyajamshidi/nginwho"
+  },
+  {
+    "name": "umriss",
+    "url": "https://github.com/tdely/umriss",
+    "method": "git",
+    "tags": [
+      "cli",
+      "syscalls",
+      "tool",
+      "seccomp",
+      "strace"
+    ],
+    "description": "Extract syscall stats from strace output files",
+    "license": "MIT",
+    "web": "https://github.com/tdely/umriss"
   }
 ]
+
 const options = {
     includeScore: false,
     keys: [

@@ -115,64 +115,12 @@
     <div class="container row pt-4" id="pkg-content">
         <div class="col-8 box rounded p-3" id="readme-section">
             
-                <document><h1>ModernNet</h1>
-<p>ModernNet is a barebones library to interact with the Minecraft Java Edition protocol!</p>
-<p>To support IO, I&apos;ve taken the <a href="https://sans-io.readthedocs.io/how-to-sans-io.html">Sans-I/O</a>
-approach, separating the protocol from the IO, it can easily be implemented in any library with
-this code:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Set up the buffer</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">buffer</span> <span class="op">=</span> <span class="ide">newBuffer</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">writeVarNum</span>[:<span class="ide">int32</span>](<span class="num">0x27</span>)</div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">writeVarNum</span>[:<span class="ide">int32</span>](<span class="num">8</span>)</div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">writeNum</span>[:<span class="ide">int64</span>](<span class="num">23142</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">pos</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Commence tests~</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">b</span>: <span class="ide">seq</span>[<span class="ide">byte</span>] <span class="com"># Pretend this is a buffered socket</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">readRawPacket</span>(<span class="ide">b</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="kwd">not</span> <span class="ide">res</span><span class="op">.</span><span class="ide">isOk</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">b</span><span class="op">.</span><span class="ide">add</span> <span class="ide">buffer</span><span class="op">.</span><span class="ide">readNum</span>[:<span class="ide">byte</span>]()</div></div><div class="line"><div class="line-content">  <span class="ide">res</span> <span class="op">=</span> <span class="ide">readRawPacket</span>(<span class="ide">b</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">packet</span><span class="op">.</span><span class="ide">id</span> <span class="op">==</span> <span class="num">0x27</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">packet</span><span class="op">.</span><span class="ide">buf</span><span class="op">.</span><span class="ide">readVarNum</span>[:<span class="ide">int32</span>]() <span class="op">==</span> <span class="num">8</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">packet</span><span class="op">.</span><span class="ide">buf</span><span class="op">.</span><span class="ide">readNum</span>[:<span class="ide">int64</span>]() <span class="op">==</span> <span class="num">23142</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">bytesRead</span> <span class="op">==</span> <span class="num">10</span> <span class="com"># The ID, length and the data in the buffer</span></div></div>  </code></pre>
-<h2>Useful Notes</h2>
-<p>An empty packet with size 0 needs to be handled by the user currently,
-in the example code, <code>if packetLength &lt;= 0: return</code> is enough for
-this to not have an effect.</p>
-<h2>To-Dos</h2>
-<ul>
-<li>
-<p>[ ] Work on better documentation, with more examples.</p>
-</li>
-<li>
-<p>[ ] Implement MC auth for the library.</p>
-<ul>
-<li>This isn&apos;t a <em>must</em>, <em>but</em> it would improve the QoL of developers who use this library.</li>
-</ul>
-</li>
-<li>
-<p>[ ] Wrap all packets and relating data for each MC version (and sharing the types/code when possible).</p>
-<ul>
-<li>Not a requirement but would be nice: Create an API to parse a packet from a socket/buffer
-without any other manual code.</li>
-<li>https://github.com/PrismarineJS/minecraft-data would likely be a very good starting point for
-automating generation of the packet wrappers.</li>
-</ul>
-</li>
-<li>
-<p>[ ] Add more tests for verifying everything is working correctly.</p>
-<ul>
-<li>A W.I.P server is being made with this library so that more tests can be added.</li>
-</ul>
-</li>
-</ul>
-<h2>Completed Goals</h2>
-<ul>
-<li>
-<p>[x] Allow for <code>Socket</code> <em>or</em> <code>AsyncSocket</code> to be used in <code>network.nim</code>.</p>
-</li>
-<li>
-<p>[X] Rewrite code to avoid streams (unnecessary overhead).</p>
-<ul>
-<li>Look at <code>src/modernnet/buffer.nim</code> for this functionality.</li>
-</ul>
-</li>
-</ul>
-<h2>Unplanned/Scrapped</h2>
-<ul>
-<li>Allow for the full API of encoding and decoding to be used even on sockets.
-<ul>
-<li>I&apos;ve decided that doing everything via <code>Buffer</code>s is much better as it allows for us to
-handle errors more gracefully.</li>
-</ul>
-</li>
-</ul>
+                <document><h1>MUTF-8</h1>
+<p>An implementation of the Modified UTF-8 encoder and decoder from Java,
+meant for use within <a href="https://github.com/Nimberite-Development/TagForge-Nim">TagForge</a>,
+an NBT parser and dumper!</p>
+<h2>Usage</h2>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">mutf8</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">decodeMutf8</span>([<span class="num">0xE3</span><span class="op">.</span><span class="ide">byte</span>, <span class="num">0x81</span>, <span class="num">0x82</span>]) <span class="op">==</span> <span class="str">&quot;あ&quot;</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">encodeMutf8</span>(<span class="str">&quot;Hello☆&quot;</span>) <span class="op">==</span> [<span class="num">0x48</span><span class="op">.</span><span class="ide">byte</span>, <span class="num">0x65</span>, <span class="num">0x6c</span>, <span class="num">0x6c</span>, <span class="num">0x6f</span>, <span class="num">0xe2</span>, <span class="num">0x98</span>, <span class="num">0x86</span>]</div></div>  </code></pre>
 </document>
             
         </div>
@@ -186,7 +134,7 @@ handle errors more gracefully.</li>
                 
 
                 
-                    <p> <a href="https://github.com/Yu-Vitaqua-fer-Chronos/MUTF-8">Project website</a> </p>
+                    <p> <a href="https://github.com/The-Ticking-Clockwork/MUTF-8">Project website</a> </p>
                 
 
                 
@@ -241,7 +189,7 @@ handle errors more gracefully.</li>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-12T01:06:50Z
+        Builded at 2024-03-13T01:08:27Z
         </p>
       </div>
     </div>
