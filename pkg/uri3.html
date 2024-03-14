@@ -93,7 +93,7 @@ and the &quot;<a href="https://github.com/codeinthehole/purl">purl</a>&quot; Pyt
 <h1>Examples</h1>
 <p>Working with path and path segments:</p>
 <pre>  <code># Parse a URI.
-var uri : Uri3 = parseUri3(&quot;http://www.examplesite.com/path/to/location&quot;)
+var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/path/to/location&quot;)
 echo(uri.getPath()) # &quot;/path/to/location&quot;
 
 # Append a path segment.
@@ -120,10 +120,10 @@ echo(uri.getPath()) # &quot;/new/changed/example&quot;
 </code></pre>
 <p>Working with queries:</p>
 <pre>  <code># Parse a URI.
-var uri : Uri3 = parseUri3(&quot;http://www.examplesite.com/index.html?ex1=hello&amp;ex2=world&quot;)
+var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/index.html?ex1=hello&amp;ex2=world&quot;)
 
 # Get all queries.
-var queries : seq[seq[string]] = uri.getAllQueries()
+var queries : seq[seq[string]] = uri.getAllQuery()
 for i in queries:
     echo(i[0]) # Query name.
     echo(i[1]) # Query value.
@@ -148,19 +148,19 @@ uri.setQuery(&quot;ex1&quot;, &quot;test&quot;, false)
 echo(uri.getQuery(&quot;ex1&quot;)) # not overwritten: still &quot;hello&quot;
 
 # Set all queries.
-uri.setAllQueries(@[  @[&quot;new&quot;, &quot;value1&quot;,],  @[&quot;example&quot;, &quot;value2&quot;]])
+uri.setAllQuery(@[  @[&quot;new&quot;, &quot;value1&quot;,],  @[&quot;example&quot;, &quot;value2&quot;]])
 echo(uri.getQuery(&quot;new&quot;)) # exists: &quot;value1&quot;
 echo(uri.getQuery(&quot;ex1&quot;)) # doesn&apos;t exist: &quot;&quot;
 
 # Set multiple queries.
-uri.setQueries(@[  @[&quot;ex1&quot;, &quot;new&quot;],  @[&quot;new&quot;, &quot;changed&quot;]])
+uri.setQuery(@[  @[&quot;ex1&quot;, &quot;new&quot;],  @[&quot;new&quot;, &quot;changed&quot;]])
 echo(uri.getQuery(&quot;new&quot;)) # &quot;changed&quot;
 echo(uri.getQuery(&quot;example&quot;)) # &quot;value2&quot;
 echo(uri.getQuery(&quot;ex1&quot;)) # &quot;new&quot;
 </code></pre>
 <p>Other examples:</p>
 <pre>  <code># Parse a URI.
-var uri : Uri3 = parseUri3(&quot;http://www.examplesite.com/path/to/location&quot;)
+var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/path/to/location&quot;)
 
 # Convert the URI to a string representation.
 var toString : string = $uri.
@@ -174,11 +174,11 @@ uri.setDomain(&quot;example.newsite.org&quot;)
 echo(uri) # &quot;http://example.newsite.org/path/to/location&quot;
 
 # Encode uri
-let encUri = encodeUri(&quot;example.newsite.org/path/to/location yeah&quot;, usePlus=false) #default usePlus = true
+let encUri = encodeURI(&quot;example.newsite.org/path/to/location yeah&quot;, usePlus=false) #default usePlus = true
 echo(encUri)
 
 # Decode uri
-let decUri = encodeUri(encUri, decodePlus=false) #default decodePlus = true
+let decUri = encodeURI(encUri, decodePlus=false) #default decodePlus = true
 echo(decUri)
 
 # encodeToQuery
@@ -256,7 +256,7 @@ assert encodeToQuery({&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;&quot;}
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-13T01:08:27Z
+        Builded at 2024-03-14T01:07:18Z
         </p>
       </div>
     </div>

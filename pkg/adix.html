@@ -235,10 +235,12 @@ help, often being &quot;blood sport&quot; for more compressed data | accuracy wi
 regard to speed.</p>
 <p>So, e.g., on my primary 32 GiB RAM dev box with <code>bu/zipf</code>, I cannot make exact
 <code>lfreq</code> slower than Approximately Most Often sketches(<code>bu/oft</code>).  <code>tests/bl.nim</code>
-shows another example in a Bloom filter / membership approximation context where
-spending 2-4X what a Bloom takes space-wise can buy a 7-10X latency shrink.
-(histograms &amp; UCE are both pretty good deals, though, if errors are acceptable,
-and <code>adix/bltab</code> with fingerprint keys is arguably just &quot;a better sketch&quot;).</p>
+shows another example (also written up
+<a href="https://blog.cloudflare.com/when-bloom-filters-dont-bloom/">here</a> in a Bloom
+filter / membership approximation context where spending 2-4X what a Bloom takes
+space-wise can buy a 7-10X latency shrink.  (Histograms &amp; UCE are both pretty
+good deals, though, if errors are acceptable, and <code>adix/bltab</code> with fingerprint
+keys is arguably just &quot;a better &apos;sketch&apos; &quot;).</p>
 <h1>A little more on LPTabz &amp; friends</h1>
 <p>As a brief guide I would start with <code>NOTES.md</code> and then look at the top part of
 <code>lptabz.nim</code>.  <code>TODO.md</code> also has a lot of notes in it.  My overarching vision
@@ -319,7 +321,7 @@ A.Dain Samples 1993 PhD thesis has some more.)</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-13T01:08:27Z
+        Builded at 2024-03-14T01:07:18Z
         </p>
       </div>
     </div>
