@@ -90,6 +90,8 @@
                 <document><h1>sat</h1>
 <p>A SAT solver written in Nim.</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">sat</span><span class="op">/</span>[<span class="ide">sat</span>, <span class="ide">satvars</span>]</div></div>  </code></pre>
+<p>Note:
+Remember that even though SAT claims to support the OR operator, it actually doesn&apos;t and only supports it if you use it to build up an implication (A -&gt; B == ~ A | B)</p>
 </document>
             
         </div>
@@ -158,7 +160,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-14T01:07:18Z
+        Builded at 2024-03-15T01:08:01Z
         </p>
       </div>
     </div>

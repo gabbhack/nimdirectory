@@ -92,99 +92,99 @@
 and the &quot;<a href="https://github.com/codeinthehole/purl">purl</a>&quot; Python module. This is based on &quot;<a href="https://github.com/achesak/nim-uri2">nim-uri2</a>&quot;</p>
 <h1>Examples</h1>
 <p>Working with path and path segments:</p>
-<pre>  <code># Parse a URI.
-var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/path/to/location&quot;)
-echo(uri.getPath()) # &quot;/path/to/location&quot;
+<pre>  <code>    # Parse a URI.
+    var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/path/to/location&quot;)
+    echo(uri.getPath()) # &quot;/path/to/location&quot;
 
-# Append a path segment.
-uri.appendPathSegment(&quot;extra&quot;)
-# uri / &quot;extra&quot; would have the same effect as the previous line.
-echo(uri.getPath()) # &quot;/path/to/location/extra&quot;
+    # Append a path segment.
+    uri.appendPathSegment(&quot;extra&quot;)
+    # uri / &quot;extra&quot; would have the same effect as the previous line.
+    echo(uri.getPath()) # &quot;/path/to/location/extra&quot;
 
-# Prepend a path segment.
-uri.prependPathSegment(&quot;new&quot;)
-# &quot;new&quot; / uri would have the same effect as the previous line.
-echo(uri.getPath()) # &quot;/new/path/to/location/extra
+    # Prepend a path segment.
+    uri.prependPathSegment(&quot;new&quot;)
+    # &quot;new&quot; / uri would have the same effect as the previous line.
+    echo(uri.getPath()) # &quot;/new/path/to/location/extra
 
-# Set the path to something completely new.
-uri.setPath(&quot;/my/path&quot;)
-echo(uri.getPath()) # &quot;/my/path&quot;
+    # Set the path to something completely new.
+    uri.setPath(&quot;/my/path&quot;)
+    echo(uri.getPath()) # &quot;/my/path&quot;
 
-# Set the path as individual segments.
-uri.setPathSegments(@[&quot;new&quot;, &quot;path&quot;, &quot;example&quot;])
-echo(uri.getPath()) # &quot;/new/path/example&quot;
+    # Set the path as individual segments.
+    uri.setPathSegments(@[&quot;new&quot;, &quot;path&quot;, &quot;example&quot;])
+    echo(uri.getPath()) # &quot;/new/path/example&quot;
 
-# Set a single path segment at a specific index.
-uri.setPathSegment(&quot;changed&quot;, 1)
-echo(uri.getPath()) # &quot;/new/changed/example&quot;
+    # Set a single path segment at a specific index.
+    uri.setPathSegment(&quot;changed&quot;, 1)
+    echo(uri.getPath()) # &quot;/new/changed/example&quot;
 </code></pre>
 <p>Working with queries:</p>
-<pre>  <code># Parse a URI.
-var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/index.html?ex1=hello&amp;ex2=world&quot;)
+<pre>  <code>    # Parse a URI.
+    var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/index.html?ex1=hello&amp;ex2=world&quot;)
 
-# Get all queries.
-var queries : seq[seq[string]] = uri.getAllQuery()
-for i in queries:
-    echo(i[0]) # Query name.
-    echo(i[1]) # Query value.
+    # Get all queries.
+    var queries : seq[seq[string]] = uri.getQueries()
+    for i in queries:
+            echo(i[0]) # Query name.
+            echo(i[1]) # Query value.
 
-# Get a specific query.
-var query : string = uri.getQuery(&quot;ex1&quot;)
-echo(query) # &quot;hello&quot;
+    # Get a specific query.
+    var query : string = uri.getQuery(&quot;ex1&quot;)
+    echo(query) # &quot;hello&quot;
 
-# Get a specific query, with a default value for if that query is not found.
-echo(uri.getQuery(&quot;ex1&quot;, &quot;DEFAULT&quot;)) # exists: &quot;hello&quot;
-echo(uri.getQuery(&quot;ex3&quot;, &quot;DEFAULT&quot;)) # doesn&apos;t exist: &quot;DEFAULT&quot;
-# If no default is specified and a query isn&apos;t found, getQuery() will return the empty string.
+    # Get a specific query, with a default value for if that query is not found.
+    echo(uri.getQuery(&quot;ex1&quot;, &quot;DEFAULT&quot;)) # exists: &quot;hello&quot;
+    echo(uri.getQuery(&quot;ex3&quot;, &quot;DEFAULT&quot;)) # doesn&apos;t exist: &quot;DEFAULT&quot;
+    # If no default is specified and a query isn&apos;t found, getQuery() will return the empty string.
 
-# Set a query.
-uri.setQuery(&quot;ex3&quot;, &quot;example&quot;)
-echo(uri.getQuery(&quot;ex3&quot;)) # &quot;example&quot;
+    # Set a query.
+    uri.setQuery(&quot;ex3&quot;, &quot;example&quot;)
+    echo(uri.getQuery(&quot;ex3&quot;)) # &quot;example&quot;
 
-# Set queries without overwriting.
-uri.setQuery(&quot;ex4&quot;, &quot;another&quot;, false)
-echo(uri.getQuery(&quot;ex4&quot;)) # &quot;another&quot;
-uri.setQuery(&quot;ex1&quot;, &quot;test&quot;, false)
-echo(uri.getQuery(&quot;ex1&quot;)) # not overwritten: still &quot;hello&quot;
+    # Set queries without overwriting.
+    uri.setQuery(&quot;ex4&quot;, &quot;another&quot;, false)
+    echo(uri.getQuery(&quot;ex4&quot;)) # &quot;another&quot;
+    uri.setQuery(&quot;ex1&quot;, &quot;test&quot;, false)
+    echo(uri.getQuery(&quot;ex1&quot;)) # not overwritten: still &quot;hello&quot;
 
-# Set all queries.
-uri.setAllQuery(@[  @[&quot;new&quot;, &quot;value1&quot;,],  @[&quot;example&quot;, &quot;value2&quot;]])
-echo(uri.getQuery(&quot;new&quot;)) # exists: &quot;value1&quot;
-echo(uri.getQuery(&quot;ex1&quot;)) # doesn&apos;t exist: &quot;&quot;
+    # Set all queries.
+    uri.setQueries(@[   @[&quot;new&quot;, &quot;value1&quot;,],    @[&quot;example&quot;, &quot;value2&quot;]])
+    echo(uri.getQuery(&quot;new&quot;)) # exists: &quot;value1&quot;
+    echo(uri.getQuery(&quot;ex1&quot;)) # doesn&apos;t exist: &quot;&quot;
 
-# Set multiple queries.
-uri.setQuery(@[  @[&quot;ex1&quot;, &quot;new&quot;],  @[&quot;new&quot;, &quot;changed&quot;]])
-echo(uri.getQuery(&quot;new&quot;)) # &quot;changed&quot;
-echo(uri.getQuery(&quot;example&quot;)) # &quot;value2&quot;
-echo(uri.getQuery(&quot;ex1&quot;)) # &quot;new&quot;
+    # Set multiple queries.
+    uri.setQuery(@[  @[&quot;ex1&quot;, &quot;new&quot;],  @[&quot;new&quot;, &quot;changed&quot;]])
+    echo(uri.getQuery(&quot;new&quot;)) # &quot;changed&quot;
+    echo(uri.getQuery(&quot;example&quot;)) # &quot;value2&quot;
+    echo(uri.getQuery(&quot;ex1&quot;)) # &quot;new&quot;
 </code></pre>
 <p>Other examples:</p>
-<pre>  <code># Parse a URI.
-var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/path/to/location&quot;)
+<pre>  <code>    # Parse a URI.
+    var uri : Uri3 = parseURI3(&quot;http://www.examplesite.com/path/to/location&quot;)
 
-# Convert the URI to a string representation.
-var toString : string = $uri.
-echo(toString) # &quot;http://www.examplesite.com/path/to/location&quot;
+    # Convert the URI to a string representation.
+    var toString : string = $uri.
+    echo(toString) # &quot;http://www.examplesite.com/path/to/location&quot;
 
-# Get the domain.
-echo(uri.getDomain()) # &quot;www.examplesite.com&quot;
+    # Get the domain.
+    echo(uri.getDomain()) # &quot;www.examplesite.com&quot;
 
-# Set the domain.
-uri.setDomain(&quot;example.newsite.org&quot;)
-echo(uri) # &quot;http://example.newsite.org/path/to/location&quot;
+    # Set the domain.
+    uri.setDomain(&quot;example.newsite.org&quot;)
+    echo(uri) # &quot;http://example.newsite.org/path/to/location&quot;
 
-# Encode uri
-let encUri = encodeURI(&quot;example.newsite.org/path/to/location yeah&quot;, usePlus=false) #default usePlus = true
-echo(encUri)
+    # Encode uri
+    let encUri = encodeURI(&quot;example.newsite.org/path/to/location yeah&quot;, usePlus=false) #default usePlus = true
+    echo(encUri)
 
-# Decode uri
-let decUri = encodeURI(encUri, decodePlus=false) #default decodePlus = true
-echo(decUri)
+    # Decode uri
+    let decUri = encodeURI(encUri, decodePlus=false) #default decodePlus = true
+    echo(decUri)
 
-# encodeToQuery
-assert encodeToQuery({:}) == &quot;&quot;
-assert encodeToQuery({&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;2&quot;}) == &quot;a=1&amp;b=2&quot;
-assert encodeToQuery({&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;&quot;}) == &quot;a=1&amp;b&quot;
+    # encodeToQuery
+    assert encodeToQuery({:}) == &quot;&quot;
+    assert encodeToQuery({&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;2&quot;}) == &quot;a=1&amp;b=2&quot;
+    assert encodeToQuery({&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;&quot;}) == &quot;a=1&amp;b&quot;
 </code></pre>
 <h1>License</h1>
 <p>nim.uri3 is released under the MIT open source license.</p>
@@ -256,7 +256,7 @@ assert encodeToQuery({&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;&quot;}
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-14T01:07:18Z
+        Builded at 2024-03-15T01:08:01Z
         </p>
       </div>
     </div>
