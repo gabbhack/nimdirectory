@@ -95,8 +95,8 @@ this code:</p>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># Set up the buffer</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">buffer</span> <span class="op">=</span> <span class="ide">newBuffer</span>()</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">writeVarNum</span>[:<span class="ide">int32</span>](<span class="num">0x27</span>)</div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">writeVarNum</span>[:<span class="ide">int32</span>](<span class="num">8</span>)</div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">writeNum</span>[:<span class="ide">int64</span>](<span class="num">23142</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">buffer</span><span class="op">.</span><span class="ide">pos</span> <span class="op">=</span> <span class="num">0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># Commence tests~</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">b</span>: <span class="ide">seq</span>[<span class="ide">byte</span>] <span class="com"># Pretend this is a buffered socket</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">readRawPacket</span>(<span class="ide">b</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">while</span> <span class="kwd">not</span> <span class="ide">res</span><span class="op">.</span><span class="ide">isOk</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">b</span><span class="op">.</span><span class="ide">add</span> <span class="ide">buffer</span><span class="op">.</span><span class="ide">readNum</span>[:<span class="ide">byte</span>]()</div></div><div class="line"><div class="line-content">  <span class="ide">res</span> <span class="op">=</span> <span class="ide">readRawPacket</span>(<span class="ide">b</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">packet</span><span class="op">.</span><span class="ide">id</span> <span class="op">==</span> <span class="num">0x27</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">packet</span><span class="op">.</span><span class="ide">buf</span><span class="op">.</span><span class="ide">readVarNum</span>[:<span class="ide">int32</span>]() <span class="op">==</span> <span class="num">8</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">packet</span><span class="op">.</span><span class="ide">buf</span><span class="op">.</span><span class="ide">readNum</span>[:<span class="ide">int64</span>]() <span class="op">==</span> <span class="num">23142</span></div></div><div class="line"><div class="line-content"><span class="ide">assert</span> <span class="ide">res</span><span class="op">.</span><span class="ide">ok</span><span class="op">.</span><span class="ide">bytesRead</span> <span class="op">==</span> <span class="num">10</span> <span class="com"># The ID, length and the data in the buffer</span></div></div>  </code></pre>
 <h2>Useful Notes</h2>
 <p>An empty packet with size 0 needs to be handled by the user currently,
-in the example code, <code>if packetLength &lt;= 0: return</code> is enough for
-this to not have an effect.</p>
+<code>if packetLength &lt;= 0: return</code> is enough to usually detect if a socket
+has closed.</p>
 <h2>To-Dos</h2>
 <ul>
 <li>
@@ -126,11 +126,7 @@ automating generation of the packet wrappers.</li>
 </ul>
 <h2>Completed Goals</h2>
 <ul>
-<li>
-<p>[x] Allow for <code>Socket</code> <em>or</em> <code>AsyncSocket</code> to be used in <code>network.nim</code>.</p>
-</li>
-<li>
-<p>[X] Rewrite code to avoid streams (unnecessary overhead).</p>
+<li>[X] Rewrite code to avoid streams (unnecessary overhead).
 <ul>
 <li>Look at <code>src/modernnet/buffer.nim</code> for this functionality.</li>
 </ul>
@@ -213,7 +209,7 @@ handle errors more gracefully.</li>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-15T01:08:01Z
+        Builded at 2024-03-19T01:07:59Z
         </p>
       </div>
     </div>

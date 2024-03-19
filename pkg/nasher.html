@@ -116,7 +116,7 @@ launch them in-game.</li>
 <li>nasher uses json or <a href="https://github.com/WilliamDraco/NWNT">NWNT</a> for its text
 file format.</li>
 </ul>
-<p>This guide is current as of nasher release 0.22.x.</p>
+<p>This guide is current as of nasher release 1.0.x.</p>
 <ul>
 <li><a href="#installation-options">Installation Options</a>
 <ul>
@@ -177,14 +177,19 @@ file in your <a href="https://superuser.com/a/284351"><code>PATH</code> environm
 <ul>
 <li><a href="https://github.com/niv/neverwinter.nim/releases">neverwinter.nim</a> &gt;= 1.7.3</li>
 <li><a href="https://github.com/WilliamDraco/NWNT">nwnt</a> &gt;= 1.3.3</li>
-<li><a href="https://github.com/nwneetools/nwnsc/releases">nwnsc</a> &gt;= 1.1.3</li>
 <li>  <a href="https://git-scm.com/downloads">git</a></li>
+</ul>
+<p>Starting with 1.0.0, nasher&apos;s default script compiler is neverwinter.nim&apos;s
+<code>nwn_script_comp</code>.  If you&apos;d like to use the legacy script compiler nwnsc,
+you&apos;ll need:</p>
+<ul>
+<li><a href="https://github.com/nwneetools/nwnsc/releases">nwnsc</a> &gt;= 1.1.3</li>
 </ul>
 <h4>Tips</h4>
 <ul>
 <li>Keep the binaries for nasher, neverwinter.nim, and nwnsc in the same
 location.</li>
-<li>Do not keep binaries in your nasher project folder</li>
+<li>Do not keep binaries in your nasher project folder.</li>
 <li>Do not publish binaries with your source control repository. If you are
 collaborating, each team member should download and install the binaries
 individually.</li>
@@ -195,8 +200,11 @@ individually.</li>
 <ul>
 <li><a href="https://nim-lang.org">nim</a> and it package manager <code>nimble</code>. The easy way to
 install is to use <a href="https://github.com/dom96/choosenim">choosenim</a>.</li>
-<li><a href="https://github.com/nwneetools/nwnsc">nwnsc</a> &gt;= 1.1.3</li>
 <li>  <a href="https://git-scm.com/downloads">git</a></li>
+</ul>
+<p>Optionally, install nwnsc if you&apos;d like to use the legacy script compiler:</p>
+<ul>
+<li><a href="https://github.com/nwneetools/nwnsc">nwnsc</a> &gt;= 1.1.3</li>
 </ul>
 <p>  <em>Note: when building nasher, nimble will download and install neverwinter.nim
 automatically. You do not need to install it yourself.</em></p>
@@ -216,14 +224,18 @@ equivalent:</p>
 <p>You can also create an alias in your <code>.bashrc</code> and just use <code>nasher &lt;command&gt;</code>:</p>
 <pre>  <code class="language-console"><div class="line"><div class="line-content"><span class="out">alias nasher=&apos;docker run --rm -it -v ${pwd}:/nasher nwntools/nasher:latest &apos;</span></div></div>  </code></pre>
 <h4>Tips</h4>
-<p>Create batch/script files to run your most common nasher commands since the
-docker commands can be rather verbose. An excellent example of this is in <a href="https://github.com/b5635/the-frozen-north">The
-Frozen North</a> GitHub repository.</p>
+<ul>
+<li>Create batch/script files to run your most common nasher commands since the
+docker commands can be rather verbose. An excellent example of this is in [The</li>
+</ul>
+<p>Frozen North](https://github.com/b5635/the-frozen-north) GitHub repository.</p>
 <h2>Getting Started</h2>
 <h3>First-Time Setup</h3>
-<p>nasher will detect nwnsc and the neverwinter.nim tools if they are in your
-<code>PATH</code>. You can also use nasher&apos;s <code>config</code> command to set the proper locations:</p>
-<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwnsc</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config nssCompiler "%USERPROFILE%/bin/nwnsc.exe"      <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config nssCompiler "~/.local/bin/nwnsc"               <span class="com"># Posix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwn_erf</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config erfUtil "%USERPROFILE%/bin/nwn_erf.exe"        <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config erfUtil "~/.local/bin/nwn_erf"                 <span class="com"># Posix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwn_gff</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config gffUtil "%USERPROFILE%/bin/nwn_gff.exe"        <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config gffUtil "~/.local/bin/nwn_gff"                 <span class="com"># Posix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwn_tlk</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config tlkUtil "%USERPROFILE%/bin/nwn_tlk.exe"        <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config tlkUtil "~/.local/bin/nwn_tlk"                 <span class="com"># Posix</span></div></div>  </code></pre>
+<p>nasher will detect neverwinter.nim tools and your chosen script compiler if
+they are in your <code>PATH</code> enviromental variable. You can also use nasher&apos;s
+<code>config</code> command to set the proper locations if the tools are not on your
+<code>PATH</code> variable:</p>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="com"># Set the path to the script compiler</span></div></div><div class="line"><div class="line-content">$ <span class="com"># neverwinter.nim script compiler</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config nssCompiler "%USERPROFILE%/bin/nwn_script_comp.exe"      <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config nssCompiler "~/.local/bin/nwn_script_comp"               <span class="com"># Posix</span></div></div><div class="line"><div class="line-content">$ <span class="com"># or nwnsc (this must be set if you want to use nwnsc with nasher &gt;=0.22.0)</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config nssCompiler "%USERPROFILE%/bin/nwnsc.exe"                <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config nssCompiler "~/.local/bin/nwnsc"                         <span class="com"># Posix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwn_erf</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config erfUtil "%USERPROFILE%/bin/nwn_erf.exe"                  <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config erfUtil "~/.local/bin/nwn_erf"                           <span class="com"># Posix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwn_gff</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config gffUtil "%USERPROFILE%/bin/nwn_gff.exe"                  <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config gffUtil "~/.local/bin/nwn_gff"                           <span class="com"># Posix</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">$ <span class="com"># Set the path to nwn_tlk</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config tlkUtil "%USERPROFILE%/bin/nwn_tlk.exe"                  <span class="com"># Windows</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> config tlkUtil "~/.local/bin/nwn_tlk"                           <span class="com"># Posix</span></div></div>  </code></pre>
 <p>nasher will also detect NWN if it was installed by Steam, Beamdog, or GOG. If
 you are having issues getting nasher to recognize your NWN install, you can set
 the <code>NWN_ROOT</code> environment variable to the path. Similarly, the <code>NWN_HOME</code>
@@ -258,7 +270,7 @@ module from the source files:</p>
 <pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">git</span> clone <span class="ide">https://github.com/myusername/myproject</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">cd</span> myproject</div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> install</div></div>  </code></pre>
 <h3>Getting Help</h3>
 <p>You can get help for nasher or one of its commands using the <code>--help</code> flag:</p>
-<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> --help       <span class="com"># General help</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> init --help  <span class="com"># Command-specific help</span></div></div>  </code></pre>
+<pre>  <code class="language-console"><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> --help       <span class="com"># General help</span></div></div><div class="line"><div class="line-content">$ <span class="kwd">nasher</span> <command> --help  <span class="com"># Command-specific help</span></div></div>  </code></pre>
 <p>If you&apos;re still stuck, you can get assistance in several locations:</p>
 <ul>
 <li>Neverwinter Vault Discord Server (<a href="https://discord.gg/pWVqMRX">invitation</a>)
@@ -366,7 +378,7 @@ file = &quot;myPWtlk.tlk&quot;
   [target.sources]
   include = &quot;src/tlk/*.json&quot;
 </code></pre>
-<p>While you can write your own package file, the <a href="#init">  <code>init</code></a> command will
+<p>While you can write your own configuration file, the <a href="#init">  <code>init</code></a> command will
 create one for you. It will show prompts for each section and provide useful
 defaults. If you don&apos;t want to answer the prompts and just want to quickly
 initialize the package, you can pass the <code>--default</code> flag when running <code>init</code>.</p>
@@ -432,7 +444,7 @@ that may change in the future. You can skip it with the <code>--skipPkgInfo</cod
 <tr>
 <td>  <code>flags</code></td>
 <td>yes</td>
-<td>command line arguments to send to nwnsc at compile-time</td>
+<td>command line arguments to send to the script compiler at compile-time</td>
 </tr>
 <tr>
 <td>  <code>branch</code></td>
@@ -528,7 +540,7 @@ must be specified before the child target.</p>
 <td>  <code>flags</code></td>
 <td>yes</td>
 <td>yes</td>
-<td>command line arguments to send to nwnsc at compile-time</td>
+<td>command line arguments to send to the script compiler at compile-time</td>
 </tr>
 <tr>
 <td>  <code>branch</code></td>
@@ -846,8 +858,8 @@ by passing the key/value pair as an option to the command.</p>
 </li>
 <li><code>nssFlags</code>: the default flags to use on packages
 <ul>
-<li>default: <code>-lowqey</code></li>
-<li>note: since nwnsc can read the <code>NWN_ROOT</code> environment variable to find
+<li>default: <code> for `nwn_script_comp</code>, <code>-lowqey</code> for <code>nwnsc</code></li>
+<li>note: since compilers can read the <code>NWN_ROOT</code> environment variable to find
 your NWN install, it is preferable to use that rather than passing the
 location through <code>nssFlags</code>. If <code>NWN_ROOT</code> is set (or if nasher can find
 your NWN install without it), nwnsc should work fine using the default
@@ -956,26 +968,6 @@ float value changes.
 <ul>
 <li>default: <code>4</code></li>
 <li>supported: <code>1</code> - <code>32</code></li>
-</ul>
-</li>
-<li><code>modName</code>: the name for any module file to be generated by the target. This
-is independent of the filename. Only relevant when <code>convert</code> will be called.
-<ul>
-<li>default: &quot;&quot;</li>
-</ul>
-</li>
-<li><code>modMinGameVersion</code>: the minimum game version that can run any module file
-generated by the target. Only relevant when <code>convert</code> will be called.
-<ul>
-<li>default: &quot;&quot;</li>
-<li>note: if blank, the version in the <code>module.ifo</code> file will be unchanged.</li>
-</ul>
-</li>
-<li><code>modDescription</code>: the description for a module file generated by a target.
-Only relevant when <code>convert</code> will be called.
-<ul>
-<li>default: &quot;&quot;</li>
-<li>note: If blank, the description in the <code>module.ifo</code> file will be unchanged.</li>
 </ul>
 </li>
 <li><code>onMultipleSources</code>: an action to perform when multiple source files of the
@@ -1588,7 +1580,7 @@ page</a>.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-15T01:08:01Z
+        Builded at 2024-03-19T01:07:59Z
         </p>
       </div>
     </div>

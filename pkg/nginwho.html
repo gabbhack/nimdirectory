@@ -93,13 +93,26 @@
 </div>
 <hr />
 <p><strong>nginwho</strong> is a lightweight, efficient and extremely fast <code>nginx</code> log parser that stores the logs into a <strong>sqlite3</strong> database for further analysis and actions.</p>
+<p>Additionally, it has the ability (<code>--show-real-ips</code> flag) to continuously parse <strong>Cloudflare CIDRs</strong> through their APIs so that nginx can leverage it to get the real IP addresses of requests hitting your servers.</p>
 <h2>How it works</h2>
 <p>By default, <strong>nginwho</strong> reads <code>nginx</code> logs from <code>/var/log/nginx/access.log</code> and stores the parsed results in <code>/var/log/nginwho.db</code> unless overridden by the <a href="#flags">available flags</a>.</p>
+<p>Using the <code>--show-real-ips</code> flag requires <strong>root privileges</strong> and leads to fetching the Cloudflare CIDRs every six hours and storing them in <code>/etc/nginx/reverse_proxies</code>.</p>
+<p>Inside your nginx configuration add this line:</p>
+<pre>  <code class="language-text">include /etc/nginx/reverse_proxies;
+</code></pre>
+<p>So that the fetched CIDRs could be loaded into your configuration.</p>
+<blockquote>
+<p>[!IMPORTANT]
+The <code>--show-real-ips:true</code> option causes a <strong>soft reload</strong> (nginx -s reload) at 3AM <strong>only if there are CIDR changes</strong> in comparison to the last fetch. Specifying the reload time will be available through a flag in the future.</p>
+</blockquote>
 <h2>Usage</h2>
 <ol>
 <li>
 <p>Download the executable file from this URL:</p>
 <pre>  <code class="language-bash">wget https://github.com/pouriyajamshidi/nginwho/releases/latest/download/nginwho
+</code></pre>
+<p>Optionally, <strong>nginwho</strong> can also be installed using nimble:</p>
+<pre>  <code class="language-bash">nimble install nginwho
 </code></pre>
 </li>
 <li>
@@ -111,10 +124,17 @@ sudo cp nginwho /usr/local/bin
 <li>
 <p>Run it:</p>
 <pre>  <code class="language-bash"> nginwho --logPath:/var/log/nginx/access.log --dbPath:/var/log/nginwho.db
- # If you want to omit a certain referrer from being logged:
+
+ # If you want to omit a certain referrer from being logged (replace thegraynode.io with your domain):
  nginwho --logPath:/var/log/nginx/access.log \
          --dbPath:/var/log/nginwho.db \
          --omit-referrer:thegraynode.io
+
+ # If you want to get real IP addresses of the visitors coming from Cloudflare (replace thegraynode.io with your domain):
+ nginwho --logPath:/var/log/nginx/access.log \
+         --dbPath:/var/log/nginwho.db \
+         --omit-referrer:thegraynode.io \
+         --show-real-ips:true
 </code></pre>
 </li>
 <li>
@@ -132,7 +152,8 @@ sudo systemctl start nginwho.service
 --dbPath,          : Path to SQLite database to log reports (default: /var/log/nginwho.db)
 --logPath,         : Path to nginx access logs (default: /var/log/nginx/access.log)
 --interval         : Refresh interval in seconds (default: 10)
---omit-referrer    : omit a specific referrer from being logged
+--omit-referrer    : omit a specific referrer from being logged (default: &quot;&quot;)
+--show-real-ips    : Show real IP of visitors by getting Cloudflare CIDRs to include in nginx config. Updates every three hours. (default: false)
 </code></pre>
 </document>
             
@@ -202,7 +223,7 @@ sudo systemctl start nginwho.service
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-15T01:08:01Z
+        Builded at 2024-03-19T01:07:59Z
         </p>
       </div>
     </div>

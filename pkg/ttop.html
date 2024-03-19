@@ -144,9 +144,10 @@
 <pre>  <code class="language-bash">yay -S ttop             # enables systemd.timers automatically
 </code></pre>
 <h3>Static binary</h3>
-<pre>  <code class="language-bash">wget https://github.com/inv2004/ttop/releases/latest/download/ttop
-chmod +x ttop
-mv ttop ~/.local/bin/   # add into PATH if necessary
+<pre>  <code class="language-bash">curl -LO https://github.com/inv2004/ttop/releases/latest/download/ttop \
+&amp;&amp; chmod +x ttop
+</code></pre>
+<pre>  <code class="language-bash">mv ttop ~/.local/bin/   # add into PATH if necessary
 ttop --on               # Optional: enable data collector in user&apos;s systemd.timers or crontab
 </code></pre>
 <h3>Uninstall</h3>
@@ -286,7 +287,7 @@ echo &quot;$TEXT&quot; | curl --ssl-reqd \
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-15T01:08:01Z
+        Builded at 2024-03-19T01:07:59Z
         </p>
       </div>
     </div>
