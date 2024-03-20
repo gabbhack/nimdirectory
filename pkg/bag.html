@@ -112,7 +112,7 @@
 <li>[x] Written in 👑 Nim language</li>
 </ul>
 <h2>Examples</h2>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># can be a seq/array containing a key/value tuple (string, string)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">data</span> <span class="op">=</span> [(<span class="str">&quot;email&quot;</span>, <span class="str">&quot;test@example.com&quot;</span>), (<span class="str">&quot;password&quot;</span>, <span class="str">&quot;123admin&quot;</span>)]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># create a new bag with given data</span></div></div><div class="line"><div class="line-content"><span class="ide">newBag</span> <span class="ide">data</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">email</span>: <span class="ide">tEmail</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.email&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">password</span>: <span class="ide">tPassword</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">min</span>: <span class="num">8</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password.min&quot;</span></div></div><div class="line"><div class="line-content">  <span class="op">*</span><span class="ide">remember</span>: <span class="ide">tCheckbox</span>  <span class="com"># `*` prefix makes field optional</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">if</span> <span class="ide">Bag</span><span class="op">.</span><span class="ide">isInvalid</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">err</span> <span class="kwd">in</span> <span class="ide">Bag</span><span class="op">.</span><span class="ide">getErrors</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">err</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="com"># can be a seq/array containing a key/value tuple (string, string)</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">data</span> <span class="op">=</span> [(<span class="str">&quot;email&quot;</span>, <span class="str">&quot;test@example.com&quot;</span>), (<span class="str">&quot;password&quot;</span>, <span class="str">&quot;123admin&quot;</span>)]</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="com"># create a new bag</span></div></div><div class="line"><div class="line-content"><span class="ide">bag</span> <span class="ide">data</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">email</span>: <span class="ide">tEmail</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.email&quot;</span></div></div><div class="line"><div class="line-content">  <span class="ide">password</span>: <span class="ide">tPassword</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password&quot;</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">min</span>: <span class="num">8</span> <span class="kwd">or</span> <span class="str">&quot;auth.error.password.min&quot;</span></div></div><div class="line"><div class="line-content">  <span class="op">*</span><span class="ide">remember</span>: <span class="ide">tCheckbox</span>  <span class="com"># `*` prefix makes field optional</span></div></div><div class="line"><div class="line-content"><span class="kwd">do</span>:</div></div><div class="line"><div class="line-content">  <span class="kwd">for</span> <span class="ide">err</span> <span class="kwd">in</span> <span class="ide">inputBag</span><span class="op">.</span><span class="ide">getErrors</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">echo</span> <span class="ide">err</span></div></div>  </code></pre>
 <p>For more examples, check in <a href="https://github.com/openpeeps/bag/blob/main/tests/test1.nim">unittests</a></p>
 <h3>❤ Contributions &amp; Support</h3>
 <ul>
@@ -123,7 +123,7 @@
 </ul>
 <h3>🎩 License</h3>
 <p>Bag | MIT license. <a href="https://github.com/openpeeps">Made by Humans from OpenPeeps</a>.<br />
-Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
+Copyright © 2024 OpenPeeps &amp; Contributors — All rights reserved.</p>
 </document>
             
         </div>
@@ -192,7 +192,7 @@ Copyright © 2023 OpenPeeps &amp; Contributors — All rights reserved.</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-19T01:07:59Z
+        Builded at 2024-03-20T01:07:05Z
         </p>
       </div>
     </div>
