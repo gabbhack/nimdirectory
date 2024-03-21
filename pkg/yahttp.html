@@ -146,7 +146,10 @@
 <li><code>Response.html()</code> - returns response body as HTML</li>
 <li><code>Response.to(t)</code> - converts response body to JSON and unmarshals it to type <code>t</code></li>
 <li><code>Response.ok()</code> - returns <code>true</code> if <code>status</code> is greater than 0 and less than 400</li>
+<li><code>Response.raiseForStatus()</code> - throws <code>HttpError</code> exceptions if status is 400 or above</li>
 </ul>
+<h2>Other helper functions</h2>
+<p><code>object.toJsonString()</code> - converts object of any type to json string. Helpful to use for <code>body</code> argument</p>
 </document>
             
         </div>
@@ -215,7 +218,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-20T01:07:05Z
+        Builded at 2024-03-21T01:08:56Z
         </p>
       </div>
     </div>
