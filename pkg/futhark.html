@@ -273,7 +273,7 @@ remove all of the <code>when declared</code> but you might run into Futhark tryi
 redeclare existing things, including built in types and names.</p>
 <h3>Opaque type functionality</h3>
 <p>If a type is not fully declared in your C headers but is still required for
-your project Futhark will generate a <code>type SomeType = distinct object</code> dummy
+your project Futhark will generate a <code>type SomeType {.incompleteStruct.} = object</code> dummy
 type for it. Since most C libraries will pass things by pointer this makes sure
 that a <code>ptr SomeType</code> can exist and be passed around without having to know
 anything about <code>SomeType</code>. Disabling this feature will remove these definitions
@@ -305,6 +305,19 @@ create bad C code if the varargs pragma is attached to a function without
 arguments this is ignored by default. However if you for some reason require
 this you might add <code>-d:preAnsiFuncDecl</code> while compiling.</p>
 <h2>Deeper control</h2>
+<h3>Rename callback</h3>
+<p>If you want to rename identifiers, for example removing common prefixes,
+postfixes, or other similar things you can use a rename callback. This can be
+defined by adding <code>renameCallback &lt;procedure name&gt;</code> to your <code>importc</code> block. The
+signature of the callback is:</p>
+<pre>  <code>proc(name: string, kind: string, partof = &quot;&quot;): string
+</code></pre>
+<p>where <code>name</code> is the original name as present in the C code, <code>kind</code> is the kind
+of the identifier such as &quot;enum&quot;, &quot;proc&quot;, &quot;arg&quot;, &quot;field&quot;, etc. The argument
+<code>partof</code> is only used for field names in a structure.</p>
+<p>Please note that in order to avoid name collisions the normal anti-collision
+transformations are done after the rename callback.</p>
+<h3>Øpir callbacks</h3>
 <p>In case you face issues that aren&apos;t easily solveable there is one last option
 for making modifications, and this is Øpir hooks. Since Øpir converts your C
 imports to a JSON format you&apos;re able to register hooks that will be run before
@@ -313,7 +326,7 @@ and returns a <code>JsonNode</code>. With this you&apos;re able to change every 
 JSON, and even add or remove definitions. The callbacks are a list, so modules
 to perform certain commonly done transformations (e.g. combine similarly named
 constants into an enum) could be added to the list of callbacks easily. To add
-these simply add in <code>outputPath &lt;procedure name&gt;</code> to your <code>importc</code> block.</p>
+these simply add in <code>addOpirCallback &lt;procedure name&gt;</code> to your <code>importc</code> block.</p>
 <h2>Destructors</h2>
 <p>If you are using a C library you will probably want to wrap destructor calls.
 Futhark makes all C objects <code>{.pure, inheritable.}</code> which means you can quite
@@ -420,6 +433,18 @@ machines) lives in to the linker:</p>
 <pre>  <code>nimble install --passL:&quot;-L&lt;path to lib directory containing libclang.so file&gt;&quot; futhark
 #e.g.: nimble install --passL:&quot;-L/usr/lib/llvm-6.0/lib&quot; futhark
 </code></pre>
+<h1>Known wrappers made with Futhark</h1>
+<p>By the nature of Futhark wrappers can be made on the fly for a specific project.
+I&apos;ve wrapped many large C projects with Futhark, but just for use in specific,
+and sometimes proprietary, codebases. That being said this list contains
+wrappers that are made with Futhark which have been published in some shape or
+form. These can very from just a simple file with some Futhark instructions, to
+full projects that add nice-to-have features on top of an existing C library. If
+you have a project of your own you want to show off, please make a PR!</p>
+<ul>
+<li><a href="https://github.com/PMunch/mapm-nim">MAPM</a>: Fully wrapped with destructors and a nice Nim interface</li>
+<li><a href="https://github.com/PMunch/libfuse-nim/blob/master/libfuse.nim">libfuse</a>: Quick and dirty wrapper for libfuse to play around with filesystems</li>
+</ul>
 <h2>TODO</h2>
 <ul>
 <li>Proper handling of C macros (inherently hard because C macros are typeless)</li>
@@ -493,7 +518,7 @@ machines) lives in to the linker:</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-21T01:08:56Z
+        Builded at 2024-03-22T01:07:38Z
         </p>
       </div>
     </div>
