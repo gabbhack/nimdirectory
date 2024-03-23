@@ -23442,19 +23442,6 @@ const packages = [
     "web": "https://github.com/SolitudeSF/xcb"
   },
   {
-    "name": "nimjl",
-    "url": "https://github.com/Clonkk/nimjl",
-    "method": "git",
-    "tags": [
-      "Nim",
-      "Julia",
-      "Bridge"
-    ],
-    "description": "Nim Julia bridge",
-    "license": "MIT",
-    "web": "https://github.com/Clonkk/nimjl"
-  },
-  {
     "name": "nimflux",
     "url": "https://github.com/tdely/nimflux",
     "method": "git",
@@ -32930,6 +32917,50 @@ const packages = [
     "description": "terminal based audio station player in nim",
     "license": "GPL-3.0-or-later",
     "web": "https://git.disroot.org/bloomingchad/pnimrp"
+  },
+  {
+    "name": "expect",
+    "url": "https://github.com/penguinite/expect",
+    "method": "git",
+    "tags": [
+      "rust",
+      "expect",
+      "basic"
+    ],
+    "description": "Rust-style expect procedures",
+    "license": "BSD-3-Clause",
+    "web": "https://github.com/penguinite/expect"
+  },
+  {
+    "name": "css3selectors",
+    "url": "https://github.com/Niminem/CSS3Selectors",
+    "method": "git",
+    "tags": [
+      "css3",
+      "css-selector",
+      "css-selectors",
+      "html-parser",
+      "htmlparser"
+    ],
+    "description": "A Nim CSS Selectors library for the WHATWG standard compliant Chame HTML parser. Query HTML using CSS selectors with Nim just like you can with JavaScript.",
+    "license": "MIT",
+    "web": "https://github.com/Niminem/CSS3Selectors"
+  },
+  {
+    "name": "nimjl",
+    "url": "https://github.com/SciNim/nimjl",
+    "method": "git",
+    "tags": [
+      "Julia",
+      "Nim",
+      "Bridge",
+      "SciNim",
+      "Scientific",
+      "Computing"
+    ],
+    "description": "Nim Julia bridge",
+    "license": "MIT",
+    "web": "https://github.com/SciNim/nimjl"
   }
 ]
 
