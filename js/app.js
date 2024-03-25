@@ -1,5 +1,25 @@
 const packages = [
   {
+    "name": "avrman",
+    "url": "https://github.com/Abathargh/avrman",
+    "method": "git",
+    "tags": [
+      "avr",
+      "atmega",
+      "microcontroller",
+      "embedded",
+      "firmware",
+      "nim",
+      "nimble",
+      "cmake",
+      "make",
+      "makefile"
+    ],
+    "description": "A tool for managing nim and c projects targetting AVR microcontrollers.",
+    "license": "BSD-3",
+    "web": "https://github.com/Abathargh/avrman"
+  },
+  {
     "name": "nimcso",
     "url": "https://github.com/amkrajewski/nimcso",
     "method": "git",
@@ -32961,6 +32981,20 @@ const packages = [
     "description": "Nim Julia bridge",
     "license": "MIT",
     "web": "https://github.com/SciNim/nimjl"
+  },
+  {
+    "name": "pmath",
+    "url": "https://github.com/nlits-projects/pmath",
+    "method": "git",
+    "tags": [
+      "math",
+      "fractions",
+      "radicals",
+      "precise"
+    ],
+    "description": "library that resolves the inaccuracies of normal float math. ",
+    "license": "MIT",
+    "web": "https://github.com/nlits-projects/pmath"
   }
 ]
 
