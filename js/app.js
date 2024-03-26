@@ -32995,6 +32995,20 @@ const packages = [
     "description": "library that resolves the inaccuracies of normal float math. ",
     "license": "MIT",
     "web": "https://github.com/nlits-projects/pmath"
+  },
+  {
+    "name": "sweet",
+    "url": "https://github.com/FyraLabs/sweet",
+    "method": "git",
+    "tags": [
+      "sugar",
+      "macros",
+      "syntax",
+      "utility"
+    ],
+    "description": "🍬 General syntactic sugar",
+    "license": "MIT",
+    "web": "https://github.com/FyraLabs/sweet"
   }
 ]
 
