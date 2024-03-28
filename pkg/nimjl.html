@@ -156,6 +156,9 @@
 <h2>Limitations</h2>
 <ul>
 <li>
+<p>Avoid using global scope for Julia function call. Always have everything inse proc / func. It&apos;s good practice anyway</p>
+</li>
+<li>
 <p>Value conversion Nim -&gt; Julia are done <strong>by copy</strong>.</p>
 <ul>
 <li>Arrays are an exception to this rule and can be created from buffer / are accessible using a buffer.</li>
@@ -180,14 +183,40 @@
 </ul>
 </li>
 </ul>
-<h1>Examples</h1>
+<h1>Examples &amp; tips</h1>
+<h2>Examples</h2>
 <p>Here is the basic example:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimjl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Julia</span><span class="op">.</span><span class="ide">init</span>() <span class="com"># Initialize Julia VM. Subsequent call will be ignored</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">myval</span> <span class="op">=</span> <span class="num">4.0&apos;f64</span></div></div><div class="line"><div class="line-content"><span class="com"># Call Julia function &quot;sqrt&quot; and convert the result to a float</span></div></div><div class="line"><div class="line-content"><span class="kwd">var</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">Julia</span><span class="op">.</span><span class="ide">sqrt</span>(<span class="ide">myval</span>)<span class="op">.</span><span class="ide">to</span>(<span class="ide">float64</span>)</div></div><div class="line"><div class="line-content"><span class="ide">echo</span> <span class="ide">res</span> <span class="com"># 2.0</span></div></div>  </code></pre>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimjl</span></div></div><div class="line"><div class="line-content"><span class="kwd">proc</span> <span class="ide">main</span>() <span class="op">=</span></div></div><div class="line"><div class="line-content"> <span class="ide">Julia</span><span class="op">.</span><span class="ide">init</span>() <span class="com"># Initialize Julia VM. Subsequent call will be ignored</span></div></div><div class="line"><div class="line-content"> </div></div><div class="line"><div class="line-content"> <span class="kwd">var</span> <span class="ide">myval</span> <span class="op">=</span> <span class="num">4.0&apos;f64</span></div></div><div class="line"><div class="line-content"> <span class="com"># Call Julia function &quot;sqrt&quot; and convert the result to a float</span></div></div><div class="line"><div class="line-content"> <span class="kwd">var</span> <span class="ide">res</span> <span class="op">=</span> <span class="ide">Julia</span><span class="op">.</span><span class="ide">sqrt</span>(<span class="ide">myval</span>)<span class="op">.</span><span class="ide">to</span>(<span class="ide">float64</span>)</div></div><div class="line"><div class="line-content"> <span class="ide">echo</span> <span class="ide">res</span> <span class="com"># 2.0</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="kwd">when</span> <span class="ide">isMainModule</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">main</span>()</div></div>  </code></pre>
+<p>JlVmExit() seems optionnal. It&apos;s present in the C API but not calling it doesn&apos;t seem to cause any problem.</p>
+<p>Nonetheless, if you use OS resources from Julia it is probably better to call Julia.exit() / JlVmExit() for a clean exit.</p>
 <h2>Setting up Julia dependency</h2>
-<p>It is now possible to embed Julia files inside a Nim compiled binary to easily distribute Julia code. To make distribution possible, an API to call <code>Pkg.add(&quot;...&quot;)</code> has also been added <strong>with version number easy to specify</strong>.</p>
+<ul>
+<li>It is now possible to embed Julia files inside a Nim compiled binary to easily distribute Julia code. To make distribution possible, an API to call <code>Pkg.add(&quot;...&quot;)</code> has also been added <strong>with version number easy to specify</strong>.</li>
+</ul>
 <pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="kwd">import</span> <span class="ide">nimjl</span></div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content"><span class="ide">Julia</span><span class="op">.</span><span class="ide">init</span>:</div></div><div class="line"><div class="line-content">  <span class="ide">Pkg</span>:</div></div><div class="line"><div class="line-content">    <span class="ide">add</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;Polynomials&quot;</span>, <span class="ide">version</span><span class="op">=</span><span class="str">&quot;3.0.0&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">add</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;LinearAlgebra&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">add</span>(<span class="str">&quot;DSP&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="ide">add</span>(<span class="ide">name</span><span class="op">=</span><span class="str">&quot;Wavelets&quot;</span>, <span class="ide">version</span><span class="op">=</span><span class="str">&quot;0.9.4&quot;</span>)</div></div><div class="line"><div class="line-content"></div></div><div class="line"><div class="line-content">  <span class="ide">Embed</span>:</div></div><div class="line"><div class="line-content">    <span class="com"># embed all files with &apos;*.jl&apos; extension in folder ``JuliaToolBox/``</span></div></div><div class="line"><div class="line-content">    <span class="ide">dir</span>(<span class="str">&quot;JuliaToolBox/&quot;</span>)</div></div><div class="line"><div class="line-content">    <span class="com"># embed all files with &apos;*.jl&apos; extension in the folder of he source file (at compilation) i.e. ``getProjectPath()`` </span></div></div><div class="line"><div class="line-content">    <span class="ide">thisDir</span>()</div></div><div class="line"><div class="line-content">    <span class="com"># embed specific file; path should be relative to ``getProjectPath()``</span></div></div><div class="line"><div class="line-content">    <span class="ide">file</span>(<span class="str">&quot;localfile.jl&quot;</span>)</div></div>  </code></pre>
-<p>See examples/ex09_embed_file.nim for a concrete example</p>
+<p>Note that the order of the file matters.
+See examples/ex09_embed_file.nim for a concrete example.</p>
 <p>Take a look at <code>tests/</code> or <code>examples/</code> folder for typical examples.</p>
+<ul>
+<li>You can use Pkg: activate() to setup a virtual env
+<ul>
+<li>Alternatively, you can embed a Julia file that setup your environment and dependencies and embed it <strong>first</strong>.</li>
+<li>Because files are evaluated in the order they are embedded, it will deterine the env for all the other files.</li>
+</ul>
+</li>
+</ul>
+<h2>Debugging</h2>
+<ul>
+<li>
+<p>Most error will come from incorrect type passed between Julia and Nim. Check function interface and return type first.</p>
+</li>
+<li>
+<p>If you have random segfault that are non-reproductible, that may be a cause of the Julia GC cleaning memory that Nim uses. Consider using jlGcRoot.</p>
+</li>
+<li>
+<p>If you do not work with fixed version package for Julia, you are at risk of code breaking when packages are updated / upgraded.</p>
+</li>
+</ul>
 <h1>License</h1>
 <p>This project is released under MIT License.</p>
 </document>
@@ -258,7 +287,7 @@
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-27T01:07:48Z
+        Builded at 2024-03-28T01:08:02Z
         </p>
       </div>
     </div>

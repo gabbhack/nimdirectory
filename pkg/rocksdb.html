@@ -102,8 +102,8 @@
 <p>See <a href="examples/simple_example.nim">simple_example</a></p>
 <h3>Static linking</h3>
 <p>To statically link librocksdb, you would do something like:</p>
-<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">LibrocksbStaticArgs</span><span class="op">=</span>'-l:librocksdb.a' <span class="op">--</span><span class="ide">gcc</span><span class="op">.</span><span class="ide">linkerexe</span><span class="op">=</span><span class="ide">g</span><span class="op">++</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="ide">your_program</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
-<p>(we need the C++ linker profile because it&apos;s a C++ library)</p>
+<pre>  <code class="language-nim"><div class="line"><div class="line-content"><span class="ide">nim</span> <span class="ide">c</span> <span class="op">-</span><span class="ide">d</span>:<span class="ide">rocksdb_static_linking</span> <span class="op">--</span><span class="ide">threads</span>:<span class="ide">on</span> <span class="ide">your_program</span><span class="op">.</span><span class="ide">nim</span></div></div>  </code></pre>
+<p>See the config.nims file which contains the static linking configuration which is switched on with the <code>rocksdb_static_linking</code> flag. Note that static linking is currently not supported on windows.</p>
 <h3>Contribution</h3>
 <p>Any contribution intentionally submitted for inclusion in the work by you shall be dual licensed as above, without any
 additional terms or conditions.</p>
@@ -191,7 +191,7 @@ and Jeff Dean (jeff@google.com)</p>
         under <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3">GPLv3</a>
         </p>
         <p class="text-muted">
-        Builded at 2024-03-27T01:07:48Z
+        Builded at 2024-03-28T01:08:02Z
         </p>
       </div>
     </div>
